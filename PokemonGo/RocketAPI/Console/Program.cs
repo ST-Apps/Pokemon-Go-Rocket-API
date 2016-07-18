@@ -25,7 +25,8 @@ namespace PokemonGo.RocketAPI.Console
             var client = new Client(Settings.DefaultLatitude, Settings.DefaultLongitude);
 
             //await client.LoginPtc("FeroxRev", "Sekret");
-            await client.LoginGoogle(Settings.DeviceId, Settings.Email, Settings.LongDurationToken);
+            //await client.LoginGoogle(Settings.DeviceId, Settings.Email, Settings.LongDurationToken);
+            await client.LoginGoogle();
             var serverResponse = await client.GetServer();
             var profile = await client.GetProfile();
             var settings = await client.GetSettings();

@@ -19,6 +19,7 @@ using PokemonGo.RocketAPI.Enums;
 using PokemonGo.RocketAPI.GeneratedCode;
 using PokemonGo.RocketAPI.Helpers;
 using PokemonGo.RocketAPI.Extensions;
+using System.Threading;
 
 namespace PokemonGo.RocketAPI
 {
@@ -100,6 +101,84 @@ namespace PokemonGo.RocketAPI
                 _accessToken = content.Split(new[] {"Auth=", "issueAdvice"}, StringSplitOptions.RemoveEmptyEntries)[0];
                 _authType = AuthType.Google;
             }
+        }
+
+
+        public async Task LoginGoogle()
+        {
+
+            String OAUTH_ENDPOINT = "https://accounts.google.com/o/oauth2/device/code";
+            String CLIENT_ID = "848232511240-73ri3t7plvk96pj4f85uj8otdat2alem.apps.googleusercontent.com";
+
+            var handler = new HttpClientHandler()
+            {
+                AutomaticDecompression = DecompressionMethods.GZip,
+                AllowAutoRedirect = false
+            };
+
+            using (var tempHttpClient = new HttpClient(handler))
+            {
+                var response = await tempHttpClient.PostAsync(OAUTH_ENDPOINT,
+                    new FormUrlEncodedContent(
+                        new[]
+                        {
+                            new KeyValuePair<string, string>("client_id", CLIENT_ID),
+                            new KeyValuePair<string, string>("scope", "openid email https://www.googleapis.com/auth/userinfo.email")
+                        }));
+
+                var content = await response.Content.ReadAsStringAsync();
+                JToken token = JObject.Parse(content);
+                JToken token2;
+                Console.WriteLine("Please visit " + token.SelectToken("verification_url") + " and enter " + token.SelectToken("user_code"));
+                while ((token2 = poll(token)) == null)
+                {
+                    Thread.Sleep(Convert.ToInt32(token.SelectToken("interval")) * 1000);
+                }
+                string authToken = token2.SelectToken("id_token").ToString();
+                Console.WriteLine("Sucessfully receieved token.");
+                _accessToken = authToken;
+                _authType = AuthType.Google;
+            }
+        }
+
+
+        private JToken poll(JToken json)
+        {
+            var handler = new HttpClientHandler()
+            {
+                AutomaticDecompression = DecompressionMethods.GZip,
+                AllowAutoRedirect = false
+            };
+
+            String OAUTH_TOKEN_ENDPOINT = "https://www.googleapis.com/oauth2/v4/token";
+            String SECRET = "NCjF1TLi2CcY6t5mt0ZveuL7";
+            String CLIENT_ID = "848232511240-73ri3t7plvk96pj4f85uj8otdat2alem.apps.googleusercontent.com";
+
+            using (var tempHttpClient = new HttpClient(handler))
+            {
+                var response = tempHttpClient.PostAsync(OAUTH_TOKEN_ENDPOINT,
+                    new FormUrlEncodedContent(
+                        new[]
+                        {
+                            new KeyValuePair<string, string>("client_id", CLIENT_ID),
+                            new KeyValuePair<string, string>("client_secret", SECRET),
+                            new KeyValuePair<string, string>("code", json.SelectToken("device_code").ToString()),
+                            new KeyValuePair<string, string>("grant_type", "http://oauth.net/grant_type/device/1.0"),
+                            new KeyValuePair<string, string>("scope", "openid email https://www.googleapis.com/auth/userinfo.email")
+                        }));
+
+                string content = response.Result.Content.ReadAsStringAsync().Result;
+                JToken token = JObject.Parse(content);
+                if (token.SelectToken("error") == null)
+                {
+                    return token;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+
         }
 
         public async Task LoginPtc(string username, string password)
