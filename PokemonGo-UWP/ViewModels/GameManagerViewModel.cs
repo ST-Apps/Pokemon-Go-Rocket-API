@@ -662,7 +662,8 @@ namespace PokemonGo_UWP.ViewModels
                     UpdateInventory();
                     UpdatePlayerData();
                     break;
-                case CatchPokemonResponse.Types.CatchStatus.CatchEscape | CatchPokemonResponse.Types.CatchStatus.CatchFlee:
+                case CatchPokemonResponse.Types.CatchStatus.CatchEscape:
+                case CatchPokemonResponse.Types.CatchStatus.CatchFlee:
                     Logger.Write($"{CurrentPokemon.PokemonId} escaped");
                     CatchEscape?.Invoke(this, null);
                     await new MessageDialog($"{CurrentPokemon.PokemonId} escaped").ShowAsyncQueue();
