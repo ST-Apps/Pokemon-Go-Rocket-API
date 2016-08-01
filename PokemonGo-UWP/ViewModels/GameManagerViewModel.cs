@@ -25,6 +25,7 @@ using Template10.Mvvm;
 using Template10.Services.NavigationService;
 using Universal_Authenticator_v2.Views;
 using System.Threading;
+using Windows.ApplicationModel;
 
 namespace PokemonGo_UWP.ViewModels
 {
@@ -180,6 +181,18 @@ namespace PokemonGo_UWP.ViewModels
         #endregion
 
         #region Bindable Game Vars
+
+        /// <summary>
+        /// App's current version
+        /// </summary>
+        public string CurrentVersion
+        {
+            get
+            {
+                var currentVersion = Package.Current.Id.Version;
+                return $"v{currentVersion.Major}.{currentVersion.Minor}.{currentVersion.Build}";
+            }
+        }
 
         /// <summary>
         ///     Player's profile, we use it just for the username
@@ -421,7 +434,7 @@ namespace PokemonGo_UWP.ViewModels
                 // Clear stored token
                 SettingsService.Instance.PtcAuthToken = null;
                 // Stop the timer
-                _updateDataTimer.Cancel();
+                _updateDataTimer?.Cancel();
                 _updateDataTimer = null;
                 _updateDataMutex = null;
                 // Navigate to login page
@@ -488,14 +501,12 @@ namespace PokemonGo_UWP.ViewModels
                     });
         }
 
-        private void ForcedUpdateMapData()
+        private void ForcedUpdateMapData(bool updateOnlyPokemonData = true)
         {
-            if (_updateDataMutex.WaitOne(0))
-            {
-                _skipNextUpdate = true;
-                UpdateMapData(true);
-                _updateDataMutex.ReleaseMutex();
-            }                
+            if (!_updateDataMutex.WaitOne(0)) return;
+            _skipNextUpdate = true;
+            UpdateMapData(updateOnlyPokemonData);
+            _updateDataMutex.ReleaseMutex();
         }
 
         /// <summary>
@@ -544,7 +555,7 @@ namespace PokemonGo_UWP.ViewModels
                 {
                     NearbyPokestops.Clear();
                     foreach (var pokestop in pokeStopsTmp)
-                    {
+                    {                        
                         NearbyPokestops.Add(pokestop);
                     }
                 });
@@ -833,6 +844,7 @@ namespace PokemonGo_UWP.ViewModels
                     case FortSearchResponse.Types.Result.Success:
                         // Success, we play the animation and update inventory
                         SearchSuccess?.Invoke(this, null);
+                        ForcedUpdateMapData(false);
                         UpdateInventory();
                         break;
                     case FortSearchResponse.Types.Result.OutOfRange:
@@ -893,7 +905,7 @@ namespace PokemonGo_UWP.ViewModels
                     {
                         DesiredAccuracy = PositionAccuracy.High,
                         DesiredAccuracyInMeters = 5,
-                        ReportInterval = 3000,
+                        ReportInterval = 5000,
                         MovementThreshold = 5
                     };
                     CurrentGeoposition = await _geolocator.GetGeopositionAsync();

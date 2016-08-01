@@ -4,6 +4,10 @@ Check [Wiki](https://github.com/ST-Apps/PoGo-UWP/wiki) for infos.
 
 # Changelog
 
+## (01/08/2016) [v 1.0.7.0-beta] - Bug fixes and improvements 
+* Fixed Pokestop dissappear while moving [#15](https://github.com/ST-Apps/PoGo-UWP/issues/15)
+* Fixed Pokemon dissappear issue [#27](https://github.com/ST-Apps/PoGo-UWP/issues/27)
+
 ## (31/07/2016) [v 1.0.6.0-beta] - Bug fixes and improvements 
 * Fixed crash on loading [#3](https://github.com/ST-Apps/PoGo-UWP/issues/3)
 

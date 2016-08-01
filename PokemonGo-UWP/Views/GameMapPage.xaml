@@ -174,7 +174,7 @@
                                 Command="{Binding TrySearchPokestop, Source={Binding GameManagerViewModel, Source={StaticResource Locator}}}">
                             <Image Source="{Binding CooldownCompleteTimestampMs, Converter={StaticResource PokestopToIconConverter}}"
                                    maps:MapControl.Location="{Binding Converter={StaticResource MapObjectToGeopointConverter}, ConverterParameter=pokestop}"
-                                   maps:MapControl.NormalizedAnchorPoint="0,1"
+                                   maps:MapControl.NormalizedAnchorPoint="0.5,1"
                                    Stretch="Uniform"
                                    Height="64"
                                    Width="64" />
@@ -490,5 +490,13 @@
             </Border>
             
         </Grid>
+
+        <TextBlock Text="{Binding CurrentVersion}"
+                   RelativePanel.AlignTopWithPanel="True"
+                   RelativePanel.AlignRightWithPanel="True"
+                   Margin="6"
+                   Canvas.ZIndex="100"
+                   />
+        
     </RelativePanel>
 </Page>

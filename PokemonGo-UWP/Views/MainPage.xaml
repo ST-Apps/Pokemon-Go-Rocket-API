@@ -49,6 +49,12 @@
                     Content="login"
                     Command="{Binding DoPtcLoginCommand}" />
         </Grid>
+        
+        <TextBlock Text="{Binding CurrentVersion}"
+                   RelativePanel.AlignTopWithPanel="True"
+                   RelativePanel.AlignRightWithPanel="True"
+                   Margin="6"
+                   />
 
     </RelativePanel>
 
