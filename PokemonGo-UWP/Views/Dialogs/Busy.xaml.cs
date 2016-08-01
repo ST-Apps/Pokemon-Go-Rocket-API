@@ -17,6 +17,7 @@ namespace Universal_Authenticator_v2.Views
         public Busy()
         {
             InitializeComponent();
+            Loading.Begin();
         }
 
         public string BusyText

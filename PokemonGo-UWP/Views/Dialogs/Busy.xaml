@@ -5,6 +5,21 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              d:DesignHeight="300" d:DesignWidth="400"
              mc:Ignorable="d">
+    
+    <UserControl.Resources>
+        <Storyboard x:Name="Loading">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" 
+                                           Storyboard.TargetName="image"
+                                           RepeatBehavior="Forever">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.05" Value="20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.10" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.15" Value="-20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.20" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.00" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
 
     <Viewbox Height="128"
              HorizontalAlignment="Center"
@@ -14,10 +29,17 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <ProgressRing Width="128"
+            <Image x:Name="image" Source="../../Assets/Buttons/btn_action_menu.png" 
+                   Width="128"
+                   Height="128" RenderTransformOrigin="0.5,0.5" >
+                <Image.RenderTransform>
+                    <CompositeTransform/>
+                </Image.RenderTransform>
+            </Image>
+            <!--<ProgressRing Width="128"
                           Height="128"
                           Foreground="{StaticResource ExtendedSplashForegroundColorBrush}"
-                          IsActive="{x:Bind IsBusy, Mode=OneWay}" />
+                          IsActive="{x:Bind IsBusy, Mode=OneWay}" />-->
             <TextBlock Grid.Row="1"
                        Margin="0,12,0,0"
                        VerticalAlignment="Center"

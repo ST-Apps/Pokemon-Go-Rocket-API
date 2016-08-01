@@ -327,7 +327,7 @@
     <Compile Include="Entities\MapPokemonWrapper.cs" />
     <Compile Include="Entities\NearbyPokemonWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils\ApplicationKeys.cs" />
+    <Compile Include="Utils\ApplicationsKeys.cs" />
     <Compile Include="Utils\Converters.cs" />
     <Compile Include="Utils\MessageDialogExtensions.cs" />
     <Compile Include="Utils\Settings.cs" />
