@@ -63,7 +63,7 @@
         </Setter>
     </Style>
 
-    <x:Double x:Key="UiButtonSize">64</x:Double>
+    <x:Double x:Key="UiButtonSize">70</x:Double>
 
     <!-- themes -->
     <x:Double x:Key="NarrowMinWidth">0</x:Double>
