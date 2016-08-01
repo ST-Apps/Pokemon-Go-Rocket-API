@@ -1,4 +1,4 @@
-﻿<Page
+<Page
     x:Class="PokemonGo_UWP.Views.GameMapPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -86,14 +86,14 @@
                          PedestrianFeaturesVisible="False"
                          TrafficFlowVisible="False"
                          TransitFeaturesVisible="False"
-                         ZoomLevel="20"
+                         ZoomLevel="19"
                          RelativePanel.AlignTopWithPanel="True"
                          RelativePanel.AlignBottomWithPanel="True"
                          RelativePanel.AlignLeftWithPanel="True"
                          RelativePanel.AlignRightWithPanel="True"
-                         Center="{Binding CurrentGeoposition.Coordinate.Point, Mode=TwoWay}"
+                         Center="{Binding CurrentGeoposition.Coordinate.Point, Mode=OneWay}"
                          MapServiceToken="{Binding MapServiceToken, Mode=OneTime}"
-                         x:Name="MapControl">
+                         x:Name="MapControl" ZoomLevelChanged="MapControl_ZoomLevelChanged" CenterChanged="MapControl_CenterChanged" >
 
             <Image Source="../Assets/UI/ash.png"
                    maps:MapControl.Location="{Binding CurrentGeoposition.Coordinate.Point}"
@@ -188,17 +188,19 @@
 
                 <GridView ItemsSource="{Binding NearbyPokemons}"
                           SelectionMode="None"
-                          Grid.Row="1">
+                          Grid.Row="1" Margin="10" IsTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False" IsDoubleTapEnabled="False" >
                     <GridView.ItemTemplate>
                         <DataTemplate>
-                            <!--<StackPanel>-->
+                            <StackPanel Margin="10">
                                 <Image
                                     Source="{Binding PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"
                                     Stretch="Uniform"
                                     VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
                                     Width="48"
                                     Height="48"
                                     Margin="3,0" />
+                                <TextBlock Text="{Binding PokemonId}" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
                                 <!--<Image
                                     Source="{Binding DistanceInMeters, Converter={StaticResource NearbyPokemonDistanceToDistanceImageConverter}}"
                                     Stretch="Uniform"
@@ -206,8 +208,8 @@
                                     Margin="0,-12,0,0"
                                     Width="48"
                                     Height="48"
-                                    HorizontalAlignment="Center" />
-                            </StackPanel>-->
+                                    HorizontalAlignment="Center" />-->
+                            </StackPanel>
                         </DataTemplate>
                     </GridView.ItemTemplate>
                 </GridView>
@@ -307,7 +309,7 @@
                     Height="48"
                     HorizontalAlignment="Center"
                     Click="PokeMenuMainButton_OnClick"
-                    IsEnabled="False"
+                    IsEnabled="True"
                     x:Name="PokeMenuMainButton">
                 <Image Source="../Assets/Buttons/btn_action_menu.png"
                        Stretch="Uniform"
