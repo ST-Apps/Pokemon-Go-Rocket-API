@@ -8383,6 +8383,8 @@ namespace PokemonGo.RocketAPI.GeneratedCode
             get { return Descriptor; }
         }
 
+        public Windows.Foundation.Point Anchor { get { return new Windows.Foundation.Point(0.5, 1); } }
+
         public FortData Clone()
         {
             return new FortData(this);
