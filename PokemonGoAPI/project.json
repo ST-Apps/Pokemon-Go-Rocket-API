@@ -2,7 +2,7 @@
   "dependencies": {
     "Microsoft.AspNet.WebApi.Client": "5.2.3",
     "Microsoft.Net.Http": "2.2.29",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
     "Newtonsoft.Json": "9.0.1",
     "PCLWebUtility": "1.0.3",
     "S2Geometry": "1.0.3"
