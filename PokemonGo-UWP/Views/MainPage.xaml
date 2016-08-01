@@ -7,29 +7,38 @@
       DataContext="{Binding GameManagerViewModel, Source={StaticResource Locator}}"
       mc:Ignorable="d">
 
-    <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <RelativePanel Background="LightGray">
 
         <controls:PageHeader x:Name="pageHeader"
+                             Height="0"
                              Content="PTC Login"
                              RelativePanel.AlignLeftWithPanel="True"
                              RelativePanel.AlignRightWithPanel="True"
                              RelativePanel.AlignTopWithPanel="True" />
-
+        
         <TextBox x:Name="usernameTextBox"
-                 Margin="16,12"
-                 Header="username:"
+                 Margin="30,200,30,10"
+                 Header="Username"
                  Text="{Binding PtcUsername, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                  RelativePanel.AlignLeftWithPanel="True"
                  RelativePanel.AlignRightWithPanel="True"
                  RelativePanel.Below="pageHeader" />
 
         <PasswordBox x:Name="passwordBox"
-                     Margin="16,0"
-                     Header="password:"
+                     Margin="30,10"
+                     Header="Password"
                      Password="{Binding PtcPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                      RelativePanel.AlignLeftWithPanel="True"
                      RelativePanel.AlignRightWithPanel="True"
                      RelativePanel.Below="usernameTextBox" />
+        <Button HorizontalAlignment="Stretch"
+                    x:Name="loginButton"
+                    Content="Login"
+                Margin="80,20,80,10"
+                    RelativePanel.AlignLeftWithPanel="True"
+                    RelativePanel.AlignRightWithPanel="True"
+                    RelativePanel.Below="passwordBox"
+                    Command="{Binding DoPtcLoginCommand}" />
 
         <Grid Margin="16,12"
               RelativePanel.AlignLeftWithPanel="True"
@@ -39,15 +48,11 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
+            <TextBlock FontWeight="Bold" Foreground="Red" Margin="-20" HorizontalAlignment="Center">WARNING</TextBlock>
             <TextBlock TextWrapping="WrapWholeWords"
                        Margin="16,12"
-                       Text="WARNING: to login to PTC server you'll need to insert your username and password in this app. If you don't trust it, please, close it before going on." />
+                       Text="To login to PTC server you'll need to insert your username and password in this app. If you don't trust it, please, close it. STApps takes no responsibility of what happens to your device or account by using this app." />
 
-            <Button HorizontalAlignment="Stretch"
-                    Grid.Row="1"
-                    x:Name="loginButton"
-                    Content="login"
-                    Command="{Binding DoPtcLoginCommand}" />
         </Grid>
         
         <TextBlock Text="{Binding CurrentVersion}"
