@@ -217,11 +217,11 @@
                         Width="200">
                     <TextBlock Text="NEARBY"
                            Grid.Row="0"
-                           FontSize="22"
+                           FontSize="18"
                            FontWeight="Normal"
                            FontFamily="../Assets/Fonts/Lato-Medium.ttf#Lato"
                            TextAlignment="Center"
-                           Margin="0,0,0,8"/>
+                           Margin="0,10,0,8"/>
                 </Border>
 
                 <GridView ItemsSource="{Binding NearbyPokemons}"
