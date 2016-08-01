@@ -251,7 +251,7 @@
                         HorizontalAlignment="Center"
                         Margin="0,8,0,0"
                         x:Name="CloseNearbyGridViewButton">
-
+                    
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="Tapped">
                             <core:CallMethodAction MethodName="Begin" 
@@ -449,7 +449,7 @@
                     Background="AntiqueWhite"
                     VerticalAlignment="Center"
                     Grid.Column="2"
-                    Height="40">
+                    Height="30">
 
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Tapped">
@@ -469,22 +469,22 @@
                            Source="{Binding NearbyPokemons[0].PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"
                            Stretch="Uniform"
                            VerticalAlignment="Center"
-                           Width="36"
-                           Height="36" />
+                           Width="30"
+                           Height="30" />
 
                     <Image Grid.Column="1"
                            Source="{Binding NearbyPokemons[1].PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"
                            Stretch="Uniform"
                            VerticalAlignment="Center"
-                           Width="36"
-                           Height="36" />
+                           Width="30"
+                           Height="30" />
 
                     <Image Grid.Column="2"
                            Source="{Binding NearbyPokemons[2].PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"
                            Stretch="Uniform"
                            VerticalAlignment="Center"
-                           Width="36"
-                           Height="36" />
+                           Width="30"
+                           Height="30" />
                 </Grid>
 
             </Border>
