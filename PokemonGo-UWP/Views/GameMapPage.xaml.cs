@@ -1,8 +1,10 @@
-﻿using Windows.UI.Core;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 using Template10.Common;
+using Windows.Devices.Geolocation;
+using Windows.UI.Xaml.Controls.Maps;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -55,5 +57,14 @@ namespace PokemonGo_UWP.Views
         }
 
         #endregion
+
+        private void MapControl_ZoomLevelChanged(Windows.UI.Xaml.Controls.Maps.MapControl sender, object args)
+        {
+            //prevent zooming too far
+            if (sender.ZoomLevel < 18)
+            {
+                sender.ZoomLevel = 18;
+            }
+        }
     }
 }
