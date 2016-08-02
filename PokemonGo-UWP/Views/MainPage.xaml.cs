@@ -15,7 +15,7 @@ namespace PokemonGo_UWP.Views
         {
             if (e.Key == Windows.System.VirtualKey.Enter && loginButton.Command.CanExecute(null) == true)
             {
-				loginButton.Focus(Windows.UI.Xaml.FocusState.Programmatic);
+                loginButton.Command.Execute(null);
             }
         }
     }
