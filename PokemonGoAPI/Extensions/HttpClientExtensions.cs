@@ -28,7 +28,8 @@ namespace PokemonGo.RocketAPI.Extensions
 
                 await Task.Delay(_retryDelayMs);
             } while (response.Payload.Count < 1 && count < 30);
-
+            if (count >= 30)
+                throw new System.Exception("Timed out waiting for server response");
             var payload = response.Payload[0];
             var parsedPayload = new TResponsePayload();
             parsedPayload.MergeFrom(payload);
