@@ -107,13 +107,13 @@ namespace PokemonGo_UWP.Utils
             _geolocator = null;
             CatchablePokemons.Clear();
             NearbyPokemons.Clear();
-            NearbyPokestops.Clear();            
+            NearbyPokestops.Clear();
         }
 
         #endregion
 
         #region Data Updating
-        
+
         private static Geolocator _geolocator;
 
         public static Geoposition Geoposition { get; private set; }
@@ -177,9 +177,9 @@ namespace PokemonGo_UWP.Utils
                     await UpdateMapObjects();
                 }
 
-                UpdateDataMutex.ReleaseMutex();                
+                UpdateDataMutex.ReleaseMutex();
             };
-            // Update before starting timer            
+            // Update before starting timer
             Busy.SetBusy(true, "Getting user data...");
             await UpdateMapObjects();
             await UpdateInventory();
@@ -196,9 +196,13 @@ namespace PokemonGo_UWP.Utils
         {
             // Get all map objects from server
             var mapObjects = await GetMapObjects(Geoposition);
-            // Replace data with the new ones                                  
+            // Replace data with the new ones
             var catchableTmp = new List<MapPokemon>(mapObjects.MapCells.SelectMany(i => i.CatchablePokemons));
             Logger.Write($"Found {catchableTmp.Count} catchable pokemons");
+
+            if (catchableTmp.Count > 0)
+                await MakeSound(@"pokemon_found_ding.wav");
+
             if (catchableTmp.Count != CatchablePokemons.Count)
             {
                 MapPokemonUpdated?.Invoke(null, null);
@@ -210,7 +214,7 @@ namespace PokemonGo_UWP.Utils
             }
             var nearbyTmp = new List<NearbyPokemon>(mapObjects.MapCells.SelectMany(i => i.NearbyPokemons));
             Logger.Write($"Found {nearbyTmp.Count} nearby pokemons");
-            NearbyPokemons.Clear();           
+            NearbyPokemons.Clear();
             foreach (var pokemon in nearbyTmp)
             {
                 NearbyPokemons.Add(pokemon);
@@ -226,6 +230,16 @@ namespace PokemonGo_UWP.Utils
                 NearbyPokestops.Add(new FortDataWrapper(pokestop));
             }
             Logger.Write("Finished updating map objects");
+        }
+
+        private static async Task MakeSound(string asset)
+        {
+            var mysong = new Windows.UI.Xaml.Controls.MediaElement();
+            var folder = await Package.Current.InstalledLocation.GetFolderAsync("Assets");
+            var file = await folder.GetFileAsync(asset);
+            var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
+            mysong.SetSource(stream, file.ContentType);
+            mysong.Play();
         }
 
         public static async Task ForcedUpdateMapData()
@@ -315,7 +329,7 @@ namespace PokemonGo_UWP.Utils
         /// <param name="captureItem"></param>
         /// <param name="latitude"></param>
         /// <returns></returns>
-        public static async Task<CatchPokemonResponse> CatchPokemon(ulong encounterId, string spawnpointId,  double latitude, double longitude, MiscEnums.Item captureItem)
+        public static async Task<CatchPokemonResponse> CatchPokemon(ulong encounterId, string spawnpointId, double latitude, double longitude, MiscEnums.Item captureItem)
         {
             return await Client.CatchPokemon(encounterId, spawnpointId, latitude, longitude, captureItem);
         }
