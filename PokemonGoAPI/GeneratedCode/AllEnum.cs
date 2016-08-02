@@ -1495,10 +1495,18 @@ namespace AllEnum
         None = 0,
         [pbr::OriginalName("ITEM_TYPE_POKEBALL")]
         Pokeball = 1,
+        [pbr::OriginalName("ITEM_TYPE_GREAT_BALL")]
+        GreatBall = 2,
+        [pbr::OriginalName("ITEM_TYPE_ULTRA_BALL")]
+        UltraBall = 3,
         [pbr::OriginalName("ITEM_TYPE_POTION")]
-        Potion = 2,
+        Potion = 101,
+        [pbr::OriginalName("ITEM_TYPE_SUPER_POTION")]
+        SuperPotion = 102,
+        [pbr::OriginalName("ITEM_RAZZ_BERRY")]
+        RazzBerry = 701,
         [pbr::OriginalName("ITEM_TYPE_REVIVE")]
-        Revive = 3,
+        Revive = 201,
         [pbr::OriginalName("ITEM_TYPE_MAP")]
         Map = 4,
         [pbr::OriginalName("ITEM_TYPE_BATTLE")]

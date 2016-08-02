@@ -223,7 +223,7 @@ namespace PokemonGo_UWP.ViewModels
             {
                 Logger.Write($"Launched {SelectedCaptureItem} at {CurrentPokemon.PokemonId}");
                 // TODO: we need to see what happens if the user is throwing a different kind of ball
-                if (SelectedCaptureItem.Item_ == ItemType.Pokeball)
+                if (SelectedCaptureItem.Item_ == ItemType.Pokeball || SelectedCaptureItem.Item_ == ItemType.GreatBall || SelectedCaptureItem.Item_ == ItemType.UltraBall)
                 {
                     // Player's using a PokeBall so we try to catch the Pokemon
                     Busy.SetBusy(true, "Throwing Pokeball");

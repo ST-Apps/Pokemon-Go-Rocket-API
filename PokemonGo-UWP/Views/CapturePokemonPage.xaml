@@ -257,7 +257,7 @@
                            Margin="0,0,0,8" />
 
                 <ListView ItemsSource="{Binding Inventory}"
-                          SelectedItem="{Binding SelectedCaptureItem}"
+                          SelectedItem="{Binding SelectedCaptureItem, Mode=TwoWay}"
                           Grid.Row="1">
 
                     <ListView.ItemContainerStyle>
