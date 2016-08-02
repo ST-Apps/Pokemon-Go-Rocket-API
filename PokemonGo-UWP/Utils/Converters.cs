@@ -36,6 +36,11 @@ namespace PokemonGo_UWP.Utils
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
+            if (value == null)
+            {
+                //for now just return place holder
+                return new Uri($"ms-appx:///Assets/Items/Item_1.png");
+            }
             var itemId = (ItemId) ((Item) value).Item_;
             return new Uri($"ms-appx:///Assets/Items/Item_{(int) itemId}.png");
         }
