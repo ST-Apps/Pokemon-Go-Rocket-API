@@ -30,7 +30,7 @@
             <RowDefinition Height="52"/>
             <RowDefinition Height="52"/>
             <RowDefinition Height="15"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="80"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="15"/>
         </Grid.RowDefinitions>
@@ -42,7 +42,7 @@
             </LinearGradientBrush>
         </Grid.Background>
 
-        <Image Source="/Assets/Login/Logo2.png" Grid.Row="1" Grid.Column="2" Width="150"/>
+        <Image Source="/Assets/Login/Logo3.png" Grid.Row="1" Grid.Column="2" Width="150"/>
 
         <TextBlock Text="{Binding CurrentVersion}" Grid.Row="2" Grid.Column="2"
 			HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -59,8 +59,8 @@
 					PlaceholderText="Password" Background="#26FFFFFF" Margin="1,1,1,1" Style="{StaticResource PasswordBox}"
                     Password="{Binding PtcPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
-        <Button x:Name="loginButton" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3" Style="{StaticResource RoundedButton}" Background="White"
-                Command="{Binding DoPtcLoginCommand}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="LOG IN">
+        <Button x:Name="loginButton" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3" Style="{StaticResource ButtonSubmit}"
+                Command="{Binding DoPtcLoginCommand}" Content="LOG IN">
         </Button>
 
         <TextBlock Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center"
