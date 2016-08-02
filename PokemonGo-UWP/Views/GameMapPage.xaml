@@ -136,7 +136,7 @@
                             <Image
                                 Source="{Binding PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"
                                 maps:MapControl.Location="{Binding Geoposition}"
-                                maps:MapControl.NormalizedAnchorPoint="0,1"
+                                maps:MapControl.NormalizedAnchorPoint="{Binding Anchor}"
                                 Stretch="Uniform"
                                 Height="48"
                                 Width="48" />
