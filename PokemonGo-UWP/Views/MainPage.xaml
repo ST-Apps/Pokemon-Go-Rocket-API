@@ -59,7 +59,7 @@
 					PlaceholderText="Password" Background="#26FFFFFF" Margin="1,1,1,1" VerticalContentAlignment="Center"
                     Password="{Binding PtcPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
-        <Button x:Name="loginButton" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" Style="{StaticResource RoundedButton}"
+        <Button x:Name="loginButton" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" Style="{StaticResource RoundedButton}" Background="White"
                 Command="{Binding DoPtcLoginCommand}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="LOG IN">
         </Button>
 
