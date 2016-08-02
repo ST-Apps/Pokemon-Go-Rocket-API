@@ -18,5 +18,10 @@ namespace PokemonGo_UWP.Views
 				loginButton.Focus(Windows.UI.Xaml.FocusState.Programmatic);
 			}
         }
+
+        private void usernameTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
