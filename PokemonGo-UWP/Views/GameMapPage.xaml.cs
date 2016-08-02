@@ -29,6 +29,11 @@ namespace PokemonGo_UWP.Views
         public GameMapPage()
         {
             InitializeComponent();
+            Loaded += (s, e) =>
+            {
+                // TODO: find a proper way to center all the panels based on resolution
+                NearbyGridTranslateTransform.Y = ActualHeight*3/2;
+            };
             //WindowWrapper.Current().Window.VisibilityChanged += (s, e) =>
             //{
             //    if (App.ViewModelLocator.GameManagerViewModel != null)
@@ -70,12 +75,11 @@ namespace PokemonGo_UWP.Views
             {
                 // Set player icon's position
                 MapControl.SetLocation(PlayerImage, position.Coordinate.Point);
-                CompassEllipseTransform.Angle = position.Coordinate.Heading ?? CompassEllipseTransform.Angle;
                 // Update angle and center only if map is not being manipulated 
                 // TODO: set this to false on gesture
                 if (!_canUpdateMap) return;
                 GameMapControl.Center = position.Coordinate.Point;
-                if (position.Coordinate.Heading != null)
+                if (position.Coordinate.Heading != null && !double.IsNaN(position.Coordinate.Heading.Value))
                 {
                     GameMapControl.Heading = position.Coordinate.Heading.Value;
                 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Devices.Geolocation;
+using Windows.Foundation;
 using AllEnum;
 using Google.Protobuf;
 using PokemonGo.RocketAPI.GeneratedCode;
@@ -25,6 +26,11 @@ namespace PokemonGo_UWP.Entities
             Geoposition =
                 new Geopoint(new BasicGeoposition { Latitude = _fortData.Latitude, Longitude = _fortData.Longitude });
         }
+
+        /// <summary>
+        /// HACK - this should fix Pokestop floating on map
+        /// </summary>
+        public Point Anchor => new Point(0.5, 1);
 
         private DelegateCommand _trySearchPokestop;
 

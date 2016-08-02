@@ -56,6 +56,10 @@ namespace PokemonGo_UWP
                 var statusBar = StatusBar.GetForCurrentView();
                 await statusBar.HideAsync();
             }
+
+            // Enter into full screen mode
+            Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().TryEnterFullScreenMode();
+
             await Task.CompletedTask;
         }
 
