@@ -11,6 +11,7 @@ using PokemonGo.RocketAPI.Extensions;
 using PokemonGo_UWP.Entities;
 using PokemonGo_UWP.Utils;
 using PokemonGo_UWP.Views;
+using POGOProtos.Inventory.Item;
 using POGOProtos.Networking.Responses;
 using Template10.Mvvm;
 using Template10.Services.NavigationService;
@@ -132,6 +133,11 @@ namespace PokemonGo_UWP.ViewModels
             set { Set(ref _currentSearchResponse, value); }
         }
 
+        /// <summary>
+        /// Items awarded by Pokestop searching
+        /// </summary>
+        public ObservableCollection<ItemAward> AwardedItems { get; private set; } = new ObservableCollection<ItemAward>();
+
         #endregion
 
         #region Game Logic
@@ -189,14 +195,21 @@ namespace PokemonGo_UWP.ViewModels
                 Busy.SetBusy(true, "Searching PokeStop");
                 Logger.Write($"Searching {CurrentPokestopInfo.Name} [ID = {CurrentPokestop.Id}]");
                 CurrentSearchResponse =
-                    await GameClient.SearchFort(CurrentPokestop.Id, CurrentPokestop.Latitude, CurrentPokestop.Longitude);
-                Busy.SetBusy(false);
+                    await GameClient.SearchFort(CurrentPokestop.Id, CurrentPokestop.Latitude, CurrentPokestop.Longitude);                
+                Busy.SetBusy(false);                                
                 switch (CurrentSearchResponse.Result)
                 {
                     case FortSearchResponse.Types.Result.NoResultSet:
                         break;
                     case FortSearchResponse.Types.Result.Success:
                         // Success, we play the animation and update inventory
+                        AwardedItems.Clear();
+                        var tmpAwardedItems = CurrentSearchResponse.ItemsAwarded.GroupBy(item => item.ItemId);
+                        foreach (var tmpAwardedItem in tmpAwardedItems)
+                        {
+                            var tmpItem = tmpAwardedItem.GroupBy(item => item.ItemId);                            
+                            AwardedItems.Add(new ItemAward() { ItemId = tmpItem.First().First().ItemId, ItemCount = tmpItem.First().Count() });
+                        }
                         Logger.Write("Searching Pokestop success");
                         SearchSuccess?.Invoke(this, null);                        
                         await GameClient.UpdateInventory();

@@ -59,7 +59,7 @@ namespace PokemonGo_UWP.Utils
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            var itemId = 0;//((FortSearchResponse.Types.ItemAward) value).ItemId;
+            var itemId = ((ItemAward)value).ItemId;
             return new Uri($"ms-appx:///Assets/Items/Item_{(int) itemId}.png");
         }
 
@@ -114,8 +114,9 @@ namespace PokemonGo_UWP.Utils
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
+            var itemId = value is ItemAward ? ((ItemAward) value).ItemId : ((ItemData) value).ItemId;
             // HACK - we probably need some kind of database with item names and descriptions, this will work for now
-            return ((ItemData)value).ItemId.ToString().Replace("Item", "");
+            return itemId.ToString().Replace("Item", "");
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)

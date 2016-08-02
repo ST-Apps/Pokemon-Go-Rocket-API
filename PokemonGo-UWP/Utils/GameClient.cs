@@ -369,7 +369,7 @@ namespace PokemonGo_UWP.Utils
         public static async Task<CatchPokemonResponse> CatchPokemon(ulong encounterId, string spawnpointId, ItemId captureItem)
         {                        
             var random = new Random();
-            return await Client.Encounter.CatchPokemon(encounterId, spawnpointId, captureItem, random.NextDouble()*1.95D, random.NextDouble(), random.NextDouble());
+            return await Client.Encounter.CatchPokemon(encounterId, spawnpointId, captureItem, random.NextDouble()*1.95D, random.NextDouble());
         }
 
         /// <summary>
@@ -379,8 +379,7 @@ namespace PokemonGo_UWP.Utils
         /// <param name="spawnpointId"></param>
         /// <param name="captureItem"></param>
         /// <returns></returns>
-        public static async Task<UseItemCaptureResponse> UseCaptureItem(ulong encounterId, string spawnpointId,
-            POGOProtos.Inventory.Item.ItemId captureItem)
+        public static async Task<UseItemCaptureResponse> UseCaptureItem(ulong encounterId, string spawnpointId,ItemId captureItem)
         {            
             return await Client.Encounter.UseCaptureItem(encounterId, captureItem, spawnpointId);
         }
