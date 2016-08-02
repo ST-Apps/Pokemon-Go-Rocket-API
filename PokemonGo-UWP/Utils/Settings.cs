@@ -1,41 +1,75 @@
-﻿using System;
-using System.Collections.Generic;
-using AllEnum;
-using PokemonGo.RocketAPI.Enums;
+﻿using PokemonGo.RocketAPI.Enums;
 
 namespace PokemonGo.RocketAPI.Console
 {
     public class Settings : ISettings
     {
-        public AuthType AuthType => AuthType.Ptc;
-        public string PtcUsername => "";
-        public string PtcPassword => "";
-        public double DefaultLatitude => 0;
-        public double DefaultLongitude => 0;
+        private AuthType _authType;
+        private double _defaultLatitude;
+        private double _defaultLongitude;
+        private double _defaultAltitude;
+        private string _googleRefreshToken;
+        private string _ptcPassword;
+        private string _ptcUsername;
+        private string _googleUsername;
+        private string _googlePassword;
 
-        ICollection<KeyValuePair<ItemId, int>> ISettings.ItemRecycleFilter
+        #region Implementation of ISettings
+
+        public AuthType AuthType
         {
-            get
-            {
-                //Type and amount to keep
-                return new[]
-                {
-                    new KeyValuePair<ItemId, int>(ItemId.ItemPokeBall, 50),
-                    new KeyValuePair<ItemId, int>(ItemId.ItemGreatBall, 50)
-                };
-            }
+            get { return _authType; }
+            set { _authType = value; }
+        }
 
-            set { throw new NotImplementedException(); }
+        public double DefaultLatitude
+        {
+            get { return _defaultLatitude; }
+            set { _defaultLatitude = value; }
+        }
+
+        public double DefaultLongitude
+        {
+            get { return _defaultLongitude; }
+            set { _defaultLongitude = value; }
+        }
+
+        public double DefaultAltitude
+        {
+            get { return _defaultAltitude; }
+            set { _defaultAltitude = value; }
         }
 
         public string GoogleRefreshToken
         {
-            get { return ""; }
-            set
-            {
-                //UserSettings.Default.GoogleRefreshToken = value;
-                //UserSettings.Default.Save();
-            }
+            get { return _googleRefreshToken; }
+            set { _googleRefreshToken = value; }
         }
+
+        public string PtcPassword
+        {
+            get { return _ptcPassword; }
+            set { _ptcPassword = value; }
+        }
+
+        public string PtcUsername
+        {
+            get { return _ptcUsername; }
+            set { _ptcUsername = value; }
+        }
+
+        public string GoogleUsername
+        {
+            get { return _googleUsername; }
+            set { _googleUsername = value; }
+        }
+
+        public string GooglePassword
+        {
+            get { return _googlePassword; }
+            set { _googlePassword = value; }
+        }
+
+        #endregion
     }
 }

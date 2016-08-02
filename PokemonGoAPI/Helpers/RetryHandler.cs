@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.Net;
 using System.Net.Http;
 using System.Threading;
@@ -24,15 +25,14 @@ namespace PokemonGo.RocketAPI.Helpers
                 try
                 {
                     var response = await base.SendAsync(request, cancellationToken);
-                    if (response.StatusCode == HttpStatusCode.BadGateway)
+                    if (response.StatusCode == HttpStatusCode.BadGateway || response.StatusCode == HttpStatusCode.InternalServerError)
                         throw new Exception(); //todo: proper implementation
 
                     return response;
                 }
                 catch (Exception ex)
                 {
-                    Logger.Write($"[#{i} of {MaxRetries}] retry request {request.RequestUri} - Error: {ex}",
-                        LogLevel.Warning);
+                    Debug.WriteLine($"[#{i} of {MaxRetries}] retry request {request.RequestUri} - Error: {ex}");
                     if (i < MaxRetries)
                     {
                         await Task.Delay(1000, cancellationToken);

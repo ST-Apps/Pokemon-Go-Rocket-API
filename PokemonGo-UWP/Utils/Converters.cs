@@ -5,10 +5,15 @@ using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Media;
-using AllEnum;
 using Google.Protobuf.Collections;
-using PokemonGo.RocketAPI.GeneratedCode;
 using PokemonGo.RocketAPI.Extensions;
+using POGOProtos.Data;
+using POGOProtos.Enums;
+using POGOProtos.Inventory;
+using POGOProtos.Inventory.Item;
+using POGOProtos.Map.Fort;
+using POGOProtos.Map.Pokemon;
+using POGOProtos.Networking.Responses;
 
 namespace PokemonGo_UWP.Utils
 {
@@ -35,9 +40,9 @@ namespace PokemonGo_UWP.Utils
         #region Implementation of IValueConverter
 
         public object Convert(object value, Type targetType, object parameter, string language)
-        {
-            var itemId = (ItemId) ((Item) value).Item_;
-            return new Uri($"ms-appx:///Assets/Items/Item_{(int) itemId}.png");
+        {            
+            var itemId = (ItemData) value;
+            return new Uri($"ms-appx:///Assets/Items/Item_{(int) itemId.ItemId}.png");
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
@@ -54,7 +59,7 @@ namespace PokemonGo_UWP.Utils
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            var itemId = ((FortSearchResponse.Types.ItemAward) value).ItemId;
+            var itemId = 0;//((FortSearchResponse.Types.ItemAward) value).ItemId;
             return new Uri($"ms-appx:///Assets/Items/Item_{(int) itemId}.png");
         }
 
@@ -110,7 +115,7 @@ namespace PokemonGo_UWP.Utils
         public object Convert(object value, Type targetType, object parameter, string language)
         {
             // HACK - we probably need some kind of database with item names and descriptions, this will work for now
-            return value.ToString().Replace("Item", "");
+            return ((ItemData)value).ItemId.ToString().Replace("Item", "");
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)

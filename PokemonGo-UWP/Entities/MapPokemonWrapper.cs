@@ -1,10 +1,10 @@
 ﻿using Windows.Devices.Geolocation;
 using Windows.Foundation;
-using AllEnum;
-using Newtonsoft.Json;
-using PokemonGo.RocketAPI.GeneratedCode;
+
 using PokemonGo_UWP.Utils;
 using PokemonGo_UWP.Views;
+using POGOProtos.Enums;
+using POGOProtos.Map.Pokemon;
 using Template10.Common;
 using Template10.Mvvm;
 
@@ -48,7 +48,7 @@ namespace PokemonGo_UWP.Entities
 
         public long ExpirationTimestampMs => _mapPokemon.ExpirationTimestampMs;
 
-        public string SpawnpointId => _mapPokemon.SpawnpointId;
+        public string SpawnpointId => _mapPokemon.SpawnPointId;
 
         public Geopoint Geoposition { get; set; }
 

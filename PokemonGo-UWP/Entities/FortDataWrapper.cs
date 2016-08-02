@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Devices.Geolocation;
 using Windows.Foundation;
-using AllEnum;
 using Google.Protobuf;
-using PokemonGo.RocketAPI.GeneratedCode;
 using PokemonGo_UWP.Utils;
 using PokemonGo_UWP.Views;
+using POGOProtos.Enums;
+using POGOProtos.Map.Fort;
 using Template10.Common;
 using Template10.Mvvm;
 

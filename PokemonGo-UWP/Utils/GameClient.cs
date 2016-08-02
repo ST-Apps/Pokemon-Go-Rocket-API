@@ -7,13 +7,29 @@ using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.Devices.Geolocation;
 using Windows.UI.Xaml;
-using AllEnum;
 using PokemonGo.RocketAPI;
 using PokemonGo.RocketAPI.Console;
-using PokemonGo.RocketAPI.GeneratedCode;
-using PokemonGo.RocketAPI.Logic;
+using PokemonGo.RocketAPI.Enums;
+using PokemonGo.RocketAPI.Extensions;
 using PokemonGo_UWP.Entities;
+using POGOProtos.Inventory.Item;
+using POGOProtos.Map.Fort;
+using POGOProtos.Networking.Envelopes;
 using Universal_Authenticator_v2.Views;
+using CatchPokemonResponse = POGOProtos.Networking.Responses.CatchPokemonResponse;
+using CheckAwardedBadgesResponse = POGOProtos.Networking.Responses.CheckAwardedBadgesResponse;
+using DownloadSettingsResponse = POGOProtos.Networking.Responses.DownloadSettingsResponse;
+using EncounterResponse = POGOProtos.Networking.Responses.EncounterResponse;
+using FortDetailsResponse = POGOProtos.Networking.Responses.FortDetailsResponse;
+using FortSearchResponse = POGOProtos.Networking.Responses.FortSearchResponse;
+using GetHatchedEggsResponse = POGOProtos.Networking.Responses.GetHatchedEggsResponse;
+using GetInventoryResponse = POGOProtos.Networking.Responses.GetInventoryResponse;
+using GetMapObjectsResponse = POGOProtos.Networking.Responses.GetMapObjectsResponse;
+using GetPlayerResponse = POGOProtos.Networking.Responses.GetPlayerResponse;
+using InventoryItem = POGOProtos.Inventory.InventoryItem;
+using MapPokemon = POGOProtos.Map.Pokemon.MapPokemon;
+using NearbyPokemon = POGOProtos.Map.Pokemon.NearbyPokemon;
+using UseItemCaptureResponse = POGOProtos.Networking.Responses.UseItemCaptureResponse;
 
 namespace PokemonGo_UWP.Utils
 {
@@ -24,9 +40,30 @@ namespace PokemonGo_UWP.Utils
     {
         #region Client Vars
 
-        private static readonly ISettings ClientSettings = new Settings();
-        private static readonly Client Client = new Client(ClientSettings);
-        private static readonly Inventory InventoryWrapper = new Inventory(Client);
+        private static ISettings ClientSettings;
+        private static Client Client;
+
+        /// <summary>
+        /// Handles failures by having a fixed number of retries
+        /// </summary>
+        internal class APIFailure : IApiFailureStrategy
+        {
+
+            private int _retryCount;
+            private const int _maxRetries = 50;
+
+            public async Task<ApiOperation> HandleApiFailure(RequestEnvelope request, ResponseEnvelope response)
+            {
+                await Task.Delay(500);
+                _retryCount++;
+                return _retryCount < _maxRetries ? ApiOperation.Retry : ApiOperation.Abort;
+            }
+
+            public void HandleApiSuccess(RequestEnvelope request, ResponseEnvelope response)
+            {
+                _retryCount = 0;
+            }
+        }
 
         #endregion
 
@@ -62,7 +99,7 @@ namespace PokemonGo_UWP.Utils
         /// <summary>
         ///     Stores the current inventory
         /// </summary>
-        public static ObservableCollection<Item> Inventory { get; set; } = new ObservableCollection<Item>();
+        public static ObservableCollection<ItemData> ItemsInventory { get; set; } = new ObservableCollection<ItemData>();
 
         #endregion
 
@@ -76,7 +113,12 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task InitializeClient()
         {
-            await Client.SetServer(SettingsService.Instance.PtcAuthToken);
+            ClientSettings = new Settings
+            {
+                AuthType = AuthType.Ptc
+            };
+            Client = new Client(ClientSettings, new APIFailure()) { AuthToken = SettingsService.Instance.PtcAuthToken };
+            await Client.Login.DoLogin();
         }
 
         /// <summary>
@@ -87,8 +129,15 @@ namespace PokemonGo_UWP.Utils
         /// <returns>true if login worked</returns>
         public static async Task<bool> DoPtcLogin(string username, string password)
         {
+            ClientSettings = new Settings
+            {
+                PtcUsername = username,
+                PtcPassword = password,
+                AuthType = AuthType.Ptc
+            };
+            Client = new Client(ClientSettings, new APIFailure());
             // Get PTC token
-            var authToken = await Client.DoPtcLogin(username, password);
+            var authToken = await Client.Login.DoLogin();
             // Update current token even if it's null
             SettingsService.Instance.PtcAuthToken = authToken;
             // Return true if login worked, meaning that we have a token
@@ -195,7 +244,7 @@ namespace PokemonGo_UWP.Utils
         private static async Task UpdateMapObjects()
         {
             // Get all map objects from server
-            var mapObjects = await GetMapObjects(Geoposition);
+            var mapObjects = (await GetMapObjects(Geoposition)).Item1;
             // Replace data with the new ones
             var catchableTmp = new List<MapPokemon>(mapObjects.MapCells.SelectMany(i => i.CatchablePokemons));
             Logger.Write($"Found {catchableTmp.Count} catchable pokemons");
@@ -259,13 +308,13 @@ namespace PokemonGo_UWP.Utils
         /// </summary>
         /// <param name="geoposition"></param>
         /// <returns></returns>
-        public static async Task<GetMapObjectsResponse> GetMapObjects(Geoposition geoposition)
+        public static async Task<Tuple<GetMapObjectsResponse, GetHatchedEggsResponse, POGOProtos.Networking.Responses.GetInventoryResponse, CheckAwardedBadgesResponse, DownloadSettingsResponse>> GetMapObjects(Geoposition geoposition)
         {
             // Sends the updated position to the client
             await
-                Client.UpdatePlayerLocation(geoposition.Coordinate.Point.Position.Latitude,
-                    geoposition.Coordinate.Point.Position.Longitude);
-            return await Client.GetMapObjects();
+                Client.Player.UpdatePlayerLocation(geoposition.Coordinate.Point.Position.Latitude,
+                    geoposition.Coordinate.Point.Position.Longitude, geoposition.Coordinate.Point.Position.Altitude);
+            return await Client.Map.GetMapObjects();
         }
 
         #endregion
@@ -278,16 +327,16 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<GetPlayerResponse> GetProfile()
         {
-            return await Client.GetProfile();
+            return await Client.Player.GetPlayer();
         }
 
         /// <summary>
         ///     Gets player's inventoryDelta
         /// </summary>
         /// <returns></returns>
-        public static async Task<GetInventoryResponse> GetInventoryDelta()
+        public static async Task<GetInventoryResponse> GetInventory()
         {
-            return await Client.GetInventory();
+            return await Client.Inventory.GetInventory();
         }
 
         /// <summary>
@@ -295,11 +344,13 @@ namespace PokemonGo_UWP.Utils
         /// </summary>
         public static async Task UpdateInventory()
         {
-            var inventoryTmp = new List<Item>(await InventoryWrapper.GetItems());
-            Inventory.Clear();
-            foreach (var item in inventoryTmp)
+            // Get ALL the items
+            var fullInventory = (await GetInventory()).InventoryDelta.InventoryItems;
+            var tmpItemsInventory = fullInventory.Where(item => item.InventoryItemData.Item != null).GroupBy(item => item.InventoryItemData.Item);
+            ItemsInventory.Clear();
+            foreach (var item in tmpItemsInventory)
             {
-                Inventory.Add(item);
+                ItemsInventory.Add(item.First().InventoryItemData.Item);
             }
         }
 
@@ -317,7 +368,7 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<EncounterResponse> EncounterPokemon(ulong encounterId, string spawnpointId)
         {
-            return await Client.EncounterPokemon(encounterId, spawnpointId);
+            return await Client.Encounter.EncounterPokemon(encounterId, spawnpointId);
         }
 
         /// <summary>
@@ -329,9 +380,10 @@ namespace PokemonGo_UWP.Utils
         /// <param name="captureItem"></param>
         /// <param name="latitude"></param>
         /// <returns></returns>
-        public static async Task<CatchPokemonResponse> CatchPokemon(ulong encounterId, string spawnpointId, double latitude, double longitude, MiscEnums.Item captureItem)
+        public static async Task<CatchPokemonResponse> CatchPokemon(ulong encounterId, string spawnpointId, ItemId captureItem)
         {
-            return await Client.CatchPokemon(encounterId, spawnpointId, latitude, longitude, captureItem);
+            var random = new Random();
+            return await Client.Encounter.CatchPokemon(encounterId, spawnpointId, captureItem, random.NextDouble() * 1.95D, random.NextDouble(), random.NextDouble());
         }
 
         /// <summary>
@@ -341,10 +393,10 @@ namespace PokemonGo_UWP.Utils
         /// <param name="spawnpointId"></param>
         /// <param name="captureItem"></param>
         /// <returns></returns>
-        public static async Task<UseItemCaptureRequest> UseCaptureItem(ulong encounterId, string spawnpointId,
-            ItemId captureItem)
+        public static async Task<UseItemCaptureResponse> UseCaptureItem(ulong encounterId, string spawnpointId,
+            POGOProtos.Inventory.Item.ItemId captureItem)
         {
-            return await Client.UseCaptureItem(encounterId, captureItem, spawnpointId);
+            return await Client.Encounter.UseCaptureItem(encounterId, captureItem, spawnpointId);
         }
 
         #endregion
@@ -362,7 +414,7 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<FortDetailsResponse> GetFort(string pokestopId, double latitude, double longitude)
         {
-            return await Client.GetFort(pokestopId, latitude, longitude);
+            return await Client.Fort.GetFort(pokestopId, latitude, longitude);
         }
 
         /// <summary>
@@ -374,7 +426,7 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<FortSearchResponse> SearchFort(string pokestopId, double latitude, double longitude)
         {
-            return await Client.SearchFort(pokestopId, latitude, longitude);
+            return await Client.Fort.SearchFort(pokestopId, latitude, longitude);
         }
 
         #endregion

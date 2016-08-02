@@ -1,51 +1,106 @@
-﻿using System.Net.Http;
+﻿using System.Diagnostics;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Google.Protobuf;
-using PokemonGo.RocketAPI.GeneratedCode;
+using PokemonGo.RocketAPI.Exceptions;
+using POGOProtos.Networking.Envelopes;
 
 namespace PokemonGo.RocketAPI.Extensions
 {
+    using System;
+
+    public enum ApiOperation
+    {
+        Retry,
+        Abort
+    }
+
+    public interface IApiFailureStrategy
+    {
+        Task<ApiOperation> HandleApiFailure(RequestEnvelope request, ResponseEnvelope response);
+        void HandleApiSuccess(RequestEnvelope request, ResponseEnvelope response);
+    }
+
     public static class HttpClientExtensions
     {
-        private static bool _waitingForResponse;
-        private static int _retryDelayMs = 100;
+        public static async Task<IMessage[]> PostProtoPayload<TRequest>(this System.Net.Http.HttpClient client,
+            string url, RequestEnvelope requestEnvelope,
+            IApiFailureStrategy strategy,
+            params Type[] responseTypes) where TRequest : IMessage<TRequest>
+        {
+            var result = new IMessage[responseTypes.Length];
+            for (var i = 0; i < responseTypes.Length; i++)
+            {
+                result[i] = Activator.CreateInstance(responseTypes[i]) as IMessage;
+                if (result[i] == null)
+                {
+                    throw new ArgumentException($"ResponseType {i} is not an IMessage");
+                }
+            }
 
-        public static async Task<TResponsePayload> PostProtoPayload<TRequest, TResponsePayload>(this HttpClient client,
-            string url, TRequest request) where TRequest : IMessage<TRequest>
+            ResponseEnvelope response;
+            while ((response = await PostProto<TRequest>(client, url, requestEnvelope)).Returns.Count != responseTypes.Length)
+            {
+                var operation = await strategy.HandleApiFailure(requestEnvelope, response);
+                if (operation == ApiOperation.Abort)
+                {
+                    throw new InvalidResponseException($"Expected {responseTypes.Length} responses, but got {response.Returns.Count} responses");
+                }
+            }
+
+            strategy.HandleApiSuccess(requestEnvelope, response);
+
+            for (var i = 0; i < responseTypes.Length; i++)
+            {
+                var payload = response.Returns[i];
+                result[i].MergeFrom(payload);
+            }
+            return result;
+        }
+
+        public static async Task<TResponsePayload> PostProtoPayload<TRequest, TResponsePayload>(this System.Net.Http.HttpClient client,
+            string url, RequestEnvelope requestEnvelope, IApiFailureStrategy strategy) where TRequest : IMessage<TRequest>
             where TResponsePayload : IMessage<TResponsePayload>, new()
         {
-            while (_waitingForResponse)
-                await Task.Delay(_retryDelayMs);
-            _waitingForResponse = true;
+            Debug.WriteLine($"Requesting {typeof(TResponsePayload).Name}");
+            var response = await PostProto<TRequest>(client, url, requestEnvelope);
 
-            Response response;
-            var count = 0;
-            do
+            while (response.Returns.Count == 0)
             {
-                count++;
-                response = await PostProto(client, url, request);
-                _waitingForResponse = false;
+                var operation = await strategy.HandleApiFailure(requestEnvelope, response);
+                if (operation == ApiOperation.Abort)
+                {
+                    break;
+                }
 
-                await Task.Delay(_retryDelayMs);
-            } while (response.Payload.Count < 1 && count < 30);
+                response = await PostProto<TRequest>(client, url, requestEnvelope);
+            }
 
-            var payload = response.Payload[0];
+            if (response.Returns.Count == 0)
+                throw new InvalidResponseException();
+
+            strategy.HandleApiSuccess(requestEnvelope, response);
+
+            //Decode payload
+            //todo: multi-payload support
+            var payload = response.Returns[0];
             var parsedPayload = new TResponsePayload();
             parsedPayload.MergeFrom(payload);
+
             return parsedPayload;
         }
 
-        public static async Task<Response> PostProto<TRequest>(this HttpClient client, string url, TRequest request)
-            where TRequest : IMessage<TRequest>
+        public static async Task<ResponseEnvelope> PostProto<TRequest>(this System.Net.Http.HttpClient client, string url,
+            RequestEnvelope requestEnvelope) where TRequest : IMessage<TRequest>
         {
             //Encode payload and put in envelop, then send
-            var data = request.ToByteString();
+            var data = requestEnvelope.ToByteString();
             var result = await client.PostAsync(url, new ByteArrayContent(data.ToByteArray()));
 
             //Decode message
             var responseData = await result.Content.ReadAsByteArrayAsync();
             var codedStream = new CodedInputStream(responseData);
-            var decodedResponse = new Response();
+            var decodedResponse = new ResponseEnvelope();
             decodedResponse.MergeFrom(codedStream);
 
             return decodedResponse;
