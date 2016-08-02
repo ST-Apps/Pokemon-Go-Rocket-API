@@ -32,7 +32,7 @@ namespace PokemonGo_UWP.ViewModels
         #region Lifecycle Handlers
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="parameter"></param>
         /// <param name="mode"></param>
@@ -45,7 +45,8 @@ namespace PokemonGo_UWP.ViewModels
             if (parameter is bool)
             {
                 // First time navigating here, we need to initialize data updating but only if we have GPS access
-                await Dispatcher.DispatchAsync(async () => { 
+                await Dispatcher.DispatchAsync(async () =>
+                {
                     var accessStatus = await Geolocator.RequestAccessAsync();
                     switch (accessStatus)
                     {
@@ -62,13 +63,13 @@ namespace PokemonGo_UWP.ViewModels
             }
             if (suspensionState.Any())
             {
-                // Recovering the state                
-                PlayerProfile = (PlayerData) suspensionState[nameof(PlayerProfile)];
-                PlayerStats = (PlayerStats) suspensionState[nameof(PlayerStats)];                
+                // Recovering the state
+                PlayerProfile = (PlayerData)suspensionState[nameof(PlayerProfile)];
+                PlayerStats = (PlayerStats)suspensionState[nameof(PlayerStats)];
             }
             else
             {
-                // No saved state, get them from the client                
+                // No saved state, get them from the client
                 PlayerProfile = (await GameClient.GetProfile()).PlayerData;
                 InventoryDelta = (await GameClient.GetInventory()).InventoryDelta;
                 var tmpStats = InventoryDelta.InventoryItems.First(item => item.InventoryItemData.PlayerStats != null).InventoryItemData.PlayerStats;
@@ -135,7 +136,7 @@ namespace PokemonGo_UWP.ViewModels
 
         #endregion
 
-        #region Bindable Game Vars   
+        #region Bindable Game Vars
 
         public string CurrentVersion => GameClient.CurrentVersion;
 
@@ -202,7 +203,7 @@ namespace PokemonGo_UWP.ViewModels
             );
 
 
-        #endregion       
+        #endregion
 
         #endregion
 

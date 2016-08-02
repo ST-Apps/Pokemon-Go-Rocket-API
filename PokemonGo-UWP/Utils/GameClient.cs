@@ -114,10 +114,10 @@ namespace PokemonGo_UWP.Utils
         public static async Task InitializeClient()
         {
             ClientSettings = new Settings
-            {                
+            {
                 AuthType = AuthType.Ptc
             };
-            Client = new Client(ClientSettings, new APIFailure()) {AuthToken = SettingsService.Instance.PtcAuthToken};
+            Client = new Client(ClientSettings, new APIFailure()) { AuthToken = SettingsService.Instance.PtcAuthToken };
             await Client.Login.DoLogin();
         }
 
@@ -156,13 +156,13 @@ namespace PokemonGo_UWP.Utils
             _geolocator = null;
             CatchablePokemons.Clear();
             NearbyPokemons.Clear();
-            NearbyPokestops.Clear();            
+            NearbyPokestops.Clear();
         }
 
         #endregion
 
         #region Data Updating
-        
+
         private static Geolocator _geolocator;
 
         public static Geoposition Geoposition { get; private set; }
@@ -226,9 +226,9 @@ namespace PokemonGo_UWP.Utils
                     await UpdateMapObjects();
                 }
 
-                UpdateDataMutex.ReleaseMutex();                
+                UpdateDataMutex.ReleaseMutex();
             };
-            // Update before starting timer            
+            // Update before starting timer
             Busy.SetBusy(true, "Getting user data...");
             await UpdateMapObjects();
             await UpdateInventory();
@@ -243,11 +243,15 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         private static async Task UpdateMapObjects()
         {
-            // Get all map objects from server            
-            var mapObjects = (await GetMapObjects(Geoposition)).Item1;            
-            // Replace data with the new ones                                  
+            // Get all map objects from server
+            var mapObjects = (await GetMapObjects(Geoposition)).Item1;
+            // Replace data with the new ones
             var catchableTmp = new List<MapPokemon>(mapObjects.MapCells.SelectMany(i => i.CatchablePokemons));
             Logger.Write($"Found {catchableTmp.Count} catchable pokemons");
+
+            if (catchableTmp.Count > 0)
+                await MakeSound(@"pokemon_found_ding.wav");
+
             if (catchableTmp.Count != CatchablePokemons.Count)
             {
                 MapPokemonUpdated?.Invoke(null, null);
@@ -259,7 +263,7 @@ namespace PokemonGo_UWP.Utils
             }
             var nearbyTmp = new List<NearbyPokemon>(mapObjects.MapCells.SelectMany(i => i.NearbyPokemons));
             Logger.Write($"Found {nearbyTmp.Count} nearby pokemons");
-            NearbyPokemons.Clear();           
+            NearbyPokemons.Clear();
             foreach (var pokemon in nearbyTmp)
             {
                 NearbyPokemons.Add(pokemon);
@@ -275,6 +279,16 @@ namespace PokemonGo_UWP.Utils
                 NearbyPokestops.Add(new FortDataWrapper(pokestop));
             }
             Logger.Write("Finished updating map objects");
+        }
+
+        private static async Task MakeSound(string asset)
+        {
+            var mysong = new Windows.UI.Xaml.Controls.MediaElement();
+            var folder = await Package.Current.InstalledLocation.GetFolderAsync("Assets");
+            var file = await folder.GetFileAsync(asset);
+            var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
+            mysong.SetSource(stream, file.ContentType);
+            mysong.Play();
         }
 
         public static async Task ForcedUpdateMapData()
@@ -295,11 +309,11 @@ namespace PokemonGo_UWP.Utils
         /// <param name="geoposition"></param>
         /// <returns></returns>
         public static async Task<Tuple<GetMapObjectsResponse, GetHatchedEggsResponse, POGOProtos.Networking.Responses.GetInventoryResponse, CheckAwardedBadgesResponse, DownloadSettingsResponse>> GetMapObjects(Geoposition geoposition)
-        {            
+        {
             // Sends the updated position to the client
             await
                 Client.Player.UpdatePlayerLocation(geoposition.Coordinate.Point.Position.Latitude,
-                    geoposition.Coordinate.Point.Position.Longitude, geoposition.Coordinate.Point.Position.Altitude);            
+                    geoposition.Coordinate.Point.Position.Longitude, geoposition.Coordinate.Point.Position.Altitude);
             return await Client.Map.GetMapObjects();
         }
 
@@ -329,7 +343,7 @@ namespace PokemonGo_UWP.Utils
         ///     Updates inventory data
         /// </summary>
         public static async Task UpdateInventory()
-        {            
+        {
             // Get ALL the items
             var fullInventory = (await GetInventory()).InventoryDelta.InventoryItems;
             var tmpItemsInventory = fullInventory.Where(item => item.InventoryItemData.Item != null).GroupBy(item => item.InventoryItemData.Item);
@@ -353,7 +367,7 @@ namespace PokemonGo_UWP.Utils
         /// <param name="spawnpointId"></param>
         /// <returns></returns>
         public static async Task<EncounterResponse> EncounterPokemon(ulong encounterId, string spawnpointId)
-        {            
+        {
             return await Client.Encounter.EncounterPokemon(encounterId, spawnpointId);
         }
 
@@ -367,9 +381,9 @@ namespace PokemonGo_UWP.Utils
         /// <param name="latitude"></param>
         /// <returns></returns>
         public static async Task<CatchPokemonResponse> CatchPokemon(ulong encounterId, string spawnpointId, ItemId captureItem)
-        {                        
+        {
             var random = new Random();
-            return await Client.Encounter.CatchPokemon(encounterId, spawnpointId, captureItem, random.NextDouble()*1.95D, random.NextDouble(), random.NextDouble());
+            return await Client.Encounter.CatchPokemon(encounterId, spawnpointId, captureItem, random.NextDouble() * 1.95D, random.NextDouble(), random.NextDouble());
         }
 
         /// <summary>
@@ -381,7 +395,7 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<UseItemCaptureResponse> UseCaptureItem(ulong encounterId, string spawnpointId,
             POGOProtos.Inventory.Item.ItemId captureItem)
-        {            
+        {
             return await Client.Encounter.UseCaptureItem(encounterId, captureItem, spawnpointId);
         }
 
