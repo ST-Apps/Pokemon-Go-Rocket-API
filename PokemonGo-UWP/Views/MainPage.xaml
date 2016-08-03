@@ -6,61 +6,103 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
       mc:Ignorable="d">
-    
     <Page.DataContext>
         <viewModels:LoginPageViewModel x:Name="ViewModel"/>
     </Page.DataContext>
-
-    <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-        <controls:PageHeader x:Name="pageHeader"
-                             Content="PTC Login"
-                             RelativePanel.AlignLeftWithPanel="True"
-                             RelativePanel.AlignRightWithPanel="True"
-                             RelativePanel.AlignTopWithPanel="True" />
-
-        <TextBox x:Name="usernameTextBox"
-                 Margin="16,12"
-                 Header="username:"
-                 Text="{Binding PtcUsername, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                 RelativePanel.AlignLeftWithPanel="True"
-                 RelativePanel.AlignRightWithPanel="True"
-                 RelativePanel.Below="pageHeader" />
-
-        <PasswordBox x:Name="passwordBox"
-                     Margin="16,0"
-                     Header="password:"
-                     Password="{Binding PtcPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Backgrounds/bg_light.png"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <RelativePanel Grid.Row="0">
+            <Image x:Name="pogoLogo"
+                   Margin="16,12"
+                   Height="110"
+                   Width="110"
+                   RelativePanel.AlignHorizontalCenterWithPanel="True"
+                   Source="ms-appx:///Assets/UI/logo.transparent-200x200.png" />
+            <TextBlock x:Name="pogoVersion"
+                       Margin="16,12"
+                       Text="{Binding CurrentVersion}"
+                       Foreground="White"
+                       TextAlignment="Right"
+                       RelativePanel.AlignLeftWithPanel="True"
+                       RelativePanel.AlignRightWithPanel="True" />
+        </RelativePanel>
+        <RelativePanel Grid.Row="1"
+                       Margin="16,12"
+                       Background="#19000000"
+                       HorizontalAlignment="Stretch" >
+            <TextBox x:Name="usernameTextBox"
+                     Margin="16,12,16,0"
+                     Foreground="#444"
+                     Background="White"
+                     BorderThickness="0"
+                     Padding="12,12,12 0"
+                     Height="75"
+                     FontSize="16"
+                     Text="{Binding PtcUsername, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                      RelativePanel.AlignLeftWithPanel="True"
-                     RelativePanel.AlignRightWithPanel="True"
-                     RelativePanel.Below="usernameTextBox" 
-                     KeyDown="passwordBox_KeyDown" />
-
-        <Grid Margin="16,12"
-              RelativePanel.AlignLeftWithPanel="True"
-              RelativePanel.AlignRightWithPanel="True"
-              RelativePanel.AlignBottomWithPanel="True">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
+                     RelativePanel.AlignRightWithPanel="True">
+                <TextBox.Header>
+                    <TextBlock Text="Username:" Foreground="White" />
+                </TextBox.Header>
+            </TextBox>
+            <PasswordBox x:Name="passwordBox"
+                         Margin="16,12,16,0"
+                         Foreground="#444"
+                         Background="White"
+                         BorderThickness="0"
+                         Padding="12,12,12 0"
+                         Height="75"
+                         FontSize="16"
+                         VerticalContentAlignment="Center"
+                         Password="{Binding PtcPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                         RelativePanel.Below="usernameTextBox"
+                         RelativePanel.AlignLeftWithPanel="True"
+                         RelativePanel.AlignRightWithPanel="True" 
+                         KeyDown="passwordBox_KeyDown">
+                <PasswordBox.Header>
+                    <TextBlock Text="Password:" Foreground="White" />
+                </PasswordBox.Header>
+            </PasswordBox>
+            <Button x:Name="loginButton"
+                    Content="LOGIN WITH PTC ACCOUNT"
+                    Margin="16,12"
+                    Style="{StaticResource ButtonSubmitInverse}"
+                    RelativePanel.Below="passwordBox"
+                    RelativePanel.AlignLeftWithPanel="True"
+                    RelativePanel.AlignRightWithPanel="True"
+                    Command="{Binding DoPtcLoginCommand}" />
+        </RelativePanel>
+        <RelativePanel Grid.Row="2"
+                       Margin="16,12"
+                       Background="#19000000"
+                       HorizontalAlignment="Stretch" >
+            <Button x:Name="gLoginButton"
+                    IsEnabled="False"
+                    Content="LOGIN WITH GOOGLE ACCOUNT"
+                    Margin="16,12"
+                    Style="{StaticResource ButtonSubmitInverse}"
+                    RelativePanel.AlignLeftWithPanel="True"
+                    RelativePanel.AlignRightWithPanel="True" />
+        </RelativePanel>
+        <RelativePanel Grid.Row="3"
+                       Margin="16,12"
+                       HorizontalAlignment="Stretch" >
             <TextBlock TextWrapping="WrapWholeWords"
                        Margin="16,12"
-                       Text="WARNING: to login to PTC server you'll need to insert your username and password in this app. If you don't trust it, please, close it before going on." />
-
-            <Button HorizontalAlignment="Stretch"
-                    Grid.Row="1"
-                    x:Name="loginButton"
-                    Content="login"
-                    Command="{Binding DoPtcLoginCommand}" />
-        </Grid>
-        
-        <TextBlock Text="{Binding CurrentVersion}"
-                   RelativePanel.AlignTopWithPanel="True"
-                   RelativePanel.AlignRightWithPanel="True"
-                   Margin="6"
-                   />
-
-    </RelativePanel>
-
+                       Foreground="White"
+                       TextAlignment="Center"
+                       Text="Unofficial application of Pokemon Go."
+                       RelativePanel.AlignLeftWithPanel="True"
+                       RelativePanel.AlignRightWithPanel="True"
+                       RelativePanel.AlignBottomWithPanel="True" />
+        </RelativePanel>
+    </Grid>
 </Page>

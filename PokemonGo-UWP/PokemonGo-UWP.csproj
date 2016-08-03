@@ -93,6 +93,8 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\Backgrounds\bg_dark.png" />
+    <Content Include="Assets\Backgrounds\bg_light.png" />
     <Content Include="Assets\Backgrounds\Park.png" />
     <Content Include="Assets\Backgrounds\Parkscene_Background.png" />
     <Content Include="Assets\Backgrounds\Parkscene_Background_Night.png" />
@@ -306,6 +308,7 @@
     <Content Include="Assets\Pokemons\97.png" />
     <Content Include="Assets\Pokemons\98.png" />
     <Content Include="Assets\Pokemons\99.png" />
+    <Content Include="Assets\UI\logo.transparent-200x200.png" />
     <Content Include="Assets\UI\panelBG.png" />
     <Content Include="Assets\UI\candy.png" />
     <Content Include="Assets\UI\close.png" />
