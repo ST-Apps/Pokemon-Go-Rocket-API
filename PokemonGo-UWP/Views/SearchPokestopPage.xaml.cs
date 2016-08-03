@@ -18,7 +18,7 @@ namespace PokemonGo_UWP.Views
             Loaded += (s, e) =>
             {
                 // Of course binding doesn't work so we need to manually setup height for animations
-                ShowGatheredItemsMenuAnimation.From = GatheredItemsTranslateTransform.Y = ActualHeight;
+                //ShowGatheredItemsMenuAnimation.From = GatheredItemsTranslateTransform.Y = ActualHeight;
             };
         }
 
