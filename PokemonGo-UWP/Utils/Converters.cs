@@ -3,6 +3,7 @@ using System.Linq;
 using Windows.Devices.Geolocation;
 using Windows.UI;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls.Maps;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Media;
 using Google.Protobuf.Collections;
@@ -78,8 +79,10 @@ namespace PokemonGo_UWP.Utils
         public object Convert(object value, Type targetType, object parameter, string language)
         {
             var teamColor = (TeamColor) value;
+            var currentTime = int.Parse(DateTime.Now.ToString("HH"));
+            var noTeamColor =  currentTime > 7 && currentTime < 19 ? Colors.White : Colors.Black;
             return new SolidColorBrush(teamColor == TeamColor.Neutral
-                ? Colors.White
+                ? noTeamColor
                 : teamColor == TeamColor.Blue ? Colors.Blue : teamColor == TeamColor.Red ? Colors.Red : Colors.Yellow);
         }
 
@@ -244,6 +247,24 @@ namespace PokemonGo_UWP.Utils
             var inactve = "_inactive";
             if (cooldown < DateTime.UtcNow.ToUnixTime()) inactve = "";
             return new Uri($"ms-appx:///Assets/Icons/pokestop_near{inactve}.png");
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class CurrentTimeToMapColorSchemeConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var currentTime = int.Parse(DateTime.Now.ToString("HH"));
+            return (currentTime > 7 && currentTime < 19) ? MapColorScheme.Light : MapColorScheme.Dark;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)

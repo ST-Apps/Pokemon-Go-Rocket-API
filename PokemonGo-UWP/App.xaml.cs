@@ -65,14 +65,16 @@ namespace PokemonGo_UWP
 
         public override async Task OnStartAsync(StartKind startKind, IActivatedEventArgs args)
         {
-            if (!string.IsNullOrEmpty(SettingsService.Instance.PtcAuthToken))
+            // TODO: this is really ugly!
+            var hasPreviousSession = !string.IsNullOrEmpty(SettingsService.Instance.PtcAuthToken) ||
+                                     !string.IsNullOrEmpty(SettingsService.Instance.GoogleAuthToken);
+            if (hasPreviousSession)
             {
                 try
                 {
-                    await GameClient.InitializeClient();
+                    await GameClient.InitializeClient(!string.IsNullOrEmpty(SettingsService.Instance.PtcAuthToken));
                     // We have a stored token, let's go to game page 
                     NavigationService.Navigate(typeof(GameMapPage), true);
-                    //await ViewModelLocator.GameManagerViewModel.InitGame(true);
                 }
                 catch (Exception)
                 {

@@ -10,6 +10,7 @@ using Windows.Devices.Sensors;
 using Windows.Phone.Devices.Notification;
 using Windows.System.Threading;
 using Windows.UI.Popups;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Navigation;
 using PokemonGo.RocketAPI;
 using PokemonGo_UWP.Entities;
@@ -41,11 +42,12 @@ namespace PokemonGo_UWP.ViewModels
         public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
         {
             // Prevent from going back to other pages
-            NavigationService.ClearHistory();
+            NavigationService.ClearHistory();            
             if (parameter is bool)
             {
                 // First time navigating here, we need to initialize data updating but only if we have GPS access
-                await Dispatcher.DispatchAsync(async () => { 
+                await Dispatcher.DispatchAsync(async () =>
+                {
                     var accessStatus = await Geolocator.RequestAccessAsync();
                     switch (accessStatus)
                     {
@@ -63,8 +65,8 @@ namespace PokemonGo_UWP.ViewModels
             if (suspensionState.Any())
             {
                 // Recovering the state                
-                PlayerProfile = (PlayerData) suspensionState[nameof(PlayerProfile)];
-                PlayerStats = (PlayerStats) suspensionState[nameof(PlayerStats)];                
+                PlayerProfile = (PlayerData)suspensionState[nameof(PlayerProfile)];
+                PlayerStats = (PlayerStats)suspensionState[nameof(PlayerStats)];
             }
             else
             {
@@ -77,6 +79,7 @@ namespace PokemonGo_UWP.ViewModels
                     // TODO: report level increase
                 }
                 PlayerStats = tmpStats;
+                RaisePropertyChanged(nameof(ExperienceValue));
             }
             await Task.CompletedTask;
         }
@@ -137,6 +140,16 @@ namespace PokemonGo_UWP.ViewModels
 
         #region Bindable Game Vars   
 
+        public ApplicationTheme CurrentTheme
+        {
+            get
+            {
+                // Set theme
+                var currentTime = int.Parse(DateTime.Now.ToString("HH"));
+                return currentTime > 7 && currentTime < 19 ? ApplicationTheme.Light : ApplicationTheme.Dark;
+            }
+        }
+
         public string CurrentVersion => GameClient.CurrentVersion;
 
         /// <summary>
@@ -161,6 +174,9 @@ namespace PokemonGo_UWP.ViewModels
             get { return _playerStats; }
             set { Set(ref _playerStats, value); }
         }
+
+        public int ExperienceValue => _playerStats == null ? 0 : (int)(((double)_playerStats.Experience - _playerStats.PrevLevelXp) /
+            (_playerStats.NextLevelXp - _playerStats.PrevLevelXp) * 100);
 
         public InventoryDelta InventoryDelta
         {

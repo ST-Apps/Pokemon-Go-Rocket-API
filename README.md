@@ -2,7 +2,8 @@
 
 Check [Wiki](https://github.com/ST-Apps/PoGo-UWP/wiki) for infos.
 Join the [Skype](https://join.skype.com/hOeCHq2oEyhA) voice/video group.
-Join the [Telegram](https://telegram.me/joinchat/B7KoEj6EIKEhFKamP44tHQ) groupchat.
+Join the [Telegram](https://telegram.me/joinchat/B7KoEj6EIKEhFKamP44tHQ) groupchat. 
+Join the [Discord](https://discord.gg/4GMbEWH) voice/video group.
 
 # Changelog
 

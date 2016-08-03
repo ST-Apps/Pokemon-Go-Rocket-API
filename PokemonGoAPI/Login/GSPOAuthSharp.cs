@@ -10,6 +10,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Web.Http;
 using Windows.Security.Cryptography.Core;
+using Windows.Storage.Streams;
+using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Security.Cryptography;
+using System.Net.Http;
 
 namespace DankMemes.GPSOAuthSharp
 {
@@ -36,45 +40,36 @@ namespace DankMemes.GPSOAuthSharp
             this.password = password;
         }
 
-        public static byte[] ReadFully(Stream input)
-        {
-            byte[] buffer = new byte[16 * 1024];
-            using (MemoryStream ms = new MemoryStream())
-            {
-                int read;
-                while ((read = input.Read(buffer, 0, buffer.Length)) > 0)
-                {
-                    ms.Write(buffer, 0, read);
-                }
-                return ms.ToArray();
-            }
-        }
-
         // _perform_auth_request
         private async Task<Dictionary<string, string>> PerformAuthRequest(Dictionary<string, string> data)
         {
-            var nvc = data.Select(kvp => new KeyValuePair<string, string>(kvp.Key, kvp.Value)).ToList();
-            using (var client = new HttpClient())
+            var nvc = new List<KeyValuePair<string, string>>();
+            foreach (var kvp in data)
             {
-                client.DefaultRequestHeaders.Add("UserAgent", userAgent);      
+                nvc.Add(new KeyValuePair<string, string>(kvp.Key.ToString(), kvp.Value.ToString()));
+            }
+
+            using (System.Net.Http.HttpClient client = new System.Net.Http.HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("User-Agent", userAgent);
                 string result;
-                try                    
-                {             
-                    IHttpContent content = new HttpFormUrlEncodedContent(nvc);
-                    byte[] response =
-                        ReadFully((await (await client.PostAsync(new Uri(authUrl), content)).Content.ReadAsInputStreamAsync()).AsStreamForRead());
-                    result = Encoding.UTF8.GetString(response);
-                }
-                catch (WebException e)
+                try
                 {
-                    result = new StreamReader(e.Response.GetResponseStream()).ReadToEnd();
+                    var response = await client.PostAsync(authUrl, new FormUrlEncodedContent(nvc));
+
+                    result = await response.Content.ReadAsStringAsync();
                 }
+                catch (Exception e)
+                {
+                    result = e.Message;
+                }
+
                 return GoogleKeyUtils.ParseAuthResponse(result);
             }
         }
 
         // perform_master_login
-        public async Task<Dictionary<string, string>> PerformMasterLogin(string service = "ac2dm",
+        public async Task<Dictionary<string, string>> PerformMasterLogin(string androidId, string service = "ac2dm",
             string deviceCountry = "us", string operatorCountry = "us", string lang = "en", int sdkVersion = 21)
         {
             string signature = GoogleKeyUtils.CreateSignature(email, password, androidKey);
@@ -86,6 +81,7 @@ namespace DankMemes.GPSOAuthSharp
                 { "EncryptedPasswd",  signature},
                 { "service", service },
                 { "source", "android" },
+                { "androidId", androidId },
                 { "device_country", deviceCountry },
                 { "operatorCountry", operatorCountry },
                 { "lang", lang },
@@ -95,7 +91,7 @@ namespace DankMemes.GPSOAuthSharp
         }
 
         // perform_oauth
-        public async Task<Dictionary<string, string>> PerformOAuth(string masterToken, string service, string app, string clientSig,
+        public async Task<Dictionary<string, string>> PerformOAuth(string masterToken, string service, string androidId, string app, string clientSig,
             string deviceCountry = "us", string operatorCountry = "us", string lang = "en", int sdkVersion = 21)
         {
             var dict = new Dictionary<string, string> {
@@ -105,6 +101,7 @@ namespace DankMemes.GPSOAuthSharp
                 { "EncryptedPasswd",  masterToken},
                 { "service", service },
                 { "source", "android" },
+                { "androidId", androidId },
                 { "app", app },
                 { "client_sig", clientSig },
                 { "device_country", deviceCountry },
@@ -120,6 +117,8 @@ namespace DankMemes.GPSOAuthSharp
     // URL: https://github.com/simon-weber/gpsoauth/blob/master/gpsoauth/google.py
     class GoogleKeyUtils
     {
+        static string b64KeyBlob = "BgIAAACkAABSU0ExAAQAAAEAAQD5Z676H2sHuPzPHSUMid9z1UQQjUWg1SzKBk0EH7GzMkI5hKh5bHhpitEBqddIpKR7Tptj0FDZoqkgYXJGRWjbPQR14VsUd0UreyfKmadWs0KZEsod2mVIIt4iCK+pjsLEYnmvlckceEGFMZbS5XKgndB6u26U7ZRbSb+/Vv8myg==";
+
         // key_from_b64
         // BitConverter has different endianness, hence the Reverse()
         public static RSAParameters KeyFromB64(string b64Key)
@@ -161,16 +160,32 @@ namespace DankMemes.GPSOAuthSharp
         // signature
         public static string CreateSignature(string email, string password, RSAParameters key)
         {
-            // TODO: implement!
-            return "";
-            //var rsa = new  RSACryptoServiceProvider();
-            //rsa.ImportParameters(key);
-            //SHA1 sha1 = SHA1.Create();
-            //byte[] prefix = { 0x00 };
-            //byte[] hash = sha1.ComputeHash(KeyToStruct(key)).Take(4).ToArray();
-            //byte[] encrypted = rsa.Encrypt(Encoding.UTF8.GetBytes(email + "\x00" + password), true);
-            //return DataTypeUtils.UrlSafeBase64(DataTypeUtils.CombineBytes(prefix, hash, encrypted));
+            var rsa = AsymmetricKeyAlgorithmProvider.OpenAlgorithm(AsymmetricAlgorithmNames.RsaOaepSha1);
+            var keyBlob = CryptographicBuffer.DecodeFromBase64String(b64KeyBlob);
+            var publicKey = rsa.ImportPublicKey(keyBlob, CryptographicPublicKeyBlobType.Capi1PublicKey);
+
+            byte[] prefix = { 0x00 };
+            HashAlgorithmProvider hashAlgorithm = HashAlgorithmProvider.OpenAlgorithm(HashAlgorithmNames.Sha1);
+            var hash = hashAlgorithm.HashData(GoogleKeyUtils.KeyToStruct(key).AsBuffer()).ToArray().Take(4).ToArray();
+
+            byte[] encrypted = CryptographicEngine.Encrypt(publicKey, Encoding.UTF8.GetBytes(email + "\x00" + password).AsBuffer(), null).ToArray();
+            return DataTypeUtils.UrlSafeBase64(DataTypeUtils.CombineBytes(prefix, hash, encrypted));
         }
+
+        public static byte[] HmacSha1Sign(byte[] keyBytes, string message)
+        {
+            var messageBytes = Encoding.UTF8.GetBytes(message);
+            MacAlgorithmProvider objMacProv = MacAlgorithmProvider.OpenAlgorithm("HMAC_SHA1");
+            CryptographicKey hmacKey = objMacProv.CreateKey(keyBytes.AsBuffer());
+            IBuffer buffHMAC = CryptographicEngine.Sign(hmacKey, messageBytes.AsBuffer());
+            return buffHMAC.ToArray();
+        }
+    }
+
+    internal class RSAParameters
+    {
+        public byte[] Modulus { get; set; }
+        public byte[] Exponent { get; set; }
     }
 
     class DataTypeUtils
@@ -186,7 +201,7 @@ namespace DankMemes.GPSOAuthSharp
             int offset = 0;
             foreach (byte[] array in arrays)
             {
-                Buffer.BlockCopy(array, 0, rv, offset, array.Length);
+                System.Buffer.BlockCopy(array, 0, rv, offset, array.Length);
                 offset += array.Length;
             }
             return rv;

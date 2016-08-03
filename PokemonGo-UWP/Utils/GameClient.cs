@@ -50,13 +50,24 @@ namespace PokemonGo_UWP.Utils
         {
 
             private int _retryCount;
-            private const int _maxRetries = 50;
+            private const int MaxRetries = 50;
+
 
             public async Task<ApiOperation> HandleApiFailure(RequestEnvelope request, ResponseEnvelope response)
             {
+                if (_retryCount == MaxRetries)
+                    return ApiOperation.Abort;
+
                 await Task.Delay(500);
                 _retryCount++;
-                return _retryCount < _maxRetries ? ApiOperation.Retry : ApiOperation.Abort;
+
+                if (_retryCount % 5 == 0)
+                {
+                    // Let's try to refresh the session by getting a new token
+                    await (ClientSettings.AuthType == AuthType.Google ? DoGoogleLogin(ClientSettings.GoogleUsername, ClientSettings.GooglePassword) : DoPtcLogin(ClientSettings.PtcUsername, ClientSettings.PtcPassword));
+                }
+
+                return ApiOperation.Retry;
             }
 
             public void HandleApiSuccess(RequestEnvelope request, ResponseEnvelope response)
@@ -111,13 +122,17 @@ namespace PokemonGo_UWP.Utils
         ///     Sets things up if we didn't come from the login page
         /// </summary>
         /// <returns></returns>
-        public static async Task InitializeClient()
+        public static async Task InitializeClient(bool isPtcAccount)
         {
+            var isPtcLogin = !String.IsNullOrWhiteSpace(SettingsService.Instance.PtcAuthToken);
+
             ClientSettings = new Settings
             {                
-                AuthType = AuthType.Ptc
+                AuthType = isPtcLogin ? AuthType.Ptc : AuthType.Google
             };
-            Client = new Client(ClientSettings, new APIFailure()) {AuthToken = SettingsService.Instance.PtcAuthToken};
+            
+            Client = new Client(ClientSettings, new APIFailure()) {AuthToken = SettingsService.Instance.PtcAuthToken ?? SettingsService.Instance.GoogleAuthToken};
+
             await Client.Login.DoLogin();
         }
 
@@ -138,8 +153,33 @@ namespace PokemonGo_UWP.Utils
             Client = new Client(ClientSettings, new APIFailure());
             // Get PTC token
             var authToken = await Client.Login.DoLogin();
-            // Update current token even if it's null
+            // Update current token even if it's null and clear the token for the other identity provide
             SettingsService.Instance.PtcAuthToken = authToken;
+            SettingsService.Instance.GoogleAuthToken = null;
+            // Return true if login worked, meaning that we have a token
+            return authToken != null;
+        }
+
+        /// <summary>
+        ///     Starts a Google session for the given user
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        /// <returns>true if login worked</returns>
+        public static async Task<bool> DoGoogleLogin(string email, string password)
+        {
+            ClientSettings = new Settings
+            {
+                GoogleUsername = email,
+                GooglePassword = password,
+                AuthType = AuthType.Google,
+            };
+
+            Client = new Client(ClientSettings, new APIFailure());
+            // Get Google token
+            var authToken = await Client.Login.DoLogin();
+            // Update current token even if it's null
+            SettingsService.Instance.GoogleAuthToken = authToken;
             // Return true if login worked, meaning that we have a token
             return authToken != null;
         }
@@ -151,6 +191,7 @@ namespace PokemonGo_UWP.Utils
         {
             // Clear stored token
             SettingsService.Instance.PtcAuthToken = null;
+            SettingsService.Instance.GoogleAuthToken = null;
             _mapUpdateTimer?.Stop();
             _mapUpdateTimer = null;
             _geolocator = null;

@@ -11,6 +11,7 @@
     xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
     xmlns:entities="using:PokemonGo_UWP.Entities"
     x:Name="GamePage"
+    RequestedTheme="{Binding CurrentTheme, Mode=OneWay}"
     mc:Ignorable="d">
 
     <Page.DataContext>
@@ -105,7 +106,7 @@
 
         <maps:MapControl BusinessLandmarksVisible="False"
                          LandmarksVisible="False"
-                         ColorScheme="Dark"
+                         ColorScheme="{ThemeResource MapColorScheme}"
                          DesiredPitch="50"                         
                          PedestrianFeaturesVisible="False"
                          TrafficFlowVisible="False"
@@ -343,8 +344,7 @@
                     </Ellipse.Fill>
                 </Ellipse>
 
-                <ProgressBar Value="{Binding PlayerStats.Experience}"
-                             Maximum="{Binding PlayerStats.NextLevelXp}"
+                <ProgressBar Value="{Binding ExperienceValue}"
                              Foreground="{Binding PlayerProfile.Team, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}"
                              Height="5"
                              Margin="0,-5,0,0"
@@ -355,7 +355,7 @@
 
                 <TextBlock Text="{Binding PlayerStats.Level}"
                            FontSize="38"
-                           Foreground="White"
+                           Foreground="{ThemeResource ContrastColorBrush}"
                            Style="{ThemeResource BodyTextBlockStyle}"
                            FontWeight="SemiBold"
                            TextAlignment="Right"
@@ -365,7 +365,7 @@
 
                 <TextBlock Text="{Binding PlayerProfile.Username}"
                            FontSize="15"
-                           Foreground="White"
+                           Foreground="{ThemeResource ContrastColorBrush}"
                            RelativePanel.Below="ExperienceProgressBar" />
 
             </RelativePanel>
@@ -392,10 +392,19 @@
 
             <Border CornerRadius="8,0,0,8"
                     x:Name="NearbyPokemonGrid"
+                    BorderThickness="2,2,0,2"
                     Background="AntiqueWhite"
                     VerticalAlignment="Center"
                     Grid.Column="2"
                     Height="40">
+                
+                <Border.BorderBrush>
+                    <LinearGradientBrush StartPoint="0,0" 
+                                         EndPoint="1,1">
+                        <GradientStop Color="#a8e090" Offset="0"/>
+                        <GradientStop Color="#35908f" Offset="0.8"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
 
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Tapped">
