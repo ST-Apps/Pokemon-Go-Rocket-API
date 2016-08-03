@@ -406,11 +406,12 @@ namespace PokemonGo_UWP.Utils
         /// <param name="longitude"></param>
         /// <param name="captureItem"></param>
         /// <param name="latitude"></param>
+        /// <param name="shotMissed"></param>
         /// <returns></returns>
-        public static async Task<CatchPokemonResponse> CatchPokemon(ulong encounterId, string spawnpointId, ItemId captureItem)
+        public static async Task<CatchPokemonResponse> CatchPokemon(ulong encounterId, string spawnpointId, ItemId captureItem, bool hitPokemon = true)
         {                        
             var random = new Random();
-            return await Client.Encounter.CatchPokemon(encounterId, spawnpointId, captureItem, random.NextDouble()*1.95D, random.NextDouble());
+            return await Client.Encounter.CatchPokemon(encounterId, spawnpointId, captureItem, random.NextDouble()*1.95D, random.NextDouble(), 1, hitPokemon);
         }
 
         /// <summary>

@@ -24,6 +24,7 @@ namespace PokemonGo_UWP.Views
             Loaded += (s, e) =>
             {
                 // Of course binding doesn't work so we need to manually setup height for animations
+                // TODO: fix later, replace with ModalDialog from T10
                 ShowInventoryDoubleAnimation.From =
                     HideInventoryDoubleAnimation.To = InventoryMenuTranslateTransform.Y = ActualHeight*3/2;
             };
@@ -100,37 +101,33 @@ namespace PokemonGo_UWP.Views
         {
             ViewModel.CatchSuccess += GameManagerViewModelOnCatchSuccess;
             ViewModel.CatchEscape += GameManagerViewModelOnCatchEscape;
-            ViewModel.CatchMissed += GameManagerViewModelOnCatchMissed;
-            // Add also handlers to enable the button once the animation is done            
-            // TODO: fix names for actions in capture score and choose a proper font
-            CatchSuccess.Completed += (s, e) => ShowCaptureStatsStoryboard.Begin();
-            CatchEscape.Completed += (s, e) => ShowCaptureStatsStoryboard.Begin();
-            CatchMissed.Completed += (s, e) => LaunchPokeballButton.IsEnabled = true;
+            // Add also handlers to enable the button once the animation is done                                    
+            CatchEscape.Completed += (s, e) =>
+            {
+                // Get ready for a new shot
+                PokeballTransform.TranslateX = InitItemX;
+                PokeballTransform.TranslateY = InitItemY;
+                PokeballTransform.ScaleX = 1;
+                PokeballTransform.ScaleY = 1;
+                LaunchPokeballButton.IsEnabled = true;
+            };
         }
 
         private void UnsubscribeToCaptureEvents()
         {
             ViewModel.CatchSuccess -= GameManagerViewModelOnCatchSuccess;
             ViewModel.CatchEscape -= GameManagerViewModelOnCatchEscape;
-            ViewModel.CatchMissed -= GameManagerViewModelOnCatchMissed;
-        }
-
-        private void GameManagerViewModelOnCatchMissed(object sender, EventArgs eventArgs)
-        {
-            LaunchPokeballButton.IsEnabled = false;
-            CatchMissed.Begin();
         }
 
         private void GameManagerViewModelOnCatchEscape(object sender, EventArgs eventArgs)
         {
-            LaunchPokeballButton.IsEnabled = false;
             CatchEscape.Begin();
         }
 
         private void GameManagerViewModelOnCatchSuccess(object sender, EventArgs eventArgs)
         {
             LaunchPokeballButton.IsEnabled = false;
-            CatchSuccess.Begin();
+            ShowCaptureStatsStoryboard.Begin();
         }
 
 
@@ -266,18 +263,21 @@ namespace PokemonGo_UWP.Views
 
                 await PokeballTransform.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.High, () =>
                 {
-                    PokeballTransform.TranslateX = translateX;
-                    PokeballTransform.TranslateY = translateY;
-                    PokeballTransform.ScaleX = scaleX;
-                    PokeballTransform.ScaleY = scaleY;
+                    PokeballTransform.TranslateX = PokeballCatchAnimationStartingTranslateX.Value = translateX;
+                    PokeballTransform.TranslateY = PokeballCatchAnimationStartingTranslateY.Value = translateY;
+                    PokeballTransform.ScaleX = PokeballCatchAnimationStartingScaleX.Value = scaleX;
+                    PokeballTransform.ScaleY = PokeballCatchAnimationStartingScaleY.Value = scaleY;
                     if (pokeballStopped)
                     {
                         if (pokemonHit)
-                        {
-                            ViewModel.UseSelectedCaptureItem.Execute();
+                        {                            
+                            CatchSuccess.Begin();                            
+                            ViewModel.UseSelectedCaptureItem.Execute(true);
                         }
                         else
                         {
+                            // TODO: move the missed command if you want
+                            ViewModel.UseSelectedCaptureItem.Execute(false);
                             PokeballTransform.TranslateX = InitItemX;
                             PokeballTransform.TranslateY = InitItemY;
                             PokeballTransform.ScaleX = 1;
