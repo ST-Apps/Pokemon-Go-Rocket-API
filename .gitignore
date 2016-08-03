@@ -2,6 +2,8 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+.vs
+project.lock.json
 packages
 bin/
 obj/
@@ -12,3 +14,9 @@ obj/
 /PokemonGo-UWP/Utils/BingKey.cs
 /.vs/config/applicationhost.config
 /PokemonGo-UWP/Utils/ApplicationKeys.cs
+/PokemonGo-UWP/AppPackages/PokemonGo-UWP_1.0.10.0_ARM_Debug_Test/Add-AppDevPackage.resources
+/PokemonGo-UWP/AppPackages/PokemonGo-UWP_1.0.10.0_ARM_Debug_Test/Dependencies
+/PokemonGo-UWP/AppPackages/PokemonGo-UWP_1.0.11.0_ARM_Debug_Test/Add-AppDevPackage.resources
+/PokemonGo-UWP/AppPackages/PokemonGo-UWP_1.0.11.0_ARM_Debug_Test/Dependencies
+/PokemonGo-UWP/AppPackages/PokemonGo-UWP_1.0.12.0_ARM_Debug_Test/Add-AppDevPackage.resources
+/PokemonGo-UWP/AppPackages/PokemonGo-UWP_1.0.12.0_ARM_Debug_Test/Dependencies

@@ -3,12 +3,18 @@ using System.Linq;
 using Windows.Devices.Geolocation;
 using Windows.UI;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls.Maps;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Media;
-using AllEnum;
 using Google.Protobuf.Collections;
-using PokemonGo.RocketAPI.GeneratedCode;
 using PokemonGo.RocketAPI.Extensions;
+using POGOProtos.Data;
+using POGOProtos.Enums;
+using POGOProtos.Inventory;
+using POGOProtos.Inventory.Item;
+using POGOProtos.Map.Fort;
+using POGOProtos.Map.Pokemon;
+using POGOProtos.Networking.Responses;
 
 namespace PokemonGo_UWP.Utils
 {
@@ -30,14 +36,14 @@ namespace PokemonGo_UWP.Utils
         #endregion
     }
 
-    public class ItemIdToPokemonSpriteConverter : IValueConverter
+    public class ItemIdToItemIconConverter : IValueConverter
     {
         #region Implementation of IValueConverter
 
         public object Convert(object value, Type targetType, object parameter, string language)
-        {
-            var itemId = (ItemId) ((Item) value).Item_;
-            return new Uri($"ms-appx:///Assets/Items/Item_{(int) itemId}.png");
+        {            
+            var itemId = (ItemData) value;
+            return new Uri($"ms-appx:///Assets/Items/Item_{(int) itemId.ItemId}.png");
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
@@ -48,13 +54,13 @@ namespace PokemonGo_UWP.Utils
         #endregion
     }
 
-    public class ItemAwardToPokemonSpriteConverter : IValueConverter
+    public class ItemAwardToItemIconConverter : IValueConverter
     {
         #region Implementation of IValueConverter
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            var itemId = ((FortSearchResponse.Types.ItemAward) value).ItemId;
+            var itemId = ((ItemAward)value).ItemId;
             return new Uri($"ms-appx:///Assets/Items/Item_{(int) itemId}.png");
         }
 
@@ -73,8 +79,10 @@ namespace PokemonGo_UWP.Utils
         public object Convert(object value, Type targetType, object parameter, string language)
         {
             var teamColor = (TeamColor) value;
+            var currentTime = int.Parse(DateTime.Now.ToString("HH"));
+            var noTeamColor =  currentTime > 7 && currentTime < 19 ? Colors.Black : Colors.White;
             return new SolidColorBrush(teamColor == TeamColor.Neutral
-                ? Colors.White
+                ? noTeamColor
                 : teamColor == TeamColor.Blue ? Colors.Blue : teamColor == TeamColor.Red ? Colors.Red : Colors.Yellow);
         }
 
@@ -109,8 +117,9 @@ namespace PokemonGo_UWP.Utils
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
+            var itemId = value is ItemAward ? ((ItemAward) value).ItemId : ((ItemData) value).ItemId;
             // HACK - we probably need some kind of database with item names and descriptions, this will work for now
-            return value.ToString().Replace("Item", "");
+            return Resources.Items.GetString(itemId.ToString());
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
@@ -238,6 +247,24 @@ namespace PokemonGo_UWP.Utils
             var inactve = "_inactive";
             if (cooldown < DateTime.UtcNow.ToUnixTime()) inactve = "";
             return new Uri($"ms-appx:///Assets/Icons/pokestop_near{inactve}.png");
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class CurrentTimeToMapColorSchemeConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var currentTime = int.Parse(DateTime.Now.ToString("HH"));
+            return (currentTime > 7 && currentTime < 19) ? MapColorScheme.Light : MapColorScheme.Dark;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)

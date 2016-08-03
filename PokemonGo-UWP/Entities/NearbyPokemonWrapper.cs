@@ -1,6 +1,6 @@
 ﻿using System;
-using AllEnum;
-using PokemonGo.RocketAPI.GeneratedCode;
+using POGOProtos.Enums;
+using POGOProtos.Map.Pokemon;
 
 namespace PokemonGo_UWP.Entities
 {

@@ -4,8 +4,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    DataContext="{Binding GameManagerViewModel, Source={StaticResource Locator}}"
+    xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
     mc:Ignorable="d">
+    
+    <Page.DataContext>
+        <viewModels:SearchPokeStopPageViewModel x:Name="ViewModel"/>
+    </Page.DataContext>
 
     <Page.Resources>
 
@@ -86,6 +90,7 @@
                                 Orientation="Horizontal"
                                 HorizontalAlignment="Right">
                         <TextBlock Text="XP"
+                                   x:Uid="XPText"
                                    VerticalAlignment="Center" />
                         <TextBlock Text="{Binding CurrentSearchResponse.ExperienceAwarded}"
                                    Margin="8,0,0,0"
@@ -93,7 +98,7 @@
                     </StackPanel>
                 </Grid>
 
-                <ListView ItemsSource="{Binding CurrentSearchResponse.ItemsAwarded}"
+                <ListView ItemsSource="{Binding AwardedItems}"
                           SelectionMode="None"
                           HorizontalAlignment="Stretch"
                           Grid.Row="1"
@@ -128,7 +133,7 @@
                                         HorizontalAlignment="Stretch" />
 
                                     <TextBlock
-                                        Text="{Binding ItemId, Converter={StaticResource ItemToItemNameConverter}}"
+                                        Text="{Binding Converter={StaticResource ItemToItemNameConverter}}"
                                         FontSize="18"
                                         FontFamily="../Assets/Fonts/Lato-Bold.ttf#Lato"
                                         Foreground="#FF45686A"
@@ -178,6 +183,7 @@
                 </Grid>
 
                 <Button Content="OK"
+                        x:Uid="OKButton"
                         HorizontalAlignment="Stretch"
                         Command="{Binding ReturnToGameScreen}"
                         Grid.Row="3"
@@ -242,6 +248,7 @@
 
                 <StackPanel>
                     <TextBlock Text="out of range"
+                               x:Uid="OutOfRangeText"
                                TextAlignment="Center"
                                FontSize="20"
                                Foreground="White"
@@ -250,6 +257,7 @@
                                x:Name="OutOfRangeTextBlock" />
 
                     <TextBlock Text="cooldown"
+                               x:Uid="CoolDownText"
                                TextAlignment="Center"
                                FontSize="20"
                                Foreground="White"
@@ -258,6 +266,7 @@
                                x:Name="CooldownTextBlock" />
 
                     <TextBlock Text="inventory full"
+                               x:Uid="InventoryFullText"
                                TextAlignment="Center"
                                FontSize="20"
                                Foreground="White"

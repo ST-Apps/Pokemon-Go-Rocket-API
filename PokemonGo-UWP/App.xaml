@@ -4,6 +4,7 @@
                      xmlns:common="using:Template10.Common"
                      xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
                      xmlns:utils="using:PokemonGo_UWP.Utils"
+                     xmlns:converters="using:Template10.Converters"
                      RequestedTheme="Light">
 
     <Application.Resources>
@@ -11,8 +12,6 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles\Custom.xaml" />
             </ResourceDictionary.MergedDictionaries>
-
-            <viewModels:ViewModelLocator x:Key="Locator" />
 
             <utils:PokemonIdToPokemonSpriteConverter x:Key="PokemonIdToPokemonSpriteConverter" />
             <utils:EmptyConverter x:Key="EmptyConverter" />
@@ -22,11 +21,24 @@
             <utils:CaptureXpToTotalCaptureXpConverter x:Key="CaptureXpToTotalCaptureXpConverter" />
             <utils:ActivityTypeToActivityNameConverter x:Key="ActivityTypeToActivityNameConverter" />
             <utils:MapObjectToGeopointConverter x:Key="MapObjectToGeopointConverter" />
-            <utils:ItemIdToPokemonSpriteConverter x:Key="ItemIdToPokemonSpriteConverter" />
+            <utils:ItemIdToItemIconConverter x:Key="ItemIdToItemIconConverter" />
             <utils:PokemonDataToVisibilityConverter x:Key="PokemonDataToVisibilityConverter" />
-            <utils:ItemAwardToPokemonSpriteConverter x:Key="ItemAwardToPokemonSpriteConverter" />
+            <utils:ItemAwardToItemIconConverter x:Key="ItemAwardToPokemonSpriteConverter" />
             <utils:NearbyPokemonDistanceToDistanceImageConverter x:Key="NearbyPokemonDistanceToDistanceImageConverter" />
             <utils:PokestopToIconConverter x:Key="PokestopToIconConverter" />
+            <utils:CurrentTimeToMapColorSchemeConverter x:Key="CurrentTimeToMapColorSchemeConverter"/>
+
+            <converters:ValueWhenConverter x:Key="EnabledWhenHasElementsConverter">
+                <converters:ValueWhenConverter.When>
+                    <x:Double>0</x:Double>
+                </converters:ValueWhenConverter.When>
+                <converters:ValueWhenConverter.Value>
+                    <x:Boolean>True</x:Boolean>
+                </converters:ValueWhenConverter.Value>
+                <converters:ValueWhenConverter.Otherwise>
+                    <x:Boolean>False</x:Boolean>
+                </converters:ValueWhenConverter.Otherwise>
+            </converters:ValueWhenConverter>
 
         </ResourceDictionary>
     </Application.Resources>

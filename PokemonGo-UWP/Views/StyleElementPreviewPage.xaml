@@ -1,0 +1,89 @@
+﻿<Page
+    x:Class="PokemonGo_UWP.Views.StyleElementPreviewPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PokemonGo_UWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel>
+            <Button Style="{StaticResource ButtonSubmit}">
+                <TextBlock Text="ENABLE" />
+            </Button>
+            <Button Style="{StaticResource ButtonSubmitInverse}">
+                <TextBlock Text="ENABLE" />
+            </Button>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Style="{StaticResource ButtonCircle}">
+                    <TextBlock Text="" FontFamily="SEGOE MDL2 Assets" />
+                </Button>
+                <Button Style="{StaticResource ButtonCircleInverse}">
+                    <TextBlock Text="" FontFamily="SEGOE MDL2 Assets" />
+                </Button>
+            </StackPanel>
+            <Border Background="#dddddd" Height="1" Margin="15" />
+            <Border Style="{StaticResource BorderContainer}">
+                <StackPanel>
+                    <TextBlock Text="Write here you message o what you wanna to say" Style="{StaticResource TextNormal}" Margin="15,20,15,20" />
+                    <Button Style="{StaticResource ButtonSubmit}">
+                        <TextBlock Text="BUTTON TITLE" />
+                    </Button>
+                </StackPanel>
+            </Border>
+            <Border Background="#dddddd" Height="1" Margin="15" />
+            <Grid Style="{StaticResource GridContainer}">
+                <StackPanel>
+                    <Grid Margin="15,10,15,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="../Assets/Icons/stardust_painted.png" Height="50" />
+                        <TextBlock Grid.Column="1" Text="100" Style="{StaticResource TextNormal}" FontWeight="Bold" />
+                        <Image Grid.Column="2" Source="../Assets/UI/candy.png" Height="50" />
+                        <TextBlock Grid.Column="3" Text="3" Style="{StaticResource TextNormal}" FontWeight="Bold" />
+                    </Grid>
+                    <Border Background="#dddddd" Height="1" Margin="15,0,15,0" />
+                    <Grid Margin="15,10,15,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="50" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="Catch Pokemon" Style="{StaticResource TextNormal}" />
+                        <TextBlock Grid.Column="1" Text="150" Style="{StaticResource TextNormalSpotlight}" />
+                        <TextBlock Grid.Column="2" Text=" XP" Style="{StaticResource TextNormalSpotlight}" />
+                    </Grid>
+                    <Grid Margin="15,10,15,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="50" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="First Pokemon" Style="{StaticResource TextNormal}" />
+                        <TextBlock Grid.Column="1" Text="600" Style="{StaticResource TextNormalSpotlight}" />
+                        <TextBlock Grid.Column="2" Text=" XP" Style="{StaticResource TextNormalSpotlight}" />
+                    </Grid>
+                    <Border Background="#dddddd" Height="1" Margin="15,0,15,0" />
+                    <Grid Margin="15,10,15,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="50" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="TOTAL" Style="{StaticResource TextNormal}" />
+                        <TextBlock Grid.Column="1" Text="750" Style="{StaticResource TextNormalSpotlight}" />
+                        <TextBlock Grid.Column="2" Text=" XP" Style="{StaticResource TextNormalSpotlight}" />
+                    </Grid>
+                    <Button Style="{StaticResource ButtonSubmit}">
+                        <TextBlock Text="OK" />
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

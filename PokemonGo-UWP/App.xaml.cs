@@ -12,6 +12,9 @@ using System;
 using Windows.System;
 using Windows.System.Display;
 using Windows.UI.Popups;
+using Windows.UI.Xaml;
+using PokemonGo.RocketAPI;
+using PokemonGo.RocketAPI.Logging;
 
 namespace PokemonGo_UWP
 {
@@ -20,10 +23,7 @@ namespace PokemonGo_UWP
     [Bindable]
     sealed partial class App : BootStrapper
     {
-        /// <summary>
-        ///     Locator instance
-        /// </summary>
-        public static ViewModelLocator ViewModelLocator;
+
 
         /// <summary>
         /// Used to prevent lockscreen while playing
@@ -34,6 +34,11 @@ namespace PokemonGo_UWP
         {
             InitializeComponent();
 
+#if DEBUG
+            // Init logger
+            Logger.SetLogger(new ConsoleLogger(LogLevel.Info));
+#endif            
+            
             // Init HockeySDK
             if (!string.IsNullOrEmpty(ApplicationKeys.HockeyAppToken))
                 HockeyClient.Current.Configure(ApplicationKeys.HockeyAppToken);
@@ -51,19 +56,34 @@ namespace PokemonGo_UWP
                 var statusBar = StatusBar.GetForCurrentView();
                 await statusBar.HideAsync();
             }
-            // Get a static reference to viewmodel locator to use it within viewmodels
-            ViewModelLocator = (ViewModelLocator) Current.Resources["Locator"];
+
+            // Enter into full screen mode
+            Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().TryEnterFullScreenMode();
+
             await Task.CompletedTask;
         }
 
         public override async Task OnStartAsync(StartKind startKind, IActivatedEventArgs args)
-        {            
-            await NavigationService.NavigateAsync(typeof(MainPage));
-            if (!string.IsNullOrEmpty(SettingsService.Instance.PtcAuthToken))
+        {
+            // TODO: this is really ugly!
+            var hasPreviousSession = !string.IsNullOrEmpty(SettingsService.Instance.PtcAuthToken) ||
+                                     !string.IsNullOrEmpty(SettingsService.Instance.GoogleAuthToken);
+            if (hasPreviousSession)
             {
-                // We have a stored token, let's go to game page 
-                NavigationService.Navigate(typeof(GameMapPage), true);
-                //await ViewModelLocator.GameManagerViewModel.InitGame(true);
+                try
+                {
+                    await GameClient.InitializeClient(!string.IsNullOrEmpty(SettingsService.Instance.PtcAuthToken));
+                    // We have a stored token, let's go to game page 
+                    NavigationService.Navigate(typeof(GameMapPage), true);
+                }
+                catch (Exception)
+                {
+                    await ExceptionHandler.HandleException();
+                }
+            }
+            else
+            {
+                await NavigationService.NavigateAsync(typeof(MainPage));
             }
 
             // Check for updates

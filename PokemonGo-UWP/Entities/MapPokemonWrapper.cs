@@ -1,6 +1,12 @@
 ﻿using Windows.Devices.Geolocation;
-using AllEnum;
-using PokemonGo.RocketAPI.GeneratedCode;
+using Windows.Foundation;
+
+using PokemonGo_UWP.Utils;
+using PokemonGo_UWP.Views;
+using POGOProtos.Enums;
+using POGOProtos.Map.Pokemon;
+using Template10.Common;
+using Template10.Mvvm;
 
 namespace PokemonGo_UWP.Entities
 {
@@ -15,6 +21,25 @@ namespace PokemonGo_UWP.Entities
                 new Geopoint(new BasicGeoposition {Latitude = _mapPokemon.Latitude, Longitude = _mapPokemon.Longitude});
         }
 
+        /// <summary>
+        /// HACK - this should fix Pokestop floating on map
+        /// </summary>
+        public Point Anchor => new Point(0.5, 1);
+
+        private DelegateCommand _tryCatchPokemon;
+
+        /// <summary>
+        ///     We're just navigating to the capture page, reporting that the player wants to capture the selected Pokemon.
+        /// </summary>
+        public DelegateCommand TryCatchPokemon => _tryCatchPokemon ?? (
+            _tryCatchPokemon = new DelegateCommand(() =>
+            {
+                NavigationHelper.NavigationState["CurrentPokemon"] = this;
+                BootStrapper.Current.NavigationService.Navigate(typeof(CapturePokemonPage), true);
+            }, () => true)
+            );
+
+
         #region Wrapped Properties
 
         public PokemonId PokemonId => _mapPokemon.PokemonId;
@@ -23,13 +48,25 @@ namespace PokemonGo_UWP.Entities
 
         public long ExpirationTimestampMs => _mapPokemon.ExpirationTimestampMs;
 
-        public string SpawnpointId => _mapPokemon.SpawnpointId;
+        public string SpawnpointId => _mapPokemon.SpawnPointId;
 
-        public Geopoint Geoposition { get; }
+        public Geopoint Geoposition { get; set; }
 
-        public double Latitude => Geoposition.Position.Latitude;
+        public double Latitude => _mapPokemon.Latitude;
 
-        public double Longitude => Geoposition.Position.Longitude;
+        public double Longitude => _mapPokemon.Longitude;
+
+        #endregion
+
+        #region New Properties
+
+        public string Name
+        {
+            get
+            {
+                return Resources.Pokemon.GetString(PokemonId.ToString());
+            }
+        }
 
         #endregion
     }

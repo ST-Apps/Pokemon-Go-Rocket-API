@@ -1,69 +1,83 @@
-﻿using System.Linq;
+﻿using Google.Protobuf;
 using PokemonGo.RocketAPI.Enums;
-using PokemonGo.RocketAPI.GeneratedCode;
+using POGOProtos.Networking.Envelopes;
+using POGOProtos.Networking.Requests;
+using static POGOProtos.Networking.Envelopes.RequestEnvelope.Types;
 
 namespace PokemonGo.RocketAPI.Helpers
 {
-    public static class RequestBuilder
+    public class RequestBuilder
     {
-        public static Request GetInitialRequest(string authToken, AuthType authType, double lat, double lng,
-            double altitude, params Request.Types.Requests[] customRequests)
+        private readonly string _authToken;
+        private readonly AuthType _authType;
+        private readonly double _latitude;
+        private readonly double _longitude;
+        private readonly double _altitude;
+        private readonly AuthTicket _authTicket;
+
+        public RequestBuilder(string authToken, AuthType authType, double latitude, double longitude, double altitude,
+            AuthTicket authTicket = null)
         {
-            return new Request
+            _authToken = authToken;
+            _authType = authType;
+            _latitude = latitude;
+            _longitude = longitude;
+            _altitude = altitude;
+            _authTicket = authTicket;
+        }
+
+        public RequestEnvelope GetRequestEnvelope(params Request[] customRequests)
+        {
+            return new RequestEnvelope
             {
-                Altitude = Utils.FloatAsUlong(altitude),
-                Auth = new Request.Types.AuthInfo
+                StatusCode = 2, //1
+
+                RequestId = 1469378659230941192, //3
+                Requests = { customRequests }, //4
+
+                //Unknown6 = , //6
+                Latitude = _latitude, //7
+                Longitude = _longitude, //8
+                Altitude = _altitude, //9
+                AuthTicket = _authTicket, //11
+                Unknown12 = 989 //12
+            };
+        }
+
+        public RequestEnvelope GetInitialRequestEnvelope(params Request[] customRequests)
+        {
+            return new RequestEnvelope
+            {
+                StatusCode = 2, //1
+
+                RequestId = 1469378659230941192, //3
+                Requests = { customRequests }, //4
+
+                //Unknown6 = , //6
+                Latitude = _latitude, //7
+                Longitude = _longitude, //8
+                Altitude = _altitude, //9
+                AuthInfo = new AuthInfo
                 {
-                    Provider = authType == AuthType.Google ? "google" : "ptc",
-                    Token = new Request.Types.AuthInfo.Types.JWT
+                    Provider = _authType == AuthType.Google ? "google" : "ptc",
+                    Token = new AuthInfo.Types.JWT
                     {
-                        Contents = authToken,
-                        Unknown13 = 14
+                        Contents = _authToken,
+                        Unknown2 = 14
                     }
-                },
-                Latitude = Utils.FloatAsUlong(lat),
-                Longitude = Utils.FloatAsUlong(lng),
-                RpcId = 1469378659230941192,
-                Unknown1 = 2,
-                Unknown12 = 989, //Required otherwise we receive incompatible protocol
-                Requests =
-                {
-                    customRequests
-                }
+                }, //10
+                Unknown12 = 989 //12
             };
         }
 
-        public static Request GetInitialRequest(string authToken, AuthType authType, double lat, double lng,
-            double altitude, params RequestType[] customRequestTypes)
+        public RequestEnvelope GetRequestEnvelope(RequestType type, IMessage message)
         {
-            var customRequests = customRequestTypes.ToList().Select(c => new Request.Types.Requests {Type = (int) c});
-            return GetInitialRequest(authToken, authType, lat, lng, altitude, customRequests.ToArray());
-        }
-
-        public static Request GetRequest(Request.Types.UnknownAuth unknownAuth, double lat, double lng, double altitude,
-            params Request.Types.Requests[] customRequests)
-        {
-            return new Request
+            return GetRequestEnvelope(new Request()
             {
-                Altitude = Utils.FloatAsUlong(altitude),
-                Unknownauth = unknownAuth,
-                Latitude = Utils.FloatAsUlong(lat),
-                Longitude = Utils.FloatAsUlong(lng),
-                RpcId = 1469378659230941192,
-                Unknown1 = 2,
-                Unknown12 = 989, //Required otherwise we receive incompatible protocol
-                Requests =
-                {
-                    customRequests
-                }
-            };
-        }
+                RequestType = type,
+                RequestMessage = message.ToByteString()
+            });
 
-        public static Request GetRequest(Request.Types.UnknownAuth unknownAuth, double lat, double lng, double altitude,
-            params RequestType[] customRequestTypes)
-        {
-            var customRequests = customRequestTypes.ToList().Select(c => new Request.Types.Requests {Type = (int) c});
-            return GetRequest(unknownAuth, lat, lng, altitude, customRequests.ToArray());
         }
     }
 }

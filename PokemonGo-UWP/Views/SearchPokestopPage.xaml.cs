@@ -27,36 +27,36 @@ namespace PokemonGo_UWP.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            SubscribeToCaptureEvents();
+            SubscribeToSearchEvents();
         }
 
 
         protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
         {
             base.OnNavigatingFrom(e);
-            UnsubscribeToCaptureEvents();
+            UnsubscribeToSearchEvents();
         }
 
         #endregion
 
         #region Handlers
 
-        private void SubscribeToCaptureEvents()
+        private void SubscribeToSearchEvents()
         {
-            App.ViewModelLocator.GameManagerViewModel.SearchInCooldown += GameManagerViewModelOnSearchInCooldown;
-            App.ViewModelLocator.GameManagerViewModel.SearchInventoryFull += GameManagerViewModelOnSearchInventoryFull;
-            App.ViewModelLocator.GameManagerViewModel.SearchOutOfRange += GameManagerViewModelOnSearchOutOfRange;
-            App.ViewModelLocator.GameManagerViewModel.SearchSuccess += GameManagerViewModelOnSearchSuccess;
+            ViewModel.SearchInCooldown += GameManagerViewModelOnSearchInCooldown;
+            ViewModel.SearchInventoryFull += GameManagerViewModelOnSearchInventoryFull;
+            ViewModel.SearchOutOfRange += GameManagerViewModelOnSearchOutOfRange;
+            ViewModel.SearchSuccess += GameManagerViewModelOnSearchSuccess;
             // Add also handlers to report which items the user gained after the animation
             SpinPokestopImage.Completed += (s, e) => ShowGatheredItemsMenu.Begin();
         }
 
-        private void UnsubscribeToCaptureEvents()
+        private void UnsubscribeToSearchEvents()
         {
-            App.ViewModelLocator.GameManagerViewModel.SearchInCooldown -= GameManagerViewModelOnSearchInCooldown;
-            App.ViewModelLocator.GameManagerViewModel.SearchInventoryFull -= GameManagerViewModelOnSearchInventoryFull;
-            App.ViewModelLocator.GameManagerViewModel.SearchOutOfRange -= GameManagerViewModelOnSearchOutOfRange;
-            App.ViewModelLocator.GameManagerViewModel.SearchSuccess -= GameManagerViewModelOnSearchSuccess;
+            ViewModel.SearchInCooldown -= GameManagerViewModelOnSearchInCooldown;
+            ViewModel.SearchInventoryFull -= GameManagerViewModelOnSearchInventoryFull;
+            ViewModel.SearchOutOfRange -= GameManagerViewModelOnSearchOutOfRange;
+            ViewModel.SearchSuccess -= GameManagerViewModelOnSearchSuccess;
         }
 
         private void GameManagerViewModelOnSearchOutOfRange(object sender, EventArgs eventArgs)

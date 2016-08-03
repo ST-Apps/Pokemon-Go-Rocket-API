@@ -71,7 +71,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\x86\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP;CODE_ANALYSIS;</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
@@ -93,6 +93,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\Audio\pokemon_found_ding.wav" />
     <Content Include="Assets\Backgrounds\Park.png" />
     <Content Include="Assets\Backgrounds\Parkscene_Background.png" />
     <Content Include="Assets\Backgrounds\Parkscene_Background_Night.png" />
@@ -155,6 +156,8 @@
     <Content Include="Assets\Items\Item_COIN_HEAP_01.png" />
     <Content Include="Assets\Items\Item_COIN_POUCH_01.png" />
     <Content Include="Assets\Items\Item_COIN_STACK_01.png" />
+    <Content Include="Assets\Logos\google.png" />
+    <Content Include="Assets\Logos\logo_transparent.png" />
     <Content Include="Assets\Pokemons\1.png" />
     <Content Include="Assets\Pokemons\10.png" />
     <Content Include="Assets\Pokemons\100.png" />
@@ -319,22 +322,39 @@
     <Content Include="Assets\Fonts\Lato-Regular.ttf" />
     <Content Include="Assets\Fonts\Lato-Bold.ttf" />
     <None Include="project.json" />
+    <PRIResource Include="Strings\fr-FR\Resources.resw" />
+    <PRIResource Include="Strings\fr-FR\Pokemon.resw" />
+    <PRIResource Include="Strings\fr-FR\Items.resw" />
+    <PRIResource Include="Strings\de-DE\Items.resw" />
+    <PRIResource Include="Strings\en-US\Items.resw" />
+    <PRIResource Include="Strings\de-DE\Resources.resw" />
+    <PRIResource Include="Strings\de-DE\Pokemon.resw" />
+    <PRIResource Include="Strings\en-US\Resources.resw" />
+    <PRIResource Include="Strings\en-US\Pokemon.resw" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Entities\FortDataWrapper.cs" />
     <Compile Include="Entities\MapPokemonWrapper.cs" />
     <Compile Include="Entities\NearbyPokemonWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\ApplicationKeys.cs" />
+    <Compile Include="Utils\AudioUtils.cs" />
     <Compile Include="Utils\Converters.cs" />
+    <Compile Include="Utils\ExceptionHandler.cs" />
+    <Compile Include="Utils\GameClient.cs" />
     <Compile Include="Utils\MessageDialogExtensions.cs" />
+    <Compile Include="Utils\NavigationHelper.cs" />
+    <Compile Include="Utils\Resources.cs" />
     <Compile Include="Utils\Settings.cs" />
     <Compile Include="Utils\SettingsService.cs" />
     <Compile Include="Utils\UpdateManager.cs" />
-    <Compile Include="ViewModels\GameManagerViewModel.cs" />
-    <Compile Include="ViewModels\ViewModelLocator.cs" />
+    <Compile Include="ViewModels\CapturePokemonPageViewModel.cs" />
+    <Compile Include="ViewModels\GameMapPageViewModel.cs" />
+    <Compile Include="ViewModels\LoginPageViewModel.cs" />
+    <Compile Include="ViewModels\SearchPokeStopPageViewModel.cs" />
     <Compile Include="Views\CapturePokemonPage.xaml.cs">
       <DependentUpon>CapturePokemonPage.xaml</DependentUpon>
     </Compile>
@@ -423,6 +443,7 @@
       <Name>Windows Mobile Extensions for the UWP</Name>
     </SDKReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
