@@ -97,7 +97,7 @@
                     </StackPanel>
                 </Grid>
 
-                <ListView ItemsSource="{Binding CurrentSearchResponse.ItemsAwarded}"
+                <ListView ItemsSource="{Binding AwardedItems}"
                           SelectionMode="None"
                           HorizontalAlignment="Stretch"
                           Grid.Row="1"
@@ -132,7 +132,7 @@
                                         HorizontalAlignment="Stretch" />
 
                                     <TextBlock
-                                        Text="{Binding ItemId, Converter={StaticResource ItemToItemNameConverter}}"
+                                        Text="{Binding Converter={StaticResource ItemToItemNameConverter}}"
                                         FontSize="18"
                                         FontFamily="../Assets/Fonts/Lato-Bold.ttf#Lato"
                                         Foreground="#FF45686A"

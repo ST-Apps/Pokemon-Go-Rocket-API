@@ -11,13 +11,14 @@ using Windows.Phone.Devices.Notification;
 using Windows.System.Threading;
 using Windows.UI.Popups;
 using Windows.UI.Xaml.Navigation;
-using AllEnum;
 using PokemonGo.RocketAPI;
-using PokemonGo.RocketAPI.Extensions;
-using PokemonGo.RocketAPI.GeneratedCode;
 using PokemonGo_UWP.Entities;
 using PokemonGo_UWP.Utils;
 using PokemonGo_UWP.Views;
+using POGOProtos.Data;
+using POGOProtos.Data.Player;
+using POGOProtos.Inventory;
+using POGOProtos.Map.Pokemon;
 using Template10.Common;
 using Template10.Mvvm;
 using Template10.Services.NavigationService;
@@ -62,14 +63,14 @@ namespace PokemonGo_UWP.ViewModels
             if (suspensionState.Any())
             {
                 // Recovering the state                
-                PlayerProfile = (Profile) suspensionState[nameof(PlayerProfile)];
+                PlayerProfile = (PlayerData) suspensionState[nameof(PlayerProfile)];
                 PlayerStats = (PlayerStats) suspensionState[nameof(PlayerStats)];                
             }
             else
             {
                 // No saved state, get them from the client                
-                PlayerProfile = (await GameClient.GetProfile()).Profile;
-                InventoryDelta = (await GameClient.GetInventoryDelta()).InventoryDelta;
+                PlayerProfile = (await GameClient.GetProfile()).PlayerData;
+                InventoryDelta = (await GameClient.GetInventory()).InventoryDelta;
                 var tmpStats = InventoryDelta.InventoryItems.First(item => item.InventoryItemData.PlayerStats != null).InventoryItemData.PlayerStats;
                 if (PlayerStats != null && PlayerStats.Level != tmpStats.Level)
                 {
@@ -119,7 +120,7 @@ namespace PokemonGo_UWP.ViewModels
         /// <summary>
         ///     Player's profile, we use it just for the username
         /// </summary>
-        private Profile _playerProfile;
+        private PlayerData _playerProfile;
 
         /// <summary>
         ///     Stats for the current player, including current level and experience related stuff
@@ -146,7 +147,7 @@ namespace PokemonGo_UWP.ViewModels
         /// <summary>
         ///     Player's profile, we use it just for the username
         /// </summary>
-        public Profile PlayerProfile
+        public PlayerData PlayerProfile
         {
             get { return _playerProfile; }
             set { Set(ref _playerProfile, value); }

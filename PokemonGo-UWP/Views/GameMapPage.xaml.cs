@@ -29,6 +29,9 @@ namespace PokemonGo_UWP.Views
         public GameMapPage()
         {
             InitializeComponent();
+
+            NavigationCacheMode = NavigationCacheMode.Enabled;
+
             Loaded += (s, e) =>
             {
                 // TODO: find a proper way to center all the panels based on resolution

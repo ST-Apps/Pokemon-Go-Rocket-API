@@ -7,16 +7,15 @@ using System.Threading.Tasks;
 using Windows.Foundation.Metadata;
 using Windows.UI.Popups;
 using Windows.UI.Xaml.Navigation;
-using AllEnum;
 using Newtonsoft.Json;
 using PokemonGo.RocketAPI;
-using PokemonGo.RocketAPI.Console;
-using PokemonGo.RocketAPI.GeneratedCode;
-using PokemonGo.RocketAPI.Logging;
-using PokemonGo.RocketAPI.Logic;
 using PokemonGo_UWP.Entities;
 using PokemonGo_UWP.Utils;
 using PokemonGo_UWP.Views;
+using POGOProtos.Data.Capture;
+using POGOProtos.Inventory;
+using POGOProtos.Inventory.Item;
+using POGOProtos.Networking.Responses;
 using Template10.Mvvm;
 using Template10.Services.NavigationService;
 using Universal_Authenticator_v2.Views;
@@ -34,7 +33,7 @@ namespace PokemonGo_UWP.ViewModels
         public CapturePokemonPageViewModel()
         {
             // Set default item
-            SelectedCaptureItem = Inventory.First(item => item.Item_ == ItemType.Pokeball);
+            SelectedCaptureItem = ItemsInventory.First(item => item.ItemId == ItemId.ItemPokeBall);
         }
 
         #endregion
@@ -56,8 +55,8 @@ namespace PokemonGo_UWP.ViewModels
                 // Recovering the state
                 CurrentPokemon = (MapPokemonWrapper) suspensionState[nameof(CurrentPokemon)];                
                 CurrentEncounter = (EncounterResponse) suspensionState[nameof(CurrentEncounter)];
-                CurrentCaptureScore = (CaptureScore) suspensionState[nameof(CurrentCaptureScore)];
-                SelectedCaptureItem = (Item) suspensionState[nameof(SelectedCaptureItem)];
+                CurrentCaptureAward = (CaptureAward) suspensionState[nameof(CurrentCaptureAward)];
+                SelectedCaptureItem =  (ItemData) suspensionState[nameof(SelectedCaptureItem)];
             } else if (parameter is bool)
             {                
                 // Navigating from game page, so we need to actually load the encounter                
@@ -66,7 +65,7 @@ namespace PokemonGo_UWP.ViewModels
                 NavigationHelper.NavigationState.Remove(nameof(CurrentPokemon));
                 Logger.Write($"Catching {CurrentPokemon.PokemonId}");                
                 CurrentEncounter = await GameClient.EncounterPokemon(CurrentPokemon.EncounterId, CurrentPokemon.SpawnpointId);
-                SelectedCaptureItem = Inventory.First(item => item.Item_ == ItemType.Pokeball);
+                SelectedCaptureItem = ItemsInventory.First(item => item.ItemId == ItemId.ItemPokeBall);
                 Busy.SetBusy(false);
                 if (CurrentEncounter.Status != EncounterResponse.Types.Status.EncounterSuccess)
                 {
@@ -90,7 +89,7 @@ namespace PokemonGo_UWP.ViewModels
             {
                 suspensionState[nameof(CurrentPokemon)] = CurrentPokemon;
                 suspensionState[nameof(CurrentEncounter)] = CurrentEncounter;
-                suspensionState[nameof(CurrentCaptureScore)] = CurrentCaptureScore;
+                suspensionState[nameof(CurrentCaptureAward)] = CurrentCaptureAward;
                 suspensionState[nameof(SelectedCaptureItem)] = SelectedCaptureItem;
             }
             await Task.CompletedTask;
@@ -119,12 +118,12 @@ namespace PokemonGo_UWP.ViewModels
         /// <summary>
         ///     Current item for capture page
         /// </summary>
-        private Item _selectedCaptureItem;
+        private ItemData _selectedCaptureItem;
 
         /// <summary>
         ///     Score for the current capture, updated only if we captured the Pokemon
         /// </summary>
-        private CaptureScore _currentCaptureScore;
+        private CaptureAward _currentCaptureAward;
 
         #endregion
 
@@ -133,7 +132,7 @@ namespace PokemonGo_UWP.ViewModels
         /// <summary>
         /// Reference to global inventory
         /// </summary>
-        public ObservableCollection<Item> Inventory => GameClient.Inventory;
+        public ObservableCollection<ItemData> ItemsInventory => GameClient.ItemsInventory;
 
         /// <summary>
         ///     Pokemon that we're trying to capture
@@ -156,7 +155,7 @@ namespace PokemonGo_UWP.ViewModels
         /// <summary>
         ///     Current item for capture page
         /// </summary>
-        public Item SelectedCaptureItem
+        public ItemData SelectedCaptureItem
         {
             get { return _selectedCaptureItem; }
             set { Set(ref _selectedCaptureItem, value); }
@@ -165,10 +164,10 @@ namespace PokemonGo_UWP.ViewModels
         /// <summary>
         ///     Score for the current capture, updated only if we captured the Pokemon
         /// </summary>
-        public CaptureScore CurrentCaptureScore
+        public CaptureAward CurrentCaptureAward
         {
-            get { return _currentCaptureScore; }
-            set { Set(ref _currentCaptureScore, value); }
+            get { return _currentCaptureAward; }
+            set { Set(ref _currentCaptureAward, value); }
         }
 
         #endregion
@@ -223,7 +222,7 @@ namespace PokemonGo_UWP.ViewModels
             {
                 Logger.Write($"Launched {SelectedCaptureItem} at {CurrentPokemon.PokemonId}");
                 // TODO: we need to see what happens if the user is throwing a different kind of ball
-                if (SelectedCaptureItem.Item_ == ItemType.Pokeball)
+                if (SelectedCaptureItem.ItemId == ItemId.ItemPokeBall)
                 {
                     // Player's using a PokeBall so we try to catch the Pokemon
                     Busy.SetBusy(true, "Throwing Pokeball");
@@ -244,11 +243,10 @@ namespace PokemonGo_UWP.ViewModels
         /// </summary>
         /// <returns></returns>
         private async Task ThrowPokeball()
-        {
+        {            
             var caughtPokemonResponse =
                 await
-                    GameClient.CatchPokemon(CurrentPokemon.EncounterId, CurrentPokemon.SpawnpointId,
-                        CurrentPokemon.Latitude, CurrentPokemon.Longitude, (MiscEnums.Item)SelectedCaptureItem.Item_);
+                    GameClient.CatchPokemon(CurrentPokemon.EncounterId, CurrentPokemon.SpawnpointId, SelectedCaptureItem.ItemId);
             switch (caughtPokemonResponse.Status)
             {
                 case CatchPokemonResponse.Types.CatchStatus.CatchError:
@@ -256,13 +254,13 @@ namespace PokemonGo_UWP.ViewModels
                     // TODO: what can we do?
                     break;
                 case CatchPokemonResponse.Types.CatchStatus.CatchSuccess:
-                    CurrentCaptureScore = caughtPokemonResponse.Scores;
+                    CurrentCaptureAward = caughtPokemonResponse.CaptureAward;
                     Logger.Write($"We caught {CurrentPokemon.PokemonId}");
                     CatchSuccess?.Invoke(this, null);
                     await GameClient.UpdateInventory();
                     break;
                 case CatchPokemonResponse.Types.CatchStatus.CatchEscape:
-                    CurrentCaptureScore = caughtPokemonResponse.Scores;
+                    // TODO: throw multiple times + update animations
                     Logger.Write($"{CurrentPokemon.PokemonId} escaped");
                     CatchEscape?.Invoke(this, null);                    
                     await new MessageDialog($"{CurrentPokemon.PokemonId} escaped").ShowAsyncQueue();
@@ -294,10 +292,10 @@ namespace PokemonGo_UWP.ViewModels
         {
             if (SelectedCaptureItem == null)
                 return;
-            var berryResult =
-                await
-                    GameClient.UseCaptureItem(CurrentPokemon.EncounterId, CurrentPokemon.SpawnpointId, (ItemId)SelectedCaptureItem.Item_);
-            Logger.Write($"Used {SelectedCaptureItem}. Remaining: {SelectedCaptureItem.Count}");
+            //var berryResult =
+            //    await
+            //        GameClient.UseCaptureItem(CurrentPokemon.EncounterId, CurrentPokemon.SpawnpointId, (ItemId)SelectedCaptureItem.Item_);
+            //Logger.Write($"Used {SelectedCaptureItem}. Remaining: {SelectedCaptureItem.Count}");
         }
 
         #endregion
