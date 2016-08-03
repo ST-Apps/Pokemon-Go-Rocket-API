@@ -118,51 +118,51 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CoolDownText.Text" xml:space="preserve">
-    <value>Abklingzeit</value>
+    <value>cooldown</value>
   </data>
   <data name="GettingGPSSignal" xml:space="preserve">
-    <value>GPS Signal abrufen...</value>
+    <value>Détection du signal GPS...</value>
   </data>
   <data name="GettingUserData" xml:space="preserve">
-    <value>Benutzerdaten abrufen...</value>
+    <value>Chargement des données de l'utilisateur...</value>
   </data>
   <data name="googleButton.Text" xml:space="preserve">
     <value>GOOGLE</value>
   </data>
   <data name="InventoryFullText.Text" xml:space="preserve">
-    <value>Inventar voll</value>
+    <value>inventaire complet</value>
+  </data>
+  <data name="LoadingEncounter" xml:space="preserve">
+    <value>Chargement du combat avec </value>
+  </data>
+  <data name="LoggingIn" xml:space="preserve">
+    <value>Connexion en cours</value>
   </data>
   <data name="loginButton.Text" xml:space="preserve">
-    <value>ANMELDEN mit PTC Account</value>
+    <value>Connexion avec un compte PTC</value>
   </data>
   <data name="loginInfoText.Text" xml:space="preserve">
-    <value>Um sich anzumelden müssen Benutzername/E-Mail und Ihr Passwort in dieser App eingefügt werden. Wenn Sie der App nicht vertauen, schließen Sie sie bitte. Wir übernehmen keine Haftung.</value>
+    <value>Vous devez entrer votre nom d'utilisateur/email et votre mot de passe pour vous connecter dans cette application. Veuillez quitter cette application si vous ne lui faites pas confiance. Nous ne sommes pas responsable en cas de problème.</value>
   </data>
   <data name="logoutText.Text" xml:space="preserve">
-    <value>ABMELDEN</value>
+    <value>Fermer la session</value>
   </data>
   <data name="nearbyText.Text" xml:space="preserve">
-    <value>In der Nähe</value>
-  </data>
-  <data name="OutOfRangeText.Text" xml:space="preserve">
-    <value>Nicht erreichbar</value>
-  </data>
-  <data name="passwordBox.PlaceholderText" xml:space="preserve">
-    <value>Passwort</value>
-  </data>
-  <data name="usernameTextBox.PlaceholderText" xml:space="preserve">
-    <value>Benutzername/E-Mail</value>
-  </data>
-  <data name="XPText.Text" xml:space="preserve">
-    <value>EP</value>
+    <value>proche</value>
   </data>
   <data name="OKButton.Content" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="LoadingEncounter" xml:space="preserve">
-    <value>Lädt Begegnung mit </value>
+  <data name="OutOfRangeText.Text" xml:space="preserve">
+    <value>hors de portée</value>
   </data>
-  <data name="LoggingIn" xml:space="preserve">
-    <value>Anmelden...</value>
+  <data name="passwordBox.PlaceholderText" xml:space="preserve">
+    <value>Mot de passe</value>
+  </data>
+  <data name="usernameTextBox.PlaceholderText" xml:space="preserve">
+    <value>Nom d'utilisateur/Email</value>
+  </data>
+  <data name="XPText.Text" xml:space="preserve">
+    <value>XP</value>
   </data>
 </root>
