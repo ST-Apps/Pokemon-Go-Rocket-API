@@ -29,27 +29,18 @@ namespace PokemonGo_UWP.Views
         public GameMapPage()
         {
             InitializeComponent();
-
             NavigationCacheMode = NavigationCacheMode.Enabled;
 
+            // Setup nearby translation
             Loaded += (s, e) =>
             {
-                // TODO: find a proper way to center all the panels based on resolution
-                NearbyGridTranslateTransform.Y = ActualHeight*3/2;
+                ShowNearbyModalAnimation.From =
+                    HideNearbyModalAnimation.To = NearbyPokemonModal.ActualHeight;
+                HideNearbyModalAnimation.Completed += (ss, ee) =>
+                {
+                    NearbyPokemonModal.IsModal = false;
+                };
             };
-            //WindowWrapper.Current().Window.VisibilityChanged += (s, e) =>
-            //{
-            //    if (App.ViewModelLocator.GameManagerViewModel != null)
-            //    {
-            //        // We need to disable vibration
-            //        App.ViewModelLocator.GameManagerViewModel.CanVibrate = e.Visible;
-            //    }
-            //};
-            //SystemNavigationManager.GetForCurrentView().BackRequested += (s, e) =>
-            //{
-            //    // TODO: clearing navigation history before reaching this page doesn't seem enough because back button brings us back to login page, so we need to brutally close the app
-            //    BootStrapper.Current.Exit();
-            //};
         }
 
         #region Overrides of Page
@@ -57,15 +48,25 @@ namespace PokemonGo_UWP.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+            // Set first position if we shomehow missed it
             if (GameClient.Geoposition != null)
-                UpdateMap(GameClient.Geoposition);
+                UpdateMap(GameClient.Geoposition);            
             SubscribeToCaptureEvents();
+            SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
+        }
+
+        private void OnBackRequested(object sender, BackRequestedEventArgs backRequestedEventArgs)
+        {
+            if (!(PokeMenuPanel.Opacity > 0)) return;
+            backRequestedEventArgs.Handled = true;
+            HidePokeMenuStoryboard.Begin();
         }
 
         protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
         {
             base.OnNavigatingFrom(e);
             UnsubscribeToCaptureEvents();
+            SystemNavigationManager.GetForCurrentView().BackRequested -= OnBackRequested;
         }
 
         #endregion
@@ -106,5 +107,17 @@ namespace PokemonGo_UWP.Views
 
         #endregion
 
+        private void ToggleNearbyPokemonModal(object sender, TappedRoutedEventArgs e)
+        {
+            if (NearbyPokemonModal.IsModal)
+            {
+                HideNearbyModalStoryboard.Begin();                
+            }
+            else
+            {
+                NearbyPokemonModal.IsModal = true;
+                ShowNearbyModalStoryboard.Begin();
+            }
+        }
     }
 }

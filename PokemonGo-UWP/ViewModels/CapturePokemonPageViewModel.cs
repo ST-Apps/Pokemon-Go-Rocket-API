@@ -61,7 +61,7 @@ namespace PokemonGo_UWP.ViewModels
             {                
                 // Navigating from game page, so we need to actually load the encounter                
                 CurrentPokemon = (MapPokemonWrapper) NavigationHelper.NavigationState[nameof(CurrentPokemon)];
-                Busy.SetBusy(true, $"Loading encounter with {CurrentPokemon.PokemonId}");
+                Busy.SetBusy(true, Utils.Resources.Translation.GetString("LoadingEncounter") + Utils.Resources.Pokemon.GetString(CurrentPokemon.PokemonId.ToString()));
                 NavigationHelper.NavigationState.Remove(nameof(CurrentPokemon));
                 Logger.Write($"Catching {CurrentPokemon.PokemonId}");                
                 CurrentEncounter = await GameClient.EncounterPokemon(CurrentPokemon.EncounterId, CurrentPokemon.SpawnpointId);

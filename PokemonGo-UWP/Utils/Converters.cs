@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Windows.Devices.Geolocation;
 using Windows.UI;
@@ -18,13 +19,30 @@ using POGOProtos.Networking.Responses;
 
 namespace PokemonGo_UWP.Utils
 {
-    public class PokemonIdToPokemonSpriteConverter : IValueConverter
+
+    public class PokemonIdToPokemonNameConverter : IValueConverter
     {
         #region Implementation of IValueConverter
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            //return new Uri($"http://pokeapi.co/media/sprites/pokemon/{(int) value}.png");
+            return Resources.Pokemon.GetString(value.ToString());
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class PokemonIdToPokemonSpriteConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {            
             return new Uri($"ms-appx:///Assets/Pokemons/{(int) value}.png");
         }
 
@@ -54,7 +72,7 @@ namespace PokemonGo_UWP.Utils
         #endregion
     }
 
-    public class ItemAwardToPokemonSpriteConverter : IValueConverter
+    public class ItemAwardToItemIconConverter : IValueConverter
     {
         #region Implementation of IValueConverter
 
@@ -80,7 +98,7 @@ namespace PokemonGo_UWP.Utils
         {
             var teamColor = (TeamColor) value;
             var currentTime = int.Parse(DateTime.Now.ToString("HH"));
-            var noTeamColor =  currentTime > 7 && currentTime < 19 ? Colors.White : Colors.Black;
+            var noTeamColor =  currentTime > 7 && currentTime < 19 ? Colors.Black : Colors.White;
             return new SolidColorBrush(teamColor == TeamColor.Neutral
                 ? noTeamColor
                 : teamColor == TeamColor.Blue ? Colors.Blue : teamColor == TeamColor.Red ? Colors.Red : Colors.Yellow);
@@ -119,7 +137,7 @@ namespace PokemonGo_UWP.Utils
         {
             var itemId = value is ItemAward ? ((ItemAward) value).ItemId : ((ItemData) value).ItemId;
             // HACK - we probably need some kind of database with item names and descriptions, this will work for now
-            return itemId.ToString().Replace("Item", "");
+            return Resources.Items.GetString(itemId.ToString());
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
@@ -265,6 +283,59 @@ namespace PokemonGo_UWP.Utils
         {
             var currentTime = int.Parse(DateTime.Now.ToString("HH"));
             return (currentTime > 7 && currentTime < 19) ? MapColorScheme.Light : MapColorScheme.Dark;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class PokemonDataToPokemonStaminaConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var pokemon = (PokemonData) value;
+            return (int) (pokemon.Stamina/(double) pokemon.StaminaMax)*100;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class PokemonSortingModesToSortingModesListConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            return Enum.GetValues(typeof(PokemonSortingModes)).Cast<PokemonSortingModes>().ToList();
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class PokemonSortingModesToIconConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var sortingMode = (PokemonSortingModes) value;            
+            return new Uri($"ms-appx:///Assets/Icons/ic_{sortingMode.ToString().ToLowerInvariant()}.png");
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)

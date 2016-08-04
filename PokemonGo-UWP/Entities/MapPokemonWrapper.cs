@@ -57,5 +57,17 @@ namespace PokemonGo_UWP.Entities
         public double Longitude => _mapPokemon.Longitude;
 
         #endregion
+
+        #region New Properties
+
+        public string Name
+        {
+            get
+            {
+                return Resources.Pokemon.GetString(PokemonId.ToString());
+            }
+        }
+
+        #endregion
     }
 }

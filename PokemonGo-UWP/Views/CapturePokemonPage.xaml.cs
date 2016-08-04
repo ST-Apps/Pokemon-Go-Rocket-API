@@ -21,12 +21,10 @@ namespace PokemonGo_UWP.Views
         public CapturePokemonPage()
         {
             InitializeComponent();
+            // Setup catch stats translation
             Loaded += (s, e) =>
             {
-                // Of course binding doesn't work so we need to manually setup height for animations
-                // TODO: fix later, replace with ModalDialog from T10
-                ShowInventoryDoubleAnimation.From =
-                    HideInventoryDoubleAnimation.To = InventoryMenuTranslateTransform.Y = ActualHeight*3/2;
+                ShowCatchStatsModalAnimation.From = CatchStatsModal.ActualHeight;
             };
         }
 
@@ -121,13 +119,13 @@ namespace PokemonGo_UWP.Views
 
         private void GameManagerViewModelOnCatchEscape(object sender, EventArgs eventArgs)
         {
-            CatchEscape.Begin();
+            CatchEscape.Begin();            
         }
 
         private void GameManagerViewModelOnCatchSuccess(object sender, EventArgs eventArgs)
         {
             LaunchPokeballButton.IsEnabled = false;
-            ShowCaptureStatsStoryboard.Begin();
+            ShowCatchStatsModalStoryboard.Begin();
         }
 
 

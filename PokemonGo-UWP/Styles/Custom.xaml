@@ -3,6 +3,15 @@
                     xmlns:controls="using:Template10.Controls"
                     xmlns:maps="using:Windows.UI.Xaml.Controls.Maps">
 
+    <!-- STYLE - SHARED RESOURCES -->
+
+    <LinearGradientBrush x:Key="PokeballMenuBackgroundGradient" 
+                         StartPoint="0,0" 
+                         EndPoint="1,1">
+        <GradientStop Color="#ffffff" Offset="0" />
+        <GradientStop Color="#b6ffa7" Offset="0.8" />
+    </LinearGradientBrush>
+
     <!-- STYLE - BUTTONS -->
 
     <Style x:Key="ButtonSubmit" TargetType="Button">
@@ -391,7 +400,7 @@
     <!-- STYLE - END -->
 
     <!-- STYLE - GRID -->
-    
+
     <Style x:Key="GridContainer" TargetType="Grid">
         <Setter Property="Background" Value="#fff" />
         <Setter Property="BorderBrush" Value="#33000000" />
@@ -411,6 +420,13 @@
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
 
+    <Style x:Key="TextError" TargetType="TextBlock">
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="Foreground" Value="#ffffff" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="TextAlignment" Value="Center" />
+    </Style>
+
     <Style x:Key="TextNormalSpotlight" TargetType="TextBlock">
         <Setter Property="TextWrapping" Value="Wrap" />
         <Setter Property="Foreground" Value="#cc0000" />
@@ -419,8 +435,17 @@
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
 
+    <Style x:Key="TextPokestopTitle" TargetType="TextBlock">
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="Foreground" Value="#000000" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="Margin" Value="15" />
+        <Setter Property="TextWrapping" Value="WrapWholeWords" />
+    </Style>
+
     <!-- STYLE - END -->
-    
+
     <!-- STYLE - BOX -->
 
     <Style x:Key="TextBox" TargetType="TextBox">
@@ -738,9 +763,9 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
+
     <!-- STYLE - END -->
-    
+
     <!-- Default style for Windows.UI.Xaml.Controls.Button -->
     <Style TargetType="Button" x:Key="ImageButtonStyle">
         <Setter Property="Background" Value="Transparent" />

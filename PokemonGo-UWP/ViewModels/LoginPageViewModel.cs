@@ -34,7 +34,7 @@ namespace PokemonGo_UWP.ViewModels
             {
                 // Recovering the state                
                 Username = (string) suspensionState[nameof(Username)];
-                Email = (string) suspensionState[nameof(Email)];
+                Password = (string) suspensionState[nameof(Password)];
             }
             await Task.CompletedTask;
         }
@@ -50,7 +50,7 @@ namespace PokemonGo_UWP.ViewModels
             if (suspending)
             {
                 suspensionState[nameof(Username)] = Username;
-                suspensionState[nameof(Email)] = Email;
+                suspensionState[nameof(Password)] = Password;
             }
             await Task.CompletedTask;
         }
@@ -86,7 +86,7 @@ namespace PokemonGo_UWP.ViewModels
             }
         }
 
-        public string Email
+        public string Password
         {
             get { return _password; }
             set
@@ -106,10 +106,10 @@ namespace PokemonGo_UWP.ViewModels
         public DelegateCommand DoPtcLoginCommand => _doPtcLoginCommand ?? (
             _doPtcLoginCommand = new DelegateCommand(async () =>
             {
-                Busy.SetBusy(true, "Logging in...");
+                Busy.SetBusy(true, Resources.Translation.GetString("LoggingIn"));
                 try
                 {
-                    var loginSuccess = await GameClient.DoPtcLogin(Username, Email);
+                    var loginSuccess = await GameClient.DoPtcLogin(Username, Password);
 
                     if (!loginSuccess)
                     {
@@ -138,7 +138,7 @@ namespace PokemonGo_UWP.ViewModels
                 {
                     Busy.SetBusy(false);
                 }
-            }, () => !string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(Email))
+            }, () => !string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(Password) && !Username.Contains("@"))
             );
 
         private DelegateCommand _doGoogleLoginCommand;
@@ -149,7 +149,7 @@ namespace PokemonGo_UWP.ViewModels
                 Busy.SetBusy(true, "Logging in...");
                 try
                 {
-                    if (!await GameClient.DoGoogleLogin(Username.Trim(), Email.Trim()))
+                    if (!await GameClient.DoGoogleLogin(Username.Trim(), Password.Trim()))
                     {
                         // Login failed, show a message
                         await
@@ -174,7 +174,7 @@ namespace PokemonGo_UWP.ViewModels
                 {
                     Busy.SetBusy(false);
                 }
-            }, () => !string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(Email))
+            }, () => !string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(Password) && Username.Contains("@"))
             );
 
         #endregion

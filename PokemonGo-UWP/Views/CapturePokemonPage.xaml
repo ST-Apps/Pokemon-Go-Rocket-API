@@ -7,11 +7,12 @@
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
+    xmlns:controls="using:Template10.Controls"
     x:Name="Page"
     mc:Ignorable="d">
-    
+
     <Page.DataContext>
-        <viewModels:CapturePokemonPageViewModel x:Name="ViewModel"/>
+        <viewModels:CapturePokemonPageViewModel x:Name="ViewModel" />
     </Page.DataContext>
 
     <Page.Resources>
@@ -32,15 +33,6 @@
                              Duration="0:0:0.2" />
         </Storyboard>
 
-        <Storyboard x:Name="ShowCaptureStatsStoryboard">
-            <DoubleAnimation
-                Storyboard.TargetName="CatchStatsTranslateTransform"
-                Storyboard.TargetProperty="Y"
-                From="500"
-                To="150"
-                Duration="0:0:0.2" />
-        </Storyboard>
-
         <Storyboard x:Name="CatchSuccess">
             <DoubleAnimationUsingKeyFrames
                 Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)"
@@ -55,38 +47,62 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
-        
+
         <Storyboard x:Name="CatchEscape">
             <DoubleAnimationUsingKeyFrames
                 Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)"
                 Storyboard.TargetName="LaunchPokeballButton">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5"
-                                      x:Name="PokeballCatchAnimationStartingScaleX"/>
+                                      x:Name="PokeballCatchAnimationStartingScaleX" />
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1" />
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames
                 Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)"
                 Storyboard.TargetName="LaunchPokeballButton">
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5"
-                                      x:Name="PokeballCatchAnimationStartingScaleY"/>
+                                      x:Name="PokeballCatchAnimationStartingScaleY" />
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1" />
             </DoubleAnimationUsingKeyFrames>
 
             <DoubleAnimationUsingKeyFrames
                 Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)"
                 Storyboard.TargetName="LaunchPokeballButton">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" 
-                                      x:Name="PokeballCatchAnimationStartingTranslateX"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5"
+                                      x:Name="PokeballCatchAnimationStartingTranslateX" />
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1" />
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames
                 Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
                 Storyboard.TargetName="LaunchPokeballButton">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" 
-                                      x:Name="PokeballCatchAnimationStartingTranslateY"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5"
+                                      x:Name="PokeballCatchAnimationStartingTranslateY" />
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1" />
             </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)"
+                Storyboard.TargetName="CurrentPokemonIcon">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)"
+                Storyboard.TargetName="CurrentPokemonIcon">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+
         </Storyboard>
+
+        <Storyboard x:Name="ShowCatchStatsModalStoryboard">
+            <DoubleAnimation x:Name="ShowCatchStatsModalAnimation"
+                Storyboard.TargetName="CatchStatsTranslateTransform"
+                Storyboard.TargetProperty="Y"
+                From="350"
+                To="0"
+                Duration="0:0:0.2" />
+        </Storyboard>
+
     </Page.Resources>
 
     <RelativePanel>
@@ -105,7 +121,7 @@
                 Padding="8"
                 Margin="8,0"
                 Canvas.ZIndex="5"
-                 Visibility="Collapsed">
+                Visibility="Collapsed">
 
             <Border.Background>
                 <ImageBrush ImageSource="../Assets/UI/panelBG.png" />
@@ -149,10 +165,11 @@
                                 <StackPanel Grid.Column="0"
                                             Margin="0,0,8,0">
 
-                                    <Image Source="{Binding Converter={StaticResource ItemIdToItemIconConverter}, ConverterParameter=Inventory}"
-                                           Height="76"
-                                           Stretch="Uniform"
-                                           HorizontalAlignment="Stretch" />
+                                    <Image
+                                        Source="{Binding Converter={StaticResource ItemIdToItemIconConverter}, ConverterParameter=Inventory}"
+                                        Height="76"
+                                        Stretch="Uniform"
+                                        HorizontalAlignment="Stretch" />
 
                                     <TextBlock Text="{Binding Count}"
                                                FontSize="18"
@@ -209,8 +226,8 @@
 
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="Tapped">
-                            <core:CallMethodAction MethodName="Begin" 
-                                               TargetObject="{Binding ElementName=HideInventoryMenuStoryboard}"/>
+                            <core:CallMethodAction MethodName="Begin"
+                                                   TargetObject="{Binding ElementName=HideInventoryMenuStoryboard}" />
                         </core:EventTriggerBehavior>
                     </interactivity:Interaction.Behaviors>
 
@@ -221,162 +238,184 @@
             </Grid>
         </Border>
 
-        <Border x:Name="CatchStatsBorder"
-                RelativePanel.AlignLeftWithPanel="True"
-                RelativePanel.AlignRightWithPanel="True"
-                CornerRadius="8"
-                Padding="12"
-                Margin="8,0"
-                Canvas.ZIndex="5">
+        <Grid RelativePanel.AlignLeftWithPanel="True"
+              RelativePanel.AlignRightWithPanel="True"
+              RelativePanel.AlignBottomWithPanel="True"
+              RelativePanel.AlignTopWithPanel="True"
+              Canvas.ZIndex="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
 
-            <Border.Background>
-                <ImageBrush ImageSource="../Assets/UI/panelBG.png"
-                            Stretch="UniformToFill" />
-            </Border.Background>
+            <Grid.RenderTransform>
+                <TranslateTransform x:Name="CatchStatsTranslateTransform" />
+            </Grid.RenderTransform>
 
-            <Border.RenderTransform>
-                <TranslateTransform x:Name="CatchStatsTranslateTransform"
-                                    Y="800" />
-            </Border.RenderTransform>
+            <controls:ModalDialog x:Name="CatchStatsModal"
+                                  Grid.Row="1"
+                                  Grid.RowSpan="2"
+                                  CanBackButtonDismiss="True"
+                                  DisableBackButtonWhenModal="True"
+                                  ModalBackground="Transparent">
+                <controls:ModalDialog.ModalContent>
 
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
+                    <Border CornerRadius="8,8,0,0"
+                            Margin="16,0"
+                            Background="White"
+                            x:Name="CatchStatsBorder">
+                        <Border Padding="8">
 
-                <Grid Grid.Row="0"
-                      Padding="8">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-                    <StackPanel Grid.Column="0"
-                                Orientation="Horizontal"
-                                HorizontalAlignment="Left">
-                        <Image Source="../Assets/Icons/stardust_painted.png"
-                               Stretch="Uniform"
-                               Width="48" />
-                        <TextBlock Text="{Binding CurrentCaptureAward.Stardust[0]}"
-                                   Margin="8,0,0,0"
-                                   VerticalAlignment="Center" />
-                    </StackPanel>
-                    <StackPanel Grid.Column="1"
-                                Orientation="Horizontal"
-                                HorizontalAlignment="Right">
-                        <Image Source="../Assets/UI/candy.png"
-                               Stretch="Uniform"
-                               Width="48" />
-                        <TextBlock Text="{Binding CurrentCaptureAward.Candy[0]}"
-                                   Margin="8,0,0,0"
-                                   VerticalAlignment="Center" />
-                    </StackPanel>
-                </Grid>
+                            <Border.Background>
+                                <ImageBrush ImageSource="../Assets/UI/panelBG.png"
+                                            Stretch="UniformToFill" />
+                            </Border.Background>
 
-                <Grid Grid.Row="1"
-                      BorderThickness="0,0.2,0,0"
-                      BorderBrush="Gray">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
+                                <Grid Grid.Row="0"
+                                      Padding="8">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Column="0"
+                                                Orientation="Horizontal"
+                                                HorizontalAlignment="Left">
+                                        <Image Source="../Assets/Icons/stardust_painted.png"
+                                               Stretch="Uniform"
+                                               Width="48" />
+                                        <TextBlock Text="{Binding CurrentCaptureAward.Stardust[0]}"
+                                                   Margin="8,0,0,0"
+                                                   VerticalAlignment="Center" />
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1"
+                                                Orientation="Horizontal"
+                                                HorizontalAlignment="Right">
+                                        <Image Source="../Assets/UI/candy.png"
+                                               Stretch="Uniform"
+                                               Width="48" />
+                                        <TextBlock Text="{Binding CurrentCaptureAward.Candy[0]}"
+                                                   Margin="8,0,0,0"
+                                                   VerticalAlignment="Center" />
+                                    </StackPanel>
+                                </Grid>
 
-                    <ListView ItemsSource="{Binding CurrentCaptureAward.ActivityType}"
-                              SelectionMode="None"
-                              Grid.Column="0">
-                        <ListView.ItemContainerStyle>
-                            <Style TargetType="ListViewItem">
-                                <Setter Property="HorizontalContentAlignment"
-                                        Value="Stretch" />
-                            </Style>
-                        </ListView.ItemContainerStyle>
+                                <Grid Grid.Row="1"
+                                      BorderThickness="0,0.2,0,0"
+                                      BorderBrush="Gray">
 
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock
-                                    Text="{Binding Converter={StaticResource ActivityTypeToActivityNameConverter}}"
-                                    HorizontalAlignment="Left"
-                                    Margin="0,6,0,0" />
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
 
-                    <ListView ItemsSource="{Binding CurrentCaptureAward.Xp}"
-                              SelectionMode="None"
-                              Grid.Column="1">
-                        <ListView.ItemContainerStyle>
-                            <Style TargetType="ListViewItem">
-                                <Setter Property="HorizontalContentAlignment"
-                                        Value="Stretch" />
-                            </Style>
-                        </ListView.ItemContainerStyle>
+                                    <ListView ItemsSource="{Binding CurrentCaptureAward.ActivityType}"
+                                              SelectionMode="None"
+                                              Grid.Column="0">
+                                        <ListView.ItemContainerStyle>
+                                            <Style TargetType="ListViewItem">
+                                                <Setter Property="HorizontalContentAlignment"
+                                                        Value="Stretch" />
+                                            </Style>
+                                        </ListView.ItemContainerStyle>
 
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal"
-                                            HorizontalAlignment="Right">
-                                    <TextBlock Text="{Binding}"
-                                               Foreground="Red"
-                                               HorizontalAlignment="Right"
-                                               VerticalAlignment="Center"
-                                               Margin="0,0,6,0" />
-                                    <TextBlock Text="XP"
-                                               VerticalAlignment="Center"
-                                               Foreground="Red" />
-                                </StackPanel>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </Grid>
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock
+                                                    Text="{Binding Converter={StaticResource ActivityTypeToActivityNameConverter}}"
+                                                    HorizontalAlignment="Left"
+                                                    Margin="0,6,0,0" />
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
 
-                <Grid Grid.Row="2"
-                      BorderThickness="0,0.2,0,0"
-                      BorderBrush="Gray"
-                      Padding="10">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
+                                    <ListView ItemsSource="{Binding CurrentCaptureAward.Xp}"
+                                              SelectionMode="None"
+                                              Grid.Column="1">
+                                        <ListView.ItemContainerStyle>
+                                            <Style TargetType="ListViewItem">
+                                                <Setter Property="HorizontalContentAlignment"
+                                                        Value="Stretch" />
+                                            </Style>
+                                        </ListView.ItemContainerStyle>
 
-                    <TextBlock Text="TOTAL"
-                               HorizontalAlignment="Left"
-                               Grid.Column="0" />
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal"
+                                                            HorizontalAlignment="Right">
+                                                    <TextBlock Text="{Binding}"
+                                                               Foreground="Red"
+                                                               HorizontalAlignment="Right"
+                                                               VerticalAlignment="Center"
+                                                               Margin="0,0,6,0" />
+                                                    <TextBlock Text="XP"
+                                                               VerticalAlignment="Center"
+                                                               Foreground="Red" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                </Grid>
 
-                    <StackPanel Orientation="Horizontal"
-                                HorizontalAlignment="Right"
-                                Grid.Column="1">
-                        <TextBlock
-                            Text="{Binding CurrentCaptureAward.Xp, Converter={StaticResource CaptureXpToTotalCaptureXpConverter}}"
-                            Foreground="Red"
-                            HorizontalAlignment="Right"
-                            VerticalAlignment="Center"
-                            Margin="0,0,6,0" />
-                        <TextBlock Text="XP"
-                                   VerticalAlignment="Center"
-                                   Foreground="Red" />
-                    </StackPanel>
-                </Grid>
+                                <Grid Grid.Row="2"
+                                      BorderThickness="0,0.2,0,0"
+                                      BorderBrush="Gray"
+                                      Padding="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
 
-                <Button Content="OK"
-                        HorizontalAlignment="Stretch"
-                        Command="{Binding ReturnToGameScreen}"
-                        Grid.Row="3"
-                        Foreground="White"
-                        Style="{StaticResource RoundedButton}"
-                        Margin="8">
-                    <Button.Background>
-                        <LinearGradientBrush StartPoint="0,4">
-                            <GradientStop Color="#FFA2DB96" />
-                            <GradientStop Color="#FF24CCA9"
-                                          Offset="1" />
-                        </LinearGradientBrush>
-                    </Button.Background>
-                </Button>
-            </Grid>
-        </Border>
+                                    <TextBlock Text="TOTAL"
+                                               HorizontalAlignment="Left"
+                                               Grid.Column="0" />
+
+                                    <StackPanel Orientation="Horizontal"
+                                                HorizontalAlignment="Right"
+                                                Grid.Column="1">
+                                        <TextBlock
+                                            Text="{Binding CurrentCaptureAward.Xp, Converter={StaticResource CaptureXpToTotalCaptureXpConverter}}"
+                                            Foreground="Red"
+                                            HorizontalAlignment="Right"
+                                            VerticalAlignment="Center"
+                                            Margin="0,0,6,0" />
+                                        <TextBlock Text="XP"
+                                                   VerticalAlignment="Center"
+                                                   Foreground="Red" />
+                                    </StackPanel>
+                                </Grid>
+
+                                <Button Content="OK"
+                                        HorizontalAlignment="Stretch"
+                                        Command="{Binding ReturnToGameScreen}"
+                                        Grid.Row="3"
+                                        Foreground="White"
+                                        Style="{StaticResource RoundedButton}"
+                                        Margin="8">
+                                    <Button.Background>
+                                        <LinearGradientBrush StartPoint="0,4">
+                                            <GradientStop Color="#FFA2DB96" />
+                                            <GradientStop Color="#FF24CCA9"
+                                                          Offset="1" />
+                                        </LinearGradientBrush>
+                                    </Button.Background>
+                                </Button>
+                            </Grid>
+                        </Border>
+                    </Border>
+
+                </controls:ModalDialog.ModalContent>
+            </controls:ModalDialog>
+
+        </Grid>
 
         <Image RelativePanel.AlignHorizontalCenterWithPanel="True"
                RelativePanel.AlignVerticalCenterWithPanel="True"
@@ -404,7 +443,7 @@
                                  Opacity="0.5" />
             </Border.Background>
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="{Binding CurrentPokemon.PokemonId}"
+                <TextBlock Text="{Binding CurrentPokemon.Name}"
                            Foreground="White" />
                 <TextBlock Text="/ CP"
                            Margin="6,0"
@@ -437,8 +476,8 @@
 
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="Tapped">
-                    <core:CallMethodAction MethodName="Begin" 
-                                               TargetObject="{Binding ElementName=ShowInventoryMenuStoryboard}"/>
+                    <core:CallMethodAction MethodName="Begin"
+                                           TargetObject="{Binding ElementName=ShowInventoryMenuStoryboard}" />
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
 
@@ -450,13 +489,15 @@
         <RelativePanel RelativePanel.AlignHorizontalCenterWithPanel="True"
                        RelativePanel.AlignBottomWithPanel="True"
                        Background="Transparent">
-                
+
             <Button Style="{ThemeResource ImageButtonStyle}"
                     RelativePanel.AlignRightWithPanel="True"
                     RelativePanel.AlignBottomWithPanel="True"
                     Margin="5"
                     Height="100"
                     HorizontalAlignment="Center"
+                    IsHitTestVisible="{Binding SelectedCaptureItem.Count, Converter={StaticResource EnabledWhenHasElementsConverter}}"
+                    IsEnabled="{Binding SelectedCaptureItem.Count, Converter={StaticResource EnabledWhenHasElementsConverter}}"
                     x:Name="LaunchPokeballButton"
                     ManipulationMode="TranslateX, TranslateY"
                     ManipulationStarted="LaunchPokeballButton_ManipulationStarted"

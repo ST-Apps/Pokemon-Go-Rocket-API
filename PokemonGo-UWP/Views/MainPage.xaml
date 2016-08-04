@@ -29,6 +29,7 @@
             <StackPanel>
                 <TextBox x:Name="usernameTextBox"
                          PlaceholderText="Username/email"
+                         x:Uid="usernameTextBox"
                          Text="{Binding Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                          Margin="15,20,15,0"
                          InputScope="EmailSmtpAddress"
@@ -36,14 +37,15 @@
 
                 <PasswordBox x:Name="passwordBox"
                              PlaceholderText="Password"
-                             Password="{Binding Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                             x:Uid="passwordBox"
+                             Password="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                              Margin="15,20,15,20"
                              KeyDown="passwordBox_KeyDown" 
                              Style="{StaticResource PasswordBox}" />
                 <Button x:Name="loginButton"
                         Command="{Binding DoPtcLoginCommand}"
                         Style="{StaticResource ButtonSubmit}">
-                    <TextBlock Text="LOGIN with PTC" />
+                    <TextBlock x:Uid="loginButton" Text="LOGIN with PTC" />
                 </Button>
                 <Button x:Name="googleButton"
                         Command="{Binding DoGoogleLoginCommand}"
@@ -52,11 +54,12 @@
                     <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Center">
                         <Image Grid.Row="0" Source="../Assets/Logos/google.png" MaxWidth="30" />
-                        <TextBlock Text="GOOGLE" VerticalAlignment="Center" Margin="10,0,0,0" />
+                        <TextBlock x:Uid="googleButton" Text="GOOGLE" VerticalAlignment="Center" Margin="10,0,0,0" />
                     </StackPanel>
                 </Button>
                 <TextBlock
                     Text="To login you need to insert your Username/Email and Password in this app. If you don't trust it, please, close it before going on. We are not responsable for anything."
+                    x:Uid="loginInfoText"
                     Style="{StaticResource TextNormal}"
                     TextAlignment="Center"
                     Margin="15,0,15,20" />

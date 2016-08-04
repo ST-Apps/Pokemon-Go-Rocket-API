@@ -5,8 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Windows.ApplicationModel;
 using Windows.Devices.Geolocation;
 using Windows.Devices.Sensors;
+using Windows.Foundation.Metadata;
 using Windows.Phone.Devices.Notification;
 using Windows.System.Threading;
 using Windows.UI.Popups;
@@ -42,8 +44,8 @@ namespace PokemonGo_UWP.ViewModels
         public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
         {
             // Prevent from going back to other pages
-            NavigationService.ClearHistory();            
-            if (parameter is bool)
+            NavigationService.ClearHistory();
+            if (parameter is bool && mode != NavigationMode.Back)
             {
                 // First time navigating here, we need to initialize data updating but only if we have GPS access
                 await Dispatcher.DispatchAsync(async () =>
@@ -81,6 +83,12 @@ namespace PokemonGo_UWP.ViewModels
                 PlayerStats = tmpStats;
                 RaisePropertyChanged(nameof(ExperienceValue));
             }
+            // Setup vibration and sound
+            if (ApiInformation.IsTypePresent("Windows.Phone.Devices.Notification.VibrationDevice") && _vibrationDevice == null)
+            {
+                _vibrationDevice = VibrationDevice.GetDefault();
+            }
+            GameClient.MapPokemonUpdated += GameClientOnMapPokemonUpdated;
             await Task.CompletedTask;
         }
 
@@ -103,6 +111,7 @@ namespace PokemonGo_UWP.ViewModels
         public override async Task OnNavigatingFromAsync(NavigatingEventArgs args)
         {
             args.Cancel = false;
+            GameClient.MapPokemonUpdated -= GameClientOnMapPokemonUpdated;
             await Task.CompletedTask;
         }
 
@@ -113,7 +122,7 @@ namespace PokemonGo_UWP.ViewModels
         /// <summary>
         ///     We use it to notify that we found at least one catchable Pokemon in our area
         /// </summary>
-        private readonly VibrationDevice _vibrationDevice;
+        private VibrationDevice _vibrationDevice;
 
         /// <summary>
         ///     True if the phone can vibrate (e.g. the app is not in background)
@@ -140,13 +149,13 @@ namespace PokemonGo_UWP.ViewModels
 
         #region Bindable Game Vars   
 
-        public ApplicationTheme CurrentTheme
+        public ElementTheme CurrentTheme
         {
             get
             {
                 // Set theme
                 var currentTime = int.Parse(DateTime.Now.ToString("HH"));
-                return currentTime > 7 && currentTime < 19 ? ApplicationTheme.Light : ApplicationTheme.Dark;
+                return currentTime > 7 && currentTime < 19 ? ElementTheme.Light : ElementTheme.Dark;
             }
         }
 
@@ -203,22 +212,48 @@ namespace PokemonGo_UWP.ViewModels
 
         #region Game Logic
 
-        #region Logout
+        #region Settings
 
-        private DelegateCommand _doPtcLogoutCommand;
+        private DelegateCommand _openSettingsCommand;
 
-        public DelegateCommand DoPtcLogoutCommand => _doPtcLogoutCommand ?? (
-            _doPtcLogoutCommand = new DelegateCommand(() =>
+        public DelegateCommand SettingsCommand => _openSettingsCommand ?? (
+            _openSettingsCommand = new DelegateCommand(() =>
             {
-                // Clear stored token
-                GameClient.DoLogout();
-                // Navigate to login page
-                NavigationService.Navigate(typeof(MainPage));
+                // Navigate back
+                NavigationService.Navigate(typeof(SettingsPage));
             }, () => true)
             );
 
+        #endregion
 
-        #endregion       
+        #region Notify
+
+        /// <summary>
+        /// Vibrates and/or plays a sound when new pokemons are in the area
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="eventArgs"></param>
+        private async void GameClientOnMapPokemonUpdated(object sender, EventArgs eventArgs)
+        {
+            if (SettingsService.Instance.IsVibrationEnabled)
+                _vibrationDevice?.Vibrate(TimeSpan.FromMilliseconds(500));
+            if (SettingsService.Instance.IsMusicEnabled)
+                await AudioUtils.PlaySound(@"pokemon_found_ding.wav");
+        }
+
+        #endregion
+
+        #region Inventory
+
+        private DelegateCommand _gotoPokemonInventoryPage;
+
+        public DelegateCommand GotoPokemonInventoryPageCommand => _gotoPokemonInventoryPage ?? (
+            _gotoPokemonInventoryPage = new DelegateCommand(() =>
+            {
+                NavigationService.Navigate(typeof(PokemonInventoryPage), true);
+            }));
+
+        #endregion
 
         #endregion
 
