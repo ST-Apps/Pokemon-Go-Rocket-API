@@ -386,7 +386,7 @@ namespace PokemonGo_UWP.Utils
                 ItemsInventory.Add(item.First().InventoryItemData.Item);
             }
             // Update Pokemons
-            var tmpPokemonsInventory = fullInventory.Where(item => item.InventoryItemData.PokemonData != null).Select(itemt => itemt.InventoryItemData.PokemonData);
+            var tmpPokemonsInventory = fullInventory.Where(item => item.InventoryItemData.PokemonData != null).Select(itemt => itemt.InventoryItemData.PokemonData).Where(d => !d.IsEgg);
             PokemonsInventory.Clear();
             foreach (var pokemon in tmpPokemonsInventory)
             {
