@@ -113,7 +113,6 @@
                          TrafficFlowVisible="False"
                          TransitFeaturesVisible="False"
                          ZoomLevel="20"
-                         Style="None"
                          RelativePanel.AlignTopWithPanel="True"
                          RelativePanel.AlignBottomWithPanel="True"
                          RelativePanel.AlignLeftWithPanel="True"
@@ -278,46 +277,54 @@
                     RelativePanel.AlignHorizontalCenterWithPanel="True"
                     RelativePanel.AlignVerticalCenterWithPanel="True"
                     x:Name="SettingsButton">
-
-				<Image Source="../Assets/Buttons/btn_empty.png"
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="SETTINGS" Style="{StaticResource TextMenuItemHorizontal}" />
+                    <Image Source="../Assets/Buttons/btn_settings.png"
                        Stretch="Uniform"
                        HorizontalAlignment="Stretch" />
+                </StackPanel>
 			</Button>
 
-			<Button Style="{ThemeResource ImageButtonStyle}"
-                    Height="80"
+            <Button Style="{ThemeResource ImageButtonStyle}"
                     RelativePanel.AlignHorizontalCenterWithPanel="True"
                     RelativePanel.AlignVerticalCenterWithPanel="True"
                     x:Name="PokedexButton">
 
-                <Image Source="../Assets/Buttons/btn_empty.png"
-                       Stretch="Uniform"
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="POKÉDEX" Style="{StaticResource TextMenuItemVertical}" />
+                    <Image Source="../Assets/Buttons/btn_pokedex.png"
+                       Stretch="Uniform" Height="{ThemeResource UiButtonSize}"
                        HorizontalAlignment="Stretch" />
+                </StackPanel>
             </Button>
 
             <Button Style="{ThemeResource ImageButtonStyle}"
-                    Height="80"
                     RelativePanel.AlignLeftWithPanel="True"
                     RelativePanel.AlignBottomWithPanel="True"
                     Margin="24,0,0,128"
                     Command="{Binding GotoPokemonInventoryPageCommand}"
                     x:Name="PokemonButton">
 
-                <Image Source="../Assets/Buttons/btn_empty.png"
-                       Stretch="Uniform"
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="POKÉMON" Style="{StaticResource TextMenuItemVertical}" />
+                    <Image Source="../Assets/Buttons/btn_pokemon.png"
+                       Stretch="Uniform" Height="{ThemeResource UiButtonSize}"
                        HorizontalAlignment="Stretch" />
+                </StackPanel>
             </Button>
 
             <Button Style="{ThemeResource ImageButtonStyle}"
-                    Height="80"
                     RelativePanel.AlignRightWithPanel="True"
                     RelativePanel.AlignBottomWithPanel="True"
                     Margin="0,0,24,128"
                     x:Name="ToolsButton">
 
-                <Image Source="../Assets/Buttons/btn_empty.png"
-                       Stretch="Uniform"
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="ITEMS" Style="{StaticResource TextMenuItemVertical}" />
+                    <Image Source="../Assets/Buttons/btn_items.png"
+                       Stretch="Uniform" Height="{ThemeResource UiButtonSize}"
                        HorizontalAlignment="Stretch" />
+                </StackPanel>
             </Button>
 
 
