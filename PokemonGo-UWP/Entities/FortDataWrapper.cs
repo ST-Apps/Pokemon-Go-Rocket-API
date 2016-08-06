@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 using Windows.Devices.Geolocation;
 using Windows.Foundation;
 using Google.Protobuf;
@@ -15,16 +11,37 @@ using Template10.Mvvm;
 
 namespace PokemonGo_UWP.Entities
 {
-    public class FortDataWrapper
+    public class FortDataWrapper : IUpdatable<FortData>, INotifyPropertyChanged
     {
-
-        private readonly FortData _fortData;
+        private FortData _fortData;
 
         public FortDataWrapper(FortData fortData)
         {
-            _fortData = fortData;           
-            Geoposition =
-                new Geopoint(new BasicGeoposition { Latitude = _fortData.Latitude, Longitude = _fortData.Longitude });
+            _fortData = fortData;
+            Geoposition = new Geopoint(new BasicGeoposition { Latitude = _fortData.Latitude, Longitude = _fortData.Longitude });
+        }
+
+        public void Update(FortData update)
+        {
+            _fortData = update;
+
+            OnPropertyChanged(nameof(Id));
+            OnPropertyChanged(nameof(Type));
+            OnPropertyChanged(nameof(ActiveFortModifier));
+            OnPropertyChanged(nameof(CooldownCompleteTimestampMs));
+            OnPropertyChanged(nameof(Enabled));
+            OnPropertyChanged(nameof(GuardPokemonId));
+            OnPropertyChanged(nameof(GymPoints));
+            OnPropertyChanged(nameof(IsInBattle));
+            OnPropertyChanged(nameof(LastModifiedTimestampMs));
+            OnPropertyChanged(nameof(LureInfo));
+            OnPropertyChanged(nameof(OwnedByTeam));
+            OnPropertyChanged(nameof(RenderingType));
+            OnPropertyChanged(nameof(Sponsor));
+            OnPropertyChanged(nameof(Geoposition));
+            OnPropertyChanged(nameof(GuardPokemonCp));
+            OnPropertyChanged(nameof(Latitude));
+            OnPropertyChanged(nameof(Longitude));
         }
 
         /// <summary>
@@ -46,7 +63,6 @@ namespace PokemonGo_UWP.Entities
                 BootStrapper.Current.NavigationService.Navigate(typeof(SearchPokestopPage), true);
             }, () => true)
             );
-
 
         #region Wrapped Properties
 
@@ -86,5 +102,15 @@ namespace PokemonGo_UWP.Entities
 
         #endregion
 
+        #region INotifyPropertyChanged
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        #endregion
     }
 }

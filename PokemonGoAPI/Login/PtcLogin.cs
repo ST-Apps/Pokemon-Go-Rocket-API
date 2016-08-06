@@ -44,7 +44,7 @@ namespace PokemonGo.RocketAPI.Login
         {
             var location = loginResp.Headers.Location;
             if (location == null)
-                throw new LoginFailedException();
+                throw new LoginFailedException(loginResp);
 
             var decoder = new WwwFormUrlDecoder(loginResp.Headers.Location.Query);
             var ticketId = decoder.GetFirstValueByName("ticket");

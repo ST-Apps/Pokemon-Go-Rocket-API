@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Windows.Devices.Geolocation;
 using Windows.UI;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls.Maps;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Media;
 using Google.Protobuf.Collections;
 using PokemonGo.RocketAPI.Extensions;
+using PokemonGo_UWP.Entities;
 using POGOProtos.Data;
 using POGOProtos.Enums;
 using POGOProtos.Inventory;
@@ -17,13 +20,30 @@ using POGOProtos.Networking.Responses;
 
 namespace PokemonGo_UWP.Utils
 {
-    public class PokemonIdToPokemonSpriteConverter : IValueConverter
+
+    public class PokemonIdToPokemonNameConverter : IValueConverter
     {
         #region Implementation of IValueConverter
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            //return new Uri($"http://pokeapi.co/media/sprites/pokemon/{(int) value}.png");
+            return Resources.Pokemon.GetString(value.ToString());
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class PokemonIdToPokemonSpriteConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {            
             return new Uri($"ms-appx:///Assets/Pokemons/{(int) value}.png");
         }
 
@@ -53,7 +73,7 @@ namespace PokemonGo_UWP.Utils
         #endregion
     }
 
-    public class ItemAwardToPokemonSpriteConverter : IValueConverter
+    public class ItemAwardToItemIconConverter : IValueConverter
     {
         #region Implementation of IValueConverter
 
@@ -78,8 +98,10 @@ namespace PokemonGo_UWP.Utils
         public object Convert(object value, Type targetType, object parameter, string language)
         {
             var teamColor = (TeamColor) value;
+            var currentTime = int.Parse(DateTime.Now.ToString("HH"));
+            var noTeamColor =  currentTime > 7 && currentTime < 19 ? Colors.Black : Colors.White;
             return new SolidColorBrush(teamColor == TeamColor.Neutral
-                ? Colors.White
+                ? noTeamColor
                 : teamColor == TeamColor.Blue ? Colors.Blue : teamColor == TeamColor.Red ? Colors.Red : Colors.Yellow);
         }
 
@@ -114,9 +136,26 @@ namespace PokemonGo_UWP.Utils
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            var itemId = value is ItemAward ? ((ItemAward) value).ItemId : ((ItemData) value).ItemId;
-            // HACK - we probably need some kind of database with item names and descriptions, this will work for now
-            return itemId.ToString().Replace("Item", "");
+            var itemId = value is ItemAward ? ((ItemAward) value).ItemId : ((ItemData) value).ItemId;            
+            return Resources.Items.GetString(itemId.ToString());
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class ItemToItemDescriptionConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var itemId = value is ItemAward ? ((ItemAward)value).ItemId : ((ItemData)value).ItemId;
+            return Resources.Items.GetString("D_" + itemId);
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
@@ -240,10 +279,104 @@ namespace PokemonGo_UWP.Utils
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            var cooldown = (long)value;
-            var inactve = "_inactive";
-            if (cooldown < DateTime.UtcNow.ToUnixTime()) inactve = "";
-            return new Uri($"ms-appx:///Assets/Icons/pokestop_near{inactve}.png");
+            var pokestop = (FortDataWrapper)value;
+            // TODO: download values from settings instead of manually coding them
+            var distance = GeoExtensions.GeoAssist.CalculateDistanceBetweenTwoGeoPoints(pokestop.Geoposition,
+                GameClient.Geoposition.Coordinate.Point);
+            if (distance > 70)
+                return new Uri($"ms-appx:///Assets/Icons/pokestop_far.png");
+            var mode = pokestop.CooldownCompleteTimestampMs < DateTime.UtcNow.ToUnixTime() ? "" : "_inactive";
+            return new Uri($"ms-appx:///Assets/Icons/pokestop_near{mode}.png");
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class CurrentTimeToMapColorSchemeConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var currentTime = int.Parse(DateTime.Now.ToString("HH"));
+            return (currentTime > 7 && currentTime < 19) ? MapColorScheme.Light : MapColorScheme.Dark;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class PokemonDataToPokemonStaminaConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var pokemon = (PokemonData) value;
+            return (int) (pokemon.Stamina/(double) pokemon.StaminaMax)*100;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class EggDataToEggProgressConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var pokemon = (PokemonData)value;
+            return (int)(pokemon.EggKmWalkedStart / pokemon.EggKmWalkedTarget) * 100;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+
+    public class PokemonSortingModesToSortingModesListConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            return Enum.GetValues(typeof(PokemonSortingModes)).Cast<PokemonSortingModes>().ToList();
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class PokemonSortingModesToIconConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var sortingMode = (PokemonSortingModes) value;            
+            return new Uri($"ms-appx:///Assets/Icons/ic_{sortingMode.ToString().ToLowerInvariant()}.png");
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)

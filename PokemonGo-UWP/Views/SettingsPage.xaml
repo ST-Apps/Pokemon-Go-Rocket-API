@@ -1,0 +1,87 @@
+﻿<Page
+    x:Class="PokemonGo_UWP.Views.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
+    x:Name="Page"
+    mc:Ignorable="d">
+
+    <Page.DataContext>
+        <viewModels:SettingsPageViewModel x:Name="ViewModel"/>
+    </Page.DataContext>
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#4ab583" Offset="0"/>
+                <GradientStop Color="#266378" Offset="0.8"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <TextBlock x:Uid="SettingsHeaderText" Text="SETTINGS" Style="{StaticResource TextPageTitle}" />
+            <Border Background="#ffffff" Width="150" Height="1" />
+        </StackPanel>
+        <ScrollViewer Grid.Row="1">
+            <StackPanel>
+                <Grid Margin="15,0,30,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" 
+                               x:Uid="MusicTitleText" 
+                               Text="Music"
+                               Style="{StaticResource TextSettingsTitle}"
+                               VerticalAlignment="Center" />
+
+                    <CheckBox Grid.Column="1" 
+                              x:Name="MusicCheckbox" 
+                              IsChecked="{Binding IsMusicEnabled, Mode=TwoWay}" 
+                              Style="{StaticResource SettingsCheckbox}" />
+                </Grid>
+                <Grid Margin="15,0,30,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" 
+                               x:Uid="VibrationTitleText"
+                               Text="Vibration"
+                               Style="{StaticResource TextSettingsTitle}"
+                               VerticalAlignment="Center" />
+
+                    <CheckBox Grid.Column="1" 
+                              x:Name="VibrationCheckbox" 
+                              IsChecked="{Binding IsVibrationEnabled, Mode=TwoWay}"
+                              Style="{StaticResource SettingsCheckbox}" />
+                </Grid>
+                <Border Background="#33ffffff" Height="0.3" Margin="15,15,15,0" />
+                <Grid Margin="15,0,15,10">
+                    <Button x:Name="loginButton"
+                        Command="{Binding DoPtcLogoutCommand}"
+                        Style="{StaticResource ButtonNoStyle}">
+                        <TextBlock
+                               Text="Sign Out"
+                               x:Uid="SignOutButton"
+                               Style="{StaticResource TextSettingsTitle}"
+                               VerticalAlignment="Center" />
+                    </Button>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+        <Button Grid.Row="2" 
+                Command="{Binding CloseCommand}"
+                Style="{StaticResource ButtonCircle}">
+            <TextBlock Text="" FontFamily="SEGOE MDL2 Assets" />
+        </Button>
+    </Grid>
+
+
+</Page>

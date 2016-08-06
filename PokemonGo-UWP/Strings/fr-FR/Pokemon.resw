@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Abra" xml:space="preserve">
+    <value>Abra</value>
+  </data>
+  <data name="Aerodactyl" xml:space="preserve">
+    <value>Ptéra</value>
+  </data>
+  <data name="Alakazam" xml:space="preserve">
+    <value>Alakazam</value>
+  </data>
+  <data name="Arbok" xml:space="preserve">
+    <value>Arbok</value>
+  </data>
+  <data name="Arcanine" xml:space="preserve">
+    <value>Arcanin</value>
+  </data>
+  <data name="Articuno" xml:space="preserve">
+    <value>Artikodin</value>
+  </data>
+  <data name="Beedrill" xml:space="preserve">
+    <value>Dardargnan</value>
+  </data>
+  <data name="Bellsprout" xml:space="preserve">
+    <value>Chétiflor</value>
+  </data>
+  <data name="Blastoise" xml:space="preserve">
+    <value>Tortank</value>
+  </data>
+  <data name="Bulbasaur" xml:space="preserve">
+    <value>Bulbizarre</value>
+  </data>
+  <data name="Butterfree" xml:space="preserve">
+    <value>Papilusion</value>
+  </data>
+  <data name="Caterpie" xml:space="preserve">
+    <value>Chenipan</value>
+  </data>
+  <data name="Chansey" xml:space="preserve">
+    <value>Leveinard</value>
+  </data>
+  <data name="Charizard" xml:space="preserve">
+    <value>Dracaufeu</value>
+  </data>
+  <data name="Charmander" xml:space="preserve">
+    <value>Salamèche</value>
+  </data>
+  <data name="Charmeleon" xml:space="preserve">
+    <value>Reptincel</value>
+  </data>
+  <data name="Clefable" xml:space="preserve">
+    <value>Mélodelfe</value>
+  </data>
+  <data name="Clefairy" xml:space="preserve">
+    <value>Mélofée</value>
+  </data>
+  <data name="Cloyster" xml:space="preserve">
+    <value>Crustabri</value>
+  </data>
+  <data name="Cubone" xml:space="preserve">
+    <value>Osselait</value>
+  </data>
+  <data name="Dewgong" xml:space="preserve">
+    <value>Lamantine</value>
+  </data>
+  <data name="Diglett" xml:space="preserve">
+    <value>Taupiqueur</value>
+  </data>
+  <data name="Ditto" xml:space="preserve">
+    <value>Métamorph</value>
+  </data>
+  <data name="Dodrio" xml:space="preserve">
+    <value>Dodrio</value>
+  </data>
+  <data name="Doduo" xml:space="preserve">
+    <value>Doduo</value>
+  </data>
+  <data name="Dragonair" xml:space="preserve">
+    <value>Draco</value>
+  </data>
+  <data name="Dragonite" xml:space="preserve">
+    <value>Dracolosse</value>
+  </data>
+  <data name="Dratini" xml:space="preserve">
+    <value>Minidraco</value>
+  </data>
+  <data name="Drowzee" xml:space="preserve">
+    <value>Soporifik</value>
+  </data>
+  <data name="Dugtrio" xml:space="preserve">
+    <value>Triopikeur</value>
+  </data>
+  <data name="Eevee" xml:space="preserve">
+    <value>Évoli</value>
+  </data>
+  <data name="Ekans" xml:space="preserve">
+    <value>Abo</value>
+  </data>
+  <data name="Electabuzz" xml:space="preserve">
+    <value>Élektek</value>
+  </data>
+  <data name="Electrode" xml:space="preserve">
+    <value>Électrode</value>
+  </data>
+  <data name="Exeggcute" xml:space="preserve">
+    <value>Noeunoeuf</value>
+  </data>
+  <data name="Exeggutor" xml:space="preserve">
+    <value>Noadkoko</value>
+  </data>
+  <data name="Farfetchd" xml:space="preserve">
+    <value>Farfetchd</value>
+  </data>
+  <data name="Fearow" xml:space="preserve">
+    <value>Rapasdepic</value>
+  </data>
+  <data name="Flareon" xml:space="preserve">
+    <value>Pyroli</value>
+  </data>
+  <data name="Gastly" xml:space="preserve">
+    <value>Fantominus</value>
+  </data>
+  <data name="Gengar" xml:space="preserve">
+    <value>Ectoplasma</value>
+  </data>
+  <data name="Geodude" xml:space="preserve">
+    <value>Racaillou</value>
+  </data>
+  <data name="Gloom" xml:space="preserve">
+    <value>Ortide</value>
+  </data>
+  <data name="Golbat" xml:space="preserve">
+    <value>Nosferalto</value>
+  </data>
+  <data name="Goldeen" xml:space="preserve">
+    <value>Poissirène</value>
+  </data>
+  <data name="Golduck" xml:space="preserve">
+    <value>Akwakwak</value>
+  </data>
+  <data name="Golem" xml:space="preserve">
+    <value>Grolem</value>
+  </data>
+  <data name="Graveler" xml:space="preserve">
+    <value>Gravalanch</value>
+  </data>
+  <data name="Grimer" xml:space="preserve">
+    <value>Tadmorv</value>
+  </data>
+  <data name="Growlithe" xml:space="preserve">
+    <value>Caninos</value>
+  </data>
+  <data name="Gyarados" xml:space="preserve">
+    <value>Léviator</value>
+  </data>
+  <data name="Haunter" xml:space="preserve">
+    <value>Spectrum</value>
+  </data>
+  <data name="Hitmonchan" xml:space="preserve">
+    <value>Tygnon</value>
+  </data>
+  <data name="Hitmonlee" xml:space="preserve">
+    <value>Kicklee</value>
+  </data>
+  <data name="Horsea" xml:space="preserve">
+    <value>Hypotrempe</value>
+  </data>
+  <data name="Hypno" xml:space="preserve">
+    <value>Hypnomade</value>
+  </data>
+  <data name="Ivysaur" xml:space="preserve">
+    <value>Herbizarre</value>
+  </data>
+  <data name="Jigglypuff" xml:space="preserve">
+    <value>Rondoudou</value>
+  </data>
+  <data name="Jolteon" xml:space="preserve">
+    <value>Voltali</value>
+  </data>
+  <data name="Jynx" xml:space="preserve">
+    <value>Lippoutou</value>
+  </data>
+  <data name="Kabuto" xml:space="preserve">
+    <value>Kabuto</value>
+  </data>
+  <data name="Kabutops" xml:space="preserve">
+    <value>Kabutops</value>
+  </data>
+  <data name="Kadabra" xml:space="preserve">
+    <value>Kadabra</value>
+  </data>
+  <data name="Kakuna" xml:space="preserve">
+    <value>Coconfort</value>
+  </data>
+  <data name="Kangaskhan" xml:space="preserve">
+    <value>Kangourex</value>
+  </data>
+  <data name="Kingler" xml:space="preserve">
+    <value>Krabboss</value>
+  </data>
+  <data name="Koffing" xml:space="preserve">
+    <value>Smogo</value>
+  </data>
+  <data name="Krabby" xml:space="preserve">
+    <value>Krabby</value>
+  </data>
+  <data name="Lapras" xml:space="preserve">
+    <value>Lokhlass</value>
+  </data>
+  <data name="Lickitung" xml:space="preserve">
+    <value>Excelangue</value>
+  </data>
+  <data name="Machamp" xml:space="preserve">
+    <value>Mackogneur</value>
+  </data>
+  <data name="Machoke" xml:space="preserve">
+    <value>Machopeur</value>
+  </data>
+  <data name="Machop" xml:space="preserve">
+    <value>Machoc</value>
+  </data>
+  <data name="Magikarp" xml:space="preserve">
+    <value>Magicarpe</value>
+  </data>
+  <data name="Magmar" xml:space="preserve">
+    <value>Magmar</value>
+  </data>
+  <data name="Magnemite" xml:space="preserve">
+    <value>Magnéti</value>
+  </data>
+  <data name="Magneton" xml:space="preserve">
+    <value>Magnéton</value>
+  </data>
+  <data name="Mankey" xml:space="preserve">
+    <value>Férosinge</value>
+  </data>
+  <data name="Marowak" xml:space="preserve">
+    <value>Ossatueur</value>
+  </data>
+  <data name="Meowth" xml:space="preserve">
+    <value>Miaouss</value>
+  </data>
+  <data name="Metapod" xml:space="preserve">
+    <value>Chrysacier</value>
+  </data>
+  <data name="Mew" xml:space="preserve">
+    <value>Mew</value>
+  </data>
+  <data name="Mewtwo" xml:space="preserve">
+    <value>Mewtwo</value>
+  </data>
+  <data name="Missingno" xml:space="preserve">
+    <value>Missingno</value>
+  </data>
+  <data name="Moltres" xml:space="preserve">
+    <value>Sulfura</value>
+  </data>
+  <data name="MrMime" xml:space="preserve">
+    <value>MrMime</value>
+  </data>
+  <data name="Muk" xml:space="preserve">
+    <value>Grotadmorv</value>
+  </data>
+  <data name="Nidoking" xml:space="preserve">
+    <value>Nidoking</value>
+  </data>
+  <data name="Nidoqueen" xml:space="preserve">
+    <value>Nidoqueen</value>
+  </data>
+  <data name="NidoranFemale" xml:space="preserve">
+    <value>NidoranFemale</value>
+  </data>
+  <data name="NidoranMale" xml:space="preserve">
+    <value>NidoranMale</value>
+  </data>
+  <data name="Nidorina" xml:space="preserve">
+    <value>Nidorina</value>
+  </data>
+  <data name="Nidorino" xml:space="preserve">
+    <value>Nidorino</value>
+  </data>
+  <data name="Ninetales" xml:space="preserve">
+    <value>Feunard</value>
+  </data>
+  <data name="Oddish" xml:space="preserve">
+    <value>Mystherbe</value>
+  </data>
+  <data name="Omanyte" xml:space="preserve">
+    <value>Amonita</value>
+  </data>
+  <data name="Omastar" xml:space="preserve">
+    <value>Amonistar</value>
+  </data>
+  <data name="Onix" xml:space="preserve">
+    <value>Onix</value>
+  </data>
+  <data name="Paras" xml:space="preserve">
+    <value>Paras</value>
+  </data>
+  <data name="Parasect" xml:space="preserve">
+    <value>Parasect</value>
+  </data>
+  <data name="Persian" xml:space="preserve">
+    <value>Persian</value>
+  </data>
+  <data name="Pidgeot" xml:space="preserve">
+    <value>Roucarnage</value>
+  </data>
+  <data name="Pidgeotto" xml:space="preserve">
+    <value>Roucoups</value>
+  </data>
+  <data name="Pidgey" xml:space="preserve">
+    <value>Roucool</value>
+  </data>
+  <data name="Pikachu" xml:space="preserve">
+    <value>Pikachu</value>
+  </data>
+  <data name="Pinsir" xml:space="preserve">
+    <value>Scarabrute</value>
+  </data>
+  <data name="Poliwag" xml:space="preserve">
+    <value>Ptitard</value>
+  </data>
+  <data name="Poliwhirl" xml:space="preserve">
+    <value>Têtarte</value>
+  </data>
+  <data name="Poliwrath" xml:space="preserve">
+    <value>Tartard</value>
+  </data>
+  <data name="Ponyta" xml:space="preserve">
+    <value>Ponyta</value>
+  </data>
+  <data name="Porygon" xml:space="preserve">
+    <value>Porygon</value>
+  </data>
+  <data name="Primeape" xml:space="preserve">
+    <value>Colossinge</value>
+  </data>
+  <data name="Psyduck" xml:space="preserve">
+    <value>Psykokwak</value>
+  </data>
+  <data name="Raichu" xml:space="preserve">
+    <value>Raichu</value>
+  </data>
+  <data name="Rapidash" xml:space="preserve">
+    <value>Galopa</value>
+  </data>
+  <data name="Raticate" xml:space="preserve">
+    <value>Rattatac</value>
+  </data>
+  <data name="Rattata" xml:space="preserve">
+    <value>Rattata</value>
+  </data>
+  <data name="Rhydon" xml:space="preserve">
+    <value>Rhinoféros</value>
+  </data>
+  <data name="Rhyhorn" xml:space="preserve">
+    <value>Rhinocorne</value>
+  </data>
+  <data name="Sandshrew" xml:space="preserve">
+    <value>Sabelette</value>
+  </data>
+  <data name="Sandslash" xml:space="preserve">
+    <value>Sablaireau</value>
+  </data>
+  <data name="Scyther" xml:space="preserve">
+    <value>Insécateur</value>
+  </data>
+  <data name="Seadra" xml:space="preserve">
+    <value>Hypocéan</value>
+  </data>
+  <data name="Seaking" xml:space="preserve">
+    <value>Poissoroy</value>
+  </data>
+  <data name="Seel" xml:space="preserve">
+    <value>Otaria</value>
+  </data>
+  <data name="Shellder" xml:space="preserve">
+    <value>Kokiyas</value>
+  </data>
+  <data name="Slowbro" xml:space="preserve">
+    <value>Flagadoss</value>
+  </data>
+  <data name="Slowpoke" xml:space="preserve">
+    <value>Ramoloss</value>
+  </data>
+  <data name="Snorlax" xml:space="preserve">
+    <value>Ronflex</value>
+  </data>
+  <data name="Spearow" xml:space="preserve">
+    <value>Piafabec</value>
+  </data>
+  <data name="Squirtle" xml:space="preserve">
+    <value>Carapuce</value>
+  </data>
+  <data name="Starmie" xml:space="preserve">
+    <value>Staross</value>
+  </data>
+  <data name="Staryu" xml:space="preserve">
+    <value>Stari</value>
+  </data>
+  <data name="Tangela" xml:space="preserve">
+    <value>Saquedeneu</value>
+  </data>
+  <data name="Tauros" xml:space="preserve">
+    <value>Tauros</value>
+  </data>
+  <data name="Tentacool" xml:space="preserve">
+    <value>Tentacool</value>
+  </data>
+  <data name="Tentacruel" xml:space="preserve">
+    <value>Tentacruel</value>
+  </data>
+  <data name="Vaporeon" xml:space="preserve">
+    <value>Aquali</value>
+  </data>
+  <data name="Venomoth" xml:space="preserve">
+    <value>Aéromite</value>
+  </data>
+  <data name="Venonat" xml:space="preserve">
+    <value>Mimitoss</value>
+  </data>
+  <data name="Venusaur" xml:space="preserve">
+    <value>Florizarre</value>
+  </data>
+  <data name="Victreebel" xml:space="preserve">
+    <value>Empiflor</value>
+  </data>
+  <data name="Vileplume" xml:space="preserve">
+    <value>Rafflesia</value>
+  </data>
+  <data name="Voltorb" xml:space="preserve">
+    <value>Voltorbe</value>
+  </data>
+  <data name="Vulpix" xml:space="preserve">
+    <value>Goupix</value>
+  </data>
+  <data name="Wartortle" xml:space="preserve">
+    <value>Carabaffe</value>
+  </data>
+  <data name="Weedle" xml:space="preserve">
+    <value>Aspicot</value>
+  </data>
+  <data name="Weepinbell" xml:space="preserve">
+    <value>Boustiflor</value>
+  </data>
+  <data name="Weezing" xml:space="preserve">
+    <value>Smogogo</value>
+  </data>
+  <data name="Wigglytuff" xml:space="preserve">
+    <value>Grodoudou</value>
+  </data>
+  <data name="Zapdos" xml:space="preserve">
+    <value>Électhor</value>
+  </data>
+  <data name="Zubat" xml:space="preserve">
+    <value>Nosferapti</value>
+  </data>
+</root>

@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CoolDownText.Text" xml:space="preserve">
+    <value>Je moet eventjes wachten</value>
+  </data>
+  <data name="GettingGPSSignal" xml:space="preserve">
+    <value>Zoekt GPS signaal...</value>
+  </data>
+  <data name="GettingUserData" xml:space="preserve">
+    <value>Ophalen gebruikersgegevens...</value>
+  </data>
+  <data name="googleButton.Text" xml:space="preserve">
+    <value>GOOGLE</value>
+  </data>
+  <data name="InventoryFullText.Text" xml:space="preserve">
+    <value>Je inventaris is vol!</value>
+  </data>
+  <data name="loginButton.Text" xml:space="preserve">
+    <value>LOGIN met PTC Account</value>
+  </data>
+  <data name="loginInfoText.Text" xml:space="preserve">
+    <value>Om in te loggen moet je je Gebruikersnaam/Email en Wachtwoord invullen in deze app. Als je het niet vertrouwt, sluit dan deze app voordat je verder gaat. We kunnen niet verantwoordelijk gehouden worden voor wat dan ook.</value>
+  </data>
+  <data name="logoutText.Text" xml:space="preserve">
+    <value>UITLOGGEN</value>
+  </data>
+  <data name="nearbyText.Text" xml:space="preserve">
+    <value>dichtbij</value>
+  </data>
+  <data name="OutOfRangeText.Text" xml:space="preserve">
+    <value>Je bent buiten bereik</value>
+  </data>
+  <data name="passwordBox.PlaceholderText" xml:space="preserve">
+    <value>Wachtwoord</value>
+  </data>
+  <data name="usernameTextBox.PlaceholderText" xml:space="preserve">
+    <value>Gebruikersnaam/email</value>
+  </data>
+  <data name="XPText.Text" xml:space="preserve">
+    <value>XP</value>
+  </data>
+  <data name="OKButton.Content" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="LoadingEncounter" xml:space="preserve">
+    <value>Laadt ontmoeting met </value>
+  </data>
+  <data name="LoggingIn" xml:space="preserve">
+    <value>Inloggen...</value>
+  </data>
+  <data name="Fleed" xml:space="preserve">
+    <value> gevlucht</value>
+  </data>
+  <data name="GoogleError" xml:space="preserve">
+    <value>Google geeft fout: </value>
+  </data>
+  <data name="GoogleNotResponding" xml:space="preserve">
+    <value>Google antwoordt niet, probeer het later opnieuw.</value>
+  </data>
+  <data name="LoginFailed" xml:space="preserve">
+    <value>Login mislukt, probeer het opnieuw.</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nee</value>
+  </data>
+  <data name="NoGPSPermissions" xml:space="preserve">
+    <value>We hebben toestemming nodig om uw lokatie te bepalen, graag toestemming verlenen en opnieuw proberen.</value>
+  </data>
+  <data name="PokemonRanAway" xml:space="preserve">
+    <value>Pokemon is weggerend, sorry :(</value>
+  </data>
+  <data name="PTCDown" xml:space="preserve">
+    <value>PTC login heeft waarschijnlijk een storing, probeer het later opnieuw.</value>
+  </data>
+  <data name="SomethingWentWrong" xml:space="preserve">
+    <value>Er is iets misgegaan en de app is nu mogelijk instabiel. Wil je uitloggen en het opnieuw proberen?</value>
+  </data>
+  <data name="UpdatedVersion1" xml:space="preserve">
+    <value>Een nieuwe versie is beschikbaar op</value>
+  </data>
+  <data name="UpdatedVersion2" xml:space="preserve">
+    <value>Wil je deze link bezoeken?</value>
+  </data>
+  <data name="WrongUsername" xml:space="preserve">
+    <value>Ongeldige gebruikersnaam/wachtwoord of de server is offline, probeer opnieuw.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="CPText.Text" xml:space="preserve">
+    <value>CP</value>
+  </data>
+  <data name="EggsText.Text" xml:space="preserve">
+    <value>EIEREN</value>
+  </data>
+  <data name="MusicTitleText.Text" xml:space="preserve">
+    <value>Muziek</value>
+  </data>
+  <data name="PokemonText.Text" xml:space="preserve">
+    <value>POKÉMON</value>
+  </data>
+  <data name="SettingsHeaderText.Text" xml:space="preserve">
+    <value>INSTELLINGEN</value>
+  </data>
+  <data name="SignOutButton.Text" xml:space="preserve">
+    <value>Uitloggen</value>
+  </data>
+  <data name="VibrationTitleText.Text" xml:space="preserve">
+    <value>Trillen</value>
+  </data>
+  <data name="ItemsText.Text" xml:space="preserve">
+    <value>GEREEDSCHAP</value>
+  </data>
+  <data name="PokedexText.Text" xml:space="preserve">
+    <value>POKÉDEX</value>
+  </data>
+</root>

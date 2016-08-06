@@ -68,7 +68,7 @@ namespace PokemonGo_UWP.Views
         private void GameManagerViewModelOnSearchInventoryFull(object sender, EventArgs eventArgs)
         {
             SearchPokestopButton.IsEnabled = false;
-            InventoryFulleTextBlock.Visibility = ErrorMessageBorder.Visibility = Visibility.Visible;
+            InventoryFullTextBlock.Visibility = ErrorMessageBorder.Visibility = Visibility.Visible;
         }
 
         private void GameManagerViewModelOnSearchInCooldown(object sender, EventArgs eventArgs)

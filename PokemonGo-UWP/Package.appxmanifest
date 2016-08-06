@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" xmlns:wincap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/windowscapabilities" IgnorableNamespaces="uap mp rescap wincap">
   <Identity Name="c602d2cb-fdd8-4e41-b5a1-8f9a8a1f56c7" Publisher="CN=stept" Version="1.0.12.0" />
   <mp:PhoneIdentity PhoneProductId="c602d2cb-fdd8-4e41-b5a1-8f9a8a1f56c7" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
@@ -27,6 +27,8 @@
   </Applications>
   <Capabilities>
     <Capability Name="internetClient" />
+    <rescap:Capability Name="packageQuery" />
+    <wincap:Capability Name="packageManagement" />
     <DeviceCapability Name="location" />
   </Capabilities>
 </Package>

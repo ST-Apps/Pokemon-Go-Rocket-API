@@ -6,61 +6,68 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
       mc:Ignorable="d">
-    
+
     <Page.DataContext>
-        <viewModels:LoginPageViewModel x:Name="ViewModel"/>
+        <viewModels:LoginPageViewModel x:Name="ViewModel" />
     </Page.DataContext>
 
-    <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#a8e090" Offset="0" />
+                <GradientStop Color="#35908f" Offset="0.8" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Source="../Assets/Logos/logo_transparent.png" MaxWidth="300" />
+        <Grid Grid.Row="1" Style="{StaticResource GridContainer}">
+            
+            <StackPanel>
+                <TextBox x:Name="usernameTextBox"
+                         PlaceholderText="Username/email"
+                         x:Uid="usernameTextBox"
+                         Text="{Binding Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                         Margin="15,20,15,0"
+                         InputScope="EmailSmtpAddress"
+                         Style="{StaticResource TextBox}" />
 
-        <controls:PageHeader x:Name="pageHeader"
-                             Content="PTC Login"
-                             RelativePanel.AlignLeftWithPanel="True"
-                             RelativePanel.AlignRightWithPanel="True"
-                             RelativePanel.AlignTopWithPanel="True" />
-
-        <TextBox x:Name="usernameTextBox"
-                 Margin="16,12"
-                 Header="username:"
-                 Text="{Binding PtcUsername, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                 RelativePanel.AlignLeftWithPanel="True"
-                 RelativePanel.AlignRightWithPanel="True"
-                 RelativePanel.Below="pageHeader" />
-
-        <PasswordBox x:Name="passwordBox"
-                     Margin="16,0"
-                     Header="password:"
-                     Password="{Binding PtcPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                     RelativePanel.AlignLeftWithPanel="True"
-                     RelativePanel.AlignRightWithPanel="True"
-                     RelativePanel.Below="usernameTextBox" 
-                     KeyDown="passwordBox_KeyDown" />
-
-        <Grid Margin="16,12"
-              RelativePanel.AlignLeftWithPanel="True"
-              RelativePanel.AlignRightWithPanel="True"
-              RelativePanel.AlignBottomWithPanel="True">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <TextBlock TextWrapping="WrapWholeWords"
-                       Margin="16,12"
-                       Text="WARNING: to login to PTC server you'll need to insert your username and password in this app. If you don't trust it, please, close it before going on." />
-
-            <Button HorizontalAlignment="Stretch"
-                    Grid.Row="1"
-                    x:Name="loginButton"
-                    Content="login"
-                    Command="{Binding DoPtcLoginCommand}" />
+                <PasswordBox x:Name="passwordBox"
+                             PlaceholderText="Password"
+                             x:Uid="passwordBox"
+                             Password="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                             Margin="15,20,15,20"
+                             KeyDown="passwordBox_KeyDown" 
+                             Style="{StaticResource PasswordBox}" />
+                <Button x:Name="loginButton"
+                        Command="{Binding DoPtcLoginCommand}"
+                        Style="{StaticResource ButtonSubmit}">
+                    <TextBlock x:Uid="loginButton" Text="LOGIN with PTC Account" />
+                </Button>
+                <Button x:Name="googleButton"
+                        Command="{Binding DoGoogleLoginCommand}"
+                        Style="{StaticResource ButtonSubmitRed}"
+                        Margin="12,0,15,15">
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+                        <Image Grid.Row="0" Source="../Assets/Logos/google.png" MaxWidth="30" />
+                        <TextBlock x:Uid="googleButton" Text="GOOGLE" VerticalAlignment="Center" Margin="10,0,0,0" />
+                    </StackPanel>
+                </Button>
+                <TextBlock
+                    Text="To login you need to insert your Username/Email and Password in this app. If you don't trust it, please, close it before going on. We are not responsable for anything."
+                    x:Uid="loginInfoText"
+                    Style="{StaticResource TextNormal}"
+                    TextAlignment="Center"
+                    Margin="15,0,15,20" />
+            </StackPanel>
         </Grid>
-        
-        <TextBlock Text="{Binding CurrentVersion}"
-                   RelativePanel.AlignTopWithPanel="True"
-                   RelativePanel.AlignRightWithPanel="True"
-                   Margin="6"
-                   />
-
-    </RelativePanel>
+        <TextBlock Grid.Row="2" Text="{Binding CurrentVersion}"
+                   Style="{StaticResource TextNormal}"
+                   Margin="20,15,20,15" />
+    </Grid>
 
 </Page>

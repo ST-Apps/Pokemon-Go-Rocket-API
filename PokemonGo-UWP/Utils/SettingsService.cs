@@ -23,5 +23,23 @@ namespace PokemonGo_UWP.Utils
             get { return _helper.Read(nameof(PtcAuthToken), string.Empty); }
             set { _helper.Write(nameof(PtcAuthToken), value); }
         }
-    }
+
+        public string GoogleAuthToken
+        {
+            get { return _helper.Read(nameof(GoogleAuthToken), string.Empty); }
+            set { _helper.Write(nameof(GoogleAuthToken), value); }
+		}
+
+		public bool IsMusicEnabled
+		{
+			get { return _helper.Read(nameof(IsMusicEnabled), false); }
+			set { _helper.Write(nameof(IsMusicEnabled), value); }
+		}
+
+		public bool IsVibrationEnabled
+		{
+			get { return _helper.Read(nameof(IsVibrationEnabled), false); }
+			set { _helper.Write(nameof(IsVibrationEnabled), value); }
+		}
+	}
 }

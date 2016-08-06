@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Protobuf", "Google.P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonGo-UWP", "PokemonGo-UWP\PokemonGo-UWP.csproj", "{498AE076-ECDF-4E50-BD1A-171E89D908B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonGo-UWP.Tests", "PokemonGo-UWP.Tests\PokemonGo-UWP.Tests.csproj", "{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,27 @@ Global
 		{498AE076-ECDF-4E50-BD1A-171E89D908B5}.Release|x86.ActiveCfg = Release|x86
 		{498AE076-ECDF-4E50-BD1A-171E89D908B5}.Release|x86.Build.0 = Release|x86
 		{498AE076-ECDF-4E50-BD1A-171E89D908B5}.Release|x86.Deploy.0 = Release|x86
+		{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}.Debug|Any CPU.Build.0 = Debug|x86
+		{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}.Debug|Any CPU.Deploy.0 = Debug|x86
+		{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}.Debug|ARM.ActiveCfg = Debug|ARM
+		{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}.Debug|ARM.Build.0 = Debug|ARM
+		{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}.Debug|ARM.Deploy.0 = Debug|ARM
+		{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}.Debug|x64.ActiveCfg = Debug|x64
+		{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}.Debug|x64.Build.0 = Debug|x64
+		{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}.Debug|x64.Deploy.0 = Debug|x64
+		{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}.Debug|x86.ActiveCfg = Debug|x86
+		{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}.Debug|x86.Build.0 = Debug|x86
+		{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}.Release|Any CPU.ActiveCfg = Release|x86
+		{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}.Release|ARM.ActiveCfg = Release|ARM
+		{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}.Release|ARM.Build.0 = Release|ARM
+		{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}.Release|ARM.Deploy.0 = Release|ARM
+		{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}.Release|x64.ActiveCfg = Release|x64
+		{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}.Release|x64.Build.0 = Release|x64
+		{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}.Release|x64.Deploy.0 = Release|x64
+		{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}.Release|x86.ActiveCfg = Release|x86
+		{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}.Release|x86.Build.0 = Release|x86
+		{00CFBEEF-2166-423A-A3D5-9722DF7F2F5A}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

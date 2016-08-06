@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ItemBlukBerry" xml:space="preserve">
+    <value>Baie Remu</value>
+  </data>
+  <data name="ItemGreatBall" xml:space="preserve">
+    <value>Super Ball</value>
+  </data>
+  <data name="ItemHyperPotion" xml:space="preserve">
+    <value>Hyper Potion</value>
+  </data>
+  <data name="ItemIncenseCool" xml:space="preserve">
+    <value>Incense Cool</value>
+  </data>
+  <data name="ItemIncenseFloral" xml:space="preserve">
+    <value>Incense Floral</value>
+  </data>
+  <data name="ItemIncenseOrdinary" xml:space="preserve">
+    <value>Incense Ordinary</value>
+  </data>
+  <data name="ItemIncenseSpicy" xml:space="preserve">
+    <value>Incense Spicy</value>
+  </data>
+  <data name="ItemIncubatorBasic" xml:space="preserve">
+    <value>Incubator Basic</value>
+  </data>
+  <data name="ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>Incubator Basic Unlimited</value>
+  </data>
+  <data name="ItemItemStorageUpgrade" xml:space="preserve">
+    <value>Item Storage Upgrade</value>
+  </data>
+  <data name="ItemLuckyEgg" xml:space="preserve">
+    <value>Œuf Chance</value>
+  </data>
+  <data name="ItemMasterBall" xml:space="preserve">
+    <value>Master Ball</value>
+  </data>
+  <data name="ItemMaxPotion" xml:space="preserve">
+    <value>Potion Max</value>
+  </data>
+  <data name="ItemMaxRevive" xml:space="preserve">
+    <value>Rappel Max</value>
+  </data>
+  <data name="ItemNanabBerry" xml:space="preserve">
+    <value>Baie Nanab</value>
+  </data>
+  <data name="ItemPinapBerry" xml:space="preserve">
+    <value>Baie Nanana</value>
+  </data>
+  <data name="ItemPokeBall" xml:space="preserve">
+    <value>Poke Ball</value>
+  </data>
+  <data name="ItemPokemonStorageUpgrade" xml:space="preserve">
+    <value>Pokemon Storage Upgrade</value>
+  </data>
+  <data name="ItemPotion" xml:space="preserve">
+    <value>Potion</value>
+  </data>
+  <data name="ItemRazzBerry" xml:space="preserve">
+    <value>Baie Framby</value>
+  </data>
+  <data name="ItemRevive" xml:space="preserve">
+    <value>Rappel</value>
+  </data>
+  <data name="ItemSpecialCamera" xml:space="preserve">
+    <value>Special Camera</value>
+  </data>
+  <data name="ItemSuperPotion" xml:space="preserve">
+    <value>Super Potion</value>
+  </data>
+  <data name="ItemTroyDisk" xml:space="preserve">
+    <value>Troy Disk</value>
+  </data>
+  <data name="ItemUltraBall" xml:space="preserve">
+    <value>Hyper Ball</value>
+  </data>
+  <data name="ItemUnknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="ItemWeparBerry" xml:space="preserve">
+    <value>Wepar Berry</value>
+  </data>
+  <data name="ItemXAttack" xml:space="preserve">
+    <value>Attaque +</value>
+  </data>
+  <data name="ItemXDefense" xml:space="preserve">
+    <value>Défense +</value>
+  </data>
+  <data name="ItemXMiracle" xml:space="preserve">
+    <value>X Miracle</value>
+  </data>
+</root>

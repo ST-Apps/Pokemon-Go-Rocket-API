@@ -55,7 +55,7 @@ namespace PokemonGo.RocketAPI
             Map = new Rpc.Map(this);
             Fort = new Rpc.Fort(this);
             Encounter = new Rpc.Encounter(this);
-            Misc = new Rpc.Misc(this);            
+            Misc = new Rpc.Misc(this);                        
 
             Player.SetCoordinates(Settings.DefaultLatitude, Settings.DefaultLongitude, Settings.DefaultAltitude);
         }

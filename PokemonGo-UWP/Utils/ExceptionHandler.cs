@@ -15,9 +15,9 @@ namespace PokemonGo_UWP.Utils
 
         public static async Task HandleException()
         {
-            var dialog = new MessageDialog("Something went wrong and app may be unstable now. Do you want to logout and try again?");
-            dialog.Commands.Add(new UICommand("Yes") { Id = 0 });
-            dialog.Commands.Add(new UICommand("No") { Id = 1 });
+            var dialog = new MessageDialog(Resources.Translation.GetString("SomethingWentWrong"));
+            dialog.Commands.Add(new UICommand(Resources.Translation.GetString("Yes")) { Id = 0 });
+            dialog.Commands.Add(new UICommand(Resources.Translation.GetString("No")) { Id = 1 });
             dialog.DefaultCommandIndex = 0;
             dialog.CancelCommandIndex = 1;
             var result = await dialog.ShowAsyncQueue();

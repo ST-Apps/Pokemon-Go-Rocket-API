@@ -93,6 +93,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\Audio\pokemon_found_ding.wav" />
     <Content Include="Assets\Backgrounds\Park.png" />
     <Content Include="Assets\Backgrounds\Parkscene_Background.png" />
     <Content Include="Assets\Backgrounds\Parkscene_Background_Night.png" />
@@ -111,9 +112,13 @@
     <Content Include="Assets\Buttons\btn_close_normal_dark.png" />
     <Content Include="Assets\Buttons\btn_empty.png" />
     <Content Include="Assets\Buttons\btn_incubator.png" />
+    <Content Include="Assets\Buttons\btn_items.png" />
     <Content Include="Assets\Buttons\btn_master.png" />
     <Content Include="Assets\Buttons\btn_ok_normal_dark.png" />
+    <Content Include="Assets\Buttons\btn_pokedex.png" />
+    <Content Include="Assets\Buttons\btn_pokemon.png" />
     <Content Include="Assets\Buttons\btn_run_away.png" />
+    <Content Include="Assets\Buttons\btn_settings.png" />
     <Content Include="Assets\Buttons\btn_swap.png" />
     <Content Include="Assets\Buttons\btn_train.png" />
     <Content Include="Assets\Icons\circle_255_filled_01.png" />
@@ -122,6 +127,13 @@
     <Content Include="Assets\Icons\Footprint_Mid.png" />
     <Content Include="Assets\Icons\Footprint_Near.png" />
     <Content Include="Assets\Icons\FrontPortraitRing.png" />
+    <Content Include="Assets\Icons\ic_combat.png" />
+    <Content Include="Assets\Icons\ic_date.png" />
+    <Content Include="Assets\Icons\ic_fav.png" />
+    <Content Include="Assets\Icons\ic_health.png" />
+    <Content Include="Assets\Icons\ic_name.png" />
+    <Content Include="Assets\Icons\ic_number.png" />
+    <Content Include="Assets\Icons\pokestop_far.png" />
     <Content Include="Assets\Icons\pokestop_near.png" />
     <Content Include="Assets\Icons\pokestop_near_inactive.png" />
     <Content Include="Assets\Icons\stardust_painted.png" />
@@ -155,6 +167,8 @@
     <Content Include="Assets\Items\Item_COIN_HEAP_01.png" />
     <Content Include="Assets\Items\Item_COIN_POUCH_01.png" />
     <Content Include="Assets\Items\Item_COIN_STACK_01.png" />
+    <Content Include="Assets\Logos\google.png" />
+    <Content Include="Assets\Logos\logo_transparent.png" />
     <Content Include="Assets\Pokemons\1.png" />
     <Content Include="Assets\Pokemons\10.png" />
     <Content Include="Assets\Pokemons\100.png" />
@@ -306,6 +320,7 @@
     <Content Include="Assets\Pokemons\97.png" />
     <Content Include="Assets\Pokemons\98.png" />
     <Content Include="Assets\Pokemons\99.png" />
+    <Content Include="Assets\Pokemons\0.png" />
     <Content Include="Assets\UI\panelBG.png" />
     <Content Include="Assets\UI\candy.png" />
     <Content Include="Assets\UI\close.png" />
@@ -319,28 +334,74 @@
     <Content Include="Assets\Fonts\Lato-Regular.ttf" />
     <Content Include="Assets\Fonts\Lato-Bold.ttf" />
     <None Include="project.json" />
+    <PRIResource Include="Strings\sk-SK\Resources.resw" />
+    <PRIResource Include="Strings\sk-SK\Pokemon.resw" />
+    <PRIResource Include="Strings\sk-SK\Items.resw" />
+    <PRIResource Include="Strings\nl-NL\Resources.resw" />
+    <PRIResource Include="Strings\tr-TR\Resources.resw" />
+    <PRIResource Include="Strings\tr-TR\Pokemon.resw" />
+    <PRIResource Include="Strings\tr-TR\Items.resw" />
+    <PRIResource Include="Strings\it-IT\Items.resw" />
+    <PRIResource Include="Strings\it-IT\Resources.resw" />
+    <PRIResource Include="Strings\it-IT\Pokemon.resw" />
+    <PRIResource Include="Strings\pl-PL\Items.resw" />
+    <PRIResource Include="Strings\pl-PL\Resources.resw" />
+    <PRIResource Include="Strings\pl-PL\Pokemon.resw" />
+    <PRIResource Include="Strings\ja-JP\Resources.resw" />
+    <PRIResource Include="Strings\es-ES\Items.resw" />
+    <PRIResource Include="Strings\es-ES\Resources.resw" />
+    <PRIResource Include="Strings\es-ES\Pokemon.resw" />
+    <PRIResource Include="Strings\cs-CZ\Items.resw" />
+    <PRIResource Include="Strings\cs-CZ\Resources.resw" />
+    <PRIResource Include="Strings\cs-CZ\Pokemon.resw" />
+    <PRIResource Include="Strings\ru-RU\Resources.resw" />
+    <PRIResource Include="Strings\ru-RU\Pokemon.resw" />
+    <PRIResource Include="Strings\ru-RU\Items.resw" />
+    <PRIResource Include="Strings\fr-FR\Resources.resw" />
+    <PRIResource Include="Strings\fr-FR\Pokemon.resw" />
+    <PRIResource Include="Strings\fr-FR\Items.resw" />
+    <PRIResource Include="Strings\de-DE\Items.resw" />
+    <PRIResource Include="Strings\en-US\Items.resw" />
+    <PRIResource Include="Strings\de-DE\Resources.resw" />
+    <PRIResource Include="Strings\de-DE\Pokemon.resw" />
+    <PRIResource Include="Strings\en-US\Resources.resw" />
+    <PRIResource Include="Strings\en-US\Pokemon.resw" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Entities\FortDataWrapper.cs" />
+    <Compile Include="Entities\IUpdatable.cs" />
     <Compile Include="Entities\MapPokemonWrapper.cs" />
     <Compile Include="Entities\NearbyPokemonWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\ApplicationKeys.cs" />
+    <Compile Include="Utils\AudioUtils.cs" />
+    <Compile Include="Utils\CollectionExtensions.cs" />
     <Compile Include="Utils\Converters.cs" />
     <Compile Include="Utils\ExceptionHandler.cs" />
     <Compile Include="Utils\GameClient.cs" />
     <Compile Include="Utils\MessageDialogExtensions.cs" />
     <Compile Include="Utils\NavigationHelper.cs" />
+    <Compile Include="Utils\PokemonInfo.cs" />
+    <Compile Include="Utils\Resources.cs" />
     <Compile Include="Utils\Settings.cs" />
     <Compile Include="Utils\SettingsService.cs" />
+    <Compile Include="Utils\SortingModes.cs" />
     <Compile Include="Utils\UpdateManager.cs" />
     <Compile Include="ViewModels\CapturePokemonPageViewModel.cs" />
     <Compile Include="ViewModels\GameMapPageViewModel.cs" />
+    <Compile Include="ViewModels\PokemonInventoryPageViewModel.cs" />
+    <Compile Include="ViewModels\SettingsPageViewModel.cs" />
     <Compile Include="ViewModels\LoginPageViewModel.cs" />
     <Compile Include="ViewModels\SearchPokeStopPageViewModel.cs" />
+    <Compile Include="Views\PokemonInventoryPage.xaml.cs">
+      <DependentUpon>PokemonInventoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CapturePokemonPage.xaml.cs">
       <DependentUpon>CapturePokemonPage.xaml</DependentUpon>
     </Compile>
@@ -355,6 +416,9 @@
     </Compile>
     <Compile Include="Views\SearchPokestopPage.xaml.cs">
       <DependentUpon>SearchPokestopPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Splash.xaml.cs">
+      <DependentUpon>Splash.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -393,6 +457,14 @@
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
+    <Page Include="Views\PokemonInventoryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\CapturePokemonPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -413,6 +485,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Splash.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Google.Protobuf\Google.Protobuf.csproj">
@@ -429,6 +505,7 @@
       <Name>Windows Mobile Extensions for the UWP</Name>
     </SDKReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

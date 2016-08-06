@@ -61,7 +61,7 @@ namespace PokemonGo_UWP.ViewModels
             {                
                 // Navigating from game page, so we need to actually load the encounter                
                 CurrentPokemon = (MapPokemonWrapper) NavigationHelper.NavigationState[nameof(CurrentPokemon)];
-                Busy.SetBusy(true, $"Loading encounter with {CurrentPokemon.PokemonId}");
+                Busy.SetBusy(true, Utils.Resources.Translation.GetString("LoadingEncounter") + Utils.Resources.Pokemon.GetString(CurrentPokemon.PokemonId.ToString()));
                 NavigationHelper.NavigationState.Remove(nameof(CurrentPokemon));
                 Logger.Write($"Catching {CurrentPokemon.PokemonId}");                
                 CurrentEncounter = await GameClient.EncounterPokemon(CurrentPokemon.EncounterId, CurrentPokemon.SpawnpointId);
@@ -70,7 +70,7 @@ namespace PokemonGo_UWP.ViewModels
                 if (CurrentEncounter.Status != EncounterResponse.Types.Status.EncounterSuccess)
                 {
                     // Encounter failed, probably the Pokemon ran away
-                    await new MessageDialog("Pokemon ran away, sorry :(").ShowAsyncQueue();
+                    await new MessageDialog(Utils.Resources.Translation.GetString("PokemonRanAway")).ShowAsyncQueue();
                     ReturnToGameScreen.Execute();
                 }
             }
@@ -182,9 +182,8 @@ namespace PokemonGo_UWP.ViewModels
         ///     Going back to map page
         /// </summary>
         public DelegateCommand ReturnToGameScreen => _returnToGameScreen ?? (
-            _returnToGameScreen = new DelegateCommand(async () =>
+            _returnToGameScreen = new DelegateCommand(() =>
             {
-                await GameClient.ForcedUpdateMapData();
                 NavigationService.Navigate(typeof(GameMapPage));
             }, () => true)
             );
@@ -201,9 +200,9 @@ namespace PokemonGo_UWP.ViewModels
         public event EventHandler CatchSuccess;
 
         /// <summary>
-        ///     Event fired if the user missed the Pokemon
+        ///     Event fired if the Pokemon flees
         /// </summary>
-        public event EventHandler CatchMissed;
+        public event EventHandler CatchFlee;
 
         /// <summary>
         ///     Event fired if the Pokemon escapes
@@ -212,41 +211,40 @@ namespace PokemonGo_UWP.ViewModels
 
         #endregion
 
-        private DelegateCommand _useSelectedCaptureItem;
+        private DelegateCommand<bool> _useSelectedCaptureItem;
 
         /// <summary>
         ///     We throw the selected item to the Pokemon and see what happens
         /// </summary>
-        public DelegateCommand UseSelectedCaptureItem => _useSelectedCaptureItem ?? (
-            _useSelectedCaptureItem = new DelegateCommand(async () =>
+        public DelegateCommand<bool> UseSelectedCaptureItem => _useSelectedCaptureItem ?? (
+            _useSelectedCaptureItem = new DelegateCommand<bool>(async (hitPokemon) =>
             {
-                Logger.Write($"Launched {SelectedCaptureItem} at {CurrentPokemon.PokemonId}");
-                // TODO: we need to see what happens if the user is throwing a different kind of ball
-                if (SelectedCaptureItem.ItemId == ItemId.ItemPokeBall)
+                Logger.Write($"Launched {SelectedCaptureItem} at {CurrentPokemon.PokemonId}");                
+                if (SelectedCaptureItem.ItemId == ItemId.ItemPokeBall || SelectedCaptureItem.ItemId == ItemId.ItemGreatBall || SelectedCaptureItem.ItemId == ItemId.ItemMasterBall || SelectedCaptureItem.ItemId == ItemId.ItemUltraBall)
                 {
                     // Player's using a PokeBall so we try to catch the Pokemon
-                    Busy.SetBusy(true, "Throwing Pokeball");
-                    await ThrowPokeball();
+                    await ThrowPokeball(hitPokemon);
                 }
                 else
                 {
                     // TODO: check if player can only use a ball or a berry during an encounter, and maybe avoid displaying useless items in encounter's inventory
                     // He's using a berry
-                    Busy.SetBusy(true, "Throwing Berry");
                     await ThrowBerry();
                 }
+                // Update selected item to get the new item count
+                SelectedCaptureItem = ItemsInventory.First(item => item.ItemId == SelectedCaptureItem.ItemId);
                 Busy.SetBusy(false);
-            }, () => true));
+            }, (hitPokemon) => true));
 
         /// <summary>
         ///     Launches the PokeBall for the current encounter, handling the different catch responses
         /// </summary>
         /// <returns></returns>
-        private async Task ThrowPokeball()
+        private async Task ThrowPokeball(bool hitPokemon)
         {            
             var caughtPokemonResponse =
                 await
-                    GameClient.CatchPokemon(CurrentPokemon.EncounterId, CurrentPokemon.SpawnpointId, SelectedCaptureItem.ItemId);
+                    GameClient.CatchPokemon(CurrentPokemon.EncounterId, CurrentPokemon.SpawnpointId, SelectedCaptureItem.ItemId, hitPokemon);
             switch (caughtPokemonResponse.Status)
             {
                 case CatchPokemonResponse.Types.CatchStatus.CatchError:
@@ -259,24 +257,22 @@ namespace PokemonGo_UWP.ViewModels
                     CatchSuccess?.Invoke(this, null);
                     await GameClient.UpdateInventory();
                     break;
-                case CatchPokemonResponse.Types.CatchStatus.CatchEscape:
-                    // TODO: throw multiple times + update animations
+                case CatchPokemonResponse.Types.CatchStatus.CatchEscape:                    
                     Logger.Write($"{CurrentPokemon.PokemonId} escaped");
-                    CatchEscape?.Invoke(this, null);                    
-                    await new MessageDialog($"{CurrentPokemon.PokemonId} escaped").ShowAsyncQueue();
+                    CatchEscape?.Invoke(this, null);                                        
                     await GameClient.UpdateInventory();
                     break;
                 case CatchPokemonResponse.Types.CatchStatus.CatchFlee:
                     Logger.Write($"{CurrentPokemon.PokemonId} fleed");
-                    CatchEscape?.Invoke(this, null);
-                    await new MessageDialog($"{CurrentPokemon.PokemonId} fleed").ShowAsyncQueue();
+                    CatchFlee?.Invoke(this, null);
+                    await new MessageDialog(Utils.Resources.Pokemon.GetString(CurrentPokemon.PokemonId.ToString()) + Utils.Resources.Translation.GetString("Fleed")).ShowAsyncQueue();
                     await GameClient.UpdateInventory();
                     ReturnToGameScreen.Execute();
                     break;
                 case CatchPokemonResponse.Types.CatchStatus.CatchMissed:
                     Logger.Write($"We missed {CurrentPokemon.PokemonId}");
                     await GameClient.UpdateInventory();
-                    CatchMissed?.Invoke(this, null);
+                    CatchFlee?.Invoke(this, null);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
