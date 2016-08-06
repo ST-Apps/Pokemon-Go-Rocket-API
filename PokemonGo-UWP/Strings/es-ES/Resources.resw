@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CoolDownText.Text" xml:space="preserve">
-    <value>Enfriamiento</value>
+    <value>Tiempo de recarga</value>
   </data>
   <data name="GettingGPSSignal" xml:space="preserve">
     <value>Recibiendo señal GPS...</value>
   </data>
   <data name="GettingUserData" xml:space="preserve">
-    <value>Recibiendo datos cuenta...</value>
+    <value>Recibiendo datos del usuario...</value>
   </data>
   <data name="googleButton.Text" xml:space="preserve">
     <value>GOOGLE</value>
@@ -136,7 +136,7 @@
     <value>Entrando con PTC</value>
   </data>
   <data name="loginInfoText.Text" xml:space="preserve">
-    <value>Para logearte en esta app necesitas un Usario/Contraseña. Si no confia en la app cierrela, no somos responsables de nada.</value>
+    <value>Para iniciar sesión en esta app necesitas un Usario/Contraseña. Si no confias en esta app ciérrala, no nos hacemos responsables de nada.</value>
   </data>
   <data name="logoutText.Text" xml:space="preserve">
     <value>Salir</value>
@@ -163,6 +163,6 @@
     <value>Cargando encuentro con </value>
   </data>
   <data name="LoggingIn" xml:space="preserve">
-    <value>Entrando...</value>
+    <value>Iniciando sesión...</value>
   </data>
 </root>
