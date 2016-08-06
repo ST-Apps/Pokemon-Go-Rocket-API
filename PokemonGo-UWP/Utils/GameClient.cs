@@ -119,6 +119,11 @@ namespace PokemonGo_UWP.Utils
         public static ObservableCollection<ItemData> ItemsInventory { get; set; } = new ObservableCollection<ItemData>();
 
         /// <summary>
+        ///     Stores Items that can be used to catch a Pokemon
+        /// </summary>
+        public static ObservableCollection<ItemData> CatchItemsInventory { get; set; } = new ObservableCollection<ItemData>();
+
+        /// <summary>
         ///     Stores Incubators in the current inventory
         /// </summary>
         public static ObservableCollection<EggIncubator> IncubatorsInventory { get; set; } = new ObservableCollection<EggIncubator>();
@@ -363,6 +368,22 @@ namespace PokemonGo_UWP.Utils
         #region Player Data & Inventory
 
         /// <summary>
+        /// List of items that can be used when trying to catch a Pokemon
+        /// </summary>
+        private static readonly List<ItemId> _catchItemIds = new List<ItemId>()
+        {
+            ItemId.ItemPokeBall,
+            ItemId.ItemGreatBall,
+            ItemId.ItemBlukBerry,
+            ItemId.ItemMasterBall,
+            ItemId.ItemNanabBerry,
+            ItemId.ItemPinapBerry,
+            ItemId.ItemRazzBerry,
+            ItemId.ItemUltraBall,
+            ItemId.ItemWeparBerry            
+        };
+
+        /// <summary>
         ///     Gets user's profile
         /// </summary>
         /// <returns></returns>
@@ -411,10 +432,14 @@ namespace PokemonGo_UWP.Utils
             ItemsInventory.AddRange(fullInventory.Where(item => item.InventoryItemData.Item != null)
                                                  .GroupBy(item => item.InventoryItemData.Item)
                                                  .Select(item => item.First().InventoryItemData.Item), true);
+            CatchItemsInventory.AddRange(fullInventory.Where(item => item.InventoryItemData.Item != null && _catchItemIds.Contains(item.InventoryItemData.Item.ItemId))
+                                                 .GroupBy(item => item.InventoryItemData.Item)
+                                                 .Select(item => item.First().InventoryItemData.Item), true);
             // Update incbuators          
+            // TODO: check if unused incubators have pokemonId = 0 to separate between sable and non-usable incubators
             IncubatorsInventory.AddRange(fullInventory.Where(item => item.InventoryItemData.EggIncubators != null)
-                                                      .SelectMany(i => i.InventoryItemData.EggIncubators.EggIncubator)
-                                                      .Where(i => i != null), true);
+                                                      .SelectMany(item => item.InventoryItemData.EggIncubators.EggIncubator)
+                                                      .Where(item => item != null && item.PokemonId != 0 && (item.UsesRemaining > 0 || item?.ItemId == ItemId.ItemIncubatorBasicUnlimited)), true);            
             // Update Pokemons
             PokemonsInventory.AddRange(fullInventory.Select(item => item.InventoryItemData.PokemonData)
                                                     .Where(item => item != null && item.PokemonId > 0),true);
@@ -512,6 +537,31 @@ namespace PokemonGo_UWP.Utils
         public static async Task<FortSearchResponse> SearchFort(string pokestopId, double latitude, double longitude)
         {
             return await Client.Fort.SearchFort(pokestopId, latitude, longitude);
+        }
+
+        #endregion
+
+        #region Eggs Handling
+
+        /// <summary>
+        /// Uses the selected incubator on the given egg
+        /// </summary>
+        /// <param name="incubator"></param>
+        /// <param name="egg"></param>
+        /// <returns></returns>
+        public static async Task<UseItemEggIncubatorResponse> UseEggIncubator(EggIncubator incubator, PokemonData egg)
+        {
+            return await Client.Inventory.UseItemEggIncubator(incubator.Id, egg.Id);
+        }
+
+        /// <summary>
+        /// Gets the incubator used by the given egg
+        /// </summary>
+        /// <param name="egg"></param>
+        /// <returns></returns>
+        public static EggIncubator GetIncubatorFromEgg(PokemonData egg)
+        {
+            return IncubatorsInventory.First(item => item.Id.Equals(egg.EggIncubatorId));
         }
 
         #endregion

@@ -167,7 +167,7 @@
                                             Margin="0,0,8,0">
 
                                     <Image
-                                        Source="{Binding Converter={StaticResource ItemIdToItemIconConverter}, ConverterParameter=Inventory}"
+                                        Source="{Binding ItemId, Converter={StaticResource ItemIdToItemIconConverter}, ConverterParameter=Inventory}"
                                         Height="76"
                                         Stretch="Uniform"
                                         HorizontalAlignment="Stretch" />
@@ -448,7 +448,7 @@
                                  Opacity="0.5" />
             </Border.Background>
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="{Binding CurrentPokemon.Name}"
+                <TextBlock Text="{Binding CurrentPokemon.PokemonId, Converter={StaticResource PokemonIdToPokemonNameConverter}}"
                            Foreground="White" />
                 <TextBlock x:Uid="SlashSpaceCPText"
                            Text="/ CP"
@@ -520,7 +520,7 @@
                                         TranslateX="0" />
                 </Button.RenderTransform>
                 <Image
-                    Source="{Binding SelectedCaptureItem, Converter={StaticResource ItemIdToItemIconConverter}, ConverterParameter=SelectedCaptureItem}"
+                    Source="{Binding SelectedCaptureItem.ItemId, Converter={StaticResource ItemIdToItemIconConverter}, ConverterParameter=SelectedCaptureItem}"
                     Stretch="Uniform"
                     HorizontalAlignment="Stretch" />
             </Button>

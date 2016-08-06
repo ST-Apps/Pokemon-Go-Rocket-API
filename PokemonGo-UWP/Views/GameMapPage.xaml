@@ -228,16 +228,15 @@
 
         </maps:MapControl>
 
-        <Grid RelativePanel.AlignLeftWithPanel="True"
+        <Grid x:Name="NearbyPokemonContainer"
+              RelativePanel.AlignLeftWithPanel="True"
               RelativePanel.AlignRightWithPanel="True"
               RelativePanel.AlignBottomWithPanel="True"
-              RelativePanel.AlignTopWithPanel="True"
-              x:Name="NearbyPokemonContainer"
+              RelativePanel.AlignTopWithPanel="True"              
               Canvas.ZIndex="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="2*" />
+                <RowDefinition Height="3*" />
             </Grid.RowDefinitions>
             
             <Grid.RenderTransform>
@@ -246,7 +245,6 @@
 
             <controls:ModalDialog x:Name="NearbyPokemonModal"
                                   Grid.Row="1"
-                                  Grid.RowSpan="2"
                                   CanBackButtonDismiss="True"
                                   DisableBackButtonWhenModal="True"
                                   ModalBackground="Transparent">

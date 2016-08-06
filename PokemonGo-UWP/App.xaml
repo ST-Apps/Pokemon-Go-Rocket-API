@@ -33,6 +33,8 @@
             <utils:PokemonSortingModesToIconConverter x:Key="PokemonSortingModesToIconConverter"/>
             <utils:EggDataToEggProgressConverter x:Key="EggDataToEggProgressConverter"/>
             <utils:ItemToItemDescriptionConverter x:Key="ItemToItemDescriptionConverter"/>
+            <utils:IncubatorUsagesCountToUsagesTextConverter x:Key="IncubatorUsagesCountToUsagesTextConverter"/>
+            <utils:EggDataToEggIconConverter x:Key="EggDataToEggIconConverter"/>
 
             <converters:ValueWhenConverter x:Key="EnabledWhenHasElementsConverter">
                 <converters:ValueWhenConverter.When>

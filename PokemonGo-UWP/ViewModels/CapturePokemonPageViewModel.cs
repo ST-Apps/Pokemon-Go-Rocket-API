@@ -132,7 +132,7 @@ namespace PokemonGo_UWP.ViewModels
         /// <summary>
         /// Reference to global inventory
         /// </summary>
-        public ObservableCollection<ItemData> ItemsInventory => GameClient.ItemsInventory;
+        public ObservableCollection<ItemData> ItemsInventory => GameClient.CatchItemsInventory;
 
         /// <summary>
         ///     Pokemon that we're trying to capture

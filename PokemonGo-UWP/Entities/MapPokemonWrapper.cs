@@ -71,18 +71,6 @@ namespace PokemonGo_UWP.Entities
 
         #endregion
 
-        #region New Properties
-
-        public string Name
-        {
-            get
-            {
-                return Resources.Pokemon.GetString(PokemonId.ToString());
-            }
-        }
-
-        #endregion
-
 		#region INotifyPropertyChanged
 
         public event PropertyChangedEventHandler PropertyChanged;

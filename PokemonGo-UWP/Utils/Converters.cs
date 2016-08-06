@@ -61,8 +61,8 @@ namespace PokemonGo_UWP.Utils
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {            
-            var itemId = (ItemData) value;
-            return new Uri($"ms-appx:///Assets/Items/Item_{(int) itemId.ItemId}.png");
+            var itemId = (ItemId) value;
+            return new Uri($"ms-appx:///Assets/Items/Item_{(int) itemId}.png");
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
@@ -321,8 +321,27 @@ namespace PokemonGo_UWP.Utils
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            var pokemon = (PokemonData) value;
+            var pokemon = (PokemonDataWrapper) value;
             return (int) (pokemon.Stamina/(double) pokemon.StaminaMax)*100;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class EggDataToEggIconConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            if (value == null) return "ms-appx:///Assets/Items/Egg.png";
+            var egg = (PokemonDataWrapper)value;
+            return string.IsNullOrEmpty(egg.EggIncubatorId) ? "ms-appx:///Assets/Items/Egg.png" : $"ms-appx:///Assets/Items/E_Item_{(int)GameClient.GetIncubatorFromEgg(egg.WrappedData).ItemId}.png";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
@@ -339,7 +358,8 @@ namespace PokemonGo_UWP.Utils
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            var pokemon = (PokemonData)value;
+            if (value == null) return 0;
+            var pokemon = (PokemonDataWrapper)value;
             return (int)(pokemon.EggKmWalkedStart / pokemon.EggKmWalkedTarget) * 100;
         }
 
@@ -382,6 +402,24 @@ namespace PokemonGo_UWP.Utils
         public object ConvertBack(object value, Type targetType, object parameter, string language)
         {
             return value;
+        }
+
+        #endregion
+    }
+
+    public class IncubatorUsagesCountToUsagesTextConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var incubator = (EggIncubator) value;
+            return incubator.ItemId == ItemId.ItemIncubatorBasicUnlimited ? "∞" : $"{incubator.UsesRemaining}";
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return null;
         }
 
         #endregion

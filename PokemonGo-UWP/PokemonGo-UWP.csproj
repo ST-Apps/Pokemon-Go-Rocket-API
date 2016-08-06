@@ -94,6 +94,22 @@
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <Content Include="Assets\Audio\pokemon_found_ding.wav" />
+    <Content Include="Assets\Backgrounds\details_type_bg_bug.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_default.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_dragon.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_electric.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_fairy.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_fighting.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_fire.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_flying.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_ghost.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_ground.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_ice.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_normal.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_poison.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_psychic.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_rock.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_water.png" />
     <Content Include="Assets\Backgrounds\Park.png" />
     <Content Include="Assets\Backgrounds\Parkscene_Background.png" />
     <Content Include="Assets\Backgrounds\Parkscene_Background_Night.png" />
@@ -139,10 +155,10 @@
     <Content Include="Assets\Icons\stardust_painted.png" />
     <Content Include="Assets\Icons\stardust_vector.png" />
     <Content Include="Assets\Items\Egg.png" />
-    <Content Include="Assets\Items\EggIncubator.png" />
-    <Content Include="Assets\Items\EggIncubatorEmpty.png" />
-    <Content Include="Assets\Items\EggIncubatorEmptyUnlimited.png" />
-    <Content Include="Assets\Items\EggIncubatorUnlimited.png" />
+    <Content Include="Assets\Items\E_Item_902.png" />
+    <Content Include="Assets\Items\Item_902.png" />
+    <Content Include="Assets\Items\Item_901.png" />
+    <Content Include="Assets\Items\E_Item_901.png" />
     <Content Include="Assets\Items\Item_1.png" />
     <Content Include="Assets\Items\Item_2.png" />
     <Content Include="Assets\Items\Item_3.png" />
@@ -375,6 +391,7 @@
     <Compile Include="Entities\IUpdatable.cs" />
     <Compile Include="Entities\MapPokemonWrapper.cs" />
     <Compile Include="Entities\NearbyPokemonWrapper.cs" />
+    <Compile Include="Entities\PokemonDataWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\ApplicationKeys.cs" />
     <Compile Include="Utils\AudioUtils.cs" />
@@ -391,11 +408,15 @@
     <Compile Include="Utils\SortingModes.cs" />
     <Compile Include="Utils\UpdateManager.cs" />
     <Compile Include="ViewModels\CapturePokemonPageViewModel.cs" />
+    <Compile Include="ViewModels\EggDetailPageViewModel.cs" />
     <Compile Include="ViewModels\GameMapPageViewModel.cs" />
     <Compile Include="ViewModels\PokemonInventoryPageViewModel.cs" />
     <Compile Include="ViewModels\SettingsPageViewModel.cs" />
     <Compile Include="ViewModels\LoginPageViewModel.cs" />
     <Compile Include="ViewModels\SearchPokeStopPageViewModel.cs" />
+    <Compile Include="Views\EggDetailPage.xaml.cs">
+      <DependentUpon>EggDetailPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\PokemonInventoryPage.xaml.cs">
       <DependentUpon>PokemonInventoryPage.xaml</DependentUpon>
     </Compile>
@@ -456,6 +477,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Views\EggDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\PokemonInventoryPage.xaml">
       <SubType>Designer</SubType>

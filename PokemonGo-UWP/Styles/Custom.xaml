@@ -1094,6 +1094,48 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <Style TargetType="GridViewItem">
+        <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+        <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundBaseHighBrush}"/>
+        <Setter Property="TabNavigation" Value="Local"/>
+        <Setter Property="IsHoldingEnabled" Value="True"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,0,4,4"/>
+        <Setter Property="MinWidth" Value="{ThemeResource GridViewItemMinWidth}"/>
+        <Setter Property="MinHeight" Value="{ThemeResource GridViewItemMinHeight}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="GridViewItem">
+                    <ListViewItemPresenter CheckBrush="{ThemeResource SystemControlForegroundBaseMediumHighBrush}" 
+                                           ContentMargin="{TemplateBinding Padding}" 
+                                           CheckMode="Overlay" 
+                                           ContentTransitions="{TemplateBinding ContentTransitions}" 
+                                           CheckBoxBrush="{ThemeResource SystemControlBackgroundChromeMediumBrush}" 
+                                           DragForeground="{ThemeResource ListViewItemDragForegroundThemeBrush}" 
+                                           DragOpacity="{ThemeResource ListViewItemDragThemeOpacity}" 
+                                           DragBackground="{ThemeResource ListViewItemDragBackgroundThemeBrush}" 
+                                           DisabledOpacity="{ThemeResource ListViewItemDisabledThemeOpacity}" 
+                                           FocusBorderBrush="{ThemeResource SystemControlForegroundAltHighBrush}" 
+                                           FocusSecondaryBorderBrush="{ThemeResource SystemControlForegroundBaseHighBrush}" 
+                                           HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                           PointerOverForeground="{ThemeResource SystemControlForegroundBaseHighBrush}" 
+                                           PressedBackground="Transparent" 
+                                           PlaceholderBackground="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" 
+                                           PointerOverBackground="Transparent" 
+                                           ReorderHintOffset="{ThemeResource GridViewItemReorderHintThemeOffset}" 
+                                           SelectedPressedBackground="Transparent" 
+                                           SelectionCheckMarkVisualEnabled="True" 
+                                           SelectedForeground="{ThemeResource SystemControlForegroundBaseHighBrush}" 
+                                           SelectedPointerOverBackground="Transparent" 
+                                           SelectedBackground="Transparent" 
+                                           VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
     <ResourceDictionary.ThemeDictionaries>
 

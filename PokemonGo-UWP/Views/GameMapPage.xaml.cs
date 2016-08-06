@@ -31,7 +31,7 @@ namespace PokemonGo_UWP.Views
             InitializeComponent();
             NavigationCacheMode = NavigationCacheMode.Enabled;            
 
-            // Setup nearby translation
+            // Setup nearby translation + map
             Loaded += (s, e) =>
             {
                 if (ApplicationKeys.MapBoxTokens.Length > 0)
