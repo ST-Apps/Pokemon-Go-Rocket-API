@@ -15,11 +15,13 @@ using PokemonGo.RocketAPI.Extensions;
 using PokemonGo_UWP.Entities;
 using POGOProtos.Data;
 using POGOProtos.Enums;
+using POGOProtos.Inventory;
 using POGOProtos.Inventory.Item;
 using POGOProtos.Map.Fort;
 using POGOProtos.Networking.Envelopes;
 using POGOProtos.Networking.Responses;
 using POGOProtos.Settings.Master;
+using Template10.Utils;
 using Universal_Authenticator_v2.Views;
 using CatchPokemonResponse = POGOProtos.Networking.Responses.CatchPokemonResponse;
 using CheckAwardedBadgesResponse = POGOProtos.Networking.Responses.CheckAwardedBadgesResponse;
@@ -119,7 +121,7 @@ namespace PokemonGo_UWP.Utils
         /// <summary>
         ///     Stores Incubators in the current inventory
         /// </summary>
-        public static ObservableCollection<ItemData> IncubatorsInventory { get; set; } = new ObservableCollection<ItemData>();
+        public static ObservableCollection<EggIncubator> IncubatorsInventory { get; set; } = new ObservableCollection<EggIncubator>();
 
         /// <summary>
         /// Stores Pokemons in the current inventory
@@ -130,6 +132,11 @@ namespace PokemonGo_UWP.Utils
         /// Stores Eggs in the current inventory
         /// </summary>
         public static ObservableCollection<PokemonData> EggsInventory { get; set; } = new ObservableCollection<PokemonData>();
+
+        /// <summary>
+        /// Stores player's current Pokedex
+        /// </summary>
+        public static ObservableCollection<PokedexEntry> PokedexInventory { get; set; } = new ObservableCollection<PokedexEntry>();
 
         /// <summary>
         /// Stores extra useful data for the Pokedex, like Pokemon type and other stuff that is missing from PokemonData
@@ -383,46 +390,6 @@ namespace PokemonGo_UWP.Utils
         }
 
         /// <summary>
-        ///     Updates inventory data
-        /// </summary>
-        public static async Task UpdateInventory()
-        {            
-            // Get ALL the items
-            var fullInventory = (await GetInventory()).InventoryDelta.InventoryItems;
-            // Update items
-            var tmpItemsInventory = fullInventory.Where(item => item.InventoryItemData.Item != null).GroupBy(item => item.InventoryItemData.Item);
-            ItemsInventory.Clear();
-            foreach (var item in tmpItemsInventory)
-            {                               
-                ItemsInventory.Add(item.First().InventoryItemData.Item);
-            }
-            // Update incbuators
-            //var tmpIncubatorsInventory = fullInventory.Where(item => item.InventoryItemData.EggIncubators != null).GroupBy(item => item.InventoryItemData.EggIncubators);
-            //IncubatorsInventory.Clear();
-            //foreach (var item in tmpIncubatorsInventory)
-            //{
-            //    IncubatorsInventory.Add(item.First().InventoryItemData.Item);
-            //}
-            // Update Pokemons
-            var tmpPokemonsInventory = fullInventory.Where(item => item.InventoryItemData.PokemonData != null).Select(itemt => itemt.InventoryItemData.PokemonData);
-            PokemonsInventory.Clear();
-            EggsInventory.Clear();
-            foreach (var pokemon in tmpPokemonsInventory)
-            {
-                if (pokemon.IsEgg)
-                    EggsInventory.Add(pokemon);
-                else
-                    PokemonsInventory.Add(pokemon);
-            }                        
-        }
-
-        #endregion
-
-        #region Pokemon Handling
-
-        #region Pokedex
-
-        /// <summary>
         /// Pokedex extra data doesn't change so we can just call this method once.
         /// TODO: store it in local settings maybe?
         /// </summary>
@@ -430,8 +397,39 @@ namespace PokemonGo_UWP.Utils
         private static async Task UpdatePokedex()
         {
             // Update Pokedex data
-            PokedexExtraData = (await Client.Download.GetItemTemplates()).ItemTemplates.Where(item => item.PokemonSettings != null).Select(item => item.PokemonSettings);
+            PokedexExtraData = (await Client.Download.GetItemTemplates()).ItemTemplates.Where(item => item.PokemonSettings != null && item.PokemonSettings.FamilyId != PokemonFamilyId.FamilyUnset).Select(item => item.PokemonSettings);
         }
+
+        /// <summary>
+        ///     Updates inventory data
+        /// </summary>
+        public static async Task UpdateInventory()
+        {            
+            // Get ALL the items
+            var fullInventory = (await GetInventory()).InventoryDelta.InventoryItems;            
+            // Update items
+            ItemsInventory.AddRange(fullInventory.Where(item => item.InventoryItemData.Item != null)
+                                                 .GroupBy(item => item.InventoryItemData.Item)
+                                                 .Select(item => item.First().InventoryItemData.Item), true);
+            // Update incbuators          
+            IncubatorsInventory.AddRange(fullInventory.Where(item => item.InventoryItemData.EggIncubators != null)
+                                                      .SelectMany(i => i.InventoryItemData.EggIncubators.EggIncubator)
+                                                      .Where(i => i != null), true);
+            // Update Pokemons
+            PokemonsInventory.AddRange(fullInventory.Select(item => item.InventoryItemData.PokemonData)
+                                                    .Where(item => item != null && item.PokemonId > 0),true);
+            EggsInventory.AddRange(fullInventory.Select(item => item.InventoryItemData.PokemonData)
+                                                .Where(item => item != null && item.IsEgg), true); 
+            // Update Pokedex            
+            PokedexInventory.AddRange(fullInventory.Where(item => item.InventoryItemData.PokedexEntry != null)
+                                                   .Select(item => item.InventoryItemData.PokedexEntry), true);
+        }
+
+        #endregion
+
+        #region Pokemon Handling
+
+        #region Pokedex        
 
         /// <summary>
         /// Gets extra data for the current pokemon
