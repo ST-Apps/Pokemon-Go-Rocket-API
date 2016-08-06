@@ -28,13 +28,22 @@ namespace PokemonGo_UWP.ViewModels
 			set { SettingsService.Instance.IsVibrationEnabled = value; }
 		}
 
-		#endregion
+        /// <summary>
+		/// Whether the player wants the map to rotate following is heading
+		/// </summary>
+		public bool IsAutoRotateMapEnabled
+        {
+            get { return SettingsService.Instance.IsAutoRotateMapEnabled; }
+            set { SettingsService.Instance.IsAutoRotateMapEnabled = value; }
+        }
 
-		#region Game Logic
+        #endregion
 
-		#region Logout
+        #region Game Logic
 
-		private DelegateCommand _doPtcLogoutCommand;
+        #region Logout
+
+        private DelegateCommand _doPtcLogoutCommand;
 
 		public DelegateCommand DoPtcLogoutCommand => _doPtcLogoutCommand ?? (
 			_doPtcLogoutCommand = new DelegateCommand(() =>

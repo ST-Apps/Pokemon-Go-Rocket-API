@@ -221,16 +221,7 @@ namespace PokemonGo_UWP.Utils
         private static async Task<StorageFolder> GetTemporaryUpdateFolderAsync()
         {
             StorageFolder temp = ApplicationData.Current.TemporaryFolder;
-            StorageFolder folder = null;
-            try
-            {
-                folder = await temp.GetFolderAsync("Updates");
-            }
-            catch(FileNotFoundException)
-            {
-                folder = await temp.CreateFolderAsync("Updates");
-
-            }
+            StorageFolder folder = await temp.CreateFolderAsync("Updates", CreationCollisionOption.OpenIfExists);
 
             return folder;
         }

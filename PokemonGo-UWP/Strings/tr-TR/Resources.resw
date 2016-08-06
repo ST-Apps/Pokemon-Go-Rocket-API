@@ -165,64 +165,64 @@
   <data name="LoggingIn" xml:space="preserve">
     <value>Giriş Yapılıyor...</value>
   </data>
-  +  <data name="Fleed" xml:space="preserve">
- +    <value> Kaçtı</value>
- +  </data>
- +  <data name="GoogleError" xml:space="preserve">
- +    <value>Google hata verdi :( </value>
- +  </data>
- +  <data name="GoogleNotResponding" xml:space="preserve">
- +    <value>Google cevap vermiyor , lütfen daha sonra tekrar deneyin.</value>
- +  </data>
- +  <data name="LoginFailed" xml:space="preserve">
- +    <value>Oturum Açılamadı, lütfen daha sonra tekrar deneyin.</value>
- +  </data>
- +  <data name="No" xml:space="preserve">
- +    <value>Hayır</value>
- +  </data>
- +  <data name="NoGPSPermissions" xml:space="preserve">
- +    <value>GPS Erişimi yok, etkinleştirip tekrar deneyiniz.</value>
- +  </data>
- +  <data name="PokemonRanAway" xml:space="preserve">
- +    <value>Pokemon Kaçtı, Üzgünüm :(</value>
- +  </data>
- +  <data name="PTCDown" xml:space="preserve">
- +    <value>PTC hesabına giriş yapılamadı, lütfen daha sonra tekrar deneyin.</value>
- +  </data>
- +  <data name="SomethingWentWrong" xml:space="preserve">
- +    <value>Bir şeyler yanlış gitti ve uygulama düzgün çalışmayabilir. Eğer istersen uygulamayı kapatıp tekrar açabilirsin.</value>
- +  </data>
- +  <data name="UpdatedVersion1" xml:space="preserve">
- +    <value>Güncelleştirilmiş bir sürüm mevcuttur.</value>
- +  </data>
- +  <data name="UpdatedVersion2" xml:space="preserve">
- +    <value>Ziyaret etmek itiyor musun?</value>
- +  </data>
- +  <data name="WrongUsername" xml:space="preserve">
- +    <value>Kullanıcı adı/şifre doğru değil ya da sunucu kullanılamıyor, lütfen tekrar deneyin .</value>
- +  </data>
- +  <data name="Yes" xml:space="preserve">
- +    <value>Evet</value>
- +  </data>
- +    <data name="CPText.Text" xml:space="preserve">
- +    <value>CP</value>
- +  </data>
- +  <data name="EggsText.Text" xml:space="preserve">
- +    <value>Yumurta</value>
- +  </data>
- +  <data name="MusicTitleText.Text" xml:space="preserve">
- +    <value>Müzik</value>
- +  </data>
- +  <data name="PokemonText.Text" xml:space="preserve">
- +    <value>Pokemon</value>
- +  </data>
- +  <data name="SettingsHeaderText.Text" xml:space="preserve">
- +    <value>Ayarlar</value>
- +  </data>
- +  <data name="SignOutButton.Content" xml:space="preserve">
- +    <value>Çıkış</value>
- +  </data>
- +  <data name="VibrationTitleText" xml:space="preserve">
- +    <value>Titreşim</value>
- +  </data>
+  <data name="Fleed" xml:space="preserve">
+    <value> Kaçtı</value>
+  </data>
+  <data name="GoogleError" xml:space="preserve">
+    <value>Google hata verdi :( </value>
+  </data>
+  <data name="GoogleNotResponding" xml:space="preserve">
+    <value>Google cevap vermiyor , lütfen daha sonra tekrar deneyin.</value>
+  </data>
+  <data name="LoginFailed" xml:space="preserve">
+    <value>Oturum Açılamadı, lütfen daha sonra tekrar deneyin.</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Hayır</value>
+  </data>
+  <data name="NoGPSPermissions" xml:space="preserve">
+    <value>GPS Erişimi yok, etkinleştirip tekrar deneyiniz.</value>
+  </data>
+  <data name="PokemonRanAway" xml:space="preserve">
+    <value>Pokemon Kaçtı, Üzgünüm :(</value>
+  </data>
+  <data name="PTCDown" xml:space="preserve">
+    <value>PTC hesabına giriş yapılamadı, lütfen daha sonra tekrar deneyin.</value>
+  </data>
+  <data name="SomethingWentWrong" xml:space="preserve">
+    <value>Bir şeyler yanlış gitti ve uygulama düzgün çalışmayabilir. Eğer istersen uygulamayı kapatıp tekrar açabilirsin.</value>
+  </data>
+  <data name="UpdatedVersion1" xml:space="preserve">
+    <value>Güncelleştirilmiş bir sürüm mevcuttur.</value>
+  </data>
+  <data name="UpdatedVersion2" xml:space="preserve">
+    <value>Ziyaret etmek itiyor musun?</value>
+  </data>
+  <data name="WrongUsername" xml:space="preserve">
+    <value>Kullanıcı adı/şifre doğru değil ya da sunucu kullanılamıyor, lütfen tekrar deneyin .</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Evet</value>
+  </data>
+  <data name="CPText.Text" xml:space="preserve">
+    <value>CP</value>
+  </data>
+  <data name="EggsText.Text" xml:space="preserve">
+    <value>Yumurta</value>
+  </data>
+  <data name="MusicTitleText.Text" xml:space="preserve">
+    <value>Müzik</value>
+  </data>
+  <data name="PokemonText.Text" xml:space="preserve">
+    <value>Pokemon</value>
+  </data>
+  <data name="SettingsHeaderText.Text" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="SignOutButton.Text" xml:space="preserve">
+    <value>Çıkış</value>
+  </data>
+  <data name="VibrationTitleText.Text" xml:space="preserve">
+    <value>Titreşim</value>
+  </data>
 </root>

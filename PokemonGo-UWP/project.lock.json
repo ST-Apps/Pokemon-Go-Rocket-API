@@ -404,6 +404,9 @@
         }
       },
       "Octokit/0.21.1": {
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
         "compile": {
           "lib/netcore451/Octokit.dll": {}
         },
@@ -2636,6 +2639,9 @@
         }
       },
       "Octokit/0.21.1": {
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
         "compile": {
           "lib/netcore451/Octokit.dll": {}
         },
@@ -4995,6 +5001,9 @@
         }
       },
       "Octokit/0.21.1": {
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
         "compile": {
           "lib/netcore451/Octokit.dll": {}
         },
@@ -7395,6 +7404,9 @@
         }
       },
       "Octokit/0.21.1": {
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
         "compile": {
           "lib/netcore451/Octokit.dll": {}
         },
@@ -9763,6 +9775,9 @@
         }
       },
       "Octokit/0.21.1": {
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
         "compile": {
           "lib/netcore451/Octokit.dll": {}
         },
@@ -12168,6 +12183,9 @@
         }
       },
       "Octokit/0.21.1": {
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
         "compile": {
           "lib/netcore451/Octokit.dll": {}
         },
@@ -14536,6 +14554,9 @@
         }
       },
       "Octokit/0.21.1": {
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
         "compile": {
           "lib/netcore451/Octokit.dll": {}
         },
