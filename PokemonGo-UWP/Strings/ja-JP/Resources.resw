@@ -192,12 +192,6 @@
   <data name="SomethingWentWrong" xml:space="preserve">
     <value>何かが起きてアプリが正常起動できていません。ログアウトしてもう一度試しますか？</value>
   </data>
-  <data name="UpdatedVersion1" xml:space="preserve">
-    <value>最新バージョンにアップデートできます</value>
-  </data>
-  <data name="UpdatedVersion2" xml:space="preserve">
-    <value>リンクを開きますか？</value>
-  </data>
   <data name="WrongUsername" xml:space="preserve">
     <value>ユーザーネーム/パスワード、もしくはサーバーがオフラインになっています。もう一度試してください</value>
   </data>
@@ -219,7 +213,7 @@
   <data name="SettingsHeaderText.Text" xml:space="preserve">
     <value>設定</value>
   </data>
-  <data name="SignOutButton.Content" xml:space="preserve">
+  <data name="SignOutButton.Text" xml:space="preserve">
     <value>サインアウト</value>
   </data>
   <data name="VibrationTitleText.Text" xml:space="preserve">
