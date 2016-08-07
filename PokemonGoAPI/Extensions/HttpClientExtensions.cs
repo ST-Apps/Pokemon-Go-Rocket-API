@@ -23,7 +23,7 @@ namespace PokemonGo.RocketAPI.Extensions
 
     public static class HttpClientExtensions
     {
-        public static async Task<IMessage[]> PostProtoPayload<TRequest>(this System.Net.Http.HttpClient client,
+        public static async Task<IMessage[]> PostProtoPayload<TRequest>(this System.Net.Http.HttpClient client, 
             string url, RequestEnvelope requestEnvelope,
             IApiFailureStrategy strategy,
             params Type[] responseTypes) where TRequest : IMessage<TRequest>

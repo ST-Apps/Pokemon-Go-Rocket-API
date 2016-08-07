@@ -128,6 +128,10 @@
       <Project>{498AE076-ECDF-4E50-BD1A-171E89D908B5}</Project>
       <Name>PokemonGo-UWP</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PokemonGoAPI\PokemonGoAPI.csproj">
+      <Project>{c7fe57c5-a786-4b6e-b2c9-c026f347d461}</Project>
+      <Name>PokemonGoAPI</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />

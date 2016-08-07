@@ -1,20 +1,7 @@
-﻿using System;
-using System.Net;
-using System.Net.Http;
-using System.Threading.Tasks;
-using Google.Protobuf;
-using PokemonGo.RocketAPI.Enums;
-using PokemonGo.RocketAPI.Exceptions;
+﻿using PokemonGo.RocketAPI.Enums;
 using PokemonGo.RocketAPI.Extensions;
-using PokemonGo.RocketAPI.Helpers;
 using PokemonGo.RocketAPI.HttpClient;
-using PokemonGo.RocketAPI.Login;
-using POGOProtos.Inventory;
-using POGOProtos.Inventory.Item;
 using POGOProtos.Networking.Envelopes;
-using POGOProtos.Networking.Requests;
-using POGOProtos.Networking.Requests.Messages;
-using POGOProtos.Networking.Responses;
 
 namespace PokemonGo.RocketAPI
 {
@@ -46,16 +33,16 @@ namespace PokemonGo.RocketAPI
         public Client(ISettings settings, IApiFailureStrategy apiFailureStrategy)
         {
             Settings = settings;
-            ApiFailure = apiFailureStrategy;                                               
+            ApiFailure = apiFailureStrategy;
 
-            Login = new Rpc.Login(this);            
+            Login = new Rpc.Login(this);
             Player = new Rpc.Player(this);
             Download = new Rpc.Download(this);
             Inventory = new Rpc.Inventory(this);
             Map = new Rpc.Map(this);
             Fort = new Rpc.Fort(this);
             Encounter = new Rpc.Encounter(this);
-            Misc = new Rpc.Misc(this);                        
+            Misc = new Rpc.Misc(this);
 
             Player.SetCoordinates(Settings.DefaultLatitude, Settings.DefaultLongitude, Settings.DefaultAltitude);
         }

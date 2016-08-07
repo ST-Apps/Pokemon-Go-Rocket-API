@@ -38,12 +38,10 @@ namespace PokemonGo.RocketAPI.Rpc
             }
         }
 
-        public async Task<string> DoLogin()
+        public async Task DoLogin()
         {
-            if (string.IsNullOrEmpty(_client.AuthToken))
-                _client.AuthToken = await login.GetAccessToken().ConfigureAwait(false);
+            _client.AuthToken = await login.GetAccessToken().ConfigureAwait(false);
             await SetServer().ConfigureAwait(false);
-            return _client.AuthToken;
         }
 
         private async Task SetServer()

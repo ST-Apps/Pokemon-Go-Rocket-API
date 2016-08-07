@@ -26,6 +26,7 @@
     <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,6 +47,7 @@
     <PlatformTarget>x86</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <PlatformTarget>x86</PlatformTarget>
@@ -118,6 +120,7 @@
     <Compile Include="Exceptions\PTCOfflineException.cs" />
     <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Extensions\HttpClientExtensions.cs" />
+    <Compile Include="Helpers\Crypt.cs" />
     <Compile Include="Helpers\HttpClientHelper.cs" />
     <Compile Include="Helpers\JsonHelper.cs" />
     <Compile Include="Helpers\RandomHelper.cs" />
@@ -131,9 +134,9 @@
     <Compile Include="Logging\ConsoleLogger.cs" />
     <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Login\GoogleLogin.cs" />
-    <Compile Include="Login\GSPOAuthSharp.cs" />
     <Compile Include="Login\ILoginType.cs" />
     <Compile Include="Login\PtcLogin.cs" />
+    <Compile Include="POGOProtos\Networking\Envelopes\Signature.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proto\Data\AssetDigestEntry.cs" />
     <Compile Include="Proto\Data\Battle\BattleAction.cs" />
@@ -366,6 +369,7 @@
     <Compile Include="Rpc\Map.cs" />
     <Compile Include="Rpc\Misc.cs" />
     <Compile Include="Rpc\Player.cs" />
+    <Compile Include="xxHash.cs" />
     <EmbeddedResource Include="Properties\PokemonGoAPI.rd.xml" />
   </ItemGroup>
   <ItemGroup>
