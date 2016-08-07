@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CoolDownText.Text" xml:space="preserve">
-    <value>Devi aspettare un po'</value>
+    <value>calma</value>
   </data>
   <data name="GettingGPSSignal" xml:space="preserve">
     <value>Ottenendo il segnale GPS...</value>
@@ -130,13 +130,13 @@
     <value>GOOGLE</value>
   </data>
   <data name="InventoryFullText.Text" xml:space="preserve">
-    <value>Il tuo inventario è pieno!</value>
+    <value>inventario è pieno</value>
   </data>
   <data name="loginButton.Text" xml:space="preserve">
-    <value>LOGIN con l'account PTC</value>
+    <value>LOGIN con account PTC</value>
   </data>
   <data name="loginInfoText.Text" xml:space="preserve">
-    <value>Per effettuare il login servono Username/Email e Password in quest'app. Se non ti fidi, per favore, chiudila prima di procedere oltre. Non assumiamo alcuna responsabilità.</value>
+    <value>Per eseguire il login devi inserire Username/Email e Password in questa app. Se non ti fidi, per favore, esci prima di continuare. Non assumiamo alcuna responsabilità.</value>
   </data>
   <data name="logoutText.Text" xml:space="preserve">
     <value>LOGOUT</value>
@@ -145,7 +145,7 @@
     <value>nelle vicinanze</value>
   </data>
   <data name="OutOfRangeText.Text" xml:space="preserve">
-    <value>Sei troppo lontano</value>
+    <value>troppo lontano</value>
   </data>
   <data name="passwordBox.PlaceholderText" xml:space="preserve">
     <value>Password</value>
@@ -172,32 +172,32 @@
     <value>Google ha restituito l'errore: </value>
   </data>
   <data name="GoogleNotResponding" xml:space="preserve">
-    <value>Google non risponde, riprova più tardi.</value>
+    <value>Google non risponde, prova più tardi.</value>
   </data>
   <data name="LoginFailed" xml:space="preserve">
-    <value>Login fallito, riprova.</value>
+    <value>Login fallito, prova di nuovo.</value>
   </data>
   <data name="No" xml:space="preserve">
     <value>No</value>
   </data>
   <data name="NoGPSPermissions" xml:space="preserve">
-    <value>ci servono i permessi GPS per eseguire il gioco, per favore attivalo e riprova.</value>
+    <value>Occorrono i permessi GPS per avviare il gioco, attivalo e riprova.</value>
   </data>
   <data name="PokemonRanAway" xml:space="preserve">
-    <value>Il Pokemon è scappato, ci dispiace :(</value>
+    <value>Il Pokemon è scappato, ci spiace :(</value>
   </data>
   <data name="PTCDown" xml:space="preserve">
     <value>PTC login non è disponibile, riprova più tardi.</value>
   </data>
   <data name="SomethingWentWrong" xml:space="preserve">
-    <value>Qualcosa è andato storto e l'app potrebbe essere instabile. Vuoi disconnetterti e riprovare?</value>
+    <value>Qualcosa è andato storto e l'app risulta instabile. Vuoi disconnetterti e riprovare?</value>
   </data>
   <data name="UpdatedVersion" xml:space="preserve">
     <value>Una versione aggiornata {0} è disponibile. Vuoi aggiornare?
 {1}</value>
   </data>
   <data name="WrongUsername" xml:space="preserve">
-    <value>Username/password errato o server offline, riprova.</value>
+    <value>Username/password errati o server offline, per favore riprova.</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Si</value>
