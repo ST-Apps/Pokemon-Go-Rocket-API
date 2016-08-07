@@ -16,7 +16,7 @@ Encrypter::Encrypter()
 
 unsigned int Encrypter::GetOutputSize(const Array<unsigned char>^ input, const Array<unsigned char>^ iv)
 {
-	unsigned int outsize;
+	unsigned int outsize = 0;
 
 	encrypt(input->Data, input->Length,
 		iv->Data, iv->Length,
@@ -27,7 +27,7 @@ unsigned int Encrypter::GetOutputSize(const Array<unsigned char>^ input, const A
 
 void Encrypter::Encrypt(const Array<unsigned char>^ input, const Array<unsigned char>^ iv, WriteOnlyArray<unsigned char>^ output)
 {
-	unsigned int outsize;
+	unsigned int outsize = output->Length;
 	encrypt(input->Data, input->Length,
 		iv->Data, iv->Length,
 		output->Data, &outsize);

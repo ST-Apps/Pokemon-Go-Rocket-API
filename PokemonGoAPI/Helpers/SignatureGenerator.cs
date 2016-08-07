@@ -12,7 +12,7 @@ namespace PokemonGoAPI.Helpers
 
         public static byte[] GetSignature(byte[] input)
         {
-            byte[] iv = new byte[16];
+            byte[] iv = new byte[32];
 
             rnd.NextBytes(iv);
 
