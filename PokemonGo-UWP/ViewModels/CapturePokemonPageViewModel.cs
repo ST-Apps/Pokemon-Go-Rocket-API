@@ -211,19 +211,19 @@ namespace PokemonGo_UWP.ViewModels
 
         #endregion
 
-        private DelegateCommand<bool> _useSelectedCaptureItem;
+        private DelegateCommand _useSelectedCaptureItem;
 
         /// <summary>
         ///     We throw the selected item to the Pokemon and see what happens
         /// </summary>
-        public DelegateCommand<bool> UseSelectedCaptureItem => _useSelectedCaptureItem ?? (
-            _useSelectedCaptureItem = new DelegateCommand<bool>(async (hitPokemon) =>
+        public DelegateCommand UseSelectedCaptureItem => _useSelectedCaptureItem ?? (
+            _useSelectedCaptureItem = new DelegateCommand(async () =>
             {
                 Logger.Write($"Launched {SelectedCaptureItem} at {CurrentPokemon.PokemonId}");                
                 if (SelectedCaptureItem.ItemId == ItemId.ItemPokeBall || SelectedCaptureItem.ItemId == ItemId.ItemGreatBall || SelectedCaptureItem.ItemId == ItemId.ItemMasterBall || SelectedCaptureItem.ItemId == ItemId.ItemUltraBall)
                 {
                     // Player's using a PokeBall so we try to catch the Pokemon
-                    await ThrowPokeball(hitPokemon);
+                    await ThrowPokeball();
                 }
                 else
                 {
@@ -234,17 +234,17 @@ namespace PokemonGo_UWP.ViewModels
                 // Update selected item to get the new item count
                 SelectedCaptureItem = ItemsInventory.First(item => item.ItemId == SelectedCaptureItem.ItemId);
                 Busy.SetBusy(false);
-            }, (hitPokemon) => true));
+            }));
 
         /// <summary>
         ///     Launches the PokeBall for the current encounter, handling the different catch responses
         /// </summary>
         /// <returns></returns>
-        private async Task ThrowPokeball(bool hitPokemon)
+        private async Task ThrowPokeball()
         {            
             var caughtPokemonResponse =
                 await
-                    GameClient.CatchPokemon(CurrentPokemon.EncounterId, CurrentPokemon.SpawnpointId, SelectedCaptureItem.ItemId, hitPokemon);
+                    GameClient.CatchPokemon(CurrentPokemon.EncounterId, CurrentPokemon.SpawnpointId, SelectedCaptureItem.ItemId);
             switch (caughtPokemonResponse.Status)
             {
                 case CatchPokemonResponse.Types.CatchStatus.CatchError:

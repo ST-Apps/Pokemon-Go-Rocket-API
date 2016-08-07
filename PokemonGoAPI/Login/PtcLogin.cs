@@ -1,11 +1,11 @@
 ﻿using Newtonsoft.Json;
 using PokemonGo.RocketAPI.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
-using Windows.Foundation;
 
 namespace PokemonGo.RocketAPI.Login
 {
@@ -44,10 +44,9 @@ namespace PokemonGo.RocketAPI.Login
         {
             var location = loginResp.Headers.Location;
             if (location == null)
-                throw new LoginFailedException(loginResp);
+                throw new LoginFailedException();
 
-            var decoder = new WwwFormUrlDecoder(loginResp.Headers.Location.Query);
-            var ticketId = decoder.GetFirstValueByName("ticket");
+            var ticketId = new Uri("http://tempuri.org/?" + location.Query).ParseQueryString()["ticket"];
 
             if (ticketId == null)
                 throw new PtcOfflineException();
@@ -106,8 +105,7 @@ namespace PokemonGo.RocketAPI.Login
             }
 
             var tokenData = await tokenResp.Content.ReadAsStringAsync().ConfigureAwait(false);
-            var decoder = new WwwFormUrlDecoder(tokenData);
-            return decoder.GetFirstValueByName("access_token");
+            return new Uri("http://tempuri.org/?" + tokenData).ParseQueryString()["access_token"];
         }
 
         private class SessionData

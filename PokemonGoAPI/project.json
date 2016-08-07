@@ -1,5 +1,6 @@
 ﻿{
   "dependencies": {
+    "GPSOAuthSharp.Portable": "0.0.8",
     "Microsoft.AspNet.WebApi.Client": "5.2.3",
     "Microsoft.Net.Http": "2.2.29",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",

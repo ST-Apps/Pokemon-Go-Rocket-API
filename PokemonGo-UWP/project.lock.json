@@ -3,12 +3,44 @@
   "version": 1,
   "targets": {
     "UAP,Version=v10.0": {
+      "Flurl/2.1.0": {
+        "compile": {
+          "lib/netstandard1.4/Flurl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/Flurl.dll": {}
+        }
+      },
+      "Flurl.Http/1.0.0": {
+        "dependencies": {
+          "Flurl": "2.1.0",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.4/Flurl.Http.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/Flurl.Http.dll": {}
+        }
+      },
       "GeoExtensions/1.0.0.3": {
         "compile": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/GeoExtensions.dll": {}
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/GeoExtensions.dll": {}
+        }
+      },
+      "GPSOAuthSharp.Portable/0.0.8": {
+        "dependencies": {
+          "Flurl.Http": "1.0.0",
+          "PCLCrypto": "2.0.147"
+        },
+        "compile": {
+          "lib/portable45-net45+win8+wpa81/GPSOAuthSharp.dll": {}
+        },
+        "runtime": {
+          "lib/portable45-net45+win8+wpa81/GPSOAuthSharp.dll": {}
         }
       },
       "HockeySDK.Core/4.1.3": {
@@ -414,12 +446,67 @@
           "lib/netcore451/Octokit.dll": {}
         }
       },
+      "PCLCrypto/2.0.147": {
+        "dependencies": {
+          "PInvoke.NCrypt": "0.3.2",
+          "Validation": "2.2.8"
+        },
+        "compile": {
+          "lib/portable-win81+wpa81/PCLCrypto.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win81+wpa81/PCLCrypto.dll": {}
+        }
+      },
       "PCLWebUtility/1.0.3": {
         "compile": {
           "Lib/portable-net4+sl4+wp7+win8/PCLWebUtility.dll": {}
         },
         "runtime": {
           "Lib/portable-net4+sl4+wp7+win8/PCLWebUtility.dll": {}
+        }
+      },
+      "PInvoke.BCrypt/0.3.2": {
+        "dependencies": {
+          "PInvoke.Kernel32": "0.3.2",
+          "PInvoke.Windows.Core": "0.3.2"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.dll": {}
+        }
+      },
+      "PInvoke.Kernel32/0.3.2": {
+        "dependencies": {
+          "PInvoke.Windows.Core": "0.3.2"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.dll": {}
+        }
+      },
+      "PInvoke.NCrypt/0.3.2": {
+        "dependencies": {
+          "PInvoke.BCrypt": "0.3.2",
+          "PInvoke.Windows.Core": "0.3.2"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.dll": {}
+        }
+      },
+      "PInvoke.Windows.Core/0.3.2": {
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll": {}
         }
       },
       "runtime.native.System.IO.Compression/4.1.0": {
@@ -2258,6 +2345,14 @@
           "lib/netcore45/UniversalMapControl.dll": {}
         }
       },
+      "Validation/2.2.8": {
+        "compile": {
+          "lib/dotnet/Validation.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/Validation.dll": {}
+        }
+      },
       "Win2D.uwp/1.17.0": {
         "compile": {
           "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
@@ -2290,12 +2385,44 @@
       }
     },
     "UAP,Version=v10.0/win10-arm": {
+      "Flurl/2.1.0": {
+        "compile": {
+          "lib/netstandard1.4/Flurl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/Flurl.dll": {}
+        }
+      },
+      "Flurl.Http/1.0.0": {
+        "dependencies": {
+          "Flurl": "2.1.0",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.4/Flurl.Http.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/Flurl.Http.dll": {}
+        }
+      },
       "GeoExtensions/1.0.0.3": {
         "compile": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/GeoExtensions.dll": {}
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/GeoExtensions.dll": {}
+        }
+      },
+      "GPSOAuthSharp.Portable/0.0.8": {
+        "dependencies": {
+          "Flurl.Http": "1.0.0",
+          "PCLCrypto": "2.0.147"
+        },
+        "compile": {
+          "lib/portable45-net45+win8+wpa81/GPSOAuthSharp.dll": {}
+        },
+        "runtime": {
+          "lib/portable45-net45+win8+wpa81/GPSOAuthSharp.dll": {}
         }
       },
       "HockeySDK.Core/4.1.3": {
@@ -2649,12 +2776,67 @@
           "lib/netcore451/Octokit.dll": {}
         }
       },
+      "PCLCrypto/2.0.147": {
+        "dependencies": {
+          "PInvoke.NCrypt": "0.3.2",
+          "Validation": "2.2.8"
+        },
+        "compile": {
+          "lib/portable-win81+wpa81/PCLCrypto.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win81+wpa81/PCLCrypto.dll": {}
+        }
+      },
       "PCLWebUtility/1.0.3": {
         "compile": {
           "Lib/portable-net4+sl4+wp7+win8/PCLWebUtility.dll": {}
         },
         "runtime": {
           "Lib/portable-net4+sl4+wp7+win8/PCLWebUtility.dll": {}
+        }
+      },
+      "PInvoke.BCrypt/0.3.2": {
+        "dependencies": {
+          "PInvoke.Kernel32": "0.3.2",
+          "PInvoke.Windows.Core": "0.3.2"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.dll": {}
+        }
+      },
+      "PInvoke.Kernel32/0.3.2": {
+        "dependencies": {
+          "PInvoke.Windows.Core": "0.3.2"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.dll": {}
+        }
+      },
+      "PInvoke.NCrypt/0.3.2": {
+        "dependencies": {
+          "PInvoke.BCrypt": "0.3.2",
+          "PInvoke.Windows.Core": "0.3.2"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.dll": {}
+        }
+      },
+      "PInvoke.Windows.Core/0.3.2": {
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll": {}
         }
       },
       "runtime.any.System.Collections/4.0.11": {
@@ -4630,6 +4812,14 @@
           "lib/netcore45/UniversalMapControl.dll": {}
         }
       },
+      "Validation/2.2.8": {
+        "compile": {
+          "lib/dotnet/Validation.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/Validation.dll": {}
+        }
+      },
       "Win2D.uwp/1.17.0": {
         "compile": {
           "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
@@ -4651,12 +4841,44 @@
       }
     },
     "UAP,Version=v10.0/win10-arm-aot": {
+      "Flurl/2.1.0": {
+        "compile": {
+          "lib/netstandard1.4/Flurl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/Flurl.dll": {}
+        }
+      },
+      "Flurl.Http/1.0.0": {
+        "dependencies": {
+          "Flurl": "2.1.0",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.4/Flurl.Http.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/Flurl.Http.dll": {}
+        }
+      },
       "GeoExtensions/1.0.0.3": {
         "compile": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/GeoExtensions.dll": {}
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/GeoExtensions.dll": {}
+        }
+      },
+      "GPSOAuthSharp.Portable/0.0.8": {
+        "dependencies": {
+          "Flurl.Http": "1.0.0",
+          "PCLCrypto": "2.0.147"
+        },
+        "compile": {
+          "lib/portable45-net45+win8+wpa81/GPSOAuthSharp.dll": {}
+        },
+        "runtime": {
+          "lib/portable45-net45+win8+wpa81/GPSOAuthSharp.dll": {}
         }
       },
       "HockeySDK.Core/4.1.3": {
@@ -5011,12 +5233,67 @@
           "lib/netcore451/Octokit.dll": {}
         }
       },
+      "PCLCrypto/2.0.147": {
+        "dependencies": {
+          "PInvoke.NCrypt": "0.3.2",
+          "Validation": "2.2.8"
+        },
+        "compile": {
+          "lib/portable-win81+wpa81/PCLCrypto.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win81+wpa81/PCLCrypto.dll": {}
+        }
+      },
       "PCLWebUtility/1.0.3": {
         "compile": {
           "Lib/portable-net4+sl4+wp7+win8/PCLWebUtility.dll": {}
         },
         "runtime": {
           "Lib/portable-net4+sl4+wp7+win8/PCLWebUtility.dll": {}
+        }
+      },
+      "PInvoke.BCrypt/0.3.2": {
+        "dependencies": {
+          "PInvoke.Kernel32": "0.3.2",
+          "PInvoke.Windows.Core": "0.3.2"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.dll": {}
+        }
+      },
+      "PInvoke.Kernel32/0.3.2": {
+        "dependencies": {
+          "PInvoke.Windows.Core": "0.3.2"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.dll": {}
+        }
+      },
+      "PInvoke.NCrypt/0.3.2": {
+        "dependencies": {
+          "PInvoke.BCrypt": "0.3.2",
+          "PInvoke.Windows.Core": "0.3.2"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.dll": {}
+        }
+      },
+      "PInvoke.Windows.Core/0.3.2": {
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll": {}
         }
       },
       "runtime.aot.System.Collections/4.0.10": {
@@ -7030,6 +7307,14 @@
           "lib/netcore45/UniversalMapControl.dll": {}
         }
       },
+      "Validation/2.2.8": {
+        "compile": {
+          "lib/dotnet/Validation.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/Validation.dll": {}
+        }
+      },
       "Win2D.uwp/1.17.0": {
         "compile": {
           "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
@@ -7051,12 +7336,44 @@
       }
     },
     "UAP,Version=v10.0/win10-x64": {
+      "Flurl/2.1.0": {
+        "compile": {
+          "lib/netstandard1.4/Flurl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/Flurl.dll": {}
+        }
+      },
+      "Flurl.Http/1.0.0": {
+        "dependencies": {
+          "Flurl": "2.1.0",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.4/Flurl.Http.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/Flurl.Http.dll": {}
+        }
+      },
       "GeoExtensions/1.0.0.3": {
         "compile": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/GeoExtensions.dll": {}
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/GeoExtensions.dll": {}
+        }
+      },
+      "GPSOAuthSharp.Portable/0.0.8": {
+        "dependencies": {
+          "Flurl.Http": "1.0.0",
+          "PCLCrypto": "2.0.147"
+        },
+        "compile": {
+          "lib/portable45-net45+win8+wpa81/GPSOAuthSharp.dll": {}
+        },
+        "runtime": {
+          "lib/portable45-net45+win8+wpa81/GPSOAuthSharp.dll": {}
         }
       },
       "HockeySDK.Core/4.1.3": {
@@ -7414,12 +7731,67 @@
           "lib/netcore451/Octokit.dll": {}
         }
       },
+      "PCLCrypto/2.0.147": {
+        "dependencies": {
+          "PInvoke.NCrypt": "0.3.2",
+          "Validation": "2.2.8"
+        },
+        "compile": {
+          "lib/portable-win81+wpa81/PCLCrypto.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win81+wpa81/PCLCrypto.dll": {}
+        }
+      },
       "PCLWebUtility/1.0.3": {
         "compile": {
           "Lib/portable-net4+sl4+wp7+win8/PCLWebUtility.dll": {}
         },
         "runtime": {
           "Lib/portable-net4+sl4+wp7+win8/PCLWebUtility.dll": {}
+        }
+      },
+      "PInvoke.BCrypt/0.3.2": {
+        "dependencies": {
+          "PInvoke.Kernel32": "0.3.2",
+          "PInvoke.Windows.Core": "0.3.2"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.dll": {}
+        }
+      },
+      "PInvoke.Kernel32/0.3.2": {
+        "dependencies": {
+          "PInvoke.Windows.Core": "0.3.2"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.dll": {}
+        }
+      },
+      "PInvoke.NCrypt/0.3.2": {
+        "dependencies": {
+          "PInvoke.BCrypt": "0.3.2",
+          "PInvoke.Windows.Core": "0.3.2"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.dll": {}
+        }
+      },
+      "PInvoke.Windows.Core/0.3.2": {
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll": {}
         }
       },
       "runtime.any.System.Collections/4.0.11": {
@@ -9400,6 +9772,14 @@
           "lib/netcore45/UniversalMapControl.dll": {}
         }
       },
+      "Validation/2.2.8": {
+        "compile": {
+          "lib/dotnet/Validation.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/Validation.dll": {}
+        }
+      },
       "Win2D.uwp/1.17.0": {
         "compile": {
           "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
@@ -9421,12 +9801,44 @@
       }
     },
     "UAP,Version=v10.0/win10-x64-aot": {
+      "Flurl/2.1.0": {
+        "compile": {
+          "lib/netstandard1.4/Flurl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/Flurl.dll": {}
+        }
+      },
+      "Flurl.Http/1.0.0": {
+        "dependencies": {
+          "Flurl": "2.1.0",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.4/Flurl.Http.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/Flurl.Http.dll": {}
+        }
+      },
       "GeoExtensions/1.0.0.3": {
         "compile": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/GeoExtensions.dll": {}
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/GeoExtensions.dll": {}
+        }
+      },
+      "GPSOAuthSharp.Portable/0.0.8": {
+        "dependencies": {
+          "Flurl.Http": "1.0.0",
+          "PCLCrypto": "2.0.147"
+        },
+        "compile": {
+          "lib/portable45-net45+win8+wpa81/GPSOAuthSharp.dll": {}
+        },
+        "runtime": {
+          "lib/portable45-net45+win8+wpa81/GPSOAuthSharp.dll": {}
         }
       },
       "HockeySDK.Core/4.1.3": {
@@ -9785,12 +10197,67 @@
           "lib/netcore451/Octokit.dll": {}
         }
       },
+      "PCLCrypto/2.0.147": {
+        "dependencies": {
+          "PInvoke.NCrypt": "0.3.2",
+          "Validation": "2.2.8"
+        },
+        "compile": {
+          "lib/portable-win81+wpa81/PCLCrypto.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win81+wpa81/PCLCrypto.dll": {}
+        }
+      },
       "PCLWebUtility/1.0.3": {
         "compile": {
           "Lib/portable-net4+sl4+wp7+win8/PCLWebUtility.dll": {}
         },
         "runtime": {
           "Lib/portable-net4+sl4+wp7+win8/PCLWebUtility.dll": {}
+        }
+      },
+      "PInvoke.BCrypt/0.3.2": {
+        "dependencies": {
+          "PInvoke.Kernel32": "0.3.2",
+          "PInvoke.Windows.Core": "0.3.2"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.dll": {}
+        }
+      },
+      "PInvoke.Kernel32/0.3.2": {
+        "dependencies": {
+          "PInvoke.Windows.Core": "0.3.2"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.dll": {}
+        }
+      },
+      "PInvoke.NCrypt/0.3.2": {
+        "dependencies": {
+          "PInvoke.BCrypt": "0.3.2",
+          "PInvoke.Windows.Core": "0.3.2"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.dll": {}
+        }
+      },
+      "PInvoke.Windows.Core/0.3.2": {
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll": {}
         }
       },
       "runtime.aot.System.Collections/4.0.10": {
@@ -11809,6 +12276,14 @@
           "lib/netcore45/UniversalMapControl.dll": {}
         }
       },
+      "Validation/2.2.8": {
+        "compile": {
+          "lib/dotnet/Validation.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/Validation.dll": {}
+        }
+      },
       "Win2D.uwp/1.17.0": {
         "compile": {
           "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
@@ -11830,12 +12305,44 @@
       }
     },
     "UAP,Version=v10.0/win10-x86": {
+      "Flurl/2.1.0": {
+        "compile": {
+          "lib/netstandard1.4/Flurl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/Flurl.dll": {}
+        }
+      },
+      "Flurl.Http/1.0.0": {
+        "dependencies": {
+          "Flurl": "2.1.0",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.4/Flurl.Http.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/Flurl.Http.dll": {}
+        }
+      },
       "GeoExtensions/1.0.0.3": {
         "compile": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/GeoExtensions.dll": {}
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/GeoExtensions.dll": {}
+        }
+      },
+      "GPSOAuthSharp.Portable/0.0.8": {
+        "dependencies": {
+          "Flurl.Http": "1.0.0",
+          "PCLCrypto": "2.0.147"
+        },
+        "compile": {
+          "lib/portable45-net45+win8+wpa81/GPSOAuthSharp.dll": {}
+        },
+        "runtime": {
+          "lib/portable45-net45+win8+wpa81/GPSOAuthSharp.dll": {}
         }
       },
       "HockeySDK.Core/4.1.3": {
@@ -12193,12 +12700,67 @@
           "lib/netcore451/Octokit.dll": {}
         }
       },
+      "PCLCrypto/2.0.147": {
+        "dependencies": {
+          "PInvoke.NCrypt": "0.3.2",
+          "Validation": "2.2.8"
+        },
+        "compile": {
+          "lib/portable-win81+wpa81/PCLCrypto.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win81+wpa81/PCLCrypto.dll": {}
+        }
+      },
       "PCLWebUtility/1.0.3": {
         "compile": {
           "Lib/portable-net4+sl4+wp7+win8/PCLWebUtility.dll": {}
         },
         "runtime": {
           "Lib/portable-net4+sl4+wp7+win8/PCLWebUtility.dll": {}
+        }
+      },
+      "PInvoke.BCrypt/0.3.2": {
+        "dependencies": {
+          "PInvoke.Kernel32": "0.3.2",
+          "PInvoke.Windows.Core": "0.3.2"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.dll": {}
+        }
+      },
+      "PInvoke.Kernel32/0.3.2": {
+        "dependencies": {
+          "PInvoke.Windows.Core": "0.3.2"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.dll": {}
+        }
+      },
+      "PInvoke.NCrypt/0.3.2": {
+        "dependencies": {
+          "PInvoke.BCrypt": "0.3.2",
+          "PInvoke.Windows.Core": "0.3.2"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.dll": {}
+        }
+      },
+      "PInvoke.Windows.Core/0.3.2": {
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll": {}
         }
       },
       "runtime.any.System.Collections/4.0.11": {
@@ -14179,6 +14741,14 @@
           "lib/netcore45/UniversalMapControl.dll": {}
         }
       },
+      "Validation/2.2.8": {
+        "compile": {
+          "lib/dotnet/Validation.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/Validation.dll": {}
+        }
+      },
       "Win2D.uwp/1.17.0": {
         "compile": {
           "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
@@ -14200,12 +14770,44 @@
       }
     },
     "UAP,Version=v10.0/win10-x86-aot": {
+      "Flurl/2.1.0": {
+        "compile": {
+          "lib/netstandard1.4/Flurl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/Flurl.dll": {}
+        }
+      },
+      "Flurl.Http/1.0.0": {
+        "dependencies": {
+          "Flurl": "2.1.0",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.4/Flurl.Http.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/Flurl.Http.dll": {}
+        }
+      },
       "GeoExtensions/1.0.0.3": {
         "compile": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/GeoExtensions.dll": {}
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/GeoExtensions.dll": {}
+        }
+      },
+      "GPSOAuthSharp.Portable/0.0.8": {
+        "dependencies": {
+          "Flurl.Http": "1.0.0",
+          "PCLCrypto": "2.0.147"
+        },
+        "compile": {
+          "lib/portable45-net45+win8+wpa81/GPSOAuthSharp.dll": {}
+        },
+        "runtime": {
+          "lib/portable45-net45+win8+wpa81/GPSOAuthSharp.dll": {}
         }
       },
       "HockeySDK.Core/4.1.3": {
@@ -14564,12 +15166,67 @@
           "lib/netcore451/Octokit.dll": {}
         }
       },
+      "PCLCrypto/2.0.147": {
+        "dependencies": {
+          "PInvoke.NCrypt": "0.3.2",
+          "Validation": "2.2.8"
+        },
+        "compile": {
+          "lib/portable-win81+wpa81/PCLCrypto.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win81+wpa81/PCLCrypto.dll": {}
+        }
+      },
       "PCLWebUtility/1.0.3": {
         "compile": {
           "Lib/portable-net4+sl4+wp7+win8/PCLWebUtility.dll": {}
         },
         "runtime": {
           "Lib/portable-net4+sl4+wp7+win8/PCLWebUtility.dll": {}
+        }
+      },
+      "PInvoke.BCrypt/0.3.2": {
+        "dependencies": {
+          "PInvoke.Kernel32": "0.3.2",
+          "PInvoke.Windows.Core": "0.3.2"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.dll": {}
+        }
+      },
+      "PInvoke.Kernel32/0.3.2": {
+        "dependencies": {
+          "PInvoke.Windows.Core": "0.3.2"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.dll": {}
+        }
+      },
+      "PInvoke.NCrypt/0.3.2": {
+        "dependencies": {
+          "PInvoke.BCrypt": "0.3.2",
+          "PInvoke.Windows.Core": "0.3.2"
+        },
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.dll": {}
+        }
+      },
+      "PInvoke.Windows.Core/0.3.2": {
+        "compile": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll": {}
         }
       },
       "runtime.aot.System.Collections/4.0.10": {
@@ -16588,6 +17245,14 @@
           "lib/netcore45/UniversalMapControl.dll": {}
         }
       },
+      "Validation/2.2.8": {
+        "compile": {
+          "lib/dotnet/Validation.dll": {}
+        },
+        "runtime": {
+          "lib/dotnet/Validation.dll": {}
+        }
+      },
       "Win2D.uwp/1.17.0": {
         "compile": {
           "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
@@ -16610,20 +17275,94 @@
     }
   },
   "libraries": {
-    "GeoExtensions/1.0.0.3": {
-      "sha512": "POnAtqEkdilFvrElQDtspTD49hNsaPB6pXOCjDp3ycjkBb9r9YTAv4MmR7NoPfcjIHY8cvD1JgKp/7Pckl7n9g==",
+    "Flurl/2.1.0": {
+      "sha512": "n8Y4eOJcqDWIyLsPsF+qGILQlFZcvJoXuAXgAKx3zyEWvMKPGd4xXpi2wI6H/x8lNRWpCx3nzRnPXYDaJqhgqg==",
       "type": "package",
-      "path": "GeoExtensions/1.0.0.3",
+      "files": [
+        "Flurl.2.1.0.nupkg.sha512",
+        "Flurl.nuspec",
+        "lib/monoandroid/Flurl.deps.json",
+        "lib/monoandroid/Flurl.dll",
+        "lib/monoandroid/Flurl.pdb",
+        "lib/monoandroid/Flurl.xml",
+        "lib/monotouch/Flurl.deps.json",
+        "lib/monotouch/Flurl.dll",
+        "lib/monotouch/Flurl.pdb",
+        "lib/monotouch/Flurl.xml",
+        "lib/netstandard1.4/Flurl.deps.json",
+        "lib/netstandard1.4/Flurl.dll",
+        "lib/netstandard1.4/Flurl.pdb",
+        "lib/netstandard1.4/Flurl.xml",
+        "lib/portable40-net40+win8+wpa81/Flurl.deps.json",
+        "lib/portable40-net40+win8+wpa81/Flurl.dll",
+        "lib/portable40-net40+win8+wpa81/Flurl.pdb",
+        "lib/portable40-net40+win8+wpa81/Flurl.xml",
+        "lib/xamarin.ios/Flurl.deps.json",
+        "lib/xamarin.ios/Flurl.dll",
+        "lib/xamarin.ios/Flurl.pdb",
+        "lib/xamarin.ios/Flurl.xml",
+        "lib/xamarin.mac/Flurl.deps.json",
+        "lib/xamarin.mac/Flurl.dll",
+        "lib/xamarin.mac/Flurl.pdb",
+        "lib/xamarin.mac/Flurl.xml"
+      ]
+    },
+    "Flurl.Http/1.0.0": {
+      "sha512": "E9h2wQtXgBEuRAFAzaO724PaLw4YcDAhNcmWKdKPpzUlSf42oPcCQAsZovuKXPiHp9hZ111aN4FuhyW32kWW6w==",
+      "type": "package",
+      "files": [
+        "Flurl.Http.1.0.0.nupkg.sha512",
+        "Flurl.Http.nuspec",
+        "lib/monoandroid/Flurl.Http.deps.json",
+        "lib/monoandroid/Flurl.Http.dll",
+        "lib/monoandroid/Flurl.Http.pdb",
+        "lib/monoandroid/Flurl.Http.xml",
+        "lib/monotouch/Flurl.Http.deps.json",
+        "lib/monotouch/Flurl.Http.dll",
+        "lib/monotouch/Flurl.Http.pdb",
+        "lib/monotouch/Flurl.Http.xml",
+        "lib/net45/Flurl.Http.dll",
+        "lib/net45/Flurl.Http.pdb",
+        "lib/net45/Flurl.Http.xml",
+        "lib/netstandard1.4/Flurl.Http.deps.json",
+        "lib/netstandard1.4/Flurl.Http.dll",
+        "lib/netstandard1.4/Flurl.Http.pdb",
+        "lib/netstandard1.4/Flurl.Http.xml",
+        "lib/portable45-net45+win8+wpa81/Flurl.Http.deps.json",
+        "lib/portable45-net45+win8+wpa81/Flurl.Http.dll",
+        "lib/portable45-net45+win8+wpa81/Flurl.Http.pdb",
+        "lib/portable45-net45+win8+wpa81/Flurl.Http.xml",
+        "lib/xamarin.ios/Flurl.Http.deps.json",
+        "lib/xamarin.ios/Flurl.Http.dll",
+        "lib/xamarin.ios/Flurl.Http.pdb",
+        "lib/xamarin.ios/Flurl.Http.xml",
+        "lib/xamarin.mac/Flurl.Http.deps.json",
+        "lib/xamarin.mac/Flurl.Http.dll",
+        "lib/xamarin.mac/Flurl.Http.pdb",
+        "lib/xamarin.mac/Flurl.Http.xml"
+      ]
+    },
+    "GeoExtensions/1.0.0.3": {
+      "sha512": "vHCcwlyqhtK8az/YnIWJQvT3/pIeMmBymOX/Ae0wQMQTwneMnXS1OjRcoAucpmTtJLRSlcv5Rcl6v3qNUv93sA==",
+      "type": "package",
       "files": [
         "GeoExtensions.1.0.0.3.nupkg.sha512",
         "GeoExtensions.nuspec",
         "lib/portable-net45+wp80+win8+wpa81+dnxcore50/GeoExtensions.dll"
       ]
     },
-    "HockeySDK.Core/4.1.3": {
-      "sha512": "FdJXZ2oWnijwCYcKRnGyEUL5qqX2QE3v5pZdNhOX5B4qogoDYjcG/75xO3SXKG1IdzenDPxFYjT2x14wTWJ2yg==",
+    "GPSOAuthSharp.Portable/0.0.8": {
+      "sha512": "KKMyyJNeT7o1Ts/TIaMv1bfD/FQQSuMLFkH+2z1V7sERoBo1snB1jfh4b4Id+9+USacB2NX4JGeymevW8lsmlQ==",
       "type": "package",
-      "path": "HockeySDK.Core/4.1.3",
+      "files": [
+        "GPSOAuthSharp.Portable.0.0.8.nupkg.sha512",
+        "GPSOAuthSharp.Portable.nuspec",
+        "lib/portable45-net45+win8+wpa81/GPSOAuthSharp.dll"
+      ]
+    },
+    "HockeySDK.Core/4.1.3": {
+      "sha512": "Kz/8GDh49nTPYXjUaykCGN0RIf44qgmv/Y224P+TFM8Bi49Tpcb/1yQzxnXWNp2xBlgt1ctgthXI/HnTeJq3EQ==",
+      "type": "package",
       "files": [
         "HockeySDK.Core.4.1.3.nupkg.sha512",
         "HockeySDK.Core.nuspec",
@@ -17202,6 +17941,28 @@
         "linqpad-samples/9-issues.linq"
       ]
     },
+    "PCLCrypto/2.0.147": {
+      "sha512": "OFNDBjhP+qPukqB8PiGbWDo70gHsEzSKupL47JisjYFQaGwlPPCnN8ah59QCzIvsg9IUr2AecGKXF3ONpyFL9g==",
+      "type": "package",
+      "files": [
+        "PCLCrypto.2.0.147.nupkg.sha512",
+        "PCLCrypto.nuspec",
+        "lib/MonoAndroid23/PCLCrypto.dll",
+        "lib/MonoAndroid23/PCLCrypto.xml",
+        "lib/MonoTouch10/PCLCrypto.dll",
+        "lib/MonoTouch10/PCLCrypto.xml",
+        "lib/net45/PCLCrypto.dll",
+        "lib/net45/PCLCrypto.xml",
+        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/PCLCrypto.dll",
+        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/PCLCrypto.xml",
+        "lib/portable-win81+wpa81/PCLCrypto.dll",
+        "lib/portable-win81+wpa81/PCLCrypto.xml",
+        "lib/wp80/PCLCrypto.dll",
+        "lib/wp80/PCLCrypto.xml",
+        "lib/xamarinios10/PCLCrypto.dll",
+        "lib/xamarinios10/PCLCrypto.xml"
+      ]
+    },
     "PCLWebUtility/1.0.3": {
       "sha512": "/S7d2SzPYP6si6Z+kALu7/6aQ8lD/ZSvru2+wRvE53UydTAUpx8y4Zf4YU+dElyFzlB2XLvUfjMiCqpczLy6Nw==",
       "type": "package",
@@ -17210,6 +17971,60 @@
         "Lib/portable-net4+sl4+wp7+win8/PCLWebUtility.dll",
         "PCLWebUtility.1.0.3.nupkg.sha512",
         "PCLWebUtility.nuspec"
+      ]
+    },
+    "PInvoke.BCrypt/0.3.2": {
+      "sha512": "6nSjPx88F+dcQgxfbM/lkYhi/zQWxwBcGAS3de/Q7YmPr5QdLNv5ZMk2UEFpMQhlFNya4TdUy5i3HKA12uMa7Q==",
+      "type": "package",
+      "files": [
+        "PInvoke.BCrypt.0.3.2.nupkg.sha512",
+        "PInvoke.BCrypt.nuspec",
+        "lib/net40/PInvoke.BCrypt.dll",
+        "lib/net40/PInvoke.BCrypt.xml",
+        "lib/portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.dll",
+        "lib/portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.xml",
+        "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.dll",
+        "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.xml"
+      ]
+    },
+    "PInvoke.Kernel32/0.3.2": {
+      "sha512": "zkd5Vc5AQ9B489GMNlmd0wdKnRoLl1B/TnouwcjtaqWbDJ17TQSvBRnV7xjVEpBHQtL/248EaUTcDprJe9bZMA==",
+      "type": "package",
+      "files": [
+        "PInvoke.Kernel32.0.3.2.nupkg.sha512",
+        "PInvoke.Kernel32.nuspec",
+        "lib/net40/PInvoke.Kernel32.dll",
+        "lib/net40/PInvoke.Kernel32.xml",
+        "lib/portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.dll",
+        "lib/portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.xml",
+        "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.dll",
+        "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.xml"
+      ]
+    },
+    "PInvoke.NCrypt/0.3.2": {
+      "sha512": "s7SIBXlr3qolZaM5mGEXG2sKBY4yFVHTWBlwhRC93le08Aj+n/IaFVnB9LBFv6mpCCivXdzad+9EX6HHds4PyQ==",
+      "type": "package",
+      "files": [
+        "PInvoke.NCrypt.0.3.2.nupkg.sha512",
+        "PInvoke.NCrypt.nuspec",
+        "lib/net40/PInvoke.NCrypt.dll",
+        "lib/net40/PInvoke.NCrypt.xml",
+        "lib/portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.dll",
+        "lib/portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.xml",
+        "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.dll",
+        "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.xml"
+      ]
+    },
+    "PInvoke.Windows.Core/0.3.2": {
+      "sha512": "cLG8L2mBqeM6mwKxYg34uZnW5A4cAqyWY4nh+ogxon6BOPLcuQ2QSK/b1IKduUIQg6mDgf06rZUVbuVVPi9+fg==",
+      "type": "package",
+      "files": [
+        "PInvoke.Windows.Core.0.3.2.nupkg.sha512",
+        "PInvoke.Windows.Core.nuspec",
+        "lib/portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll",
+        "lib/portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.xml",
+        "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll",
+        "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.xml"
       ]
     },
     "runtime.any.System.Collections/4.0.11": {
@@ -23043,6 +23858,27 @@
         "UniversalMapControl.0.3.36.nupkg.sha512",
         "UniversalMapControl.nuspec",
         "lib/netcore45/UniversalMapControl.dll"
+      ]
+    },
+    "Validation/2.2.8": {
+      "sha512": "DMNc7JhPlgRwnR+NNb+ldoluObL+RBw96aMoiZae/Looa4vgaAnIysmle/bV2OKqDNW9oUBDckPyfa2+sX6JdA==",
+      "type": "package",
+      "files": [
+        "README.md",
+        "Validation.2.2.8.nupkg.sha512",
+        "Validation.nuspec",
+        "lib/dotnet/Validation.dll",
+        "lib/dotnet/Validation.xml",
+        "lib/portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/Validation.dll",
+        "lib/portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/Validation.xml",
+        "lib/portable-net45+dnxcore50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/Validation.dll",
+        "lib/portable-net45+dnxcore50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/Validation.xml",
+        "tools/2013/RequiresNotNull.snippet",
+        "tools/2013/RequiresNotNullOrEmpty.snippet",
+        "tools/2015/RequiresNotNull.snippet",
+        "tools/2015/RequiresNotNullOrEmpty.snippet",
+        "tools/install_snippets.cmd",
+        "tools/uninstall_snippets.cmd"
       ]
     },
     "Win2D.uwp/1.17.0": {

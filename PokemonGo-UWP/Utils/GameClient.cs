@@ -188,12 +188,12 @@ namespace PokemonGo_UWP.Utils
             };
             Client = new Client(ClientSettings, new APIFailure());
             // Get PTC token
-            var authToken = await Client.Login.DoLogin();
+            await Client.Login.DoLogin();
             // Update current token even if it's null and clear the token for the other identity provide
-            SettingsService.Instance.PtcAuthToken = authToken;
+            SettingsService.Instance.PtcAuthToken = Client.AuthToken;
             SettingsService.Instance.GoogleAuthToken = null;
             // Return true if login worked, meaning that we have a token
-            return authToken != null;
+            return Client.AuthToken != null;
         }
 
         /// <summary>
@@ -213,11 +213,11 @@ namespace PokemonGo_UWP.Utils
 
             Client = new Client(ClientSettings, new APIFailure());
             // Get Google token
-            var authToken = await Client.Login.DoLogin();
+            await Client.Login.DoLogin();
             // Update current token even if it's null
-            SettingsService.Instance.GoogleAuthToken = authToken;
+            SettingsService.Instance.GoogleAuthToken = Client.AuthToken;
             // Return true if login worked, meaning that we have a token
-            return authToken != null;
+            return Client.AuthToken != null;
         }
 
         /// <summary>
@@ -491,10 +491,10 @@ namespace PokemonGo_UWP.Utils
         /// <param name="latitude"></param>
         /// <param name="shotMissed"></param>
         /// <returns></returns>
-        public static async Task<CatchPokemonResponse> CatchPokemon(ulong encounterId, string spawnpointId, ItemId captureItem, bool hitPokemon = true)
+        public static async Task<CatchPokemonResponse> CatchPokemon(ulong encounterId, string spawnpointId, ItemId captureItem)
         {
             var random = new Random();
-            return await Client.Encounter.CatchPokemon(encounterId, spawnpointId, captureItem, random.NextDouble() * 1.95D, random.NextDouble(), 1, hitPokemon);
+            return await Client.Encounter.CatchPokemon(encounterId, spawnpointId, captureItem, random.NextDouble() * 1.95D, random.NextDouble(), 1);
         }
 
         /// <summary>
