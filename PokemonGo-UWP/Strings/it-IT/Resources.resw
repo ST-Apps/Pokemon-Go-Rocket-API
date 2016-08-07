@@ -192,12 +192,12 @@
   <data name="SomethingWentWrong" xml:space="preserve">
     <value>Qualcosa è andato storto e l'app risulta instabile. Vuoi disconnetterti e riprovare?</value>
   </data>
-  <data name="UpdatedVersion1" xml:space="preserve"> 
-    <value>Un aggiornamento è disponibile su</value> 
-  </data> 
-  <data name="UpdatedVersion2" xml:space="preserve"> 
-    <value>Vuoi visitare il link?</value> 
-  </data> 
+  <data name="UpdatedVersion1" xml:space="preserve">
+    <value>Un aggiornamento è disponibile su</value>
+  </data>
+  <data name="UpdatedVersion2" xml:space="preserve">
+    <value>Vuoi visitare il link?</value>
+  </data>
   <data name="UpdatedVersion" xml:space="preserve">
     <value>Una versione aggiornata {0} è disponibile. Vuoi aggiornare?
 {1}</value>
