@@ -127,6 +127,7 @@
     <Compile Include="Helpers\RequestBuilder.cs" />
     <Compile Include="Helpers\RetryHandler.cs" />
     <Compile Include="Helpers\S2Helper.cs" />
+    <Compile Include="Helpers\SignatureGenerator.cs" />
     <Compile Include="Helpers\Utils.cs" />
     <Compile Include="HttpClient\PokemonClient.cs" />
     <Compile Include="ISettings.cs" />
@@ -360,6 +361,7 @@
     <Compile Include="Proto\Settings\Master\Pokemon\EncounterAttributes.cs" />
     <Compile Include="Proto\Settings\Master\Pokemon\StatsAttributes.cs" />
     <Compile Include="Proto\Settings\Master\TypeEffectiveSettings.cs" />
+    <Compile Include="Proto\Signature.cs" />
     <Compile Include="Resources.cs" />
     <Compile Include="Rpc\BaseRpc.cs" />
     <Compile Include="Rpc\Download.cs" />
@@ -379,6 +381,10 @@
     <ProjectReference Include="..\Google.Protobuf\Google.Protobuf.csproj">
       <Project>{8a901eed-55b1-4355-b3e4-79bc08d129f6}</Project>
       <Name>Google.Protobuf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PokemonGoAPIEncrypt\PokemonGoAPIEncrypt.vcxproj">
+      <Project>{6c0f1838-0199-4384-b61d-02e854a93207}</Project>
+      <Name>PokemonGoAPIEncrypt</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
