@@ -257,4 +257,7 @@ Otworzyć stronę z plikami do ręcznej akutalizacji?</value>
   <data name="LevelupText.Text" xml:space="preserve">
     <value>Level up!</value>
   </data>
+  <data name="MapAutoRotateTitleText.Text" xml:space="preserve">
+    <value>Rotacja automatyczna</value>
+  </data>
 </root>
