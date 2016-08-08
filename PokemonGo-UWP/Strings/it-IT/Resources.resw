@@ -225,4 +225,43 @@
   <data name="VibrationTitleText.Text" xml:space="preserve">
     <value>Vibrazione</value>
   </data>
+  <data name="UpdatedVersion" xml:space="preserve">
+    <value>Una versione aggiornata {0} è disponibile. Vuoi aggiornare?
+{1}</value>
+  </data>
+  <data name="ItemsText.Text" xml:space="preserve">
+    <value>OGGETTI</value>
+  </data>
+  <data name="PokedexText.Text" xml:space="preserve">
+    <value>POKÉDEX</value>
+  </data>
+  <data name="ItemsTextLower.Text" xml:space="preserve">
+    <value>oggetti</value>
+  </data>
+  <data name="NumberText.Text" xml:space="preserve">
+    <value># </value>
+    <comment>Watch out: there is a space after the #</comment>
+  </data>
+  <data name="SlashSpaceCPText.Text" xml:space="preserve">
+    <value>/ PL</value>
+  </data>
+  <data name="SpaceXPText.Text" xml:space="preserve">
+    <value> PE</value>
+  </data>
+  <data name="TotalText.Text" xml:space="preserve">
+    <value>TOTALE</value>
+  </data>
+  <data name="UpdateDownloading" xml:space="preserve">
+    <value>Scaricando l'aggiornamento {0}</value>
+  </data>
+  <data name="UpdateInstalling" xml:space="preserve">
+    <value>Installando l'aggiornamento, l'app si sta riavviando...</value>
+  </data>
+  <data name="UpdateFailed" xml:space="preserve">
+    <value>Aggiornamento fallito: {0}
+aprire la pagina dei file per aggiornare manualmente?</value>
+  </data>
+  <data name="LevelupText.Text" xml:space="preserve">
+    <value>Aumento di livello!</value>
+  </data>
 </root>
