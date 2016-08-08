@@ -201,7 +201,7 @@
   <data name="Yes" xml:space="preserve">
     <value>Да</value>
   </data>
-  <data name="CPText.Text" xml:space="preserve">
+    <data name="CPText.Text" xml:space="preserve">
     <value>CP</value>
   </data>
   <data name="EggsText.Text" xml:space="preserve">
@@ -222,17 +222,17 @@
   <data name="VibrationTitleText.Text" xml:space="preserve">
     <value>Вибрации</value>
   </data>
-  <data name="LevelupText.Text" xml:space="preserve">
-    <value>Уровень повышен!</value>
-  </data>
-  <data name="UpdateDownloading" xml:space="preserve">
+    <data name="LevelupText.Text" xml:space="preserve">
+     <value>Уровень повышен!</value>
+   </data>
+        <data name="UpdateDownloading" xml:space="preserve">
     <value>Скачивание обновления {0}</value>
-  </data>
-  <data name="UpdateInstalling" xml:space="preserve">
-    <value>Установка обновления. Приложение будет перезапущено.</value>
-  </data>
-  <data name="UpdateFailed" xml:space="preserve">
-    <value>Обновление неудачно. Ошибка: {0}
+   </data>
+   <data name="UpdateInstalling" xml:space="preserve">
+     <value>Установка обновления. Приложение будет перезапущено.</value>
+   </data>
+   <data name="UpdateFailed" xml:space="preserve">
+     <value>Обновление неудачно. Ошибка: {0}
  Открыть страницу для ручной установки?</value>
-  </data>
+   </data>
 </root>
