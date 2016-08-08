@@ -502,13 +502,15 @@
                     Margin="5"
                     Height="100"
                     HorizontalAlignment="Center"
-                    IsHitTestVisible="{Binding SelectedCaptureItem.Count, Converter={StaticResource EnabledWhenHasElementsConverter}}"
-                    IsEnabled="{Binding SelectedCaptureItem.Count, Converter={StaticResource EnabledWhenHasElementsConverter}}"
+                    IsHitTestVisible="True"
+                    IsEnabled="True"
                     x:Name="LaunchPokeballButton"
                     ManipulationMode="TranslateX, TranslateY"
                     ManipulationStarted="LaunchPokeballButton_ManipulationStarted"
                     ManipulationDelta="LaunchPokeballButton_ManipulationDelta"
-                    ManipulationCompleted="LaunchPokeballButton_ManipulationCompleted">
+                    ManipulationCompleted="LaunchPokeballButton_ManipulationCompleted"
+										Tapped="LaunchPokeballButton_Tapped"
+										>
                 <Button.RenderTransform>
                     <CompositeTransform x:Name="PokeballTransform"
                                         Rotation="0"
