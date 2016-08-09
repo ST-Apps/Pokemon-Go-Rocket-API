@@ -1,4 +1,7 @@
-﻿using Template10.Services.SettingsService;
+﻿using System.Linq;
+using Windows.Security.Credentials;
+using PokemonGo.RocketAPI.Enums;
+using Template10.Services.SettingsService;
 
 namespace PokemonGo_UWP.Utils
 {
@@ -7,6 +10,8 @@ namespace PokemonGo_UWP.Utils
         public static readonly SettingsService Instance;
 
         private readonly SettingsHelper _helper;
+
+        private PasswordVault _passwordVault = new PasswordVault();
 
         static SettingsService()
         {
@@ -20,17 +25,53 @@ namespace PokemonGo_UWP.Utils
 
         #region Login & Authentication
 
-        public string PtcAuthToken
+        public AuthType LastLoginService
         {
-            get { return _helper.Read(nameof(PtcAuthToken), string.Empty); }
-            set { _helper.Write(nameof(PtcAuthToken), value); }
+            get { return _helper.Read(nameof(LastLoginService), AuthType.Ptc); }
+            set { _helper.Write(nameof(LastLoginService), value);}
+        }        
+
+        public string AuthToken
+        {
+            get
+            {
+                var credentials = _passwordVault.RetrieveAll();
+                var token = credentials.FirstOrDefault(credential => credential.Resource.Equals(nameof(AuthToken)));
+                if (token == null) return string.Empty;
+                token.RetrievePassword();
+                return token.Password;
+            }
+            set
+            {
+                var credentials = _passwordVault.RetrieveAll();
+                var currentToken = credentials.FirstOrDefault(credential => credential.Resource.Equals(nameof(AuthToken)));
+                if (currentToken != null) _passwordVault.Remove(currentToken);
+                if (value == null) return;
+                _passwordVault.Add(new PasswordCredential
+                {
+                    UserName = nameof(AuthToken),
+                    Password = value,
+                    Resource = nameof(AuthToken)
+                });
+            }
         }
 
-        public string GoogleAuthToken
+        public PasswordCredential UserCredentials
         {
-            get { return _helper.Read(nameof(GoogleAuthToken), string.Empty); }
-            set { _helper.Write(nameof(GoogleAuthToken), value); }
-		}
+            get
+            {
+                var credentials = _passwordVault.RetrieveAll();
+                return credentials.FirstOrDefault(credential => credential.Resource.Equals(nameof(UserCredentials)));
+            }
+            set
+            {
+                var credentials = _passwordVault.RetrieveAll();
+                var currentCredential = credentials.FirstOrDefault(credential => credential.Resource.Equals(nameof(UserCredentials)));
+                if (currentCredential != null) _passwordVault.Remove(currentCredential);
+                if (value == null) return;
+                _passwordVault.Add(value);
+            }
+		}        
 
         #endregion
 
@@ -52,6 +93,12 @@ namespace PokemonGo_UWP.Utils
         {
             get { return _helper.Read(nameof(IsAutoRotateMapEnabled), false); }
             set { _helper.Write(nameof(IsAutoRotateMapEnabled), value); }
+        }
+
+        public PokemonSortingModes PokemonSortingMode
+        {
+            get { return this._helper.Read(nameof(PokemonSortingMode), PokemonSortingModes.Combat); }
+            set { this._helper.Write(nameof(PokemonSortingMode), value); }
         }
 
         #endregion

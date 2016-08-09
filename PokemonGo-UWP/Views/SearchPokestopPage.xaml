@@ -137,7 +137,9 @@
                 </Border>
             </Border>
         </Grid>
-        <Grid Grid.Row="1" x:Name="GatheredItemsBorder"
+        
+        <Grid Grid.Row="1" 
+              x:Name="GatheredItemsBorder"
               Style="{StaticResource GridContainer}"
               Visibility="Collapsed"
               VerticalAlignment="Top">

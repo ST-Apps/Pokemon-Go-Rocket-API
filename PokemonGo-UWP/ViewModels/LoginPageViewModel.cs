@@ -36,6 +36,15 @@ namespace PokemonGo_UWP.ViewModels
                 Username = (string) suspensionState[nameof(Username)];
                 Password = (string) suspensionState[nameof(Password)];
             }
+            else
+            {
+                // TODO: load only if user enabled this with the missing checkbox
+                var currentCredentials = SettingsService.Instance.UserCredentials;
+                if (currentCredentials == null) return;
+                currentCredentials.RetrievePassword();
+                Username = currentCredentials.UserName;
+                Password = currentCredentials.Password;
+            }
             await Task.CompletedTask;
         }
 

@@ -232,7 +232,7 @@ namespace PokemonGo_UWP.ViewModels
                     await ThrowBerry();
                 }
                 // Update selected item to get the new item count
-                SelectedCaptureItem = ItemsInventory.First(item => item.ItemId == SelectedCaptureItem.ItemId);
+                if (SelectedCaptureItem != null) SelectedCaptureItem = ItemsInventory.First(item => item.ItemId == SelectedCaptureItem.ItemId);
                 Busy.SetBusy(false);
             }, (hitPokemon) => true));
 
@@ -255,6 +255,8 @@ namespace PokemonGo_UWP.ViewModels
                     CurrentCaptureAward = caughtPokemonResponse.CaptureAward;
                     Logger.Write($"We caught {CurrentPokemon.PokemonId}");
                     CatchSuccess?.Invoke(this, null);
+                    // Restarts map timer
+                    GameClient.ToggleUpdateTimer();
                     await GameClient.UpdateInventory();
                     break;
                 case CatchPokemonResponse.Types.CatchStatus.CatchEscape:                    

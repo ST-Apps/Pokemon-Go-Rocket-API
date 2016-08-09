@@ -35,16 +35,37 @@
             <utils:ItemToItemDescriptionConverter x:Key="ItemToItemDescriptionConverter"/>
             <utils:IncubatorUsagesCountToUsagesTextConverter x:Key="IncubatorUsagesCountToUsagesTextConverter"/>
             <utils:EggDataToEggIconConverter x:Key="EggDataToEggIconConverter"/>
-
+            <utils:PlayerStatsTranslationConverter x:Key="PlayerStatsTranslationConverter" />
+            <utils:MsToDateFormatConverter x:Key="MsToDateFormatConverter" />
+            <utils:PlayerTeamToTeamImageConverter x:Key="PlayerTeamToTeamImageConverter" />
+            <utils:PlayerTeamToTeamNameConverter x:Key="PlayerTeamToTeamNameConverter" />
+            <utils:AchievementValueToMedalImageConverter x:Key="AchievementValueToMedalImageConverter" />
+            <utils:PlayerTeamToTeamBackgroundImageConverter x:Key="PlayerTeamToTeamBackgroundImageConverter" />
+            <utils:AchievementNextValueConverter x:Key="AchievementNextValueConverter" />
+            <utils:AchievementValueConverter x:Key="AchievementValueConverter" />
+            <utils:AchievementTranslationConverter x:Key="AchievementTranslationConverter" />
+            
             <converters:ValueWhenConverter x:Key="EnabledWhenHasElementsConverter">
                 <converters:ValueWhenConverter.When>
                     <x:Double>0</x:Double>
                 </converters:ValueWhenConverter.When>
                 <converters:ValueWhenConverter.Value>
-                    <x:Boolean>True</x:Boolean>
+                    <x:Boolean>False</x:Boolean>
                 </converters:ValueWhenConverter.Value>
                 <converters:ValueWhenConverter.Otherwise>
-                    <x:Boolean>False</x:Boolean>
+                    <x:Boolean>True</x:Boolean>
+                </converters:ValueWhenConverter.Otherwise>
+            </converters:ValueWhenConverter>
+
+            <converters:ValueWhenConverter x:Key="VisibleWhenStringNotEmptyConverter">
+                <converters:ValueWhenConverter.When>
+                    <x:String></x:String>
+                </converters:ValueWhenConverter.When>
+                <converters:ValueWhenConverter.Value>
+                    <Visibility>Visible</Visibility>
+                </converters:ValueWhenConverter.Value>
+                <converters:ValueWhenConverter.Otherwise>
+                    <Visibility>Collapsed</Visibility>
                 </converters:ValueWhenConverter.Otherwise>
             </converters:ValueWhenConverter>
 

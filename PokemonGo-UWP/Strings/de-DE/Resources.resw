@@ -222,4 +222,130 @@
   <data name="VibrationTitleText.Text" xml:space="preserve">
     <value>Vibration</value>
   </data>
+  <data name="LevelText.Text" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="PokemonCaughtByType" xml:space="preserve">
+    <value>unterschiedliche Pokémons gefangen</value>
+  </data>
+  <data name="PokemonsCaptured" xml:space="preserve">
+    <value>Pokémons gefangen</value>
+  </data>
+  <data name="PokemonsEncountered" xml:space="preserve">
+    <value>Pokémons getroffen</value>
+  </data>
+  <data name="PokestopsVisited" xml:space="preserve">
+    <value>Pokéstops besucht</value>
+  </data>
+  <data name="MapAutoRotateTitleText.Text" xml:space="preserve">
+    <value>Karte automatisch rotieren</value>
+  </data>
+  <data name="DateFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
+  <data name="DateTimeFormat" xml:space="preserve">
+    <value>dd.MM.yyyy HH:mm</value>
+  </data>
+  <data name="TimeFormat" xml:space="preserve">
+    <value>HH:mm</value>
+  </data>
+  <data name="StartDateText.Text" xml:space="preserve">
+    <value>STARTDATUM</value>
+  </data>
+  <data name="InstinctTeam" xml:space="preserve">
+    <value>Intuition</value>
+  </data>
+  <data name="MysticTeam" xml:space="preserve">
+    <value>Weisheit</value>
+  </data>
+  <data name="NoTeam" xml:space="preserve">
+    <value>Kein Team</value>
+  </data>
+  <data name="ValorTeam" xml:space="preserve">
+    <value>Wagemut</value>
+  </data>
+  <data name="BadgeBattleTrainingWon" xml:space="preserve">
+    <value>Ass-Trainer</value>
+  </data>
+  <data name="BadgePokestopsVisited" xml:space="preserve">
+    <value>Backpacker</value>
+  </data>
+  <data name="BadgeBattleAttackWon" xml:space="preserve">
+    <value>Kämpfer</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Vogelfänger</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Schwarzgurt</value>
+  </data>
+  <data name="BadgeHatchedTotal" xml:space="preserve">
+    <value>Züchter</value>
+  </data>
+  <data name="Bug" xml:space="preserve">
+    <value>Käfersammler</value>
+  </data>
+  <data name="BadgeCaptureTotal" xml:space="preserve">
+    <value>Sammler</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Depot Agent</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Drachentrainer</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Märchenerzählerin</value>
+  </data>
+  <data name="BadgeBigMagikarp" xml:space="preserve">
+    <value>Angler</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Gärtner</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Hexe</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Wanderer</value>
+  </data>
+  <data name="BadgeTravelKm" xml:space="preserve">
+    <value>Jogger</value>
+  </data>
+  <data name="BadgePokedexEntries" xml:space="preserve">
+    <value>Kanto</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>Hitzkopf</value>
+  </data>
+  <data name="BadgePikachu" xml:space="preserve">
+    <value>Pikachu</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Psycho</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Punker</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Rocker</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Ruinenmaniac</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Schulkind</value>
+  </data>
+  <data name="BadgeEvolvedTotal" xml:space="preserve">
+    <value>Forscher</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Skifahrer</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Schwimmer</value>
+  </data>
+  <data name="BadgeSmallRattata" xml:space="preserve">
+    <value>Teenager</value>
+  </data>
 </root>

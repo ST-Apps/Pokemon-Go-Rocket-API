@@ -46,18 +46,6 @@ namespace PokemonGo_UWP.ViewModels
             {
                 // Navigating from game page, so we need to actually load the encounter                
                 CurrentEgg = (PokemonDataWrapper)NavigationHelper.NavigationState[nameof(CurrentEgg)];
-                //Busy.SetBusy(true, Utils.Resources.Translation.GetString("LoadingEncounter") + Utils.Resources.Pokemon.GetString(CurrentEgg.PokemonId.ToString()));
-                //NavigationHelper.NavigationState.Remove(nameof(CurrentEgg));
-                //Logger.Write($"Catching {CurrentEgg.PokemonId}");
-                //CurrentEncounter = await GameClient.EncounterPokemon(CurrentEgg.EncounterId, CurrentEgg.SpawnpointId);
-                //SelectedEggIncubator = ItemsInventory.First(item => item.ItemId == ItemId.ItemPokeBall);
-                //Busy.SetBusy(false);
-                //if (CurrentEncounter.Status != EncounterResponse.Types.Status.EncounterSuccess)
-                //{
-                //    // Encounter failed, probably the Pokemon ran away
-                //    await new MessageDialog(Utils.Resources.Translation.GetString("PokemonRanAway")).ShowAsyncQueue();
-                //    ReturnToPokemonInventoryScreen.Execute();
-                //}
             }
             await Task.CompletedTask;
         }
@@ -105,7 +93,7 @@ namespace PokemonGo_UWP.ViewModels
         /// <summary>
         /// Reference to global inventory
         /// </summary>
-        public ObservableCollection<EggIncubator> IncubatorsInventory => GameClient.IncubatorsInventory;
+        public ObservableCollection<EggIncubator> IncubatorsInventory => GameClient.FreeIncubatorsInventory;
 
         /// <summary>
         ///     Pokemon that we're trying to capture
@@ -139,7 +127,7 @@ namespace PokemonGo_UWP.ViewModels
         public DelegateCommand ReturnToPokemonInventoryScreen => _returnToPokemonInventoryScreen ?? (
             _returnToPokemonInventoryScreen = new DelegateCommand(() =>
             {
-                NavigationService.Navigate(typeof(PokemonInventoryPage));
+                NavigationService.Navigate(typeof(PokemonInventoryPage), true);
             }, () => true)
             );
 

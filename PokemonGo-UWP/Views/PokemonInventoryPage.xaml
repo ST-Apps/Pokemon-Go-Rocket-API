@@ -114,9 +114,17 @@
 
             <ListView ItemsSource="{Binding Converter={StaticResource PokemonSortingModesToSortingModesListConverter}}"
                       SelectedItem="{Binding CurrentPokemonSortingMode, Mode=TwoWay}"
+                      IsItemClickEnabled="True"
                       RelativePanel.Above="CloseSortMenuButton"
                       RelativePanel.AlignRightWithPanel="True">
 
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="ItemClick">
+                        <core:CallMethodAction MethodName="Begin"
+                                               TargetObject="{Binding ElementName=HideSortMenuStoryboard}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+                
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem">
                         <Setter Property="HorizontalContentAlignment" Value="Stretch" />

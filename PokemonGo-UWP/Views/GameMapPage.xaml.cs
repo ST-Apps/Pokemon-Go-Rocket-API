@@ -15,143 +15,174 @@ using PokemonGo.RocketAPI;
 
 namespace PokemonGo_UWP.Views
 {
-    /// <summary>
-    ///     An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    public sealed partial class GameMapPage : Page
-    {
+	/// <summary>
+	///     An empty page that can be used on its own or navigated to within a Frame.
+	/// </summary>
+	public sealed partial class GameMapPage : Page
+	{
+		private readonly object lockObject = new object();
+		private Geopoint lastAutoPosition = null;
 
-        /// <summary>
-        /// False when the map is being manipulated, so that we don't override user interaction
-        /// </summary>
-        private bool _canUpdateMap = true;
+		public GameMapPage()
+		{
+			InitializeComponent();
+			NavigationCacheMode = NavigationCacheMode.Enabled;
 
-        public GameMapPage()
-        {
-            InitializeComponent();
-            NavigationCacheMode = NavigationCacheMode.Enabled;            
+			// Setup nearby translation + map
+			Loaded += (s, e) =>
+			{
+				if (ApplicationKeys.MapBoxTokens.Length > 0)
+				{
+					var randomTileSourceIndex = new Random().Next(0, ApplicationKeys.MapBoxTokens.Length);
+					Logger.Write($"Using MapBox's keyset {randomTileSourceIndex}");
+					var mapBoxTileSource =
+										new HttpMapTileDataSource(
+												"https://api.mapbox.com/styles/v1/" +
+												(RequestedTheme == ElementTheme.Light
+														? ApplicationKeys.MapBoxStylesLight[randomTileSourceIndex]
+														: ApplicationKeys.MapBoxStylesDark[randomTileSourceIndex]) +
+												"/tiles/256/{zoomlevel}/{x}/{y}?access_token=" +
+												ApplicationKeys.MapBoxTokens[randomTileSourceIndex])
+										{
+											AllowCaching = true
+										};
 
-            // Setup nearby translation + map
-            Loaded += (s, e) =>
-            {
-                if (ApplicationKeys.MapBoxTokens.Length > 0)
-                {
-                    var randomTileSourceIndex = new Random().Next(0, ApplicationKeys.MapBoxTokens.Length);
-                    Logger.Write($"Using MapBox's keyset {randomTileSourceIndex}");
-                    var mapBoxTileSource =
-                        new HttpMapTileDataSource(
-                            "https://api.mapbox.com/styles/v1/" +
-                            (RequestedTheme == ElementTheme.Light
-                                ? ApplicationKeys.MapBoxStylesLight[randomTileSourceIndex]
-                                : ApplicationKeys.MapBoxStylesDark[randomTileSourceIndex]) +
-                            "/tiles/256/{zoomlevel}/{x}/{y}?access_token=" +
-                            ApplicationKeys.MapBoxTokens[randomTileSourceIndex])
-                        {
-                            AllowCaching = true
-                        };                    
+					GameMapControl.Style = MapStyle.None;
+					GameMapControl.TileSources.Clear();
+					GameMapControl.TileSources.Add(new MapTileSource(mapBoxTileSource)
+					{
+						AllowOverstretch = true,
+						IsFadingEnabled = false,
+						Layer = MapTileLayer.BackgroundReplacement
+					});
+				}
+				ShowNearbyModalAnimation.From =
+									HideNearbyModalAnimation.To = NearbyPokemonModal.ActualHeight;
+				HideNearbyModalAnimation.Completed += (ss, ee) =>
+							{
+								NearbyPokemonModal.IsModal = false;
+							};
 
-                    GameMapControl.Style = MapStyle.None;
-                    GameMapControl.TileSources.Clear();
-                    GameMapControl.TileSources.Add(new MapTileSource(mapBoxTileSource)
-                    {
-                        AllowOverstretch = true,
-                        IsFadingEnabled = false,
-                        Layer = MapTileLayer.BackgroundReplacement
-                    });
-                }
-                ShowNearbyModalAnimation.From =
-                    HideNearbyModalAnimation.To = NearbyPokemonModal.ActualHeight;
-                HideNearbyModalAnimation.Completed += (ss, ee) =>
-                {
-                    NearbyPokemonModal.IsModal = false;
-                };
-            };
-        }
+				ReactivateMapAutoUpdate.Visibility = Visibility.Collapsed;
 
-        #region Overrides of Page
+			};
+		}
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            base.OnNavigatedTo(e);
-            // Set first position if we shomehow missed it
-            if (GameClient.Geoposition != null)
-                UpdateMap(GameClient.Geoposition);            
-            SubscribeToCaptureEvents();
-            SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
-        }
+		#region Overrides of Page
 
-        private void OnBackRequested(object sender, BackRequestedEventArgs backRequestedEventArgs)
-        {
-            if (!(PokeMenuPanel.Opacity > 0)) return;
-            backRequestedEventArgs.Handled = true;
-            HidePokeMenuStoryboard.Begin();
-        }
+		protected override void OnNavigatedTo(NavigationEventArgs e)
+		{
+			base.OnNavigatedTo(e);
+			// Set first position if we shomehow missed it
+			if (GameClient.Geoposition != null)
+				UpdateMap(GameClient.Geoposition);
+			SubscribeToCaptureEvents();
+			SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
+		}
 
-        protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
-        {
-            base.OnNavigatingFrom(e);
-            UnsubscribeToCaptureEvents();
-            SystemNavigationManager.GetForCurrentView().BackRequested -= OnBackRequested;
-        }
+		private void OnBackRequested(object sender, BackRequestedEventArgs backRequestedEventArgs)
+		{
+			if (!(PokeMenuPanel.Opacity > 0)) return;
+			backRequestedEventArgs.Handled = true;
+			HidePokeMenuStoryboard.Begin();
+		}
 
-        #endregion
+		protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
+		{
+			base.OnNavigatingFrom(e);
+			UnsubscribeToCaptureEvents();
+			SystemNavigationManager.GetForCurrentView().BackRequested -= OnBackRequested;
+		}
 
-        #region Handlers
+		#endregion
 
-        private async void UpdateMap(Geoposition position)
-        {
-            await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
-            {
-                // Set player icon's position
-                MapControl.SetLocation(PlayerImage, position.Coordinate.Point);
-                // Update angle and center only if map is not being manipulated 
-                // TODO: set this to false on gesture
-                if (!_canUpdateMap) return;
-                GameMapControl.Center = position.Coordinate.Point;
-                if (SettingsService.Instance.IsAutoRotateMapEnabled && position.Coordinate.Heading != null && !double.IsNaN(position.Coordinate.Heading.Value))
-                {
-                    GameMapControl.Heading = position.Coordinate.Heading.Value;
-                }
-            });
-        }
+		#region Handlers
 
-        private void SubscribeToCaptureEvents()
-        {
-            GameClient.GeopositionUpdated += GeopositionUpdated;
-            ViewModel.LevelUpRewardsAwarded += ViewModelOnLevelUpRewardsAwarded;
-        }        
+		private async void UpdateMap(Geoposition position)
+		{
+			await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+			{
+				lock (lockObject)
+				{
+					// Set player icon's position
+					MapControl.SetLocation(PlayerImage, position.Coordinate.Point);
 
-        private void UnsubscribeToCaptureEvents()
-        {
-            GameClient.GeopositionUpdated -= GeopositionUpdated;
-            ViewModel.LevelUpRewardsAwarded -= ViewModelOnLevelUpRewardsAwarded;
-        }
+					// Update angle and center only if map is not being manipulated 
+					if (lastAutoPosition == null)
+						lastAutoPosition = GameMapControl.Center;
 
-        private void GeopositionUpdated(object sender, Geoposition e)
-        {
-            UpdateMap(e);
-        }
+					//Small Trick: I'm not testing lastAutoPosition == GameMapControl.Center because MapControl is not taking exact location when setting center!!
+					string currentCoord = $"{GameMapControl.Center.Position.Latitude: 000.0000} ; {GameMapControl.Center.Position.Longitude: 000.0000}";
+					string previousCoord = $"{lastAutoPosition.Position.Latitude: 000.0000} ; {lastAutoPosition.Position.Longitude: 000.0000}";
+					if (currentCoord == previousCoord)
+					{
+						//Previous position was set automatically, continue!
+						ReactivateMapAutoUpdate.Visibility = Visibility.Collapsed;
+						GameMapControl.Center = position.Coordinate.Point;
+						lastAutoPosition = GameMapControl.Center;
+						if (SettingsService.Instance.IsAutoRotateMapEnabled && position.Coordinate.Heading != null && !double.IsNaN(position.Coordinate.Heading.Value))
+						{
+							GameMapControl.Heading = position.Coordinate.Heading.Value;
+						}
+					}
+					else
+					{
+						//Position was changed by user, activate button to go back to automatic mode
+						ReactivateMapAutoUpdate.Visibility = Visibility.Visible;
+					}
+				}
+			});
+		}
 
-        private void ViewModelOnLevelUpRewardsAwarded(object sender, EventArgs eventArgs)
-        {
-            if (PokeMenuPanel.Opacity > 0)
-                HidePokeMenuStoryboard.Begin();            
-            ShowLevelUpPanelStoryboard.Begin();
-        }
+		private void SubscribeToCaptureEvents()
+		{
+			GameClient.GeopositionUpdated += GeopositionUpdated;
+			ViewModel.LevelUpRewardsAwarded += ViewModelOnLevelUpRewardsAwarded;
+		}
 
-        #endregion
+		private void UnsubscribeToCaptureEvents()
+		{
+			GameClient.GeopositionUpdated -= GeopositionUpdated;
+			ViewModel.LevelUpRewardsAwarded -= ViewModelOnLevelUpRewardsAwarded;
+		}
 
-        private void ToggleNearbyPokemonModal(object sender, TappedRoutedEventArgs e)
-        {
-            if (NearbyPokemonModal.IsModal)
-            {
-                HideNearbyModalStoryboard.Begin();                
-            }
-            else
-            {
-                NearbyPokemonModal.IsModal = true;
-                ShowNearbyModalStoryboard.Begin();
-            }
-        }
-    }
+		private void GeopositionUpdated(object sender, Geoposition e)
+		{
+			UpdateMap(e);
+		}
+
+		private void ViewModelOnLevelUpRewardsAwarded(object sender, EventArgs eventArgs)
+		{
+			if (PokeMenuPanel.Opacity > 0)
+				HidePokeMenuStoryboard.Begin();
+			ShowLevelUpPanelStoryboard.Begin();
+		}
+
+		#endregion
+
+		private void ToggleNearbyPokemonModal(object sender, TappedRoutedEventArgs e)
+		{
+			if (NearbyPokemonModal.IsModal)
+			{
+				HideNearbyModalStoryboard.Begin();
+			}
+			else
+			{
+				NearbyPokemonModal.IsModal = true;
+				ShowNearbyModalStoryboard.Begin();
+			}
+		}
+
+		private async void ReactivateMapAutoUpdate_Tapped(object sender, TappedRoutedEventArgs e)
+		{
+			await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+			{
+				lock (lockObject)
+				{
+					lastAutoPosition = null;
+					UpdateMap(GameClient.Geoposition);
+				}
+			});
+		}
+	}
 }

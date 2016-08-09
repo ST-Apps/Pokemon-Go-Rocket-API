@@ -258,16 +258,127 @@ Open page with installation files for manual install?</value>
   <data name="LevelupText.Text" xml:space="preserve">
     <value>Level up!</value>
   </data>
+  <data name="LevelText.Text" xml:space="preserve">
+    <value>Level</value>
+  </data>
   <data name="MapAutoRotateTitleText.Text" xml:space="preserve">
     <value>Autorotate map</value>
   </data>
-  <data name="IncubateEggText.Text" xml:space="preserve">
-    <value>Use an incubator to incubate the Egg.</value>
+  <data name="PokemonCaughtByType" xml:space="preserve">
+    <value>different Pokemons caught</value>
   </data>
-  <data name="incubatorsText.Text" xml:space="preserve">
-    <value>INCUBATORS</value>
+  <data name="PokemonsCaptured" xml:space="preserve">
+    <value>Pokemons captured</value>
   </data>
-  <data name="StartIncubationText.Text" xml:space="preserve">
-    <value>START INCUBATION</value>
+  <data name="PokemonsEncountered" xml:space="preserve">
+    <value>Pokemons encountered</value>
+  </data>
+  <data name="DateFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
+  <data name="DateTimeFormat" xml:space="preserve">
+    <value>dd.MM.yyyy hh:mm tt</value>
+  </data>
+  <data name="TimeFormat" xml:space="preserve">
+    <value>hh:mm tt</value>
+  </data>
+  <data name="StartDateText.Text" xml:space="preserve">
+    <value>START DATE</value>
+  </data>
+  <data name="InstinctTeam" xml:space="preserve">
+    <value>Instinct</value>
+  </data>
+  <data name="MysticTeam" xml:space="preserve">
+    <value>Mystic</value>
+  </data>
+  <data name="NoTeam" xml:space="preserve">
+    <value>No Team</value>
+  </data>
+  <data name="ValorTeam" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="BadgeBattleTrainingWon" xml:space="preserve">
+    <value>Ace Trainer</value>
+  </data>
+  <data name="BadgePokestopsVisited" xml:space="preserve">
+    <value>Backpacker</value>
+  </data>
+  <data name="BadgeBattleAttackWon" xml:space="preserve">
+    <value>Battle Girl</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Bird Keeper</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Black Belt</value>
+  </data>
+  <data name="BadgeHatchedTotal" xml:space="preserve">
+    <value>Breeder</value>
+  </data>
+  <data name="Bug" xml:space="preserve">
+    <value>Bug Catcher</value>
+  </data>
+  <data name="BadgeCaptureTotal" xml:space="preserve">
+    <value>Collector</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Depot Agent</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Dragon Tamer</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Fairy Tale Girl</value>
+  </data>
+  <data name="BadgeBigMagikarp" xml:space="preserve">
+    <value>Fisherman</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Gardener</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Hex Maniac</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Hiker</value>
+  </data>
+  <data name="BadgeTravelKm" xml:space="preserve">
+    <value>Jogger</value>
+  </data>
+  <data name="BadgePokedexEntries" xml:space="preserve">
+    <value>Kanto</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>Kindler</value>
+  </data>
+  <data name="BadgePikachu" xml:space="preserve">
+    <value>Pikachu</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Psychic</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Punk Girl</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Rocker</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Ruin Maniac</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>School Kid</value>
+  </data>
+  <data name="BadgeEvolvedTotal" xml:space="preserve">
+    <value>Scientist</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Skier</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Swimmer</value>
+  </data>
+  <data name="BadgeSmallRattata" xml:space="preserve">
+    <value>Youngster</value>
   </data>
 </root>

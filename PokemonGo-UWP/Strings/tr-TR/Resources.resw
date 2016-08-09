@@ -169,7 +169,7 @@
     <value> Kaçtı</value>
   </data>
   <data name="GoogleError" xml:space="preserve">
-    <value>Google hata verdi :( </value>
+    <value>Google hata verdi :(</value>
   </data>
   <data name="GoogleNotResponding" xml:space="preserve">
     <value>Google cevap vermiyor , lütfen daha sonra tekrar deneyin.</value>
@@ -199,7 +199,7 @@
     <value>Ziyaret etmek itiyor musun?</value>
   </data>
   <data name="WrongUsername" xml:space="preserve">
-    <value>Kullanıcı adı/şifre doğru değil ya da sunucu kullanılamıyor, lütfen tekrar deneyin .</value>
+    <value>Kullanıcı adı/şifre doğru değil ya da sunucu kullanılamıyor, lütfen tekrar deneyin.</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Evet</value>
@@ -219,7 +219,7 @@
   <data name="SettingsHeaderText.Text" xml:space="preserve">
     <value>Ayarlar</value>
   </data>
-  <data name="SignOutButton.Text" xml:space="preserve">
+  <data name="SignOutButton.Content" xml:space="preserve">
     <value>Çıkış</value>
   </data>
   <data name="VibrationTitleText.Text" xml:space="preserve">

@@ -6,6 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.Devices.Geolocation;
+using Windows.Security.Credentials;
 using Windows.UI.Xaml;
 using Newtonsoft.Json;
 using PokemonGo.RocketAPI;
@@ -20,6 +21,7 @@ using POGOProtos.Inventory.Item;
 using POGOProtos.Map.Fort;
 using POGOProtos.Networking.Envelopes;
 using POGOProtos.Networking.Responses;
+using POGOProtos.Settings;
 using POGOProtos.Settings.Master;
 using Template10.Utils;
 using Universal_Authenticator_v2.Views;
@@ -92,11 +94,16 @@ namespace PokemonGo_UWP.Utils
         public static string CurrentVersion
         {
             get
-            {
+            {                
                 var currentVersion = Package.Current.Id.Version;
                 return $"v{currentVersion.Major}.{currentVersion.Minor}.{currentVersion.Build}";
             }
         }
+
+        /// <summary>
+        /// Settings downloaded from server
+        /// </summary>
+        public static GlobalSettings GameSetting { get; private set; }
 
         /// <summary>
         ///     Collection of Pokemon in 1 step from current position
@@ -124,9 +131,14 @@ namespace PokemonGo_UWP.Utils
         public static ObservableCollection<ItemData> CatchItemsInventory { get; set; } = new ObservableCollection<ItemData>();
 
         /// <summary>
-        ///     Stores Incubators in the current inventory
+        ///     Stores free Incubators in the current inventory
         /// </summary>
-        public static ObservableCollection<EggIncubator> IncubatorsInventory { get; set; } = new ObservableCollection<EggIncubator>();
+        public static ObservableCollection<EggIncubator> FreeIncubatorsInventory { get; set; } = new ObservableCollection<EggIncubator>();
+
+        /// <summary>
+        ///     Stores used Incubators in the current inventory
+        /// </summary>
+        public static ObservableCollection<EggIncubator> UsedIncubatorsInventory { get; set; } = new ObservableCollection<EggIncubator>();
 
         /// <summary>
         /// Stores Pokemons in the current inventory
@@ -143,10 +155,17 @@ namespace PokemonGo_UWP.Utils
         /// </summary>
         public static ObservableCollection<PokedexEntry> PokedexInventory { get; set; } = new ObservableCollection<PokedexEntry>();
 
+        #region Templates from server
         /// <summary>
         /// Stores extra useful data for the Pokedex, like Pokemon type and other stuff that is missing from PokemonData
         /// </summary>
-        public static IEnumerable<PokemonSettings> PokedexExtraData { get; set; } = new List<PokemonSettings>();
+        public static IEnumerable<PokemonSettings> PokedexExtraData { get; private set; } = new List<PokemonSettings>();
+
+        /// <summary>
+        /// Stores upgrade costs (candy, stardust) per each level
+        /// </summary>
+        public static Dictionary<int, object[]> PokemonUpgradeCosts { get; private set; } = new Dictionary<int, object[]>();
+        #endregion
 
         #endregion
 
@@ -158,16 +177,14 @@ namespace PokemonGo_UWP.Utils
         ///     Sets things up if we didn't come from the login page
         /// </summary>
         /// <returns></returns>
-        public static async Task InitializeClient(bool isPtcAccount)
+        public static async Task InitializeClient()
         {
-            var isPtcLogin = !string.IsNullOrWhiteSpace(SettingsService.Instance.PtcAuthToken);
-
             ClientSettings = new Settings
             {
-                AuthType = isPtcLogin ? AuthType.Ptc : AuthType.Google
+                AuthType = SettingsService.Instance.LastLoginService
             };
 
-            Client = new Client(ClientSettings, new APIFailure()) { AuthToken = SettingsService.Instance.PtcAuthToken ?? SettingsService.Instance.GoogleAuthToken };
+            Client = new Client(ClientSettings, new APIFailure()) { AuthToken = SettingsService.Instance.AuthToken};
 
             await Client.Login.DoLogin();
         }
@@ -190,10 +207,14 @@ namespace PokemonGo_UWP.Utils
             // Get PTC token
             var authToken = await Client.Login.DoLogin();
             // Update current token even if it's null and clear the token for the other identity provide
-            SettingsService.Instance.PtcAuthToken = authToken;
-            SettingsService.Instance.GoogleAuthToken = null;
+            SettingsService.Instance.AuthToken = authToken;
+            // Update other data if login worked
+            if (authToken == null) return false;
+            SettingsService.Instance.LastLoginService = AuthType.Ptc;
+            SettingsService.Instance.UserCredentials =
+                new PasswordCredential(nameof(SettingsService.Instance.UserCredentials), username, password);
             // Return true if login worked, meaning that we have a token
-            return authToken != null;
+            return true;
         }
 
         /// <summary>
@@ -215,9 +236,14 @@ namespace PokemonGo_UWP.Utils
             // Get Google token
             var authToken = await Client.Login.DoLogin();
             // Update current token even if it's null
-            SettingsService.Instance.GoogleAuthToken = authToken;
+            SettingsService.Instance.AuthToken = authToken;
+            // Update other data if login worked
+            if (authToken == null) return false;
+            SettingsService.Instance.LastLoginService = AuthType.Google;
+            SettingsService.Instance.UserCredentials =
+                new PasswordCredential(nameof(SettingsService.Instance.UserCredentials), email, password);
             // Return true if login worked, meaning that we have a token
-            return authToken != null;
+            return true;
         }
 
         /// <summary>
@@ -226,8 +252,8 @@ namespace PokemonGo_UWP.Utils
         public static void DoLogout()
         {
             // Clear stored token
-            SettingsService.Instance.PtcAuthToken = null;
-            SettingsService.Instance.GoogleAuthToken = null;
+            SettingsService.Instance.AuthToken = null;
+            SettingsService.Instance.UserCredentials = null;
             _mapUpdateTimer?.Stop();
             _mapUpdateTimer = null;
             _geolocator = null;
@@ -281,26 +307,38 @@ namespace PokemonGo_UWP.Utils
                 Interval = TimeSpan.FromSeconds(10)
             };
             _mapUpdateTimer.Tick += async (s, e) =>
-            {
+            {                
+                // Update before starting but only if more than 10s passed since the last one
+                if ((DateTime.Now - _lastUpdate).Seconds <= 10) return;
                 Logger.Write("Updating map");
                 await UpdateMapObjects();
             };            
             // Update before starting timer            
             Busy.SetBusy(true, Resources.Translation.GetString("GettingUserData"));
+            GameSetting = (await Client.Download.GetSettings()).Settings;            
             await UpdateMapObjects();
             await UpdateInventory();
-            await UpdatePokedex();
+            await UpdateItemTemplates();
             Busy.SetBusy(false);
         }
+
+        /// <summary>
+        /// DateTime for the last map update
+        /// </summary>
+        private static DateTime _lastUpdate;
 
         /// <summary>
         /// Toggles the update timer based on the isEnabled value
         /// </summary>
         /// <param name="isEnabled"></param>
-        public static void ToggleUpdateTimer(bool isEnabled = true)
-        {
+        public static async void ToggleUpdateTimer(bool isEnabled = true)
+        {            
             if (isEnabled)
-            {      
+            {
+                if (_mapUpdateTimer.IsEnabled) return;
+                // Update before starting but only if more than 10s passed since the last one
+                if ((DateTime.Now - _lastUpdate).Seconds > 10)
+                    await UpdateMapObjects();
                 _mapUpdateTimer.Start();          
             }
             else
@@ -317,10 +355,11 @@ namespace PokemonGo_UWP.Utils
         private static async Task UpdateMapObjects()
         {
             // Get all map objects from server
-            var mapObjects = (await GetMapObjects(Geoposition)).Item1;
-
+            var mapObjects = await GetMapObjects(Geoposition);
+            _lastUpdate = DateTime.Now;                          
+            
             // update catchable pokemons
-            var newCatchablePokemons = mapObjects.MapCells.SelectMany(x => x.CatchablePokemons).ToArray();
+            var newCatchablePokemons = mapObjects.Item1.MapCells.SelectMany(x => x.CatchablePokemons).ToArray();
             Logger.Write($"Found {newCatchablePokemons.Length} catchable pokemons");
             if (newCatchablePokemons.Length != CatchablePokemons.Count)
             {
@@ -329,13 +368,13 @@ namespace PokemonGo_UWP.Utils
             CatchablePokemons.UpdateWith(newCatchablePokemons, x => new MapPokemonWrapper(x), (x, y) => x.EncounterId == y.EncounterId);
 
             // update nearby pokemons
-            var newNearByPokemons = mapObjects.MapCells.SelectMany(x => x.NearbyPokemons).ToArray();
+            var newNearByPokemons = mapObjects.Item1.MapCells.SelectMany(x => x.NearbyPokemons).ToArray();
             Logger.Write($"Found {newNearByPokemons.Length} nearby pokemons");
             // for this collection the ordering is important, so we follow a slightly different update mechanism 
             NearbyPokemons.UpdateByIndexWith(newNearByPokemons, x => new NearbyPokemonWrapper(x));
 
             // update poke stops on map (gyms are ignored for now)
-            var newPokeStops = mapObjects.MapCells
+            var newPokeStops = mapObjects.Item1.MapCells
                     .SelectMany(x => x.Forts)
                     .Where(x => x.Type == FortType.Checkpoint)
                     .ToArray();
@@ -415,10 +454,18 @@ namespace PokemonGo_UWP.Utils
         /// TODO: store it in local settings maybe?
         /// </summary>
         /// <returns></returns>
-        private static async Task UpdatePokedex()
-        {
+        private static async Task UpdateItemTemplates()
+        {            
+            // Get all the templates
+            var itemTemplates = (await Client.Download.GetItemTemplates()).ItemTemplates;
             // Update Pokedex data
-            PokedexExtraData = (await Client.Download.GetItemTemplates()).ItemTemplates.Where(item => item.PokemonSettings != null && item.PokemonSettings.FamilyId != PokemonFamilyId.FamilyUnset).Select(item => item.PokemonSettings);
+            PokedexExtraData = itemTemplates.Where(item => item.PokemonSettings != null && item.PokemonSettings.FamilyId != PokemonFamilyId.FamilyUnset).Select(item => item.PokemonSettings);            
+            // Update Pokemon upgrade templates
+            var tmpPokemonUpgradeCosts = itemTemplates.First(item => item.PokemonUpgrades != null).PokemonUpgrades;
+            for (var i = 0; i < tmpPokemonUpgradeCosts.CandyCost.Count; i++)
+            {
+                PokemonUpgradeCosts.Add(i, new object[] {tmpPokemonUpgradeCosts.CandyCost[i], tmpPokemonUpgradeCosts.StardustCost[i]});                
+            }
         }
 
         /// <summary>
@@ -436,10 +483,15 @@ namespace PokemonGo_UWP.Utils
                                                  .GroupBy(item => item.InventoryItemData.Item)
                                                  .Select(item => item.First().InventoryItemData.Item), true);
             // Update incbuators          
-            // TODO: check if unused incubators have pokemonId = 0 to separate between sable and non-usable incubators
-            IncubatorsInventory.AddRange(fullInventory.Where(item => item.InventoryItemData.EggIncubators != null)
+            // TODO: check if unused incubators have pokemonId = 0 to separate between sable and non-usable incubators, yes unused incubators pokemonId IS 0
+            FreeIncubatorsInventory.AddRange(fullInventory.Where(item => item.InventoryItemData.EggIncubators != null)
                                                       .SelectMany(item => item.InventoryItemData.EggIncubators.EggIncubator)
-                                                      .Where(item => item != null && item.PokemonId != 0 && (item.UsesRemaining > 0 || item?.ItemId == ItemId.ItemIncubatorBasicUnlimited)), true);            
+                                                      .Where(item => item != null && item.PokemonId == 0), true);
+
+            UsedIncubatorsInventory.AddRange(fullInventory.Where(item => item.InventoryItemData.EggIncubators != null)
+                                          .SelectMany(item => item.InventoryItemData.EggIncubators.EggIncubator)
+                                          .Where(item => item != null && item.PokemonId != 0), true);
+
             // Update Pokemons
             PokemonsInventory.AddRange(fullInventory.Select(item => item.InventoryItemData.PokemonData)
                                                     .Where(item => item != null && item.PokemonId > 0),true);
@@ -561,7 +613,7 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static EggIncubator GetIncubatorFromEgg(PokemonData egg)
         {
-            return IncubatorsInventory.First(item => item.Id.Equals(egg.EggIncubatorId));
+            return UsedIncubatorsInventory.First(item => item.Id.Equals(egg.EggIncubatorId));
         }
 
         #endregion

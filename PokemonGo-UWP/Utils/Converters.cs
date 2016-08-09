@@ -17,6 +17,8 @@ using POGOProtos.Inventory.Item;
 using POGOProtos.Map.Fort;
 using POGOProtos.Map.Pokemon;
 using POGOProtos.Networking.Responses;
+using Windows.UI.Xaml.Media.Imaging;
+using System.Reflection;
 
 namespace PokemonGo_UWP.Utils
 {
@@ -107,6 +109,235 @@ namespace PokemonGo_UWP.Utils
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
         {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class PlayerTeamToTeamNameConverter : IValueConverter {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language) {
+            var teamColor = (TeamColor)value;
+
+            switch(teamColor) {
+                case TeamColor.Blue:
+                    return Resources.Translation.GetString("MysticTeam");
+                case TeamColor.Red:
+                    return Resources.Translation.GetString("ValorTeam");
+                case TeamColor.Yellow:
+                    return Resources.Translation.GetString("InstinctTeam");
+                default:
+                    return Resources.Translation.GetString("NoTeam");
+            }
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language) {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class AchievementTranslationConverter : IValueConverter {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language) {
+            AchievementType achievementType = (AchievementType) value;
+            Type type = achievementType.GetType();
+            FieldInfo fieldInfo = type.GetField(achievementType.ToString());
+            BadgeTypeAttribute badgeType = (BadgeTypeAttribute)fieldInfo.GetCustomAttributes(typeof(BadgeTypeAttribute), false).First();
+            
+            if(badgeType == null) {
+                return "";
+            }
+            
+            return Resources.Translation.GetString(badgeType.Value.ToString());
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language) {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class AchievementValueToMedalImageConverter : IValueConverter {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language) {
+            KeyValuePair<AchievementType, object> achievement = (KeyValuePair<AchievementType, object>)value;
+            Type type = achievement.Key.GetType();
+            FieldInfo fieldInfo = type.GetField(achievement.Key.ToString());
+            BronzeAttribute bronze = (BronzeAttribute)fieldInfo.GetCustomAttributes(typeof(BronzeAttribute), false).First();
+            SilverAttribute silver = (SilverAttribute)fieldInfo.GetCustomAttributes(typeof(SilverAttribute), false).First();
+            GoldAttribute gold = (GoldAttribute)fieldInfo.GetCustomAttributes(typeof(GoldAttribute), false).First();
+
+            if(value == null) {
+                return new BitmapImage(new Uri("ms-appx:///Assets/Achievements/badge_lv0.png"));
+            }
+            if(float.Parse(achievement.Value.ToString()) < float.Parse(bronze.Value.ToString())) {
+                return new BitmapImage(new Uri("ms-appx:///Assets/Achievements/badge_lv0.png"));
+            } else if(float.Parse(achievement.Value.ToString()) < float.Parse(silver.Value.ToString())) {
+                return new BitmapImage(new Uri("ms-appx:///Assets/Achievements/badge_lv1.png"));
+            } else if(float.Parse(achievement.Value.ToString()) < float.Parse(gold.Value.ToString())) {
+                return new BitmapImage(new Uri("ms-appx:///Assets/Achievements/badge_lv2.png"));
+            } else {
+                return new BitmapImage(new Uri("ms-appx:///Assets/Achievements/badge_lv3.png"));
+            }
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language) {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class AchievementNextValueConverter : IValueConverter {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language) {
+            KeyValuePair<AchievementType, object> achievement = (KeyValuePair<AchievementType, object>) value;
+            Type type = achievement.Key.GetType();
+            FieldInfo fieldInfo = type.GetField(achievement.Key.ToString());
+            BronzeAttribute bronze = (BronzeAttribute)fieldInfo.GetCustomAttributes(typeof(BronzeAttribute), false).First();
+            SilverAttribute silver = (SilverAttribute)fieldInfo.GetCustomAttributes(typeof(SilverAttribute), false).First();
+            GoldAttribute gold = (GoldAttribute)fieldInfo.GetCustomAttributes(typeof(GoldAttribute), false).First();
+
+            if(value == null) {
+                return 0;
+            }
+            if(typeof(float) == achievement.Value.GetType()) {
+                if(float.Parse(achievement.Value.ToString()) < float.Parse(bronze.Value.ToString())) {
+                    return float.Parse(bronze.Value.ToString()).ToString("N1");
+                } else if(float.Parse(achievement.Value.ToString()) < float.Parse(silver.Value.ToString())) {
+                    return float.Parse(silver.Value.ToString()).ToString("N1");
+                } else if(float.Parse(achievement.Value.ToString()) < float.Parse(gold.Value.ToString())) {
+                    return float.Parse(gold.Value.ToString()).ToString("N1");
+                } else {
+                    return float.Parse(gold.Value.ToString()).ToString("N1");
+                }
+            } else {
+                if(int.Parse(achievement.Value.ToString()) < int.Parse(bronze.Value.ToString())) {
+                    return bronze.Value;
+                } else if(int.Parse(achievement.Value.ToString()) < int.Parse(silver.Value.ToString())) {
+                    return silver.Value;
+                } else if(int.Parse(achievement.Value.ToString()) < int.Parse(gold.Value.ToString())) {
+                    return gold.Value;
+                } else {
+                    return gold.Value;
+                }
+            }
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language) {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class AchievementValueConverter : IValueConverter {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language) {
+               
+            if(value == null) {
+                return 0;
+            }
+            if(typeof(float) == value.GetType()) {
+                    return float.Parse(value.ToString()).ToString("N1");
+            } else {
+                    return value;
+            }
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language) {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class PlayerTeamToTeamImageConverter : IValueConverter {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language) {
+            var teamColor = (TeamColor)value;
+            var currentTime = int.Parse(DateTime.Now.ToString("HH"));
+            var noTeamColor = currentTime > 7 && currentTime < 19 ? Colors.Black : Colors.White;
+            var path = "ms-appx:///Assets/Teams/";
+
+            switch(teamColor) {
+                case TeamColor.Blue:
+                    path += "mystic";
+                    break;
+                case TeamColor.Red:
+                    path += "valor";
+                    break;
+                case TeamColor.Yellow:
+                    path += "instinct";
+                    break;
+                default:
+                    path += "no-team";
+                    break;
+            }
+            path += ".png";
+
+            return new BitmapImage(new Uri(path));
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language) {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class PlayerTeamToTeamBackgroundImageConverter : IValueConverter {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language) {
+            var teamColor = (TeamColor)value;
+            var currentTime = int.Parse(DateTime.Now.ToString("HH"));
+            var noTeamColor = currentTime > 7 && currentTime < 19 ? Colors.Black : Colors.White;
+            var path = "ms-appx:///Assets/Teams/";
+
+            switch(teamColor) {
+                case TeamColor.Blue:
+                    path += "mystic";
+                    break;
+                case TeamColor.Red:
+                    path += "valor";
+                    break;
+                case TeamColor.Yellow:
+                    path += "instinct";
+                    break;
+                default:
+                    return null;
+            }
+            path += ".png";
+
+            return new BitmapImage(new Uri(path));
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language) {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class PlayerStatsTranslationConverter : IValueConverter {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language) {
+            return Resources.Translation.GetString((string)value);
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language) {
             return value;
         }
 
@@ -279,12 +510,11 @@ namespace PokemonGo_UWP.Utils
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            var pokestop = (FortDataWrapper)value;
-            // TODO: download values from settings instead of manually coding them
+            var pokestop = (FortDataWrapper)value;            
             var distance = GeoExtensions.GeoAssist.CalculateDistanceBetweenTwoGeoPoints(pokestop.Geoposition,
                 GameClient.Geoposition.Coordinate.Point);
-            if (distance > 70)
-                return new Uri($"ms-appx:///Assets/Icons/pokestop_far.png");
+            if (distance > GameClient.GameSetting.FortSettings.InteractionRangeMeters)
+                return new Uri("ms-appx:///Assets/Icons/pokestop_far.png");
             var mode = pokestop.CooldownCompleteTimestampMs < DateTime.UtcNow.ToUnixTime() ? "" : "_inactive";
             return new Uri($"ms-appx:///Assets/Icons/pokestop_near{mode}.png");
         }
@@ -425,6 +655,23 @@ namespace PokemonGo_UWP.Utils
         #endregion
     }
 
+    public class VisibleWhenStringNotEmptyConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            return string.IsNullOrEmpty((string) value) ? Visibility.Collapsed : Visibility.Visible;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
     public class EmptyConverter : IValueConverter
     {
         #region Implementation of IValueConverter
@@ -436,6 +683,24 @@ namespace PokemonGo_UWP.Utils
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
         {
+            return value;
+        }
+
+        #endregion
+    }
+
+
+    public class MsToDateFormatConverter : IValueConverter {
+        #region IValueConverter Members
+
+        public object Convert(object value, Type targetType, object parameter, string language) {
+            long ms = (long)value;
+            DateTime date = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Local);
+            date = date.Add(TimeSpan.FromMilliseconds(ms));
+            return date.ToString(Resources.Translation.GetString("DateFormat"));
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language) {
             return value;
         }
 

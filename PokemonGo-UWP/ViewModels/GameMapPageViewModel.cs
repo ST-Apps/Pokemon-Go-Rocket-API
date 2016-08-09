@@ -64,9 +64,9 @@ namespace PokemonGo_UWP.ViewModels
                             break;
                     }
                 });
-            }
-            // Restarts map timer
-            GameClient.ToggleUpdateTimer();
+            }       
+            // Restart timer
+            GameClient.ToggleUpdateTimer();     
             if (suspensionState.Any())
             {
                 // Recovering the state                
@@ -284,6 +284,14 @@ namespace PokemonGo_UWP.ViewModels
         private DelegateCommand _gotoPokemonInventoryPage;
 
         public DelegateCommand GotoPokemonInventoryPageCommand => _gotoPokemonInventoryPage ?? (_gotoPokemonInventoryPage = new DelegateCommand(() => { NavigationService.Navigate(typeof(PokemonInventoryPage), true); }));
+
+        #endregion
+
+        #region Pokedex
+
+        private DelegateCommand _gotoPlayerProfilePage;
+
+        public DelegateCommand GotoPlayerProfilePageCommand => _gotoPlayerProfilePage ?? (_gotoPlayerProfilePage = new DelegateCommand(() => { NavigationService.Navigate(typeof(PlayerProfilePage), true); }));
 
         #endregion
 

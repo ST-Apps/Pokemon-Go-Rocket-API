@@ -1,0 +1,395 @@
+﻿<Page
+    x:Class="PokemonGo_UWP.Views.PlayerProfilePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PokemonGo_UWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:gif="using:XamlAnimatedGif"
+    mc:Ignorable="d">
+
+    <Page.DataContext>
+        <viewModels:PlayerProfileViewModel x:Name="ViewModel" />
+    </Page.DataContext>
+
+    <Page.Resources>
+        <Storyboard x:Name="ShowInventoryStoryboard">
+            <DoubleAnimation
+                Storyboard.TargetName="InventoryUIPanel"
+                Storyboard.TargetProperty="Opacity"
+                From="0"
+                To="1"
+                Duration="0:0:0.2" />
+
+            <DoubleAnimation
+                Storyboard.TargetName="MainUIPanel"
+                Storyboard.TargetProperty="Opacity"
+                From="1"
+                To="0"
+                Duration="0:0:0.2" />
+
+            <DoubleAnimation
+                Storyboard.TargetName="HideInventoryButton"
+                Storyboard.TargetProperty="Opacity"
+                From="0"
+                To="1"
+                Duration="0:0:0.2" />
+
+            <DoubleAnimation
+                Storyboard.TargetName="ShowInventoryButton"
+                Storyboard.TargetProperty="Opacity"
+                From="1"
+                To="0"
+                Duration="0:0:0.2" />
+
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.ZIndex)"
+                                           Storyboard.TargetName="InventoryUIPanel">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>0</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>10</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.ZIndex)"
+                                           Storyboard.TargetName="HideInventoryButton">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>0</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>10</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Name="HideInventoryStoryboard">
+            <DoubleAnimation
+                Storyboard.TargetName="InventoryUIPanel"
+                Storyboard.TargetProperty="Opacity"
+                From="1"
+                To="0"
+                Duration="0:0:0.2" />
+
+            <DoubleAnimation
+                Storyboard.TargetName="MainUIPanel"
+                Storyboard.TargetProperty="Opacity"
+                From="0"
+                To="1"
+                Duration="0:0:0.2" />
+
+            <DoubleAnimation
+                Storyboard.TargetName="HideInventoryButton"
+                Storyboard.TargetProperty="Opacity"
+                From="1"
+                To="0"
+                Duration="0:0:0.2" />
+
+            <DoubleAnimation
+                Storyboard.TargetName="ShowInventoryButton"
+                Storyboard.TargetProperty="Opacity"
+                From="0"
+                To="1"
+                Duration="0:0:0.2" />
+
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.ZIndex)"
+                                           Storyboard.TargetName="InventoryUIPanel">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>10</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>0</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.ZIndex)"
+                                           Storyboard.TargetName="HideInventoryButton">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>10</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>0</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </Page.Resources>
+
+    <Grid HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch">
+        <RelativePanel x:Name="BaseUIPanel"
+                       HorizontalAlignment="Stretch"
+                       VerticalAlignment="Stretch">
+
+            <RelativePanel.Background>
+                <ImageBrush ImageSource="../Assets/Backgrounds/ui_bg_green.png"
+                            Stretch="Fill" />
+            </RelativePanel.Background>
+
+            <RelativePanel x:Name="InventoryUIPanel"
+                           RelativePanel.AlignTopWithPanel="True"
+                           RelativePanel.Above="CloseButton"
+                           RelativePanel.AlignLeftWithPanel="True"
+                           RelativePanel.AlignRightWithPanel="True"
+                           Padding="10"
+                           Grid.Column="0"
+                           VerticalAlignment="Stretch"
+                           Opacity="0"
+                           Canvas.ZIndex="0">
+                <GridView ItemsSource="{Binding Achievements}"
+                          RelativePanel.AlignTopWithPanel="True"
+                          RelativePanel.AlignLeftWithPanel="True"
+                          RelativePanel.AlignRightWithPanel="True">
+                    <GridView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapGrid MaximumRowsOrColumns="3"
+                                      Orientation="Horizontal" 
+                                      HorizontalChildrenAlignment="Center"
+                                      VerticalChildrenAlignment="Top"/>
+                        </ItemsPanelTemplate>
+                    </GridView.ItemsPanel>
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                            <RelativePanel Height="100" Margin="5" Width="80">
+                                <TextBlock x:Name="AchievementTypeText" Text="{Binding Key, Converter={StaticResource AchievementTranslationConverter}}"
+                                           RelativePanel.AlignHorizontalCenterWithPanel="True"
+                                           Foreground="Green"/>
+                                <Ellipse Width="60"
+                                         Height="60"
+                                         Stroke="LightGreen"
+                                         RelativePanel.Below="AchievementTypeText"
+                                         RelativePanel.AlignHorizontalCenterWithPanel="True"
+                                         StrokeThickness="2.5"
+                                         x:Name="AchievementImage">
+                                    <Ellipse.Fill>
+                                        <ImageBrush ImageSource="{Binding Converter={StaticResource AchievementValueToMedalImageConverter}}" />
+                                    </Ellipse.Fill>
+                                </Ellipse>
+                                <TextBlock x:Name="AchievementValueText" Text="{Binding Value, Converter={StaticResource AchievementValueConverter}}"
+                                           RelativePanel.AlignLeftWithPanel="True"
+                                           RelativePanel.Below="AchievementImage"
+                                           FontWeight="SemiBold"
+                                           Foreground="Green"/>
+                                <TextBlock x:Name="AchievementNextValueText" Text="{Binding Converter={StaticResource AchievementNextValueConverter}}"
+                                           RelativePanel.AlignRightWithPanel="True"
+                                           RelativePanel.Below="AchievementImage"
+                                           Foreground="Green"/>
+                            </RelativePanel>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+            </RelativePanel>
+
+            <RelativePanel x:Name="MainUIPanel"
+                           RelativePanel.AlignTopWithPanel="True"
+                           RelativePanel.Above="CloseButton"
+                           RelativePanel.AlignLeftWithPanel="True"
+                           RelativePanel.AlignRightWithPanel="True"
+                           Padding="10"
+                           Grid.Column="0"
+                           VerticalAlignment="Stretch">
+
+                <Image RelativePanel.AlignTopWithPanel="True"
+                       RelativePanel.AlignHorizontalCenterWithPanel="True"
+                       Margin="-100"
+                       Opacity="0.25"
+                       RelativePanel.Above="ExperiencePanel"
+                       Source="{Binding PlayerProfile.Team, Converter={StaticResource PlayerTeamToTeamBackgroundImageConverter}}"/>
+
+                <Image Stretch="Uniform"
+                       RelativePanel.AlignTopWithPanel="True"
+                       RelativePanel.AlignHorizontalCenterWithPanel="True"
+                       RelativePanel.Above="ExperiencePanel"
+                       gif:AnimationBehavior.SourceUri="/Assets/UI/avatar.gif"
+                       x:Name="AvatarImage"/>
+
+                <StackPanel RelativePanel.Above="LevelPanel" Margin="0,0,0,0"
+                            RelativePanel.AlignHorizontalCenterWithPanel="True"
+                            Orientation="Horizontal"
+                            x:Name="ExperiencePanel">
+                    <TextBlock Style="{ThemeResource ProfilePageMediumText}"
+                               Text="{Binding PlayerStats.Experience}"/>
+                    <TextBlock Margin="5,0,0,0" x:Uid="XPText"
+                               Style="{ThemeResource ProfilePageMediumText}" />
+                </StackPanel>
+                
+                <StackPanel RelativePanel.Above="ExperienceProgressBar"
+                            RelativePanel.AlignHorizontalCenterWithPanel="True"
+                            Orientation="Horizontal"
+                            x:Name="LevelPanel">
+                    <TextBlock Text="Level"
+                               Style="{ThemeResource ProfilePageLargeText}"
+                               x:Uid="LevelText"
+                               FontWeight="SemiBold"/>
+                    <TextBlock Text="{Binding PlayerStats.Level}"
+                               Margin="5,0,0,0"
+                               Style="{ThemeResource ProfilePageLargeText}"
+                               FontWeight="SemiBold"/>
+                </StackPanel>
+
+                <ProgressBar Value="{Binding ExperienceValue}"
+                             Foreground="Green"
+                             Height="10" Margin="48,0"
+                             RelativePanel.AlignLeftWithPanel="True"
+                             RelativePanel.AlignRightWithPanel="True"
+                             RelativePanel.Above="LevelExperiencePanel"
+                             x:Name="ExperienceProgressBar" />
+
+                <StackPanel RelativePanel.Above="InformationGrid"
+                            RelativePanel.AlignHorizontalCenterWithPanel="True"
+                            Orientation="Horizontal"
+                            x:Name="LevelExperiencePanel">
+                    <TextBlock Text="{Binding CurrentLevelXP}"
+                               Style="{ThemeResource ProfilePageMediumText}"
+                               x:Uid="LevelText"
+                               FontWeight="SemiBold"/>
+                    <TextBlock Text="/"
+                               Style="{ThemeResource ProfilePageMediumText}"
+                               Margin="5,0"
+                               FontWeight="SemiBold"/>
+                    <TextBlock Text="{Binding TotalLevelXP}"
+                               Style="{ThemeResource ProfilePageMediumText}"
+                               FontWeight="SemiBold"/>
+                    <TextBlock Text="XP"
+                               Margin="5,0,0,0"
+                               Style="{ThemeResource ProfilePageMediumText}"
+                               FontWeight="SemiBold"/>
+                </StackPanel>
+
+                <Grid RelativePanel.AlignBottomWithPanel="True"
+                      RelativePanel.AlignLeftWithPanel="True"
+                      RelativePanel.AlignRightWithPanel="True"
+                      x:Name="InformationGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel>
+                        <Image MaxWidth="64" Margin="0"
+                               HorizontalAlignment="Center"
+                               x:Name="CoinImage"
+                               Source="../Assets/Items/Item_COIN_01.png"/>
+                        <TextBlock x:Name="CoinText"
+                                   Style="{ThemeResource ProfilePageText}"
+                                   HorizontalAlignment="Center"
+                                   Text="{Binding Pokecoins}"/>
+                    </StackPanel>
+                    
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                        <TextBlock Style="{ThemeResource ProfilePageSmallText}" 
+                                   HorizontalAlignment="Center"
+                                   Text="START DATE"
+                                   x:Uid="StartDateText"/>
+                        <TextBlock Style="{ThemeResource ProfilePageSmallText}" 
+                                   HorizontalAlignment="Center"
+                                   Text="{Binding PlayerProfile.CreationTimestampMs, Converter={StaticResource MsToDateFormatConverter}}"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="2">
+                        <Image MaxWidth="64" Margin="0"
+                               x:Name="TeamImage"
+                               HorizontalAlignment="Center"
+                               Source="{Binding PlayerProfile.Team, Converter={StaticResource PlayerTeamToTeamImageConverter}}"/>
+                        <TextBlock x:Name="TeamText"
+                                   HorizontalAlignment="Center"
+                                   Style="{ThemeResource ProfilePageText}"
+                                   Text="{Binding PlayerProfile.Team, Converter={StaticResource PlayerTeamToTeamNameConverter}}"/>
+                    </StackPanel>
+                </Grid>
+            </RelativePanel>
+            
+            <Button RelativePanel.AlignBottomWithPanel="True"
+                    RelativePanel.AlignHorizontalCenterWithPanel="True"
+                    Style="{ThemeResource ImageButtonStyle}"
+                    Height="{ThemeResource UiButtonSize}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,0,24"
+                    Command="{Binding ReturnToGameScreen}"
+                    x:Name="CloseButton">
+                <Image Source="../Assets/Buttons/btn_close_normal_dark.png"
+                       Stretch="Uniform"
+                       HorizontalAlignment="Stretch" />
+            </Button>
+
+            <Button RelativePanel.AlignBottomWithPanel="True"
+                    RelativePanel.AlignRightWithPanel="True"
+                    Style="{ThemeResource ImageButtonStyle}"
+                    Height="{ThemeResource UiButtonSize}"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,24,24"
+                    Canvas.ZIndex="10"
+                    x:Name="ShowInventoryButton">
+
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:CallMethodAction MethodName="Begin"
+                                               TargetObject="{Binding ElementName=ShowInventoryStoryboard}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+
+                <Grid>
+                    <Image Source="../Assets/Buttons/btn_master.png"
+                           Stretch="Uniform"
+                           VerticalAlignment="Stretch"
+                           HorizontalAlignment="Stretch" />
+                    <Image Source="../Assets/UI/inventory.png"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center" />
+                </Grid>
+            </Button>
+
+            <Button RelativePanel.AlignBottomWithPanel="True"
+                    RelativePanel.AlignRightWithPanel="True"
+                    Style="{ThemeResource ImageButtonStyle}"
+                    Height="{ThemeResource UiButtonSize}"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,24,24"
+                    Opacity="0"
+                    Canvas.ZIndex="0"
+                    x:Name="HideInventoryButton">
+
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:CallMethodAction MethodName="Begin"
+                                               TargetObject="{Binding ElementName=HideInventoryStoryboard}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+
+                <Grid>
+                    <Image Source="../Assets/Buttons/btn_master.png"
+                           Stretch="Uniform"
+                           VerticalAlignment="Stretch"
+                           HorizontalAlignment="Stretch" />
+                    <Image Source="../Assets/UI/inventory.png"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center" />
+                </Grid>
+            </Button>
+        </RelativePanel>
+
+    </Grid>
+
+</Page>

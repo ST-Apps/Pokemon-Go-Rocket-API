@@ -24,7 +24,10 @@ namespace PokemonGo_UWP.Views
             // Setup catch stats translation
             Loaded += (s, e) =>
             {
-                ShowCatchStatsModalAnimation.From = CatchStatsModal.ActualHeight;
+                ShowCatchStatsModalAnimation.From = CatchStatsTranslateTransform.Y = ActualHeight;
+                // HACK - somehow binding doesn't work as expected so we manually disable the item if count is 0
+                LaunchPokeballButton.IsEnabled =
+                    LaunchPokeballButton.IsHitTestVisible = ViewModel.SelectedCaptureItem.Count > 0;
             };
         }
 

@@ -211,7 +211,9 @@ namespace PokemonGo_UWP.ViewModels
                             AwardedItems.Add(new ItemAward() { ItemId = tmpItem.First().First().ItemId, ItemCount = tmpItem.First().Count() });
                         }
                         Logger.Write("Searching Pokestop success");
-                        SearchSuccess?.Invoke(this, null);                        
+                        SearchSuccess?.Invoke(this, null);
+                        // Restarts map timer
+                        GameClient.ToggleUpdateTimer();
                         await GameClient.UpdateInventory();
                         break;
                     case FortSearchResponse.Types.Result.OutOfRange:
