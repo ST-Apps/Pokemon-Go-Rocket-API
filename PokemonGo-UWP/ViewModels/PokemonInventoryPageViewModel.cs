@@ -158,24 +158,24 @@ namespace PokemonGo_UWP.ViewModels
         {
             switch (CurrentPokemonSortingMode)
             {
-                case PokemonSortingModes.Date:
+                case PokemonSortingModes.(Utils.Resources.Translation.GetString("SortbyDate")):
                     PokemonInventory = new ObservableCollection<PokemonDataWrapper>(PokemonInventory.OrderByDescending(pokemon => pokemon.CreationTimeMs));
                     break;
-                case PokemonSortingModes.Fav:
+                case PokemonSortingModes.(Utils.Resources.Translation.GetString("SortbyFav")):
                     PokemonInventory = new ObservableCollection<PokemonDataWrapper>(PokemonInventory.OrderByDescending(pokemon => pokemon.Favorite));
                     break;
-                case PokemonSortingModes.Number:
+                case PokemonSortingModes.(Utils.Resources.Translation.GetString("SortbyNumber")):
                     PokemonInventory = new ObservableCollection<PokemonDataWrapper>(PokemonInventory.OrderBy(pokemon => pokemon.PokemonId));
                     break;
-                case PokemonSortingModes.Health:
+                case PokemonSortingModes.(Utils.Resources.Translation.GetString("SortbyHealth")):
                     PokemonInventory = new ObservableCollection<PokemonDataWrapper>(PokemonInventory.OrderByDescending(pokemon => pokemon.Stamina));
                     break;
-                case PokemonSortingModes.Name:
+                case PokemonSortingModes.(Utils.Resources.Translation.GetString("SortbyName")):
                     PokemonInventory =
                         new ObservableCollection<PokemonDataWrapper>(
                             PokemonInventory.OrderBy(pokemon => pokemon.PokemonId.ToString()));
                     break;
-                case PokemonSortingModes.Combat:
+                case PokemonSortingModes.(Utils.Resources.Translation.GetString("SortbyCombat")):
                     PokemonInventory = new ObservableCollection<PokemonDataWrapper>(PokemonInventory.OrderByDescending(pokemon => pokemon.Cp));
                     break;
                 default:

@@ -165,4 +165,22 @@
   <data name="LoggingIn" xml:space="preserve">
     <value>Entrando...</value>
   </data>
+    <data name="SortbyCombat.Text" xml:space="preserve">
+    <value>Combat</value>
+  </data>
+  <data name="SortbyDate.Text" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="SortbyFav.Text" xml:space="preserve">
+    <value>Fav</value>
+  </data>
+  <data name="SortbyHealth.Text" xml:space="preserve">
+    <value>Health</value>
+  </data>
+  <data name="SortbyName.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="SortbyNumber.Text" xml:space="preserve">
+    <value>Number</value>
+  </data>
 </root>
