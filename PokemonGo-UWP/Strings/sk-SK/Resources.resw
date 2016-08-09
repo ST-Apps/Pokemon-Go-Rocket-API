@@ -196,7 +196,7 @@
     <value>Bohužiaľ , pokemon utiekol :(</value>
   </data>
   <data name="PokemonText.Text" xml:space="preserve">
-    <value>POKÉMON</value>
+    <value>POKÉMONI</value>
   </data>
   <data name="PTCDown" xml:space="preserve">
     <value>PTC je pravdepodobne offline. Skúste to neskôr prosím.</value>
@@ -226,7 +226,7 @@
     <value>Áno</value>
   </data>
   <data name="ItemsText.Text" xml:space="preserve">
-    <value>PREDMET</value>
+    <value>PREDMETY</value>
   </data>
   <data name="ItemsTextLower.Text" xml:space="preserve">
     <value>predmet</value>
@@ -260,5 +260,8 @@ Chcete otvoriť stránku so súbormi k manuálnej inštalácii ?</value>
   </data>
   <data name="UpdateInstalling" xml:space="preserve">
     <value>Inštalácia updatu. Aplikácia bude reštartovaná.</value>
+  </data>
+  <data name="MapAutoRotateTitleText.Text" xml:space="preserve">
+    <value>Autorotovat Mapu</value>
   </data>
 </root>

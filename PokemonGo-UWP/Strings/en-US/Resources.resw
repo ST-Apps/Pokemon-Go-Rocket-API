@@ -258,4 +258,7 @@ Open page with installation files for manual install?</value>
   <data name="LevelupText.Text" xml:space="preserve">
     <value>Level up!</value>
   </data>
+  <data name="MapAutoRotateTitleText.Text" xml:space="preserve">
+    <value>Autorotate Map</value>
+  </data>
 </root>
