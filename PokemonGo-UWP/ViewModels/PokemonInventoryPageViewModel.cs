@@ -53,7 +53,7 @@ namespace PokemonGo_UWP.ViewModels
                 {
                     EggsInventory.Add(new PokemonDataWrapper(pokemonData));
                 }                    
-                CurrentPokemonSortingMode = PokemonSortingModes.Combat;
+                CurrentPokemonSortingMode = PokemonSortingModes.(ApplicationData.Current.LocalSettings.Values["sortbydef"]);
             }
             await Task.CompletedTask;
         }
@@ -182,6 +182,7 @@ namespace PokemonGo_UWP.ViewModels
                     throw new ArgumentOutOfRangeException(nameof(CurrentPokemonSortingMode), CurrentPokemonSortingMode, null);
             }            
             RaisePropertyChanged(() => PokemonInventory);
+            ApplicationData.Current.LocalSettings.Values["sortbydef"] = CurrentPokemonSortingMode;
         }
 
         #endregion
