@@ -260,4 +260,13 @@ Open de pagina met installatie bestanden voor handmatige installatie?</value>
   <data name="MapAutoRotateTitleText.Text" xml:space="preserve">
     <value>Kaart automatisch draaien</value>
   </data>
+  <data name="IncubateEggText.Text" xml:space="preserve">
+    <value>Gebruik een broedmachine om een ei uit te broeden.</value>
+  </data>
+  <data name="incubatorsText.Text" xml:space="preserve">
+    <value>BROEDMACHINES</value>
+  </data>
+  <data name="StartIncubationText.Text" xml:space="preserve">
+    <value>START UITBROEDEN</value>
+  </data>
 </root>
