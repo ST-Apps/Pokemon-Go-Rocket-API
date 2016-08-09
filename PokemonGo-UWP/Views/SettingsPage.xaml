@@ -78,7 +78,7 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Column="0"
                                x:Uid="MapAutoRotateTitleText"
-                               Text="AutorotateMap"
+                               Text="Autorotate map"
                                Style="{StaticResource TextSettingsTitle}"
                                VerticalAlignment="Center" />
 
