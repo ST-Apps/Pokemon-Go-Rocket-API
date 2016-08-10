@@ -238,4 +238,22 @@
      <data name="MapAutoRotateTitleText.Text" xml:space="preserve">
      <value>Автоповорот карты</value>
    </data>
+        <data name="SortbyCombat.Text" xml:space="preserve">
+    <value>Силе</value>
+  </data>
+  <data name="SortbyDate.Text" xml:space="preserve">
+    <value>Дате</value>
+  </data>
+  <data name="SortbyFav.Text" xml:space="preserve">
+    <value>Популярности</value>
+  </data>
+  <data name="SortbyHealth.Text" xml:space="preserve">
+    <value>Здоровью</value>
+  </data>
+  <data name="SortbyName.Text" xml:space="preserve">
+    <value>Имени</value>
+  </data>
+  <data name="SortbyNumber.Text" xml:space="preserve">
+    <value>по ID</value>
+  </data>
 </root>
