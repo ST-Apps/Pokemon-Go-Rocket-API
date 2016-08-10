@@ -381,4 +381,13 @@ Open page with installation files for manual install?</value>
   <data name="BadgeSmallRattata" xml:space="preserve">
     <value>Youngster</value>
   </data>
+  <data name="IncubatorExplanationText.Text" xml:space="preserve">
+    <value>Use an incubator to incubate the Egg.</value>
+  </data>
+  <data name="RememberMapZoomTitleText.Text" xml:space="preserve">
+    <value>Remember Map Zoom</value>
+  </data>
+  <data name="StartIncubationText.Text" xml:space="preserve">
+    <value>START INCUBATION</value>
+  </data>
 </root>
