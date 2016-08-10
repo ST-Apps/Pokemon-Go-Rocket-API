@@ -177,19 +177,27 @@ namespace PokemonGo_UWP.ViewModels
             switch (sortingMode)
             {
                 case PokemonSortingModes.(Utils.Resources.Translation.GetString("SortbyDate")):
-                    return pokemonInventory.OrderByDescending(pokemon => pokemon.CreationTimeMs);
+                    PokemonInventory = new ObservableCollection<PokemonData>(PokemonInventory.OrderByDescending(pokemon => pokemon.CreationTimeMs));
+                    break;
                 case PokemonSortingModes.(Utils.Resources.Translation.GetString("SortbyFav")):
-                    return pokemonInventory.OrderByDescending(pokemon => pokemon.Favorite);
+                    PokemonInventory = new ObservableCollection<PokemonData>(PokemonInventory.OrderByDescending(pokemon => pokemon.Favorite));
+                    break;
                 case PokemonSortingModes.(Utils.Resources.Translation.GetString("SortbyNumber")):
-                    return pokemonInventory.OrderBy(pokemon => pokemon.PokemonId);
+                    PokemonInventory = new ObservableCollection<PokemonData>(PokemonInventory.OrderBy(pokemon => pokemon.PokemonId));
+                    break;
                 case PokemonSortingModes.(Utils.Resources.Translation.GetString("SortbyHealth")):
-                    return pokemonInventory.OrderByDescending(pokemon => pokemon.Stamina);
+                    PokemonInventory = new ObservableCollection<PokemonData>(PokemonInventory.OrderByDescending(pokemon => pokemon.Stamina));
+                    break;
                 case PokemonSortingModes.(Utils.Resources.Translation.GetString("SortbyName")):
-                    return pokemonInventory.OrderBy(pokemon => Utils.Resources.Pokemon.GetString(pokemon.PokemonId.ToString()));
+                    PokemonInventory =
+                        new ObservableCollection<PokemonData>(
+                            PokemonInventory.OrderBy(pokemon => pokemon.PokemonId.ToString()));
+                    break;
                 case PokemonSortingModes.(Utils.Resources.Translation.GetString("SortbyCombat")):
-                    return pokemonInventory.OrderByDescending(pokemon => pokemon.Cp);
+                    PokemonInventory = new ObservableCollection<PokemonData>(PokemonInventory.OrderByDescending(pokemon => pokemon.Cp));
+                    break;
                 default:
-                    throw new ArgumentOutOfRangeException(nameof(CurrentPokemonSortingMode), sortingMode, null);
+                    throw new ArgumentOutOfRangeException(nameof(CurrentPokemonSortingMode), CurrentPokemonSortingMode, null);
             }
         }
 
