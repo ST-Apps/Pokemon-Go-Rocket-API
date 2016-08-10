@@ -1,0 +1,1276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{41671062-EBBD-4B7A-8586-B419990BB5F4}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PokemonGo_UWP_Mock</RootNamespace>
+    <AssemblyName>PokemonGo-UWP-Mock</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>PokemonGo-UWP-Mock_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\PokemonGo-UWP\App.xaml.cs">
+      <Link>App.xaml.cs</Link>
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Entities\FortDataWrapper.cs">
+      <Link>Entities\FortDataWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Entities\IUpdatable.cs">
+      <Link>Entities\IUpdatable.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Entities\MapPokemonWrapper.cs">
+      <Link>Entities\MapPokemonWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Entities\NearbyPokemonWrapper.cs">
+      <Link>Entities\NearbyPokemonWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Entities\PokemonDataWrapper.cs">
+      <Link>Entities\PokemonDataWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Utils\AchievementType.cs">
+      <Link>Utils\AchievementType.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Utils\Achievement\BadgeTypeAttribute.cs">
+      <Link>Utils\Achievement\BadgeTypeAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Utils\Achievement\BronzeAttribute.cs">
+      <Link>Utils\Achievement\BronzeAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Utils\Achievement\GoldAttribute.cs">
+      <Link>Utils\Achievement\GoldAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Utils\Achievement\SilverAttribute.cs">
+      <Link>Utils\Achievement\SilverAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Utils\ApplicationKeys.cs">
+      <Link>Utils\ApplicationKeys.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Utils\AsyncSynchronisationContext.cs">
+      <Link>Utils\AsyncSynchronisationContext.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Utils\AudioUtils.cs">
+      <Link>Utils\AudioUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Utils\CollectionExtensions.cs">
+      <Link>Utils\CollectionExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Utils\Converters.cs">
+      <Link>Utils\Converters.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Utils\ExceptionHandler.cs">
+      <Link>Utils\ExceptionHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Utils\MessageDialogExtensions.cs">
+      <Link>Utils\MessageDialogExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Utils\NavigationHelper.cs">
+      <Link>Utils\NavigationHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Utils\PokemonInfo.cs">
+      <Link>Utils\PokemonInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Utils\Resources.cs">
+      <Link>Utils\Resources.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Utils\Settings.cs">
+      <Link>Utils\Settings.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Utils\SettingsService.cs">
+      <Link>Utils\SettingsService.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Utils\SortingModes.cs">
+      <Link>Utils\SortingModes.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Utils\UpdateManager.cs">
+      <Link>Utils\UpdateManager.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\ViewModels\CapturePokemonPageViewModel.cs">
+      <Link>ViewModels\CapturePokemonPageViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\ViewModels\EggDetailPageViewModel.cs">
+      <Link>ViewModels\EggDetailPageViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\ViewModels\GameMapPageViewModel.cs">
+      <Link>ViewModels\GameMapPageViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\ViewModels\LoginPageViewModel.cs">
+      <Link>ViewModels\LoginPageViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\ViewModels\PlayerProfileViewModel.cs">
+      <Link>ViewModels\PlayerProfileViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\ViewModels\PokemonInventoryPageViewModel.cs">
+      <Link>ViewModels\PokemonInventoryPageViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\ViewModels\SearchPokeStopPageViewModel.cs">
+      <Link>ViewModels\SearchPokeStopPageViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\ViewModels\SettingsPageViewModel.cs">
+      <Link>ViewModels\SettingsPageViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Views\CapturePokemonPage.xaml.cs">
+      <Link>Views\CapturePokemonPage.xaml.cs</Link>
+      <DependentUpon>CapturePokemonPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Views\Dialogs\Busy.xaml.cs">
+      <Link>Views\Dialogs\Busy.xaml.cs</Link>
+      <DependentUpon>Busy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Views\EggDetailPage.xaml.cs">
+      <Link>Views\EggDetailPage.xaml.cs</Link>
+      <DependentUpon>EggDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Views\GameMapPage.xaml.cs">
+      <Link>Views\GameMapPage.xaml.cs</Link>
+      <DependentUpon>GameMapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Views\MainPage.xaml.cs">
+      <Link>Views\MainPage.xaml.cs</Link>
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Views\PlayerProfilePage.xaml.cs">
+      <Link>Views\PlayerProfilePage.xaml.cs</Link>
+      <DependentUpon>PlayerProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Views\PokemonInventoryPage.xaml.cs">
+      <Link>Views\PokemonInventoryPage.xaml.cs</Link>
+      <DependentUpon>PokemonInventoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Views\SearchPokestopPage.xaml.cs">
+      <Link>Views\SearchPokestopPage.xaml.cs</Link>
+      <DependentUpon>SearchPokestopPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Views\SettingsPage.xaml.cs">
+      <Link>Views\SettingsPage.xaml.cs</Link>
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\PokemonGo-UWP\Views\Splash.xaml.cs">
+      <Link>Views\Splash.xaml.cs</Link>
+      <DependentUpon>Splash.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\GameClient.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="..\PokemonGo-UWP\Assets\Fonts\Generica Bold.otf">
+      <Link>Assets\Fonts\Generica Bold.otf</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Fonts\Generica.otf">
+      <Link>Assets\Fonts\Generica.otf</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Fonts\Lato-Bold.ttf">
+      <Link>Assets\Fonts\Lato-Bold.ttf</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Fonts\Lato-Italic.ttf">
+      <Link>Assets\Fonts\Lato-Italic.ttf</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Fonts\Lato-Light.ttf">
+      <Link>Assets\Fonts\Lato-Light.ttf</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Fonts\Lato-Medium.ttf">
+      <Link>Assets\Fonts\Lato-Medium.ttf</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Fonts\Lato-Regular.ttf">
+      <Link>Assets\Fonts\Lato-Regular.ttf</Link>
+    </Content>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\cs-CZ\Items.resw">
+      <Link>Strings\cs-CZ\Items.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\cs-CZ\Pokemon.resw">
+      <Link>Strings\cs-CZ\Pokemon.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\cs-CZ\Resources.resw">
+      <Link>Strings\cs-CZ\Resources.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\de-DE\Items.resw">
+      <Link>Strings\de-DE\Items.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\de-DE\Pokemon.resw">
+      <Link>Strings\de-DE\Pokemon.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\de-DE\Resources.resw">
+      <Link>Strings\de-DE\Resources.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\en-US\Items.resw">
+      <Link>Strings\en-US\Items.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\en-US\Pokemon.resw">
+      <Link>Strings\en-US\Pokemon.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\en-US\Resources.resw">
+      <Link>Strings\en-US\Resources.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\es-ES\Items.resw">
+      <Link>Strings\es-ES\Items.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\es-ES\Pokemon.resw">
+      <Link>Strings\es-ES\Pokemon.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\es-ES\Resources.resw">
+      <Link>Strings\es-ES\Resources.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\fr-FR\Items.resw">
+      <Link>Strings\fr-FR\Items.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\fr-FR\Pokemon.resw">
+      <Link>Strings\fr-FR\Pokemon.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\fr-FR\Resources.resw">
+      <Link>Strings\fr-FR\Resources.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\it-IT\Items.resw">
+      <Link>Strings\it-IT\Items.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\it-IT\Pokemon.resw">
+      <Link>Strings\it-IT\Pokemon.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\it-IT\Resources.resw">
+      <Link>Strings\it-IT\Resources.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\ja-JP\Resources.resw">
+      <Link>Strings\ja-JP\Resources.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\nl-NL\Resources.resw">
+      <Link>Strings\nl-NL\Resources.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\pl-PL\Items.resw">
+      <Link>Strings\pl-PL\Items.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\pl-PL\Pokemon.resw">
+      <Link>Strings\pl-PL\Pokemon.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\pl-PL\Resources.resw">
+      <Link>Strings\pl-PL\Resources.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\ru-RU\Items.resw">
+      <Link>Strings\ru-RU\Items.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\ru-RU\Pokemon.resw">
+      <Link>Strings\ru-RU\Pokemon.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\ru-RU\Resources.resw">
+      <Link>Strings\ru-RU\Resources.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\sk-SK\Items.resw">
+      <Link>Strings\sk-SK\Items.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\sk-SK\Pokemon.resw">
+      <Link>Strings\sk-SK\Pokemon.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\sk-SK\Resources.resw">
+      <Link>Strings\sk-SK\Resources.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\tr-TR\Items.resw">
+      <Link>Strings\tr-TR\Items.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\tr-TR\Pokemon.resw">
+      <Link>Strings\tr-TR\Pokemon.resw</Link>
+    </PRIResource>
+    <PRIResource Include="..\PokemonGo-UWP\Strings\tr-TR\Resources.resw">
+      <Link>Strings\tr-TR\Resources.resw</Link>
+    </PRIResource>
+    <None Include="PokemonGo-UWP-Mock_TemporaryKey.pfx" />
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\PokemonGo-UWP\Assets\Achievements\badge_lv0.png">
+      <Link>Assets\Achievements\badge_lv0.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Achievements\badge_lv1.png">
+      <Link>Assets\Achievements\badge_lv1.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Achievements\badge_lv2.png">
+      <Link>Assets\Achievements\badge_lv2.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Achievements\badge_lv3.png">
+      <Link>Assets\Achievements\badge_lv3.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Audio\pokemon_found_ding.wav">
+      <Link>Assets\Audio\pokemon_found_ding.wav</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\details_type_bg_bug.png">
+      <Link>Assets\Backgrounds\details_type_bg_bug.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\details_type_bg_default.png">
+      <Link>Assets\Backgrounds\details_type_bg_default.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\details_type_bg_dragon.png">
+      <Link>Assets\Backgrounds\details_type_bg_dragon.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\details_type_bg_electric.png">
+      <Link>Assets\Backgrounds\details_type_bg_electric.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\details_type_bg_fairy.png">
+      <Link>Assets\Backgrounds\details_type_bg_fairy.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\details_type_bg_fighting.png">
+      <Link>Assets\Backgrounds\details_type_bg_fighting.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\details_type_bg_fire.png">
+      <Link>Assets\Backgrounds\details_type_bg_fire.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\details_type_bg_flying.png">
+      <Link>Assets\Backgrounds\details_type_bg_flying.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\details_type_bg_ghost.png">
+      <Link>Assets\Backgrounds\details_type_bg_ghost.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\details_type_bg_ground.png">
+      <Link>Assets\Backgrounds\details_type_bg_ground.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\details_type_bg_ice.png">
+      <Link>Assets\Backgrounds\details_type_bg_ice.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\details_type_bg_normal.png">
+      <Link>Assets\Backgrounds\details_type_bg_normal.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\details_type_bg_poison.png">
+      <Link>Assets\Backgrounds\details_type_bg_poison.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\details_type_bg_psychic.png">
+      <Link>Assets\Backgrounds\details_type_bg_psychic.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\details_type_bg_rock.png">
+      <Link>Assets\Backgrounds\details_type_bg_rock.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\details_type_bg_water.png">
+      <Link>Assets\Backgrounds\details_type_bg_water.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\Park.png">
+      <Link>Assets\Backgrounds\Park.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\Parkscene_Background.png">
+      <Link>Assets\Backgrounds\Parkscene_Background.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\Parkscene_Background_Night.png">
+      <Link>Assets\Backgrounds\Parkscene_Background_Night.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\ui_bg_blue_02.png">
+      <Link>Assets\Backgrounds\ui_bg_blue_02.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\ui_bg_green.png">
+      <Link>Assets\Backgrounds\ui_bg_green.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\ui_bg_green_02.png">
+      <Link>Assets\Backgrounds\ui_bg_green_02.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\ui_bg_green_03.png">
+      <Link>Assets\Backgrounds\ui_bg_green_03.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\ui_bg_green_04.png">
+      <Link>Assets\Backgrounds\ui_bg_green_04.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\ui_bg_gym_resolve.png">
+      <Link>Assets\Backgrounds\ui_bg_gym_resolve.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\ui_bg_purple.png">
+      <Link>Assets\Backgrounds\ui_bg_purple.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\ui_bg_purple_02.png">
+      <Link>Assets\Backgrounds\ui_bg_purple_02.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Backgrounds\ui_settings_bg.png">
+      <Link>Assets\Backgrounds\ui_settings_bg.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Buttons\btn_action_menu.png">
+      <Link>Assets\Buttons\btn_action_menu.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Buttons\btn_back_normal_dark.png">
+      <Link>Assets\Buttons\btn_back_normal_dark.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Buttons\btn_close_normal.png">
+      <Link>Assets\Buttons\btn_close_normal.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Buttons\btn_close_normal_dark.png">
+      <Link>Assets\Buttons\btn_close_normal_dark.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Buttons\btn_empty.png">
+      <Link>Assets\Buttons\btn_empty.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Buttons\btn_incubator.png">
+      <Link>Assets\Buttons\btn_incubator.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Buttons\btn_items.png">
+      <Link>Assets\Buttons\btn_items.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Buttons\btn_master.png">
+      <Link>Assets\Buttons\btn_master.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Buttons\btn_ok_normal_dark.png">
+      <Link>Assets\Buttons\btn_ok_normal_dark.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Buttons\btn_pokedex.png">
+      <Link>Assets\Buttons\btn_pokedex.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Buttons\btn_pokemon.png">
+      <Link>Assets\Buttons\btn_pokemon.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Buttons\btn_run_away.png">
+      <Link>Assets\Buttons\btn_run_away.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Buttons\btn_settings.png">
+      <Link>Assets\Buttons\btn_settings.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Buttons\btn_swap.png">
+      <Link>Assets\Buttons\btn_swap.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Buttons\btn_train.png">
+      <Link>Assets\Buttons\btn_train.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Icons\circle_255_filled_01.png">
+      <Link>Assets\Icons\circle_255_filled_01.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Icons\CompassIcon.png">
+      <Link>Assets\Icons\CompassIcon.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Icons\Footprint_Far.png">
+      <Link>Assets\Icons\Footprint_Far.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Icons\Footprint_Mid.png">
+      <Link>Assets\Icons\Footprint_Mid.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Icons\Footprint_Near.png">
+      <Link>Assets\Icons\Footprint_Near.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Icons\FrontPortraitRing.png">
+      <Link>Assets\Icons\FrontPortraitRing.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Icons\ic_combat.png">
+      <Link>Assets\Icons\ic_combat.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Icons\ic_date.png">
+      <Link>Assets\Icons\ic_date.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Icons\ic_fav.png">
+      <Link>Assets\Icons\ic_fav.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Icons\ic_health.png">
+      <Link>Assets\Icons\ic_health.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Icons\ic_name.png">
+      <Link>Assets\Icons\ic_name.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Icons\ic_number.png">
+      <Link>Assets\Icons\ic_number.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Icons\pokestop_far.png">
+      <Link>Assets\Icons\pokestop_far.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Icons\pokestop_near.png">
+      <Link>Assets\Icons\pokestop_near.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Icons\pokestop_near_inactive.png">
+      <Link>Assets\Icons\pokestop_near_inactive.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Icons\stardust_painted.png">
+      <Link>Assets\Icons\stardust_painted.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Icons\stardust_vector.png">
+      <Link>Assets\Icons\stardust_vector.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Egg.png">
+      <Link>Assets\Items\Egg.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\E_Item_901.png">
+      <Link>Assets\Items\E_Item_901.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\E_Item_902.png">
+      <Link>Assets\Items\E_Item_902.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_1.png">
+      <Link>Assets\Items\Item_1.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_101.png">
+      <Link>Assets\Items\Item_101.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_102.png">
+      <Link>Assets\Items\Item_102.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_103.png">
+      <Link>Assets\Items\Item_103.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_104.png">
+      <Link>Assets\Items\Item_104.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_2.png">
+      <Link>Assets\Items\Item_2.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_201.png">
+      <Link>Assets\Items\Item_201.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_202.png">
+      <Link>Assets\Items\Item_202.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_3.png">
+      <Link>Assets\Items\Item_3.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_4.png">
+      <Link>Assets\Items\Item_4.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_401.png">
+      <Link>Assets\Items\Item_401.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_701.png">
+      <Link>Assets\Items\Item_701.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_702.png">
+      <Link>Assets\Items\Item_702.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_703.png">
+      <Link>Assets\Items\Item_703.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_704.png">
+      <Link>Assets\Items\Item_704.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_705.png">
+      <Link>Assets\Items\Item_705.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_801.png">
+      <Link>Assets\Items\Item_801.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_901.png">
+      <Link>Assets\Items\Item_901.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_902.png">
+      <Link>Assets\Items\Item_902.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_COIN_01.png">
+      <Link>Assets\Items\Item_COIN_01.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_COIN_BOX_01.png">
+      <Link>Assets\Items\Item_COIN_BOX_01.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_COIN_BUCKET_01.png">
+      <Link>Assets\Items\Item_COIN_BUCKET_01.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_COIN_HANDFUL_01.png">
+      <Link>Assets\Items\Item_COIN_HANDFUL_01.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_COIN_HEAP_01.png">
+      <Link>Assets\Items\Item_COIN_HEAP_01.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_COIN_POUCH_01.png">
+      <Link>Assets\Items\Item_COIN_POUCH_01.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Items\Item_COIN_STACK_01.png">
+      <Link>Assets\Items\Item_COIN_STACK_01.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\LockScreenLogo.scale-200.png">
+      <Link>Assets\LockScreenLogo.scale-200.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Logos\google.png">
+      <Link>Assets\Logos\google.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Logos\logo_transparent.png">
+      <Link>Assets\Logos\logo_transparent.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\0.png">
+      <Link>Assets\Pokemons\0.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\1.png">
+      <Link>Assets\Pokemons\1.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\10.png">
+      <Link>Assets\Pokemons\10.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\100.png">
+      <Link>Assets\Pokemons\100.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\101.png">
+      <Link>Assets\Pokemons\101.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\102.png">
+      <Link>Assets\Pokemons\102.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\103.png">
+      <Link>Assets\Pokemons\103.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\104.png">
+      <Link>Assets\Pokemons\104.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\105.png">
+      <Link>Assets\Pokemons\105.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\106.png">
+      <Link>Assets\Pokemons\106.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\107.png">
+      <Link>Assets\Pokemons\107.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\108.png">
+      <Link>Assets\Pokemons\108.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\109.png">
+      <Link>Assets\Pokemons\109.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\11.png">
+      <Link>Assets\Pokemons\11.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\110.png">
+      <Link>Assets\Pokemons\110.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\111.png">
+      <Link>Assets\Pokemons\111.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\112.png">
+      <Link>Assets\Pokemons\112.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\113.png">
+      <Link>Assets\Pokemons\113.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\114.png">
+      <Link>Assets\Pokemons\114.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\115.png">
+      <Link>Assets\Pokemons\115.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\116.png">
+      <Link>Assets\Pokemons\116.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\117.png">
+      <Link>Assets\Pokemons\117.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\118.png">
+      <Link>Assets\Pokemons\118.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\119.png">
+      <Link>Assets\Pokemons\119.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\12.png">
+      <Link>Assets\Pokemons\12.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\120.png">
+      <Link>Assets\Pokemons\120.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\121.png">
+      <Link>Assets\Pokemons\121.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\122.png">
+      <Link>Assets\Pokemons\122.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\123.png">
+      <Link>Assets\Pokemons\123.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\124.png">
+      <Link>Assets\Pokemons\124.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\125.png">
+      <Link>Assets\Pokemons\125.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\126.png">
+      <Link>Assets\Pokemons\126.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\127.png">
+      <Link>Assets\Pokemons\127.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\128.png">
+      <Link>Assets\Pokemons\128.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\129.png">
+      <Link>Assets\Pokemons\129.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\13.png">
+      <Link>Assets\Pokemons\13.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\130.png">
+      <Link>Assets\Pokemons\130.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\131.png">
+      <Link>Assets\Pokemons\131.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\132.png">
+      <Link>Assets\Pokemons\132.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\133.png">
+      <Link>Assets\Pokemons\133.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\134.png">
+      <Link>Assets\Pokemons\134.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\135.png">
+      <Link>Assets\Pokemons\135.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\136.png">
+      <Link>Assets\Pokemons\136.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\137.png">
+      <Link>Assets\Pokemons\137.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\138.png">
+      <Link>Assets\Pokemons\138.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\139.png">
+      <Link>Assets\Pokemons\139.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\14.png">
+      <Link>Assets\Pokemons\14.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\140.png">
+      <Link>Assets\Pokemons\140.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\141.png">
+      <Link>Assets\Pokemons\141.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\142.png">
+      <Link>Assets\Pokemons\142.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\143.png">
+      <Link>Assets\Pokemons\143.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\144.png">
+      <Link>Assets\Pokemons\144.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\145.png">
+      <Link>Assets\Pokemons\145.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\146.png">
+      <Link>Assets\Pokemons\146.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\147.png">
+      <Link>Assets\Pokemons\147.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\148.png">
+      <Link>Assets\Pokemons\148.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\149.png">
+      <Link>Assets\Pokemons\149.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\15.png">
+      <Link>Assets\Pokemons\15.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\150.png">
+      <Link>Assets\Pokemons\150.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\151.png">
+      <Link>Assets\Pokemons\151.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\16.png">
+      <Link>Assets\Pokemons\16.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\17.png">
+      <Link>Assets\Pokemons\17.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\18.png">
+      <Link>Assets\Pokemons\18.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\19.png">
+      <Link>Assets\Pokemons\19.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\2.png">
+      <Link>Assets\Pokemons\2.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\20.png">
+      <Link>Assets\Pokemons\20.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\21.png">
+      <Link>Assets\Pokemons\21.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\22.png">
+      <Link>Assets\Pokemons\22.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\23.png">
+      <Link>Assets\Pokemons\23.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\24.png">
+      <Link>Assets\Pokemons\24.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\25.png">
+      <Link>Assets\Pokemons\25.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\26.png">
+      <Link>Assets\Pokemons\26.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\27.png">
+      <Link>Assets\Pokemons\27.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\28.png">
+      <Link>Assets\Pokemons\28.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\29.png">
+      <Link>Assets\Pokemons\29.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\3.png">
+      <Link>Assets\Pokemons\3.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\30.png">
+      <Link>Assets\Pokemons\30.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\31.png">
+      <Link>Assets\Pokemons\31.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\32.png">
+      <Link>Assets\Pokemons\32.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\33.png">
+      <Link>Assets\Pokemons\33.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\34.png">
+      <Link>Assets\Pokemons\34.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\35.png">
+      <Link>Assets\Pokemons\35.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\36.png">
+      <Link>Assets\Pokemons\36.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\37.png">
+      <Link>Assets\Pokemons\37.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\38.png">
+      <Link>Assets\Pokemons\38.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\39.png">
+      <Link>Assets\Pokemons\39.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\4.png">
+      <Link>Assets\Pokemons\4.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\40.png">
+      <Link>Assets\Pokemons\40.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\41.png">
+      <Link>Assets\Pokemons\41.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\42.png">
+      <Link>Assets\Pokemons\42.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\43.png">
+      <Link>Assets\Pokemons\43.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\44.png">
+      <Link>Assets\Pokemons\44.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\45.png">
+      <Link>Assets\Pokemons\45.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\46.png">
+      <Link>Assets\Pokemons\46.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\47.png">
+      <Link>Assets\Pokemons\47.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\48.png">
+      <Link>Assets\Pokemons\48.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\49.png">
+      <Link>Assets\Pokemons\49.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\5.png">
+      <Link>Assets\Pokemons\5.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\50.png">
+      <Link>Assets\Pokemons\50.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\51.png">
+      <Link>Assets\Pokemons\51.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\52.png">
+      <Link>Assets\Pokemons\52.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\53.png">
+      <Link>Assets\Pokemons\53.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\54.png">
+      <Link>Assets\Pokemons\54.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\55.png">
+      <Link>Assets\Pokemons\55.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\56.png">
+      <Link>Assets\Pokemons\56.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\57.png">
+      <Link>Assets\Pokemons\57.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\58.png">
+      <Link>Assets\Pokemons\58.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\59.png">
+      <Link>Assets\Pokemons\59.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\6.png">
+      <Link>Assets\Pokemons\6.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\60.png">
+      <Link>Assets\Pokemons\60.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\61.png">
+      <Link>Assets\Pokemons\61.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\62.png">
+      <Link>Assets\Pokemons\62.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\63.png">
+      <Link>Assets\Pokemons\63.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\64.png">
+      <Link>Assets\Pokemons\64.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\65.png">
+      <Link>Assets\Pokemons\65.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\66.png">
+      <Link>Assets\Pokemons\66.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\67.png">
+      <Link>Assets\Pokemons\67.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\68.png">
+      <Link>Assets\Pokemons\68.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\69.png">
+      <Link>Assets\Pokemons\69.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\7.png">
+      <Link>Assets\Pokemons\7.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\70.png">
+      <Link>Assets\Pokemons\70.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\71.png">
+      <Link>Assets\Pokemons\71.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\72.png">
+      <Link>Assets\Pokemons\72.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\73.png">
+      <Link>Assets\Pokemons\73.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\74.png">
+      <Link>Assets\Pokemons\74.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\75.png">
+      <Link>Assets\Pokemons\75.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\76.png">
+      <Link>Assets\Pokemons\76.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\77.png">
+      <Link>Assets\Pokemons\77.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\78.png">
+      <Link>Assets\Pokemons\78.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\79.png">
+      <Link>Assets\Pokemons\79.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\8.png">
+      <Link>Assets\Pokemons\8.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\80.png">
+      <Link>Assets\Pokemons\80.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\81.png">
+      <Link>Assets\Pokemons\81.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\82.png">
+      <Link>Assets\Pokemons\82.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\83.png">
+      <Link>Assets\Pokemons\83.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\84.png">
+      <Link>Assets\Pokemons\84.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\85.png">
+      <Link>Assets\Pokemons\85.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\86.png">
+      <Link>Assets\Pokemons\86.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\87.png">
+      <Link>Assets\Pokemons\87.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\88.png">
+      <Link>Assets\Pokemons\88.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\89.png">
+      <Link>Assets\Pokemons\89.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\9.png">
+      <Link>Assets\Pokemons\9.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\90.png">
+      <Link>Assets\Pokemons\90.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\91.png">
+      <Link>Assets\Pokemons\91.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\92.png">
+      <Link>Assets\Pokemons\92.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\93.png">
+      <Link>Assets\Pokemons\93.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\94.png">
+      <Link>Assets\Pokemons\94.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\95.png">
+      <Link>Assets\Pokemons\95.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\96.png">
+      <Link>Assets\Pokemons\96.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\97.png">
+      <Link>Assets\Pokemons\97.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\98.png">
+      <Link>Assets\Pokemons\98.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Pokemons\99.png">
+      <Link>Assets\Pokemons\99.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\SplashScreen.scale-200.png">
+      <Link>Assets\SplashScreen.scale-200.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Square150x150Logo.scale-200.png">
+      <Link>Assets\Square150x150Logo.scale-200.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Square44x44Logo.scale-200.png">
+      <Link>Assets\Square44x44Logo.scale-200.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Link>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\StoreLogo.png">
+      <Link>Assets\StoreLogo.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Teams\instinct.png">
+      <Link>Assets\Teams\instinct.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Teams\mystic.png">
+      <Link>Assets\Teams\mystic.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Teams\no-team.png">
+      <Link>Assets\Teams\no-team.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Teams\valor.png">
+      <Link>Assets\Teams\valor.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\UI\ash.png">
+      <Link>Assets\UI\ash.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\UI\avatar.gif">
+      <Link>Assets\UI\avatar.gif</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\UI\avatar.png">
+      <Link>Assets\UI\avatar.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\UI\candy.png">
+      <Link>Assets\UI\candy.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\UI\close.png">
+      <Link>Assets\UI\close.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\UI\Desert.jpg">
+      <Link>Assets\UI\Desert.jpg</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\UI\egg.png">
+      <Link>Assets\UI\egg.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\UI\escape.png">
+      <Link>Assets\UI\escape.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\UI\gem.png">
+      <Link>Assets\UI\gem.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\UI\inventory.png">
+      <Link>Assets\UI\inventory.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\UI\panelBG.png">
+      <Link>Assets\UI\panelBG.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\UI\Park.jpg">
+      <Link>Assets\UI\Park.jpg</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\UI\Pokeball.png">
+      <Link>Assets\UI\Pokeball.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\UI\pokestopBG.png">
+      <Link>Assets\UI\pokestopBG.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\UI\poksetop.png">
+      <Link>Assets\UI\poksetop.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\UI\stardust.png">
+      <Link>Assets\UI\stardust.png</Link>
+    </Content>
+    <Content Include="..\PokemonGo-UWP\Assets\Wide310x150Logo.scale-200.png">
+      <Link>Assets\Wide310x150Logo.scale-200.png</Link>
+    </Content>
+    <Content Include="Properties\Default.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="..\PokemonGo-UWP\App.xaml">
+      <Link>App.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="..\PokemonGo-UWP\Styles\Custom.xaml">
+      <Link>Styles\Custom.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="..\PokemonGo-UWP\Views\CapturePokemonPage.xaml">
+      <Link>Views\CapturePokemonPage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\PokemonGo-UWP\Views\Dialogs\Busy.xaml">
+      <Link>Views\Dialogs\Busy.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\PokemonGo-UWP\Views\EggDetailPage.xaml">
+      <Link>Views\EggDetailPage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\PokemonGo-UWP\Views\GameMapPage.xaml">
+      <Link>Views\GameMapPage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\PokemonGo-UWP\Views\MainPage.xaml">
+      <Link>Views\MainPage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\PokemonGo-UWP\Views\PlayerProfilePage.xaml">
+      <Link>Views\PlayerProfilePage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\PokemonGo-UWP\Views\PokemonInventoryPage.xaml">
+      <Link>Views\PokemonInventoryPage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\PokemonGo-UWP\Views\SearchPokestopPage.xaml">
+      <Link>Views\SearchPokestopPage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\PokemonGo-UWP\Views\SettingsPage.xaml">
+      <Link>Views\SettingsPage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\PokemonGo-UWP\Views\Splash.xaml">
+      <Link>Views\Splash.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Google.Protobuf\Google.Protobuf.csproj">
+      <Project>{8a901eed-55b1-4355-b3e4-79bc08d129f6}</Project>
+      <Name>Google.Protobuf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PokemonGoAPI\PokemonGoAPI.csproj">
+      <Project>{c7fe57c5-a786-4b6e-b2c9-c026f347d461}</Project>
+      <Name>PokemonGoAPI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="WindowsMobile, Version=10.0.10586.0">
+      <Name>Windows Mobile Extensions for the UWP</Name>
+    </SDKReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

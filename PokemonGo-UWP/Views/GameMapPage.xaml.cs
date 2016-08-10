@@ -96,14 +96,9 @@ namespace PokemonGo_UWP.Views
 			SystemNavigationManager.GetForCurrentView().BackRequested -= OnBackRequested;
             if (SettingsService.Instance.IsMapZoomEnabled)
             {
-                savezoomlevel();
-            }
-		}
-
-        private void savezoomlevel()
-        {
             SettingsService.Instance.Zoomlevel = GameMapControl.ZoomLevel;
-        }
+			}
+		}
 
         #endregion
 
