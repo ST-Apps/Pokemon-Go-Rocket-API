@@ -46,11 +46,11 @@ namespace PokemonGo_UWP.Utils
     /// </summary>
     public static class GameClient
     {
-        //TODO: MOCK THIS / 
+        //TODO: MOCK THIS
         //public static double InteractionRangeMeters => GameSetting.FortSettings.InteractionRangeMeters;
         public static int InteractionRangeMeters = 50;
         #region Client Vars
-        //TODO: MOCK THIS / 
+        //TODO: MOCK THIS
         //private static ISettings ClientSettings;
         //private static Client Client;
 
@@ -70,7 +70,7 @@ namespace PokemonGo_UWP.Utils
             }
         }
 
-        //TODO: MOCK THIS / 
+        //TODO: MOCK THIS
         ///// <summary>
         ///// Settings downloaded from server
         ///// </summary>
@@ -167,7 +167,7 @@ namespace PokemonGo_UWP.Utils
         /// <returns>true if login worked</returns>
         public static async Task<bool> DoPtcLogin(string username, string password)
         {
-            //TODO: MOCK THIS / 
+            //TODO: MOCK THIS
             //ClientSettings = new Settings
             //{
             //    PtcUsername = username,
@@ -200,7 +200,7 @@ namespace PokemonGo_UWP.Utils
         /// <returns>true if login worked</returns>
         public static async Task<bool> DoGoogleLogin(string email, string password)
         {
-            //TODO: MOCK THIS / 
+            //TODO: MOCK THIS
             //ClientSettings = new Settings
             //{
             //    GoogleUsername = email,
@@ -294,7 +294,7 @@ namespace PokemonGo_UWP.Utils
             };
             // Update before starting timer            
             Busy.SetBusy(true, Resources.Translation.GetString("GettingUserData"));
-            //TODO: MOCK THIS / 
+            //TODO: MOCK THIS
             //GameSetting = (await Client.Download.GetSettings()).Settings;
             await UpdateMapObjects();
             await UpdateInventory();
@@ -375,7 +375,7 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<Tuple<GetMapObjectsResponse, GetHatchedEggsResponse, POGOProtos.Networking.Responses.GetInventoryResponse, CheckAwardedBadgesResponse, DownloadSettingsResponse>> GetMapObjects(Geoposition geoposition)
         {
-            //TODO: MOCK THIS / 
+            //TODO: MOCK THIS
             //// Sends the updated position to the client
             //await
             //    Client.Player.UpdatePlayerLocation(geoposition.Coordinate.Point.Position.Latitude,
@@ -410,7 +410,7 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<GetPlayerResponse> GetProfile()
         {
-            //TODO: MOCK THIS / 
+            //TODO: MOCK THIS
             //return await Client.Player.GetPlayer();
             return null;
         }
@@ -421,7 +421,7 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<GetInventoryResponse> GetInventory()
         {
-            //TODO: MOCK THIS / 
+            //TODO: MOCK THIS
             return null;
             //return await Client.Inventory.GetInventory();
         }
@@ -432,7 +432,7 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<LevelUpRewardsResponse> GetLevelUpRewards(int newLevel)
         {
-            //TODO: MOCK THIS / 
+            //TODO: MOCK THIS
             return null;
             //return await Client.Player.GetLevelUpRewards(newLevel);
         }
@@ -444,7 +444,7 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         private static async Task UpdateItemTemplates()
         {
-            //TODO: MOCK THIS / 
+            //TODO: MOCK THIS
             //// Get all the templates
             //var itemTemplates = (await Client.Download.GetItemTemplates()).ItemTemplates;
             //// Update Pokedex data
@@ -519,7 +519,7 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<EncounterResponse> EncounterPokemon(ulong encounterId, string spawnpointId)
         {
-            //TODO: MOCK THIS / 
+            //TODO: MOCK THIS
             return null;
             //return await Client.Encounter.EncounterPokemon(encounterId, spawnpointId);
         }
@@ -536,7 +536,7 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<CatchPokemonResponse> CatchPokemon(ulong encounterId, string spawnpointId, ItemId captureItem, bool hitPokemon = true)
         {
-            //TODO: MOCK THIS / 
+            //TODO: MOCK THIS
             return null;
             //var random = new Random();
             //return await Client.Encounter.CatchPokemon(encounterId, spawnpointId, captureItem, random.NextDouble() * 1.95D, random.NextDouble(), 1, hitPokemon);
@@ -551,7 +551,7 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<UseItemCaptureResponse> UseCaptureItem(ulong encounterId, string spawnpointId, ItemId captureItem)
         {
-            //TODO: MOCK THIS / 
+            //TODO: MOCK THIS
             return null;
             //return await Client.Encounter.UseCaptureItem(encounterId, captureItem, spawnpointId);
         }
@@ -571,7 +571,7 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<FortDetailsResponse> GetFort(string pokestopId, double latitude, double longitude)
         {
-            //TODO: MOCK THIS / 
+            //TODO: MOCK THIS
             return null;
             //return await Client.Fort.GetFort(pokestopId, latitude, longitude);
         }
@@ -585,7 +585,7 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<FortSearchResponse> SearchFort(string pokestopId, double latitude, double longitude)
         {
-            //TODO: MOCK THIS / 
+            //TODO: MOCK THIS
             return null;
             //return await Client.Fort.SearchFort(pokestopId, latitude, longitude);
         }
@@ -602,7 +602,7 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<UseItemEggIncubatorResponse> UseEggIncubator(EggIncubator incubator, PokemonData egg)
         {
-            //TODO: MOCK THIS / 
+            //TODO: MOCK THIS
             return null;
             //return await Client.Inventory.UseItemEggIncubator(incubator.Id, egg.Id);
         }
