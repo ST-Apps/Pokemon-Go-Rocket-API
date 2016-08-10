@@ -153,7 +153,7 @@ namespace PokemonGo_UWP.ViewModels {
             Achievements.Add(new KeyValuePair<AchievementType, object>(AchievementType.FairyTaleGirl, PlayerStats.PokemonCaughtByType[(int)PokemonType.Fairy]));
             Achievements.Add(new KeyValuePair<AchievementType, object>(AchievementType.Youngster, PlayerStats.SmallRattataCaught));
             Achievements.Add(new KeyValuePair<AchievementType, object>(AchievementType.Fisherman, PlayerStats.BigMagikarpCaught));
-            Achievements.Add(new KeyValuePair<AchievementType, object>(AchievementType.Fisherman, PlayerStats.BattleTrainingWon));
+            Achievements.Add(new KeyValuePair<AchievementType, object>(AchievementType.AceTrainer, PlayerStats.BattleTrainingWon));
         }
 
         #endregion

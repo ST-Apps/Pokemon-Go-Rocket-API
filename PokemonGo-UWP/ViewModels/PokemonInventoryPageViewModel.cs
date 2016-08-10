@@ -51,7 +51,7 @@ namespace PokemonGo_UWP.ViewModels
 
                 RaisePropertyChanged(() => PokemonInventory);
 
-                foreach (var pokemonData in GameClient.EggsInventory)
+                foreach (var pokemonData in GameClient.EggsInventory.OrderBy(c => c.EggKmWalkedTarget))
                 {
                     EggsInventory.Add(new PokemonDataWrapper(pokemonData));
                 }                    

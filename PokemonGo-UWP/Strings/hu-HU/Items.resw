@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- Traduccion al Español 1.0 por Elemental Code (Milton Candelero)
+  <!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -117,145 +117,130 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CoolDownText.Text" xml:space="preserve">
-    <value>Tienes que esperar un rato</value>
+  <data name="D_ItemGreatBall" xml:space="preserve">
+    <value>Egy készülék a vadonban élő Pokémonok elfogásához. Dobd neki egy vad Pokémonnak és ez kényelmesen magába zárja a célpontot.</value>
   </data>
-  <data name="GettingGPSSignal" xml:space="preserve">
-    <value>Obteniendo señal GPS...</value>
+  <data name="D_ItemIncenseCool" xml:space="preserve">
+    <value>A füstölő egy titokzatos illattal a közeledbe csalogatja a vad Pokémonokat 30 percig.</value>
   </data>
-  <data name="GettingUserData" xml:space="preserve">
-    <value>Obteniendo datos de usuario...</value>
+  <data name="D_ItemIncenseFloral" xml:space="preserve">
+    <value>A füstölő egy titokzatos illattal a közeledbe csalogatja a vad Pokémonokat 30 percig.</value>
   </data>
-  <data name="googleButton.Text" xml:space="preserve">
-    <value>GOOGLE</value>
+  <data name="D_ItemIncenseOrdinary" xml:space="preserve">
+    <value>A füstölő egy titokzatos illattal a közeledbe csalogatja a vad Pokémonokat 30 percig.</value>
   </data>
-  <data name="InventoryFullText.Text" xml:space="preserve">
-    <value>¡Tu inventario está lleno!</value>
+  <data name="D_ItemIncenseSpicy" xml:space="preserve">
+    <value>A füstölő egy titokzatos illattal a közeledbe csalogatja a vad Pokémonokat 30 percig.</value>
   </data>
-  <data name="loginButton.Text" xml:space="preserve">
-    <value>INICIA SESION con una cuenta PTC</value>
+  <data name="D_ItemIncubatorBasic" xml:space="preserve">
+    <value>Egy eszköz, ami kikelti a tojásod úgy, hogy addig kell sétálnod, ameddig ki nem kel a Pokémonod.</value>
   </data>
-  <data name="loginInfoText.Text" xml:space="preserve">
-    <value>Para iniciar sesion tienes que insertar tu Usuario/Email y Contraseña en esta app. Si no confía en esta app, por favor ciérrela. No nos hacemos responsables de nada.</value>
+  <data name="D_ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>Egy eszköz, ami kikelti a tojásod úgy, hogy addig kell sétálnod, ameddig ki nem kel a Pokémonod.</value>
   </data>
-  <data name="logoutText.Text" xml:space="preserve">
-    <value>CERRAR SESION</value>
+  <data name="D_ItemMasterBall" xml:space="preserve">
+    <value>Egy készülék a vadonban élő Pokémonok elfogásához. Dobd neki egy vad Pokémonnak és ez kényelmesen magába zárja a célpontot.</value>
   </data>
-  <data name="nearbyText.Text" xml:space="preserve">
-    <value>cerca</value>
+  <data name="D_ItemPokeBall" xml:space="preserve">
+    <value>Egy készülék a vadonban élő Pokémonok elfogásához. Dobd neki egy vad Pokémonnak és ez kényelmesen magába zárja a célpontot.</value>
   </data>
-  <data name="OutOfRangeText.Text" xml:space="preserve">
-    <value>Fuera del rango</value>
+  <data name="D_ItemPotion" xml:space="preserve">
+    <value>Egy olyan növényi spray típusú gyógyszer, ami a sebek kezelésére van. Használatkor 20 HP-t ad a Pokémonodnak.</value>
   </data>
-  <data name="passwordBox.PlaceholderText" xml:space="preserve">
-    <value>Contraseña</value>
+  <data name="D_ItemRevive" xml:space="preserve">
+    <value>Egy gyógyszer, amely képes újraéleszteni az elájult Pokémonod. Visszatölti az elájult Pokémonod maximum életpontjának felét.</value>
   </data>
-  <data name="usernameTextBox.PlaceholderText" xml:space="preserve">
-    <value>Usuario/Email</value>
+  <data name="D_ItemUltraBall" xml:space="preserve">
+    <value>Egy készülék a vadonban élő Pokémonok elfogásához. Dobd neki egy vad Pokémonnak és ez kényelmesen magába zárja a célpontot.</value>
   </data>
-  <data name="XPText.Text" xml:space="preserve">
-    <value>XP</value>
+  <data name="ItemBlukBerry" xml:space="preserve">
+    <value>Bluk Bogyó</value>
   </data>
-  <data name="OKButton.Content" xml:space="preserve">
-    <value>OK</value>
+  <data name="ItemGreatBall" xml:space="preserve">
+    <value>Kitűnő labda</value>
   </data>
-  <data name="LoadingEncounter" xml:space="preserve">
-    <value>Cargando encuentro con </value>
+  <data name="ItemHyperPotion" xml:space="preserve">
+    <value>Hyper főzet</value>
   </data>
-  <data name="LoggingIn" xml:space="preserve">
-    <value>Iniciando sesion...</value>
+  <data name="ItemIncenseCool" xml:space="preserve">
+    <value>Hűvös füstölő</value>
   </data>
-  <data name="Fleed" xml:space="preserve">
-    <value> ha escapado</value>
+  <data name="ItemIncenseFloral" xml:space="preserve">
+    <value>Virág füstölő</value>
   </data>
-  <data name="GoogleError" xml:space="preserve">
-    <value>Google retornó el error: </value>
+  <data name="ItemIncenseOrdinary" xml:space="preserve">
+    <value>Átlagos füstölő</value>
   </data>
-  <data name="GoogleNotResponding" xml:space="preserve">
-    <value>Google no está respondiendo. Intente mas tarde.</value>
+  <data name="ItemIncenseSpicy" xml:space="preserve">
+    <value>Fűszer füstölő</value>
   </data>
-  <data name="LoginFailed" xml:space="preserve">
-    <value>Falló el inicio de sesion. Intente nuevamente.</value>
+  <data name="ItemIncubatorBasic" xml:space="preserve">
+    <value>Alap inkubátor</value>
   </data>
-  <data name="No" xml:space="preserve">
-    <value>No</value>
+  <data name="ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>Végtelen inkubátor</value>
   </data>
-  <data name="NoGPSPermissions" xml:space="preserve">
-    <value>Se necesitan permisos GPS para correr el juego, por favor activelos e intente nuevamente.</value>
+  <data name="ItemItemStorageUpgrade" xml:space="preserve">
+    <value>Tárgy kapacitás növelés</value>
   </data>
-  <data name="PokemonRanAway" xml:space="preserve">
-    <value>El Pokémon se ha escapado :(</value>
+  <data name="ItemLuckyEgg" xml:space="preserve">
+    <value>Szerencse tojás</value>
   </data>
-  <data name="PTCDown" xml:space="preserve">
-    <value>El servidor de PTC probablemente esté saturado. Intente nuevamente mas tarde.</value>
+  <data name="ItemMasterBall" xml:space="preserve">
+    <value>Mester labda</value>
   </data>
-  <data name="SomethingWentWrong" xml:space="preserve">
-    <value>En algun lugar algo salío mal y la app podria ser inestable. Quieres cerrar la app y volver a iniciar sesion?</value>
+  <data name="ItemMaxPotion" xml:space="preserve">
+    <value>Maximális főzet</value>
   </data>
-  <data name="UpdatedVersion" xml:space="preserve">
-    <value>Una actualización {0} está disponible. ¿Deseas actualizar?
-{1}</value>
+  <data name="ItemMaxRevive" xml:space="preserve">
+    <value>Maximális felélesztés</value>
   </data>
-  <data name="WrongUsername" xml:space="preserve">
-    <value>Error en Usuario/Contraseña o el servidor está offline, intente nuevamente.</value>
+  <data name="ItemNanabBerry" xml:space="preserve">
+    <value>Nanab Bogyó</value>
   </data>
-  <data name="Yes" xml:space="preserve">
-    <value>Si</value>
+  <data name="ItemPinapBerry" xml:space="preserve">
+    <value>Pinap Bogyó</value>
   </data>
-  <data name="CPText.Text" xml:space="preserve">
-    <value>PC</value>
+  <data name="ItemPokeBall" xml:space="preserve">
+    <value>Pokélabda</value>
   </data>
-  <data name="EggsText.Text" xml:space="preserve">
-    <value>HUEVOS</value>
+  <data name="ItemPokemonStorageUpgrade" xml:space="preserve">
+    <value>Pokémon kapacitás növelés</value>
   </data>
-  <data name="MusicTitleText.Text" xml:space="preserve">
-    <value>Musica</value>
+  <data name="ItemPotion" xml:space="preserve">
+    <value>Főzet</value>
   </data>
-  <data name="PokemonText.Text" xml:space="preserve">
-    <value>POKÉMON</value>
+  <data name="ItemRazzBerry" xml:space="preserve">
+    <value>Málna</value>
   </data>
-  <data name="SettingsHeaderText.Text" xml:space="preserve">
-    <value>CONFIGURACIONES</value>
+  <data name="ItemRevive" xml:space="preserve">
+    <value>Felélesztés</value>
   </data>
-  <data name="SignOutButton.Text" xml:space="preserve">
-    <value>Cerrar Sesion</value>
+  <data name="ItemSpecialCamera" xml:space="preserve">
+    <value>Speciális kamera</value>
   </data>
-  <data name="VibrationTitleText.Text" xml:space="preserve">
-    <value>Vibración</value>
+  <data name="ItemSuperPotion" xml:space="preserve">
+    <value>Szuper főzet</value>
   </data>
-  <data name="ItemsText.Text" xml:space="preserve">
-    <value>OBJETOS</value>
+  <data name="ItemTroyDisk" xml:space="preserve">
+    <value>Trójai lemez</value>
   </data>
-  <data name="PokedexText.Text" xml:space="preserve">
-    <value>POKÉDEX</value>
+  <data name="ItemUltraBall" xml:space="preserve">
+    <value>Ultra labda</value>
   </data>
-  <data name="ItemsTextLower.Text" xml:space="preserve">
-    <value>objetos</value>
+  <data name="ItemUnknown" xml:space="preserve">
+    <value>Ismeretlen</value>
   </data>
-  <data name="NumberText.Text" xml:space="preserve">
-    <value># </value>
-    <comment>Cuidado: hay un espacio adelante del #</comment>
+  <data name="ItemWeparBerry" xml:space="preserve">
+    <value>Wepar Bogyó</value>
   </data>
-  <data name="SlashSpaceCPText.Text" xml:space="preserve">
-    <value>/ PC</value>
+  <data name="ItemXAttack" xml:space="preserve">
+    <value>X Támadás</value>
   </data>
-  <data name="SpaceXPText.Text" xml:space="preserve">
-    <value> XP</value>
+  <data name="ItemXDefense" xml:space="preserve">
+    <value>X Védekezés</value>
   </data>
-  <data name="TotalText.Text" xml:space="preserve">
-    <value>TOTAL</value>
-  </data>
-  <data name="UpdateDownloading" xml:space="preserve">
-    <value>Descargando actualización {0}</value>
-  </data>
-  <data name="UpdateInstalling" xml:space="preserve">
-    <value>Instalando actualización, la app se reiniciará...</value>
-  </data>
-  <data name="UpdateFailed" xml:space="preserve">
-    <value>Falló la actualización: {0}
-Abrir la pagina con los archivos para intentar instalacion manual?</value>
-  </data>
-  <data name="LevelupText.Text" xml:space="preserve">
-    <value>¡Subida de Nivel!</value>
+  <data name="ItemXMiracle" xml:space="preserve">
+    <value>X Képesség</value>
   </data>
 </root>

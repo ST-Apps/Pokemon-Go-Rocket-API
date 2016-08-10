@@ -348,4 +348,36 @@
   <data name="BadgeSmallRattata" xml:space="preserve">
     <value>Teenager</value>
   </data>
+    <data name="ItemsText.Text" xml:space="preserve">
+    <value>ITEMS</value>
+  </data>
+    <data name="ItemsTextLower.Text" xml:space="preserve">
+    <value>items</value>
+  </data>
+    <data name="LevelupText.Text" xml:space="preserve">
+    <value>Neues Level!</value>
+  </data>
+    <data name="NumberText.Text" xml:space="preserve">
+    <value># </value>
+    <comment>Watch out: there is a space after the #</comment>
+  </data>
+    <data name="PokedexText.Text" xml:space="preserve">
+    <value>POKÉDEX</value>
+  </data>
+    <data name="SlashSpaceCPText.Text" xml:space="preserve">
+    <value>/ CP</value>
+  </data>
+    <data name="SpaceXPText.Text" xml:space="preserve">
+    <value> EP</value>
+  </data>
+    <data name="UpdateDownloading" xml:space="preserve">
+    <value>Aktualiersung herunterladen {0}</value>
+  </data>
+    <data name="UpdateFailed" xml:space="preserve">
+    <value>Aktualisierung fehlgeschlagen: {0}
+Öfnnen Sie zur manuellen Installation die Seite mit den Installationsdateien?</value>
+  </data>
+    <data name="UpdateInstalling" xml:space="preserve">
+    <value>Aktualisierung wird installiert und die App neu gestartet...</value>
+  </data>
 </root>
