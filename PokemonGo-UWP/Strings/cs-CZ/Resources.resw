@@ -267,10 +267,19 @@ Chcete otevřít stránku se soubory k manuální instalaci?</value>
   <data name="RememberMapZoomTitleText.Text" xml:space="preserve">
     <value>Zapamatovat Nastavení Mapy</value>
   </data>
+  <data name="incubatorsText.Text" xml:space="preserve">
+    <value>INKUBÁTORY</value>
+  </data>
   <data name="LevelText.Text" xml:space="preserve">
     <value>Úroveň</value>
   </data>
   <data name="StartDateText.Text" xml:space="preserve">
     <value>Datum zahájení výpravy</value>
+  </data>
+  <data name="StartIncubationText.Text" xml:space="preserve">
+    <value>ZAČÍT INKUBACI</value>
+  </data>
+  <data name="UseIncubatorText.Text" xml:space="preserve">
+    <value>Použíjte inkubátor pro zahájení inkubace vajec.</value>
   </data>
 </root>
