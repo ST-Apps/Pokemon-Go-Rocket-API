@@ -176,17 +176,17 @@ namespace PokemonGo_UWP.ViewModels
         {
             switch (sortingMode)
             {
-                case PokemonSortingModes.Date:
+                case PokemonSortingModes.(Utils.Resources.Translation.GetString("SortbyDate")):
                     return pokemonInventory.OrderByDescending(pokemon => pokemon.CreationTimeMs);
-                case PokemonSortingModes.Fav:
+                case PokemonSortingModes.(Utils.Resources.Translation.GetString("SortbyFav")):
                     return pokemonInventory.OrderByDescending(pokemon => pokemon.Favorite);
-                case PokemonSortingModes.Number:
+                case PokemonSortingModes.(Utils.Resources.Translation.GetString("SortbyNumber")):
                     return pokemonInventory.OrderBy(pokemon => pokemon.PokemonId);
-                case PokemonSortingModes.Health:
+                case PokemonSortingModes.(Utils.Resources.Translation.GetString("SortbyHealth")):
                     return pokemonInventory.OrderByDescending(pokemon => pokemon.Stamina);
-                case PokemonSortingModes.Name:
+                case PokemonSortingModes.(Utils.Resources.Translation.GetString("SortbyName")):
                     return pokemonInventory.OrderBy(pokemon => Utils.Resources.Pokemon.GetString(pokemon.PokemonId.ToString()));
-                case PokemonSortingModes.Combat:
+                case PokemonSortingModes.(Utils.Resources.Translation.GetString("SortbyCombat")):
                     return pokemonInventory.OrderByDescending(pokemon => pokemon.Cp);
                 default:
                     throw new ArgumentOutOfRangeException(nameof(CurrentPokemonSortingMode), sortingMode, null);
