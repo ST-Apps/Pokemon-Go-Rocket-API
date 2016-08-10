@@ -11,7 +11,7 @@ namespace PokemonGo_UWP.Utils
 
         private readonly SettingsHelper _helper;
 
-        private PasswordVault _passwordVault = new PasswordVault();
+        private readonly PasswordVault _passwordVault = new PasswordVault();
 
         static SettingsService()
         {
@@ -24,6 +24,12 @@ namespace PokemonGo_UWP.Utils
         }
 
         #region Login & Authentication
+
+        public string UDID
+        {
+            get { return _helper.Read(nameof(UDID), string.Empty); }
+            set { _helper.Write(nameof(UDID), value); }
+        }
 
         public AuthType LastLoginService
         {
