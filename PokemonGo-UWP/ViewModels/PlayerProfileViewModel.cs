@@ -15,6 +15,7 @@ using POGOProtos.Enums;
 
 namespace PokemonGo_UWP.ViewModels {
     public class PlayerProfileViewModel : ViewModelBase {
+
         #region Lifecycle Handlers
 
         /// <summary>
@@ -36,12 +37,8 @@ namespace PokemonGo_UWP.ViewModels {
                 InventoryDelta = (await GameClient.GetInventory()).InventoryDelta;
                 var tmpStats = InventoryDelta.InventoryItems.First(item => item.InventoryItemData.PlayerStats != null).InventoryItemData.PlayerStats;
                 PlayerStats = tmpStats;
-                RaisePropertyChanged(nameof(ExperienceValue));
-                RaisePropertyChanged(nameof(CurrentLevelXP));
-                RaisePropertyChanged(nameof(TotalLevelXP));
-                RaisePropertyChanged(nameof(Pokecoins));
             }
-            ReadPlayerStatsValues();
+            ReadPlayerStatsValues();            
             await Task.CompletedTask;
         }
 
@@ -111,15 +108,7 @@ namespace PokemonGo_UWP.ViewModels {
             set { Set(ref _inventoryDelta, value); }
         }
 
-        public ObservableCollection<KeyValuePair<AchievementType, object>> Achievements { get; } = new ObservableCollection<KeyValuePair<AchievementType, object>>();
-
-        public int ExperienceValue => _playerStats == null ? 0 : (int)(((double)_playerStats.Experience - _playerStats.PrevLevelXp) / (_playerStats.NextLevelXp - _playerStats.PrevLevelXp) * 100);
-
-        public long CurrentLevelXP => PlayerStats != null ? PlayerStats.Experience - PlayerStats.PrevLevelXp : 0;
-
-        public long TotalLevelXP => PlayerStats != null ? PlayerStats.NextLevelXp - PlayerStats.PrevLevelXp : 0;
-
-        public long Pokecoins => PlayerStats != null ? PlayerProfile.Currencies.First(item => item.Name.Equals("POKECOIN")).Amount : 0;
+        public ObservableCollection<KeyValuePair<AchievementType, object>> Achievements { get; } = new ObservableCollection<KeyValuePair<AchievementType, object>>();                
 
         #endregion
 
@@ -164,7 +153,7 @@ namespace PokemonGo_UWP.ViewModels {
             Achievements.Add(new KeyValuePair<AchievementType, object>(AchievementType.FairyTaleGirl, PlayerStats.PokemonCaughtByType[(int)PokemonType.Fairy]));
             Achievements.Add(new KeyValuePair<AchievementType, object>(AchievementType.Youngster, PlayerStats.SmallRattataCaught));
             Achievements.Add(new KeyValuePair<AchievementType, object>(AchievementType.Fisherman, PlayerStats.BigMagikarpCaught));
-            Achievements.Add(new KeyValuePair<AchievementType, object>(AchievementType.Fisherman, PlayerStats.BattleTrainingWon));
+            Achievements.Add(new KeyValuePair<AchievementType, object>(AchievementType.AceTrainer, PlayerStats.BattleTrainingWon));
         }
 
         #endregion

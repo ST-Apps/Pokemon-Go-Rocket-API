@@ -88,6 +88,23 @@
                               Style="{StaticResource SettingsCheckbox}" />
                 </Grid>
 
+                <Grid Margin="15,0,30,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               x:Uid="MapAutoRotateTitleText"
+                               Text="Remember Map Zoom"
+                               Style="{StaticResource TextSettingsTitle}"
+                               VerticalAlignment="Center" />
+
+                    <CheckBox Grid.Column="1"
+                              x:Name="MapRememberZoomCheckbox"
+                              IsChecked="{Binding IsAutoRotateMapEnabled, Mode=TwoWay}"
+                              Style="{StaticResource SettingsCheckbox}" />
+                </Grid>
+
                 <Border Background="#33ffffff" 
                         Height="0.3" 
                         Margin="15,15,15,0" />

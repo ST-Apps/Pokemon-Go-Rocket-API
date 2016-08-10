@@ -36,6 +36,11 @@ namespace PokemonGo_UWP
         {
             InitializeComponent();
             SplashFactory = e => new Splash(e);
+            // ensure unobserved task exceptions (unawaited async methods returning Task or Task<T>) are handled
+            TaskScheduler.UnobservedTaskException += TaskScheduler_UnobservedTaskException;
+
+            // ensure general app exceptions are handled
+            Application.Current.UnhandledException += App_UnhandledException;
 
 #if DEBUG
             // Init logger
@@ -49,6 +54,19 @@ namespace PokemonGo_UWP
             // Forces the display to stay on while we play
             DisplayRequest = new DisplayRequest();
             DisplayRequest.RequestActive();                            
+        }
+
+        private static async void App_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            e.Handled = true;
+            await ExceptionHandler.HandleException();
+        }
+
+        private static void TaskScheduler_UnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs e)
+        {
+            e.SetObserved();
+            Logger.Write(e.Exception.Message);
+            HockeyClient.Current.TrackException(e.Exception);
         }
 
         public override async Task OnInitializeAsync(IActivatedEventArgs args)
@@ -68,6 +86,7 @@ namespace PokemonGo_UWP
 
         public override async Task OnStartAsync(StartKind startKind, IActivatedEventArgs args)
         {
+            AsyncSynchronizationContext.Register();
             // TODO: this is really ugly!
             if (!string.IsNullOrEmpty(SettingsService.Instance.AuthToken))
             {

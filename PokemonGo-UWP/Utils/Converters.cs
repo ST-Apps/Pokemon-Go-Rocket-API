@@ -19,6 +19,7 @@ using POGOProtos.Map.Pokemon;
 using POGOProtos.Networking.Responses;
 using Windows.UI.Xaml.Media.Imaging;
 using System.Reflection;
+using POGOProtos.Data.Player;
 
 namespace PokemonGo_UWP.Utils
 {
@@ -144,10 +145,10 @@ namespace PokemonGo_UWP.Utils
         #region Implementation of IValueConverter
 
         public object Convert(object value, Type targetType, object parameter, string language) {
-            AchievementType achievementType = (AchievementType) value;
-            Type type = achievementType.GetType();
-            FieldInfo fieldInfo = type.GetField(achievementType.ToString());
-            BadgeTypeAttribute badgeType = (BadgeTypeAttribute)fieldInfo.GetCustomAttributes(typeof(BadgeTypeAttribute), false).First();
+            var achievementType = (AchievementType) value;
+            var type = achievementType.GetType();
+            var fieldInfo = type.GetField(achievementType.ToString());
+            var badgeType = (BadgeTypeAttribute)fieldInfo.GetCustomAttributes(typeof(BadgeTypeAttribute), false).First();
             
             if(badgeType == null) {
                 return "";
@@ -167,25 +168,26 @@ namespace PokemonGo_UWP.Utils
         #region Implementation of IValueConverter
 
         public object Convert(object value, Type targetType, object parameter, string language) {
-            KeyValuePair<AchievementType, object> achievement = (KeyValuePair<AchievementType, object>)value;
-            Type type = achievement.Key.GetType();
-            FieldInfo fieldInfo = type.GetField(achievement.Key.ToString());
-            BronzeAttribute bronze = (BronzeAttribute)fieldInfo.GetCustomAttributes(typeof(BronzeAttribute), false).First();
-            SilverAttribute silver = (SilverAttribute)fieldInfo.GetCustomAttributes(typeof(SilverAttribute), false).First();
-            GoldAttribute gold = (GoldAttribute)fieldInfo.GetCustomAttributes(typeof(GoldAttribute), false).First();
+            var achievement = (KeyValuePair<AchievementType, object>)value;
+            var type = achievement.Key.GetType();
+            var fieldInfo = type.GetField(achievement.Key.ToString());
+            var bronze = (BronzeAttribute)fieldInfo.GetCustomAttributes(typeof(BronzeAttribute), false).First();
+            var silver = (SilverAttribute)fieldInfo.GetCustomAttributes(typeof(SilverAttribute), false).First();
+            var gold = (GoldAttribute)fieldInfo.GetCustomAttributes(typeof(GoldAttribute), false).First();
 
             if(value == null) {
                 return new BitmapImage(new Uri("ms-appx:///Assets/Achievements/badge_lv0.png"));
             }
             if(float.Parse(achievement.Value.ToString()) < float.Parse(bronze.Value.ToString())) {
                 return new BitmapImage(new Uri("ms-appx:///Assets/Achievements/badge_lv0.png"));
-            } else if(float.Parse(achievement.Value.ToString()) < float.Parse(silver.Value.ToString())) {
-                return new BitmapImage(new Uri("ms-appx:///Assets/Achievements/badge_lv1.png"));
-            } else if(float.Parse(achievement.Value.ToString()) < float.Parse(gold.Value.ToString())) {
-                return new BitmapImage(new Uri("ms-appx:///Assets/Achievements/badge_lv2.png"));
-            } else {
-                return new BitmapImage(new Uri("ms-appx:///Assets/Achievements/badge_lv3.png"));
             }
+            if(float.Parse(achievement.Value.ToString()) < float.Parse(silver.Value.ToString())) {
+                return new BitmapImage(new Uri("ms-appx:///Assets/Achievements/badge_lv1.png"));
+            }
+            if(float.Parse(achievement.Value.ToString()) < float.Parse(gold.Value.ToString())) {
+                return new BitmapImage(new Uri("ms-appx:///Assets/Achievements/badge_lv2.png"));
+            }
+            return new BitmapImage(new Uri("ms-appx:///Assets/Achievements/badge_lv3.png"));
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language) {
@@ -199,37 +201,30 @@ namespace PokemonGo_UWP.Utils
         #region Implementation of IValueConverter
 
         public object Convert(object value, Type targetType, object parameter, string language) {
-            KeyValuePair<AchievementType, object> achievement = (KeyValuePair<AchievementType, object>) value;
-            Type type = achievement.Key.GetType();
-            FieldInfo fieldInfo = type.GetField(achievement.Key.ToString());
-            BronzeAttribute bronze = (BronzeAttribute)fieldInfo.GetCustomAttributes(typeof(BronzeAttribute), false).First();
-            SilverAttribute silver = (SilverAttribute)fieldInfo.GetCustomAttributes(typeof(SilverAttribute), false).First();
-            GoldAttribute gold = (GoldAttribute)fieldInfo.GetCustomAttributes(typeof(GoldAttribute), false).First();
+            var achievement = (KeyValuePair<AchievementType, object>) value;
+            var type = achievement.Key.GetType();
+            var fieldInfo = type.GetField(achievement.Key.ToString());
+            var bronze = (BronzeAttribute)fieldInfo.GetCustomAttributes(typeof(BronzeAttribute), false).First();
+            var silver = (SilverAttribute)fieldInfo.GetCustomAttributes(typeof(SilverAttribute), false).First();
+            var gold = (GoldAttribute)fieldInfo.GetCustomAttributes(typeof(GoldAttribute), false).First();
 
-            if(value == null) {
-                return 0;
-            }
-            if(typeof(float) == achievement.Value.GetType()) {
+            if(achievement.Value is float)
+            {
                 if(float.Parse(achievement.Value.ToString()) < float.Parse(bronze.Value.ToString())) {
                     return float.Parse(bronze.Value.ToString()).ToString("N1");
-                } else if(float.Parse(achievement.Value.ToString()) < float.Parse(silver.Value.ToString())) {
+                }
+                if(float.Parse(achievement.Value.ToString()) < float.Parse(silver.Value.ToString())) {
                     return float.Parse(silver.Value.ToString()).ToString("N1");
-                } else if(float.Parse(achievement.Value.ToString()) < float.Parse(gold.Value.ToString())) {
-                    return float.Parse(gold.Value.ToString()).ToString("N1");
-                } else {
-                    return float.Parse(gold.Value.ToString()).ToString("N1");
                 }
-            } else {
-                if(int.Parse(achievement.Value.ToString()) < int.Parse(bronze.Value.ToString())) {
-                    return bronze.Value;
-                } else if(int.Parse(achievement.Value.ToString()) < int.Parse(silver.Value.ToString())) {
-                    return silver.Value;
-                } else if(int.Parse(achievement.Value.ToString()) < int.Parse(gold.Value.ToString())) {
-                    return gold.Value;
-                } else {
-                    return gold.Value;
-                }
+                return float.Parse(gold.Value.ToString()).ToString("N1");
             }
+            if(int.Parse(achievement.Value.ToString()) < int.Parse(bronze.Value.ToString())) {
+                return bronze.Value;
+            }
+            if(int.Parse(achievement.Value.ToString()) < int.Parse(silver.Value.ToString())) {
+                return silver.Value;
+            }
+            return gold.Value;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language) {
@@ -247,14 +242,45 @@ namespace PokemonGo_UWP.Utils
             if(value == null) {
                 return 0;
             }
-            if(typeof(float) == value.GetType()) {
+            if(value is float) {
                     return float.Parse(value.ToString()).ToString("N1");
-            } else {
-                    return value;
             }
+            return value;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language) {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class AchievementToCompletedPercentageConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var achievement = (KeyValuePair<AchievementType, object>) value;
+            var currentValueConverted = new AchievementValueConverter().Convert(achievement.Value, null, null, "");
+            var nextValueConverted = new AchievementNextValueConverter().Convert(achievement, null, null, "");
+            double currentValue = 0, nextValue = 0;
+            currentValue = (currentValueConverted is string)
+                ? double.Parse((string) currentValueConverted)
+                : (currentValueConverted is int)
+                    ? (int) currentValueConverted
+                    : (byte) currentValueConverted;
+
+            nextValue = (nextValueConverted is string)
+                ? double.Parse((string)nextValueConverted)
+                : (nextValueConverted is int)
+                    ? (int)nextValueConverted
+                    : (byte)nextValueConverted;
+            return currentValue/nextValue*100;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
             return value;
         }
 
@@ -301,8 +327,6 @@ namespace PokemonGo_UWP.Utils
 
         public object Convert(object value, Type targetType, object parameter, string language) {
             var teamColor = (TeamColor)value;
-            var currentTime = int.Parse(DateTime.Now.ToString("HH"));
-            var noTeamColor = currentTime > 7 && currentTime < 19 ? Colors.Black : Colors.White;
             var path = "ms-appx:///Assets/Teams/";
 
             switch(teamColor) {
@@ -655,13 +679,13 @@ namespace PokemonGo_UWP.Utils
         #endregion
     }
 
-    public class VisibleWhenStringNotEmptyConverter : IValueConverter
+    public class VisibleWhenStringEmptyConverter : IValueConverter
     {
         #region Implementation of IValueConverter
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            return string.IsNullOrEmpty((string) value) ? Visibility.Collapsed : Visibility.Visible;
+            return string.IsNullOrEmpty((string) value) ? Visibility.Visible : Visibility.Collapsed;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
@@ -689,13 +713,84 @@ namespace PokemonGo_UWP.Utils
         #endregion
     }
 
+    public class PlayerDataToExperienceConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var playerStats = (PlayerStats) value;
+            return playerStats == null ? 0 : (int)(((double)playerStats.Experience - playerStats.PrevLevelXp) / (playerStats.NextLevelXp - playerStats.PrevLevelXp) * 100);
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class PlayerDataToCurrentExperienceConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var playerStats = (PlayerStats)value;
+            return playerStats?.Experience - playerStats?.PrevLevelXp ?? 0;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class PlayerDataToTotalLevelExperienceConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var playerStats = (PlayerStats)value;
+            return playerStats?.NextLevelXp - playerStats?.PrevLevelXp ?? 0;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class PlayerDataToPokeCoinsConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var playerData = (PlayerData)value;
+            return playerData?.Currencies.First(item => item.Name.Equals("POKECOIN")).Amount ?? 0;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
 
     public class MsToDateFormatConverter : IValueConverter {
         #region IValueConverter Members
 
         public object Convert(object value, Type targetType, object parameter, string language) {
-            long ms = (long)value;
-            DateTime date = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Local);
+            var ms = (long)value;
+            var date = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Local);
             date = date.Add(TimeSpan.FromMilliseconds(ms));
             return date.ToString(Resources.Translation.GetString("DateFormat"));
         }

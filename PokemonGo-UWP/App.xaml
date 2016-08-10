@@ -35,6 +35,7 @@
             <utils:ItemToItemDescriptionConverter x:Key="ItemToItemDescriptionConverter"/>
             <utils:IncubatorUsagesCountToUsagesTextConverter x:Key="IncubatorUsagesCountToUsagesTextConverter"/>
             <utils:EggDataToEggIconConverter x:Key="EggDataToEggIconConverter"/>
+            <utils:VisibleWhenStringEmptyConverter x:Key="VisibleWhenStringEmptyConverter" />
             <utils:PlayerStatsTranslationConverter x:Key="PlayerStatsTranslationConverter" />
             <utils:MsToDateFormatConverter x:Key="MsToDateFormatConverter" />
             <utils:PlayerTeamToTeamImageConverter x:Key="PlayerTeamToTeamImageConverter" />
@@ -44,7 +45,12 @@
             <utils:AchievementNextValueConverter x:Key="AchievementNextValueConverter" />
             <utils:AchievementValueConverter x:Key="AchievementValueConverter" />
             <utils:AchievementTranslationConverter x:Key="AchievementTranslationConverter" />
-            
+            <utils:PlayerDataToExperienceConverter x:Key="PlayerDataToExperienceConverter"/>
+            <utils:PlayerDataToCurrentExperienceConverter x:Key="PlayerDataToCurrentExperienceConverter"/>
+            <utils:PlayerDataToTotalLevelExperienceConverter x:Key="PlayerDataToTotalLevelExperienceConverter"/>
+            <utils:PlayerDataToPokeCoinsConverter x:Key="PlayerDataToPokeCoinsConverter"/>
+            <utils:AchievementToCompletedPercentageConverter x:Key="AchievementToCompletedPercentageConverter"/>
+
             <converters:ValueWhenConverter x:Key="EnabledWhenHasElementsConverter">
                 <converters:ValueWhenConverter.When>
                     <x:Double>0</x:Double>
@@ -57,7 +63,7 @@
                 </converters:ValueWhenConverter.Otherwise>
             </converters:ValueWhenConverter>
 
-            <converters:ValueWhenConverter x:Key="VisibleWhenStringNotEmptyConverter">
+            <!--<converters:ValueWhenConverter x:Key="VisibleWhenStringNotEmptyConverter">
                 <converters:ValueWhenConverter.When>
                     <x:String></x:String>
                 </converters:ValueWhenConverter.When>
@@ -67,7 +73,7 @@
                 <converters:ValueWhenConverter.Otherwise>
                     <Visibility>Collapsed</Visibility>
                 </converters:ValueWhenConverter.Otherwise>
-            </converters:ValueWhenConverter>
+            </converters:ValueWhenConverter>-->
 
         </ResourceDictionary>
     </Application.Resources>

@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Abra" xml:space="preserve">
+    <value>卡斯</value>
+  </data>
+  <data name="Aerodactyl" xml:space="preserve">
+    <value>化石翼龙</value>
+  </data>
+  <data name="Alakazam" xml:space="preserve">
+    <value>胡地</value>
+  </data>
+  <data name="Arbok" xml:space="preserve">
+    <value>阿柏怪</value>
+  </data>
+  <data name="Arcanine" xml:space="preserve">
+    <value>风速狗</value>
+  </data>
+  <data name="Articuno" xml:space="preserve">
+    <value>急冻鸟</value>
+  </data>
+  <data name="Beedrill" xml:space="preserve">
+    <value>大针蜂</value>
+  </data>
+  <data name="Bellsprout" xml:space="preserve">
+    <value>喇叭花</value>
+  </data>
+  <data name="Blastoise" xml:space="preserve">
+    <value>水箭龟</value>
+  </data>
+  <data name="Bulbasaur" xml:space="preserve">
+    <value>妙娃种子</value>
+  </data>
+  <data name="Butterfree" xml:space="preserve">
+    <value>巴大蝴</value>
+  </data>
+  <data name="Caterpie" xml:space="preserve">
+    <value>绿毛虫</value>
+  </data>
+  <data name="Chansey" xml:space="preserve">
+    <value>吉利蛋</value>
+  </data>
+  <data name="Charizard" xml:space="preserve">
+    <value>喷火龙</value>
+  </data>
+  <data name="Charmander" xml:space="preserve">
+    <value>小火龙</value>
+  </data>
+  <data name="Charmeleon" xml:space="preserve">
+    <value>火恐龙</value>
+  </data>
+  <data name="Clefable" xml:space="preserve">
+    <value>皮可斯</value>
+  </data>
+  <data name="Clefairy" xml:space="preserve">
+    <value>皮皮</value>
+  </data>
+  <data name="Cloyster" xml:space="preserve">
+    <value>铁甲贝</value>
+  </data>
+  <data name="Cubone" xml:space="preserve">
+    <value>卡拉卡拉</value>
+  </data>
+  <data name="Dewgong" xml:space="preserve">
+    <value>白海狮</value>
+  </data>
+  <data name="Diglett" xml:space="preserve">
+    <value>地鼠</value>
+  </data>
+  <data name="Ditto" xml:space="preserve">
+    <value>百变怪</value>
+  </data>
+  <data name="Dodrio" xml:space="preserve">
+    <value>多多利</value>
+  </data>
+  <data name="Doduo" xml:space="preserve">
+    <value>多多</value>
+  </data>
+  <data name="Dragonair" xml:space="preserve">
+    <value>哈克龙</value>
+  </data>
+  <data name="Dragonite" xml:space="preserve">
+    <value>快龙</value>
+  </data>
+  <data name="Dratini" xml:space="preserve">
+    <value>迷你龙</value>
+  </data>
+  <data name="Drowzee" xml:space="preserve">
+    <value>食梦兽</value>
+  </data>
+  <data name="Dugtrio" xml:space="preserve">
+    <value>三地鼠</value>
+  </data>
+  <data name="Eevee" xml:space="preserve">
+    <value>伊布</value>
+  </data>
+  <data name="Ekans" xml:space="preserve">
+    <value>阿柏蛇</value>
+  </data>
+  <data name="Electabuzz" xml:space="preserve">
+    <value>电击兽</value>
+  </data>
+  <data name="Electrode" xml:space="preserve">
+    <value>雷霆球</value>
+  </data>
+  <data name="Exeggcute" xml:space="preserve">
+    <value>蛋蛋</value>
+  </data>
+  <data name="Exeggutor" xml:space="preserve">
+    <value>椰蛋树</value>
+  </data>
+  <data name="Farfetchd" xml:space="preserve">
+    <value>大葱鸭</value>
+  </data>
+  <data name="Fearow" xml:space="preserve">
+    <value>大嘴雀</value>
+  </data>
+  <data name="Flareon" xml:space="preserve">
+    <value>火伊布</value>
+  </data>
+  <data name="Gastly" xml:space="preserve">
+    <value>鬼斯</value>
+  </data>
+  <data name="Gengar" xml:space="preserve">
+    <value>耿鬼</value>
+  </data>
+  <data name="Geodude" xml:space="preserve">
+    <value>小拳石</value>
+  </data>
+  <data name="Gloom" xml:space="preserve">
+    <value>臭臭花</value>
+  </data>
+  <data name="Golbat" xml:space="preserve">
+    <value>大嘴蝠</value>
+  </data>
+  <data name="Goldeen" xml:space="preserve">
+    <value>角金鱼</value>
+  </data>
+  <data name="Golduck" xml:space="preserve">
+    <value>哥达鸭</value>
+  </data>
+  <data name="Golem" xml:space="preserve">
+    <value>隆隆岩</value>
+  </data>
+  <data name="Graveler" xml:space="preserve">
+    <value>隆隆石</value>
+  </data>
+  <data name="Grimer" xml:space="preserve">
+    <value>臭泥</value>
+  </data>
+  <data name="Growlithe" xml:space="preserve">
+    <value>卡蒂狗</value>
+  </data>
+  <data name="Gyarados" xml:space="preserve">
+    <value>暴鲤龙</value>
+  </data>
+  <data name="Haunter" xml:space="preserve">
+    <value>鬼斯通</value>
+  </data>
+  <data name="Hitmonchan" xml:space="preserve">
+    <value>艾比郎</value>
+  </data>
+  <data name="Hitmonlee" xml:space="preserve">
+    <value>沙瓦郎</value>
+  </data>
+  <data name="Horsea" xml:space="preserve">
+    <value>墨海马</value>
+  </data>
+  <data name="Hypno" xml:space="preserve">
+    <value>催眠兽</value>
+  </data>
+  <data name="Ivysaur" xml:space="preserve">
+    <value>妙娃草</value>
+  </data>
+  <data name="Jigglypuff" xml:space="preserve">
+    <value>胖丁</value>
+  </data>
+  <data name="Jolteon" xml:space="preserve">
+    <value>雷伊布</value>
+  </data>
+  <data name="Jynx" xml:space="preserve">
+    <value>迷唇姐</value>
+  </data>
+  <data name="Kabuto" xml:space="preserve">
+    <value>万年虫</value>
+  </data>
+  <data name="Kabutops" xml:space="preserve">
+    <value>镰刀虫</value>
+  </data>
+  <data name="Kadabra" xml:space="preserve">
+    <value>勇吉拉</value>
+  </data>
+  <data name="Kakuna" xml:space="preserve">
+    <value>铁壳蛹</value>
+  </data>
+  <data name="Kangaskhan" xml:space="preserve">
+    <value>袋龙</value>
+  </data>
+  <data name="Kingler" xml:space="preserve">
+    <value>巨钳蟹</value>
+  </data>
+  <data name="Koffing" xml:space="preserve">
+    <value>瓦斯弹</value>
+  </data>
+  <data name="Krabby" xml:space="preserve">
+    <value>大钳蟹</value>
+  </data>
+  <data name="Lapras" xml:space="preserve">
+    <value>乘龙</value>
+  </data>
+  <data name="Lickitung" xml:space="preserve">
+    <value>大舌头</value>
+  </data>
+  <data name="Machamp" xml:space="preserve">
+    <value>怪力</value>
+  </data>
+  <data name="Machoke" xml:space="preserve">
+    <value>豪力</value>
+  </data>
+  <data name="Machop" xml:space="preserve">
+    <value>腕力</value>
+  </data>
+  <data name="Magikarp" xml:space="preserve">
+    <value>鲤鱼王</value>
+  </data>
+  <data name="Magmar" xml:space="preserve">
+    <value>鸭嘴火龙</value>
+  </data>
+  <data name="Magnemite" xml:space="preserve">
+    <value>小磁怪</value>
+  </data>
+  <data name="Magneton" xml:space="preserve">
+    <value>三磁怪</value>
+  </data>
+  <data name="Mankey" xml:space="preserve">
+    <value>猴怪</value>
+  </data>
+  <data name="Marowak" xml:space="preserve">
+    <value>嘎拉嘎拉</value>
+  </data>
+  <data name="Meowth" xml:space="preserve">
+    <value>喵喵</value>
+  </data>
+  <data name="Metapod" xml:space="preserve">
+    <value>铁甲蛹</value>
+  </data>
+  <data name="Mew" xml:space="preserve">
+    <value>梦幻</value>
+  </data>
+  <data name="Mewtwo" xml:space="preserve">
+    <value>超梦</value>
+  </data>
+  <data name="Missingno" xml:space="preserve">
+    <value>Missingno</value>
+  </data>
+  <data name="Moltres" xml:space="preserve">
+    <value>火焰鸟</value>
+  </data>
+  <data name="MrMime" xml:space="preserve">
+    <value>魔偶</value>
+  </data>
+  <data name="Muk" xml:space="preserve">
+    <value>臭臭泥</value>
+  </data>
+  <data name="Nidoking" xml:space="preserve">
+    <value>尼多王</value>
+  </data>
+  <data name="Nidoqueen" xml:space="preserve">
+    <value>尼多后</value>
+  </data>
+  <data name="NidoranFemale" xml:space="preserve">
+    <value>尼多兰 ♀</value>
+  </data>
+  <data name="NidoranMale" xml:space="preserve">
+    <value>尼多郎 ♂</value>
+  </data>
+  <data name="Nidorina" xml:space="preserve">
+    <value>尼多丽娜</value>
+  </data>
+  <data name="Nidorino" xml:space="preserve">
+    <value>尼多力诺</value>
+  </data>
+  <data name="Ninetales" xml:space="preserve">
+    <value>九尾</value>
+  </data>
+  <data name="Oddish" xml:space="preserve">
+    <value>走路草</value>
+  </data>
+  <data name="Omanyte" xml:space="preserve">
+    <value>菊石兽</value>
+  </data>
+  <data name="Omastar" xml:space="preserve">
+    <value>多刺菊石兽</value>
+  </data>
+  <data name="Onix" xml:space="preserve">
+    <value>大岩蛇</value>
+  </data>
+  <data name="Paras" xml:space="preserve">
+    <value>蘑菇虫</value>
+  </data>
+  <data name="Parasect" xml:space="preserve">
+    <value>巨菇虫</value>
+  </data>
+  <data name="Persian" xml:space="preserve">
+    <value>猫老大</value>
+  </data>
+  <data name="Pidgeot" xml:space="preserve">
+    <value>比雕</value>
+  </data>
+  <data name="Pidgeotto" xml:space="preserve">
+    <value>比比鸟</value>
+  </data>
+  <data name="Pidgey" xml:space="preserve">
+    <value>波波</value>
+  </data>
+  <data name="Pikachu" xml:space="preserve">
+    <value>皮卡丘</value>
+  </data>
+  <data name="Pinsir" xml:space="preserve">
+    <value>钳刀甲虫</value>
+  </data>
+  <data name="Poliwag" xml:space="preserve">
+    <value>蚊香蝌蚪</value>
+  </data>
+  <data name="Poliwhirl" xml:space="preserve">
+    <value>蚊香蛙</value>
+  </data>
+  <data name="Poliwrath" xml:space="preserve">
+    <value>大力蛙</value>
+  </data>
+  <data name="Ponyta" xml:space="preserve">
+    <value>小火马</value>
+  </data>
+  <data name="Porygon" xml:space="preserve">
+    <value>3D龙</value>
+  </data>
+  <data name="Primeape" xml:space="preserve">
+    <value>火爆猴</value>
+  </data>
+  <data name="Psyduck" xml:space="preserve">
+    <value>可达鸭</value>
+  </data>
+  <data name="Raichu" xml:space="preserve">
+    <value>雷丘</value>
+  </data>
+  <data name="Rapidash" xml:space="preserve">
+    <value>烈焰马</value>
+  </data>
+  <data name="Raticate" xml:space="preserve">
+    <value>拉达</value>
+  </data>
+  <data name="Rattata" xml:space="preserve">
+    <value>小拉达</value>
+  </data>
+  <data name="Rhydon" xml:space="preserve">
+    <value>铁甲暴龙</value>
+  </data>
+  <data name="Rhyhorn" xml:space="preserve">
+    <value>铁甲犀牛</value>
+  </data>
+  <data name="Sandshrew" xml:space="preserve">
+    <value>穿山鼠</value>
+  </data>
+  <data name="Sandslash" xml:space="preserve">
+    <value>穿山王</value>
+  </data>
+  <data name="Scyther" xml:space="preserve">
+    <value>飞天螳螂</value>
+  </data>
+  <data name="Seadra" xml:space="preserve">
+    <value>海刺龙</value>
+  </data>
+  <data name="Seaking" xml:space="preserve">
+    <value>金鱼王</value>
+  </data>
+  <data name="Seel" xml:space="preserve">
+    <value>小海狮</value>
+  </data>
+  <data name="Shellder" xml:space="preserve">
+    <value>大舌贝</value>
+  </data>
+  <data name="Slowbro" xml:space="preserve">
+    <value>呆河马</value>
+  </data>
+  <data name="Slowpoke" xml:space="preserve">
+    <value>呆呆兽</value>
+  </data>
+  <data name="Snorlax" xml:space="preserve">
+    <value>卡比兽</value>
+  </data>
+  <data name="Spearow" xml:space="preserve">
+    <value>鬼雀</value>
+  </data>
+  <data name="Squirtle" xml:space="preserve">
+    <value>杰尼龟</value>
+  </data>
+  <data name="Starmie" xml:space="preserve">
+    <value>宝石海星</value>
+  </data>
+  <data name="Staryu" xml:space="preserve">
+    <value>海星</value>
+  </data>
+  <data name="Tangela" xml:space="preserve">
+    <value>蔓藤怪</value>
+  </data>
+  <data name="Tauros" xml:space="preserve">
+    <value>肯泰罗</value>
+  </data>
+  <data name="Tentacool" xml:space="preserve">
+    <value>玛瑙水母</value>
+  </data>
+  <data name="Tentacruel" xml:space="preserve">
+    <value>毒刺水母</value>
+  </data>
+  <data name="Vaporeon" xml:space="preserve">
+    <value>水伊布</value>
+  </data>
+  <data name="Venomoth" xml:space="preserve">
+    <value>末入蛾</value>
+  </data>
+  <data name="Venonat" xml:space="preserve">
+    <value>毛球</value>
+  </data>
+  <data name="Venusaur" xml:space="preserve">
+    <value>妙娃花</value>
+  </data>
+  <data name="Victreebel" xml:space="preserve">
+    <value>大食花</value>
+  </data>
+  <data name="Vileplume" xml:space="preserve">
+    <value>霸王花</value>
+  </data>
+  <data name="Voltorb" xml:space="preserve">
+    <value>雷电球</value>
+  </data>
+  <data name="Vulpix" xml:space="preserve">
+    <value>六尾</value>
+  </data>
+  <data name="Wartortle" xml:space="preserve">
+    <value>卡咪龟</value>
+  </data>
+  <data name="Weedle" xml:space="preserve">
+    <value>独角虫</value>
+  </data>
+  <data name="Weepinbell" xml:space="preserve">
+    <value>口呆花</value>
+  </data>
+  <data name="Weezing" xml:space="preserve">
+    <value>双弹瓦斯</value>
+  </data>
+  <data name="Wigglytuff" xml:space="preserve">
+    <value>胖可丁</value>
+  </data>
+  <data name="Zapdos" xml:space="preserve">
+    <value>闪电鸟</value>
+  </data>
+  <data name="Zubat" xml:space="preserve">
+    <value>超音蝠</value>
+  </data>
+</root>

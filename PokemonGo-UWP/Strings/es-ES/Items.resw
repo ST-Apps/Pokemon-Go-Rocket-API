@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+	<!-- Traduccion al Español 1.0 por Elemental Code (Milton Candelero)
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,188 +59,188 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>2.0</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-<data name="D_ItemGreatBall" xml:space="preserve">
-    <value>Un dispositivo para capturar Pokémon salvajes . Se ha lanzado como una pelota en un Pokémon salvaje, cómodamente encapsular su objetivo</value>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="D_ItemGreatBall" xml:space="preserve">
+    <value>Un dispositivo para capturar Pokémon salvajes. Se arroja a un Pokémon salvaje como una pelota, capturando cómodamente al objetivo.</value>
   </data>
-  <data name="D_ItemIncenseCool" xml:space="preserve">
-    <value>Incienso con una fragancia misteriosa que atrae a Pokémon salvajes a su ubicación durante 30 minutos</value>
+	<data name="D_ItemIncenseCool" xml:space="preserve">
+    <value>Incienso con una misteriosa fragancia que atrae Pokémon salvajes a tu ubicación por 30 minutos</value>
   </data>
-  <data name="D_ItemIncenseFloral" xml:space="preserve">
-    <value>Incienso con una fragancia misteriosa que atrae a Pokémon salvajes a su ubicación durante 30 minutos</value>
+	<data name="D_ItemIncenseFloral" xml:space="preserve">
+    <value>Incienso con una misteriosa fragancia que atrae Pokémon salvajes a tu ubicación por 30 minutos</value>
   </data>
-  <data name="D_ItemIncenseOrdinary" xml:space="preserve">
-    <value>Incienso con una fragancia misteriosa que atrae a Pokémon salvajes a su ubicación durante 30 minutosIncienso con una fragancia misteriosa que atrae a Pokémon salvajes a su ubicación durante 30 minutos</value>
+	<data name="D_ItemIncenseOrdinary" xml:space="preserve">
+    <value>Incienso con una misteriosa fragancia que atrae Pokémon salvajes a tu ubicación por 30 minutos</value>
   </data>
-  <data name="D_ItemIncenseSpicy" xml:space="preserve">
-    <value>Incienso con una fragancia misteriosa que atrae a Pokémon salvajes a su ubicación durante 30 minutos</value>
+	<data name="D_ItemIncenseSpicy" xml:space="preserve">
+    <value>Incienso con una misteriosa fragancia que atrae Pokémon salvajes a tu ubicación por 30 minutos</value>
   </data>
-  <data name="D_ItemIncubatorBasic" xml:space="preserve">
-    <value>Un dispositivo que incuba un huevo mientras camina hasta que está listo para salir del cascarón .</value>
+	<data name="D_ItemIncubatorBasic" xml:space="preserve">
+    <value>Un dispositivo que incuba un Huevo mientras caminas hasta que este listo para salir del cascarón</value>
   </data>
-  <data name="D_ItemIncubatorBasicUnlimited" xml:space="preserve">
-    <value>Un dispositivo que incuba un huevo mientras camina hasta que está listo para salir del cascarón .</value>
+	<data name="D_ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>Un dispositivo que incuba un Huevo mientras caminas hasta que este listo para salir del cascarón</value>
   </data>
-  <data name="D_ItemMasterBall" xml:space="preserve">
-    <value>Un dispositivo para capturar Pokémon salvajes . Se ha lanzado como una pelota en un Pokémon salvaje, cómodamente encapsular su objetivo</value>
+	<data name="D_ItemMasterBall" xml:space="preserve">
+    <value>Un dispositivo para capturar Pokémon salvajes. Se arroja a un Pokémon salvaje como una pelota, capturando cómodamente al objetivo.</value>
   </data>
-  <data name="D_ItemPokeBall" xml:space="preserve">
-    <value>Un dispositivo para capturar Pokémon salvajes . Se ha lanzado como una pelota en un Pokémon salvaje, cómodamente encapsular su objetivo</value>
+	<data name="D_ItemPokeBall" xml:space="preserve">
+    <value>Un dispositivo para capturar Pokémon salvajes. Se arroja a un Pokémon salvaje como una pelota, capturando cómodamente al objetivo.</value>
   </data>
-  <data name="D_ItemPotion" xml:space="preserve">
-    <value>Un medicamento en forma de aerosol para el tratamiento de heridas . Se restaura el HP de un Pokémon en 20 puntos .</value>
+	<data name="D_ItemPotion" xml:space="preserve">
+    <value>Una medicina en spray que se usa para tratar heridas. Restaura los PS de un Pokémon en 20 puntos.</value>
   </data>
-  <data name="D_ItemRevive" xml:space="preserve">
-    <value>Un medicamento que puede revivir desmayó Pokémon . También restaura la mitad de un máximo de HP desmayado de Pokémon</value>
+	<data name="D_ItemRevive" xml:space="preserve">
+    <value>Una medicina que puede revivir a un Pokémon debilitado. Además restaura la mitad de los PS del Pokémon debilitado.</value>
   </data>
-  <data name="D_ItemUltraBall" xml:space="preserve">
-    <value>Un dispositivo para capturar Pokémon salvajes . Se ha lanzado como una pelota en un Pokémon salvaje, cómodamente encapsular su objetivo </value>
+	<data name="D_ItemUltraBall" xml:space="preserve">
+    <value>Un dispositivo para capturar Pokémon salvajes. Se arroja a un Pokémon salvaje como una pelota, capturando cómodamente al objetivo.</value>
   </data>
-  <data name="ItemBlukBerry" xml:space="preserve">
-    <value>Baya Frambu</value>
+	<data name="ItemBlukBerry" xml:space="preserve">
+    <value>Baya Oram</value>
   </data>
-  <data name="ItemGreatBall" xml:space="preserve">
-    <value>Poke Ball</value>
+	<data name="ItemGreatBall" xml:space="preserve">
+    <value>Súper Ball</value>
   </data>
-  <data name="ItemHyperPotion" xml:space="preserve">
+	<data name="ItemHyperPotion" xml:space="preserve">
     <value>Hiperpoción</value>
   </data>
-  <data name="ItemIncenseCool" xml:space="preserve">
-    <value>Incienso</value>
+	<data name="ItemIncenseCool" xml:space="preserve">
+    <value>Incienso Fresco</value>
   </data>
-  <data name="ItemIncenseFloral" xml:space="preserve">
+	<data name="ItemIncenseFloral" xml:space="preserve">
     <value>Incienso Floral</value>
   </data>
-  <data name="ItemIncenseOrdinary" xml:space="preserve">
-    <value>Incienso Ordinario</value>
+	<data name="ItemIncenseOrdinary" xml:space="preserve">
+    <value>Incienso Común</value>
   </data>
-  <data name="ItemIncenseSpicy" xml:space="preserve">
+	<data name="ItemIncenseSpicy" xml:space="preserve">
     <value>Incienso Picante</value>
   </data>
-  <data name="ItemIncubatorBasic" xml:space="preserve">
-    <value>Incubador Basico</value>
+	<data name="ItemIncubatorBasic" xml:space="preserve">
+    <value>Incubadora Basica</value>
   </data>
-  <data name="ItemIncubatorBasicUnlimited" xml:space="preserve">
-    <value>Incubador Basico Infinito</value>
+	<data name="ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>Incubadora Basica Ilimitada</value>
   </data>
-  <data name="ItemItemStorageUpgrade" xml:space="preserve">
-    <value>Aumento de espacio</value>
+	<data name="ItemItemStorageUpgrade" xml:space="preserve">
+    <value>Mejora de Almacenamiento de Objetos</value>
   </data>
-  <data name="ItemLuckyEgg" xml:space="preserve">
+	<data name="ItemLuckyEgg" xml:space="preserve">
     <value>Huevo Suerte</value>
   </data>
-  <data name="ItemMasterBall" xml:space="preserve">
-    <value>Super Ball</value>
+	<data name="ItemMasterBall" xml:space="preserve">
+    <value>Master Ball</value>
   </data>
-  <data name="ItemMaxPotion" xml:space="preserve">
-    <value>Pocion Maxima</value>
+	<data name="ItemMaxPotion" xml:space="preserve">
+    <value>Poción Máxima</value>
   </data>
-  <data name="ItemMaxRevive" xml:space="preserve">
-    <value>Revivir Maximo</value>
+	<data name="ItemMaxRevive" xml:space="preserve">
+    <value>Revivir Máximo</value>
   </data>
-  <data name="ItemNanabBerry" xml:space="preserve">
-    <value>Nanab Berry</value>
+	<data name="ItemNanabBerry" xml:space="preserve">
+    <value>Baya Latano</value>
   </data>
-  <data name="ItemPinapBerry" xml:space="preserve">
-    <value>Pinap Berry</value>
+	<data name="ItemPinapBerry" xml:space="preserve">
+    <value>Baya Pinia</value>
   </data>
-  <data name="ItemPokeBall" xml:space="preserve">
-    <value>Poke Ball</value>
+	<data name="ItemPokeBall" xml:space="preserve">
+    <value>Poké Ball</value>
   </data>
-  <data name="ItemPokemonStorageUpgrade" xml:space="preserve">
-    <value>Aumento de espacio Pokemon</value>
+	<data name="ItemPokemonStorageUpgrade" xml:space="preserve">
+    <value>Mejora de Almacenamiento de Pokémon</value>
   </data>
-  <data name="ItemPotion" xml:space="preserve">
-    <value>Pocion</value>
+	<data name="ItemPotion" xml:space="preserve">
+    <value>Poción</value>
   </data>
-  <data name="ItemRazzBerry" xml:space="preserve">
-    <value>Razz Berry</value>
+	<data name="ItemRazzBerry" xml:space="preserve">
+    <value>Baya Frambu</value>
   </data>
-  <data name="ItemRevive" xml:space="preserve">
+	<data name="ItemRevive" xml:space="preserve">
     <value>Revivir</value>
   </data>
-  <data name="ItemSpecialCamera" xml:space="preserve">
-    <value>Especial Camara</value>
+	<data name="ItemSpecialCamera" xml:space="preserve">
+    <value>Cámara Especial</value>
   </data>
-  <data name="ItemSuperPotion" xml:space="preserve">
-    <value>Super Pocion</value>
+	<data name="ItemSuperPotion" xml:space="preserve">
+    <value>Súper Poción</value>
   </data>
-  <data name="ItemTroyDisk" xml:space="preserve">
-    <value>Troy Disk</value>
+	<data name="ItemTroyDisk" xml:space="preserve">
+    <value>Troy Disk</value> <!-- What is this?/Que es este objeto? -->
   </data>
-  <data name="ItemUltraBall" xml:space="preserve">
+	<data name="ItemUltraBall" xml:space="preserve">
     <value>Ultra Ball</value>
   </data>
-  <data name="ItemUnknown" xml:space="preserve">
-    <value>Unknown</value>
+	<data name="ItemUnknown" xml:space="preserve">
+    <value>Desconocido</value>
   </data>
-  <data name="ItemWeparBerry" xml:space="preserve">
-    <value>Wepar Berry</value>
+	<data name="ItemWeparBerry" xml:space="preserve">
+    <value>Baya Wepar</value> <!-- "Wepar" berry doesn't exist in other games/baya "Wepar" no existe en otros juegos -->
   </data>
-  <data name="ItemXAttack" xml:space="preserve">
-    <value>X Ataque</value>
+	<data name="ItemXAttack" xml:space="preserve">
+    <value>Ataque X</value>
   </data>
-  <data name="ItemXDefense" xml:space="preserve">
-    <value>X Defensa</value>
+	<data name="ItemXDefense" xml:space="preserve">
+    <value>Defensa X</value>
   </data>
-  <data name="ItemXMiracle" xml:space="preserve">
-    <value>X Milagro</value>
+	<data name="ItemXMiracle" xml:space="preserve">
+    <value>Milagro X</value> <!-- Literal translation of "X Miracle". Doesn't exist on other games/traduccion literal de "X Miracle". No existe en otros juegos -->
   </data>
 </root>

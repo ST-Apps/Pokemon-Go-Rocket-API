@@ -407,8 +407,9 @@
     <Compile Include="Utils\Achievement\BadgeTypeAttribute.cs" />
     <Compile Include="Utils\Achievement\SilverAttribute.cs" />
     <Compile Include="Utils\Achievement\GoldAttribute.cs" />
-    <Compile Include="Utils\ApplicationKeys.cs" />
     <Compile Include="Utils\AchievementType.cs" />
+    <Compile Include="Utils\ApplicationKeys.cs" />
+    <Compile Include="Utils\AsyncSynchronisationContext.cs" />
     <Compile Include="Utils\AudioUtils.cs" />
     <Compile Include="Utils\CollectionExtensions.cs" />
     <Compile Include="Utils\Converters.cs" />

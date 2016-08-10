@@ -10,6 +10,8 @@ using Windows.Devices.Geolocation;
 using Windows.UI.Xaml.Controls.Maps;
 using Windows.UI.Xaml.Navigation;
 using PokemonGo.RocketAPI;
+using Windows.ApplicationModel;
+using Windows.ApplicationModel.Core;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -92,13 +94,22 @@ namespace PokemonGo_UWP.Views
 			base.OnNavigatingFrom(e);
 			UnsubscribeToCaptureEvents();
 			SystemNavigationManager.GetForCurrentView().BackRequested -= OnBackRequested;
+            if (SettingsService.Instance.IsMapZoomEnabled)
+            {
+                savezoomlevel();
+            }
 		}
 
-		#endregion
+        private void savezoomlevel()
+        {
+            SettingsService.Instance.Zoomlevel = GameMapControl.ZoomLevel;
+        }
 
-		#region Handlers
+        #endregion
 
-		private async void UpdateMap(Geoposition position)
+        #region Handlers
+
+        private async void UpdateMap(Geoposition position)
 		{
 			await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
 			{
@@ -123,7 +134,18 @@ namespace PokemonGo_UWP.Views
 						if (SettingsService.Instance.IsAutoRotateMapEnabled && position.Coordinate.Heading != null && !double.IsNaN(position.Coordinate.Heading.Value))
 						{
 							GameMapControl.Heading = position.Coordinate.Heading.Value;
-						}
+                            if (SettingsService.Instance.IsMapZoomEnabled)
+                            {
+                                try
+                                {
+                                    GameMapControl.ZoomLevel = SettingsService.Instance.Zoomlevel;
+                                }
+                                catch
+                                {
+
+                                }
+                            }
+                        }
 					}
 					else
 					{

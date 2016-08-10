@@ -226,7 +226,7 @@
                     </StackPanel>
 
                     <StackPanel Grid.Row="1"
-                                Visibility="{Binding CurrentEgg.EggIncubatorId, Converter={StaticResource VisibleWhenStringNotEmptyConverter}}">
+                                Visibility="{Binding CurrentEgg.EggIncubatorId, Converter={StaticResource VisibleWhenStringEmptyConverter}}">
                         <TextBlock Text="Use an incubator to incubate the Egg."
                                    HorizontalAlignment="Center" />
 

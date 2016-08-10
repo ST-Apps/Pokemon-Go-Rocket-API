@@ -37,6 +37,12 @@ namespace PokemonGo_UWP.ViewModels
             set { SettingsService.Instance.IsAutoRotateMapEnabled = value; }
         }
 
+        public bool IsMapZoomEnabled
+        {
+            get { return SettingsService.Instance.IsMapZoomEnabled; }
+            set { SettingsService.Instance.IsMapZoomEnabled = value; }
+        }
+
         #endregion
 
         #region Game Logic

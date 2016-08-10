@@ -30,7 +30,7 @@ namespace PokemonGo_UWP.Utils
             get { return _helper.Read(nameof(LastLoginService), AuthType.Ptc); }
             set { _helper.Write(nameof(LastLoginService), value);}
         }        
-
+        
         public string AuthToken
         {
             get
@@ -95,11 +95,24 @@ namespace PokemonGo_UWP.Utils
             set { _helper.Write(nameof(IsAutoRotateMapEnabled), value); }
         }
 
+        public bool IsMapZoomEnabled
+        {
+            get { return _helper.Read(nameof(IsMapZoomEnabled), false); }
+            set { _helper.Write(nameof(IsMapZoomEnabled), value); }
+        }
+        
+        public double Zoomlevel
+        {
+            get { return _helper.Read(nameof(Zoomlevel), (double)12); }
+            set { _helper.Write(nameof(Zoomlevel), value); }
+        }
+
         public PokemonSortingModes PokemonSortingMode
         {
             get { return this._helper.Read(nameof(PokemonSortingMode), PokemonSortingModes.Combat); }
             set { this._helper.Write(nameof(PokemonSortingMode), value); }
         }
+        
 
         #endregion
     }

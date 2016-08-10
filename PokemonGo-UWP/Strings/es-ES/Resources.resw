@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+  <!-- Traduccion al Español 1.0 por Elemental Code (Milton Candelero)
     Microsoft ResX Schema 
     
     Version 2.0
@@ -118,34 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CoolDownText.Text" xml:space="preserve">
-    <value>Enfriamiento</value>
+    <value>Tienes que esperar un rato</value>
   </data>
   <data name="GettingGPSSignal" xml:space="preserve">
-    <value>Recibiendo señal GPS...</value>
+    <value>Obteniendo señal GPS...</value>
   </data>
   <data name="GettingUserData" xml:space="preserve">
-    <value>Recibiendo datos cuenta...</value>
+    <value>Obteniendo datos de usuario...</value>
   </data>
   <data name="googleButton.Text" xml:space="preserve">
     <value>GOOGLE</value>
   </data>
   <data name="InventoryFullText.Text" xml:space="preserve">
-    <value>Inventario Lleno</value>
+    <value>¡Tu inventario está lleno!</value>
   </data>
   <data name="loginButton.Text" xml:space="preserve">
-    <value>Entrando con PTC</value>
+    <value>INICIA SESION con una cuenta PTC</value>
   </data>
   <data name="loginInfoText.Text" xml:space="preserve">
-    <value>Para logearte en esta app necesitas un Usario/Contraseña. Si no confia en la app cierrela, no somos responsables de nada.</value>
+    <value>Para iniciar sesion tienes que insertar tu Usuario/Email y Contraseña en esta app. Si no confía en esta app, por favor ciérrela. No nos hacemos responsables de nada.</value>
   </data>
   <data name="logoutText.Text" xml:space="preserve">
-    <value>Salir</value>
+    <value>CERRAR SESION</value>
   </data>
   <data name="nearbyText.Text" xml:space="preserve">
-    <value>Cerca</value>
+    <value>cerca</value>
   </data>
   <data name="OutOfRangeText.Text" xml:space="preserve">
-    <value>Fuera de rango</value>
+    <value>Fuera del rango</value>
   </data>
   <data name="passwordBox.PlaceholderText" xml:space="preserve">
     <value>Contraseña</value>
@@ -163,6 +163,99 @@
     <value>Cargando encuentro con </value>
   </data>
   <data name="LoggingIn" xml:space="preserve">
-    <value>Entrando...</value>
+    <value>Iniciando sesion...</value>
+  </data>
+  <data name="Fleed" xml:space="preserve">
+    <value> ha escapado</value>
+  </data>
+  <data name="GoogleError" xml:space="preserve">
+    <value>Google retornó el error: </value>
+  </data>
+  <data name="GoogleNotResponding" xml:space="preserve">
+    <value>Google no está respondiendo. Intente mas tarde.</value>
+  </data>
+  <data name="LoginFailed" xml:space="preserve">
+    <value>Falló el inicio de sesion. Intente nuevamente.</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NoGPSPermissions" xml:space="preserve">
+    <value>Se necesitan permisos GPS para correr el juego, por favor activelos e intente nuevamente.</value>
+  </data>
+  <data name="PokemonRanAway" xml:space="preserve">
+    <value>El Pokémon se ha escapado :(</value>
+  </data>
+  <data name="PTCDown" xml:space="preserve">
+    <value>El servidor de PTC probablemente esté saturado. Intente nuevamente mas tarde.</value>
+  </data>
+  <data name="SomethingWentWrong" xml:space="preserve">
+    <value>En algun lugar algo salío mal y la app podria ser inestable. Quieres cerrar la app y volver a iniciar sesion?</value>
+  </data>
+  <data name="UpdatedVersion" xml:space="preserve">
+    <value>Una actualización {0} está disponible. ¿Deseas actualizar?
+{1}</value>
+  </data>
+  <data name="WrongUsername" xml:space="preserve">
+    <value>Error en Usuario/Contraseña o el servidor está offline, intente nuevamente.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Si</value>
+  </data>
+  <data name="CPText.Text" xml:space="preserve">
+    <value>PC</value>
+  </data>
+  <data name="EggsText.Text" xml:space="preserve">
+    <value>HUEVOS</value>
+  </data>
+  <data name="MusicTitleText.Text" xml:space="preserve">
+    <value>Musica</value>
+  </data>
+  <data name="PokemonText.Text" xml:space="preserve">
+    <value>POKÉMON</value>
+  </data>
+  <data name="SettingsHeaderText.Text" xml:space="preserve">
+    <value>CONFIGURACIONES</value>
+  </data>
+  <data name="SignOutButton.Text" xml:space="preserve">
+    <value>Cerrar Sesion</value>
+  </data>
+  <data name="VibrationTitleText.Text" xml:space="preserve">
+    <value>Vibración</value>
+  </data>
+  <data name="ItemsText.Text" xml:space="preserve">
+    <value>OBJETOS</value>
+  </data>
+  <data name="PokedexText.Text" xml:space="preserve">
+    <value>POKÉDEX</value>
+  </data>
+  <data name="ItemsTextLower.Text" xml:space="preserve">
+    <value>objetos</value>
+  </data>
+  <data name="NumberText.Text" xml:space="preserve">
+    <value># </value>
+    <comment>Cuidado: hay un espacio adelante del #</comment>
+  </data>
+  <data name="SlashSpaceCPText.Text" xml:space="preserve">
+    <value>/ PC</value>
+  </data>
+  <data name="SpaceXPText.Text" xml:space="preserve">
+    <value> XP</value>
+  </data>
+  <data name="TotalText.Text" xml:space="preserve">
+    <value>TOTAL</value>
+  </data>
+  <data name="UpdateDownloading" xml:space="preserve">
+    <value>Descargando actualización {0}</value>
+  </data>
+  <data name="UpdateInstalling" xml:space="preserve">
+    <value>Instalando actualización, la app se reiniciará...</value>
+  </data>
+  <data name="UpdateFailed" xml:space="preserve">
+    <value>Falló la actualización: {0}
+Abrir la pagina con los archivos para intentar instalacion manual?</value>
+  </data>
+  <data name="LevelupText.Text" xml:space="preserve">
+    <value>¡Subida de Nivel!</value>
   </data>
 </root>

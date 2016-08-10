@@ -92,7 +92,6 @@ namespace PokemonGo_UWP.ViewModels
                     }
                 }
                 PlayerStats = tmpStats;
-                RaisePropertyChanged(nameof(ExperienceValue));
             }
             // Setup vibration and sound
             if (ApiInformation.IsTypePresent("Windows.Phone.Devices.Notification.VibrationDevice") && _vibrationDevice == null)
@@ -200,9 +199,7 @@ namespace PokemonGo_UWP.ViewModels
         {
             get { return _playerStats; }
             set { Set(ref _playerStats, value); }
-        }
-
-        public int ExperienceValue => _playerStats == null ? 0 : (int) (((double) _playerStats.Experience - _playerStats.PrevLevelXp)/(_playerStats.NextLevelXp - _playerStats.PrevLevelXp)*100);
+        }        
 
         public InventoryDelta InventoryDelta
         {
