@@ -392,6 +392,9 @@
     <PRIResource Include="Strings\de-DE\Pokemon.resw" />
     <PRIResource Include="Strings\en-US\Resources.resw" />
     <PRIResource Include="Strings\en-US\Pokemon.resw" />
+    <PRIResource Include="Strings\pt-BR\Items.resw" />
+    <PRIResource Include="Strings\pt-BR\Resources.resw" />
+    <PRIResource Include="Strings\pt-BR\Pokemon.resw" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
