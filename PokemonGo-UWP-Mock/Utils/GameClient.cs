@@ -46,45 +46,13 @@ namespace PokemonGo_UWP.Utils
     /// </summary>
     public static class GameClient
     {
-        public static double InteractionRangeMeters => GameSetting.FortSettings.InteractionRangeMeters;
-
+        //TODO: MOCK THIS / 
+        //public static double InteractionRangeMeters => GameSetting.FortSettings.InteractionRangeMeters;
+        public static int InteractionRangeMeters = 50;
         #region Client Vars
-
-        private static ISettings ClientSettings;
-        private static Client Client;
-
-        /// <summary>
-        /// Handles failures by having a fixed number of retries
-        /// </summary>
-        internal class APIFailure : IApiFailureStrategy
-        {
-
-            private int _retryCount;
-            private const int MaxRetries = 50;
-
-
-            public async Task<ApiOperation> HandleApiFailure(RequestEnvelope request, ResponseEnvelope response)
-            {
-                if (_retryCount == MaxRetries)
-                    return ApiOperation.Abort;
-
-                await Task.Delay(500);
-                _retryCount++;
-
-                if (_retryCount % 5 == 0)
-                {
-                    // Let's try to refresh the session by getting a new token
-                    await (ClientSettings.AuthType == AuthType.Google ? DoGoogleLogin(ClientSettings.GoogleUsername, ClientSettings.GooglePassword) : DoPtcLogin(ClientSettings.PtcUsername, ClientSettings.PtcPassword));
-                }
-
-                return ApiOperation.Retry;
-            }
-
-            public void HandleApiSuccess(RequestEnvelope request, ResponseEnvelope response)
-            {
-                _retryCount = 0;
-            }
-        }
+        //TODO: MOCK THIS / 
+        //private static ISettings ClientSettings;
+        //private static Client Client;
 
         #endregion
 
@@ -96,16 +64,17 @@ namespace PokemonGo_UWP.Utils
         public static string CurrentVersion
         {
             get
-            {                
+            {
                 var currentVersion = Package.Current.Id.Version;
                 return $"v{currentVersion.Major}.{currentVersion.Minor}.{currentVersion.Build}";
             }
         }
 
-        /// <summary>
-        /// Settings downloaded from server
-        /// </summary>
-        public static GlobalSettings GameSetting { get; private set; }
+        //TODO: MOCK THIS / 
+        ///// <summary>
+        ///// Settings downloaded from server
+        ///// </summary>
+        //public static GlobalSettings GameSetting { get; private set; }
 
         /// <summary>
         ///     Collection of Pokemon in 1 step from current position
@@ -181,14 +150,13 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task InitializeClient()
         {
-            ClientSettings = new Settings
-            {
-                AuthType = SettingsService.Instance.LastLoginService
-            };
-
-            Client = new Client(ClientSettings, new APIFailure()) { AuthToken = SettingsService.Instance.AuthToken};
-
-            await Client.Login.DoLogin();
+            //TODO: MOCK THIS
+            //ClientSettings = new Settings
+            //{
+            //    AuthType = SettingsService.Instance.LastLoginService
+            //};
+            //Client = new Client(ClientSettings, null);
+            //await Client.Login.DoLogin();
         }
 
         /// <summary>
@@ -199,23 +167,28 @@ namespace PokemonGo_UWP.Utils
         /// <returns>true if login worked</returns>
         public static async Task<bool> DoPtcLogin(string username, string password)
         {
-            ClientSettings = new Settings
-            {
-                PtcUsername = username,
-                PtcPassword = password,
-                AuthType = AuthType.Ptc
-            };
-            Client = new Client(ClientSettings, new APIFailure());
-            // Get PTC token
-            var authToken = await Client.Login.DoLogin();
-            // Update current token even if it's null and clear the token for the other identity provide
-            SettingsService.Instance.AuthToken = authToken;
-            // Update other data if login worked
-            if (authToken == null) return false;
+            //TODO: MOCK THIS / 
+            //ClientSettings = new Settings
+            //{
+            //    PtcUsername = username,
+            //    PtcPassword = password,
+            //    AuthType = AuthType.Ptc
+            //};
+            //Client = new Client(ClientSettings, null);
+            //// Get PTC token
+            //var authToken = await Client.Login.DoLogin();
+            //// Update current token even if it's null and clear the token for the other identity provide
+            //SettingsService.Instance.AuthToken = authToken;
+            //// Update other data if login worked
+            //if (authToken == null) return false;
+            //SettingsService.Instance.LastLoginService = AuthType.Ptc;
+            //SettingsService.Instance.UserCredentials =
+            //    new PasswordCredential(nameof(SettingsService.Instance.UserCredentials), username, password);
+            //// Return true if login worked, meaning that we have a token
+            //return true;
+            SettingsService.Instance.AuthToken = "FAKE";
             SettingsService.Instance.LastLoginService = AuthType.Ptc;
-            SettingsService.Instance.UserCredentials =
-                new PasswordCredential(nameof(SettingsService.Instance.UserCredentials), username, password);
-            // Return true if login worked, meaning that we have a token
+            SettingsService.Instance.UserCredentials = new PasswordCredential(nameof(SettingsService.Instance.UserCredentials), username, password);
             return true;
         }
 
@@ -227,24 +200,28 @@ namespace PokemonGo_UWP.Utils
         /// <returns>true if login worked</returns>
         public static async Task<bool> DoGoogleLogin(string email, string password)
         {
-            ClientSettings = new Settings
-            {
-                GoogleUsername = email,
-                GooglePassword = password,
-                AuthType = AuthType.Google,
-            };
-
-            Client = new Client(ClientSettings, new APIFailure());
-            // Get Google token
-            var authToken = await Client.Login.DoLogin();
-            // Update current token even if it's null
-            SettingsService.Instance.AuthToken = authToken;
-            // Update other data if login worked
-            if (authToken == null) return false;
+            //TODO: MOCK THIS / 
+            //ClientSettings = new Settings
+            //{
+            //    GoogleUsername = email,
+            //    GooglePassword = password,
+            //    AuthType = AuthType.Google,
+            //};
+            //Client = new Client(ClientSettings, null);
+            //// Get Google token
+            //var authToken = await Client.Login.DoLogin();
+            //// Update current token even if it's null
+            //SettingsService.Instance.AuthToken = authToken;
+            //// Update other data if login worked
+            //if (authToken == null) return false;
+            //SettingsService.Instance.LastLoginService = AuthType.Google;
+            //SettingsService.Instance.UserCredentials =
+            //    new PasswordCredential(nameof(SettingsService.Instance.UserCredentials), email, password);
+            //// Return true if login worked, meaning that we have a token
+            //return true;
+            SettingsService.Instance.AuthToken = "FAKE";
             SettingsService.Instance.LastLoginService = AuthType.Google;
-            SettingsService.Instance.UserCredentials =
-                new PasswordCredential(nameof(SettingsService.Instance.UserCredentials), email, password);
-            // Return true if login worked, meaning that we have a token
+            SettingsService.Instance.UserCredentials = new PasswordCredential(nameof(SettingsService.Instance.UserCredentials), email, password);
             return true;
         }
 
@@ -309,15 +286,16 @@ namespace PokemonGo_UWP.Utils
                 Interval = TimeSpan.FromSeconds(10)
             };
             _mapUpdateTimer.Tick += async (s, e) =>
-            {                
+            {
                 // Update before starting but only if more than 10s passed since the last one
                 if ((DateTime.Now - _lastUpdate).Seconds <= 10) return;
                 Logger.Write("Updating map");
                 await UpdateMapObjects();
-            };            
+            };
             // Update before starting timer            
             Busy.SetBusy(true, Resources.Translation.GetString("GettingUserData"));
-            GameSetting = (await Client.Download.GetSettings()).Settings;            
+            //TODO: MOCK THIS / 
+            //GameSetting = (await Client.Download.GetSettings()).Settings;
             await UpdateMapObjects();
             await UpdateInventory();
             await UpdateItemTemplates();
@@ -334,14 +312,14 @@ namespace PokemonGo_UWP.Utils
         /// </summary>
         /// <param name="isEnabled"></param>
         public static async void ToggleUpdateTimer(bool isEnabled = true)
-        {            
+        {
             if (isEnabled)
             {
                 if (_mapUpdateTimer.IsEnabled) return;
                 // Update before starting but only if more than 10s passed since the last one
                 if ((DateTime.Now - _lastUpdate).Seconds > 10)
                     await UpdateMapObjects();
-                _mapUpdateTimer.Start();          
+                _mapUpdateTimer.Start();
             }
             else
             {
@@ -358,8 +336,8 @@ namespace PokemonGo_UWP.Utils
         {
             // Get all map objects from server
             var mapObjects = await GetMapObjects(Geoposition);
-            _lastUpdate = DateTime.Now;                          
-            
+            _lastUpdate = DateTime.Now;
+
             // update catchable pokemons
             var newCatchablePokemons = mapObjects.Item1.MapCells.SelectMany(x => x.CatchablePokemons).ToArray();
             Logger.Write($"Found {newCatchablePokemons.Length} catchable pokemons");
@@ -397,11 +375,13 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<Tuple<GetMapObjectsResponse, GetHatchedEggsResponse, POGOProtos.Networking.Responses.GetInventoryResponse, CheckAwardedBadgesResponse, DownloadSettingsResponse>> GetMapObjects(Geoposition geoposition)
         {
-            // Sends the updated position to the client
-            await
-                Client.Player.UpdatePlayerLocation(geoposition.Coordinate.Point.Position.Latitude,
-                    geoposition.Coordinate.Point.Position.Longitude, geoposition.Coordinate.Point.Position.Altitude);
-            return await Client.Map.GetMapObjects();
+            //TODO: MOCK THIS / 
+            //// Sends the updated position to the client
+            //await
+            //    Client.Player.UpdatePlayerLocation(geoposition.Coordinate.Point.Position.Latitude,
+            //        geoposition.Coordinate.Point.Position.Longitude, geoposition.Coordinate.Point.Position.Altitude);
+            //return await Client.Map.GetMapObjects();
+            return null;
         }
 
         #endregion
@@ -421,7 +401,7 @@ namespace PokemonGo_UWP.Utils
             ItemId.ItemPinapBerry,
             ItemId.ItemRazzBerry,
             ItemId.ItemUltraBall,
-            ItemId.ItemWeparBerry            
+            ItemId.ItemWeparBerry
         };
 
         /// <summary>
@@ -430,7 +410,9 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<GetPlayerResponse> GetProfile()
         {
-            return await Client.Player.GetPlayer();
+            //TODO: MOCK THIS / 
+            //return await Client.Player.GetPlayer();
+            return null;
         }
 
         /// <summary>
@@ -439,7 +421,9 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<GetInventoryResponse> GetInventory()
         {
-            return await Client.Inventory.GetInventory();
+            //TODO: MOCK THIS / 
+            return null;
+            //return await Client.Inventory.GetInventory();
         }
 
         /// <summary>
@@ -448,7 +432,9 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<LevelUpRewardsResponse> GetLevelUpRewards(int newLevel)
         {
-            return await Client.Player.GetLevelUpRewards(newLevel);
+            //TODO: MOCK THIS / 
+            return null;
+            //return await Client.Player.GetLevelUpRewards(newLevel);
         }
 
         /// <summary>
@@ -457,26 +443,27 @@ namespace PokemonGo_UWP.Utils
         /// </summary>
         /// <returns></returns>
         private static async Task UpdateItemTemplates()
-        {            
-            // Get all the templates
-            var itemTemplates = (await Client.Download.GetItemTemplates()).ItemTemplates;
-            // Update Pokedex data
-            PokedexExtraData = itemTemplates.Where(item => item.PokemonSettings != null && item.PokemonSettings.FamilyId != PokemonFamilyId.FamilyUnset).Select(item => item.PokemonSettings);            
-            // Update Pokemon upgrade templates
-            var tmpPokemonUpgradeCosts = itemTemplates.First(item => item.PokemonUpgrades != null).PokemonUpgrades;
-            for (var i = 0; i < tmpPokemonUpgradeCosts.CandyCost.Count; i++)
-            {
-                PokemonUpgradeCosts.Add(i, new object[] {tmpPokemonUpgradeCosts.CandyCost[i], tmpPokemonUpgradeCosts.StardustCost[i]});                
-            }
+        {
+            //TODO: MOCK THIS / 
+            //// Get all the templates
+            //var itemTemplates = (await Client.Download.GetItemTemplates()).ItemTemplates;
+            //// Update Pokedex data
+            //PokedexExtraData = itemTemplates.Where(item => item.PokemonSettings != null && item.PokemonSettings.FamilyId != PokemonFamilyId.FamilyUnset).Select(item => item.PokemonSettings);
+            //// Update Pokemon upgrade templates
+            //var tmpPokemonUpgradeCosts = itemTemplates.First(item => item.PokemonUpgrades != null).PokemonUpgrades;
+            //for (var i = 0; i < tmpPokemonUpgradeCosts.CandyCost.Count; i++)
+            //{
+            //    PokemonUpgradeCosts.Add(i, new object[] { tmpPokemonUpgradeCosts.CandyCost[i], tmpPokemonUpgradeCosts.StardustCost[i] });
+            //}
         }
 
         /// <summary>
         ///     Updates inventory data
         /// </summary>
         public static async Task UpdateInventory()
-        {            
+        {
             // Get ALL the items
-            var fullInventory = (await GetInventory()).InventoryDelta.InventoryItems;            
+            var fullInventory = (await GetInventory()).InventoryDelta.InventoryItems;
             // Update items
             ItemsInventory.AddRange(fullInventory.Where(item => item.InventoryItemData.Item != null)
                                                  .GroupBy(item => item.InventoryItemData.Item)
@@ -496,9 +483,9 @@ namespace PokemonGo_UWP.Utils
 
             // Update Pokemons
             PokemonsInventory.AddRange(fullInventory.Select(item => item.InventoryItemData.PokemonData)
-                                                    .Where(item => item != null && item.PokemonId > 0),true);
+                                                    .Where(item => item != null && item.PokemonId > 0), true);
             EggsInventory.AddRange(fullInventory.Select(item => item.InventoryItemData.PokemonData)
-                                                .Where(item => item != null && item.IsEgg), true); 
+                                                .Where(item => item != null && item.IsEgg), true);
             // Update Pokedex            
             PokedexInventory.AddRange(fullInventory.Where(item => item.InventoryItemData.PokedexEntry != null)
                                                    .Select(item => item.InventoryItemData.PokedexEntry), true);
@@ -532,7 +519,9 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<EncounterResponse> EncounterPokemon(ulong encounterId, string spawnpointId)
         {
-            return await Client.Encounter.EncounterPokemon(encounterId, spawnpointId);
+            //TODO: MOCK THIS / 
+            return null;
+            //return await Client.Encounter.EncounterPokemon(encounterId, spawnpointId);
         }
 
         /// <summary>
@@ -547,8 +536,10 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<CatchPokemonResponse> CatchPokemon(ulong encounterId, string spawnpointId, ItemId captureItem, bool hitPokemon = true)
         {
-            var random = new Random();
-            return await Client.Encounter.CatchPokemon(encounterId, spawnpointId, captureItem, random.NextDouble() * 1.95D, random.NextDouble(), 1, hitPokemon);
+            //TODO: MOCK THIS / 
+            return null;
+            //var random = new Random();
+            //return await Client.Encounter.CatchPokemon(encounterId, spawnpointId, captureItem, random.NextDouble() * 1.95D, random.NextDouble(), 1, hitPokemon);
         }
 
         /// <summary>
@@ -560,7 +551,9 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<UseItemCaptureResponse> UseCaptureItem(ulong encounterId, string spawnpointId, ItemId captureItem)
         {
-            return await Client.Encounter.UseCaptureItem(encounterId, captureItem, spawnpointId);
+            //TODO: MOCK THIS / 
+            return null;
+            //return await Client.Encounter.UseCaptureItem(encounterId, captureItem, spawnpointId);
         }
 
         #endregion
@@ -578,7 +571,9 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<FortDetailsResponse> GetFort(string pokestopId, double latitude, double longitude)
         {
-            return await Client.Fort.GetFort(pokestopId, latitude, longitude);
+            //TODO: MOCK THIS / 
+            return null;
+            //return await Client.Fort.GetFort(pokestopId, latitude, longitude);
         }
 
         /// <summary>
@@ -590,7 +585,9 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<FortSearchResponse> SearchFort(string pokestopId, double latitude, double longitude)
         {
-            return await Client.Fort.SearchFort(pokestopId, latitude, longitude);
+            //TODO: MOCK THIS / 
+            return null;
+            //return await Client.Fort.SearchFort(pokestopId, latitude, longitude);
         }
 
         #endregion
@@ -605,7 +602,9 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<UseItemEggIncubatorResponse> UseEggIncubator(EggIncubator incubator, PokemonData egg)
         {
-            return await Client.Inventory.UseItemEggIncubator(incubator.Id, egg.Id);
+            //TODO: MOCK THIS / 
+            return null;
+            //return await Client.Inventory.UseItemEggIncubator(incubator.Id, egg.Id);
         }
 
         /// <summary>
