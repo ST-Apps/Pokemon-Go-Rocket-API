@@ -267,4 +267,10 @@ Chcete otevřít stránku se soubory k manuální instalaci?</value>
   <data name="RememberMapZoomTitleText.Text" xml:space="preserve">
     <value>Zapamatovat Nastavení Mapy</value>
   </data>
+  <data name="LevelText.Text" xml:space="preserve">
+    <value>Úroveň</value>
+  </data>
+  <data name="StartDateText.Text" xml:space="preserve">
+    <value>Datum zahájení výpravy</value>
+  </data>
 </root>
