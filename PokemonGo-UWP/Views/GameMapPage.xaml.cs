@@ -33,7 +33,7 @@ namespace PokemonGo_UWP.Views
 			// Setup nearby translation + map
 			Loaded += (s, e) =>
 			{
-				if (ApplicationKeys.MapBoxTokens.Length > 0)
+				if (ApplicationKeys.MapBoxTokens != null)
 				{
 					var randomTileSourceIndex = new Random().Next(0, ApplicationKeys.MapBoxTokens.Length);
 					Logger.Write($"Using MapBox's keyset {randomTileSourceIndex}");
