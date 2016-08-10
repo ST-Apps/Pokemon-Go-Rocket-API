@@ -4,7 +4,7 @@ using Template10.Mvvm;
 
 namespace PokemonGo_UWP.ViewModels
 {
-    public class SettingsPageViewModel : ViewModelBase
+	public class SettingsPageViewModel : ViewModelBase
 	{
 		#region Bindable Game Vars
 
@@ -13,43 +13,27 @@ namespace PokemonGo_UWP.ViewModels
 		/// <summary>
 		/// Whether the player wants music
 		/// </summary>
-		public bool IsMusicEnabled
-		{
-			get { return SettingsService.Instance.IsMusicEnabled; }
-			set { SettingsService.Instance.IsMusicEnabled = value; }
-		}
+		public bool IsMusicEnabled => SettingsService.Instance.IsMusicEnabled;
 
 		/// <summary>
 		/// Whether the player wants vibration (when a Pokémon is nearby)
 		/// </summary>
-		public bool IsVibrationEnabled
-		{
-			get { return SettingsService.Instance.IsVibrationEnabled; }
-			set { SettingsService.Instance.IsVibrationEnabled = value; }
-		}
+		public bool IsVibrationEnabled => SettingsService.Instance.IsVibrationEnabled;
 
-        /// <summary>
+		/// <summary>
 		/// Whether the player wants the map to rotate following is heading
 		/// </summary>
-		public bool IsAutoRotateMapEnabled
-        {
-            get { return SettingsService.Instance.IsAutoRotateMapEnabled; }
-            set { SettingsService.Instance.IsAutoRotateMapEnabled = value; }
-        }
+		public bool IsAutoRotateMapEnabled => SettingsService.Instance.IsAutoRotateMapEnabled;
 
-        public bool IsMapZoomEnabled
-        {
-            get { return SettingsService.Instance.IsMapZoomEnabled; }
-            set { SettingsService.Instance.IsMapZoomEnabled = value; }
-        }
+		public bool IsMapZoomEnabled => SettingsService.Instance.IsMapZoomEnabled;
 
-        #endregion
+		#endregion
 
-        #region Game Logic
+		#region Game Logic
 
-        #region Logout
+		#region Logout
 
-        private DelegateCommand _doPtcLogoutCommand;
+		private DelegateCommand _doPtcLogoutCommand;
 
 		public DelegateCommand DoPtcLogoutCommand => _doPtcLogoutCommand ?? (
 			_doPtcLogoutCommand = new DelegateCommand(() =>

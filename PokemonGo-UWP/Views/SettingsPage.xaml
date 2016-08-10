@@ -94,14 +94,14 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Column="0"
-                               x:Uid="MapAutoRotateTitleText"
+                               x:Uid="MapRememberZoomTitleText"
                                Text="Remember Map Zoom"
                                Style="{StaticResource TextSettingsTitle}"
                                VerticalAlignment="Center" />
 
                     <CheckBox Grid.Column="1"
                               x:Name="MapRememberZoomCheckbox"
-                              IsChecked="{Binding IsAutoRotateMapEnabled, Mode=TwoWay}"
+                              IsChecked="{Binding IsMapZoomEnabled, Mode=TwoWay}"
                               Style="{StaticResource SettingsCheckbox}" />
                 </Grid>
 
