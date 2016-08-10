@@ -348,36 +348,42 @@
   <data name="BadgeSmallRattata" xml:space="preserve">
     <value>Teenager</value>
   </data>
-    <data name="ItemsText.Text" xml:space="preserve">
+  <data name="ItemsText.Text" xml:space="preserve">
     <value>ITEMS</value>
   </data>
-    <data name="ItemsTextLower.Text" xml:space="preserve">
+  <data name="ItemsTextLower.Text" xml:space="preserve">
     <value>items</value>
   </data>
-    <data name="LevelupText.Text" xml:space="preserve">
+  <data name="LevelupText.Text" xml:space="preserve">
     <value>Neues Level!</value>
   </data>
-    <data name="NumberText.Text" xml:space="preserve">
+  <data name="NumberText.Text" xml:space="preserve">
     <value># </value>
     <comment>Watch out: there is a space after the #</comment>
   </data>
-    <data name="PokedexText.Text" xml:space="preserve">
+  <data name="PokedexText.Text" xml:space="preserve">
     <value>POKÉDEX</value>
   </data>
-    <data name="SlashSpaceCPText.Text" xml:space="preserve">
+  <data name="SlashSpaceCPText.Text" xml:space="preserve">
     <value>/ CP</value>
   </data>
-    <data name="SpaceXPText.Text" xml:space="preserve">
+  <data name="SpaceXPText.Text" xml:space="preserve">
     <value> EP</value>
   </data>
-    <data name="UpdateDownloading" xml:space="preserve">
+  <data name="UpdateDownloading" xml:space="preserve">
     <value>Aktualiersung herunterladen {0}</value>
   </data>
-    <data name="UpdateFailed" xml:space="preserve">
+  <data name="UpdateFailed" xml:space="preserve">
     <value>Aktualisierung fehlgeschlagen: {0}
 Öfnnen Sie zur manuellen Installation die Seite mit den Installationsdateien?</value>
   </data>
-    <data name="UpdateInstalling" xml:space="preserve">
+  <data name="UpdateInstalling" xml:space="preserve">
     <value>Aktualisierung wird installiert und die App neu gestartet...</value>
+  </data>
+  <data name="MapAutoRotateTitleText.Text1" xml:space="preserve">
+    <value>Landkarte Drehung</value>
+  </data>
+  <data name="RememberMapZoomTitleText.Text" xml:space="preserve">
+    <value>Merken Landkarte Einstellung </value>
   </data>
 </root>
