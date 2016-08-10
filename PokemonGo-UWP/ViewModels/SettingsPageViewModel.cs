@@ -37,10 +37,10 @@ namespace PokemonGo_UWP.ViewModels
             set { SettingsService.Instance.IsAutoRotateMapEnabled = value; }
         }
 
-        public bool IsMapZoomEnabled
+        public bool IsRememberMapZoomEnabled
         {
-            get { return SettingsService.Instance.IsMapZoomEnabled; }
-            set { SettingsService.Instance.IsMapZoomEnabled = value; }
+            get { return SettingsService.Instance.IsRememberMapZoomEnabled; }
+            set { SettingsService.Instance.IsRememberMapZoomEnabled = value; }
         }
 
         #endregion

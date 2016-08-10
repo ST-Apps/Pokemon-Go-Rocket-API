@@ -22,7 +22,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="75" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="100" />
+            <RowDefinition Height="75" />
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0">
@@ -78,7 +78,7 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Column="0"
                                x:Uid="MapAutoRotateTitleText"
-                               Text="Autorotate map"
+                               Text="Auto-Rotate Map"
                                Style="{StaticResource TextSettingsTitle}"
                                VerticalAlignment="Center" />
 
@@ -94,14 +94,14 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Column="0"
-                               x:Uid="MapAutoRotateTitleText"
+                               x:Uid="RememberMapZoomTitleText"
                                Text="Remember Map Zoom"
                                Style="{StaticResource TextSettingsTitle}"
                                VerticalAlignment="Center" />
 
                     <CheckBox Grid.Column="1"
-                              x:Name="MapRememberZoomCheckbox"
-                              IsChecked="{Binding IsAutoRotateMapEnabled, Mode=TwoWay}"
+                              x:Name="RememberMapZoomCheckbox"
+                              IsChecked="{Binding IsRememberMapZoomEnabled, Mode=TwoWay}"
                               Style="{StaticResource SettingsCheckbox}" />
                 </Grid>
 
@@ -126,7 +126,8 @@
 
         <Button Grid.Row="2"
                 Command="{Binding CloseCommand}"
-                Style="{StaticResource ButtonCircle}">
+                Style="{StaticResource ButtonCircle}"
+                Margin="0">
             <TextBlock Text="" FontFamily="SEGOE MDL2 Assets" />
         </Button>
 

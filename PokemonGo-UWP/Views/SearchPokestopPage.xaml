@@ -60,7 +60,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="75" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="100" />
+            <RowDefinition Height="75" />
         </Grid.RowDefinitions>
         <Border Grid.Row="0"
                 x:Name="ErrorMessageBorder"
@@ -213,7 +213,8 @@
         </Grid>
         <Button Grid.Row="2" 
                 Command="{Binding ReturnToGameScreen}"
-                Style="{StaticResource ButtonCircle}">
+                Style="{StaticResource ButtonCircle}"
+                Margin="0">
             <TextBlock Text="" FontFamily="SEGOE MDL2 Assets" />
         </Button>
     </Grid>

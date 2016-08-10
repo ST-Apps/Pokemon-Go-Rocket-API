@@ -11,7 +11,7 @@ namespace PokemonGo_UWP.Utils
 
         private readonly SettingsHelper _helper;
 
-        private PasswordVault _passwordVault = new PasswordVault();
+        private readonly PasswordVault _passwordVault = new PasswordVault();
 
         static SettingsService()
         {
@@ -24,6 +24,12 @@ namespace PokemonGo_UWP.Utils
         }
 
         #region Login & Authentication
+
+        public string UDID
+        {
+            get { return _helper.Read(nameof(UDID), string.Empty); }
+            set { _helper.Write(nameof(UDID), value); }
+        }
 
         public AuthType LastLoginService
         {
@@ -95,10 +101,10 @@ namespace PokemonGo_UWP.Utils
             set { _helper.Write(nameof(IsAutoRotateMapEnabled), value); }
         }
 
-        public bool IsMapZoomEnabled
+        public bool IsRememberMapZoomEnabled
         {
-            get { return _helper.Read(nameof(IsMapZoomEnabled), false); }
-            set { _helper.Write(nameof(IsMapZoomEnabled), value); }
+            get { return _helper.Read(nameof(IsRememberMapZoomEnabled), false); }
+            set { _helper.Write(nameof(IsRememberMapZoomEnabled), value); }
         }
         
         public double Zoomlevel

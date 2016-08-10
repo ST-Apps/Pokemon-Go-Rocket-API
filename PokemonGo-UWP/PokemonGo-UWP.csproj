@@ -413,6 +413,7 @@
     <Compile Include="Utils\AudioUtils.cs" />
     <Compile Include="Utils\CollectionExtensions.cs" />
     <Compile Include="Utils\Converters.cs" />
+    <Compile Include="Utils\DeviceInfos.cs" />
     <Compile Include="Utils\ExceptionHandler.cs" />
     <Compile Include="Utils\GameClient.cs" />
     <Compile Include="Utils\MessageDialogExtensions.cs" />
