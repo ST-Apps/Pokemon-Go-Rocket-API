@@ -95,7 +95,7 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Column="0"
                                x:Uid="RememberMapZoomTitleText"
-                               Text="Remember Map Settings"
+                               Text="Remember Map Zoom"
                                Style="{StaticResource TextSettingsTitle}"
                                VerticalAlignment="Center" />
 
