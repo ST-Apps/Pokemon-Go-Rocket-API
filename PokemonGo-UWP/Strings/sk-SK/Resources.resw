@@ -261,4 +261,16 @@ Chcete otvoriť stránku so súbormi k manuálnej inštalácii ?</value>
   <data name="UpdateInstalling" xml:space="preserve">
     <value>Inštalácia updatu. Aplikácia bude reštartovaná.</value>
   </data>
+  <data name="MapAutoRotateTitleText.Text" xml:space="preserve">
+    <value>Autorotácia Mapy</value>
+  </data>
+  <data name="RememberMapZoomTitleText.Text" xml:space="preserve">
+    <value>Zapamätať Nastavenie Mapy</value>
+  </data>
+  <data name="LevelText.Text" xml:space="preserve">
+    <value>Úroveň</value>
+  </data>
+  <data name="StartDateText.Text" xml:space="preserve">
+    <value>Dátum začiatku výpravy</value>
+  </data>
 </root>

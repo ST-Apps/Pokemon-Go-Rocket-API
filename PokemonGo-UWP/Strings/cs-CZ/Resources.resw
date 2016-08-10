@@ -261,4 +261,51 @@ Chcete otevřít stránku se soubory k manuální instalaci?</value>
   <data name="UpdateInstalling" xml:space="preserve">
     <value>Instalace updatu. Aplikace bude restartována.</value>
   </data>
+  <data name="MapAutoRotateTitleText.Text" xml:space="preserve">
+    <value>Autorotovat Mapu</value>
+  </data>
+  <data name="RememberMapZoomTitleText.Text" xml:space="preserve">
+    <value>Zapamatovat Nastavení Mapy</value>
+  </data>
+  <data name="incubatorsText.Text" xml:space="preserve">
+    <value>INKUBÁTORY</value>
+  </data>
+  <data name="LevelText.Text" xml:space="preserve">
+    <value>Úroveň</value>
+  </data>
+  <data name="StartDateText.Text" xml:space="preserve">
+    <value>Datum zahájení výpravy</value>
+  </data>
+  <data name="StartIncubationText.Text" xml:space="preserve">
+    <value>ZAHÁJIT INKUBACI</value>
+  </data>
+  <data name="UseIncubatorText.Text" xml:space="preserve">
+    <value>Použíjte inkubátor pro zahájení inkubace vajec.</value>
+  </data>
+  <data name="BadgeBattleAttackWon" xml:space="preserve">
+  </data>
+  <data name="BadgeBattleTrainingWon" xml:space="preserve">
+  </data>
+  <data name="BadgeBigMagikarp" xml:space="preserve">
+  </data>
+  <data name="BadgeCaptureTotal" xml:space="preserve">
+  </data>
+  <data name="BadgeEvolvedTotal" xml:space="preserve">
+  </data>
+  <data name="BadgeHatchedTotal" xml:space="preserve">
+  </data>
+  <data name="BadgePikachu" xml:space="preserve">
+    <value>Pikachu</value>
+  </data>
+  <data name="BadgePokedexEntries" xml:space="preserve">
+    <value>Kanto</value>
+  </data>
+  <data name="BadgePokestopsVisited" xml:space="preserve">
+  </data>
+  <data name="BadgeSmallRattata" xml:space="preserve">
+  </data>
+  <data name="BadgeTravelKm" xml:space="preserve">
+  </data>
+  <data name="Bug" xml:space="preserve">
+  </data>
 </root>
