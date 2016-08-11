@@ -38,6 +38,10 @@ using GetPlayerResponse = POGOProtos.Networking.Responses.GetPlayerResponse;
 using MapPokemon = POGOProtos.Map.Pokemon.MapPokemon;
 using NearbyPokemon = POGOProtos.Map.Pokemon.NearbyPokemon;
 using UseItemCaptureResponse = POGOProtos.Networking.Responses.UseItemCaptureResponse;
+using Windows.UI.Popups;
+using POGOProtos.Data.Player;
+using PokemonGo_UWP.Views;
+using Template10.Common;
 
 namespace PokemonGo_UWP.Utils
 {
@@ -184,7 +188,7 @@ namespace PokemonGo_UWP.Utils
                 AuthType = SettingsService.Instance.LastLoginService
             };
 
-            Client = new Client(ClientSettings, new APIFailure(), DeviceInfos.Instance) { AuthToken = SettingsService.Instance.AuthToken};
+            Client = new Client(ClientSettings, new APIFailure()) { AuthToken = SettingsService.Instance.AuthToken};
 
             await Client.Login.DoLogin();
         }
@@ -203,7 +207,7 @@ namespace PokemonGo_UWP.Utils
                 PtcPassword = password,
                 AuthType = AuthType.Ptc
             };
-            Client = new Client(ClientSettings, new APIFailure(), DeviceInfos.Instance);
+            Client = new Client(ClientSettings, new APIFailure());
             // Get PTC token
             var authToken = await Client.Login.DoLogin();
             // Update current token even if it's null and clear the token for the other identity provide
@@ -232,7 +236,7 @@ namespace PokemonGo_UWP.Utils
                 AuthType = AuthType.Google,
             };
 
-            Client = new Client(ClientSettings, new APIFailure(), DeviceInfos.Instance);
+            Client = new Client(ClientSettings, new APIFailure());
             // Get Google token
             var authToken = await Client.Login.DoLogin();
             // Update current token even if it's null
@@ -278,6 +282,11 @@ namespace PokemonGo_UWP.Utils
         public static event EventHandler<Geoposition> GeopositionUpdated;
 
         /// <summary>
+        /// We fire this event when we have found new Pokemons on the map
+        /// </summary>
+        public static event EventHandler MapPokemonUpdated;
+
+        /// <summary>
         /// Starts the timer to update map objects and the handler to update position
         /// </summary>
         public static async Task InitializeDataUpdate()
@@ -289,7 +298,7 @@ namespace PokemonGo_UWP.Utils
                 ReportInterval = 5000,
                 MovementThreshold = 5
             };
-            Busy.SetBusy(true, Resources.CodeResources.GetString("GettingGpsSignalText"));
+            Busy.SetBusy(true, Resources.Translation.GetString("GettingGPSSignal"));
             Geoposition = Geoposition ?? await _geolocator.GetGeopositionAsync();
             GeopositionUpdated?.Invoke(null, Geoposition);
             _geolocator.PositionChanged += (s, e) =>
@@ -309,11 +318,14 @@ namespace PokemonGo_UWP.Utils
                 await UpdateMapObjects();
             };            
             // Update before starting timer            
-            Busy.SetBusy(true, Resources.CodeResources.GetString("GettingUserDataText"));
+            Busy.SetBusy(true, Resources.Translation.GetString("GettingUserData"));
             GameSetting = (await Client.Download.GetSettings()).Settings;            
             await UpdateMapObjects();
             await UpdateInventory();
             await UpdateItemTemplates();
+            var InventoryDelta1 = (await GameClient.GetInventory()).InventoryDelta;
+            playerStats = InventoryDelta1.InventoryItems.First(item => item.InventoryItemData.PlayerStats != null).InventoryItemData.PlayerStats;
+
             Busy.SetBusy(false);
         }
 
@@ -356,6 +368,10 @@ namespace PokemonGo_UWP.Utils
             // update catchable pokemons
             var newCatchablePokemons = mapObjects.Item1.MapCells.SelectMany(x => x.CatchablePokemons).ToArray();
             Logger.Write($"Found {newCatchablePokemons.Length} catchable pokemons");
+            if (newCatchablePokemons.Length != CatchablePokemons.Count)
+            {
+                MapPokemonUpdated?.Invoke(null, null);
+            }
             CatchablePokemons.UpdateWith(newCatchablePokemons, x => new MapPokemonWrapper(x), (x, y) => x.EncounterId == y.EncounterId);
 
             // update nearby pokemons
@@ -396,6 +412,15 @@ namespace PokemonGo_UWP.Utils
         #endregion
 
         #region Player Data & Inventory
+
+        /// <summary>
+        /// Gets the Template for the items.
+        /// </summary>
+        public static async Task<DownloadItemTemplatesResponse> GetItemTemplates()
+        {
+            return await Client.Download.GetItemTemplates();
+        }
+
 
         /// <summary>
         /// List of items that can be used when trying to catch a Pokemon
@@ -554,6 +579,110 @@ namespace PokemonGo_UWP.Utils
 
         #endregion
 
+        #region evolving
+        public class taskResponse
+        {
+            public bool Status { get; set; }
+            public string Message { get; set; }
+            public taskResponse() { }
+            public taskResponse(bool status, string message)
+            {
+                Status = status;
+                Message = message;
+            }
+        }
+        public static PlayerStats playerStats { get; set; } = new PlayerStats();
+
+
+        private static async Task<GetInventoryResponse> GetCachedInventory()
+        {
+            var now = DateTime.UtcNow;
+
+            if (_lastRefresh.AddSeconds(30).Ticks > now.Ticks)
+            {
+                return _cachedInventory;
+            }
+            return await RefreshCachedInventory();
+        }
+        public static async Task<ReleasePokemonResponse> TransferPokemon(ulong pokemonId)
+        {
+            return await Client.Inventory.TransferPokemon(pokemonId);
+        }
+        public static async Task<GetInventoryResponse> RefreshCachedInventory()
+        {
+            var now = DateTime.UtcNow;
+            var ss = new SemaphoreSlim(10);
+
+            await ss.WaitAsync();
+            try
+            {
+                _lastRefresh = now;
+                _cachedInventory = await Client.Inventory.GetInventory();
+                return _cachedInventory;
+            }
+            finally
+            {
+                ss.Release();
+            }
+        }
+        private static GetInventoryResponse _cachedInventory;
+        private static DateTime _lastRefresh;
+        public static async Task<List<Candy>> GetPokemonFamilies()
+        {
+            var inventory = await GetCachedInventory();
+
+            var families = from item in inventory.InventoryDelta.InventoryItems
+                           where item.InventoryItemData?.Candy != null
+                           where item.InventoryItemData?.Candy.FamilyId != PokemonFamilyId.FamilyUnset
+                           group item by item.InventoryItemData?.Candy.FamilyId into family
+                           select new Candy
+                           {
+                               FamilyId = family.FirstOrDefault().InventoryItemData.Candy.FamilyId,
+                               Candy_ = family.FirstOrDefault().InventoryItemData.Candy.Candy_
+                           };
+
+
+            return families.ToList();
+        }
+        public static async Task<taskResponse> evolvePokemon(PokemonData pokemon)
+        {
+            taskResponse resp = new taskResponse(false, string.Empty);
+            try
+            {
+                var evolvePokemonResponse = await Client.Inventory.EvolvePokemon((ulong)pokemon.Id);
+
+                if (evolvePokemonResponse.Result == EvolvePokemonResponse.Types.Result.Success)
+                {
+                    MessageDialog mes = new MessageDialog("evolved!");
+                    await mes.ShowAsync();
+                    await UpdateInventory();
+                    resp.Status = true;
+                    BootStrapper.Current.NavigationService.Navigate(typeof(PokemonView), true);
+
+                }
+                else
+                {
+                    resp.Status = false;
+                }
+             
+            }
+            catch (Exception e)
+            {
+
+            }
+            return resp;
+        }
+        public static async Task<UpgradePokemonResponse> Powerup(ulong id)
+        {
+            // upgrade or powerup
+            UpgradePokemonResponse res = await Client.Inventory.UpgradePokemon(id);
+            await UpdateInventory();
+            BootStrapper.Current.NavigationService.Navigate(typeof(PokemonView), true);
+            return res;
+         
+        }
+        #endregion
+
         #endregion
 
         #region Pokestop Handling
@@ -609,6 +738,6 @@ namespace PokemonGo_UWP.Utils
 
         #endregion
 
-        #endregion
+        #endregion`
     }
 }

@@ -316,27 +316,29 @@
                     <RelativePanel>
                         <GridView
                             ItemsSource="{Binding PokemonInventory}"
-                            SelectionMode="None"
-                            RelativePanel.AlignRightWithPanel="True"
-                            RelativePanel.AlignTopWithPanel="True"
-                            RelativePanel.AlignLeftWithPanel="True"
-                            RelativePanel.AlignBottomWithPanel="True">
+                            SelectionMode="None">
 
                             <GridView.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <WrapGrid Orientation="Horizontal"
                                               VerticalChildrenAlignment="Top"
+                                              HorizontalAlignment="Center"
                                               MaximumRowsOrColumns="4" />
                                 </ItemsPanelTemplate>
                             </GridView.ItemsPanel>
 
                             <GridView.ItemTemplate>
                                 <DataTemplate>
-                                    <StackPanel Margin="8,4,8,4">
+                                    <StackPanel Margin="8,4,8,4"
+                                                Width="92">
+                                        <interactivity:Interaction.Behaviors>
+                                            <core:EventTriggerBehavior EventName="Tapped">
+                                                <core:InvokeCommandAction Command="{Binding GotoPokemonDetailsCommand}"/>
+                                            </core:EventTriggerBehavior>
+                                        </interactivity:Interaction.Behaviors>
+                                        
                                         <TextBlock TextAlignment="Center">
-                                            <Run FontSize="12" 
-                                                 x:Uid="CpTextBlock" 
-                                                 Text="CP" />
+                                            <Run FontSize="12" x:Uid="CPText" Text="CP" />
                                             <Run FontSize="16" Text="{Binding Cp}" />
                                         </TextBlock>
                                         <Image
@@ -406,19 +408,15 @@
                                    Foreground="#5a7878"
                                    Style="{StaticResource SubtitleTextBlockStyle}"
                                    x:Name="EggsPivotHeader"
-                                   x:Uid="EggsTextBlock"/>
+                                   x:Uid="EggsText"
+                                   Text="EGGS" />
                     </PivotItem.Header>
 
 
                     <RelativePanel>
                         <GridView
                             ItemsSource="{Binding EggsInventory}"
-                            SelectionMode="None"
-                            RelativePanel.AlignRightWithPanel="True"
-                            RelativePanel.AlignTopWithPanel="True"
-                            RelativePanel.AlignLeftWithPanel="True"
-                            RelativePanel.AlignBottomWithPanel="True">
-
+                            SelectionMode="None">
 
                             <GridView.ItemsPanel>
                                 <ItemsPanelTemplate>
