@@ -278,11 +278,6 @@ namespace PokemonGo_UWP.Utils
         public static event EventHandler<Geoposition> GeopositionUpdated;
 
         /// <summary>
-        /// We fire this event when we have found new Pokemons on the map
-        /// </summary>
-        public static event EventHandler MapPokemonUpdated;
-
-        /// <summary>
         /// Starts the timer to update map objects and the handler to update position
         /// </summary>
         public static async Task InitializeDataUpdate()
@@ -361,10 +356,6 @@ namespace PokemonGo_UWP.Utils
             // update catchable pokemons
             var newCatchablePokemons = mapObjects.Item1.MapCells.SelectMany(x => x.CatchablePokemons).ToArray();
             Logger.Write($"Found {newCatchablePokemons.Length} catchable pokemons");
-            if (newCatchablePokemons.Length != CatchablePokemons.Count)
-            {
-                MapPokemonUpdated?.Invoke(null, null);
-            }
             CatchablePokemons.UpdateWith(newCatchablePokemons, x => new MapPokemonWrapper(x), (x, y) => x.EncounterId == y.EncounterId);
 
             // update nearby pokemons

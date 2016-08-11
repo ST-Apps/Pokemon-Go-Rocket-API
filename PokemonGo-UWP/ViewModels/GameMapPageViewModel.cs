@@ -1,32 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using Windows.ApplicationModel;
-using Windows.Devices.Geolocation;
-using Windows.Devices.Sensors;
-using Windows.Foundation.Metadata;
-using Windows.Phone.Devices.Notification;
-using Windows.System.Threading;
-using Windows.UI.Popups;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Navigation;
+﻿using POGOProtos.Data;
+using POGOProtos.Data.Player;
+using POGOProtos.Inventory;
+using POGOProtos.Networking.Responses;
 using PokemonGo.RocketAPI;
 using PokemonGo_UWP.Entities;
 using PokemonGo_UWP.Utils;
 using PokemonGo_UWP.Views;
-using POGOProtos.Data;
-using POGOProtos.Data.Player;
-using POGOProtos.Inventory;
-using POGOProtos.Map.Pokemon;
-using POGOProtos.Networking.Responses;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using System.Linq;
+using System.Threading.Tasks;
 using Template10.Common;
 using Template10.Mvvm;
 using Template10.Services.NavigationService;
-using Universal_Authenticator_v2.Views;
+using Windows.Devices.Geolocation;
+using Windows.Foundation.Metadata;
+using Windows.Phone.Devices.Notification;
+using Windows.UI.Popups;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Navigation;
 
 namespace PokemonGo_UWP.ViewModels
 {
@@ -98,7 +92,9 @@ namespace PokemonGo_UWP.ViewModels
             {
                 _vibrationDevice = VibrationDevice.GetDefault();
             }
-            GameClient.MapPokemonUpdated += GameClientOnMapPokemonUpdated;
+            // RWM: NOTE: Might consider setting this from App.cs instead to allow for 
+            //            Toast and Tile notifications when in the background.
+            GameClient.CatchablePokemons.CollectionChanged += CatchablePokemons_CollectionChanged;
             await Task.CompletedTask;
         }
 
@@ -123,7 +119,9 @@ namespace PokemonGo_UWP.ViewModels
             args.Cancel = false;
             // Stops map timer
             GameClient.ToggleUpdateTimer(false);
-            GameClient.MapPokemonUpdated -= GameClientOnMapPokemonUpdated;
+            // RWM: NOTE: Might consider setting this from App.cs instead to allow for 
+            //            Toast and Tile notifications when in the background.
+            GameClient.CatchablePokemons.CollectionChanged -= CatchablePokemons_CollectionChanged;
             await Task.CompletedTask;
         }
 
@@ -266,12 +264,15 @@ namespace PokemonGo_UWP.ViewModels
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="eventArgs"></param>
-        private async void GameClientOnMapPokemonUpdated(object sender, EventArgs eventArgs)
+        private async void CatchablePokemons_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
-            if (SettingsService.Instance.IsVibrationEnabled)
-                _vibrationDevice?.Vibrate(TimeSpan.FromMilliseconds(500));
-            if (SettingsService.Instance.IsMusicEnabled)
-                await AudioUtils.PlaySound(@"pokemon_found_ding.wav");
+            if (e.Action == NotifyCollectionChangedAction.Add)
+            {
+                if (SettingsService.Instance.IsVibrationEnabled)
+                    _vibrationDevice?.Vibrate(TimeSpan.FromMilliseconds(500));
+                if (SettingsService.Instance.IsMusicEnabled)
+                    await AudioUtils.PlaySound(@"pokemon_found_ding.wav");
+            }
         }
 
         #endregion
