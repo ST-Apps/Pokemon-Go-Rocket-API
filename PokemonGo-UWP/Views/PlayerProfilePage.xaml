@@ -107,7 +107,8 @@
                       RelativePanel.AlignLeftWithPanel="True"
                       RelativePanel.AlignBottomWithPanel="True"
                       ItemsSource="{Binding Achievements}"
-                      SelectionMode="None">
+                      SelectionMode="None"
+                      Margin="0,0,0,50">
 
                 <GridView.ItemsPanel>
                     <ItemsPanelTemplate>
