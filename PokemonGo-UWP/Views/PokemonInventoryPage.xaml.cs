@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+﻿using PokemonGo_UWP.Entities;
+using PokemonGo_UWP.Utils;
 using Windows.UI.Core;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -19,24 +13,35 @@ using Windows.UI.Xaml.Navigation;
 namespace PokemonGo_UWP.Views
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    ///     An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class PokemonInventoryPage : Page
     {
         public PokemonInventoryPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             // TODO: fix header
             // Setup incubators translation
             Loaded += (s, e) =>
-            {                
+            {
                 ShowIncubatorsModalAnimation.From =
                     HideIncubatorsModalAnimation.To = IncubatorsModal.ActualHeight;
-                HideIncubatorsModalStoryboard.Completed += (ss, ee) =>
-                {
-                    IncubatorsModal.IsModal = false;
-                };
+                HideIncubatorsModalStoryboard.Completed += (ss, ee) => { IncubatorsModal.IsModal = false; };
             };
+        }
+
+
+        private void ToggleIncubatorModel(object sender, TappedRoutedEventArgs e)
+        {
+            if (IncubatorsModal.IsModal)
+            {
+                HideIncubatorsModalStoryboard.Begin();
+            }
+            else
+            {
+                IncubatorsModal.IsModal = true;
+                ShowIncubatorsModalStoryboard.Begin();
+            }
         }
 
         #region Overrides of Page
@@ -62,20 +67,20 @@ namespace PokemonGo_UWP.Views
 
         #endregion
 
-
-        private void ToggleIncubatorModel(object sender, TappedRoutedEventArgs e)
+        private void StackPanel_RightTapped(object sender, RightTappedRoutedEventArgs e)
         {
-            if (IncubatorsModal.IsModal)
-            {
-                HideIncubatorsModalStoryboard.Begin();
-            }
-            else
-            {
-                IncubatorsModal.IsModal = true;
-                ShowIncubatorsModalStoryboard.Begin();
-            }
+            FlyoutBase.ShowAttachedFlyout(sender as FrameworkElement);
         }
 
+        private async void Button_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            var button = sender as Button;
+            var context = button.DataContext as PokemonDataWrapper;
+            var result = await GameClient.TransferPokemon(context.Id);
+            MessageDialog mes = new MessageDialog("Transfer " + result.Result + ". You got " + result.CandyAwarded + " candy", "Transfer " + context.PokemonId.ToString());
+            mes.ShowAsync();
+            await GameClient.UpdateInventory();   
+            //TODO REFRESH THE GRID  
+        }
     }
-
 }
