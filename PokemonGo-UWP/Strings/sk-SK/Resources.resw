@@ -196,7 +196,7 @@
     <value>Bohužiaľ , pokemon utiekol :(</value>
   </data>
   <data name="PokemonText.Text" xml:space="preserve">
-    <value>POKÉMON</value>
+    <value>POKÉMONI</value>
   </data>
   <data name="PTCDown" xml:space="preserve">
     <value>PTC je pravdepodobne offline. Skúste to neskôr prosím.</value>
@@ -260,5 +260,101 @@ Chcete otvoriť stránku so súbormi k manuálnej inštalácii ?</value>
   </data>
   <data name="UpdateInstalling" xml:space="preserve">
     <value>Inštalácia updatu. Aplikácia bude reštartovaná.</value>
+  </data>
+  <data name="IncubatorInfoText.Text" xml:space="preserve">
+    <value>Použite inkubátor k inkubácii vajec.</value>
+  </data>
+  <data name="MapAutoRotateTitleText.Text" xml:space="preserve">
+    <value>Auto-rotovať Mapu</value>
+  </data>
+  <data name="RememberMapZoomTitleText.Text" xml:space="preserve">
+    <value>Zapamätať Priblíženie Mapy</value>
+  </data>
+  <data name="StartIncubationText.Text" xml:space="preserve">
+    <value>ZAČAŤ INKUBÁCII</value>
+  </data>
+  <data name="BadgeBattleAttackWon" xml:space="preserve">
+    <value>Bojovníčka</value>
+  </data>
+  <data name="BadgeBattleTrainingWon" xml:space="preserve">
+    <value>Tréner Eso</value>
+  </data>
+  <data name="BadgeBigMagikarp" xml:space="preserve">
+    <value>Rybár</value>
+  </data>
+  <data name="BadgeCaptureTotal" xml:space="preserve">
+    <value>Zberateľ</value>
+  </data>
+  <data name="BadgeEvolvedTotal" xml:space="preserve">
+    <value>Vedec</value>
+  </data>
+  <data name="BadgeHatchedTotal" xml:space="preserve">
+    <value>Chovateľ</value>
+  </data>
+  <data name="BadgePikachu" xml:space="preserve">
+    <value>Pikachu</value>
+  </data>
+  <data name="BadgePokedexEntries" xml:space="preserve">
+    <value>Kanto</value>
+  </data>
+  <data name="BadgePokestopsVisited" xml:space="preserve">
+    <value>Batôžkar</value>
+  </data>
+  <data name="BadgeSmallRattata" xml:space="preserve">
+    <value>Mladík</value>
+  </data>
+  <data name="BadgeTravelKm" xml:space="preserve">
+    <value>Bežec</value>
+  </data>
+  <data name="Bug" xml:space="preserve">
+    <value>Chrobák</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Dračí duša</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Rocker</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Pohádkár</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Čierny opasok</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>knôt</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Vtáčie muž</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Duchár</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Zahradník</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Ruiny</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Lyžiar</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Školáčik</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Punker</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Psychik</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Turista</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Skladník</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Plavec</value>
   </data>
 </root>
