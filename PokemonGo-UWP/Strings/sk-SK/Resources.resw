@@ -196,7 +196,7 @@
     <value>Bohužiaľ , pokemon utiekol :(</value>
   </data>
   <data name="PokemonText.Text" xml:space="preserve">
-    <value>POKÉMON</value>
+    <value>POKÉMONI</value>
   </data>
   <data name="PTCDown" xml:space="preserve">
     <value>PTC je pravdepodobne offline. Skúste to neskôr prosím.</value>
@@ -260,5 +260,17 @@ Chcete otvoriť stránku so súbormi k manuálnej inštalácii ?</value>
   </data>
   <data name="UpdateInstalling" xml:space="preserve">
     <value>Inštalácia updatu. Aplikácia bude reštartovaná.</value>
+  </data>
+  <data name="IncubatorInfoText.Text" xml:space="preserve">
+    <value>Použite inkubátor k inkubácii vajec.</value>
+  </data>
+  <data name="MapAutoRotateTitleText.Text" xml:space="preserve">
+    <value>Auto-rotovať Mapu</value>
+  </data>
+  <data name="RememberMapZoomTitleText.Text" xml:space="preserve">
+    <value>Zapamätať Priblíženie Mapy</value>
+  </data>
+  <data name="StartIncubationText.Text" xml:space="preserve">
+    <value>ZAČAŤ INKUBÁCII</value>
   </data>
 </root>
