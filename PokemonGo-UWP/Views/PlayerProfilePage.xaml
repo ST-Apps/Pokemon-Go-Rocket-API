@@ -229,11 +229,11 @@
                         <TextBlock Text="Level"
                                    Style="{ThemeResource ProfilePageLargeText}"
                                    x:Uid="LevelText"
-                                   FontWeight="SemiBold" />
+                                   FontWeight="SemiBold" FontSize="22" />
                         <TextBlock Text="{Binding PlayerStats.Level}"
                                    Margin="5,0,0,0"
                                    Style="{ThemeResource ProfilePageLargeText}"
-                                   FontWeight="SemiBold" />
+                                   FontWeight="SemiBold"  />
                     </StackPanel>
 
                     <ProgressBar
@@ -253,19 +253,19 @@
                             Text="{Binding PlayerStats, Converter={StaticResource PlayerDataToCurrentExperienceConverter}}"
                             Style="{ThemeResource ProfilePageMediumText}"
                             x:Uid="LevelText"
-                            FontWeight="SemiBold" />
+                            FontWeight="SemiBold" FontSize="22" />
                         <TextBlock Text="/"
                                    Style="{ThemeResource ProfilePageMediumText}"
                                    Margin="5,0"
-                                   FontWeight="SemiBold" />
+                                   FontWeight="SemiBold" FontSize="22" />
                         <TextBlock
                             Text="{Binding PlayerStats, Converter={StaticResource PlayerDataToTotalLevelExperienceConverter}}"
                             Style="{ThemeResource ProfilePageMediumText}"
-                            FontWeight="SemiBold" />
+                            FontWeight="SemiBold" FontSize="22" />
                         <TextBlock Text="XP"
                                    Margin="5,0,0,0"
                                    Style="{ThemeResource ProfilePageMediumText}"
-                                   FontWeight="SemiBold" />
+                                   FontWeight="SemiBold" FontSize="22" />
                     </StackPanel>
 
                     <Grid x:Name="InformationGrid">
@@ -343,7 +343,7 @@
                            Stretch="Uniform"
                            VerticalAlignment="Stretch"
                            HorizontalAlignment="Stretch" />
-                    <Image Source="../Assets/UI/inventory.png"
+                    <Image Source="../Assets/Buttons/inventory.png"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center" />
                 </Grid>
