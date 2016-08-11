@@ -107,7 +107,8 @@
                       RelativePanel.AlignLeftWithPanel="True"
                       RelativePanel.AlignBottomWithPanel="True"
                       ItemsSource="{Binding Achievements}"
-                      SelectionMode="None">
+                      SelectionMode="None"
+                      Margin="0,0,0,50">
 
                 <GridView.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -125,11 +126,13 @@
                                        Width="80">
                             <TextBlock x:Name="AchievementTypeText"
                                        Text="{Binding Key, Converter={StaticResource AchievementTranslationConverter}}"
-                                       RelativePanel.AlignHorizontalCenterWithPanel="True"
-                                       Foreground="Green" />
+                                       Style="{ThemeResource ProfilePageSmallText}"
+                                       FontWeight="Bold"
+                                       Typography.Capitals = "AllSmallCaps"
+                                       RelativePanel.AlignHorizontalCenterWithPanel="True"/>
                             <Ellipse Width="60"
                                      Height="60"
-                                     Stroke="LightGreen"
+                                     Stroke="MediumAquamarine"
                                      RelativePanel.Below="AchievementTypeText"
                                      RelativePanel.AlignHorizontalCenterWithPanel="True"
                                      StrokeThickness="2.5"
@@ -139,17 +142,23 @@
                                         ImageSource="{Binding Converter={StaticResource AchievementValueToMedalImageConverter}}" />
                                 </Ellipse.Fill>
                             </Ellipse>
-                            <TextBlock x:Name="AchievementValueText"
+                            <StackPanel x:Name="Achievement"
+                                        Orientation="Horizontal"
+                                        HorizontalAlignment="Center"
+                                        Margin="0,2,0,0"
+                                        RelativePanel.Below="AchievementImage"
+                                        RelativePanel.AlignHorizontalCenterWithPanel="True">
+                                <TextBlock x:Name="AchievementValueText"
                                        Text="{Binding Value, Converter={StaticResource AchievementValueConverter}}"
-                                       RelativePanel.AlignLeftWithPanel="True"
-                                       RelativePanel.Below="AchievementImage"
-                                       FontWeight="SemiBold"
-                                       Foreground="Green" />
-                            <TextBlock x:Name="AchievementNextValueText"
+                                       Style="{ThemeResource ProfilePageSmallText}"
+                                       FontWeight="Bold"/>
+                                <TextBlock x:Name="Slash"
+                                       Text="/"
+                                       Style="{ThemeResource ProfilePageSmallText}"/>
+                                <TextBlock x:Name="AchievementNextValueText"
                                        Text="{Binding Converter={StaticResource AchievementNextValueConverter}}"
-                                       RelativePanel.AlignRightWithPanel="True"
-                                       RelativePanel.Below="AchievementImage"
-                                       Foreground="Green" />
+                                       Style="{ThemeResource ProfilePageSmallText}" />
+                            </StackPanel>
                         </RelativePanel>
                     </DataTemplate>
                 </GridView.ItemTemplate>
@@ -238,7 +247,7 @@
 
                     <ProgressBar
                         Value="{Binding PlayerStats, Converter={StaticResource PlayerDataToExperienceConverter}}"
-                        Foreground="Yellow"
+                        Foreground="{Binding PlayerProfile.Team, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}"
                         HorizontalAlignment="Stretch"
                         Height="10"
                         Margin="48,0"

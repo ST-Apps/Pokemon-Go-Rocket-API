@@ -281,10 +281,8 @@
                             </Grid>
                         </Border>
                     </Border>
-
                 </controls:ModalDialog.ModalContent>
             </controls:ModalDialog>
-
         </Grid>
 
         <RelativePanel x:Name="MainUIPanel">
@@ -301,8 +299,8 @@
                    RelativePanel.AlignLeftWithPanel="True"
                    RelativePanel.AlignBottomWithPanel="True">
 
-                <PivotItem Margin="0"
-                           x:Name="PokemonsPivot">
+                <PivotItem x:Name="PokemonsPivot"
+                           Margin="0">
                     <PivotItem.Header>
                         <TextBlock VerticalAlignment="Center"
                                    HorizontalAlignment="Center"
@@ -316,46 +314,54 @@
                     <RelativePanel>
                         <GridView
                             ItemsSource="{Binding PokemonInventory}"
-                            SelectionMode="None">
+                            SelectionMode="None"
+                            RelativePanel.AlignLeftWithPanel="True"
+                            RelativePanel.AlignTopWithPanel="True"
+                            RelativePanel.AlignRightWithPanel="True"
+                            Margin="0,0,0,50">
 
                             <GridView.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <WrapGrid Orientation="Horizontal"
                                               VerticalChildrenAlignment="Top"
                                               HorizontalAlignment="Center"
-                                              MaximumRowsOrColumns="4" />
+                                              MaximumRowsOrColumns="3" />
                                 </ItemsPanelTemplate>
                             </GridView.ItemsPanel>
 
                             <GridView.ItemTemplate>
                                 <DataTemplate>
-                                    <StackPanel Margin="8,4,8,4"
-                                                Width="92">
-                                        <TextBlock TextAlignment="Center">
+                                    <RelativePanel Height="120"
+                                                   Width="120"
+                                                   Margin="0,10">
+                                        <TextBlock x:Name="PokemonCP"
+                                                   TextAlignment="Center"
+                                                   RelativePanel.AlignHorizontalCenterWithPanel="True">
                                             <Run FontSize="12" x:Uid="CPText" Text="CP" />
                                             <Run FontSize="16" Text="{Binding Cp}" />
                                         </TextBlock>
-                                        <Image
-                                            Source="{Binding PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"
-                                            Stretch="Uniform"
-                                            VerticalAlignment="Center"
-                                            Width="48"
-                                            Height="48"
-                                            Margin="3,0" />
-                                        <TextBlock
-                                            Text="{Binding PokemonId, Converter={StaticResource PokemonIdToPokemonNameConverter}}"
-                                            Style="{StaticResource BodyTextBlockStyle}"
-                                            TextAlignment="Center" />
-
-                                        <ProgressBar
-                                            Value="{Binding Converter={StaticResource PokemonDataToPokemonStaminaConverter}}"
-                                            Margin="0,2,0,0"
-                                            Foreground="#6ee8b7"
-                                            IsIndeterminate="False"
-                                            HorizontalAlignment="Center"
-                                            HorizontalContentAlignment="Center"
-                                            VerticalAlignment="Center" />
-                                    </StackPanel>
+                                        <Image x:Name="PokemonImage"
+                                               Source="{Binding PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"
+                                               Stretch="Uniform"
+                                               Width="64"
+                                               Height="64"
+                                               Margin="3,0"
+                                               RelativePanel.AlignHorizontalCenterWithPanel="True"
+                                               RelativePanel.Below="PokemonCP"/>
+                                        <TextBlock x:Name="PokemonName"
+                                                   Text="{Binding PokemonId, Converter={StaticResource PokemonIdToPokemonNameConverter}}"
+                                                   Style="{StaticResource BodyTextBlockStyle}"
+                                                   RelativePanel.AlignHorizontalCenterWithPanel="True"
+                                                   RelativePanel.Below="PokemonImage"/>
+                                        <ProgressBar x:Name="PokemonProgress"
+                                                     Value="{Binding Converter={StaticResource PokemonDataToPokemonStaminaConverter}}"
+                                                     Foreground="#6ee8b7"
+                                                     IsIndeterminate="False"
+                                                     HorizontalAlignment="Stretch"
+                                                     RelativePanel.AlignHorizontalCenterWithPanel="True"
+                                                     Width="64"
+                                                     RelativePanel.Below="PokemonName"/>
+                                        </RelativePanel>
                                 </DataTemplate>
                             </GridView.ItemTemplate>
                         </GridView>
@@ -394,7 +400,6 @@
 
                 <PivotItem Margin="0"
                            x:Name="EggsPivot">
-
                     <PivotItem.Header>
                         <TextBlock VerticalAlignment="Center"
                                    HorizontalAlignment="Center"
@@ -405,62 +410,60 @@
                                    x:Uid="EggsText"
                                    Text="EGGS" />
                     </PivotItem.Header>
-
-
                     <RelativePanel>
                         <GridView
                             ItemsSource="{Binding EggsInventory}"
-                            SelectionMode="None">
+                            SelectionMode="None"
+                            RelativePanel.AlignLeftWithPanel="True"
+                            RelativePanel.AlignTopWithPanel="True"
+                            RelativePanel.AlignRightWithPanel="True"
+                            Margin="0,0,0,50">
 
                             <GridView.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <WrapGrid Orientation="Horizontal"
                                               VerticalChildrenAlignment="Top"
                                               HorizontalAlignment="Center"
-                                              MaximumRowsOrColumns="4" />
+                                              MaximumRowsOrColumns="3" />
                                 </ItemsPanelTemplate>
                             </GridView.ItemsPanel>
 
                             <GridView.ItemTemplate>
                                 <DataTemplate>
-                                    <StackPanel Margin="8,4,8,4"
-                                                Width="92">
-
+                                    <RelativePanel Height="120"
+                                                   Width="120"
+                                                   Margin="0,10">
                                         <interactivity:Interaction.Behaviors>
                                             <core:EventTriggerBehavior EventName="Tapped">
                                                 <core:InvokeCommandAction Command="{Binding GotoEggDetailsCommand}"/>
                                             </core:EventTriggerBehavior>
                                         </interactivity:Interaction.Behaviors>
-
-                                        <Image
-                                            Source="{Binding Converter={StaticResource EggDataToEggIconConverter}}"
-                                            Stretch="Uniform"
-                                            VerticalAlignment="Center"
-                                            Width="48"
-                                            Height="48"
-                                            Margin="3,0" />
-
-                                        <ProgressBar
-                                            Value="{Binding Converter={StaticResource EggDataToEggProgressConverter}}"
-                                            Margin="0,2,0,0"
-                                            Foreground="#399FFF"
-                                            IsIndeterminate="False"
-                                            HorizontalAlignment="Center"
-                                            HorizontalContentAlignment="Center"
-                                            VerticalAlignment="Center" />
-
-                                        <TextBlock
-                                            TextAlignment="Center">
-                                            <Run FontWeight="Bold" Text="{Binding EggKmWalkedStart}" />
-                                            <Run FontWeight="Bold" Text="/" />
-                                            <Run FontWeight="Bold" Text="{Binding EggKmWalkedTarget}" />
-                                            <Run FontWeight="Light" Text=" km" />
+                                        <Image x:Name="EggImage"
+                                               Source="{Binding Converter={StaticResource EggDataToEggIconConverter}}"
+                                               Stretch="Uniform"
+                                               VerticalAlignment="Center"
+                                               Width="64"
+                                               Height="64"
+                                               RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+                                        <ProgressBar x:Name="EggProgress"
+                                                     Value="{Binding Converter={StaticResource EggDataToEggProgressConverter}}"
+                                                     Foreground="#399FFF"
+                                                     IsIndeterminate="False"
+                                                     RelativePanel.AlignHorizontalCenterWithPanel="True"
+                                                     Width="64"
+                                                     RelativePanel.Below="EggImage"/>
+                                        <TextBlock x:Name="EggDistance"
+                                                   RelativePanel.AlignHorizontalCenterWithPanel="True"
+                                                   RelativePanel.Below="EggProgress">
+                                            <Run FontWeight="SemiBold" Text="{Binding EggKmWalkedStart}" />
+                                            <Run FontWeight="SemiBold" Text="/" />
+                                            <Run FontWeight="SemiBold" Text="{Binding EggKmWalkedTarget}" />
+                                            <Run FontWeight="Light" Text=" km"/>
                                         </TextBlock>
-                                    </StackPanel>
+                                    </RelativePanel>
                                 </DataTemplate>
                             </GridView.ItemTemplate>
                         </GridView>
-
                         <Button RelativePanel.AlignBottomWithPanel="True"
                                 RelativePanel.AlignRightWithPanel="True"
                                 Style="{ThemeResource ImageButtonStyle}"
@@ -476,7 +479,6 @@
                                        HorizontalAlignment="Stretch" />
                         </Button>
                     </RelativePanel>
-
                 </PivotItem>
             </Pivot>
 

@@ -528,7 +528,7 @@
 
     <Style x:Key="ProfilePageText" TargetType="TextBlock">
         <Setter Property="FontSize" Value="20" />
-        <Setter Property="Foreground" Value="Green"/>
+        <Setter Property="Foreground" Value="DarkSlateGray"/>
         <Setter Property="FontFamily" Value="../Assets/Fonts/Lato-Medium.ttf#Lato Medium" />
     </Style>
     <Style x:Key="ProfilePageSmallText" TargetType="TextBlock" BasedOn="{StaticResource ProfilePageText}">
