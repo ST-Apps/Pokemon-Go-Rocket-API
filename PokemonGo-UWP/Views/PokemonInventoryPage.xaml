@@ -99,24 +99,20 @@
 
     <Grid>
 
-        <RelativePanel x:Name="SortMenuPanel"
-                       RelativePanel.AlignTopWithPanel="True"
-                       RelativePanel.AlignLeftWithPanel="True"
-                       RelativePanel.AlignBottomWithPanel="True"
-                       RelativePanel.AlignRightWithPanel="True"
-                       Opacity="0"
-                       Canvas.ZIndex="0">
+        <Grid x:Name="SortMenuPanel" Opacity="0" Canvas.ZIndex="0">
 
-            <RelativePanel.Background>
-                <ImageBrush ImageSource="../Assets/Backgrounds/ui_bg_green_02.png"
-                            Stretch="UniformToFill" />
-            </RelativePanel.Background>
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#b3ee9a" Offset="0"/>
+                    <GradientStop Color="#43bab6" Offset="0.8"/>
+                </LinearGradientBrush>
+            </Grid.Background>
 
             <ListView ItemsSource="{Binding Converter={StaticResource PokemonSortingModesToSortingModesListConverter}}"
                       SelectedItem="{Binding CurrentPokemonSortingMode, Mode=TwoWay}"
                       IsItemClickEnabled="True"
-                      RelativePanel.Above="CloseSortMenuButton"
-                      RelativePanel.AlignRightWithPanel="True">
+                      VerticalAlignment="Bottom"
+                      Margin="0,0,0,77.5">
 
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="ItemClick">
@@ -124,60 +120,51 @@
                                                TargetObject="{Binding ElementName=HideSortMenuStoryboard}" />
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
-                
+
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem">
+                        <Setter Property="Margin" Value="0" />
                         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
                     </Style>
                 </ListView.ItemContainerStyle>
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Grid HorizontalAlignment="Right">
+                        <Grid HorizontalAlignment="Right" Margin="15,5,15,5">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
-                            <TextBlock Text="{Binding}"
-                                       Grid.Column="0"
-                                       FontSize="18"
-                                       VerticalAlignment="Center"
-                                       Foreground="#dbfee8"
-                                       FontWeight="SemiLight"
-                                       FontFamily="../Assets/Fonts/Lato-Medium.ttf#Lato" />
-                            <Image Source="{Binding Converter={StaticResource PokemonSortingModesToIconConverter}}"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   Grid.Column="1"
-                                   Height="36"
-                                   Width="36"
-                                   Margin="16" />
+                            <TextBlock Grid.Column="0"
+                                       Text="{Binding}"
+                                       Style="{StaticResource TextSortTitle}" />
+                            <Button Grid.Column="1"
+                                    Command="{Binding CloseCommand}"
+                                    Style="{StaticResource ButtonCircleInverse}"
+                                    Margin="10,0,0,0">
+                                <Image Source="{Binding Converter={StaticResource PokemonSortingModesToIconConverter}}" />
+                            </Button>
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
 
-            <Button RelativePanel.AlignBottomWithPanel="True"
-                    RelativePanel.AlignRightWithPanel="True"
-                    Style="{ThemeResource ImageButtonStyle}"
-                    Height="{ThemeResource UiButtonSize}"
+            <Button x:Name="CloseSortMenuButton"
+                    Command="{Binding CloseCommand}"
+                    Style="{StaticResource ButtonCircleInverse}"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Bottom"
-                    x:Name="CloseSortMenuButton"
-                    Margin="24">
-
+                    Margin="0,0,0,17.5">
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
                         <core:CallMethodAction MethodName="Begin"
                                                TargetObject="{Binding ElementName=HideSortMenuStoryboard}" />
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
-
-                <Image Source="../Assets/Buttons/btn_close_normal_dark.png"
-                       Stretch="Uniform"
-                       HorizontalAlignment="Stretch" />
+                <Image Source="../Assets/Buttons/btn_close_dark.png" />
             </Button>
-        </RelativePanel>
+
+        </Grid>
 
         <Grid x:Name="IncubatorsContainer"
               RelativePanel.AlignLeftWithPanel="True"
@@ -316,14 +303,18 @@
                     <RelativePanel>
                         <GridView
                             ItemsSource="{Binding PokemonInventory}"
-                            SelectionMode="None">
+                            SelectionMode="None"
+                            RelativePanel.AlignRightWithPanel="True"
+                            RelativePanel.AlignTopWithPanel="True"
+                            RelativePanel.AlignLeftWithPanel="True"
+                            RelativePanel.AlignBottomWithPanel="True">
 
                             <GridView.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <WrapGrid Orientation="Horizontal"
-                                              VerticalChildrenAlignment="Top"
                                               HorizontalAlignment="Center"
-                                              MaximumRowsOrColumns="4" />
+                                              VerticalChildrenAlignment="Top"
+                                              MaximumRowsOrColumns="3" />
                                 </ItemsPanelTemplate>
                             </GridView.ItemsPanel>
 
@@ -332,7 +323,9 @@
                                     <StackPanel Margin="8,4,8,4"
                                                 Width="92">
                                         <TextBlock TextAlignment="Center">
-                                            <Run FontSize="12" x:Uid="CPText" Text="CP" />
+                                            <Run FontSize="12" 
+                                                 x:Uid="CpTextBlock" 
+                                                 Text="CP" />
                                             <Run FontSize="16" Text="{Binding Cp}" />
                                         </TextBlock>
                                         <Image
@@ -377,7 +370,7 @@
 
 
                             <Grid>
-                                <Image Source="../Assets/Buttons/btn_master.png"
+                                <Image Source="../Assets/Buttons/btn_empty.png"
                                        Stretch="Uniform"
                                        VerticalAlignment="Stretch"
                                        HorizontalAlignment="Stretch" />
@@ -402,15 +395,19 @@
                                    Foreground="#5a7878"
                                    Style="{StaticResource SubtitleTextBlockStyle}"
                                    x:Name="EggsPivotHeader"
-                                   x:Uid="EggsText"
-                                   Text="EGGS" />
+                                   x:Uid="EggsTextBlock"/>
                     </PivotItem.Header>
 
 
                     <RelativePanel>
                         <GridView
                             ItemsSource="{Binding EggsInventory}"
-                            SelectionMode="None">
+                            SelectionMode="None"
+                            RelativePanel.AlignRightWithPanel="True"
+                            RelativePanel.AlignTopWithPanel="True"
+                            RelativePanel.AlignLeftWithPanel="True"
+                            RelativePanel.AlignBottomWithPanel="True">
+
 
                             <GridView.ItemsPanel>
                                 <ItemsPanelTemplate>

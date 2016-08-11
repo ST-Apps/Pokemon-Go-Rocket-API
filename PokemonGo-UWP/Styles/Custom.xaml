@@ -1,7 +1,9 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:controls="using:Template10.Controls"
-                    xmlns:maps="using:Windows.UI.Xaml.Controls.Maps">
+                    xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
+                    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity"
+                    xmlns:Core="using:Microsoft.Xaml.Interactions.Core">
 
     <!-- STYLE - SHARED RESOURCES -->
 
@@ -235,11 +237,18 @@
     </Style>
 
     <Style x:Key="ButtonCircle" TargetType="Button">
-        <Setter Property="Background" Value="#266378" />
-        <Setter Property="BorderBrush" Value="#4ab583"/>
+        <Setter Property="Background" Value="#1c8796" />
+        <Setter Property="BorderBrush">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#b0ffb0" Offset="0"/>
+                    <GradientStop Color="#66eecc" Offset="0.8"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
         <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="Width" Value="50"/>
-        <Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="40"/>
+        <Setter Property="Height" Value="40"/>
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
         <Setter Property="VerticalAlignment" Value="Stretch"/>
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
@@ -247,8 +256,8 @@
         <Setter Property="Foreground">
             <Setter.Value>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#a8e090" Offset="0"/>
-                    <GradientStop Color="#35908f" Offset="0.8"/>
+                    <GradientStop Color="#b0ffb0" Offset="0"/>
+                    <GradientStop Color="#66eecc" Offset="0.8"/>
                 </LinearGradientBrush>
             </Setter.Value>
         </Setter>
@@ -293,10 +302,10 @@
                                 </VisualState>
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
-                        <Border x:Name="External" BorderBrush="#33000000" BorderThickness="2" Margin="0" CornerRadius="25">
-                            <Border x:Name="Line" Background="{TemplateBinding BorderBrush}" Padding="2" BorderBrush="{TemplateBinding Background}" BorderThickness="5" CornerRadius="25">
-                                <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Margin="0" CornerRadius="25">
-                                    <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}" FontWeight="Normal" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        <Border x:Name="External" BorderBrush="#33000000" BorderThickness="2" Margin="0" CornerRadius="20">
+                            <Border x:Name="Line" Background="{TemplateBinding BorderBrush}" Padding="1" BorderBrush="{TemplateBinding Background}" BorderThickness="3" CornerRadius="20">
+                                <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Margin="0" CornerRadius="20">
+                                    <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}" FontWeight="Normal" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="8" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                                 </Border>
                             </Border>
                         </Border>
@@ -307,27 +316,92 @@
     </Style>
 
     <Style x:Key="ButtonCircleInverse" TargetType="Button">
-        <Setter Property="Background" Value="White" />
+        <Setter Property="Background" Value="#f7fdf4" />
+        <Setter Property="BorderBrush" Value="#228899" />
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Width" Value="40"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="Margin" Value="15"/>
+        <Setter Property="Foreground" Value="#228899" />
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid x:Name="Grid" Background="Transparent">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition From="Pressed" To="PointerOver">
+                                        <Storyboard />
+                                    </VisualTransition>
+                                    <VisualTransition From="PointerOver" To="Normal">
+                                        <Storyboard />
+                                    </VisualTransition>
+                                    <VisualTransition From="Pressed" To="Normal">
+                                        <Storyboard />
+                                    </VisualTransition>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="PointerOver"/>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <PointerDownThemeAnimation Storyboard.TargetName="Grid"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="Border">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#444444" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="Line">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#444444" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="Line">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#ffffff" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Border x:Name="External" BorderBrush="#33000000" BorderThickness="2" Margin="0" CornerRadius="20">
+                            <Border x:Name="Line" Background="{TemplateBinding BorderBrush}" Padding="1" BorderBrush="{TemplateBinding Background}" BorderThickness="3" CornerRadius="20">
+                                <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Margin="0" CornerRadius="20">
+                                    <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}" FontWeight="Normal" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="8" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                </Border>
+                            </Border>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ButtonCircleBig" TargetType="Button">
+        <Setter Property="Background" Value="#1c8796" />
         <Setter Property="BorderBrush">
             <Setter.Value>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#999999" Offset="0"/>
-                    <GradientStop Color="#444444" Offset="0.8"/>
+                    <GradientStop Color="#b0ffb0" Offset="0"/>
+                    <GradientStop Color="#66eecc" Offset="0.8"/>
                 </LinearGradientBrush>
             </Setter.Value>
         </Setter>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Width" Value="50"/>
         <Setter Property="Height" Value="50"/>
-        <Setter Property="HorizontalAlignment" Value="Stretch"/>
-        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-        <Setter Property="Margin" Value="15"/>
+        <Setter Property="Margin" Value="15,15,15,7.5"/>
         <Setter Property="Foreground">
             <Setter.Value>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#999999" Offset="0"/>
-                    <GradientStop Color="#444444" Offset="0.8"/>
+                    <GradientStop Color="#b0ffb0" Offset="0"/>
+                    <GradientStop Color="#66eecc" Offset="0.8"/>
                 </LinearGradientBrush>
             </Setter.Value>
         </Setter>
@@ -372,10 +446,75 @@
                                 </VisualState>
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
-                        <Border x:Name="External" BorderBrush="#33000000" BorderThickness="2" Margin="0" CornerRadius="25">
-                            <Border x:Name="Line" Background="{TemplateBinding BorderBrush}" Padding="2" BorderBrush="{TemplateBinding Background}" BorderThickness="5" CornerRadius="25">
+                        <Border x:Name="External" BorderBrush="#33000000" BorderThickness="1" Margin="0" CornerRadius="25">
+                            <Border x:Name="Line" Background="{TemplateBinding BorderBrush}" Padding="1" BorderBrush="{TemplateBinding Background}" BorderThickness="3" CornerRadius="25">
                                 <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Margin="0" CornerRadius="25">
-                                    <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}" FontWeight="Normal" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                    <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}" FontWeight="Normal" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="5" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                </Border>
+                            </Border>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ButtonCircleBigInverse" TargetType="Button">
+        <Setter Property="Background" Value="#f7fdf4" />
+        <Setter Property="BorderBrush" Value="#228899" />
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Width" Value="40"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="Margin" Value="15"/>
+        <Setter Property="Foreground" Value="#228899" />
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid x:Name="Grid" Background="Transparent">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition From="Pressed" To="PointerOver">
+                                        <Storyboard />
+                                    </VisualTransition>
+                                    <VisualTransition From="PointerOver" To="Normal">
+                                        <Storyboard />
+                                    </VisualTransition>
+                                    <VisualTransition From="Pressed" To="Normal">
+                                        <Storyboard />
+                                    </VisualTransition>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="PointerOver"/>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <PointerDownThemeAnimation Storyboard.TargetName="Grid"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="Border">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#444444" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="Line">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#444444" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="Line">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#ffffff" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Border x:Name="External" BorderBrush="#33000000" BorderThickness="1" Margin="0" CornerRadius="25">
+                            <Border x:Name="Line" Background="{TemplateBinding BorderBrush}" Padding="1" BorderBrush="{TemplateBinding Background}" BorderThickness="3" CornerRadius="25">
+                                <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Margin="0" CornerRadius="25">
+                                    <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}" FontWeight="Normal" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="5" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                                 </Border>
                             </Border>
                         </Border>
@@ -516,6 +655,11 @@
         <Setter Property="Margin" Value="15" />
     </Style>
 
+    <Style x:Key="TextSortTitle" TargetType="TextBlock" BasedOn="{StaticResource TextSettingsTitle}">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+
     <Style x:Key="TextPageTitle" TargetType="TextBlock">
         <Setter Property="TextWrapping" Value="Wrap" />
         <Setter Property="Foreground" Value="#ffffff" />
@@ -524,21 +668,6 @@
         <Setter Property="TextAlignment" Value="Center" />
         <Setter Property="VerticalAlignment" Value="Top" />
         <Setter Property="Margin" Value="15,15,15,5" />
-    </Style>
-
-    <Style x:Key="ProfilePageText" TargetType="TextBlock">
-        <Setter Property="FontSize" Value="20" />
-        <Setter Property="Foreground" Value="Green"/>
-        <Setter Property="FontFamily" Value="../Assets/Fonts/Lato-Medium.ttf#Lato Medium" />
-    </Style>
-    <Style x:Key="ProfilePageSmallText" TargetType="TextBlock" BasedOn="{StaticResource ProfilePageText}">
-        <Setter Property="FontSize" Value="15" />
-    </Style>
-    <Style x:Key="ProfilePageMediumText" TargetType="TextBlock" BasedOn="{StaticResource ProfilePageText}">
-        <Setter Property="FontSize" Value="24" />
-    </Style>
-    <Style x:Key="ProfilePageLargeText" TargetType="TextBlock" BasedOn="{StaticResource ProfilePageText}">
-        <Setter Property="FontSize" Value="30" />
     </Style>
 
     <Style x:Key="TextMenuItemHorizontal" TargetType="TextBlock">
@@ -556,6 +685,24 @@
         <Setter Property="FontSize" Value="15" />
         <Setter Property="FontFamily" Value="../Assets/Fonts/Lato-Medium.ttf#Lato Medium" />
         <Setter Property="Margin" Value="15" />
+    </Style>
+
+    <Style x:Key="ProfilePageText" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="Foreground" Value="Green"/>
+        <Setter Property="FontFamily" Value="../Assets/Fonts/Lato-Medium.ttf#Lato Medium" />
+    </Style>
+
+    <Style x:Key="ProfilePageSmallText" TargetType="TextBlock" BasedOn="{StaticResource ProfilePageText}">
+        <Setter Property="FontSize" Value="15" />
+    </Style>
+    
+    <Style x:Key="ProfilePageMediumText" TargetType="TextBlock" BasedOn="{StaticResource ProfilePageText}">
+        <Setter Property="FontSize" Value="24" />
+    </Style>
+
+    <Style x:Key="ProfilePageLargeText" TargetType="TextBlock" BasedOn="{StaticResource ProfilePageText}">
+        <Setter Property="FontSize" Value="30" />
     </Style>
 
     <!-- STYLE - END -->
@@ -879,13 +1026,20 @@
     </Style>
 
     <!-- STYLE - END -->
-    
+
     <!-- STYLE - OTHER -->
 
     <Style x:Key="SettingsCheckbox" TargetType="CheckBox">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="Foreground" Value="Transparent"/>
-        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderBrush">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#b0ffb0" Offset="0"/>
+                    <GradientStop Color="#66eecc" Offset="0.8"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
         <Setter Property="BorderThickness" Value="2"/>
         <Setter Property="Width" Value="30"/>
         <Setter Property="Height" Value="30" />
@@ -937,8 +1091,8 @@
                                 <VisualState x:Name="Indeterminate"/>
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
-                        <Border x:Name="Border" Width="30" Height="30" HorizontalAlignment="Right" Background="Transparent" BorderBrush="#5EF6C5" BorderThickness="2" Margin="0" CornerRadius="15">
-                            <TextBlock x:Name="Checkmark" Text="" FontFamily="SEGOE MDL2 Assets" Foreground="#5EF6C5" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Border x:Name="Border" Width="30" Height="30" HorizontalAlignment="Right" Background="Transparent" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="2" Margin="0" Padding="5" CornerRadius="15">
+                            <Image x:Name="Checkmark" Source="../Assets/Buttons/btn_ok.png" />
                         </Border>
                     </Grid>
                 </ControlTemplate>
