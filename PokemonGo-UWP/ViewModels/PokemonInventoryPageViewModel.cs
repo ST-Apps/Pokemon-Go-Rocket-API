@@ -185,7 +185,7 @@ namespace PokemonGo_UWP.ViewModels
                 case PokemonSortingModes.Health:
                     return pokemonInventory.OrderByDescending(pokemon => pokemon.Stamina);
                 case PokemonSortingModes.Name:
-                    return pokemonInventory.OrderBy(pokemon => Utils.Resources.Pokemon.GetString(pokemon.PokemonId.ToString())).ThenByDescending(pokemon => pokemon.Cp);
+                    return pokemonInventory.OrderBy(pokemon => Utils.Resources.Pokemon.GetString(pokemon.PokemonId.ToString()));
                 case PokemonSortingModes.Combat:
                     return pokemonInventory.OrderByDescending(pokemon => pokemon.Cp);
                 default:
