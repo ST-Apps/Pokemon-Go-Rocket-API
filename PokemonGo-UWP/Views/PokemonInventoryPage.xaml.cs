@@ -1,5 +1,10 @@
-﻿using Windows.UI.Core;
+﻿using PokemonGo_UWP.Entities;
+using PokemonGo_UWP.Utils;
+using Windows.UI.Core;
+using Windows.UI.Popups;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Navigation;
 
@@ -61,5 +66,24 @@ namespace PokemonGo_UWP.Views
         }
 
         #endregion
+
+        private void StackPanel_RightTapped(object sender, RightTappedRoutedEventArgs e)
+        {
+            FlyoutBase.ShowAttachedFlyout(sender as FrameworkElement);
+        }
+
+        private async void Button_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            var button = sender as Button;
+            var context = button.DataContext as PokemonDataWrapper;
+            var result = await GameClient.TransferPokemon(context.Id);
+            MessageDialog mes = new MessageDialog("Transfer " + result.Result + ". You got " + result.CandyAwarded + " candy", "Transfer " + context.PokemonId.ToString());
+            mes.ShowAsync();
+            await GameClient.UpdateInventory();   
+        }
+        private void StackPanel_Holding(object sender, HoldingRoutedEventArgs e)
+        {
+            FlyoutBase.ShowAttachedFlyout(sender as FrameworkElement);
+        }
     }
 }

@@ -316,6 +316,7 @@
                         <GridView
                             ItemsSource="{Binding PokemonInventory}"
                             SelectionMode="None"
+                            x:Name="pokemonsGrid"
                             RelativePanel.AlignRightWithPanel="True"
                             RelativePanel.AlignTopWithPanel="True"
                             RelativePanel.AlignLeftWithPanel="True"
@@ -333,7 +334,14 @@
                             <GridView.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel Margin="8,4,8,4"
-                                                Width="92">
+                                                Width="92" Holding="StackPanel_Holding" RightTapped="StackPanel_RightTapped">
+                                        <FlyoutBase.AttachedFlyout>
+                                            <Flyout>
+                                                <StackPanel>
+                                                    <Button Content="Transfer" Background="{x:Null}" Tapped="Button_Tapped"/>
+                                                </StackPanel>
+                                            </Flyout>
+                                        </FlyoutBase.AttachedFlyout>
                                         <TextBlock TextAlignment="Center">
                                             <Run FontSize="12"
                                                  x:Uid="CpTextBlock"
