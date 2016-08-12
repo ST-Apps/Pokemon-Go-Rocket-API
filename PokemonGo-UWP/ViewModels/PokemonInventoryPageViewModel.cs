@@ -52,7 +52,7 @@ namespace PokemonGo_UWP.ViewModels
                     GameClient.PokemonsInventory.Select(pokemonData => new PokemonDataWrapper(pokemonData)),
                     CurrentPokemonSortingMode));
 
-                showofflivetiles(PokemonInventory);
+               
 
                 RaisePropertyChanged(() => PokemonInventory);
 
@@ -208,50 +208,6 @@ namespace PokemonGo_UWP.ViewModels
 
         #endregion
 
-        #region livetiles
-
-
-
-        private void showofflivetiles(ObservableCollection<PokemonDataWrapper> PokemonInventory)
-        {
-            /* TileUpdater updater = TileUpdateManager.CreateTileUpdaterForApplication();
-             updater.EnableNotificationQueue(true);
-             var tilexml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare150x150PeekImageAndText01);
-             var tileattributes = tilexml.GetElementsByTagName("text");
-             tileattributes[0].AppendChild(tilexml.CreateTextNode(PokemonInventory[0].Nickname));
-             var tilenotification = new TileNotification(tilexml);
-             updater.Update(tilenotification);*/
-
-            foreach (PokemonDataWrapper poke in PokemonInventory)
-            {
-                if (poke.Favorite == 1)
-                {
-                    PokemonIdToPokemonSpriteConverter grabber = new PokemonIdToPokemonSpriteConverter();
-                    TileUpdater updater = TileUpdateManager.CreateTileUpdaterForApplication();
-
-                    XmlDocument tile = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare150x150PeekImageAndText01);
-
-                    var pokename = poke.Nickname;
-                    XmlNodeList tilecontent = tile.GetElementsByTagName("text");
-                    tilecontent[0].InnerText = pokename;
-
-                    XmlNodeList TileImageAttrib = tile.GetElementsByTagName("image");
-
-                    ((XmlElement)TileImageAttrib[0]).SetAttribute("src", "ms-appx:///Assets/Pokemons/" + (int)poke.PokemonId + ".png");
-                    ((XmlElement)TileImageAttrib[0]).SetAttribute("alt", "Image");
-
-
-
-                    // Create a new tile notification. 
-                    updater.Update(new TileNotification(tile));
-                }
-                else
-                {
-                    continue;
-                }
-            }
-            
-        }
-        #endregion
+       
     }
 }
