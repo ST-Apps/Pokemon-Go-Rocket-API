@@ -80,7 +80,10 @@ namespace PokemonGo_UWP.Views
             MessageDialog mes = new MessageDialog("Transfer " + result.Result + ". You got " + result.CandyAwarded + " candy", "Transfer " + context.PokemonId.ToString());
             mes.ShowAsync();
             await GameClient.UpdateInventory();   
-            
+        }
+        private void StackPanel_Holding(object sender, HoldingRoutedEventArgs e)
+        {
+            FlyoutBase.ShowAttachedFlyout(sender as FrameworkElement);
         }
     }
 }
