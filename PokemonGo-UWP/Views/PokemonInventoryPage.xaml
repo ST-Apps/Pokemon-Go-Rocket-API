@@ -334,7 +334,7 @@
                             <GridView.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel Margin="8,4,8,4"
-                                                Width="92" RightTapped="StackPanel_RightTapped">
+                                                Width="92" Holding="StackPanel_Holding" RightTapped="StackPanel_RightTapped">
                                         <FlyoutBase.AttachedFlyout>
                                             <Flyout>
                                                 <StackPanel>
