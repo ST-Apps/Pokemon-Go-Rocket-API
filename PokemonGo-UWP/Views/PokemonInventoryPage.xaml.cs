@@ -1,5 +1,6 @@
 ﻿using PokemonGo_UWP.Entities;
 using PokemonGo_UWP.Utils;
+using PokemonGo_UWP.ViewModels;
 using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
@@ -79,8 +80,9 @@ namespace PokemonGo_UWP.Views
             var result = await GameClient.TransferPokemon(context.Id);
             MessageDialog mes = new MessageDialog("Transfer " + result.Result + ". You got " + result.CandyAwarded + " candy", "Transfer " + context.PokemonId.ToString());
             mes.ShowAsync();
-            await GameClient.UpdateInventory();   
+            ViewModel.TransferPokemon.Execute();
         }
+
         private void StackPanel_Holding(object sender, HoldingRoutedEventArgs e)
         {
             FlyoutBase.ShowAttachedFlyout(sender as FrameworkElement);

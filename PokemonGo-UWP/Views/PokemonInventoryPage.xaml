@@ -342,6 +342,11 @@
                                                 </StackPanel>
                                             </Flyout>
                                         </FlyoutBase.AttachedFlyout>
+                                        <interactivity:Interaction.Behaviors>
+                                            <core:EventTriggerBehavior EventName="Tapped">
+                                                <core:InvokeCommandAction Command="{Binding GotoPokemonDetailsCommand}" />
+                                            </core:EventTriggerBehavior>
+                                        </interactivity:Interaction.Behaviors>
                                         <TextBlock TextAlignment="Center">
                                             <Run FontSize="12"
                                                  x:Uid="CpTextBlock"
