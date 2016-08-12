@@ -11,10 +11,21 @@ namespace PokemonGo_UWP.Entities
     public class PokemonDataWrapper
     {
         private DelegateCommand _gotoEggDetailsCommand;
+        private DelegateCommand _gotoPokemonDetailsCommand;
 
         public PokemonDataWrapper(PokemonData pokemonData)
         {
             WrappedData = pokemonData;
+            if (PokemonGo_UWP.Utils.PokemonInfo.GetLevel(WrappedData) > GameClient.PlayerStats.Level + 1.5)
+            {
+                CpBarMax = GameClient.PlayerStats.Level + 1.5;
+                CpBarValue = CpBarMax;
+            }
+            else
+            {
+                CpBarMax = CpBarMax = GameClient.PlayerStats.Level + 1.5;
+                CpBarValue = PokemonGo_UWP.Utils.PokemonInfo.GetLevel(WrappedData);
+            }
         }
 
         public PokemonData WrappedData { get; }
@@ -29,11 +40,23 @@ namespace PokemonGo_UWP.Entities
                 BootStrapper.Current.NavigationService.Navigate(typeof(EggDetailPage), true);
             }, () => true));
 
+        /// <summary>
+        ///     Go to Pokemon Details
+        /// </summary>
+        public DelegateCommand GotoPokemonDetailsCommand => _gotoPokemonDetailsCommand ?? (
+         _gotoPokemonDetailsCommand = new DelegateCommand(() =>
+         {
+             NavigationHelper.NavigationState["CurrentPokemon"] = this;
+             BootStrapper.Current.NavigationService.Navigate(typeof(PokemonView), true);
+         }, () => true));
+
         #region Wrapped Properties
 
-        public ulong Id => WrappedData.Id;
-
         public PokemonId PokemonId => WrappedData.PokemonId;
+
+        public double CpBarMax { get; set; }
+
+        public double CpBarValue { get; set; }
 
         public int Cp => WrappedData.Cp;
 
@@ -44,6 +67,8 @@ namespace PokemonGo_UWP.Entities
         public PokemonMove Move1 => WrappedData.Move1;
 
         public PokemonMove Move2 => WrappedData.Move2;
+
+        public ulong Id => WrappedData.Id;
 
         public string DeployedFortId => WrappedData.DeployedFortId;
 
@@ -57,9 +82,16 @@ namespace PokemonGo_UWP.Entities
 
         public int Origin => WrappedData.Origin;
 
-        public float HeightM => WrappedData.HeightM;
+        public string HeightM => WrappedData.HeightM.ToString().Remove(4);
 
-        public float WeightKg => WrappedData.WeightKg;
+        char[] chars = { '.' };
+
+
+        public string[] WeightKg1 => WrappedData.WeightKg.ToString().Split(chars);
+
+        public string WeightKg2 => WeightKg1[1];
+        public string WeightKg3 => WeightKg2.Remove(2);
+        public string WeightKg => WeightKg1[0] + "." + WeightKg3;
 
         public int IndividualAttack => WrappedData.IndividualAttack;
 
@@ -78,6 +110,7 @@ namespace PokemonGo_UWP.Entities
         public int BattlesDefended => WrappedData.BattlesDefended;
 
         public string EggIncubatorId => WrappedData.EggIncubatorId;
+        public string PokemonNamee => WrappedData.PokemonId.ToString();
 
         public ulong CreationTimeMs => WrappedData.CreationTimeMs;
 
@@ -87,10 +120,21 @@ namespace PokemonGo_UWP.Entities
 
         public int Favorite => WrappedData.Favorite;
 
+        public string candyUrl => getCandy.getCandyUrl(type);
+
         public string Nickname => WrappedData.Nickname;
+
+        public string bgType => "ms-appx:///Assets/Backgrounds/details_type_bg_" + enumType.getType(WrappedData.PokemonId.ToString()) + ".png";
+
+        public string hpText => "HP " + WrappedData.Stamina + "/" + WrappedData.StaminaMax;
+
+        public string type => enumType.getType(WrappedData.PokemonId.ToString());
+
 
         public int FromFort => WrappedData.FromFort;
 
+
         #endregion
+
     }
 }
