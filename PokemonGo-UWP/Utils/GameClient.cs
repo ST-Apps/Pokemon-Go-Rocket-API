@@ -612,7 +612,107 @@ namespace PokemonGo_UWP.Utils
         }
 
         #endregion
+     #region View
+        public class taskResponse
+        {
+            public bool Status { get; set; }
+            public string Message { get; set; }
+            public taskResponse() { }
+            public taskResponse(bool status, string message)
+            {
+                Status = status;
+                Message = message;
+            }
+        }
+        public static async Task<ReleasePokemonResponse> TransferPokemon(ulong pokemonId)
+        {
+            return await _client.Inventory.TransferPokemon(pokemonId);
+        }
+        public static async Task<taskResponse> evolvePokemon(PokemonData pokemon)
+        {
+            taskResponse resp = new taskResponse(false, string.Empty);
+            try
+            {
+                var evolvePokemonResponse = await _client.Inventory.EvolvePokemon((ulong)pokemon.Id);
 
+                if (evolvePokemonResponse.Result == EvolvePokemonResponse.Types.Result.Success)
+                {
+                    MessageDialog mes = new MessageDialog("evolved!");
+                    await mes.ShowAsync();
+                    await UpdateInventory();
+                    resp.Status = true;             
+                }
+                else
+                {
+                    resp.Status = false;
+                }
+
+            }
+            catch (Exception e)
+            {
+
+            }
+            return resp;
+        }
+        public static async Task<UpgradePokemonResponse> Powerup(ulong id)
+        {
+            // upgrade or powerup
+            UpgradePokemonResponse res = await _client.Inventory.UpgradePokemon(id);
+            await UpdateInventory();
+            return res;
+
+        }
+        public static async Task<DownloadItemTemplatesResponse> GetItemTemplates()
+        {
+            return await _client.Download.GetItemTemplates();
+        }
+        private static GetInventoryResponse _cachedInventory;
+        private static DateTime _lastRefresh;
+        private static async Task<GetInventoryResponse> GetCachedInventory()
+        {
+            var now = DateTime.UtcNow;
+
+            if (_lastRefresh.AddSeconds(30).Ticks > now.Ticks)
+            {
+                return _cachedInventory;
+            }
+            return await RefreshCachedInventory();
+        }
+        public static async Task<GetInventoryResponse> RefreshCachedInventory()
+        {
+            var now = DateTime.UtcNow;
+            var ss = new SemaphoreSlim(10);
+
+            await ss.WaitAsync();
+            try
+            {
+                _lastRefresh = now;
+                _cachedInventory = await _client.Inventory.GetInventory();
+                return _cachedInventory;
+            }
+            finally
+            {
+                ss.Release();
+            }
+        }
+        public static async Task<List<Candy>> GetPokemonFamilies()
+        {
+            var inventory = await GetCachedInventory();
+
+            var families = from item in inventory.InventoryDelta.InventoryItems
+                           where item.InventoryItemData?.Candy != null
+                           where item.InventoryItemData?.Candy.FamilyId != PokemonFamilyId.FamilyUnset
+                           group item by item.InventoryItemData?.Candy.FamilyId into family
+                           select new Candy
+                           {
+                               FamilyId = family.FirstOrDefault().InventoryItemData.Candy.FamilyId,
+                               Candy_ = family.FirstOrDefault().InventoryItemData.Candy.Candy_
+                           };
+
+
+            return families.ToList();
+        }
+        #endregion
         #endregion
 
         #region Pokestop Handling
