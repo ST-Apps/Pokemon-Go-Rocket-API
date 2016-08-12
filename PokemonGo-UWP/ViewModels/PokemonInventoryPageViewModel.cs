@@ -11,6 +11,8 @@ using POGOProtos.Data;
 using POGOProtos.Inventory;
 using Template10.Mvvm;
 using Template10.Services.NavigationService;
+using Windows.UI.Notifications;
+using Windows.Data.Xml.Dom;
 
 namespace PokemonGo_UWP.ViewModels
 {
@@ -50,6 +52,8 @@ namespace PokemonGo_UWP.ViewModels
                     GameClient.PokemonsInventory.Select(pokemonData => new PokemonDataWrapper(pokemonData)),
                     CurrentPokemonSortingMode));
 
+                showofflivetiles(PokemonInventory);
+
                 RaisePropertyChanged(() => PokemonInventory);
 
                 var unincubatedEggs = GameClient.EggsInventory.Where(o => string.IsNullOrEmpty(o.EggIncubatorId));
@@ -70,6 +74,7 @@ namespace PokemonGo_UWP.ViewModels
 
             await Task.CompletedTask;
         }
+
 
         /// <summary>
         ///     Save state before navigating
@@ -201,6 +206,52 @@ namespace PokemonGo_UWP.ViewModels
 
         #endregion
 
+        #endregion
+
+        #region livetiles
+
+
+
+        private void showofflivetiles(ObservableCollection<PokemonDataWrapper> PokemonInventory)
+        {
+            /* TileUpdater updater = TileUpdateManager.CreateTileUpdaterForApplication();
+             updater.EnableNotificationQueue(true);
+             var tilexml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare150x150PeekImageAndText01);
+             var tileattributes = tilexml.GetElementsByTagName("text");
+             tileattributes[0].AppendChild(tilexml.CreateTextNode(PokemonInventory[0].Nickname));
+             var tilenotification = new TileNotification(tilexml);
+             updater.Update(tilenotification);*/
+
+            foreach (PokemonDataWrapper poke in PokemonInventory)
+            {
+                if (poke.Favorite == 1)
+                {
+                    PokemonIdToPokemonSpriteConverter grabber = new PokemonIdToPokemonSpriteConverter();
+                    TileUpdater updater = TileUpdateManager.CreateTileUpdaterForApplication();
+
+                    XmlDocument tile = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare150x150PeekImageAndText01);
+
+                    var pokename = poke.Nickname;
+                    XmlNodeList tilecontent = tile.GetElementsByTagName("text");
+                    tilecontent[0].InnerText = pokename;
+
+                    XmlNodeList TileImageAttrib = tile.GetElementsByTagName("image");
+
+                    ((XmlElement)TileImageAttrib[0]).SetAttribute("src", "ms-appx:///Assets/Pokemons/" + (int)poke.PokemonId + ".png");
+                    ((XmlElement)TileImageAttrib[0]).SetAttribute("alt", "Image");
+
+
+
+                    // Create a new tile notification. 
+                    updater.Update(new TileNotification(tile));
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            
+        }
         #endregion
     }
 }
