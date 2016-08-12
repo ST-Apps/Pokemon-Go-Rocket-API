@@ -50,6 +50,11 @@
             <utils:PlayerDataToPokeCoinsConverter x:Key="PlayerDataToPokeCoinsConverter" />
             <utils:AchievementToCompletedPercentageConverter x:Key="AchievementToCompletedPercentageConverter" />
             <utils:StringFormatConverter x:Key="StringFormatConverter" />
+            <utils:PokemonDataToPokemonTypeBackgroundConverter x:Key="PokemonDataToPokemonTypeBackgroundConverter"/>
+            <utils:PokemonDataToMaxLevelBarConverter x:Key="PokemonDataToMaxLevelBarConverter"/>
+            <utils:PokemonDataToLevelBarConverter x:Key="PokemonDataToLevelBarConverter"/>
+            <utils:PokemonFamilyToCandyImageConverter x:Key="PokemonFamilyToCandyImageConverter"/>
+            <utils:PokemonFamilyNameToStringConverter x:Key="PokemonFamilyNameToStringConverter"/>
 
             <converters:ValueWhenConverter x:Key="EnabledWhenHasElementsConverter">
                 <converters:ValueWhenConverter.When>

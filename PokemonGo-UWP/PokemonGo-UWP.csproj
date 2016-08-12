@@ -537,6 +537,7 @@
     <Compile Include="ViewModels\EggDetailPageViewModel.cs" />
     <Compile Include="ViewModels\GameMapPageViewModel.cs" />
     <Compile Include="ViewModels\PlayerProfileViewModel.cs" />
+    <Compile Include="ViewModels\PokemonDetailsPageViewModel.cs" />
     <Compile Include="ViewModels\PokemonInventoryPageViewModel.cs" />
     <Compile Include="ViewModels\SettingsPageViewModel.cs" />
     <Compile Include="ViewModels\LoginPageViewModel.cs" />
@@ -546,6 +547,9 @@
     </Compile>
     <Compile Include="Views\PlayerProfilePage.xaml.cs">
       <DependentUpon>PlayerProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PokemonDetailPage.xaml.cs">
+      <DependentUpon>PokemonDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PokemonInventoryPage.xaml.cs">
       <DependentUpon>PokemonInventoryPage.xaml</DependentUpon>
@@ -619,6 +623,10 @@
     <Page Include="Views\PlayerProfilePage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PokemonDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\PokemonInventoryPage.xaml">
       <SubType>Designer</SubType>

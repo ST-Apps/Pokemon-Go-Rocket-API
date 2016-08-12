@@ -369,6 +369,39 @@ Apri pagina con il file di installazione per l'installazione manuale?</target>
           <source>Niantic map</source>
           <target state="new">Niantic map</target>
         </trans-unit>
+        <trans-unit id="HpTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>HP </source>
+          <target state="new">HP </target>
+        </trans-unit>
+        <trans-unit id="TypeTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <target state="new">Type</target>
+        </trans-unit>
+        <trans-unit id="KgTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>kg</source>
+          <target state="new">kg</target>
+        </trans-unit>
+        <trans-unit id="WeightTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Weight</source>
+          <target state="new">Weight</target>
+        </trans-unit>
+        <trans-unit id="HeightTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Height</source>
+          <target state="new">Height</target>
+        </trans-unit>
+        <trans-unit id="MTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>m</source>
+          <target state="new">m</target>
+        </trans-unit>
+        <trans-unit id="StardustTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>STARDUST</source>
+          <target state="new">STARDUST</target>
+        </trans-unit>
+        <trans-unit id="CandyTextBlock.Text" translate="yes" xml:space="preserve">
+          <source> CANDY</source>
+          <target state="new"> CANDY</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Watch out: space before the word!</note>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -23,9 +23,9 @@ namespace POGOProtos.Data.Battle {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CidQT0dPUHJvdG9zL0RhdGEvQmF0dGxlL0JhdHRsZVR5cGUucHJvdG8SFlBP",
-            "R09Qcm90b3MuRGF0YS5CYXR0bGUqPQoKQmF0dGxlVHlwZRIVChFCQVRUTEVf",
-            "VFlQRV9VTlNFVBAAEgoKBk5PUk1BTBABEgwKCFRSQUlOSU5HEAJiBnByb3Rv",
-            "Mw=="));
+            "R09Qcm90b3MuRGF0YS5CYXR0bGUqVQoKQmF0dGxlVHlwZRIVChFCQVRUTEVf",
+            "VFlQRV9VTlNFVBAAEhYKEkJBVFRMRV9UWVBFX05PUk1BTBABEhgKFEJBVFRM",
+            "RV9UWVBFX1RSQUlOSU5HEAJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::POGOProtos.Data.Battle.BattleType), }, null));
@@ -36,8 +36,8 @@ namespace POGOProtos.Data.Battle {
   #region Enums
   public enum BattleType {
     [pbr::OriginalName("BATTLE_TYPE_UNSET")] Unset = 0,
-    [pbr::OriginalName("NORMAL")] Normal = 1,
-    [pbr::OriginalName("TRAINING")] Training = 2,
+    [pbr::OriginalName("BATTLE_TYPE_NORMAL")] Normal = 1,
+    [pbr::OriginalName("BATTLE_TYPE_TRAINING")] Training = 2,
   }
 
   #endregion

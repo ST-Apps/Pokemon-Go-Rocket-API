@@ -23,8 +23,9 @@ namespace POGOProtos.Enums {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiRQT0dPUHJvdG9zL0VudW1zL1Bva2Vtb25SYXJpdHkucHJvdG8SEFBPR09Q",
-            "cm90b3MuRW51bXMqNgoNUG9rZW1vblJhcml0eRIKCgZOT1JNQUwQABINCglM",
-            "RUdFTkRBUlkQARIKCgZNWVRISUMQAmIGcHJvdG8z"));
+            "cm90b3MuRW51bXMqYwoNUG9rZW1vblJhcml0eRIZChVQT0tFTU9OX1JBUklU",
+            "WV9OT1JNQUwQABIcChhQT0tFTU9OX1JBUklUWV9MRUdFTkRBUlkQARIZChVQ",
+            "T0tFTU9OX1JBUklUWV9NWVRISUMQAmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::POGOProtos.Enums.PokemonRarity), }, null));
@@ -34,9 +35,9 @@ namespace POGOProtos.Enums {
   }
   #region Enums
   public enum PokemonRarity {
-    [pbr::OriginalName("NORMAL")] Normal = 0,
-    [pbr::OriginalName("LEGENDARY")] Legendary = 1,
-    [pbr::OriginalName("MYTHIC")] Mythic = 2,
+    [pbr::OriginalName("POKEMON_RARITY_NORMAL")] Normal = 0,
+    [pbr::OriginalName("POKEMON_RARITY_LEGENDARY")] Legendary = 1,
+    [pbr::OriginalName("POKEMON_RARITY_MYTHIC")] Mythic = 2,
   }
 
   #endregion

@@ -29,6 +29,8 @@ namespace PokemonGo_UWP
         /// </summary>
         private VibrationDevice _vibrationDevice;
 
+        private readonly DisplayRequest _displayRequest = new DisplayRequest();
+
         public App()
         {
             InitializeComponent();
@@ -117,7 +119,7 @@ namespace PokemonGo_UWP
             ApplicationView.GetForCurrentView().TryEnterFullScreenMode();
 
             // Forces the display to stay on while we play
-            new DisplayRequest().RequestActive();
+            _displayRequest.RequestActive();
 
             // Init vibration device
             if (ApiInformation.IsTypePresent("Windows.Phone.Devices.Notification.VibrationDevice"))
@@ -140,7 +142,7 @@ namespace PokemonGo_UWP
                 try
                 {
                     await GameClient.InitializeClient();
-                    // We have a stored token, let's go to game page 
+                    // We have a stored token, let's go to game page
                     NavigationService.Navigate(typeof(GameMapPage), GameMapNavigationModes.AppStart);
                 }
                 catch (Exception)
@@ -163,14 +165,14 @@ namespace PokemonGo_UWP
                         new MessageDialog(string.Format(Utils.Resources.CodeResources.GetString("UpdatedVersion"),
                             latestUpdateInfo.Version, latestUpdateInfo.Description));
 
-                    dialog.Commands.Add(new UICommand(Utils.Resources.CodeResources.GetString("YesText")) {Id = 0});
-                    dialog.Commands.Add(new UICommand(Utils.Resources.CodeResources.GetString("NoText")) {Id = 1});
+                    dialog.Commands.Add(new UICommand(Utils.Resources.CodeResources.GetString("YesText")) { Id = 0 });
+                    dialog.Commands.Add(new UICommand(Utils.Resources.CodeResources.GetString("NoText")) { Id = 1 });
                     dialog.DefaultCommandIndex = 0;
                     dialog.CancelCommandIndex = 1;
 
                     var result = await dialog.ShowAsyncQueue();
 
-                    if ((int) result.Id != 0)
+                    if ((int)result.Id != 0)
                         return;
 
                     //continue with execution because we need Busy page working (cannot work on splash screen)

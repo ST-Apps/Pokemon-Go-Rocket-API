@@ -57,7 +57,7 @@ namespace PokemonGo_UWP.Utils
                 _retryCount++;
 
                 if (_retryCount%5 == 0)
-                {
+                {                    
                     // Let's try to refresh the session by getting a new token
                     await
                         (_clientSettings.AuthType == AuthType.Google
@@ -172,6 +172,11 @@ namespace PokemonGo_UWP.Utils
         public static ObservableCollection<PokedexEntry> PokedexInventory { get; set; } =
             new ObservableCollection<PokedexEntry>();
 
+        /// <summary>
+        ///     Stores player's current candies
+        /// </summary>
+        public static ObservableCollection<Candy> CandyInventory { get; set; } = new ObservableCollection<Candy>();
+
         #endregion
 
         #region Templates from server
@@ -203,9 +208,15 @@ namespace PokemonGo_UWP.Utils
 
             await DataCache.Init();
 
+            var credentials = SettingsService.Instance.UserCredentials;
+            credentials.RetrievePassword();
             _clientSettings = new Settings
             {
-                AuthType = SettingsService.Instance.LastLoginService
+                AuthType = SettingsService.Instance.LastLoginService,
+                PtcUsername = SettingsService.Instance.LastLoginService == AuthType.Ptc ? credentials.UserName : null,
+                PtcPassword = SettingsService.Instance.LastLoginService == AuthType.Ptc ? credentials.Password : null,
+                GoogleUsername = SettingsService.Instance.LastLoginService == AuthType.Google ? credentials.UserName : null,
+                GooglePassword = SettingsService.Instance.LastLoginService == AuthType.Google ? credentials.Password : null,
             };
 
             _client = new Client(_clientSettings, new ApiFailure(), DeviceInfos.Instance)
@@ -259,7 +270,7 @@ namespace PokemonGo_UWP.Utils
                 AuthType = AuthType.Google
             };
 
-            _client = new Client(_clientSettings, new ApiFailure(), DeviceInfos.Instance);
+            _client = new Client(_clientSettings, new ApiFailure(), DeviceInfos.Instance);            
             // Get Google token
             var authToken = await _client.Login.DoLogin();
             // Update current token even if it's null
@@ -385,7 +396,7 @@ namespace PokemonGo_UWP.Utils
         /// </summary>
         /// <returns></returns>
         private static async Task UpdateMapObjects()
-        {
+        {            
             // Get all map objects from server
             var mapObjects = await GetMapObjects(Geoposition);
             _lastUpdate = DateTime.Now;
@@ -468,9 +479,11 @@ namespace PokemonGo_UWP.Utils
         public static async Task<LevelUpRewardsResponse> UpdatePlayerStats(bool checkForLevelUp = false)
         {
             InventoryDelta = (await _client.Inventory.GetInventory()).InventoryDelta;
+
             var tmpStats =
                 InventoryDelta.InventoryItems.First(item => item.InventoryItemData.PlayerStats != null)
                     .InventoryItemData.PlayerStats;
+
             if (checkForLevelUp && PlayerStats != null && PlayerStats.Level != tmpStats.Level)
             {
                 PlayerStats = tmpStats;
@@ -478,6 +491,18 @@ namespace PokemonGo_UWP.Utils
                 return levelUpResponse;
             }
             PlayerStats = tmpStats;
+
+            // Update candies
+            CandyInventory.AddRange(from item in InventoryDelta.InventoryItems
+                      where item.InventoryItemData?.Candy != null
+                      where item.InventoryItemData?.Candy.FamilyId != PokemonFamilyId.FamilyUnset
+                      group item by item.InventoryItemData?.Candy.FamilyId into family
+                      select new Candy
+                      {
+                          FamilyId = family.FirstOrDefault().InventoryItemData.Candy.FamilyId,
+                          Candy_ = family.FirstOrDefault().InventoryItemData.Candy.Candy_
+                      },true);
+
             return null;
         }
 
@@ -551,11 +576,11 @@ namespace PokemonGo_UWP.Utils
                         item.InventoryItemData.Item != null && CatchItemIds.Contains(item.InventoryItemData.Item.ItemId))
                     .GroupBy(item => item.InventoryItemData.Item)
                     .Select(item => item.First().InventoryItemData.Item), true);
+
             // Update incbuators                      
             FreeIncubatorsInventory.AddRange(fullInventory.Where(item => item.InventoryItemData.EggIncubators != null)
                 .SelectMany(item => item.InventoryItemData.EggIncubators.EggIncubator)
                 .Where(item => item != null && item.PokemonId == 0), true);
-
             UsedIncubatorsInventory.AddRange(fullInventory.Where(item => item.InventoryItemData.EggIncubators != null)
                 .SelectMany(item => item.InventoryItemData.EggIncubators.EggIncubator)
                 .Where(item => item != null && item.PokemonId != 0), true);
@@ -565,12 +590,15 @@ namespace PokemonGo_UWP.Utils
                 .Where(item => item != null && item.PokemonId > 0), true);
             EggsInventory.AddRange(fullInventory.Select(item => item.InventoryItemData.PokemonData)
                 .Where(item => item != null && item.IsEgg), true);
+
             // Update Pokedex            
             PokedexInventory.AddRange(fullInventory.Where(item => item.InventoryItemData.PokedexEntry != null)
                 .Select(item => item.InventoryItemData.PokedexEntry), true);
 
+            // Update Player stats
             PlayerStats =
-                fullInventory.First(item => item.InventoryItemData.PlayerStats != null).InventoryItemData.PlayerStats;
+                fullInventory.First(item => item.InventoryItemData.PlayerStats != null).InventoryItemData.PlayerStats;            
+
         }
 
         #endregion

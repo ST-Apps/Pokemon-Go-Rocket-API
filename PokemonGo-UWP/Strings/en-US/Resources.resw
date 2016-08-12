@@ -211,4 +211,29 @@
   <data name="UseNianticMapTextBlock.Text" xml:space="preserve">
     <value>Niantic map</value>
   </data>
+  <data name="CandyTextBlock.Text" xml:space="preserve">
+    <value> CANDY</value>
+    <comment>Watch out: space before the word!</comment>
+  </data>
+  <data name="HeightTextBlock.Text" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="HpTextBlock.Text" xml:space="preserve">
+    <value>HP </value>
+  </data>
+  <data name="KgTextBlock.Text" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="MTextBlock.Text" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="StardustTextBlock.Text" xml:space="preserve">
+    <value>STARDUST</value>
+  </data>
+  <data name="TypeTextBlock.Text" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="WeightTextBlock.Text" xml:space="preserve">
+    <value>Weight</value>
+  </data>
 </root>

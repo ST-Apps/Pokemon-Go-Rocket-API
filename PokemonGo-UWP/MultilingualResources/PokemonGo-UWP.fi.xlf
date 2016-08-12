@@ -1,13 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-US" target-language="fi" original="POKEMONGO-UWP/STRINGS/EN-US/ITEMS.RESW"
-        tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="fi" original="POKEMONGO-UWP/STRINGS/EN-US/ITEMS.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
-      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1605.0"
-            tool-company="Microsoft" />
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1605.0" tool-company="Microsoft" />
     </header>
     <body>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/ITEMS.RESW" datatype="resx">
@@ -182,12 +177,9 @@
       </group>
     </body>
   </file>
-  <file datatype="xml" source-language="en-US" target-language="fi"
-        original="POKEMONGO-UWP/STRINGS/EN-US/CODERESOURCES.RESW" tool-id="MultilingualAppToolkit" product-name="n/a"
-        product-version="n/a" build-num="n/a">
+  <file datatype="xml" source-language="en-US" target-language="fi" original="POKEMONGO-UWP/STRINGS/EN-US/CODERESOURCES.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
-      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1605.0"
-            tool-company="Microsoft" />
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1605.0" tool-company="Microsoft" />
     </header>
     <body>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/CODERESOURCES.RESW" datatype="resx">
@@ -302,12 +294,9 @@ Open page with installation files for manual install?</target>
       </group>
     </body>
   </file>
-  <file datatype="xml" source-language="en-US" target-language="fi"
-        original="POKEMONGO-UWP/STRINGS/EN-US/ACHIEVEMENTS.RESW" tool-id="MultilingualAppToolkit" product-name="n/a"
-        product-version="n/a" build-num="n/a">
+  <file datatype="xml" source-language="en-US" target-language="fi" original="POKEMONGO-UWP/STRINGS/EN-US/ACHIEVEMENTS.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
-      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1605.0"
-            tool-company="Microsoft" />
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1605.0" tool-company="Microsoft" />
     </header>
     <body>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/ACHIEVEMENTS.RESW" datatype="resx">
@@ -426,12 +415,9 @@ Open page with installation files for manual install?</target>
       </group>
     </body>
   </file>
-  <file datatype="xml" source-language="en-US" target-language="fi"
-        original="POKEMONGO-UWP/STRINGS/EN-US/RESOURCES.RESW" tool-id="MultilingualAppToolkit" product-name="n/a"
-        product-version="n/a" build-num="n/a">
+  <file datatype="xml" source-language="en-US" target-language="fi" original="POKEMONGO-UWP/STRINGS/EN-US/RESOURCES.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
-      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1605.0"
-            tool-company="Microsoft" />
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1605.0" tool-company="Microsoft" />
     </header>
     <body>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/RESOURCES.RESW" datatype="resx">
@@ -560,14 +546,45 @@ Open page with installation files for manual install?</target>
           <source>Niantic map</source>
           <target state="new">Niantic map</target>
         </trans-unit>
+        <trans-unit id="HpTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>HP </source>
+          <target state="new">HP </target>
+        </trans-unit>
+        <trans-unit id="TypeTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <target state="new">Type</target>
+        </trans-unit>
+        <trans-unit id="KgTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>kg</source>
+          <target state="new">kg</target>
+        </trans-unit>
+        <trans-unit id="WeightTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Weight</source>
+          <target state="new">Weight</target>
+        </trans-unit>
+        <trans-unit id="HeightTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Height</source>
+          <target state="new">Height</target>
+        </trans-unit>
+        <trans-unit id="MTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>m</source>
+          <target state="new">m</target>
+        </trans-unit>
+        <trans-unit id="StardustTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>STARDUST</source>
+          <target state="new">STARDUST</target>
+        </trans-unit>
+        <trans-unit id="CandyTextBlock.Text" translate="yes" xml:space="preserve">
+          <source> CANDY</source>
+          <target state="new"> CANDY</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Watch out: space before the word!</note>
+        </trans-unit>
       </group>
     </body>
   </file>
-  <file datatype="xml" source-language="en-US" target-language="fi" original="POKEMONGO-UWP/STRINGS/EN-US/POKEMON.RESW"
-        tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+  <file datatype="xml" source-language="en-US" target-language="fi" original="POKEMONGO-UWP/STRINGS/EN-US/POKEMON.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
-      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1605.0"
-            tool-company="Microsoft" />
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1605.0" tool-company="Microsoft" />
     </header>
     <body>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/POKEMON.RESW" datatype="resx">
@@ -1182,12 +1199,9 @@ Open page with installation files for manual install?</target>
       </group>
     </body>
   </file>
-  <file datatype="xml" source-language="en-US" target-language="fi"
-        original="POKEMONGO-UWP/STRINGS/EN-US/POKEMONMOVES.RESW" tool-id="MultilingualAppToolkit" product-name="n/a"
-        product-version="n/a" build-num="n/a">
+  <file datatype="xml" source-language="en-US" target-language="fi" original="POKEMONGO-UWP/STRINGS/EN-US/POKEMONMOVES.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
-      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1605.0"
-            tool-company="Microsoft" />
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1605.0" tool-company="Microsoft" />
     </header>
     <body>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/POKEMONMOVES.RESW" datatype="resx">

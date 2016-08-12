@@ -5,7 +5,6 @@ using PokemonGo.RocketAPI.Enums;
 using PokemonGo.RocketAPI.Extensions;
 using POGOProtos.Networking.Envelopes;
 using POGOProtos.Networking.Requests;
-using POGOProtos.Networking.Signature;
 using static POGOProtos.Networking.Envelopes.RequestEnvelope.Types;
 
 namespace PokemonGo.RocketAPI.Helpers
@@ -20,7 +19,6 @@ namespace PokemonGo.RocketAPI.Helpers
         private readonly double _latitude;
         private readonly double _longitude;
         private readonly Random _random = new Random();
-        private readonly DateTime _startTime = DateTime.UtcNow;
 
         public RequestBuilder(string authToken, AuthType authType, double latitude, double longitude, double altitude,
             IDeviceInfo deviceInfo,
@@ -41,23 +39,27 @@ namespace PokemonGo.RocketAPI.Helpers
             var rnd = new Random();
             rnd.NextBytes(rnd32);
 
-            var ticketBytes = requestEnvelope.AuthTicket.ToByteArray();
+            byte[] authSeed = requestEnvelope.AuthTicket != null ?
+                requestEnvelope.AuthTicket.ToByteArray() :
+                requestEnvelope.AuthInfo.ToByteArray();
+
 
             var normAccel = new Vector(_deviceInfo.AccelRawX, _deviceInfo.AccelRawY, _deviceInfo.AccelRawZ);
             normAccel.NormalizeVector(9.81);
             normAccel.Round(2);
 
-            var timeFromStart = (ulong) (DateTime.UtcNow.ToUnixTime() - _startTime.ToUnixTime());
+            ulong timeFromStart = (ulong)_deviceInfo.TimeSnapshot.TotalMilliseconds;
 
             var sig = new Signature
             {
                 LocationHash1 =
-                    Utils.GenerateLocation1(ticketBytes, requestEnvelope.Latitude, requestEnvelope.Longitude,
+                    Utils.GenerateLocation1(authSeed, requestEnvelope.Latitude, requestEnvelope.Longitude,
                         requestEnvelope.Altitude),
                 LocationHash2 =
                     Utils.GenerateLocation2(requestEnvelope.Latitude, requestEnvelope.Longitude,
                         requestEnvelope.Altitude),
-                Unk22 = ByteString.CopyFrom(rnd32),
+                SessionHash = ByteString.CopyFrom(rnd32),
+                Unknown25 = 0x898654dd2753a481UL,
                 Timestamp = (ulong) DateTime.UtcNow.ToUnixTime(),
                 TimestampSinceStart = timeFromStart,
                 SensorInfo = new Signature.Types.SensorInfo
@@ -110,24 +112,27 @@ namespace PokemonGo.RocketAPI.Helpers
                 LocationType = loc.LocationType,
                 Provider = loc.Provider,
                 ProviderStatus = loc.ProviderStatus,
-                TimestampSinceStart = timeFromStart - (ulong) _random.Next(160, 240)
+                HorizontalAccuracy = loc.HorizontalAccuracy,
+                VerticalAccuracy = loc.VerticalAccuracy,
+                TimestampSnapshot = loc.Timestamp
+
             }));
 
             foreach (var request in requestEnvelope.Requests)
             {
                 sig.RequestHash.Add(
-                    Utils.GenerateRequestHash(ticketBytes, request.ToByteArray())
+                    Utils.GenerateRequestHash(authSeed, request.ToByteArray())
                     );
             }
 
-            requestEnvelope.Unknown6.Add(new Unknown6
+            requestEnvelope.Unknown6 = new Unknown6
             {
                 RequestType = 6,
                 Unknown2 = new Unknown6.Types.Unknown2
                 {
-                    Unknown1 = ByteString.CopyFrom(Crypt.Encrypt(sig.ToByteArray()))
+                     EncryptedSignature = ByteString.CopyFrom(Crypt.Encrypt(sig.ToByteArray()))
                 }
-            });
+            };
 
             return requestEnvelope;
         }
@@ -152,7 +157,7 @@ namespace PokemonGo.RocketAPI.Helpers
 
         public RequestEnvelope GetInitialRequestEnvelope(params Request[] customRequests)
         {
-            return new RequestEnvelope
+            return SetRequestEnvelopeUnknown6(new RequestEnvelope
             {
                 StatusCode = 2, //1
 
@@ -173,7 +178,7 @@ namespace PokemonGo.RocketAPI.Helpers
                     }
                 }, //10
                 Unknown12 = 989 //12
-            };
+            });
         }
 
         public RequestEnvelope GetRequestEnvelope(RequestType type, IMessage message)

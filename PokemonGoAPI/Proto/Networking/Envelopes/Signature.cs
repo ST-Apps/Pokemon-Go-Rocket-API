@@ -7,7 +7,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace POGOProtos.Networking.Signature {
+namespace POGOProtos.Networking.Envelopes {
 
   /// <summary>Holder for reflection information generated from POGOProtos/Networking/Envelopes/Signature.proto</summary>
   public static partial class SignatureReflection {
@@ -23,59 +23,59 @@ namespace POGOProtos.Networking.Signature {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci9QT0dPUHJvdG9zL05ldHdvcmtpbmcvRW52ZWxvcGVzL1NpZ25hdHVyZS5w",
-            "cm90bxIfUE9HT1Byb3Rvcy5OZXR3b3JraW5nLlNpZ25hdHVyZSKWDwoJU2ln",
+            "cm90bxIfUE9HT1Byb3Rvcy5OZXR3b3JraW5nLkVudmVsb3BlcyKtDwoJU2ln",
             "bmF0dXJlEh0KFXRpbWVzdGFtcF9zaW5jZV9zdGFydBgCIAEoBBJMCgxsb2Nh",
-            "dGlvbl9maXgYBCADKAsyNi5QT0dPUHJvdG9zLk5ldHdvcmtpbmcuU2lnbmF0",
-            "dXJlLlNpZ25hdHVyZS5Mb2NhdGlvbkZpeBJLCghncHNfaW5mbxgFIAEoCzI5",
-            "LlBPR09Qcm90b3MuTmV0d29ya2luZy5TaWduYXR1cmUuU2lnbmF0dXJlLkFu",
+            "dGlvbl9maXgYBCADKAsyNi5QT0dPUHJvdG9zLk5ldHdvcmtpbmcuRW52ZWxv",
+            "cGVzLlNpZ25hdHVyZS5Mb2NhdGlvbkZpeBJLCghncHNfaW5mbxgFIAEoCzI5",
+            "LlBPR09Qcm90b3MuTmV0d29ya2luZy5FbnZlbG9wZXMuU2lnbmF0dXJlLkFu",
             "ZHJvaWRHcHNJbmZvEkoKC3NlbnNvcl9pbmZvGAcgASgLMjUuUE9HT1Byb3Rv",
-            "cy5OZXR3b3JraW5nLlNpZ25hdHVyZS5TaWduYXR1cmUuU2Vuc29ySW5mbxJK",
-            "CgtkZXZpY2VfaW5mbxgIIAEoCzI1LlBPR09Qcm90b3MuTmV0d29ya2luZy5T",
-            "aWduYXR1cmUuU2lnbmF0dXJlLkRldmljZUluZm8SUgoPYWN0aXZpdHlfc3Rh",
-            "dHVzGAkgASgLMjkuUE9HT1Byb3Rvcy5OZXR3b3JraW5nLlNpZ25hdHVyZS5T",
+            "cy5OZXR3b3JraW5nLkVudmVsb3Blcy5TaWduYXR1cmUuU2Vuc29ySW5mbxJK",
+            "CgtkZXZpY2VfaW5mbxgIIAEoCzI1LlBPR09Qcm90b3MuTmV0d29ya2luZy5F",
+            "bnZlbG9wZXMuU2lnbmF0dXJlLkRldmljZUluZm8SUgoPYWN0aXZpdHlfc3Rh",
+            "dHVzGAkgASgLMjkuUE9HT1Byb3Rvcy5OZXR3b3JraW5nLkVudmVsb3Blcy5T",
             "aWduYXR1cmUuQWN0aXZpdHlTdGF0dXMSFgoObG9jYXRpb25faGFzaDEYCiAB",
-            "KA0SFgoObG9jYXRpb25faGFzaDIYFCABKA0SDQoFdW5rMjIYFiABKAwSEQoJ",
-            "dGltZXN0YW1wGBcgASgEEhQKDHJlcXVlc3RfaGFzaBgYIAMoBBrsAQoLTG9j",
-            "YXRpb25GaXgSEAoIcHJvdmlkZXIYASABKAkSHQoVdGltZXN0YW1wX3NpbmNl",
-            "X3N0YXJ0GAIgASgEEhAKCGxhdGl0dWRlGA0gASgCEhEKCWxvbmdpdHVkZRgO",
-            "IAEoAhIbChNob3Jpem9udGFsX2FjY3VyYWN5GBQgASgCEhAKCGFsdGl0dWRl",
-            "GBUgASgCEhkKEXZlcnRpY2FsX2FjY3VyYWN5GBYgASgCEhcKD3Byb3ZpZGVy",
-            "X3N0YXR1cxgaIAEoBBINCgVmbG9vchgbIAEoDRIVCg1sb2NhdGlvbl90eXBl",
-            "GBwgASgEGq8BCg5BbmRyb2lkR3BzSW5mbxITCgt0aW1lX3RvX2ZpeBgBIAEo",
-            "BBIWCg5zYXRlbGxpdGVzX3BybhgCIAMoBRILCgNzbnIYAyADKAISDwoHYXpp",
-            "bXV0aBgEIAMoAhIRCgllbGV2YXRpb24YBSADKAISEwoLaGFzX2FsbWFuYWMY",
-            "BiADKAgSFQoNaGFzX2VwaGVtZXJpcxgHIAMoCBITCgt1c2VkX2luX2ZpeBgI",
-            "IAMoCBq+AwoKU2Vuc29ySW5mbxIaChJ0aW1lc3RhbXBfc25hcHNob3QYASAB",
-            "KAQSFgoObWFnbmV0b21ldGVyX3gYAyABKAESFgoObWFnbmV0b21ldGVyX3kY",
-            "BCABKAESFgoObWFnbmV0b21ldGVyX3oYBSABKAESGgoSYW5nbGVfbm9ybWFs",
-            "aXplZF94GAYgASgBEhoKEmFuZ2xlX25vcm1hbGl6ZWRfeRgHIAEoARIaChJh",
-            "bmdsZV9ub3JtYWxpemVkX3oYCCABKAESEwoLYWNjZWxfcmF3X3gYCiABKAES",
-            "EwoLYWNjZWxfcmF3X3kYCyABKAESEwoLYWNjZWxfcmF3X3oYDCABKAESFwoP",
-            "Z3lyb3Njb3BlX3Jhd194GA0gASgBEhcKD2d5cm9zY29wZV9yYXdfeRgOIAEo",
-            "ARIXCg9neXJvc2NvcGVfcmF3X3oYDyABKAESGgoSYWNjZWxfbm9ybWFsaXpl",
-            "ZF94GBAgASgBEhoKEmFjY2VsX25vcm1hbGl6ZWRfeRgRIAEoARIaChJhY2Nl",
-            "bF9ub3JtYWxpemVkX3oYEiABKAESGgoSYWNjZWxlcm9tZXRlcl9heGVzGBMg",
-            "ASgEGtoCCgpEZXZpY2VJbmZvEhEKCWRldmljZV9pZBgBIAEoCRIaChJhbmRy",
-            "b2lkX2JvYXJkX25hbWUYAiABKAkSGgoSYW5kcm9pZF9ib290bG9hZGVyGAMg",
-            "ASgJEhQKDGRldmljZV9icmFuZBgEIAEoCRIUCgxkZXZpY2VfbW9kZWwYBSAB",
-            "KAkSHwoXZGV2aWNlX21vZGVsX2lkZW50aWZpZXIYBiABKAkSGQoRZGV2aWNl",
-            "X21vZGVsX2Jvb3QYByABKAkSHQoVaGFyZHdhcmVfbWFudWZhY3R1cmVyGAgg",
-            "ASgJEhYKDmhhcmR3YXJlX21vZGVsGAkgASgJEhYKDmZpcm13YXJlX2JyYW5k",
-            "GAogASgJEhUKDWZpcm13YXJlX3RhZ3MYDCABKAkSFQoNZmlybXdhcmVfdHlw",
-            "ZRgNIAEoCRIcChRmaXJtd2FyZV9maW5nZXJwcmludBgOIAEoCRq7AQoOQWN0",
-            "aXZpdHlTdGF0dXMSFQoNc3RhcnRfdGltZV9tcxgBIAEoBBIWCg51bmtub3du",
-            "X3N0YXR1cxgCIAEoCBIPCgd3YWxraW5nGAMgASgIEg8KB3J1bm5pbmcYBCAB",
-            "KAgSEgoKc3RhdGlvbmFyeRgFIAEoCBISCgphdXRvbW90aXZlGAYgASgIEg8K",
-            "B3RpbHRpbmcYByABKAgSDwoHY3ljbGluZxgIIAEoCBIOCgZzdGF0dXMYCSAB",
-            "KAxiBnByb3RvMw=="));
+            "KAQSFgoObG9jYXRpb25faGFzaDIYFCABKAQSFAoMc2Vzc2lvbl9oYXNoGBYg",
+            "ASgMEhEKCXRpbWVzdGFtcBgXIAEoBBIUCgxyZXF1ZXN0X2hhc2gYGCADKAQS",
+            "EQoJdW5rbm93bjI1GBkgASgEGukBCgtMb2NhdGlvbkZpeBIQCghwcm92aWRl",
+            "chgBIAEoCRIaChJ0aW1lc3RhbXBfc25hcHNob3QYAiABKAQSEAoIbGF0aXR1",
+            "ZGUYDSABKAISEQoJbG9uZ2l0dWRlGA4gASgCEhsKE2hvcml6b250YWxfYWNj",
+            "dXJhY3kYFCABKAISEAoIYWx0aXR1ZGUYFSABKAISGQoRdmVydGljYWxfYWNj",
+            "dXJhY3kYFiABKAISFwoPcHJvdmlkZXJfc3RhdHVzGBogASgEEg0KBWZsb29y",
+            "GBsgASgNEhUKDWxvY2F0aW9uX3R5cGUYHCABKAQarwEKDkFuZHJvaWRHcHNJ",
+            "bmZvEhMKC3RpbWVfdG9fZml4GAEgASgEEhYKDnNhdGVsbGl0ZXNfcHJuGAIg",
+            "AygFEgsKA3NuchgDIAMoAhIPCgdhemltdXRoGAQgAygCEhEKCWVsZXZhdGlv",
+            "bhgFIAMoAhITCgtoYXNfYWxtYW5hYxgGIAMoCBIVCg1oYXNfZXBoZW1lcmlz",
+            "GAcgAygIEhMKC3VzZWRfaW5fZml4GAggAygIGr4DCgpTZW5zb3JJbmZvEhoK",
+            "EnRpbWVzdGFtcF9zbmFwc2hvdBgBIAEoBBIWCg5tYWduZXRvbWV0ZXJfeBgD",
+            "IAEoARIWCg5tYWduZXRvbWV0ZXJfeRgEIAEoARIWCg5tYWduZXRvbWV0ZXJf",
+            "ehgFIAEoARIaChJhbmdsZV9ub3JtYWxpemVkX3gYBiABKAESGgoSYW5nbGVf",
+            "bm9ybWFsaXplZF95GAcgASgBEhoKEmFuZ2xlX25vcm1hbGl6ZWRfehgIIAEo",
+            "ARITCgthY2NlbF9yYXdfeBgKIAEoARITCgthY2NlbF9yYXdfeRgLIAEoARIT",
+            "CgthY2NlbF9yYXdfehgMIAEoARIXCg9neXJvc2NvcGVfcmF3X3gYDSABKAES",
+            "FwoPZ3lyb3Njb3BlX3Jhd195GA4gASgBEhcKD2d5cm9zY29wZV9yYXdfehgP",
+            "IAEoARIaChJhY2NlbF9ub3JtYWxpemVkX3gYECABKAESGgoSYWNjZWxfbm9y",
+            "bWFsaXplZF95GBEgASgBEhoKEmFjY2VsX25vcm1hbGl6ZWRfehgSIAEoARIa",
+            "ChJhY2NlbGVyb21ldGVyX2F4ZXMYEyABKAQa2gIKCkRldmljZUluZm8SEQoJ",
+            "ZGV2aWNlX2lkGAEgASgJEhoKEmFuZHJvaWRfYm9hcmRfbmFtZRgCIAEoCRIa",
+            "ChJhbmRyb2lkX2Jvb3Rsb2FkZXIYAyABKAkSFAoMZGV2aWNlX2JyYW5kGAQg",
+            "ASgJEhQKDGRldmljZV9tb2RlbBgFIAEoCRIfChdkZXZpY2VfbW9kZWxfaWRl",
+            "bnRpZmllchgGIAEoCRIZChFkZXZpY2VfbW9kZWxfYm9vdBgHIAEoCRIdChVo",
+            "YXJkd2FyZV9tYW51ZmFjdHVyZXIYCCABKAkSFgoOaGFyZHdhcmVfbW9kZWwY",
+            "CSABKAkSFgoOZmlybXdhcmVfYnJhbmQYCiABKAkSFQoNZmlybXdhcmVfdGFn",
+            "cxgMIAEoCRIVCg1maXJtd2FyZV90eXBlGA0gASgJEhwKFGZpcm13YXJlX2Zp",
+            "bmdlcnByaW50GA4gASgJGrsBCg5BY3Rpdml0eVN0YXR1cxIVCg1zdGFydF90",
+            "aW1lX21zGAEgASgEEhYKDnVua25vd25fc3RhdHVzGAIgASgIEg8KB3dhbGtp",
+            "bmcYAyABKAgSDwoHcnVubmluZxgEIAEoCBISCgpzdGF0aW9uYXJ5GAUgASgI",
+            "EhIKCmF1dG9tb3RpdmUYBiABKAgSDwoHdGlsdGluZxgHIAEoCBIPCgdjeWNs",
+            "aW5nGAggASgIEg4KBnN0YXR1cxgJIAEoDGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Signature.Signature), global::POGOProtos.Networking.Signature.Signature.Parser, new[]{ "TimestampSinceStart", "LocationFix", "GpsInfo", "SensorInfo", "DeviceInfo", "ActivityStatus", "LocationHash1", "LocationHash2", "Unk22", "Timestamp", "RequestHash" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Signature.Signature.Types.LocationFix), global::POGOProtos.Networking.Signature.Signature.Types.LocationFix.Parser, new[]{ "Provider", "TimestampSinceStart", "Latitude", "Longitude", "HorizontalAccuracy", "Altitude", "VerticalAccuracy", "ProviderStatus", "Floor", "LocationType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Signature.Signature.Types.AndroidGpsInfo), global::POGOProtos.Networking.Signature.Signature.Types.AndroidGpsInfo.Parser, new[]{ "TimeToFix", "SatellitesPrn", "Snr", "Azimuth", "Elevation", "HasAlmanac", "HasEphemeris", "UsedInFix" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Signature.Signature.Types.SensorInfo), global::POGOProtos.Networking.Signature.Signature.Types.SensorInfo.Parser, new[]{ "TimestampSnapshot", "MagnetometerX", "MagnetometerY", "MagnetometerZ", "AngleNormalizedX", "AngleNormalizedY", "AngleNormalizedZ", "AccelRawX", "AccelRawY", "AccelRawZ", "GyroscopeRawX", "GyroscopeRawY", "GyroscopeRawZ", "AccelNormalizedX", "AccelNormalizedY", "AccelNormalizedZ", "AccelerometerAxes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Signature.Signature.Types.DeviceInfo), global::POGOProtos.Networking.Signature.Signature.Types.DeviceInfo.Parser, new[]{ "DeviceId", "AndroidBoardName", "AndroidBootloader", "DeviceBrand", "DeviceModel", "DeviceModelIdentifier", "DeviceModelBoot", "HardwareManufacturer", "HardwareModel", "FirmwareBrand", "FirmwareTags", "FirmwareType", "FirmwareFingerprint" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Signature.Signature.Types.ActivityStatus), global::POGOProtos.Networking.Signature.Signature.Types.ActivityStatus.Parser, new[]{ "StartTimeMs", "UnknownStatus", "Walking", "Running", "Stationary", "Automotive", "Tilting", "Cycling", "Status" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature), global::POGOProtos.Networking.Envelopes.Signature.Parser, new[]{ "TimestampSinceStart", "LocationFix", "GpsInfo", "SensorInfo", "DeviceInfo", "ActivityStatus", "LocationHash1", "LocationHash2", "SessionHash", "Timestamp", "RequestHash", "Unknown25" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.LocationFix), global::POGOProtos.Networking.Envelopes.Signature.Types.LocationFix.Parser, new[]{ "Provider", "TimestampSnapshot", "Latitude", "Longitude", "HorizontalAccuracy", "Altitude", "VerticalAccuracy", "ProviderStatus", "Floor", "LocationType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo), global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo.Parser, new[]{ "TimeToFix", "SatellitesPrn", "Snr", "Azimuth", "Elevation", "HasAlmanac", "HasEphemeris", "UsedInFix" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.SensorInfo), global::POGOProtos.Networking.Envelopes.Signature.Types.SensorInfo.Parser, new[]{ "TimestampSnapshot", "MagnetometerX", "MagnetometerY", "MagnetometerZ", "AngleNormalizedX", "AngleNormalizedY", "AngleNormalizedZ", "AccelRawX", "AccelRawY", "AccelRawZ", "GyroscopeRawX", "GyroscopeRawY", "GyroscopeRawZ", "AccelNormalizedX", "AccelNormalizedY", "AccelNormalizedZ", "AccelerometerAxes" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.DeviceInfo), global::POGOProtos.Networking.Envelopes.Signature.Types.DeviceInfo.Parser, new[]{ "DeviceId", "AndroidBoardName", "AndroidBootloader", "DeviceBrand", "DeviceModel", "DeviceModelIdentifier", "DeviceModelBoot", "HardwareManufacturer", "HardwareModel", "FirmwareBrand", "FirmwareTags", "FirmwareType", "FirmwareFingerprint" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.ActivityStatus), global::POGOProtos.Networking.Envelopes.Signature.Types.ActivityStatus.Parser, new[]{ "StartTimeMs", "UnknownStatus", "Walking", "Running", "Stationary", "Automotive", "Tilting", "Cycling", "Status" }, null, null, null)})
           }));
     }
     #endregion
@@ -89,7 +89,7 @@ namespace POGOProtos.Networking.Signature {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::POGOProtos.Networking.Signature.SignatureReflection.Descriptor.MessageTypes[0]; }
+      get { return global::POGOProtos.Networking.Envelopes.SignatureReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -114,9 +114,10 @@ namespace POGOProtos.Networking.Signature {
       ActivityStatus = other.activityStatus_ != null ? other.ActivityStatus.Clone() : null;
       locationHash1_ = other.locationHash1_;
       locationHash2_ = other.locationHash2_;
-      unk22_ = other.unk22_;
+      sessionHash_ = other.sessionHash_;
       timestamp_ = other.timestamp_;
       requestHash_ = other.requestHash_.Clone();
+      unknown25_ = other.unknown25_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -140,19 +141,19 @@ namespace POGOProtos.Networking.Signature {
 
     /// <summary>Field number for the "location_fix" field.</summary>
     public const int LocationFixFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::POGOProtos.Networking.Signature.Signature.Types.LocationFix> _repeated_locationFix_codec
-        = pb::FieldCodec.ForMessage(34, global::POGOProtos.Networking.Signature.Signature.Types.LocationFix.Parser);
-    private readonly pbc::RepeatedField<global::POGOProtos.Networking.Signature.Signature.Types.LocationFix> locationFix_ = new pbc::RepeatedField<global::POGOProtos.Networking.Signature.Signature.Types.LocationFix>();
+    private static readonly pb::FieldCodec<global::POGOProtos.Networking.Envelopes.Signature.Types.LocationFix> _repeated_locationFix_codec
+        = pb::FieldCodec.ForMessage(34, global::POGOProtos.Networking.Envelopes.Signature.Types.LocationFix.Parser);
+    private readonly pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Signature.Types.LocationFix> locationFix_ = new pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Signature.Types.LocationFix>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::POGOProtos.Networking.Signature.Signature.Types.LocationFix> LocationFix {
+    public pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Signature.Types.LocationFix> LocationFix {
       get { return locationFix_; }
     }
 
     /// <summary>Field number for the "gps_info" field.</summary>
     public const int GpsInfoFieldNumber = 5;
-    private global::POGOProtos.Networking.Signature.Signature.Types.AndroidGpsInfo gpsInfo_;
+    private global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo gpsInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::POGOProtos.Networking.Signature.Signature.Types.AndroidGpsInfo GpsInfo {
+    public global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo GpsInfo {
       get { return gpsInfo_; }
       set {
         gpsInfo_ = value;
@@ -161,9 +162,9 @@ namespace POGOProtos.Networking.Signature {
 
     /// <summary>Field number for the "sensor_info" field.</summary>
     public const int SensorInfoFieldNumber = 7;
-    private global::POGOProtos.Networking.Signature.Signature.Types.SensorInfo sensorInfo_;
+    private global::POGOProtos.Networking.Envelopes.Signature.Types.SensorInfo sensorInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::POGOProtos.Networking.Signature.Signature.Types.SensorInfo SensorInfo {
+    public global::POGOProtos.Networking.Envelopes.Signature.Types.SensorInfo SensorInfo {
       get { return sensorInfo_; }
       set {
         sensorInfo_ = value;
@@ -172,9 +173,9 @@ namespace POGOProtos.Networking.Signature {
 
     /// <summary>Field number for the "device_info" field.</summary>
     public const int DeviceInfoFieldNumber = 8;
-    private global::POGOProtos.Networking.Signature.Signature.Types.DeviceInfo deviceInfo_;
+    private global::POGOProtos.Networking.Envelopes.Signature.Types.DeviceInfo deviceInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::POGOProtos.Networking.Signature.Signature.Types.DeviceInfo DeviceInfo {
+    public global::POGOProtos.Networking.Envelopes.Signature.Types.DeviceInfo DeviceInfo {
       get { return deviceInfo_; }
       set {
         deviceInfo_ = value;
@@ -183,9 +184,9 @@ namespace POGOProtos.Networking.Signature {
 
     /// <summary>Field number for the "activity_status" field.</summary>
     public const int ActivityStatusFieldNumber = 9;
-    private global::POGOProtos.Networking.Signature.Signature.Types.ActivityStatus activityStatus_;
+    private global::POGOProtos.Networking.Envelopes.Signature.Types.ActivityStatus activityStatus_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::POGOProtos.Networking.Signature.Signature.Types.ActivityStatus ActivityStatus {
+    public global::POGOProtos.Networking.Envelopes.Signature.Types.ActivityStatus ActivityStatus {
       get { return activityStatus_; }
       set {
         activityStatus_ = value;
@@ -194,12 +195,12 @@ namespace POGOProtos.Networking.Signature {
 
     /// <summary>Field number for the "location_hash1" field.</summary>
     public const int LocationHash1FieldNumber = 10;
-    private uint locationHash1_;
+    private ulong locationHash1_;
     /// <summary>
-    ///  Location1 hashed based on the auth_token - xxHash32
+    ///  Location1 hashed signed based on the auth_token or auth_info - xxHash32
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint LocationHash1 {
+    public ulong LocationHash1 {
       get { return locationHash1_; }
       set {
         locationHash1_ = value;
@@ -208,29 +209,29 @@ namespace POGOProtos.Networking.Signature {
 
     /// <summary>Field number for the "location_hash2" field.</summary>
     public const int LocationHash2FieldNumber = 20;
-    private uint locationHash2_;
+    private ulong locationHash2_;
     /// <summary>
-    ///  Location2 hashed based on the auth_token - xxHash32
+    ///  Location2 hashed (unsigned) - xxHash32
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint LocationHash2 {
+    public ulong LocationHash2 {
       get { return locationHash2_; }
       set {
         locationHash2_ = value;
       }
     }
 
-    /// <summary>Field number for the "unk22" field.</summary>
-    public const int Unk22FieldNumber = 22;
-    private pb::ByteString unk22_ = pb::ByteString.Empty;
+    /// <summary>Field number for the "session_hash" field.</summary>
+    public const int SessionHashFieldNumber = 22;
+    private pb::ByteString sessionHash_ = pb::ByteString.Empty;
     /// <summary>
-    ///  possibly replay check. Generation unknown but pointed to by 0001B8614
+    ///  16 bytes, unique per session
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pb::ByteString Unk22 {
-      get { return unk22_; }
+    public pb::ByteString SessionHash {
+      get { return sessionHash_; }
       set {
-        unk22_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        sessionHash_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -254,11 +255,25 @@ namespace POGOProtos.Networking.Signature {
         = pb::FieldCodec.ForUInt64(194);
     private readonly pbc::RepeatedField<ulong> requestHash_ = new pbc::RepeatedField<ulong>();
     /// <summary>
-    ///  hashes of each request message in a hashArray - xxhash64
+    ///  hashes of each request message in a hashArray signed based on the auth_token or auth_info - xxhash64
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<ulong> RequestHash {
       get { return requestHash_; }
+    }
+
+    /// <summary>Field number for the "unknown25" field.</summary>
+    public const int Unknown25FieldNumber = 25;
+    private ulong unknown25_;
+    /// <summary>
+    ///  for 0.33 its static -8537042734809897855 or 0x898654dd2753a481, generated via xxHash64("\"b8fa9757195897aae92c53dbcf8a60fb3d86d745\"".ToByteArray(), 0x88533787)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ulong Unknown25 {
+      get { return unknown25_; }
+      set {
+        unknown25_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -282,9 +297,10 @@ namespace POGOProtos.Networking.Signature {
       if (!object.Equals(ActivityStatus, other.ActivityStatus)) return false;
       if (LocationHash1 != other.LocationHash1) return false;
       if (LocationHash2 != other.LocationHash2) return false;
-      if (Unk22 != other.Unk22) return false;
+      if (SessionHash != other.SessionHash) return false;
       if (Timestamp != other.Timestamp) return false;
       if(!requestHash_.Equals(other.requestHash_)) return false;
+      if (Unknown25 != other.Unknown25) return false;
       return true;
     }
 
@@ -297,11 +313,12 @@ namespace POGOProtos.Networking.Signature {
       if (sensorInfo_ != null) hash ^= SensorInfo.GetHashCode();
       if (deviceInfo_ != null) hash ^= DeviceInfo.GetHashCode();
       if (activityStatus_ != null) hash ^= ActivityStatus.GetHashCode();
-      if (LocationHash1 != 0) hash ^= LocationHash1.GetHashCode();
-      if (LocationHash2 != 0) hash ^= LocationHash2.GetHashCode();
-      if (Unk22.Length != 0) hash ^= Unk22.GetHashCode();
+      if (LocationHash1 != 0UL) hash ^= LocationHash1.GetHashCode();
+      if (LocationHash2 != 0UL) hash ^= LocationHash2.GetHashCode();
+      if (SessionHash.Length != 0) hash ^= SessionHash.GetHashCode();
       if (Timestamp != 0UL) hash ^= Timestamp.GetHashCode();
       hash ^= requestHash_.GetHashCode();
+      if (Unknown25 != 0UL) hash ^= Unknown25.GetHashCode();
       return hash;
     }
 
@@ -333,23 +350,27 @@ namespace POGOProtos.Networking.Signature {
         output.WriteRawTag(74);
         output.WriteMessage(ActivityStatus);
       }
-      if (LocationHash1 != 0) {
+      if (LocationHash1 != 0UL) {
         output.WriteRawTag(80);
-        output.WriteUInt32(LocationHash1);
+        output.WriteUInt64(LocationHash1);
       }
-      if (LocationHash2 != 0) {
+      if (LocationHash2 != 0UL) {
         output.WriteRawTag(160, 1);
-        output.WriteUInt32(LocationHash2);
+        output.WriteUInt64(LocationHash2);
       }
-      if (Unk22.Length != 0) {
+      if (SessionHash.Length != 0) {
         output.WriteRawTag(178, 1);
-        output.WriteBytes(Unk22);
+        output.WriteBytes(SessionHash);
       }
       if (Timestamp != 0UL) {
         output.WriteRawTag(184, 1);
         output.WriteUInt64(Timestamp);
       }
       requestHash_.WriteTo(output, _repeated_requestHash_codec);
+      if (Unknown25 != 0UL) {
+        output.WriteRawTag(200, 1);
+        output.WriteUInt64(Unknown25);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -371,19 +392,22 @@ namespace POGOProtos.Networking.Signature {
       if (activityStatus_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ActivityStatus);
       }
-      if (LocationHash1 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LocationHash1);
+      if (LocationHash1 != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(LocationHash1);
       }
-      if (LocationHash2 != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(LocationHash2);
+      if (LocationHash2 != 0UL) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt64Size(LocationHash2);
       }
-      if (Unk22.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeBytesSize(Unk22);
+      if (SessionHash.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeBytesSize(SessionHash);
       }
       if (Timestamp != 0UL) {
         size += 2 + pb::CodedOutputStream.ComputeUInt64Size(Timestamp);
       }
       size += requestHash_.CalculateSize(_repeated_requestHash_codec);
+      if (Unknown25 != 0UL) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt64Size(Unknown25);
+      }
       return size;
     }
 
@@ -398,41 +422,44 @@ namespace POGOProtos.Networking.Signature {
       locationFix_.Add(other.locationFix_);
       if (other.gpsInfo_ != null) {
         if (gpsInfo_ == null) {
-          gpsInfo_ = new global::POGOProtos.Networking.Signature.Signature.Types.AndroidGpsInfo();
+          gpsInfo_ = new global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo();
         }
         GpsInfo.MergeFrom(other.GpsInfo);
       }
       if (other.sensorInfo_ != null) {
         if (sensorInfo_ == null) {
-          sensorInfo_ = new global::POGOProtos.Networking.Signature.Signature.Types.SensorInfo();
+          sensorInfo_ = new global::POGOProtos.Networking.Envelopes.Signature.Types.SensorInfo();
         }
         SensorInfo.MergeFrom(other.SensorInfo);
       }
       if (other.deviceInfo_ != null) {
         if (deviceInfo_ == null) {
-          deviceInfo_ = new global::POGOProtos.Networking.Signature.Signature.Types.DeviceInfo();
+          deviceInfo_ = new global::POGOProtos.Networking.Envelopes.Signature.Types.DeviceInfo();
         }
         DeviceInfo.MergeFrom(other.DeviceInfo);
       }
       if (other.activityStatus_ != null) {
         if (activityStatus_ == null) {
-          activityStatus_ = new global::POGOProtos.Networking.Signature.Signature.Types.ActivityStatus();
+          activityStatus_ = new global::POGOProtos.Networking.Envelopes.Signature.Types.ActivityStatus();
         }
         ActivityStatus.MergeFrom(other.ActivityStatus);
       }
-      if (other.LocationHash1 != 0) {
+      if (other.LocationHash1 != 0UL) {
         LocationHash1 = other.LocationHash1;
       }
-      if (other.LocationHash2 != 0) {
+      if (other.LocationHash2 != 0UL) {
         LocationHash2 = other.LocationHash2;
       }
-      if (other.Unk22.Length != 0) {
-        Unk22 = other.Unk22;
+      if (other.SessionHash.Length != 0) {
+        SessionHash = other.SessionHash;
       }
       if (other.Timestamp != 0UL) {
         Timestamp = other.Timestamp;
       }
       requestHash_.Add(other.requestHash_);
+      if (other.Unknown25 != 0UL) {
+        Unknown25 = other.Unknown25;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -453,42 +480,42 @@ namespace POGOProtos.Networking.Signature {
           }
           case 42: {
             if (gpsInfo_ == null) {
-              gpsInfo_ = new global::POGOProtos.Networking.Signature.Signature.Types.AndroidGpsInfo();
+              gpsInfo_ = new global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo();
             }
             input.ReadMessage(gpsInfo_);
             break;
           }
           case 58: {
             if (sensorInfo_ == null) {
-              sensorInfo_ = new global::POGOProtos.Networking.Signature.Signature.Types.SensorInfo();
+              sensorInfo_ = new global::POGOProtos.Networking.Envelopes.Signature.Types.SensorInfo();
             }
             input.ReadMessage(sensorInfo_);
             break;
           }
           case 66: {
             if (deviceInfo_ == null) {
-              deviceInfo_ = new global::POGOProtos.Networking.Signature.Signature.Types.DeviceInfo();
+              deviceInfo_ = new global::POGOProtos.Networking.Envelopes.Signature.Types.DeviceInfo();
             }
             input.ReadMessage(deviceInfo_);
             break;
           }
           case 74: {
             if (activityStatus_ == null) {
-              activityStatus_ = new global::POGOProtos.Networking.Signature.Signature.Types.ActivityStatus();
+              activityStatus_ = new global::POGOProtos.Networking.Envelopes.Signature.Types.ActivityStatus();
             }
             input.ReadMessage(activityStatus_);
             break;
           }
           case 80: {
-            LocationHash1 = input.ReadUInt32();
+            LocationHash1 = input.ReadUInt64();
             break;
           }
           case 160: {
-            LocationHash2 = input.ReadUInt32();
+            LocationHash2 = input.ReadUInt64();
             break;
           }
           case 178: {
-            Unk22 = input.ReadBytes();
+            SessionHash = input.ReadBytes();
             break;
           }
           case 184: {
@@ -498,6 +525,10 @@ namespace POGOProtos.Networking.Signature {
           case 194:
           case 192: {
             requestHash_.AddEntriesFrom(input, _repeated_requestHash_codec);
+            break;
+          }
+          case 200: {
+            Unknown25 = input.ReadUInt64();
             break;
           }
         }
@@ -515,7 +546,7 @@ namespace POGOProtos.Networking.Signature {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::POGOProtos.Networking.Signature.Signature.Descriptor.NestedTypes[0]; }
+          get { return global::POGOProtos.Networking.Envelopes.Signature.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -533,7 +564,7 @@ namespace POGOProtos.Networking.Signature {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public LocationFix(LocationFix other) : this() {
           provider_ = other.provider_;
-          timestampSinceStart_ = other.timestampSinceStart_;
+          timestampSnapshot_ = other.timestampSnapshot_;
           latitude_ = other.latitude_;
           longitude_ = other.longitude_;
           horizontalAccuracy_ = other.horizontalAccuracy_;
@@ -563,17 +594,17 @@ namespace POGOProtos.Networking.Signature {
           }
         }
 
-        /// <summary>Field number for the "timestamp_since_start" field.</summary>
-        public const int TimestampSinceStartFieldNumber = 2;
-        private ulong timestampSinceStart_;
+        /// <summary>Field number for the "timestamp_snapshot" field.</summary>
+        public const int TimestampSnapshotFieldNumber = 2;
+        private ulong timestampSnapshot_;
         /// <summary>
-        ///  in ms
+        ///  in ms since start
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public ulong TimestampSinceStart {
-          get { return timestampSinceStart_; }
+        public ulong TimestampSnapshot {
+          get { return timestampSnapshot_; }
           set {
-            timestampSinceStart_ = value;
+            timestampSnapshot_ = value;
           }
         }
 
@@ -696,7 +727,7 @@ namespace POGOProtos.Networking.Signature {
             return true;
           }
           if (Provider != other.Provider) return false;
-          if (TimestampSinceStart != other.TimestampSinceStart) return false;
+          if (TimestampSnapshot != other.TimestampSnapshot) return false;
           if (Latitude != other.Latitude) return false;
           if (Longitude != other.Longitude) return false;
           if (HorizontalAccuracy != other.HorizontalAccuracy) return false;
@@ -712,7 +743,7 @@ namespace POGOProtos.Networking.Signature {
         public override int GetHashCode() {
           int hash = 1;
           if (Provider.Length != 0) hash ^= Provider.GetHashCode();
-          if (TimestampSinceStart != 0UL) hash ^= TimestampSinceStart.GetHashCode();
+          if (TimestampSnapshot != 0UL) hash ^= TimestampSnapshot.GetHashCode();
           if (Latitude != 0F) hash ^= Latitude.GetHashCode();
           if (Longitude != 0F) hash ^= Longitude.GetHashCode();
           if (HorizontalAccuracy != 0F) hash ^= HorizontalAccuracy.GetHashCode();
@@ -735,9 +766,9 @@ namespace POGOProtos.Networking.Signature {
             output.WriteRawTag(10);
             output.WriteString(Provider);
           }
-          if (TimestampSinceStart != 0UL) {
+          if (TimestampSnapshot != 0UL) {
             output.WriteRawTag(16);
-            output.WriteUInt64(TimestampSinceStart);
+            output.WriteUInt64(TimestampSnapshot);
           }
           if (Latitude != 0F) {
             output.WriteRawTag(109);
@@ -779,8 +810,8 @@ namespace POGOProtos.Networking.Signature {
           if (Provider.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Provider);
           }
-          if (TimestampSinceStart != 0UL) {
-            size += 1 + pb::CodedOutputStream.ComputeUInt64Size(TimestampSinceStart);
+          if (TimestampSnapshot != 0UL) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt64Size(TimestampSnapshot);
           }
           if (Latitude != 0F) {
             size += 1 + 4;
@@ -817,8 +848,8 @@ namespace POGOProtos.Networking.Signature {
           if (other.Provider.Length != 0) {
             Provider = other.Provider;
           }
-          if (other.TimestampSinceStart != 0UL) {
-            TimestampSinceStart = other.TimestampSinceStart;
+          if (other.TimestampSnapshot != 0UL) {
+            TimestampSnapshot = other.TimestampSnapshot;
           }
           if (other.Latitude != 0F) {
             Latitude = other.Latitude;
@@ -859,7 +890,7 @@ namespace POGOProtos.Networking.Signature {
                 break;
               }
               case 16: {
-                TimestampSinceStart = input.ReadUInt64();
+                TimestampSnapshot = input.ReadUInt64();
                 break;
               }
               case 109: {
@@ -910,7 +941,7 @@ namespace POGOProtos.Networking.Signature {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::POGOProtos.Networking.Signature.Signature.Descriptor.NestedTypes[1]; }
+          get { return global::POGOProtos.Networking.Envelopes.Signature.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1174,7 +1205,7 @@ namespace POGOProtos.Networking.Signature {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::POGOProtos.Networking.Signature.Signature.Descriptor.NestedTypes[2]; }
+          get { return global::POGOProtos.Networking.Envelopes.Signature.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1219,7 +1250,7 @@ namespace POGOProtos.Networking.Signature {
         public const int TimestampSnapshotFieldNumber = 1;
         private ulong timestampSnapshot_;
         /// <summary>
-        ///  in ms
+        ///  in ms since start
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public ulong TimestampSnapshot {
@@ -1745,7 +1776,7 @@ namespace POGOProtos.Networking.Signature {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::POGOProtos.Networking.Signature.Signature.Descriptor.NestedTypes[3]; }
+          get { return global::POGOProtos.Networking.Envelopes.Signature.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2224,6 +2255,9 @@ namespace POGOProtos.Networking.Signature {
 
       }
 
+      /// <summary>
+      ///  Only used in iOS - Android just sends an empty version
+      /// </summary>
       public sealed partial class ActivityStatus : pb::IMessage<ActivityStatus> {
         private static readonly pb::MessageParser<ActivityStatus> _parser = new pb::MessageParser<ActivityStatus>(() => new ActivityStatus());
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2231,7 +2265,7 @@ namespace POGOProtos.Networking.Signature {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::POGOProtos.Networking.Signature.Signature.Descriptor.NestedTypes[4]; }
+          get { return global::POGOProtos.Networking.Envelopes.Signature.Descriptor.NestedTypes[4]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

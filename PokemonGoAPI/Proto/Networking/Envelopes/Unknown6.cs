@@ -23,14 +23,15 @@ namespace POGOProtos.Networking.Envelopes {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci5QT0dPUHJvdG9zL05ldHdvcmtpbmcvRW52ZWxvcGVzL1Vua25vd242LnBy",
-            "b3RvEh9QT0dPUHJvdG9zLk5ldHdvcmtpbmcuRW52ZWxvcGVzIoQBCghVbmtu",
+            "b3RvEh9QT0dPUHJvdG9zLk5ldHdvcmtpbmcuRW52ZWxvcGVzIo8BCghVbmtu",
             "b3duNhIUCgxyZXF1ZXN0X3R5cGUYASABKAUSRAoIdW5rbm93bjIYAiABKAsy",
             "Mi5QT0dPUHJvdG9zLk5ldHdvcmtpbmcuRW52ZWxvcGVzLlVua25vd242LlVu",
-            "a25vd24yGhwKCFVua25vd24yEhAKCHVua25vd24xGAEgASgMYgZwcm90bzM="));
+            "a25vd24yGicKCFVua25vd24yEhsKE2VuY3J5cHRlZF9zaWduYXR1cmUYASAB",
+            "KAxiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Unknown6), global::POGOProtos.Networking.Envelopes.Unknown6.Parser, new[]{ "RequestType", "Unknown2" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Unknown6.Types.Unknown2), global::POGOProtos.Networking.Envelopes.Unknown6.Types.Unknown2.Parser, new[]{ "Unknown1" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Unknown6), global::POGOProtos.Networking.Envelopes.Unknown6.Parser, new[]{ "RequestType", "Unknown2" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Unknown6.Types.Unknown2), global::POGOProtos.Networking.Envelopes.Unknown6.Types.Unknown2.Parser, new[]{ "EncryptedSignature" }, null, null, null)})
           }));
     }
     #endregion
@@ -217,7 +218,7 @@ namespace POGOProtos.Networking.Envelopes {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Unknown2(Unknown2 other) : this() {
-          unknown1_ = other.unknown1_;
+          encryptedSignature_ = other.encryptedSignature_;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -225,14 +226,17 @@ namespace POGOProtos.Networking.Envelopes {
           return new Unknown2(this);
         }
 
-        /// <summary>Field number for the "unknown1" field.</summary>
-        public const int Unknown1FieldNumber = 1;
-        private pb::ByteString unknown1_ = pb::ByteString.Empty;
+        /// <summary>Field number for the "encrypted_signature" field.</summary>
+        public const int EncryptedSignatureFieldNumber = 1;
+        private pb::ByteString encryptedSignature_ = pb::ByteString.Empty;
+        /// <summary>
+        ///  This are the bytes of POGOProtos.Networking/Envelopes/Signature.proto encrypted.
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pb::ByteString Unknown1 {
-          get { return unknown1_; }
+        public pb::ByteString EncryptedSignature {
+          get { return encryptedSignature_; }
           set {
-            unknown1_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            encryptedSignature_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
           }
         }
 
@@ -249,14 +253,14 @@ namespace POGOProtos.Networking.Envelopes {
           if (ReferenceEquals(other, this)) {
             return true;
           }
-          if (Unknown1 != other.Unknown1) return false;
+          if (EncryptedSignature != other.EncryptedSignature) return false;
           return true;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
-          if (Unknown1.Length != 0) hash ^= Unknown1.GetHashCode();
+          if (EncryptedSignature.Length != 0) hash ^= EncryptedSignature.GetHashCode();
           return hash;
         }
 
@@ -267,17 +271,17 @@ namespace POGOProtos.Networking.Envelopes {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
-          if (Unknown1.Length != 0) {
+          if (EncryptedSignature.Length != 0) {
             output.WriteRawTag(10);
-            output.WriteBytes(Unknown1);
+            output.WriteBytes(EncryptedSignature);
           }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
-          if (Unknown1.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeBytesSize(Unknown1);
+          if (EncryptedSignature.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeBytesSize(EncryptedSignature);
           }
           return size;
         }
@@ -287,8 +291,8 @@ namespace POGOProtos.Networking.Envelopes {
           if (other == null) {
             return;
           }
-          if (other.Unknown1.Length != 0) {
-            Unknown1 = other.Unknown1;
+          if (other.EncryptedSignature.Length != 0) {
+            EncryptedSignature = other.EncryptedSignature;
           }
         }
 
@@ -301,7 +305,7 @@ namespace POGOProtos.Networking.Envelopes {
                 input.SkipLastField();
                 break;
               case 10: {
-                Unknown1 = input.ReadBytes();
+                EncryptedSignature = input.ReadBytes();
                 break;
               }
             }

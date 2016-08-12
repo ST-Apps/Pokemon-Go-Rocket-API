@@ -59,6 +59,81 @@ namespace PokemonGo_UWP.Utils
         #endregion
     }
 
+    public class PokemonDataToPokemonTypeBackgroundConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            if (value == null) return new Uri("ms-appx:///Assets/Backgrounds/details_type_bg_normal.png");
+            var pokemonData = (PokemonDataWrapper) value;            
+            return new Uri($"ms-appx:///Assets/Backgrounds/details_type_bg_{GameClient.PokedexExtraData.First(item => item.PokemonId == pokemonData.PokemonId).Type}.png");
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class PokemonWeightToWeightStringConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            if (value == null) return new Uri("ms-appx:///Assets/Backgrounds/details_type_bg_normal.png");
+            var pokemonData = (PokemonDataWrapper)value;
+            return new Uri($"ms-appx:///Assets/Backgrounds/details_type_bg_{GameClient.PokedexExtraData.First(item => item.PokemonId == pokemonData.PokemonId).Type}.png");
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class PokemonDataToMaxLevelBarConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {            
+            return GameClient.PlayerStats.Level + 1.5;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class PokemonDataToLevelBarConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            if (value == null) return 0;
+            var pokemonData = (PokemonDataWrapper) value;
+            var pokemonLevel = PokemonInfo.GetLevel(pokemonData.WrappedData);
+            return pokemonLevel > GameClient.PlayerStats.Level + 1.5 ? GameClient.PlayerStats.Level + 1.5 : pokemonLevel;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
     public class ItemIdToItemIconConverter : IValueConverter
     {
         #region Implementation of IValueConverter
@@ -516,6 +591,108 @@ namespace PokemonGo_UWP.Utils
         #endregion
     }
 
+    public class PokemonFamilyToCandyImageConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            if (value == null) return "";
+            var pokemonType = (PokemonType) value;
+            var baseColor = string.Empty;
+            switch (pokemonType)
+            {
+                case PokemonType.Grass:
+                    baseColor = "B1BF21";
+                    break;
+                case PokemonType.Fire:
+                    baseColor = "E54C3C"; 
+                    break;
+                case PokemonType.Electric:
+                    baseColor = "FFD742";
+                    break;
+                case PokemonType.Ground:
+                    baseColor = "DABB51";
+                    break;
+                case PokemonType.Fighting:
+                    baseColor = "B36A57";
+                    break;
+                case PokemonType.Normal:
+                    baseColor = "AFB09E";
+                    break;
+                case PokemonType.Poison:
+                    baseColor = "9A599B";
+                    break;
+                case PokemonType.Psychic:
+                    baseColor = "DE5FA4";
+                    break;
+                case PokemonType.None:
+                    baseColor = "83C44C";
+                    break;
+                case PokemonType.Ice:
+                    baseColor = "87DBFD";
+                    break;
+                case PokemonType.Rock:
+                    baseColor = "BBAD62";
+                    break;
+                case PokemonType.Dragon:
+                    baseColor = "776CE2";
+                    break;
+                case PokemonType.Water:
+                    baseColor = "47A1FF";
+                    break;
+                case PokemonType.Bug:
+                    baseColor = "B1BF21";
+                    break;
+                case PokemonType.Dark:
+                    baseColor = "81604D";
+                    break;
+                case PokemonType.Ghost:
+                    baseColor = "6D6EC1";
+                    break;
+                case PokemonType.Steel:
+                    baseColor = "B0AFC1";
+                    break;
+                case PokemonType.Flying:
+                    baseColor = "6B95F7";
+                    break;
+                case PokemonType.Fairy:
+                    baseColor = "E59DE7";
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }    
+            // TODO: cache those files!        
+            return $"https://pokemon.agne.no/candyMaker.php?base={baseColor}&secondary=f8f8f8&zoom=1";
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class PokemonFamilyNameToStringConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            if (value == null) return "";
+            var pokemonFamily = (PokemonFamilyId) value;
+            return Resources.Pokemon.GetString(pokemonFamily.ToString().Replace("Family", "")).ToUpperInvariant();
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
     public class PokemonDataToVisibilityConverter : IValueConverter
     {
         #region Implementation of IValueConverter
@@ -566,7 +743,7 @@ namespace PokemonGo_UWP.Utils
                 case FortDataStatus.Closed:
                     return new Uri("ms-appx:///Assets/Icons/pokestop_far.png");
                 case FortDataStatus.Cooldown:
-                    return new Uri($"ms-appx:///Assets/Icons/pokestop_near_inactive.png");                             
+                    return new Uri($"ms-appx:///Assets/Icons/pokestop_near_inactive.png");
                 default:
                     throw new ArgumentOutOfRangeException();
             }

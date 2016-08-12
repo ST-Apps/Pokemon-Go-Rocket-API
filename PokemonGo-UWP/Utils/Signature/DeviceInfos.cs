@@ -1,6 +1,6 @@
-﻿using System;
+﻿using PokemonGo.RocketAPI.Helpers;
+using System;
 using Windows.Devices.Sensors;
-using PokemonGo.RocketAPI.Helpers;
 using Superbest_random;
 
 namespace PokemonGo_UWP.Utils
@@ -9,6 +9,7 @@ namespace PokemonGo_UWP.Utils
     {
         public static readonly LocationFixFused Instance;
 
+        private readonly Random _random = new Random();
 
         static LocationFixFused()
         {
@@ -19,7 +20,21 @@ namespace PokemonGo_UWP.Utils
         {
         }
 
-        public string Provider => "fused";
+        public string Provider
+        {
+            get
+            {
+                switch (GameClient.Geoposition.Coordinate.PositionSource)
+                {
+                    case Windows.Devices.Geolocation.PositionSource.WiFi:
+                    case Windows.Devices.Geolocation.PositionSource.Cellular:
+                        return "network";
+                    case Windows.Devices.Geolocation.PositionSource.Satellite:
+                        return "gps";
+                }
+                return "fused";
+            }
+        }
         //1 = no fix, 2 = acquiring/inaccurate, 3 = fix acquired
         public ulong ProviderStatus => 3;
 
@@ -34,13 +49,18 @@ namespace PokemonGo_UWP.Utils
 
         // TODO: why 1? need more infos.
         public ulong LocationType => 1;
-    }
 
+        public ulong Timestamp => (ulong)GameClient.Geoposition.Coordinate.Timestamp.ToUnixTimeMilliseconds();
+        public float HorizontalAccuracy => (float?)GameClient.Geoposition.Coordinate?.Accuracy ?? (float)_random.NextGaussian(0.0, 0.5);
+        public float VerticalAccuracy => (float?)GameClient.Geoposition.Coordinate?.AltitudeAccuracy ?? (float)_random.NextGaussian(0.0, 0.5);
+
+    }
     /// <summary>
-    ///     Device infos used to sign requests
+    /// Device infos used to sign requests
     /// </summary>
     public class DeviceInfos : IDeviceInfo
     {
+
         public static readonly DeviceInfos Instance;
 
 
@@ -53,11 +73,6 @@ namespace PokemonGo_UWP.Utils
         {
         }
 
-        #region LocationFixes
-
-        public ILocationFix[] LocationFixes { get; } = {LocationFixFused.Instance};
-
-        #endregion
 
         #region Device
 
@@ -89,6 +104,14 @@ namespace PokemonGo_UWP.Utils
 
         #endregion
 
+        #region LocationFixes
+        private ILocationFix[] _gpsLocationFixes = { LocationFixFused.Instance };
+        private ILocationFix[] _emptyLocationFixes = { };
+        public ILocationFix[] LocationFixes { get { return GameClient.Geoposition != null ? _gpsLocationFixes : _emptyLocationFixes; } }
+
+
+        #endregion
+
         #region Sensors
 
         private readonly Random _random = new Random();
@@ -101,58 +124,39 @@ namespace PokemonGo_UWP.Utils
 
         private readonly Inclinometer _inclinometer = Inclinometer.GetDefault();
 
-        public string TimestampSnapshot = ""; //(ulong)(ElapsedMilliseconds - 230L) = TimestampSinceStart - 30L
+        private static readonly DateTimeOffset _startTime = DateTime.UtcNow;
 
-        public double MagnetometerX => _magnetometer?.GetCurrentReading() != null
-            ? _magnetometer.GetCurrentReading().MagneticFieldX
-            : _random.NextGaussian(0.0, 0.1);
 
-        public double MagnetometerY => _magnetometer?.GetCurrentReading() != null
-            ? _magnetometer.GetCurrentReading().MagneticFieldY
-            : _random.NextGaussian(0.0, 0.1);
+        public TimeSpan TimeSnapshot { get { return DateTime.UtcNow - _startTime; } }
 
-        public double MagnetometerZ => _magnetometer?.GetCurrentReading() != null
-            ? _magnetometer.GetCurrentReading().MagneticFieldZ
-            : _random.NextGaussian(0.0, 0.1);
+        //public ulong TimestampSnapshot = 0; //(ulong)(ElapsedMilliseconds - 230L) = TimestampSinceStart - 30L
 
-        public double GyroscopeRawX => _gyrometer?.GetCurrentReading() != null
-            ? _gyrometer.GetCurrentReading().AngularVelocityX
-            : _random.NextGaussian(0.0, 0.1);
+        public double MagnetometerX => _magnetometer?.GetCurrentReading()?.MagneticFieldX ?? _random.NextGaussian(0.0, 0.1);
 
-        public double GyroscopeRawY => _gyrometer?.GetCurrentReading() != null
-            ? _gyrometer.GetCurrentReading().AngularVelocityY
-            : _random.NextGaussian(0.0, 0.1);
+        public double MagnetometerY => _magnetometer?.GetCurrentReading()?.MagneticFieldY ?? _random.NextGaussian(0.0, 0.1);
 
-        public double GyroscopeRawZ => _gyrometer?.GetCurrentReading() != null
-            ? _gyrometer.GetCurrentReading().AngularVelocityZ
-            : _random.NextGaussian(0.0, 0.1);
+        public double MagnetometerZ => _magnetometer?.GetCurrentReading()?.MagneticFieldZ ?? _random.NextGaussian(0.0, 0.1);
 
-        public double AngleNormalizedX => _inclinometer?.GetCurrentReading() != null
-            ? _inclinometer.GetCurrentReading().PitchDegrees
-            : _random.NextGaussian(0.0, 5.0);
+        public double GyroscopeRawX => _gyrometer?.GetCurrentReading()?.AngularVelocityX ?? _random.NextGaussian(0.0, 0.1);
 
-        public double AngleNormalizedY => _inclinometer?.GetCurrentReading() != null
-            ? _inclinometer.GetCurrentReading().YawDegrees
-            : _random.NextGaussian(0.0, 5.0);
+        public double GyroscopeRawY => _gyrometer?.GetCurrentReading()?.AngularVelocityY ?? _random.NextGaussian(0.0, 0.1);
 
-        public double AngleNormalizedZ => _inclinometer?.GetCurrentReading() != null
-            ? _inclinometer.GetCurrentReading().RollDegrees
-            : _random.NextGaussian(0.0, 5.0);
+        public double GyroscopeRawZ => _gyrometer?.GetCurrentReading()?.AngularVelocityZ ?? _random.NextGaussian(0.0, 0.1);
 
-        public double AccelRawX => _accelerometer?.GetCurrentReading() != null
-            ? _accelerometer.GetCurrentReading().AccelerationX
-            : _random.NextGaussian(0.0, 0.3);
+        public double AngleNormalizedX => _inclinometer?.GetCurrentReading()?.PitchDegrees ?? _random.NextGaussian(0.0, 5.0);
+        public double AngleNormalizedY => _inclinometer?.GetCurrentReading()?.YawDegrees ?? _random.NextGaussian(0.0, 5.0);
+        public double AngleNormalizedZ => _inclinometer?.GetCurrentReading()?.RollDegrees ?? _random.NextGaussian(0.0, 5.0);
 
-        public double AccelRawY => _accelerometer?.GetCurrentReading() != null
-            ? _accelerometer.GetCurrentReading().AccelerationY
-            : _random.NextGaussian(0.0, 0.3);
+        public double AccelRawX => _accelerometer?.GetCurrentReading()?.AccelerationX ?? _random.NextGaussian(0.0, 0.3);
 
-        public double AccelRawZ => _accelerometer?.GetCurrentReading() != null
-            ? _accelerometer.GetCurrentReading().AccelerationZ
-            : _random.NextGaussian(0.0, 0.3);
+        public double AccelRawY => _accelerometer?.GetCurrentReading()?.AccelerationY ?? _random.NextGaussian(0.0, 0.3);
+
+        public double AccelRawZ => _accelerometer?.GetCurrentReading()?.AccelerationZ ?? _random.NextGaussian(0.0, 0.3);
+
 
         public ulong AccelerometerAxes => 3;
 
         #endregion
+
     }
 }

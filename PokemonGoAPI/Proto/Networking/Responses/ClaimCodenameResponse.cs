@@ -42,9 +42,6 @@ namespace POGOProtos.Networking.Responses {
 
   }
   #region Messages
-  /// <summary>
-  ///  TODO: Might be incorrect, please test.
-  /// </summary>
   public sealed partial class ClaimCodenameResponse : pb::IMessage<ClaimCodenameResponse> {
     private static readonly pb::MessageParser<ClaimCodenameResponse> _parser = new pb::MessageParser<ClaimCodenameResponse>(() => new ClaimCodenameResponse());
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -26,18 +26,16 @@ namespace POGOProtos.Networking.Envelopes {
             "ZWxvcGUucHJvdG8SH1BPR09Qcm90b3MuTmV0d29ya2luZy5FbnZlbG9wZXMa",
             "MFBPR09Qcm90b3MvTmV0d29ya2luZy9FbnZlbG9wZXMvQXV0aFRpY2tldC5w",
             "cm90bxo2UE9HT1Byb3Rvcy9OZXR3b3JraW5nL0VudmVsb3Blcy9Vbmtub3du",
-            "NlJlc3BvbnNlLnByb3RvIrgCChBSZXNwb25zZUVudmVsb3BlEhMKC3N0YXR1",
+            "NlJlc3BvbnNlLnByb3RvIvMBChBSZXNwb25zZUVudmVsb3BlEhMKC3N0YXR1",
             "c19jb2RlGAEgASgFEhIKCnJlcXVlc3RfaWQYAiABKAQSDwoHYXBpX3VybBgD",
             "IAEoCRJDCgh1bmtub3duNhgGIAMoCzIxLlBPR09Qcm90b3MuTmV0d29ya2lu",
             "Zy5FbnZlbG9wZXMuVW5rbm93bjZSZXNwb25zZRJACgthdXRoX3RpY2tldBgH",
             "IAEoCzIrLlBPR09Qcm90b3MuTmV0d29ya2luZy5FbnZlbG9wZXMuQXV0aFRp",
-            "Y2tldBIPCgdyZXR1cm5zGGQgAygMEg0KBWVycm9yGGUgASgJGkMKCFVua25v",
-            "d243EhEKCXVua25vd243MRgBIAEoDBIRCgl1bmtub3duNzIYAiABKAMSEQoJ",
-            "dW5rbm93bjczGAMgASgMYgZwcm90bzM="));
+            "Y2tldBIPCgdyZXR1cm5zGGQgAygMEg0KBWVycm9yGGUgASgJYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Networking.Envelopes.AuthTicketReflection.Descriptor, global::POGOProtos.Networking.Envelopes.Unknown6ResponseReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.ResponseEnvelope), global::POGOProtos.Networking.Envelopes.ResponseEnvelope.Parser, new[]{ "StatusCode", "RequestId", "ApiUrl", "Unknown6", "AuthTicket", "Returns", "Error" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.ResponseEnvelope.Types.Unknown7), global::POGOProtos.Networking.Envelopes.ResponseEnvelope.Types.Unknown7.Parser, new[]{ "Unknown71", "Unknown72", "Unknown73" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.ResponseEnvelope), global::POGOProtos.Networking.Envelopes.ResponseEnvelope.Parser, new[]{ "StatusCode", "RequestId", "ApiUrl", "Unknown6", "AuthTicket", "Returns", "Error" }, null, null, null)
           }));
     }
     #endregion
@@ -316,186 +314,6 @@ namespace POGOProtos.Networking.Envelopes {
         }
       }
     }
-
-    #region Nested types
-    /// <summary>Container for nested types declared in the ResponseEnvelope message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      public sealed partial class Unknown7 : pb::IMessage<Unknown7> {
-        private static readonly pb::MessageParser<Unknown7> _parser = new pb::MessageParser<Unknown7>(() => new Unknown7());
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<Unknown7> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::POGOProtos.Networking.Envelopes.ResponseEnvelope.Descriptor.NestedTypes[0]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Unknown7() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Unknown7(Unknown7 other) : this() {
-          unknown71_ = other.unknown71_;
-          unknown72_ = other.unknown72_;
-          unknown73_ = other.unknown73_;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Unknown7 Clone() {
-          return new Unknown7(this);
-        }
-
-        /// <summary>Field number for the "unknown71" field.</summary>
-        public const int Unknown71FieldNumber = 1;
-        private pb::ByteString unknown71_ = pb::ByteString.Empty;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pb::ByteString Unknown71 {
-          get { return unknown71_; }
-          set {
-            unknown71_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "unknown72" field.</summary>
-        public const int Unknown72FieldNumber = 2;
-        private long unknown72_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public long Unknown72 {
-          get { return unknown72_; }
-          set {
-            unknown72_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "unknown73" field.</summary>
-        public const int Unknown73FieldNumber = 3;
-        private pb::ByteString unknown73_ = pb::ByteString.Empty;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pb::ByteString Unknown73 {
-          get { return unknown73_; }
-          set {
-            unknown73_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override bool Equals(object other) {
-          return Equals(other as Unknown7);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(Unknown7 other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if (Unknown71 != other.Unknown71) return false;
-          if (Unknown72 != other.Unknown72) return false;
-          if (Unknown73 != other.Unknown73) return false;
-          return true;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override int GetHashCode() {
-          int hash = 1;
-          if (Unknown71.Length != 0) hash ^= Unknown71.GetHashCode();
-          if (Unknown72 != 0L) hash ^= Unknown72.GetHashCode();
-          if (Unknown73.Length != 0) hash ^= Unknown73.GetHashCode();
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void WriteTo(pb::CodedOutputStream output) {
-          if (Unknown71.Length != 0) {
-            output.WriteRawTag(10);
-            output.WriteBytes(Unknown71);
-          }
-          if (Unknown72 != 0L) {
-            output.WriteRawTag(16);
-            output.WriteInt64(Unknown72);
-          }
-          if (Unknown73.Length != 0) {
-            output.WriteRawTag(26);
-            output.WriteBytes(Unknown73);
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int CalculateSize() {
-          int size = 0;
-          if (Unknown71.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeBytesSize(Unknown71);
-          }
-          if (Unknown72 != 0L) {
-            size += 1 + pb::CodedOutputStream.ComputeInt64Size(Unknown72);
-          }
-          if (Unknown73.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeBytesSize(Unknown73);
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(Unknown7 other) {
-          if (other == null) {
-            return;
-          }
-          if (other.Unknown71.Length != 0) {
-            Unknown71 = other.Unknown71;
-          }
-          if (other.Unknown72 != 0L) {
-            Unknown72 = other.Unknown72;
-          }
-          if (other.Unknown73.Length != 0) {
-            Unknown73 = other.Unknown73;
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(pb::CodedInputStream input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                input.SkipLastField();
-                break;
-              case 10: {
-                Unknown71 = input.ReadBytes();
-                break;
-              }
-              case 16: {
-                Unknown72 = input.ReadInt64();
-                break;
-              }
-              case 26: {
-                Unknown73 = input.ReadBytes();
-                break;
-              }
-            }
-          }
-        }
-
-      }
-
-    }
-    #endregion
 
   }
 
