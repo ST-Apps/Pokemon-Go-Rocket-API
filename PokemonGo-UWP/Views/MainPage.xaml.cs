@@ -1,4 +1,6 @@
+using System;
 using Windows.System;
+using Windows.Foundation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
@@ -12,8 +14,21 @@ namespace PokemonGo_UWP.Views
         {
             InitializeComponent();
             NavigationCacheMode = NavigationCacheMode.Enabled;
-        }
 
+            // Handlers for virtual keyboard on or off
+            InputPane.GetForCurrentView().Showing
+                += new TypedEventHandler<InputPane, InputPaneVisibilityEventArgs>(_virtualKeyboardOn);
+            InputPane.GetForCurrentView().Hiding
+                += new TypedEventHandler<InputPane, InputPaneVisibilityEventArgs>(_virtualKeyboardOff);
+        }
+        private void _virtualKeyboardOn(object sender, object e)
+        {
+            MainGrid.RowDefinitions[0].Height = new GridLength(0.0);
+        }
+        private void _virtualKeyboardOff(object sender, object e)
+        {
+            MainGrid.RowDefinitions[0].Height = new GridLength(1.0, GridUnitType.Star);
+        }
         private void passwordBox_KeyDown(object sender, KeyRoutedEventArgs e)
         {
             if (e.Key != VirtualKey.Enter) return;

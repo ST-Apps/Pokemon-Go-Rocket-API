@@ -192,8 +192,6 @@
     <Content Include="Assets\Items\Item_COIN_HEAP_01.png" />
     <Content Include="Assets\Items\Item_COIN_POUCH_01.png" />
     <Content Include="Assets\Items\Item_COIN_STACK_01.png" />
-    <Content Include="Assets\Logos\google.png" />
-    <Content Include="Assets\Logos\logo_transparent.png" />
     <Content Include="Assets\Pokemons\1.png" />
     <Content Include="Assets\Pokemons\10.png" />
     <Content Include="Assets\Pokemons\100.png" />
@@ -356,6 +354,8 @@
     <Content Include="Assets\UI\close.png" />
     <Content Include="Assets\UI\egg.png" />
     <Content Include="Assets\UI\escape.png" />
+    <Content Include="Assets\UI\logoDark.png" />
+    <Content Include="Assets\UI\logoLight.png" />
     <Content Include="Assets\Fonts\Generica Bold.otf" />
     <Content Include="Assets\Fonts\Generica.otf" />
     <Content Include="Assets\Fonts\Lato-Italic.ttf" />
@@ -502,6 +502,7 @@
     <Compile Include="Entities\IUpdatable.cs" />
     <Compile Include="Entities\MapPokemonWrapper.cs" />
     <Compile Include="Entities\NearbyPokemonWrapper.cs" />
+    <Compile Include="Entities\ObservableCollectionPlus.cs" />
     <Compile Include="Entities\PokemonDataWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Achievements\BronzeAttribute.cs" />
@@ -513,19 +514,20 @@
     <Compile Include="Utils\Game\FortDataStatus.cs" />
     <Compile Include="Utils\Helpers\AsyncSynchronisationContext.cs" />
     <Compile Include="Utils\Helpers\AudioUtils.cs" />
-    <Compile Include="Utils\Helpers\CollectionExtensions.cs" />
+    <Compile Include="Utils\Extensions\CollectionExtensions.cs" />
     <Compile Include="Utils\Game\Converters.cs" />
     <Compile Include="Utils\Helpers\IStorageHelper.cs" />
+    <Compile Include="Utils\Helpers\LiveTileHelper.cs" />
     <Compile Include="Utils\Helpers\LocalCacheHelper.cs" />
     <Compile Include="Utils\Helpers\StorageHelper.cs" />
     <Compile Include="Utils\Signature\DeviceInfos.cs" />
     <Compile Include="Utils\Helpers\ExceptionHandler.cs" />
     <Compile Include="Utils\GameClient.cs" />
     <Compile Include="Utils\Game\GameMapNavigationModes.cs" />
-    <Compile Include="Utils\Helpers\MessageDialogExtensions.cs" />
+    <Compile Include="Utils\Extensions\MessageDialogExtensions.cs" />
     <Compile Include="Utils\Helpers\NavigationHelper.cs" />
     <Compile Include="Utils\Game\PokemonInfo.cs" />
-    <Compile Include="Utils\Helpers\RandomExtensions.cs" />
+    <Compile Include="Utils\Extensions\RandomExtensions.cs" />
     <Compile Include="Utils\Game\Resources.cs" />
     <Compile Include="Utils\Settings\Settings.cs" />
     <Compile Include="Utils\Settings\SettingsService.cs" />
@@ -698,7 +700,6 @@
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.zh-HK.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.zh-TW.xlf" />
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

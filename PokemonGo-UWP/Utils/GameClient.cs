@@ -157,8 +157,8 @@ namespace PokemonGo_UWP.Utils
         /// <summary>
         ///     Stores Pokemons in the current inventory
         /// </summary>
-        public static ObservableCollection<PokemonData> PokemonsInventory { get; set; } =
-            new ObservableCollection<PokemonData>();
+        public static ObservableCollectionPlus<PokemonData> PokemonsInventory { get; set; } =
+            new ObservableCollectionPlus<PokemonData>();
 
         /// <summary>
         ///     Stores Eggs in the current inventory
