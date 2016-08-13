@@ -22,6 +22,8 @@ using Windows.UI.Notifications;
 using Windows.Data.Xml.Dom;
 using System.Collections.Generic;
 using POGOProtos.Enums;
+using NotificationsExtensions.Tiles;
+using NotificationsExtensions;
 
 namespace PokemonGo_UWP
 {
@@ -34,6 +36,8 @@ namespace PokemonGo_UWP
         ///     We use it to notify that we found at least one catchable Pokemon in our area
         /// </summary>
         private VibrationDevice _vibrationDevice;
+        private TileUpdater updater = TileUpdateManager.CreateTileUpdaterForApplication();
+       
 
         private readonly DisplayRequest _displayRequest = new DisplayRequest();
 
@@ -81,10 +85,13 @@ namespace PokemonGo_UWP
                 _vibrationDevice?.Vibrate(TimeSpan.FromMilliseconds(500));
             if (SettingsService.Instance.IsMusicEnabled)
                 await AudioUtils.PlaySound(@"pokemon_found_ding.wav");
-
-            UpdateLiveTile( (IList<MapPokemonWrapper>)e.NewItems);
+        }
+        private void PokemonsInventory_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            UpdateLiveTile((IList<PokemonDataWrapper>)e.NewItems);
         }
 
+       
         #endregion
 
         #region Overrides of BootStrapper
@@ -99,6 +106,7 @@ namespace PokemonGo_UWP
         public override Task OnSuspendingAsync(object s, SuspendingEventArgs e, bool prelaunchActivated)
         {
             GameClient.CatchablePokemons.CollectionChanged -= CatchablePokemons_CollectionChanged;
+            GameClient.PokemonsInventory.CollectionChanged -= PokemonsInventory_CollectionChanged;
             return base.OnSuspendingAsync(s, e, prelaunchActivated);
         }
 
@@ -115,6 +123,7 @@ namespace PokemonGo_UWP
             // Init logger
             Logger.SetLogger(new ConsoleLogger(LogLevel.Info));
 #endif
+            updater.EnableNotificationQueue(true);
 
             // If we have a phone contract, hide the status bar
             if (ApiInformation.IsApiContractPresent("Windows.Phone.PhoneContract", 1, 0))
@@ -137,9 +146,11 @@ namespace PokemonGo_UWP
 
             // Set to vibrate, based on user's preference, if a new Pokemon is found
             GameClient.CatchablePokemons.CollectionChanged += CatchablePokemons_CollectionChanged;
-
+            GameClient.PokemonsInventory.CollectionChanged += PokemonsInventory_CollectionChanged;
             await Task.CompletedTask;
         }
+
+        
 
         public override async Task OnStartAsync(StartKind startKind, IActivatedEventArgs args)
         {
@@ -195,36 +206,63 @@ namespace PokemonGo_UWP
 
 
 
-        private void UpdateLiveTile(IList<MapPokemonWrapper> PokemonInventory)
+        private void UpdateLiveTile(IList<PokemonDataWrapper> PokemonInventory)
         {
-            /* TileUpdater updater = TileUpdateManager.CreateTileUpdaterForApplication();
-             updater.EnableNotificationQueue(true);
-             var tilexml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare150x150PeekImageAndText01);
-             var tileattributes = tilexml.GetElementsByTagName("text");
-             tileattributes[0].AppendChild(tilexml.CreateTextNode(PokemonInventory[0].Nickname));
-             var tilenotification = new TileNotification(tilexml);
-             updater.Update(tilenotification);*/
 
-            foreach (MapPokemonWrapper poke in PokemonInventory)
+
+
+
+
+            int i = 0;
+            foreach (PokemonDataWrapper poke in PokemonInventory)
             {
-                  PokemonIdToPokemonSpriteConverter grabber = new PokemonIdToPokemonSpriteConverter();
-                    TileUpdater updater = TileUpdateManager.CreateTileUpdaterForApplication();
+                TileBindingContentAdaptive bindingContent = new TileBindingContentAdaptive()
+                {
+                    PeekImage = new TilePeekImage()
+                    {
+                        Source = "ms-appx:///Assets/Pokemons/" + (int)poke.PokemonId + ".png"
+                    },
+                    
+                    Children =
+                    {
+                        new AdaptiveText()
+                        {
+                            Text = poke.Nickname,
+                            HintWrap= true,
+                            HintStyle = AdaptiveTextStyle.Body
+                        }
+                    }
+                };
 
-                    XmlDocument tile = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare150x150PeekImageAndText01);
+                TileBinding binding = new TileBinding()
+                {
+                    Branding = TileBranding.NameAndLogo,
 
-                    var pokename = poke.PokemonId;
-                    XmlNodeList tilecontent = tile.GetElementsByTagName("text");
-                    tilecontent[0].InnerText = Enum.GetName(typeof(PokemonId), poke.PokemonId);
+                    DisplayName = "New Pokemon!",
 
-                    XmlNodeList TileImageAttrib = tile.GetElementsByTagName("image");
+                    Content = bindingContent
+                };
+                TileContent content = new TileContent()
+                {
+                    Visual = new TileVisual()
+                    {
+                        TileMedium = binding,
+                        TileWide = binding,
+                        TileLarge = binding
+                    }
+                };
 
-                    ((XmlElement)TileImageAttrib[0]).SetAttribute("src", "ms-appx:///Assets/Pokemons/" + (int)poke.PokemonId + ".png");
-                    ((XmlElement)TileImageAttrib[0]).SetAttribute("alt", "Image");
+                XmlDocument doc = content.GetXml();
 
+                // Generate WinRT notification
+                
+                var x = new ScheduledTileNotification(doc, DateTime.Now.AddSeconds(i));
 
-
-                    // Create a new tile notification. 
-                    updater.Update(new TileNotification(tile));
+                if (updater.GetScheduledTileNotifications().Count < 4095)
+                {
+                    updater.AddToSchedule(x);
+                }
+                i++;
             }
             
         }
