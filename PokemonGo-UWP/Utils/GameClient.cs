@@ -184,12 +184,17 @@ namespace PokemonGo_UWP.Utils
         /// <summary>
         ///     Stores extra useful data for the Pokedex, like Pokemon type and other stuff that is missing from PokemonData
         /// </summary>
-        public static IEnumerable<PokemonSettings> PokedexExtraData { get; private set; } = new List<PokemonSettings>();
+        public static IEnumerable<PokemonSettings> PokemonSettings { get; private set; } = new List<PokemonSettings>();
 
         /// <summary>
         ///     Stores upgrade costs (candy, stardust) per each level
         /// </summary>
         public static Dictionary<int, object[]> PokemonUpgradeCosts { get; private set; } = new Dictionary<int, object[]>();
+
+        /// <summary>
+        ///     Stores data about Pokemon moves
+        /// </summary>
+        public static IEnumerable<MoveSettings> MoveSettings { get; private set; } = new List<MoveSettings>();
 
         #endregion
 
@@ -535,7 +540,7 @@ namespace PokemonGo_UWP.Utils
             var itemTemplates = await DataCache.GetAsync("itemTemplates", async () => (await _client.Download.GetItemTemplates()).ItemTemplates, DateTime.Now.AddMonths(1));
 
             // Update Pokedex data
-            PokedexExtraData = await DataCache.GetAsync(nameof(PokedexExtraData), async () =>
+            PokemonSettings = await DataCache.GetAsync(nameof(PokemonSettings), async () =>
             {
                 await Task.CompletedTask;
                 return itemTemplates.Where(
@@ -556,7 +561,15 @@ namespace PokemonGo_UWP.Utils
                 }
                 return tmpResult;
             }, DateTime.Now.AddMonths(1));
-            
+
+
+            // Update Moves data
+            MoveSettings = await DataCache.GetAsync(nameof(MoveSettings), async () =>
+            {
+                await Task.CompletedTask;
+                return itemTemplates.Where(item => item.MoveSettings != null)
+                                    .Select(item => item.MoveSettings);
+            }, DateTime.Now.AddMonths(1));
         }
 
         /// <summary>
@@ -614,7 +627,7 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static PokemonSettings GetExtraDataForPokemon(PokemonId pokemonId)
         {
-            return PokedexExtraData.First(pokemon => pokemon.PokemonId == pokemonId);
+            return PokemonSettings.First(pokemon => pokemon.PokemonId == pokemonId);
         }
 
         #endregion
@@ -661,6 +674,40 @@ namespace PokemonGo_UWP.Utils
             ItemId captureItem)
         {
             return await _client.Encounter.UseCaptureItem(encounterId, captureItem, spawnpointId);
+        }
+
+        #endregion
+
+        #region Power Up & Evolving & Transfer
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pokemon"></param>
+        /// <returns></returns>
+        public static async Task<UpgradePokemonResponse> PowerUpPokemon(PokemonData pokemon)
+        {
+            return await _client.Inventory.UpgradePokemon(pokemon.Id);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pokemon"></param>
+        /// <returns></returns>
+        public static async Task<EvolvePokemonResponse> EvolvePokemon(PokemonData pokemon)
+        {
+            return await _client.Inventory.EvolvePokemon(pokemon.Id);
+        }
+
+        /// <summary>
+        /// Transfers the Pokemon
+        /// </summary>
+        /// <param name="pokemonId"></param>
+        /// <returns></returns>
+        public static async Task<ReleasePokemonResponse> TransferPokemon(ulong pokemonId)
+        {
+            return await _client.Inventory.TransferPokemon(pokemonId);
         }
 
         #endregion

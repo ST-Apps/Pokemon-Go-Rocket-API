@@ -114,6 +114,7 @@
     <Content Include="Assets\Backgrounds\details_type_bg_ghost.png" />
     <Content Include="Assets\Backgrounds\details_type_bg_ground.png" />
     <Content Include="Assets\Backgrounds\details_type_bg_ice.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_grass.png" />
     <Content Include="Assets\Backgrounds\details_type_bg_normal.png" />
     <Content Include="Assets\Backgrounds\details_type_bg_poison.png" />
     <Content Include="Assets\Backgrounds\details_type_bg_psychic.png" />
@@ -133,12 +134,16 @@
     <Content Include="Assets\Backgrounds\ui_settings_bg.png" />
     <Content Include="Assets\Buttons\btn_action_menu.png" />
     <Content Include="Assets\Buttons\btn_back_normal_dark.png" />
+    <Content Include="Assets\Buttons\btn_close.png" />
+    <Content Include="Assets\Buttons\btn_close_dark.png" />
     <Content Include="Assets\Buttons\btn_close_normal.png" />
     <Content Include="Assets\Buttons\btn_close_normal_dark.png" />
     <Content Include="Assets\Buttons\btn_empty.png" />
     <Content Include="Assets\Buttons\btn_incubator.png" />
     <Content Include="Assets\Buttons\btn_items.png" />
     <Content Include="Assets\Buttons\btn_master.png" />
+    <Content Include="Assets\Buttons\btn_ok.png" />
+    <Content Include="Assets\Buttons\btn_ok_dark.png" />
     <Content Include="Assets\Buttons\btn_ok_normal_dark.png" />
     <Content Include="Assets\Buttons\btn_pokedex.png" />
     <Content Include="Assets\Buttons\btn_pokemon.png" />
@@ -146,6 +151,25 @@
     <Content Include="Assets\Buttons\btn_settings.png" />
     <Content Include="Assets\Buttons\btn_swap.png" />
     <Content Include="Assets\Buttons\btn_train.png" />
+    <Content Include="Assets\Candy\Bug.png" />
+    <Content Include="Assets\Candy\Dark.png" />
+    <Content Include="Assets\Candy\Default.png" />
+    <Content Include="Assets\Candy\Dragon.png" />
+    <Content Include="Assets\Candy\Electric.png" />
+    <Content Include="Assets\Candy\Fairy.png" />
+    <Content Include="Assets\Candy\Fighting.png" />
+    <Content Include="Assets\Candy\Fire.png" />
+    <Content Include="Assets\Candy\Flying.png" />
+    <Content Include="Assets\Candy\Ghost.png" />
+    <Content Include="Assets\Candy\Grass.png" />
+    <Content Include="Assets\Candy\Ground.png" />
+    <Content Include="Assets\Candy\Ice.png" />
+    <Content Include="Assets\Candy\Normal.png" />
+    <Content Include="Assets\Candy\Poison.png" />
+    <Content Include="Assets\Candy\Psychic.png" />
+    <Content Include="Assets\Candy\Rock.png" />
+    <Content Include="Assets\Candy\Steel.png" />
+    <Content Include="Assets\Candy\Water.png" />
     <Content Include="Assets\Icons\circle_255_filled_01.png" />
     <Content Include="Assets\Icons\CompassIcon.png" />
     <Content Include="Assets\Icons\Footprint_Far.png" />
@@ -192,6 +216,7 @@
     <Content Include="Assets\Items\Item_COIN_HEAP_01.png" />
     <Content Include="Assets\Items\Item_COIN_POUCH_01.png" />
     <Content Include="Assets\Items\Item_COIN_STACK_01.png" />
+    <Content Include="Assets\UI\night_sky_texture_by_amdillon.jpg" />
     <Content Include="Assets\Pokemons\1.png" />
     <Content Include="Assets\Pokemons\10.png" />
     <Content Include="Assets\Pokemons\100.png" />
@@ -700,6 +725,7 @@
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.zh-HK.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.zh-TW.xlf" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

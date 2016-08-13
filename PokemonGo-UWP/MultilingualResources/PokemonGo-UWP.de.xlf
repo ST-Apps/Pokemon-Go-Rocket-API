@@ -402,6 +402,14 @@ Seite zu den Dateien für manuelle Installation öffnen?</target>
           <target state="new"> CANDY</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Watch out: space before the word!</note>
         </trans-unit>
+        <trans-unit id="EvolveButton.Content" translate="yes" xml:space="preserve">
+          <source>EVOLVE</source>
+          <target state="new">EVOLVE</target>
+        </trans-unit>
+        <trans-unit id="PowerUpButton.Content" translate="yes" xml:space="preserve">
+          <source>POWER UP</source>
+          <target state="new">POWER UP</target>
+        </trans-unit>
       </group>
     </body>
   </file>

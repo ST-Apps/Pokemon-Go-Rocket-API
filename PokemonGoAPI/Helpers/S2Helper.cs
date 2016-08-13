@@ -37,7 +37,7 @@ namespace PokemonGo.RocketAPI.Helpers
         }
 
         private static S2CellId GetNext(S2CellId cellId, int depth)
-        {
+        {            
             if (depth < 0)
                 return cellId;
 

@@ -236,4 +236,10 @@
   <data name="WeightTextBlock.Text" xml:space="preserve">
     <value>Weight</value>
   </data>
+  <data name="EvolveButton.Content" xml:space="preserve">
+    <value>EVOLVE</value>
+  </data>
+  <data name="PowerUpButton.Content" xml:space="preserve">
+    <value>POWER UP</value>
+  </data>
 </root>

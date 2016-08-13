@@ -4,6 +4,7 @@
                      xmlns:common="using:Template10.Common"
                      xmlns:utils="using:PokemonGo_UWP.Utils"
                      xmlns:converters="using:Template10.Converters"
+                     xmlns:enums="using:POGOProtos.Enums"
                      RequestedTheme="Light">
 
     <Application.Resources>
@@ -55,6 +56,12 @@
             <utils:PokemonDataToLevelBarConverter x:Key="PokemonDataToLevelBarConverter"/>
             <utils:PokemonFamilyToCandyImageConverter x:Key="PokemonFamilyToCandyImageConverter"/>
             <utils:PokemonFamilyNameToStringConverter x:Key="PokemonFamilyNameToStringConverter"/>
+            <utils:PokemonMoveToMoveTypeStringConverter x:Key="PokemonMoveToMoveTypeStringConverter"/>
+            <utils:PokemonMoveToMoveNameConverter x:Key="PokemonMoveToMoveNameConverter"/>
+            <utils:PokemonMoveToMovePowerConverter x:Key="PokemonMoveToMovePowerConverter"/>
+            <utils:VisibleWhenTypeIsNotNoneConverter x:Key="VisibleWhenTypeIsNotNoneConverter"/>
+            <utils:InverseVisibleWhenTypeIsNotNoneConverter x:Key="InverseVisibleWhenTypeIsNotNoneConverter"/>
+            <utils:PokemonDataToCapturedGepositionConverter x:Key="PokemonDataToCapturedGepositionConverter"/>
 
             <converters:ValueWhenConverter x:Key="EnabledWhenHasElementsConverter">
                 <converters:ValueWhenConverter.When>
@@ -65,6 +72,18 @@
                 </converters:ValueWhenConverter.Value>
                 <converters:ValueWhenConverter.Otherwise>
                     <x:Boolean>True</x:Boolean>
+                </converters:ValueWhenConverter.Otherwise>
+            </converters:ValueWhenConverter>
+
+            <converters:ValueWhenConverter x:Key="VisibleWhenCanEvolveConverter">
+                <converters:ValueWhenConverter.When>
+                    <x:Int32>0</x:Int32>
+                </converters:ValueWhenConverter.When>
+                <converters:ValueWhenConverter.Value>
+                    <Visibility>Collapsed</Visibility>
+                </converters:ValueWhenConverter.Value>
+                <converters:ValueWhenConverter.Otherwise>
+                    <Visibility>Visible</Visibility>
                 </converters:ValueWhenConverter.Otherwise>
             </converters:ValueWhenConverter>
 

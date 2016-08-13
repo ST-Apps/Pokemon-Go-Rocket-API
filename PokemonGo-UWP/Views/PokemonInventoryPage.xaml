@@ -133,7 +133,7 @@
                                        Text="{Binding}"
                                        Style="{StaticResource TextSortTitle}" />
                             <Button Grid.Column="1"
-                                    Command="{Binding CloseCommand}"
+                                    IsHitTestVisible="False"
                                     Style="{StaticResource ButtonCircleInverse}" Margin="10,0,0,0">
                                 <Image Source="{Binding Converter={StaticResource PokemonSortingModesToIconConverter}}" />
                             </Button>
@@ -142,7 +142,6 @@
                 </ListView.ItemTemplate>
             </ListView>
             <Button x:Name="CloseSortMenuButton"
-                    Command="{Binding CloseCommand}"
                     Style="{StaticResource ButtonCircleInverse}"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Bottom"
@@ -155,7 +154,7 @@
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
 
-                <Image Source="../Assets/Buttons/btn_close_dark.png" />
+                <Image Source="../Assets/Buttons/btn_close_normal_dark.png" />
             </Button>
         </Grid>
 
@@ -370,7 +369,7 @@
 
 
                             <Grid>
-                                <Image Source="../Assets/Buttons/btn_master.png"
+                                <Image Source="../Assets/Buttons/btn_empty.png"
                                        Stretch="Uniform"
                                        VerticalAlignment="Stretch"
                                        HorizontalAlignment="Stretch" />

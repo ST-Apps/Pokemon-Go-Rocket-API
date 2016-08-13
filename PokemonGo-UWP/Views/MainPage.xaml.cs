@@ -1,6 +1,7 @@
 using System;
 using Windows.System;
 using Windows.Foundation;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
@@ -16,10 +17,8 @@ namespace PokemonGo_UWP.Views
             NavigationCacheMode = NavigationCacheMode.Enabled;
 
             // Handlers for virtual keyboard on or off
-            InputPane.GetForCurrentView().Showing
-                += new TypedEventHandler<InputPane, InputPaneVisibilityEventArgs>(_virtualKeyboardOn);
-            InputPane.GetForCurrentView().Hiding
-                += new TypedEventHandler<InputPane, InputPaneVisibilityEventArgs>(_virtualKeyboardOff);
+            InputPane.GetForCurrentView().Showing += _virtualKeyboardOn;
+            InputPane.GetForCurrentView().Hiding += _virtualKeyboardOff;
         }
         private void _virtualKeyboardOn(object sender, object e)
         {
