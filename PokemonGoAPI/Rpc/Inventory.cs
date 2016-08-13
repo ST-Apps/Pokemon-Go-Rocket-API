@@ -148,7 +148,7 @@ namespace PokemonGo.RocketAPI.Rpc
             return await PostProtoPayload<Request, NicknamePokemonResponse>(RequestType.NicknamePokemon, message);
         }
 
-        public async Task<SetFavoritePokemonResponse> SetFavoritePokemon(ulong pokemonId, bool isFavorite)
+        public async Task<SetFavoritePokemonResponse> SetFavoritePokemon(long pokemonId, bool isFavorite)
         {
             var message = new SetFavoritePokemonMessage
             {

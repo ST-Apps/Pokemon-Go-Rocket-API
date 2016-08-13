@@ -52,8 +52,10 @@ namespace PokemonGo_UWP.ViewModels
 
                 RaisePropertyChanged(() => PokemonInventory);
 
-                var unincubatedEggs = GameClient.EggsInventory.Where(o => string.IsNullOrEmpty(o.EggIncubatorId));
-                var incubatedEggs = GameClient.EggsInventory.Where(o => !string.IsNullOrEmpty(o.EggIncubatorId));
+                var unincubatedEggs = GameClient.EggsInventory.Where(o => string.IsNullOrEmpty(o.EggIncubatorId))
+                                                              .OrderBy(c => c.EggKmWalkedTarget);
+                var incubatedEggs = GameClient.EggsInventory.Where(o => !string.IsNullOrEmpty(o.EggIncubatorId))
+                                                              .OrderBy(c => c.EggKmWalkedTarget);
 
                 foreach (var pokemonData in unincubatedEggs)
                 {
@@ -64,8 +66,6 @@ namespace PokemonGo_UWP.ViewModels
                     var pokemonData = incubatedEggs.FirstOrDefault(o => o.EggIncubatorId == incubatorData.Id);
                     EggsInventory.Add(new IncubatedEggDataWrapper(incubatorData,GameClient.PlayerStats.KmWalked, pokemonData));
                 }
-
-                EggsInventory.OrderBy(c => c.EggKmWalkedTarget);
             }
 
             await Task.CompletedTask;

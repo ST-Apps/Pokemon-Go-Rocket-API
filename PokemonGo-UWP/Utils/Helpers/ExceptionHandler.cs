@@ -2,6 +2,7 @@
 using Windows.UI.Popups;
 using PokemonGo_UWP.Views;
 using Template10.Common;
+using Universal_Authenticator_v2.Views;
 
 namespace PokemonGo_UWP.Utils
 {
@@ -19,6 +20,7 @@ namespace PokemonGo_UWP.Utils
             {
                 GameClient.DoLogout();
                 BootStrapper.Current.NavigationService.Navigate(typeof(MainPage));
+                Busy.SetBusy(false);
             }
         }
     }

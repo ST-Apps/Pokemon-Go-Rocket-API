@@ -34,7 +34,7 @@ namespace PokemonGo_UWP.ViewModels
                 CurrentEgg = (PokemonDataWrapper) suspensionState[nameof(CurrentEgg)];
                 SelectedEggIncubator = (EggIncubator) suspensionState[nameof(SelectedEggIncubator)];
             }
-            else if (parameter is bool)
+            else
             {
                 // Navigating from game page, so we need to actually load the encounter                
                 CurrentEgg = (PokemonDataWrapper) NavigationHelper.NavigationState[nameof(CurrentEgg)];

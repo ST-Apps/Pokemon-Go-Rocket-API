@@ -101,8 +101,8 @@
         <Grid x:Name="SortMenuPanel" Opacity="0" Canvas.ZIndex="0">
             <Grid.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#b3ee9a" Offset="0"/>
-                    <GradientStop Color="#43bab6" Offset="0.8"/>
+                    <GradientStop Color="#b3ee9a" Offset="0" />
+                    <GradientStop Color="#43bab6" Offset="0.8" />
                 </LinearGradientBrush>
             </Grid.Background>
             <ListView ItemsSource="{Binding Converter={StaticResource PokemonSortingModesToSortingModesListConverter}}"
@@ -130,11 +130,11 @@
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <TextBlock Grid.Column="0"
-                                        Text="{Binding}"
-                                        Style="{StaticResource TextSortTitle}" />
+                                       Text="{Binding}"
+                                       Style="{StaticResource TextSortTitle}" />
                             <Button Grid.Column="1"
-                                    Command="{Binding CloseCommand}"
-                                    Style="{StaticResource ButtonCircleInverse}"                                    Margin="10,0,0,0">
+                                    IsHitTestVisible="False"
+                                    Style="{StaticResource ButtonCircleInverse}" Margin="10,0,0,0">
                                 <Image Source="{Binding Converter={StaticResource PokemonSortingModesToIconConverter}}" />
                             </Button>
                         </Grid>
@@ -142,7 +142,6 @@
                 </ListView.ItemTemplate>
             </ListView>
             <Button x:Name="CloseSortMenuButton"
-                    Command="{Binding CloseCommand}"
                     Style="{StaticResource ButtonCircleInverse}"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Bottom"
@@ -155,7 +154,7 @@
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
 
-                <Image Source="../Assets/Buttons/btn_close_dark.png" />
+                <Image Source="../Assets/Buttons/btn_close_normal_dark.png" />
             </Button>
         </Grid>
 
@@ -315,6 +314,13 @@
                                 <DataTemplate>
                                     <StackPanel Margin="8,4,8,4"
                                                 Width="92">
+
+                                        <interactivity:Interaction.Behaviors>
+                                            <core:EventTriggerBehavior EventName="Tapped">
+                                                <core:InvokeCommandAction Command="{Binding GotoPokemonDetailsCommand}" />
+                                            </core:EventTriggerBehavior>
+                                        </interactivity:Interaction.Behaviors>
+
                                         <TextBlock TextAlignment="Center">
                                             <Run FontSize="12"
                                                  x:Uid="CpTextBlock"
@@ -363,7 +369,7 @@
 
 
                             <Grid>
-                                <Image Source="../Assets/Buttons/btn_master.png"
+                                <Image Source="../Assets/Buttons/btn_empty.png"
                                        Stretch="Uniform"
                                        VerticalAlignment="Stretch"
                                        HorizontalAlignment="Stretch" />
@@ -441,9 +447,11 @@
 
                                         <TextBlock
                                             TextAlignment="Center">
-                                            <Run FontWeight="Bold" Text="{Binding EggKmWalkedStart, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0.#\}}" />
+                                            <Run FontWeight="Bold"
+                                                 Text="{Binding EggKmWalkedStart, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0.#\}}" />
                                             <Run FontWeight="Bold" Text="/" />
-                                            <Run FontWeight="Bold" Text="{Binding EggKmWalkedTarget, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0\}}" />
+                                            <Run FontWeight="Bold"
+                                                 Text="{Binding EggKmWalkedTarget, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0\}}" />
                                             <Run FontWeight="Light" Text=" km" />
                                         </TextBlock>
                                     </StackPanel>

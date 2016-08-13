@@ -13,6 +13,7 @@ namespace PokemonGo_UWP.Entities
     public class PokemonDataWrapper
     {
         private DelegateCommand _gotoEggDetailsCommand;
+        private DelegateCommand _gotoPokemonDetailsCommand;
 
         public PokemonDataWrapper(PokemonData pokemonData)
         {
@@ -28,7 +29,17 @@ namespace PokemonGo_UWP.Entities
             _gotoEggDetailsCommand = new DelegateCommand(() =>
             {
                 NavigationHelper.NavigationState["CurrentEgg"] = this;
-                BootStrapper.Current.NavigationService.Navigate(typeof(EggDetailPage), true);
+                BootStrapper.Current.NavigationService.Navigate(typeof(EggDetailPage));
+            }, () => true));
+
+        /// <summary>
+        ///     Navigate to detail page for the selected Pokemon
+        /// </summary>
+        public DelegateCommand GotoPokemonDetailsCommand => _gotoPokemonDetailsCommand ?? (
+            _gotoPokemonDetailsCommand = new DelegateCommand(() =>
+            {
+                NavigationHelper.NavigationState["CurrentPokemon"] = this;
+                BootStrapper.Current.NavigationService.Navigate(typeof(PokemonDetailPage));
             }, () => true));
 
         #region Wrapped Properties

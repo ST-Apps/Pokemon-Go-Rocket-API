@@ -114,6 +114,7 @@
     <Content Include="Assets\Backgrounds\details_type_bg_ghost.png" />
     <Content Include="Assets\Backgrounds\details_type_bg_ground.png" />
     <Content Include="Assets\Backgrounds\details_type_bg_ice.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_grass.png" />
     <Content Include="Assets\Backgrounds\details_type_bg_normal.png" />
     <Content Include="Assets\Backgrounds\details_type_bg_poison.png" />
     <Content Include="Assets\Backgrounds\details_type_bg_psychic.png" />
@@ -133,12 +134,16 @@
     <Content Include="Assets\Backgrounds\ui_settings_bg.png" />
     <Content Include="Assets\Buttons\btn_action_menu.png" />
     <Content Include="Assets\Buttons\btn_back_normal_dark.png" />
+    <Content Include="Assets\Buttons\btn_close.png" />
+    <Content Include="Assets\Buttons\btn_close_dark.png" />
     <Content Include="Assets\Buttons\btn_close_normal.png" />
     <Content Include="Assets\Buttons\btn_close_normal_dark.png" />
     <Content Include="Assets\Buttons\btn_empty.png" />
     <Content Include="Assets\Buttons\btn_incubator.png" />
     <Content Include="Assets\Buttons\btn_items.png" />
     <Content Include="Assets\Buttons\btn_master.png" />
+    <Content Include="Assets\Buttons\btn_ok.png" />
+    <Content Include="Assets\Buttons\btn_ok_dark.png" />
     <Content Include="Assets\Buttons\btn_ok_normal_dark.png" />
     <Content Include="Assets\Buttons\btn_pokedex.png" />
     <Content Include="Assets\Buttons\btn_pokemon.png" />
@@ -146,6 +151,25 @@
     <Content Include="Assets\Buttons\btn_settings.png" />
     <Content Include="Assets\Buttons\btn_swap.png" />
     <Content Include="Assets\Buttons\btn_train.png" />
+    <Content Include="Assets\Candy\Bug.png" />
+    <Content Include="Assets\Candy\Dark.png" />
+    <Content Include="Assets\Candy\Default.png" />
+    <Content Include="Assets\Candy\Dragon.png" />
+    <Content Include="Assets\Candy\Electric.png" />
+    <Content Include="Assets\Candy\Fairy.png" />
+    <Content Include="Assets\Candy\Fighting.png" />
+    <Content Include="Assets\Candy\Fire.png" />
+    <Content Include="Assets\Candy\Flying.png" />
+    <Content Include="Assets\Candy\Ghost.png" />
+    <Content Include="Assets\Candy\Grass.png" />
+    <Content Include="Assets\Candy\Ground.png" />
+    <Content Include="Assets\Candy\Ice.png" />
+    <Content Include="Assets\Candy\Normal.png" />
+    <Content Include="Assets\Candy\Poison.png" />
+    <Content Include="Assets\Candy\Psychic.png" />
+    <Content Include="Assets\Candy\Rock.png" />
+    <Content Include="Assets\Candy\Steel.png" />
+    <Content Include="Assets\Candy\Water.png" />
     <Content Include="Assets\Icons\circle_255_filled_01.png" />
     <Content Include="Assets\Icons\CompassIcon.png" />
     <Content Include="Assets\Icons\Footprint_Far.png" />
@@ -192,8 +216,7 @@
     <Content Include="Assets\Items\Item_COIN_HEAP_01.png" />
     <Content Include="Assets\Items\Item_COIN_POUCH_01.png" />
     <Content Include="Assets\Items\Item_COIN_STACK_01.png" />
-    <Content Include="Assets\Logos\google.png" />
-    <Content Include="Assets\Logos\logo_transparent.png" />
+    <Content Include="Assets\UI\night_sky_texture_by_amdillon.jpg" />
     <Content Include="Assets\Pokemons\1.png" />
     <Content Include="Assets\Pokemons\10.png" />
     <Content Include="Assets\Pokemons\100.png" />
@@ -356,6 +379,8 @@
     <Content Include="Assets\UI\close.png" />
     <Content Include="Assets\UI\egg.png" />
     <Content Include="Assets\UI\escape.png" />
+    <Content Include="Assets\UI\logoDark.png" />
+    <Content Include="Assets\UI\logoLight.png" />
     <Content Include="Assets\Fonts\Generica Bold.otf" />
     <Content Include="Assets\Fonts\Generica.otf" />
     <Content Include="Assets\Fonts\Lato-Italic.ttf" />
@@ -502,6 +527,7 @@
     <Compile Include="Entities\IUpdatable.cs" />
     <Compile Include="Entities\MapPokemonWrapper.cs" />
     <Compile Include="Entities\NearbyPokemonWrapper.cs" />
+    <Compile Include="Entities\ObservableCollectionPlus.cs" />
     <Compile Include="Entities\PokemonDataWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Achievements\BronzeAttribute.cs" />
@@ -513,19 +539,20 @@
     <Compile Include="Utils\Game\FortDataStatus.cs" />
     <Compile Include="Utils\Helpers\AsyncSynchronisationContext.cs" />
     <Compile Include="Utils\Helpers\AudioUtils.cs" />
-    <Compile Include="Utils\Helpers\CollectionExtensions.cs" />
+    <Compile Include="Utils\Extensions\CollectionExtensions.cs" />
     <Compile Include="Utils\Game\Converters.cs" />
     <Compile Include="Utils\Helpers\IStorageHelper.cs" />
+    <Compile Include="Utils\Helpers\LiveTileHelper.cs" />
     <Compile Include="Utils\Helpers\LocalCacheHelper.cs" />
     <Compile Include="Utils\Helpers\StorageHelper.cs" />
     <Compile Include="Utils\Signature\DeviceInfos.cs" />
     <Compile Include="Utils\Helpers\ExceptionHandler.cs" />
     <Compile Include="Utils\GameClient.cs" />
     <Compile Include="Utils\Game\GameMapNavigationModes.cs" />
-    <Compile Include="Utils\Helpers\MessageDialogExtensions.cs" />
+    <Compile Include="Utils\Extensions\MessageDialogExtensions.cs" />
     <Compile Include="Utils\Helpers\NavigationHelper.cs" />
     <Compile Include="Utils\Game\PokemonInfo.cs" />
-    <Compile Include="Utils\Helpers\RandomExtensions.cs" />
+    <Compile Include="Utils\Extensions\RandomExtensions.cs" />
     <Compile Include="Utils\Game\Resources.cs" />
     <Compile Include="Utils\Settings\Settings.cs" />
     <Compile Include="Utils\Settings\SettingsService.cs" />
@@ -537,6 +564,7 @@
     <Compile Include="ViewModels\EggDetailPageViewModel.cs" />
     <Compile Include="ViewModels\GameMapPageViewModel.cs" />
     <Compile Include="ViewModels\PlayerProfileViewModel.cs" />
+    <Compile Include="ViewModels\PokemonDetailsPageViewModel.cs" />
     <Compile Include="ViewModels\PokemonInventoryPageViewModel.cs" />
     <Compile Include="ViewModels\SettingsPageViewModel.cs" />
     <Compile Include="ViewModels\LoginPageViewModel.cs" />
@@ -546,6 +574,9 @@
     </Compile>
     <Compile Include="Views\PlayerProfilePage.xaml.cs">
       <DependentUpon>PlayerProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PokemonDetailPage.xaml.cs">
+      <DependentUpon>PokemonDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PokemonInventoryPage.xaml.cs">
       <DependentUpon>PokemonInventoryPage.xaml</DependentUpon>
@@ -619,6 +650,10 @@
     <Page Include="Views\PlayerProfilePage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PokemonDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\PokemonInventoryPage.xaml">
       <SubType>Designer</SubType>

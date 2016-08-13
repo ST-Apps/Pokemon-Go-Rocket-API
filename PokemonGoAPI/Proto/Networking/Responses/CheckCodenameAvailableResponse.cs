@@ -42,9 +42,6 @@ namespace POGOProtos.Networking.Responses {
 
   }
   #region Messages
-  /// <summary>
-  ///  TODO: Might be incorrect, please test.
-  /// </summary>
   public sealed partial class CheckCodenameAvailableResponse : pb::IMessage<CheckCodenameAvailableResponse> {
     private static readonly pb::MessageParser<CheckCodenameAvailableResponse> _parser = new pb::MessageParser<CheckCodenameAvailableResponse>(() => new CheckCodenameAvailableResponse());
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

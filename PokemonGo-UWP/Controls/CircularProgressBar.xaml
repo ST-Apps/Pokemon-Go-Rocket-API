@@ -10,9 +10,24 @@
     d:DesignWidth="400">
 
     <Grid x:Name="rootGrid">
-        <Path x:Name="PathRoot" Stroke="{Binding SegmentColor, ElementName=CircularProgressBarControl}"
-              StrokeThickness="{Binding StrokeThickness, ElementName=CircularProgressBarControl}"
-              HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Path x:Name="InnerPathRoot" Stroke="{Binding InnerSegmentColor, ElementName=CircularProgressBarControl}" StrokeThickness="{Binding StrokeThickness, ElementName=CircularProgressBarControl}" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Path.Data>
+                <PathGeometry>
+                    <PathGeometry.Figures>
+                        <PathFigureCollection>
+                            <PathFigure x:Name="InnerPathFigure">
+                                <PathFigure.Segments>
+                                    <PathSegmentCollection>
+                                        <ArcSegment x:Name="InnerArcSegment" SweepDirection="Clockwise" />
+                                    </PathSegmentCollection>
+                                </PathFigure.Segments>
+                            </PathFigure>
+                        </PathFigureCollection>
+                    </PathGeometry.Figures>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+        <Path x:Name="PathRoot" Stroke="{Binding SegmentColor, ElementName=CircularProgressBarControl}" StrokeThickness="{Binding StrokeThickness, ElementName=CircularProgressBarControl}" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Path.Data>
                 <PathGeometry>
                     <PathGeometry.Figures>

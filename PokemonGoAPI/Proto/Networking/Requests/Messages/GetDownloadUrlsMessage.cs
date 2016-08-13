@@ -36,9 +36,6 @@ namespace POGOProtos.Networking.Requests.Messages {
 
   }
   #region Messages
-  /// <summary>
-  ///  UNTESTED
-  /// </summary>
   public sealed partial class GetDownloadUrlsMessage : pb::IMessage<GetDownloadUrlsMessage> {
     private static readonly pb::MessageParser<GetDownloadUrlsMessage> _parser = new pb::MessageParser<GetDownloadUrlsMessage>(() => new GetDownloadUrlsMessage());
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
