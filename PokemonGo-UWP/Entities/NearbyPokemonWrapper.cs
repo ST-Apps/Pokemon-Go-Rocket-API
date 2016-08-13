@@ -5,7 +5,7 @@ using POGOProtos.Map.Pokemon;
 namespace PokemonGo_UWP.Entities
 {
     /// <summary>
-    /// We need to wrap this so we can reduce the number of ui updates.
+    ///     We need to wrap this so we can reduce the number of ui updates.
     /// </summary>
     public class NearbyPokemonWrapper : IUpdatable<NearbyPokemon>, INotifyPropertyChanged
     {

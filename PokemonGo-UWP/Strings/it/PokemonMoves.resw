@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bite" xml:space="preserve">
+    <value>Morso</value>
+  </data>
+  <data name="Dig" xml:space="preserve">
+    <value>Fossa</value>
+  </data>
+  <data name="Ember" xml:space="preserve">
+    <value>Braciere</value>
+  </data>
+  <data name="Flamethrower" xml:space="preserve">
+    <value>Lanciafiamme</value>
+  </data>
+  <data name="Lick" xml:space="preserve">
+    <value>Leccata</value>
+  </data>
+  <data name="Megahorn" xml:space="preserve">
+    <value>Megacorno</value>
+  </data>
+  <data name="Pound" xml:space="preserve">
+    <value>Botta</value>
+  </data>
+  <data name="Scratch" xml:space="preserve">
+    <value>Graffio</value>
+  </data>
+  <data name="Sludge" xml:space="preserve">
+    <value>Fango</value>
+  </data>
+  <data name="Smog" xml:space="preserve">
+    <value>Smog</value>
+  </data>
+  <data name="Tackle" xml:space="preserve">
+    <value>Azione</value>
+  </data>
+  <data name="Wrap" xml:space="preserve">
+    <value>Avvolgibotta</value>
+  </data>
+  <data name="Absorb" xml:space="preserve">
+    <value>Assorbimento</value>
+  </data>
+  <data name="Acid" xml:space="preserve">
+    <value>Acido</value>
+  </data>
+  <data name="BiteFast" xml:space="preserve">
+    <value>Morso</value>
+  </data>
+  <data name="Blizzard" xml:space="preserve">
+    <value>Bora</value>
+  </data>
+  <data name="Brine" xml:space="preserve">
+    <value>Acquadisale</value>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>Taglio</value>
+  </data>
+  <data name="CutFast" xml:space="preserve">
+    <value>Taglio</value>
+  </data>
+  <data name="Discharge" xml:space="preserve">
+    <value>Scarica</value>
+  </data>
+  <data name="Earthquake" xml:space="preserve">
+    <value>Terremoto</value>
+  </data>
+  <data name="Headbutt" xml:space="preserve">
+    <value>Bottintesta</value>
+  </data>
+  <data name="Hurricane" xml:space="preserve">
+    <value>Tifone</value>
+  </data>
+  <data name="Moonblast" xml:space="preserve">
+    <value>Forza Lunare</value>
+  </data>
+  <data name="Peck" xml:space="preserve">
+    <value>Beccata</value>
+  </data>
+  <data name="PeckFast" xml:space="preserve">
+    <value>Beccata</value>
+  </data>
+  <data name="Psybeam" xml:space="preserve">
+    <value>Psicoraggio</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Psichico</value>
+  </data>
+  <data name="Psyshock" xml:space="preserve">
+    <value>Psicoshock</value>
+  </data>
+  <data name="Psystrike" xml:space="preserve">
+    <value>Psicobotta</value>
+  </data>
+  <data name="Rest" xml:space="preserve">
+    <value>Riposo</value>
+  </data>
+  <data name="Scald" xml:space="preserve">
+    <value>Idrovampata</value>
+  </data>
+  <data name="ScaldBlastoise" xml:space="preserve">
+    <value>Idrovampata</value>
+  </data>
+  <data name="ScratchFast" xml:space="preserve">
+    <value>Graffio</value>
+  </data>
+  <data name="Slam" xml:space="preserve">
+    <value>Schianto</value>
+  </data>
+  <data name="Slash" xml:space="preserve">
+    <value>Lacerazione</value>
+  </data>
+  <data name="Spark" xml:space="preserve">
+    <value>Scintilla</value>
+  </data>
+  <data name="Splash" xml:space="preserve">
+    <value>Splash</value>
+  </data>
+  <data name="SplashFast" xml:space="preserve">
+    <value>Splash</value>
+  </data>
+  <data name="Stomp" xml:space="preserve">
+    <value>Pestone</value>
+  </data>
+  <data name="Struggle" xml:space="preserve">
+    <value>Scontro</value>
+  </data>
+  <data name="Submission" xml:space="preserve">
+    <value>Sottomissione</value>
+  </data>
+  <data name="Swift" xml:space="preserve">
+    <value>Comete</value>
+  </data>
+  <data name="TackleFast" xml:space="preserve">
+    <value>Azione</value>
+  </data>
+  <data name="Thunder" xml:space="preserve">
+    <value>Tuono</value>
+  </data>
+  <data name="Thunderbolt" xml:space="preserve">
+    <value>Fulmine</value>
+  </data>
+  <data name="Twineedle" xml:space="preserve">
+    <value>Doppio ago</value>
+  </data>
+  <data name="Twister" xml:space="preserve">
+    <value>Tornado</value>
+  </data>
+  <data name="XScissor" xml:space="preserve">
+    <value>Forbice X</value>
+  </data>
+</root>

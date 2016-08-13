@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
 using Windows.UI.Xaml.Navigation;
@@ -11,7 +9,6 @@ using PokemonGo_UWP.Views;
 using Template10.Mvvm;
 using Template10.Services.NavigationService;
 using Universal_Authenticator_v2.Views;
-using System.Collections.ObjectModel;
 
 namespace PokemonGo_UWP.ViewModels
 {
@@ -20,13 +17,13 @@ namespace PokemonGo_UWP.ViewModels
         #region Lifecycle Handlers
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="parameter"></param>
         /// <param name="mode"></param>
         /// <param name="suspensionState"></param>
         /// <returns></returns>
-        public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
+        public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode,
+            IDictionary<string, object> suspensionState)
         {
             // Prevent from going back to other pages
             NavigationService.ClearHistory();
@@ -36,11 +33,20 @@ namespace PokemonGo_UWP.ViewModels
                 Username = (string) suspensionState[nameof(Username)];
                 Password = (string) suspensionState[nameof(Password)];
             }
+            else
+            {
+                // TODO: load only if user enabled this with the missing checkbox
+                var currentCredentials = SettingsService.Instance.UserCredentials;
+                if (currentCredentials == null) return;
+                currentCredentials.RetrievePassword();
+                Username = currentCredentials.UserName;
+                Password = currentCredentials.Password;
+            }
             await Task.CompletedTask;
         }
 
         /// <summary>
-        /// Save state before navigating
+        ///     Save state before navigating
         /// </summary>
         /// <param name="suspensionState"></param>
         /// <param name="suspending"></param>
@@ -106,7 +112,7 @@ namespace PokemonGo_UWP.ViewModels
         public DelegateCommand DoPtcLoginCommand => _doPtcLoginCommand ?? (
             _doPtcLoginCommand = new DelegateCommand(async () =>
             {
-                Busy.SetBusy(true, Resources.Translation.GetString("LoggingIn"));
+                Busy.SetBusy(true, Resources.CodeResources.GetString("LoggingInText"));
                 try
                 {
                     var loginSuccess = await GameClient.DoPtcLogin(Username, Password);
@@ -115,24 +121,24 @@ namespace PokemonGo_UWP.ViewModels
                     {
                         // Login failed, show a message
                         await
-                            new MessageDialog(Resources.Translation.GetString("WrongUsername"))
+                            new MessageDialog(Resources.CodeResources.GetString("WrongUsernameText"))
                                 .ShowAsyncQueue();
                     }
                     else
                     {
                         // Goto game page
-                        await NavigationService.NavigateAsync(typeof(GameMapPage), true);
+                        await NavigationService.NavigateAsync(typeof(GameMapPage), GameMapNavigationModes.AppStart);
                     }
                 }
                 catch (PtcOfflineException)
                 {
-                    await new MessageDialog(Resources.Translation.GetString("PTCDown")).ShowAsyncQueue();
+                    await new MessageDialog(Resources.CodeResources.GetString("PtcDownText")).ShowAsyncQueue();
                 }
                 catch (LoginFailedException)
                 {
                     await
-                            new MessageDialog(Resources.Translation.GetString("LoginFailed"))
-                                .ShowAsyncQueue();
+                        new MessageDialog(Resources.CodeResources.GetString("LoginFailedText"))
+                            .ShowAsyncQueue();
                 }
                 finally
                 {
@@ -146,29 +152,32 @@ namespace PokemonGo_UWP.ViewModels
         public DelegateCommand DoGoogleLoginCommand => _doGoogleLoginCommand ?? (
             _doGoogleLoginCommand = new DelegateCommand(async () =>
             {
-                Busy.SetBusy(true, Resources.Translation.GetString("LoggingIn"));
+                Busy.SetBusy(true, Resources.CodeResources.GetString("LoggingInText"));
                 try
                 {
                     if (!await GameClient.DoGoogleLogin(Username.Trim(), Password.Trim()))
                     {
                         // Login failed, show a message
                         await
-                            new MessageDialog(Resources.Translation.GetString("WrongUsername"))
+                            new MessageDialog(Resources.CodeResources.GetString("WrongUsernameText"))
                                 .ShowAsyncQueue();
                     }
                     else
                     {
                         // Goto game page
-                        await NavigationService.NavigateAsync(typeof(GameMapPage), true);
+                        await NavigationService.NavigateAsync(typeof(GameMapPage), GameMapNavigationModes.AppStart);
                     }
                 }
                 catch (GoogleOfflineException)
                 {
-                    await new MessageDialog(Resources.Translation.GetString("GoogleNotResponding")).ShowAsyncQueue();
+                    await
+                        new MessageDialog(Resources.CodeResources.GetString("GoogleNotRespondingText")).ShowAsyncQueue();
                 }
                 catch (GoogleException e)
                 {
-                    await new MessageDialog(Resources.Translation.GetString("GoogleError") + e.Message).ShowAsyncQueue();
+                    await
+                        new MessageDialog(Resources.CodeResources.GetString("GoogleErrorText") + e.Message)
+                            .ShowAsyncQueue();
                 }
                 finally
                 {
@@ -178,6 +187,5 @@ namespace PokemonGo_UWP.ViewModels
             );
 
         #endregion
-
     }
 }

@@ -1,7 +1,6 @@
 <Page x:Class="PokemonGo_UWP.Views.MainPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:controls="using:Template10.Controls"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
@@ -23,49 +22,54 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Image Grid.Row="0" Source="../Assets/Logos/logo_transparent.png" MaxWidth="300" />
-        <Grid Grid.Row="1" Style="{StaticResource GridContainer}">
-            
+        <Image Grid.Row="0"
+               Source="../Assets/Logos/logo_transparent.png"
+               MaxWidth="300" />
+        <Grid Grid.Row="1"
+              Style="{StaticResource GridContainer}">
+
             <StackPanel>
-                <TextBox x:Name="usernameTextBox"
-                         PlaceholderText="Username/email"
-                         x:Uid="usernameTextBox"
+                <TextBox x:Name="LoginUsernameTextBox"
+                         x:Uid="LoginUsernameTextBox"
                          Text="{Binding Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                          Margin="15,20,15,0"
                          InputScope="EmailSmtpAddress"
                          Style="{StaticResource TextBox}" />
 
-                <PasswordBox x:Name="passwordBox"
-                             PlaceholderText="Password"
-                             x:Uid="passwordBox"
+                <PasswordBox x:Name="LoginPasswordPasswordBox"
+                             x:Uid="LoginPasswordPasswordBox"
                              Password="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                              Margin="15,20,15,20"
-                             KeyDown="passwordBox_KeyDown" 
+                             KeyDown="passwordBox_KeyDown"
                              Style="{StaticResource PasswordBox}" />
-                <Button x:Name="loginButton"
+
+                <Button x:Name="PtcLoginButton"
                         Command="{Binding DoPtcLoginCommand}"
                         Style="{StaticResource ButtonSubmit}">
-                    <TextBlock x:Uid="loginButton" Text="LOGIN with PTC Account" />
+                    <TextBlock x:Uid="PtcLoginTextBlock"
+                               Text="LOGIN with PTC Account" />
                 </Button>
-                <Button x:Name="googleButton"
+                <Button x:Name="GoogleLoginButton"
                         Command="{Binding DoGoogleLoginCommand}"
                         Style="{StaticResource ButtonSubmitRed}"
                         Margin="12,0,15,15">
                     <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Center">
-                        <Image Grid.Row="0" Source="../Assets/Logos/google.png" MaxWidth="30" />
-                        <TextBlock x:Uid="googleButton" Text="GOOGLE" VerticalAlignment="Center" Margin="10,0,0,0" />
+                        <Image Source="../Assets/Logos/google.png"
+                               MaxWidth="30" />
+                        <TextBlock x:Uid="GoogleLoginTextBlock"
+                                   VerticalAlignment="Center"
+                                   Margin="10,0,0,0" />
                     </StackPanel>
                 </Button>
-                <TextBlock
-                    Text="To login you need to insert your Username/Email and Password in this app. If you don't trust it, please, close it before going on. We are not responsable for anything."
-                    x:Uid="loginInfoText"
-                    Style="{StaticResource TextNormal}"
-                    TextAlignment="Center"
-                    Margin="15,0,15,20" />
+                <TextBlock x:Uid="LoginDisclaimerTextBox"
+                           Style="{StaticResource TextNormal}"
+                           TextAlignment="Center"
+                           Margin="15,0,15,20" />
             </StackPanel>
         </Grid>
-        <TextBlock Grid.Row="2" Text="{Binding CurrentVersion}"
+        <TextBlock Grid.Row="2"
+                   Text="{Binding CurrentVersion}"
                    Style="{StaticResource TextNormal}"
                    Margin="20,15,20,15" />
     </Grid>

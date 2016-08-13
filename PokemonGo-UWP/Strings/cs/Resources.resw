@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CooldownTextBlock.Text" xml:space="preserve">
+    <value>MUsíte chvíli počkat</value>
+  </data>
+  <data name="InventoryFullTextBlock.Text" xml:space="preserve">
+    <value>Váš inventář je plný!</value>
+  </data>
+  <data name="PtcLoginTextBlock.Text" xml:space="preserve">
+    <value>PŘIHLÁSIT pomocí PTC</value>
+  </data>
+  <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
+    <value>Pro přihlášení do této aplikace potřebujete zadat Přihlašovací jméno/Email. Pokud aplikaci nevěříte, nepoužívejte ji. Neneseme za ně žádnou zodpovědnost.</value>
+  </data>
+  <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
+    <value>poblíž</value>
+  </data>
+  <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
+    <value>Jste mimo dosah</value>
+  </data>
+  <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
+    <value>Heslo</value>
+  </data>
+  <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
+    <value>Uživatelské jméno/Email</value>
+  </data>
+  <data name="EggsTextBlock.Text" xml:space="preserve">
+    <value>VEJCE</value>
+  </data>
+  <data name="MusicTextBlock.Text" xml:space="preserve">
+    <value>Hudba</value>
+  </data>
+  <data name="PokemonTextBlock.Text" xml:space="preserve">
+    <value>POKÉMONI</value>
+  </data>
+  <data name="SettingsHeaderTextBlock.Text" xml:space="preserve">
+    <value>NASTAVENÍ</value>
+  </data>
+  <data name="SignOutTextBlock.Text" xml:space="preserve">
+    <value>Odhlásit se</value>
+  </data>
+  <data name="VibrationTextBlock.Text" xml:space="preserve">
+    <value>Vibrace</value>
+  </data>
+  <data name="ItemsTextBlock.Text" xml:space="preserve">
+    <value>PŘEDMĚTY</value>
+  </data>
+  <data name="LowercaseItemsTextBlock.Text" xml:space="preserve">
+    <value>předměty</value>
+  </data>
+  <data name="TotalExperienceTextBlock.Text" xml:space="preserve">
+    <value>CELKEM</value>
+  </data>
+  <data name="LevelTextBlock.Text" xml:space="preserve">
+    <value>Úroveň</value>
+  </data>
+  <data name="MapAutoRotateTextBlock.Text" xml:space="preserve">
+    <value>Auto-rotovat Mapu</value>
+  </data>
+  <data name="StartDateTextBlock.Text" xml:space="preserve">
+    <value>DATUM STARTU</value>
+  </data>
+  <data name="IncubatorsTextBlock.Text" xml:space="preserve">
+    <value>INKUBÁTORY</value>
+  </data>
+</root>

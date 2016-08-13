@@ -169,6 +169,7 @@ namespace POGOProtos.Map.Fort {
     public const int OwnedByTeamFieldNumber = 5;
     private global::POGOProtos.Enums.TeamColor ownedByTeam_ = 0;
     /// <summary>
+    /// // Fields related to gyms only
     ///  Team that owns the gym
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -236,6 +237,7 @@ namespace POGOProtos.Map.Fort {
     public const int CooldownCompleteTimestampMsFieldNumber = 14;
     private long cooldownCompleteTimestampMs_;
     /// <summary>
+    /// // Fields related to pokestops only
     ///  Timestamp when the pokestop can be activated again to get items / xp
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

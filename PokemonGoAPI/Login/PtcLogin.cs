@@ -1,24 +1,24 @@
-﻿using Newtonsoft.Json;
-using PokemonGo.RocketAPI.Exceptions;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System.Web;
 using Windows.Foundation;
+using Newtonsoft.Json;
+using PokemonGo.RocketAPI.Exceptions;
 
 namespace PokemonGo.RocketAPI.Login
 {
-    class PtcLogin : ILoginType
+    internal class PtcLogin : ILoginType
     {
-        readonly string password;
-        readonly string username;
+        private readonly string _password;
+        private readonly string _username;
 
         public PtcLogin(string username, string password)
         {
-            this.username = username;
-            this.password = password;
+            _username = username;
+            _password = password;
         }
+
         public async Task<string> GetAccessToken()
         {
             var handler = new HttpClientHandler
@@ -33,7 +33,8 @@ namespace PokemonGo.RocketAPI.Login
                 var sessionData = await GetSessionCookie(tempHttpClient).ConfigureAwait(false);
 
                 //Login
-                var ticketId = await GetLoginTicket(username, password, tempHttpClient, sessionData).ConfigureAwait(false);
+                var ticketId =
+                    await GetLoginTicket(_username, _password, tempHttpClient, sessionData).ConfigureAwait(false);
 
                 //Get tokenvar
                 return await GetToken(tempHttpClient, ticketId).ConfigureAwait(false);
@@ -55,14 +56,15 @@ namespace PokemonGo.RocketAPI.Login
             return ticketId;
         }
 
-        private static IDictionary<string, string> GenerateLoginRequest(SessionData sessionData, string user, string pass)
+        private static IDictionary<string, string> GenerateLoginRequest(SessionData sessionData, string user,
+            string pass)
             => new Dictionary<string, string>
             {
-                { "lt", sessionData.Lt },
-                { "execution", sessionData.Execution },
-                { "_eventId", "submit" },
-                { "username", user },
-                { "password", pass }
+                {"lt", sessionData.Lt},
+                {"execution", sessionData.Execution},
+                {"_eventId", "submit"},
+                {"username", user},
+                {"password", pass}
             };
 
         private static IDictionary<string, string> GenerateTokenVarRequest(string ticketId)
@@ -75,13 +77,15 @@ namespace PokemonGo.RocketAPI.Login
                 {"code", ticketId}
             };
 
-        private static async Task<string> GetLoginTicket(string username, string password, System.Net.Http.HttpClient tempHttpClient, SessionData sessionData)
+        private static async Task<string> GetLoginTicket(string username, string password,
+            System.Net.Http.HttpClient tempHttpClient, SessionData sessionData)
         {
             HttpResponseMessage loginResp;
             var loginRequest = GenerateLoginRequest(sessionData, username, password);
             using (var formUrlEncodedContent = new FormUrlEncodedContent(loginRequest))
             {
-                loginResp = await tempHttpClient.PostAsync(Resources.PtcLoginUrl, formUrlEncodedContent).ConfigureAwait(false);
+                loginResp =
+                    await tempHttpClient.PostAsync(Resources.PtcLoginUrl, formUrlEncodedContent).ConfigureAwait(false);
             }
 
             var ticketId = ExtracktTicketFromResponse(loginResp);
@@ -102,7 +106,8 @@ namespace PokemonGo.RocketAPI.Login
             var tokenRequest = GenerateTokenVarRequest(ticketId);
             using (var formUrlEncodedContent = new FormUrlEncodedContent(tokenRequest))
             {
-                tokenResp = await tempHttpClient.PostAsync(Resources.PtcLoginOauth, formUrlEncodedContent).ConfigureAwait(false);
+                tokenResp =
+                    await tempHttpClient.PostAsync(Resources.PtcLoginOauth, formUrlEncodedContent).ConfigureAwait(false);
             }
 
             var tokenData = await tokenResp.Content.ReadAsStringAsync().ConfigureAwait(false);

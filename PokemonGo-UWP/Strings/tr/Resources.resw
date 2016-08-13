@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CooldownTextBlock.Text" xml:space="preserve">
+    <value>Biraz beklemeniz lazım</value>
+  </data>
+  <data name="InventoryFullTextBlock.Text" xml:space="preserve">
+    <value>Çantan dolu!</value>
+  </data>
+  <data name="PtcLoginTextBlock.Text" xml:space="preserve">
+    <value>PTC Hesabı ile GİRİŞ yap</value>
+  </data>
+  <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
+    <value>Giriş yapmak için Kullanıcı Adı/Email ve Şifrenizi uygulamaya girmeniz gerekir. Eğer uygulamaya güvenmiyorsanız, lütfen, devam etmeden kapatın. Hiçbir zarardan sorumlu değiliz.</value>
+  </data>
+  <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
+    <value>yakın</value>
+  </data>
+  <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
+    <value>Çok uzaktasınız</value>
+  </data>
+  <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
+    <value>Şifre</value>
+  </data>
+  <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
+    <value>Kullanıcı Adı/Email</value>
+  </data>
+  <data name="OkButton.Content" xml:space="preserve">
+    <value>Tamam</value>
+  </data>
+  <data name="EggsTextBlock.Text" xml:space="preserve">
+    <value>YUMURTALAR</value>
+  </data>
+  <data name="MusicTextBlock.Text" xml:space="preserve">
+    <value>Müzik</value>
+  </data>
+  <data name="SettingsHeaderTextBlock.Text" xml:space="preserve">
+    <value>AYARLAR</value>
+  </data>
+  <data name="SignOutTextBlock.Text" xml:space="preserve">
+    <value>Çıkış Yap</value>
+  </data>
+  <data name="VibrationTextBlock.Text" xml:space="preserve">
+    <value>Titreşim</value>
+  </data>
+  <data name="ItemsTextBlock.Text" xml:space="preserve">
+    <value>EŞYALAR</value>
+  </data>
+  <data name="LowercaseItemsTextBlock.Text" xml:space="preserve">
+    <value>eşyalar</value>
+  </data>
+  <data name="TotalExperienceTextBlock.Text" xml:space="preserve">
+    <value>TOPLAM</value>
+  </data>
+  <data name="LevelUpTextBlock.Text" xml:space="preserve">
+    <value>Seviye yükseldi!</value>
+  </data>
+  <data name="LevelTextBlock.Text" xml:space="preserve">
+    <value>Seviye</value>
+  </data>
+  <data name="MapAutoRotateTextBlock.Text" xml:space="preserve">
+    <value>Haritayı otomatik döndür</value>
+  </data>
+  <data name="StartDateTextBlock.Text" xml:space="preserve">
+    <value>BAŞLANGIÇ TARİHİ</value>
+  </data>
+  <data name="IncubatorsTextBlock.Text" xml:space="preserve">
+    <value>KULUÇKALAR</value>
+  </data>
+</root>

@@ -1,33 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Windows.Devices.Geolocation;
-using PokemonGo_UWP.Utils;
+﻿using PokemonGo_UWP.Utils;
 using PokemonGo_UWP.Views;
 using POGOProtos.Data;
+using POGOProtos.Data.Player;
 using POGOProtos.Enums;
+using POGOProtos.Inventory;
 using POGOProtos.Inventory.Item;
 using Template10.Common;
 using Template10.Mvvm;
-using Template10.Services.NavigationService;
 
 namespace PokemonGo_UWP.Entities
 {
     public class PokemonDataWrapper
     {
-
-        private readonly PokemonData _pokemonData;
+        private DelegateCommand _gotoEggDetailsCommand;
+        private DelegateCommand _gotoPokemonDetailsCommand;
 
         public PokemonDataWrapper(PokemonData pokemonData)
         {
-            _pokemonData = pokemonData;            
+            WrappedData = pokemonData;
         }
 
-        private DelegateCommand _gotoEggDetailsCommand;
-
-        public PokemonData WrappedData => _pokemonData;
+        public PokemonData WrappedData { get; }
 
         /// <summary>
         ///     Navigate to detail page for the selected egg
@@ -36,73 +29,96 @@ namespace PokemonGo_UWP.Entities
             _gotoEggDetailsCommand = new DelegateCommand(() =>
             {
                 NavigationHelper.NavigationState["CurrentEgg"] = this;
-                BootStrapper.Current.NavigationService.Navigate(typeof(EggDetailPage), true);
+                BootStrapper.Current.NavigationService.Navigate(typeof(EggDetailPage));
+            }, () => true));
+
+        /// <summary>
+        ///     Navigate to detail page for the selected Pokemon
+        /// </summary>
+        public DelegateCommand GotoPokemonDetailsCommand => _gotoPokemonDetailsCommand ?? (
+            _gotoPokemonDetailsCommand = new DelegateCommand(() =>
+            {
+                NavigationHelper.NavigationState["CurrentPokemon"] = this;
+                BootStrapper.Current.NavigationService.Navigate(typeof(PokemonDetailPage));
             }, () => true));
 
         #region Wrapped Properties
 
-        public ulong Id => _pokemonData.Id;
+        public ulong Id => WrappedData.Id;
 
-        public PokemonId PokemonId => _pokemonData.PokemonId;
+        public PokemonId PokemonId => WrappedData.PokemonId;
 
-        public int Cp => _pokemonData.Cp;
+        public int Cp => WrappedData.Cp;
 
-        public int Stamina => _pokemonData.Stamina;
+        public int Stamina => WrappedData.Stamina;
 
-        public int StaminaMax => _pokemonData.StaminaMax;        
+        public int StaminaMax => WrappedData.StaminaMax;
 
-        public PokemonMove Move1 => _pokemonData.Move1;
+        public PokemonMove Move1 => WrappedData.Move1;
 
-        public PokemonMove Move2 => _pokemonData.Move2;
+        public PokemonMove Move2 => WrappedData.Move2;
 
-        public string DeployedFortId => _pokemonData.DeployedFortId;
+        public string DeployedFortId => WrappedData.DeployedFortId;
 
-        public string OwnerName => _pokemonData.OwnerName;
+        public string OwnerName => WrappedData.OwnerName;
 
-        public bool IsEgg => _pokemonData.IsEgg;
+        public bool IsEgg => WrappedData.IsEgg;
 
-        public double EggKmWalkedTarget => _pokemonData.EggKmWalkedTarget;
+        public double EggKmWalkedTarget => WrappedData.EggKmWalkedTarget;
 
-        public double EggKmWalkedStart => _pokemonData.EggKmWalkedStart;
+        public double EggKmWalkedStart => WrappedData.EggKmWalkedStart;
 
-        public int Origin => _pokemonData.Origin;
+        public int Origin => WrappedData.Origin;
 
-        public float HeightM => _pokemonData.HeightM;
+        public float HeightM => WrappedData.HeightM;
 
-        public float WeightKg => _pokemonData.WeightKg;
+        public float WeightKg => WrappedData.WeightKg;
 
-        public int IndividualAttack => _pokemonData.IndividualAttack;
+        public int IndividualAttack => WrappedData.IndividualAttack;
 
-        public int IndividualDefense => _pokemonData.IndividualDefense;
+        public int IndividualDefense => WrappedData.IndividualDefense;
 
-        public int IndividualStamina => _pokemonData.IndividualStamina;
+        public int IndividualStamina => WrappedData.IndividualStamina;
 
-        public float CpMultiplier => _pokemonData.CpMultiplier;
+        public float CpMultiplier => WrappedData.CpMultiplier;
 
-        public ItemId Pokeball => _pokemonData.Pokeball;
+        public ItemId Pokeball => WrappedData.Pokeball;
 
-        public ulong CapturedCellId => _pokemonData.CapturedCellId;
+        public ulong CapturedCellId => WrappedData.CapturedCellId;
 
-        public int BattlesAttacked => _pokemonData.BattlesAttacked;
+        public int BattlesAttacked => WrappedData.BattlesAttacked;
 
-        public int BattlesDefended => _pokemonData.BattlesDefended;
+        public int BattlesDefended => WrappedData.BattlesDefended;
 
-        public string EggIncubatorId => _pokemonData.EggIncubatorId;
+        public string EggIncubatorId => WrappedData.EggIncubatorId;
 
-        public ulong CreationTimeMs => _pokemonData.CreationTimeMs;
+        public ulong CreationTimeMs => WrappedData.CreationTimeMs;
 
-        public int NumUpgrades => _pokemonData.NumUpgrades;
+        public int NumUpgrades => WrappedData.NumUpgrades;
 
-        public float AdditionalCpMultiplier => _pokemonData.AdditionalCpMultiplier;
+        public float AdditionalCpMultiplier => WrappedData.AdditionalCpMultiplier;
 
-        public int Favorite => _pokemonData.Favorite;
+        public int Favorite => WrappedData.Favorite;
 
-        public string Nickname => _pokemonData.Nickname;
+        public string Nickname => WrappedData.Nickname;
 
-        public int FromFort => _pokemonData.FromFort;
-
+        public int FromFort => WrappedData.FromFort;
 
         #endregion
+    }
 
+    public class IncubatedEggDataWrapper : PokemonDataWrapper
+    {
+        private readonly EggIncubator _incubatorData;
+        private readonly double playerWalkedKm;
+        public IncubatedEggDataWrapper(EggIncubator incubatorData, double playerWalkedKm, PokemonData pokemonData) : base(pokemonData)
+        {
+            _incubatorData = incubatorData;
+            this.playerWalkedKm = playerWalkedKm;
+        }
+
+        public new double EggKmWalkedStart => playerWalkedKm - _incubatorData.StartKmWalked;
+
+        //public new double EggKmWalkedTarget => _incubatorData.TargetKmWalked;
     }
 }

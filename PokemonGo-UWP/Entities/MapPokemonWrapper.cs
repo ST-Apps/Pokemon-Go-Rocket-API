@@ -14,12 +14,32 @@ namespace PokemonGo_UWP.Entities
     {
         private MapPokemon _mapPokemon;
 
+        private DelegateCommand _tryCatchPokemon;
+
         public MapPokemonWrapper(MapPokemon mapPokemon)
         {
             _mapPokemon = mapPokemon;
             Geoposition =
-                new Geopoint(new BasicGeoposition { Latitude = _mapPokemon.Latitude, Longitude = _mapPokemon.Longitude });
+                new Geopoint(new BasicGeoposition {Latitude = _mapPokemon.Latitude, Longitude = _mapPokemon.Longitude});
         }
+
+        /// <summary>
+        ///     HACK - this should fix Pokestop floating on map
+        /// </summary>
+        public Point Anchor => new Point(0.5, 1);
+
+        /// <summary>
+        ///     We're just navigating to the capture page, reporting that the player wants to capture the selected Pokemon.
+        /// </summary>
+        public DelegateCommand TryCatchPokemon => _tryCatchPokemon ?? (
+            _tryCatchPokemon = new DelegateCommand(() =>
+            {
+                NavigationHelper.NavigationState["CurrentPokemon"] = this;
+                // Disable map update
+                GameClient.ToggleUpdateTimer(false);
+                BootStrapper.Current.NavigationService.Navigate(typeof(CapturePokemonPage));
+            }, () => true)
+            );
 
         public void Update(MapPokemon update)
         {
@@ -33,25 +53,6 @@ namespace PokemonGo_UWP.Entities
             OnPropertyChanged(nameof(Latitude));
             OnPropertyChanged(nameof(Longitude));
         }
-
-        /// <summary>
-        /// HACK - this should fix Pokestop floating on map
-        /// </summary>
-        public Point Anchor => new Point(0.5, 1);
-
-        private DelegateCommand _tryCatchPokemon;
-
-        /// <summary>
-        ///     We're just navigating to the capture page, reporting that the player wants to capture the selected Pokemon.
-        /// </summary>
-        public DelegateCommand TryCatchPokemon => _tryCatchPokemon ?? (
-            _tryCatchPokemon = new DelegateCommand(() =>
-            {
-                NavigationHelper.NavigationState["CurrentPokemon"] = this;
-                BootStrapper.Current.NavigationService.Navigate(typeof(CapturePokemonPage), true);
-            }, () => true)
-            );
-
 
         #region Wrapped Properties
 
@@ -71,7 +72,7 @@ namespace PokemonGo_UWP.Entities
 
         #endregion
 
-		#region INotifyPropertyChanged
+        #region INotifyPropertyChanged
 
         public event PropertyChangedEventHandler PropertyChanged;
 

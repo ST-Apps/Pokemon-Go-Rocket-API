@@ -1,33 +1,43 @@
-﻿using System;
-using System.Net;
-using System.Net.Http;
-using System.Threading.Tasks;
-using Google.Protobuf;
-using PokemonGo.RocketAPI.Enums;
-using PokemonGo.RocketAPI.Exceptions;
+﻿using PokemonGo.RocketAPI.Enums;
 using PokemonGo.RocketAPI.Extensions;
 using PokemonGo.RocketAPI.Helpers;
 using PokemonGo.RocketAPI.HttpClient;
-using PokemonGo.RocketAPI.Login;
-using POGOProtos.Inventory;
-using POGOProtos.Inventory.Item;
+using PokemonGo.RocketAPI.Rpc;
 using POGOProtos.Networking.Envelopes;
-using POGOProtos.Networking.Requests;
-using POGOProtos.Networking.Requests.Messages;
-using POGOProtos.Networking.Responses;
 
 namespace PokemonGo.RocketAPI
 {
     public class Client
     {
+        internal readonly PokemonHttpClient PokemonHttpClient = new PokemonHttpClient();
+
+        public IDeviceInfo DeviceInfo;
+        public Download Download;
+        public Encounter Encounter;
+        public Fort Fort;
+        public Inventory Inventory;
         public Rpc.Login Login;
-        public Rpc.Player Player;
-        public Rpc.Download Download;
-        public Rpc.Inventory Inventory;
-        public Rpc.Map Map;
-        public Rpc.Fort Fort;
-        public Rpc.Encounter Encounter;
-        public Rpc.Misc Misc;
+        public Map Map;
+        public Misc Misc;
+        public Player Player;
+
+        public Client(ISettings settings, IApiFailureStrategy apiFailureStrategy, IDeviceInfo deviceInfo)
+        {
+            Settings = settings;
+            ApiFailure = apiFailureStrategy;
+
+            Login = new Rpc.Login(this);
+            Player = new Player(this);
+            Download = new Download(this);
+            Inventory = new Inventory(this);
+            Map = new Map(this);
+            Fort = new Fort(this);
+            Encounter = new Encounter(this);
+            Misc = new Misc(this);
+            DeviceInfo = deviceInfo;
+
+            Player.SetCoordinates(Settings.DefaultLatitude, Settings.DefaultLongitude, Settings.DefaultAltitude);
+        }
 
         public IApiFailureStrategy ApiFailure { get; set; }
         public ISettings Settings { get; }
@@ -38,26 +48,7 @@ namespace PokemonGo.RocketAPI
         public double CurrentAltitude { get; internal set; }
 
         public AuthType AuthType => Settings.AuthType;
-
-        internal readonly PokemonHttpClient PokemonHttpClient = new PokemonHttpClient();
         internal string ApiUrl { get; set; }
         internal AuthTicket AuthTicket { get; set; }
-
-        public Client(ISettings settings, IApiFailureStrategy apiFailureStrategy)
-        {
-            Settings = settings;
-            ApiFailure = apiFailureStrategy;                                               
-
-            Login = new Rpc.Login(this);            
-            Player = new Rpc.Player(this);
-            Download = new Rpc.Download(this);
-            Inventory = new Rpc.Inventory(this);
-            Map = new Rpc.Map(this);
-            Fort = new Rpc.Fort(this);
-            Encounter = new Rpc.Encounter(this);
-            Misc = new Rpc.Misc(this);                        
-
-            Player.SetCoordinates(Settings.DefaultLatitude, Settings.DefaultLongitude, Settings.DefaultAltitude);
-        }
     }
 }

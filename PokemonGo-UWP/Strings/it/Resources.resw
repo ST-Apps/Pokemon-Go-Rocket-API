@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CooldownTextBlock.Text" xml:space="preserve">
+    <value>È necessario attendere</value>
+  </data>
+  <data name="GoogleLoginTextBlock.Text" xml:space="preserve">
+    <value>GOOGLE</value>
+  </data>
+  <data name="InventoryFullTextBlock.Text" xml:space="preserve">
+    <value>Il tuo inventario è pieno!</value>
+  </data>
+  <data name="PtcLoginTextBlock.Text" xml:space="preserve">
+    <value>LOGIN con Account PTC</value>
+  </data>
+  <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
+    <value>Per effettuare il login è necessario inserire il tuo Username/Email e Password. Se non ti fidi, per favore, chiudi prima di procedere. Non siamo responsabili di nulla.</value>
+  </data>
+  <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
+    <value>nelle vicinanze</value>
+  </data>
+  <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
+    <value>Sei troppo lontano</value>
+  </data>
+  <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
+    <value>Nome utente/e-mail</value>
+  </data>
+  <data name="ExperienceTextBlock.Text" xml:space="preserve">
+    <value>EXP</value>
+  </data>
+  <data name="OkButton.Content" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="CpTextBlock.Text" xml:space="preserve">
+    <value>CP</value>
+  </data>
+  <data name="EggsTextBlock.Text" xml:space="preserve">
+    <value>UOVA</value>
+  </data>
+  <data name="MusicTextBlock.Text" xml:space="preserve">
+    <value>Musica</value>
+  </data>
+  <data name="SettingsHeaderTextBlock.Text" xml:space="preserve">
+    <value>IMPOSTAZIONI</value>
+  </data>
+  <data name="SignOutTextBlock.Text" xml:space="preserve">
+    <value>Disconnetti</value>
+  </data>
+  <data name="VibrationTextBlock.Text" xml:space="preserve">
+    <value>Vibrazione</value>
+  </data>
+  <data name="ItemsTextBlock.Text" xml:space="preserve">
+    <value>STRUMENTI</value>
+  </data>
+  <data name="LowercaseItemsTextBlock.Text" xml:space="preserve">
+    <value>Strumenti</value>
+  </data>
+  <data name="NumberTextBlock.Text" xml:space="preserve">
+    <value># </value>
+    <comment>Watch out: there is a space after the #</comment>
+  </data>
+  <data name="SlashSpaceCpTextBlock.Text" xml:space="preserve">
+    <value>/ CP</value>
+  </data>
+  <data name="SpaceXpTextBlock.Text" xml:space="preserve">
+    <value> EXP</value>
+  </data>
+  <data name="TotalExperienceTextBlock.Text" xml:space="preserve">
+    <value>TOTALE</value>
+  </data>
+  <data name="LevelUpTextBlock.Text" xml:space="preserve">
+    <value>Aumento di livello</value>
+  </data>
+  <data name="LevelTextBlock.Text" xml:space="preserve">
+    <value>Livello</value>
+  </data>
+  <data name="MapAutoRotateTextBlock.Text" xml:space="preserve">
+    <value>Autorotazione mappa</value>
+  </data>
+  <data name="StartDateTextBlock.Text" xml:space="preserve">
+    <value>DATA DI INIZIO</value>
+  </data>
+  <data name="IncubatorsTextBlock.Text" xml:space="preserve">
+    <value>INCUBATRICI</value>
+  </data>
+</root>

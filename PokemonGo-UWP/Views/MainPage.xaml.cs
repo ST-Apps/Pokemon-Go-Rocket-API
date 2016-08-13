@@ -1,5 +1,7 @@
-using Windows.UI.ViewManagement;
+using Windows.System;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Navigation;
 
 namespace PokemonGo_UWP.Views
@@ -12,17 +14,14 @@ namespace PokemonGo_UWP.Views
             NavigationCacheMode = NavigationCacheMode.Enabled;
         }
 
-        private void passwordBox_KeyDown(object sender, Windows.UI.Xaml.Input.KeyRoutedEventArgs e)
+        private void passwordBox_KeyDown(object sender, KeyRoutedEventArgs e)
         {
-            if (e.Key == Windows.System.VirtualKey.Enter)
-            {
-                // TODO: find a better way to do this
-                // If username contains @ we login with google
-                if (usernameTextBox.Text.Contains("@"))
-				    googleButton.Focus(Windows.UI.Xaml.FocusState.Programmatic);
-                else
-                    loginButton.Focus(Windows.UI.Xaml.FocusState.Programmatic);
-            }
+            if (e.Key != VirtualKey.Enter) return;
+            // If username contains @ we login with google
+            if (LoginUsernameTextBox.Text.Contains("@"))
+                GoogleLoginButton.Focus(FocusState.Programmatic);
+            else
+                PtcLoginButton.Focus(FocusState.Programmatic);
         }
     }
 }

@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="D_ItemGreatBall" xml:space="preserve">
+    <value>Urządzenie do łapania dzikich Pokémonów. Rzuca się jak piłką w dzikie Pokémony, ujmójąc cel.</value>
+  </data>
+  <data name="D_ItemIncenseCool" xml:space="preserve">
+    <value>Kadzidło z tajemniczym zapachem, który wabi dzikie Pokémony do twojego położenia na 30 minut.</value>
+  </data>
+  <data name="D_ItemIncenseFloral" xml:space="preserve">
+    <value>Kadzidło z tajemniczym zapachem, który wabi dzikie Pokémony do twojego położenia na 30 minut.</value>
+  </data>
+  <data name="D_ItemIncenseOrdinary" xml:space="preserve">
+    <value>Kadzidło z tajemniczym zapachem, który wabi dzikie Pokémony do twojego położenia na 30 minut.</value>
+  </data>
+  <data name="D_ItemIncenseSpicy" xml:space="preserve">
+    <value>Kadzidło z tajemniczym zapachem, który wabi dzikie Pokémony do twojego położenia na 30 minut.</value>
+  </data>
+  <data name="D_ItemIncubatorBasic" xml:space="preserve">
+    <value>Urządzenie, które wysiaduje Jajko podczas chodzenia, aż jest gotowe do wyklucia.</value>
+  </data>
+  <data name="D_ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>Urządzenie, które wysiaduje Jajko podczas chodzenia, aż jest gotowe do wyklucia.</value>
+  </data>
+  <data name="D_ItemMasterBall" xml:space="preserve">
+    <value>Urządzenie do łapania dzikich Pokémonów. Rzuca się jak piłką w dzikie Pokémony, ujmójąc cel.</value>
+  </data>
+  <data name="D_ItemPokeBall" xml:space="preserve">
+    <value>Urządzenie do łapania dzikich Pokémonów. Rzuca się jak piłką w dzikie Pokémony, ujmójąc cel.</value>
+  </data>
+  <data name="D_ItemPotion" xml:space="preserve">
+    <value>Lek w sprayu do leczenia ran. Zwraca Pokémonowi 20 HP.</value>
+  </data>
+  <data name="D_ItemRevive" xml:space="preserve">
+    <value>Lek, który może ożywić nieprzytomnego Pokémona. Zwraca również połowę maksymalnego HP nieprzytomnego Pokémona.</value>
+  </data>
+  <data name="D_ItemUltraBall" xml:space="preserve">
+    <value>Urządzenie do łapania dzikich Pokémonów. Rzuca się jak piłką w dzikie Pokémony, ujmójąc cel.</value>
+  </data>
+  <data name="ItemBlukBerry" xml:space="preserve">
+    <value>Jagoda Bluk</value>
+  </data>
+  <data name="ItemGreatBall" xml:space="preserve">
+    <value>Greatball</value>
+  </data>
+  <data name="ItemHyperPotion" xml:space="preserve">
+    <value>Hiper Mikstura</value>
+  </data>
+  <data name="ItemIncenseCool" xml:space="preserve">
+    <value>Chłodne Kadzidło</value>
+  </data>
+  <data name="ItemIncenseFloral" xml:space="preserve">
+    <value>Kwieciste Kadzidło</value>
+  </data>
+  <data name="ItemIncenseOrdinary" xml:space="preserve">
+    <value>Zwykłe Kadzidło</value>
+  </data>
+  <data name="ItemIncenseSpicy" xml:space="preserve">
+    <value>Pikantne Kadzidło</value>
+  </data>
+  <data name="ItemIncubatorBasic" xml:space="preserve">
+    <value>Podstawowy Inkubator</value>
+  </data>
+  <data name="ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>Podstawowy Nieograniczony Inkubator</value>
+  </data>
+  <data name="ItemItemStorageUpgrade" xml:space="preserve">
+    <value>Ulepszenie Magazynowania Przedmiotów</value>
+  </data>
+  <data name="ItemLuckyEgg" xml:space="preserve">
+    <value>Szczęśliwe Jajko</value>
+  </data>
+  <data name="ItemMasterBall" xml:space="preserve">
+    <value>Masterball</value>
+  </data>
+  <data name="ItemMaxPotion" xml:space="preserve">
+    <value>Maksymalna Mikstura</value>
+  </data>
+  <data name="ItemMaxRevive" xml:space="preserve">
+    <value>Maksymalne Ożywienie</value>
+  </data>
+  <data name="ItemNanabBerry" xml:space="preserve">
+    <value>Jagoda Nanab</value>
+  </data>
+  <data name="ItemPinapBerry" xml:space="preserve">
+    <value>Jagoda Pinap</value>
+  </data>
+  <data name="ItemPokeBall" xml:space="preserve">
+    <value>Pokeball</value>
+  </data>
+  <data name="ItemPokemonStorageUpgrade" xml:space="preserve">
+    <value>Ulepszenie Przechowywania Pokémonów</value>
+  </data>
+  <data name="ItemPotion" xml:space="preserve">
+    <value>Mikstura</value>
+  </data>
+  <data name="ItemRazzBerry" xml:space="preserve">
+    <value>Jagoda Razz</value>
+  </data>
+  <data name="ItemRevive" xml:space="preserve">
+    <value>Ożywienie</value>
+  </data>
+  <data name="ItemSpecialCamera" xml:space="preserve">
+    <value>Specjalny Aparat</value>
+  </data>
+  <data name="ItemSuperPotion" xml:space="preserve">
+    <value>Super Mikstura</value>
+  </data>
+  <data name="ItemTroyDisk" xml:space="preserve">
+    <value>Dysk Troy</value>
+  </data>
+  <data name="ItemUltraBall" xml:space="preserve">
+    <value>Ultraball</value>
+  </data>
+  <data name="ItemUnknown" xml:space="preserve">
+    <value>Nieznany</value>
+  </data>
+  <data name="ItemWeparBerry" xml:space="preserve">
+    <value>Jagoda Wepar</value>
+  </data>
+  <data name="ItemXAttack" xml:space="preserve">
+    <value>Atak X</value>
+  </data>
+  <data name="ItemXDefense" xml:space="preserve">
+    <value>Obrona X</value>
+  </data>
+  <data name="ItemXMiracle" xml:space="preserve">
+    <value>Cud X</value>
+  </data>
+</root>

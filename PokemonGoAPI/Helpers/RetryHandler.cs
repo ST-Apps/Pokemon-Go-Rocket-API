@@ -25,7 +25,8 @@ namespace PokemonGo.RocketAPI.Helpers
                 try
                 {
                     var response = await base.SendAsync(request, cancellationToken);
-                    if (response.StatusCode == HttpStatusCode.BadGateway || response.StatusCode == HttpStatusCode.InternalServerError)
+                    if (response.StatusCode == HttpStatusCode.BadGateway ||
+                        response.StatusCode == HttpStatusCode.InternalServerError)
                         throw new Exception(); //todo: proper implementation
 
                     return response;

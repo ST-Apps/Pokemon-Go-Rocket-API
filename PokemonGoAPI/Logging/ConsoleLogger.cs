@@ -17,7 +17,7 @@ namespace PokemonGo.RocketAPI.Logging
         /// <param name="maxLogLevel"></param>
         public ConsoleLogger(LogLevel maxLogLevel)
         {
-            this._maxLogLevel = maxLogLevel;
+            _maxLogLevel = maxLogLevel;
         }
 
         /// <summary>

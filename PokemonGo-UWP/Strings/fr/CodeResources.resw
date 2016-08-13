@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PokemonFledText" xml:space="preserve">
+    <value>{0} s'enfuit</value>
+  </data>
+  <data name="GettingGpsSignalText" xml:space="preserve">
+    <value>Acquisition du signal GPS...</value>
+  </data>
+  <data name="GettingUserDataText" xml:space="preserve">
+    <value>Acquisition des données utilisateur...</value>
+  </data>
+  <data name="GoogleErrorText" xml:space="preserve">
+    <value>Erreur retournée par Google: </value>
+  </data>
+  <data name="GoogleNotRespondingText" xml:space="preserve">
+    <value>Google ne répond pas, réessayer plus tard.</value>
+  </data>
+  <data name="LoadingEncounterText" xml:space="preserve">
+    <value>Chargement de la rencontre avec {0}</value>
+  </data>
+  <data name="LoggingInText" xml:space="preserve">
+    <value>Connexion...</value>
+  </data>
+  <data name="LoginFailedText" xml:space="preserve">
+    <value>La connexion a échouée, réessayer</value>
+  </data>
+  <data name="NoText" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="NoGpsPermissionsText" xml:space="preserve">
+    <value>Nous avons besoin de l'autorisation d'accés au GPS pour faire fonctionner le jeu, activez le et réessayer.</value>
+  </data>
+  <data name="PokemonRanAwayText" xml:space="preserve">
+    <value>Le Pokémon s'est enfui, désolé :(</value>
+  </data>
+  <data name="PtcDownText" xml:space="preserve">
+    <value>La connexion à PTC est probablement hors service, réessayer plus tard.</value>
+  </data>
+  <data name="SomethingWentWrongText" xml:space="preserve">
+    <value>Quelque chose s'est mal passé et l'application peut être instable. Voule-vous vous déconnecter et recommencer?</value>
+  </data>
+  <data name="UpdateDownloadingText" xml:space="preserve">
+    <value>Téléchargement de la mise à jour {0}</value>
+  </data>
+  <data name="UpdatedVersionText" xml:space="preserve">
+    <value>La mise à jour version {0} est disponible. Voules-vous mettre à jour?
+{1}</value>
+  </data>
+  <data name="UpdateFailedText" xml:space="preserve">
+    <value>La mise à jour a échouée: {0}
+Ouvrir la page avec les fichiers d'installation pour une installation manuelle?</value>
+  </data>
+  <data name="UpdateInstallingText" xml:space="preserve">
+    <value>Installation de la mise à jour, l'application redémarre...</value>
+  </data>
+  <data name="WrongUsernameText" xml:space="preserve">
+    <value>Mauvais nom d'utilisateur/mot de passe ou le serveur est hors ligne, réessayer.</value>
+  </data>
+  <data name="YesText" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="NoTeamText" xml:space="preserve">
+    <value>Pas d'équipe</value>
+  </data>
+  <data name="ValorTeamText" xml:space="preserve">
+    <value>Bravoure</value>
+  </data>
+  <data name="MysticTeamText" xml:space="preserve">
+    <value>Sagesse</value>
+  </data>
+</root>

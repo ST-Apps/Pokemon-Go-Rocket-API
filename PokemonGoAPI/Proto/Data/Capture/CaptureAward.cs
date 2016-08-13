@@ -24,10 +24,10 @@ namespace POGOProtos.Data.Capture {
           string.Concat(
             "CipQT0dPUHJvdG9zL0RhdGEvQ2FwdHVyZS9DYXB0dXJlQXdhcmQucHJvdG8S",
             "F1BPR09Qcm90b3MuRGF0YS5DYXB0dXJlGiNQT0dPUHJvdG9zL0VudW1zL0Fj",
-            "dGl2aXR5VHlwZS5wcm90byJyCgxDYXB0dXJlQXdhcmQSNQoNYWN0aXZpdHlf",
-            "dHlwZRgBIAMoDjIeLlBPR09Qcm90b3MuRW51bXMuQWN0aXZpdHlUeXBlEgoK",
-            "AnhwGAIgAygFEg0KBWNhbmR5GAMgAygFEhAKCHN0YXJkdXN0GAQgAygFYgZw",
-            "cm90bzM="));
+            "dGl2aXR5VHlwZS5wcm90byKCAQoMQ2FwdHVyZUF3YXJkEjkKDWFjdGl2aXR5",
+            "X3R5cGUYASADKA4yHi5QT0dPUHJvdG9zLkVudW1zLkFjdGl2aXR5VHlwZUIC",
+            "EAESDgoCeHAYAiADKAVCAhABEhEKBWNhbmR5GAMgAygFQgIQARIUCghzdGFy",
+            "ZHVzdBgEIAMoBUICEAFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Enums.ActivityTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

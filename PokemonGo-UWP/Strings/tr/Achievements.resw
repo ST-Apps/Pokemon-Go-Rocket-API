@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BadgeBattleAttackWon" xml:space="preserve">
+    <value>Savaşçı Kız</value>
+  </data>
+  <data name="BadgeBattleTrainingWon" xml:space="preserve">
+    <value>En İyi Eğitmen</value>
+  </data>
+  <data name="BadgeBigMagikarp" xml:space="preserve">
+    <value>Balıkçı</value>
+  </data>
+  <data name="BadgeCaptureTotal" xml:space="preserve">
+    <value>Koleksiyoncu</value>
+  </data>
+  <data name="BadgeEvolvedTotal" xml:space="preserve">
+    <value>Bilim Adamı</value>
+  </data>
+  <data name="BadgeHatchedTotal" xml:space="preserve">
+    <value>Yetiştirici</value>
+  </data>
+  <data name="BadgePokestopsVisited" xml:space="preserve">
+    <value>Çantacı</value>
+  </data>
+  <data name="BadgeSmallRattata" xml:space="preserve">
+    <value>Genç</value>
+  </data>
+  <data name="BadgeTravelKm" xml:space="preserve">
+    <value>Koşucu</value>
+  </data>
+  <data name="Bug" xml:space="preserve">
+    <value>Böcek Yakalayıcı</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Ejderha Terbiyecisi</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Taşçı</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Peri Hikayesi Kızı</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Siyah Kuşak</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>Ateşçi</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Kuş Tutucu</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Büyü Manyağı</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Bahçeci</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Harabe Manyağı</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Kayakçı</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Okul Çocuğu</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Punkçı Kız</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Psişik</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Tırmanıcı</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Depo Ajanı</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Yüzücü</value>
+  </data>
+</root>

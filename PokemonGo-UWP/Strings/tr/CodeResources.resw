@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DateFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
+  <data name="DateTimeFormat" xml:space="preserve">
+    <value>dd.MM.yyyy HH:mm</value>
+  </data>
+  <data name="PokemonFledText" xml:space="preserve">
+    <value>{0} kaçtı</value>
+  </data>
+  <data name="GettingGpsSignalText" xml:space="preserve">
+    <value>GPS sinyali alınıyor...</value>
+  </data>
+  <data name="GettingUserDataText" xml:space="preserve">
+    <value>Kullanıcı verisi alınıyor...</value>
+  </data>
+  <data name="GoogleErrorText" xml:space="preserve">
+    <value>Google error verdi: </value>
+  </data>
+  <data name="GoogleNotRespondingText" xml:space="preserve">
+    <value>Google yanıt vermiyor, lütfen daha sonra tekrar deneyin.</value>
+  </data>
+  <data name="LoadingEncounterText" xml:space="preserve">
+    <value>{0} ile karşılaşma yükleniyor</value>
+  </data>
+  <data name="LoggingInText" xml:space="preserve">
+    <value>Giriş yapılıyor...</value>
+  </data>
+  <data name="LoginFailedText" xml:space="preserve">
+    <value>Giriş yapılamadı, lütfen tekrar deneyin.</value>
+  </data>
+  <data name="NoText" xml:space="preserve">
+    <value>Hayır</value>
+  </data>
+  <data name="NoGpsPermissionsText" xml:space="preserve">
+    <value>Oyunu çalıştırmak için GPS iznine ihtiyacımız var, lütfen izin verin ve tekrar deneyin.</value>
+  </data>
+  <data name="PokemonRanAwayText" xml:space="preserve">
+    <value>Pokemon kaçtı, yazık oldu :(</value>
+  </data>
+  <data name="PtcDownText" xml:space="preserve">
+    <value>PTC girişi online değil, lütfen daha sonra tekrar deneyin.</value>
+  </data>
+  <data name="SomethingWentWrongText" xml:space="preserve">
+    <value>Bir şey yanlış gitti ve uygulama şu an istediğiniz gibi çalışmayabilir. Çıkış yapıp tekrar denemek ister misiniz?</value>
+  </data>
+  <data name="TimeFormat" xml:space="preserve">
+    <value>HH:mm</value>
+  </data>
+  <data name="UpdateDownloadingText" xml:space="preserve">
+    <value>Güncelleme indiriliyor: {0}</value>
+  </data>
+  <data name="UpdatedVersionText" xml:space="preserve">
+    <value>Güncellenmiş versiyon {0} mevcut. Güncellemek ister misiniz?
+{1}</value>
+  </data>
+  <data name="UpdateFailedText" xml:space="preserve">
+    <value>Güncelleme yapılamadı: {0}
+Elle yükleme için yükleme dosyaları sayfası açılsın mı?</value>
+  </data>
+  <data name="UpdateInstallingText" xml:space="preserve">
+    <value>Güncelleme yükleniyor, uygulama yeniden başlatılıyor...</value>
+  </data>
+  <data name="WrongUsernameText" xml:space="preserve">
+    <value>Yanlış kullanıcı adı/şifre veya server offline, lütfen tekrar deneyin.</value>
+  </data>
+  <data name="YesText" xml:space="preserve">
+    <value>Evet</value>
+  </data>
+  <data name="NoTeamText" xml:space="preserve">
+    <value>Takım Yok</value>
+  </data>
+</root>

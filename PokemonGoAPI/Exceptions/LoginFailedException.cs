@@ -8,13 +8,14 @@ namespace PokemonGo.RocketAPI.Exceptions
     {
         public LoginFailedException(HttpResponseMessage loginResponse)
         {
-            this.LoginResponse = loginResponse;
+            LoginResponse = loginResponse;
         }
-        public HttpResponseMessage LoginResponse { get; private set; }
+
+        public HttpResponseMessage LoginResponse { get; }
 
         public async Task<string> GetLoginResponseContentAsString()
         {
-            return await this.LoginResponse.Content.ReadAsStringAsync();
+            return await LoginResponse.Content.ReadAsStringAsync();
         }
     }
 }

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="D_ItemIncubatorBasic" xml:space="preserve">
+    <value>Un dispositivo per mettere le Uova in incubazione mentre copri la distanza necessaria a farke schiudere. Si può usare tre volte.</value>
+  </data>
+  <data name="D_ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>Un dispositivo per mettere le Uova in incubazione mentre copri la distanza necessaria a farke schiudere. Si può usare un numero infinito di volte.</value>
+  </data>
+  <data name="ItemBlukBerry" xml:space="preserve">
+    <value>Baccalampon</value>
+  </data>
+  <data name="ItemGreatBall" xml:space="preserve">
+    <value>Mega Ball</value>
+  </data>
+  <data name="ItemHyperPotion" xml:space="preserve">
+    <value>Iperpozione</value>
+  </data>
+  <data name="ItemIncenseCool" xml:space="preserve">
+    <value>Aroma fresco</value>
+  </data>
+  <data name="ItemIncenseFloral" xml:space="preserve">
+    <value>Aroma floreale</value>
+  </data>
+  <data name="ItemIncenseOrdinary" xml:space="preserve">
+    <value>Aroma</value>
+  </data>
+  <data name="ItemIncenseSpicy" xml:space="preserve">
+    <value>Aroma speziato</value>
+  </data>
+  <data name="ItemIncubatorBasic" xml:space="preserve">
+    <value>Incubatrice Uova</value>
+  </data>
+  <data name="ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>Incubatrice Uova ∞</value>
+  </data>
+  <data name="ItemItemStorageUpgrade" xml:space="preserve">
+    <value>Ampliamento spazio borsa</value>
+  </data>
+  <data name="ItemLuckyEgg" xml:space="preserve">
+    <value>Fortunuovo</value>
+  </data>
+  <data name="ItemMasterBall" xml:space="preserve">
+    <value>Masterball</value>
+  </data>
+  <data name="ItemMaxPotion" xml:space="preserve">
+    <value>Pozione Max</value>
+  </data>
+  <data name="ItemMaxRevive" xml:space="preserve">
+    <value>Revitalizzante massimo</value>
+  </data>
+  <data name="ItemNanabBerry" xml:space="preserve">
+    <value>Baccabana</value>
+  </data>
+  <data name="ItemPinapBerry" xml:space="preserve">
+    <value>Baccananas</value>
+  </data>
+  <data name="ItemPokeBall" xml:space="preserve">
+    <value>Poké Ball</value>
+  </data>
+  <data name="ItemPokemonStorageUpgrade" xml:space="preserve">
+    <value>Ampliamento spazio Pokémon</value>
+  </data>
+  <data name="ItemPotion" xml:space="preserve">
+    <value>Pozione</value>
+  </data>
+  <data name="ItemRazzBerry" xml:space="preserve">
+    <value>Baccalampon</value>
+  </data>
+  <data name="ItemRevive" xml:space="preserve">
+    <value>Revitalizzante</value>
+  </data>
+  <data name="ItemSpecialCamera" xml:space="preserve">
+    <value>Fotocamera</value>
+  </data>
+  <data name="ItemSuperPotion" xml:space="preserve">
+    <value>Superpozione</value>
+  </data>
+  <data name="ItemTroyDisk" xml:space="preserve">
+    <value>Disco di Troy</value>
+  </data>
+  <data name="ItemUltraBall" xml:space="preserve">
+    <value>Ultra Ball</value>
+  </data>
+  <data name="ItemUnknown" xml:space="preserve">
+    <value>Sconosciuto</value>
+  </data>
+  <data name="ItemWeparBerry" xml:space="preserve">
+    <value>Baccapera</value>
+  </data>
+  <data name="ItemXAttack" xml:space="preserve">
+    <value>Attacco X</value>
+  </data>
+  <data name="ItemXDefense" xml:space="preserve">
+    <value>Difesa X</value>
+  </data>
+  <data name="ItemXMiracle" xml:space="preserve">
+    <value>Miracolo X</value>
+  </data>
+</root>

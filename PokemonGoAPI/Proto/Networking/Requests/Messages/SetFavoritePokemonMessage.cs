@@ -25,7 +25,7 @@ namespace POGOProtos.Networking.Requests.Messages {
             "CkdQT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVxdWVzdHMvTWVzc2FnZXMvU2V0",
             "RmF2b3JpdGVQb2tlbW9uTWVzc2FnZS5wcm90bxInUE9HT1Byb3Rvcy5OZXR3",
             "b3JraW5nLlJlcXVlc3RzLk1lc3NhZ2VzIkQKGVNldEZhdm9yaXRlUG9rZW1v",
-            "bk1lc3NhZ2USEgoKcG9rZW1vbl9pZBgBIAEoBBITCgtpc19mYXZvcml0ZRgC",
+            "bk1lc3NhZ2USEgoKcG9rZW1vbl9pZBgBIAEoAxITCgtpc19mYXZvcml0ZRgC",
             "IAEoCGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -72,12 +72,12 @@ namespace POGOProtos.Networking.Requests.Messages {
 
     /// <summary>Field number for the "pokemon_id" field.</summary>
     public const int PokemonIdFieldNumber = 1;
-    private ulong pokemonId_;
+    private long pokemonId_;
     /// <summary>
-    ///  needs to be uint64, tested by Grover
+    ///  Do not change https://github.com/AeonLucid/POGOProtos.pull/126
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong PokemonId {
+    public long PokemonId {
       get { return pokemonId_; }
       set {
         pokemonId_ = value;
@@ -116,7 +116,7 @@ namespace POGOProtos.Networking.Requests.Messages {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (PokemonId != 0UL) hash ^= PokemonId.GetHashCode();
+      if (PokemonId != 0L) hash ^= PokemonId.GetHashCode();
       if (IsFavorite != false) hash ^= IsFavorite.GetHashCode();
       return hash;
     }
@@ -128,9 +128,9 @@ namespace POGOProtos.Networking.Requests.Messages {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (PokemonId != 0UL) {
+      if (PokemonId != 0L) {
         output.WriteRawTag(8);
-        output.WriteUInt64(PokemonId);
+        output.WriteInt64(PokemonId);
       }
       if (IsFavorite != false) {
         output.WriteRawTag(16);
@@ -141,8 +141,8 @@ namespace POGOProtos.Networking.Requests.Messages {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (PokemonId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(PokemonId);
+      if (PokemonId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(PokemonId);
       }
       if (IsFavorite != false) {
         size += 1 + 1;
@@ -155,7 +155,7 @@ namespace POGOProtos.Networking.Requests.Messages {
       if (other == null) {
         return;
       }
-      if (other.PokemonId != 0UL) {
+      if (other.PokemonId != 0L) {
         PokemonId = other.PokemonId;
       }
       if (other.IsFavorite != false) {
@@ -172,7 +172,7 @@ namespace POGOProtos.Networking.Requests.Messages {
             input.SkipLastField();
             break;
           case 8: {
-            PokemonId = input.ReadUInt64();
+            PokemonId = input.ReadInt64();
             break;
           }
           case 16: {

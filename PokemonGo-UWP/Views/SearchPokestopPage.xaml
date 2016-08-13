@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
     <Page.DataContext>
-        <viewModels:SearchPokeStopPageViewModel x:Name="ViewModel"/>
+        <viewModels:SearchPokeStopPageViewModel x:Name="ViewModel" />
     </Page.DataContext>
 
     <Page.Resources>
@@ -20,7 +20,8 @@
                 To="0"
                 Duration="0:0:0.2"
                 x:Name="ShowGatheredItemsMenuAnimation" />
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="GatheredItemsBorder">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)"
+                                           Storyboard.TargetName="GatheredItemsBorder">
                 <DiscreteObjectKeyFrame KeyTime="0">
                     <DiscreteObjectKeyFrame.Value>
                         <Visibility>Visible</Visibility>
@@ -53,14 +54,14 @@
     <Grid>
         <Grid.Background>
             <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#4ab583" Offset="0"/>
-                <GradientStop Color="#266378" Offset="0.8"/>
+                <GradientStop Color="#4ab583" Offset="0" />
+                <GradientStop Color="#266378" Offset="0.8" />
             </LinearGradientBrush>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="75" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="100" />
+            <RowDefinition Height="75" />
         </Grid.RowDefinitions>
         <Border Grid.Row="0"
                 x:Name="ErrorMessageBorder"
@@ -74,24 +75,23 @@
             </Border.Background>
             <StackPanel>
                 <TextBlock x:Name="OutOfRangeTextBlock"
-                           x:Uid="OutOfRangeText"
+                           x:Uid="OutOfRangeTextBlock"
                            Text="You are out of range"
                            Visibility="Collapsed"
-                           Style="{StaticResource TextError}" 
+                           Style="{StaticResource TextError}"
                            Margin="15,20,15,20" />
 
                 <TextBlock x:Name="CooldownTextBlock"
-                           x:Uid="CoolDownText"
+                           x:Uid="CooldownTextBlock"
                            Text="You have to wait some time"
                            Visibility="Collapsed"
-                           Style="{StaticResource TextError}" 
+                           Style="{StaticResource TextError}"
                            Margin="15,20,15,20" />
 
                 <TextBlock x:Name="InventoryFullTextBlock"
-                           x:Uid="InventoryFullText"
-                           Text="Your inventory is full!"
+                           x:Uid="InventoryFullTextBlock"
                            Visibility="Collapsed"
-                           Style="{StaticResource TextError}" 
+                           Style="{StaticResource TextError}"
                            Margin="15,20,15,20" />
 
             </StackPanel>
@@ -106,20 +106,18 @@
                            Style="{StaticResource TextPokestopTitle}" />
             </Grid>
 
-            <Border Grid.Row="1" 
+            <Border Grid.Row="1"
                     Width="250"
                     Height="250"
                     BorderBrush="#33000000"
                     BorderThickness="10"
                     CornerRadius="125"
                     HorizontalAlignment="Center">
-                <Border Grid.Row="1" 
-                    Background="#fff"
-                    BorderBrush="#fff"
-                    BorderThickness="10"
-                    CornerRadius="150">
-                    <Button Grid.Row="1" 
-                            Style="{ThemeResource ImageButtonStyle}"
+                <Border Background="#fff"
+                        BorderBrush="#fff"
+                        BorderThickness="10"
+                        CornerRadius="150">
+                    <Button Style="{ThemeResource ImageButtonStyle}"
                             Command="{Binding SearchCurrentPokestop}"
                             x:Name="SearchPokestopButton">
                         <Ellipse x:Name="PokestopImageEllipse"
@@ -130,17 +128,20 @@
                             </Ellipse.Projection>
                             <Ellipse.Fill>
                                 <ImageBrush ImageSource="{Binding CurrentPokestopInfo.ImageUrls[0]}"
-                                Stretch="UniformToFill" />
+                                            Stretch="UniformToFill" />
                             </Ellipse.Fill>
                         </Ellipse>
                     </Button>
                 </Border>
             </Border>
         </Grid>
-        <Grid Grid.Row="1" x:Name="GatheredItemsBorder"
+
+        <Grid Grid.Row="0"
+              Grid.RowSpan="3"
+              x:Name="GatheredItemsBorder"
               Style="{StaticResource GridContainer}"
               Visibility="Collapsed"
-              VerticalAlignment="Top">
+              VerticalAlignment="Center">
             <Grid.RenderTransform>
                 <TranslateTransform x:Name="GatheredItemsTranslateTransform"
                                     Y="800" />
@@ -159,9 +160,11 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Image Grid.Column="0" Source="../Assets/UI/gem.png" Height="50" />
-                <TextBlock Grid.Column="1" Text="{Binding CurrentSearchResponse.GemsAwarded}" Style="{StaticResource TextNormal}" FontWeight="Bold" />
-                <TextBlock Grid.Column="2" Text="{Binding CurrentSearchResponse.ExperienceAwarded}" Style="{StaticResource TextNormalSpotlight}"  />
-                <TextBlock Grid.Column="3" x:Uid="SpaceXPText" Text=" XP" Style="{StaticResource TextNormalSpotlight}" />
+                <TextBlock Grid.Column="1" Text="{Binding CurrentSearchResponse.GemsAwarded}"
+                           Style="{StaticResource TextNormal}" FontWeight="Bold" />
+                <TextBlock Grid.Column="2" Text="{Binding CurrentSearchResponse.ExperienceAwarded}"
+                           Style="{StaticResource TextNormalSpotlight}" />
+                <TextBlock Grid.Column="3" x:Uid="SpaceXpTextBlock" Style="{StaticResource TextNormalSpotlight}" />
             </Grid>
             <ListView ItemsSource="{Binding AwardedItems}"
                       SelectionMode="None"
@@ -182,25 +185,33 @@
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <Image Grid.Column="0"
-                                    Source="{Binding Converter={StaticResource ItemAwardToPokemonSpriteConverter}}"
-                                    Height="50"
-                                    Stretch="Uniform"
-                                    VerticalAlignment="Center"
-                                    HorizontalAlignment="Stretch" />
-                            <TextBlock Grid.Column="1" Text="{Binding Converter={StaticResource ItemToItemNameConverter}}" Style="{StaticResource TextNormal}" />
-                            <TextBlock Grid.Column="2" x:Uid="NumberText" Text="# " Style="{StaticResource TextNormalSpotlight}" />
-                            <TextBlock Grid.Column="3" Text="{Binding ItemCount}" Style="{StaticResource TextNormalSpotlight}" />
+                                   Source="{Binding Converter={StaticResource ItemAwardToPokemonSpriteConverter}}"
+                                   Height="50"
+                                   Stretch="Uniform"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Stretch" />
+                            <TextBlock Grid.Column="1"
+                                       Text="{Binding Converter={StaticResource ItemToItemNameConverter}}"
+                                       Style="{StaticResource TextNormal}" />
+                            <TextBlock Grid.Column="2"
+                                       x:Uid="NumberTextBlock"
+                                       Style="{StaticResource TextNormalSpotlight}" />
+                            <TextBlock Grid.Column="3"
+                                       Text="{Binding ItemCount}"
+                                       Style="{StaticResource TextNormalSpotlight}" />
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Grid Grid.Row="2" Margin="15,10,15,10" Visibility="{Binding CurrentSearchResponse.PokemonDataEgg, Converter={StaticResource PokemonDataToVisibilityConverter}}">
+            <Grid Grid.Row="2" Margin="15,10,15,10"
+                  Visibility="{Binding CurrentSearchResponse.PokemonDataEgg, Converter={StaticResource PokemonDataToVisibilityConverter}}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="50" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Image Grid.Column="0" Source="../Assets/Items/Egg.png" Height="50" />
-                <TextBlock Grid.Column="1" Text="{Binding CurrentSearchResponse.PokemonDataEgg.PokemonId}" Style="{StaticResource TextNormal}" FontWeight="Bold" HorizontalAlignment="Right" />
+                <TextBlock Grid.Column="1" Text="{Binding CurrentSearchResponse.PokemonDataEgg.PokemonId}"
+                           Style="{StaticResource TextNormal}" FontWeight="Bold" HorizontalAlignment="Right" />
             </Grid>
             <Button Grid.Row="3"
                     x:Name="loginButton"
@@ -209,10 +220,11 @@
                 <TextBlock Text="OK" />
             </Button>
         </Grid>
-        <Button Grid.Row="2" 
-                Command="{Binding ReturnToGameScreen}"
-                Style="{StaticResource ButtonCircle}">
-            <TextBlock Text="" FontFamily="SEGOE MDL2 Assets" />
+        <Button Grid.Row="2"
+                Command="{Binding AbandonPokestop}"
+                Style="{StaticResource ButtonCircle}"
+                Margin="0">
+            <Image Source="../Assets/Buttons/btn_close.png" />
         </Button>
     </Grid>
 

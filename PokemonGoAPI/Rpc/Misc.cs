@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using POGOProtos.Networking.Requests;
 using POGOProtos.Networking.Requests.Messages;
 using POGOProtos.Networking.Responses;
@@ -21,7 +17,7 @@ namespace PokemonGo.RocketAPI.Rpc
             return
                 await
                     PostProtoPayload<Request, ClaimCodenameResponse>(RequestType.ClaimCodename,
-                        new ClaimCodenameMessage()
+                        new ClaimCodenameMessage
                         {
                             Codename = codename
                         });
@@ -32,7 +28,7 @@ namespace PokemonGo.RocketAPI.Rpc
             return
                 await
                     PostProtoPayload<Request, CheckCodenameAvailableResponse>(RequestType.CheckCodenameAvailable,
-                        new CheckCodenameAvailableMessage()
+                        new CheckCodenameAvailableMessage
                         {
                             Codename = codename
                         });
@@ -40,7 +36,10 @@ namespace PokemonGo.RocketAPI.Rpc
 
         public async Task<GetSuggestedCodenamesResponse> GetSuggestedCodenames()
         {
-            return await PostProtoPayload<Request, GetSuggestedCodenamesResponse>(RequestType.GetSuggestedCodenames, new GetSuggestedCodenamesMessage());
+            return
+                await
+                    PostProtoPayload<Request, GetSuggestedCodenamesResponse>(RequestType.GetSuggestedCodenames,
+                        new GetSuggestedCodenamesMessage());
         }
 
         public async Task<EchoResponse> SendEcho()
@@ -50,7 +49,10 @@ namespace PokemonGo.RocketAPI.Rpc
 
         public async Task<EncounterTutorialCompleteResponse> MarkTutorialComplete()
         {
-            return await PostProtoPayload<Request, EncounterTutorialCompleteResponse>(RequestType.MarkTutorialComplete, new MarkTutorialCompleteMessage());
+            return
+                await
+                    PostProtoPayload<Request, EncounterTutorialCompleteResponse>(RequestType.MarkTutorialComplete,
+                        new MarkTutorialCompleteMessage());
         }
     }
 }

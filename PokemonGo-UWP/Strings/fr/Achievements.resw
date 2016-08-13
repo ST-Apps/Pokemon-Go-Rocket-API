@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BadgeBattleAttackWon" xml:space="preserve">
+    <value>Combattant</value>
+  </data>
+  <data name="BadgeBattleTrainingWon" xml:space="preserve">
+    <value>Top Dresseur</value>
+  </data>
+  <data name="BadgeBigMagikarp" xml:space="preserve">
+    <value>Pêcheur</value>
+  </data>
+  <data name="BadgeCaptureTotal" xml:space="preserve">
+    <value>Collectionneur</value>
+  </data>
+  <data name="BadgeEvolvedTotal" xml:space="preserve">
+    <value>Scientifique</value>
+  </data>
+  <data name="BadgeHatchedTotal" xml:space="preserve">
+    <value>Éleveur</value>
+  </data>
+  <data name="BadgePokestopsVisited" xml:space="preserve">
+    <value>Randonneur</value>
+  </data>
+  <data name="BadgeSmallRattata" xml:space="preserve">
+    <value>Gamin</value>
+  </data>
+  <data name="BadgeTravelKm" xml:space="preserve">
+    <value>Joggeur</value>
+  </data>
+  <data name="Bug" xml:space="preserve">
+    <value>Scout</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Dresseur de dragon</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Rockeur</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Fillette de comte</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Karatéka</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>Saltimbanque</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Ornithologue</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Mystimaniac</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Jardinier</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Ruinemaniac</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Skieur</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Élève</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Vaurienne</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Kinésiste</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Montagnard</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Contrôleur</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Nageur</value>
+  </data>
+</root>

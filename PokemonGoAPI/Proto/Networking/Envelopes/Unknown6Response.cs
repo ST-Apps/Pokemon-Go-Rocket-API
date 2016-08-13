@@ -89,7 +89,7 @@ namespace POGOProtos.Networking.Envelopes {
     public const int ResponseTypeFieldNumber = 1;
     private int responseType_;
     /// <summary>
-    ///  Still don't know what 6 is, but 5 lists items available via IAPs. 
+    ///  Still don't know what 6 is, but 5 lists items available via IAPs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int ResponseType {

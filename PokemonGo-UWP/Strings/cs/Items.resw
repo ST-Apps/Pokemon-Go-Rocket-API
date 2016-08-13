@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="D_ItemGreatBall" xml:space="preserve">
+    <value>Zařízení pro odchyt divokých pokemonů. Pokud je po pokemonovi hozeno, konfortně ho uzavře uvnitř.</value>
+  </data>
+  <data name="D_ItemIncenseCool" xml:space="preserve">
+    <value>Esence se zvláštním odérem která vábí pokémony do vaší lokace na 30 minut</value>
+  </data>
+  <data name="D_ItemIncenseFloral" xml:space="preserve">
+    <value>Esence se zvláštním odérem která vábí pokémony do vaší lokace na 30 minut</value>
+  </data>
+  <data name="D_ItemIncenseOrdinary" xml:space="preserve">
+    <value>Esence se zvláštním odérem která vábí pokémony do vaší lokace na 30 minut</value>
+  </data>
+  <data name="D_ItemIncenseSpicy" xml:space="preserve">
+    <value>Esence se zvláštním odérem která vábí pokémony do vaší lokace na 30 minut</value>
+  </data>
+  <data name="D_ItemIncubatorBasic" xml:space="preserve">
+    <value>Zařízení které slouží pro inkubaci vajec, dokud nejsou připravená se vyklubat.</value>
+  </data>
+  <data name="D_ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>Zařízení které slouží pro inkubaci vajec, dokud nejsou připravená se vyklubat.</value>
+  </data>
+  <data name="D_ItemMasterBall" xml:space="preserve">
+    <value>Zařízení pro odchyt divokých pokemonů. Pokud je po pokemonovi hozeno, konfortně ho uzavře uvnitř.</value>
+  </data>
+  <data name="D_ItemPokeBall" xml:space="preserve">
+    <value>Zařízení pro odchyt divokých pokemonů. Pokud je po pokemonovi hozeno, konfortně ho uzavře uvnitř.</value>
+  </data>
+  <data name="D_ItemPotion" xml:space="preserve">
+    <value>Sprejová medicína pro léčení ran. Pokémonu navrátí 20 HP.</value>
+  </data>
+  <data name="D_ItemRevive" xml:space="preserve">
+    <value>Lék pro oživený pokemonů neschopných boje. Pokemonovi také obnoví polovinu chybějících HP.</value>
+  </data>
+  <data name="D_ItemUltraBall" xml:space="preserve">
+    <value>Zařízení pro odchyt divokých pokemonů. Pokud je po pokemonovi hozeno, konfortně ho uzavře uvnitř.</value>
+  </data>
+  <data name="ItemBlukBerry" xml:space="preserve">
+    <value>Bobule Bluk</value>
+  </data>
+  <data name="ItemHyperPotion" xml:space="preserve">
+    <value>Hyper Lektvar</value>
+  </data>
+  <data name="ItemIncenseCool" xml:space="preserve">
+    <value>Chladná Esence</value>
+  </data>
+  <data name="ItemIncenseFloral" xml:space="preserve">
+    <value>Přírodní Esence</value>
+  </data>
+  <data name="ItemIncenseOrdinary" xml:space="preserve">
+    <value>Obyčejná Esence</value>
+  </data>
+  <data name="ItemIncenseSpicy" xml:space="preserve">
+    <value>Kořeněná Esence</value>
+  </data>
+  <data name="ItemIncubatorBasic" xml:space="preserve">
+    <value>Základní Inkubátor</value>
+  </data>
+  <data name="ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>Zakladní Nelimitovaný Inkubátor</value>
+  </data>
+  <data name="ItemItemStorageUpgrade" xml:space="preserve">
+    <value>Vylepšení Uložiště Předmětů</value>
+  </data>
+  <data name="ItemLuckyEgg" xml:space="preserve">
+    <value>Šťastné Vejce</value>
+  </data>
+  <data name="ItemMaxPotion" xml:space="preserve">
+    <value>Max Lektvar</value>
+  </data>
+  <data name="ItemMaxRevive" xml:space="preserve">
+    <value>Max Oživit</value>
+  </data>
+  <data name="ItemNanabBerry" xml:space="preserve">
+    <value>Bobule Nanab</value>
+  </data>
+  <data name="ItemPinapBerry" xml:space="preserve">
+    <value>Bobule Pinap</value>
+  </data>
+  <data name="ItemPokemonStorageUpgrade" xml:space="preserve">
+    <value>Vylepšení Uložiště Pokemonů</value>
+  </data>
+  <data name="ItemPotion" xml:space="preserve">
+    <value>Lektvar</value>
+  </data>
+  <data name="ItemRazzBerry" xml:space="preserve">
+    <value>Bobule Razz</value>
+  </data>
+  <data name="ItemRevive" xml:space="preserve">
+    <value>Oživit</value>
+  </data>
+  <data name="ItemSpecialCamera" xml:space="preserve">
+    <value>Speciální fotoaparát</value>
+  </data>
+  <data name="ItemSuperPotion" xml:space="preserve">
+    <value>Super Lektvar</value>
+  </data>
+  <data name="ItemUnknown" xml:space="preserve">
+    <value>Neznámé</value>
+  </data>
+  <data name="ItemWeparBerry" xml:space="preserve">
+    <value>Bobule Wepar</value>
+  </data>
+  <data name="ItemXAttack" xml:space="preserve">
+    <value>X Útok</value>
+  </data>
+  <data name="ItemXDefense" xml:space="preserve">
+    <value>X Obrana</value>
+  </data>
+  <data name="ItemXMiracle" xml:space="preserve">
+    <value>X Zázrak</value>
+  </data>
+</root>
