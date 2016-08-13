@@ -42,7 +42,7 @@ namespace PokemonGo_UWP.Views
 
         private void SetupMap()
         {
-            if (ApplicationKeys.MapBoxTokens.Length > 0 && SettingsService.Instance.IsNianticMapEnabled)
+            if (!string.IsNullOrEmpty(ApplicationKeys.MapBoxTokens) && SettingsService.Instance.IsNianticMapEnabled)
             {
                 if (_mapBoxIndex == -1)
                     _mapBoxIndex = new Random().Next(0, ApplicationKeys.MapBoxTokens.Length);
