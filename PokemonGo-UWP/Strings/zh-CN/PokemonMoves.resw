@@ -12,4 +12,544 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Bite" xml:space="preserve">
+    <value>攻击</value>
+  </data>
+  <data name="CrossChop" xml:space="preserve">
+    <value>十字斩</value>
+  </data>
+  <data name="DarkPulse" xml:space="preserve">
+    <value>黑暗脉搏</value>
+  </data>
+  <data name="Dig" xml:space="preserve">
+    <value>挖</value>
+  </data>
+  <data name="DoubleSlap" xml:space="preserve">
+    <value>双掌</value>
+  </data>
+  <data name="Ember" xml:space="preserve">
+    <value>余烬</value>
+  </data>
+  <data name="Flamethrower" xml:space="preserve">
+    <value>火焰喷射器</value>
+  </data>
+  <data name="FlameWheel" xml:space="preserve">
+    <value>火焰轮</value>
+  </data>
+  <data name="HyperBeam" xml:space="preserve">
+    <value>超级光线</value>
+  </data>
+  <data name="Lick" xml:space="preserve">
+    <value>舔</value>
+  </data>
+  <data name="LowKick" xml:space="preserve">
+    <value>低处踢</value>
+  </data>
+  <data name="Megahorn" xml:space="preserve">
+    <value>角突</value>
+  </data>
+  <data name="MetalClaw" xml:space="preserve">
+    <value>金属爪</value>
+  </data>
+  <data name="MoveUnset" xml:space="preserve">
+    <value>未设置的移动</value>
+  </data>
+  <data name="Pound" xml:space="preserve">
+    <value>磅</value>
+  </data>
+  <data name="PsychoCut" xml:space="preserve">
+    <value>心理切割</value>
+  </data>
+  <data name="QuickAttack" xml:space="preserve">
+    <value>快速攻击</value>
+  </data>
+  <data name="RazorLeaf" xml:space="preserve">
+    <value>刀叶</value>
+  </data>
+  <data name="Scratch" xml:space="preserve">
+    <value>草稿</value>
+  </data>
+  <data name="Sludge" xml:space="preserve">
+    <value>污泥</value>
+  </data>
+  <data name="Smog" xml:space="preserve">
+    <value>烟雾</value>
+  </data>
+  <data name="SuckerPunch" xml:space="preserve">
+    <value>特工</value>
+  </data>
+  <data name="Tackle" xml:space="preserve">
+    <value>处理</value>
+  </data>
+  <data name="TakeDown" xml:space="preserve">
+    <value>取下</value>
+  </data>
+  <data name="ThunderShock" xml:space="preserve">
+    <value>雷电冲击</value>
+  </data>
+  <data name="ViceGrip" xml:space="preserve">
+    <value>副控制</value>
+  </data>
+  <data name="VineWhip" xml:space="preserve">
+    <value>藤鞭</value>
+  </data>
+  <data name="WaterGun" xml:space="preserve">
+    <value>水炮</value>
+  </data>
+  <data name="WingAttack" xml:space="preserve">
+    <value>翅膀攻击</value>
+  </data>
+  <data name="Wrap" xml:space="preserve">
+    <value>环绕</value>
+  </data>
+  <data name="Absorb" xml:space="preserve">
+    <value>吸收</value>
+  </data>
+  <data name="Acid" xml:space="preserve">
+    <value>麻醉</value>
+  </data>
+  <data name="AcidFast" xml:space="preserve">
+    <value>快速麻醉</value>
+  </data>
+  <data name="AerialAce" xml:space="preserve">
+    <value>空中王牌</value>
+  </data>
+  <data name="AirCutter" xml:space="preserve">
+    <value>空气切割机</value>
+  </data>
+  <data name="AirSlash" xml:space="preserve">
+    <value>空中削减</value>
+  </data>
+  <data name="AncientPower" xml:space="preserve">
+    <value>远古能量</value>
+  </data>
+  <data name="AquaJet" xml:space="preserve">
+    <value>水射流</value>
+  </data>
+  <data name="AquaTail" xml:space="preserve">
+    <value>水尾</value>
+  </data>
+  <data name="BiteFast" xml:space="preserve">
+    <value>攻击</value>
+  </data>
+  <data name="Blizzard" xml:space="preserve">
+    <value>暴雪</value>
+  </data>
+  <data name="BodySlam" xml:space="preserve">
+    <value>身体能量充满</value>
+  </data>
+  <data name="BoneClub" xml:space="preserve">
+    <value>骨区</value>
+  </data>
+  <data name="BrickBreak" xml:space="preserve">
+    <value>砖头攻击</value>
+  </data>
+  <data name="Brine" xml:space="preserve">
+    <value>盐水</value>
+  </data>
+  <data name="BubbleBeam" xml:space="preserve">
+    <value>泡沫之光</value>
+  </data>
+  <data name="BubbleFast" xml:space="preserve">
+    <value>快速泡沫</value>
+  </data>
+  <data name="BugBite" xml:space="preserve">
+    <value>蚊虫叮咬</value>
+  </data>
+  <data name="BugBiteFast" xml:space="preserve">
+    <value>快速蚊虫叮咬</value>
+  </data>
+  <data name="BugBuzz" xml:space="preserve">
+    <value>震动嗡嗡声</value>
+  </data>
+  <data name="Bulldoze" xml:space="preserve">
+    <value>牛瞌睡</value>
+  </data>
+  <data name="BulletPunch" xml:space="preserve">
+    <value>子弹拳</value>
+  </data>
+  <data name="BulletPunchFast" xml:space="preserve">
+    <value>快速子弹拳</value>
+  </data>
+  <data name="ConfusionFast" xml:space="preserve">
+    <value>困惑</value>
+  </data>
+  <data name="CrossPoison" xml:space="preserve">
+    <value>十字毒</value>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>剪切</value>
+  </data>
+  <data name="CutFast" xml:space="preserve">
+    <value>快速剪切</value>
+  </data>
+  <data name="DazzlingGleam" xml:space="preserve">
+    <value>耀眼之光</value>
+  </data>
+  <data name="DisarmingVoice" xml:space="preserve">
+    <value>解除武装的声音</value>
+  </data>
+  <data name="Discharge" xml:space="preserve">
+    <value>放电</value>
+  </data>
+  <data name="DragonBreath" xml:space="preserve">
+    <value>龙之呼吸</value>
+  </data>
+  <data name="DragonBreathFast" xml:space="preserve">
+    <value>龙之呼吸</value>
+  </data>
+  <data name="DragonClaw" xml:space="preserve">
+    <value>龙爪</value>
+  </data>
+  <data name="DragonPulse" xml:space="preserve">
+    <value>龙之脉</value>
+  </data>
+  <data name="DrainingKiss" xml:space="preserve">
+    <value>排水之吻</value>
+  </data>
+  <data name="DrillPeck" xml:space="preserve">
+    <value>钻啄</value>
+  </data>
+  <data name="DrillRun" xml:space="preserve">
+    <value>演练开始</value>
+  </data>
+  <data name="Earthquake" xml:space="preserve">
+    <value>地震</value>
+  </data>
+  <data name="EmberFast" xml:space="preserve">
+    <value>快速余烬</value>
+  </data>
+  <data name="FeintAttackFast" xml:space="preserve">
+    <value>声东击西</value>
+  </data>
+  <data name="FireBlast" xml:space="preserve">
+    <value>火爆</value>
+  </data>
+  <data name="FireFangFast" xml:space="preserve">
+    <value>火方</value>
+  </data>
+  <data name="FirePunch" xml:space="preserve">
+    <value>火拳</value>
+  </data>
+  <data name="FlameBurst" xml:space="preserve">
+    <value>烈焰攻击</value>
+  </data>
+  <data name="FlameCharge" xml:space="preserve">
+    <value>火焰电荷</value>
+  </data>
+  <data name="FlashCannon" xml:space="preserve">
+    <value>闪电加农炮</value>
+  </data>
+  <data name="FrostBreath" xml:space="preserve">
+    <value>霜冻呼吸</value>
+  </data>
+  <data name="FrostBreathFast" xml:space="preserve">
+    <value>快速霜冻呼吸</value>
+  </data>
+  <data name="FuryCutter" xml:space="preserve">
+    <value>怒刀</value>
+  </data>
+  <data name="FuryCutterFast" xml:space="preserve">
+    <value>怒刀</value>
+  </data>
+  <data name="GigaDrain" xml:space="preserve">
+    <value>大量流失</value>
+  </data>
+  <data name="GunkShot" xml:space="preserve">
+    <value>料斗射击</value>
+  </data>
+  <data name="Headbutt" xml:space="preserve">
+    <value>铁头</value>
+  </data>
+  <data name="HeartStamp" xml:space="preserve">
+    <value>心邮票</value>
+  </data>
+  <data name="HeatWave" xml:space="preserve">
+    <value>热力波浪</value>
+  </data>
+  <data name="HornAttack" xml:space="preserve">
+    <value>角攻击</value>
+  </data>
+  <data name="Hurricane" xml:space="preserve">
+    <value>飓风</value>
+  </data>
+  <data name="HydroPump" xml:space="preserve">
+    <value>水轮泵</value>
+  </data>
+  <data name="HydroPumpBlastoise" xml:space="preserve">
+    <value>水轮泵</value>
+  </data>
+  <data name="HyperFang" xml:space="preserve">
+    <value>超级尖端</value>
+  </data>
+  <data name="IceBeam" xml:space="preserve">
+    <value>冰之光</value>
+  </data>
+  <data name="IcePunch" xml:space="preserve">
+    <value>冰拳</value>
+  </data>
+  <data name="IceShard" xml:space="preserve">
+    <value>冰碎片</value>
+  </data>
+  <data name="IceShardFast" xml:space="preserve">
+    <value>冰碎片</value>
+  </data>
+  <data name="IcyWind" xml:space="preserve">
+    <value>冰风</value>
+  </data>
+  <data name="IronHead" xml:space="preserve">
+    <value>铁头</value>
+  </data>
+  <data name="KarateChop" xml:space="preserve">
+    <value>空手道印章</value>
+  </data>
+  <data name="KarateChopFast" xml:space="preserve">
+    <value>空手道印章</value>
+  </data>
+  <data name="LeafBlade" xml:space="preserve">
+    <value>叶片</value>
+  </data>
+  <data name="LickFast" xml:space="preserve">
+    <value>快速舔</value>
+  </data>
+  <data name="LowKickFast" xml:space="preserve">
+    <value>低处踢</value>
+  </data>
+  <data name="LowSweep" xml:space="preserve">
+    <value>低处扫</value>
+  </data>
+  <data name="MagnetBomb" xml:space="preserve">
+    <value>磁铁炸弹</value>
+  </data>
+  <data name="MegaDrain" xml:space="preserve">
+    <value>巨型流失</value>
+  </data>
+  <data name="MetalClawFast" xml:space="preserve">
+    <value>金属爪</value>
+  </data>
+  <data name="Moonblast" xml:space="preserve">
+    <value>月之爆炸</value>
+  </data>
+  <data name="MudBomb" xml:space="preserve">
+    <value>泥炸弹</value>
+  </data>
+  <data name="MudShot" xml:space="preserve">
+    <value>泥球</value>
+  </data>
+  <data name="MudShotFast" xml:space="preserve">
+    <value>泥球</value>
+  </data>
+  <data name="MudSlapFast" xml:space="preserve">
+    <value>泥掌</value>
+  </data>
+  <data name="NightSlash" xml:space="preserve">
+    <value>夜之杠</value>
+  </data>
+  <data name="OminousWind" xml:space="preserve">
+    <value>不祥之风</value>
+  </data>
+  <data name="ParabolicCharge" xml:space="preserve">
+    <value>抛物电荷</value>
+  </data>
+  <data name="Peck" xml:space="preserve">
+    <value>匹克</value>
+  </data>
+  <data name="PeckFast" xml:space="preserve">
+    <value>快速匹克</value>
+  </data>
+  <data name="PetalBlizzard" xml:space="preserve">
+    <value>暴雪花瓣</value>
+  </data>
+  <data name="PlayRough" xml:space="preserve">
+    <value>粗糙发挥</value>
+  </data>
+  <data name="PoisonFang" xml:space="preserve">
+    <value>毒药坊</value>
+  </data>
+  <data name="PoisonJab" xml:space="preserve">
+    <value>毒拳</value>
+  </data>
+  <data name="PoisonJabFast" xml:space="preserve">
+    <value>毒拳</value>
+  </data>
+  <data name="PoisonStingFast" xml:space="preserve">
+    <value>毒刺</value>
+  </data>
+  <data name="PoundFast" xml:space="preserve">
+    <value>快速棒打</value>
+  </data>
+  <data name="PowerGem" xml:space="preserve">
+    <value>能量宝石</value>
+  </data>
+  <data name="PowerWhip" xml:space="preserve">
+    <value>能量之鞭</value>
+  </data>
+  <data name="Psybeam" xml:space="preserve">
+    <value>精神之光</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>通灵者</value>
+  </data>
+  <data name="PsychoCutFast" xml:space="preserve">
+    <value>快速心理切割</value>
+  </data>
+  <data name="Psyshock" xml:space="preserve">
+    <value>精神打击</value>
+  </data>
+  <data name="Psystrike" xml:space="preserve">
+    <value>精神攻击</value>
+  </data>
+  <data name="QuickAttackFast" xml:space="preserve">
+    <value>快速攻击</value>
+  </data>
+  <data name="RazorLeafFast" xml:space="preserve">
+    <value>刀叶</value>
+  </data>
+  <data name="Rest" xml:space="preserve">
+    <value>休息</value>
+  </data>
+  <data name="RockSlide" xml:space="preserve">
+    <value>山体滑坡</value>
+  </data>
+  <data name="RockSmashFast" xml:space="preserve">
+    <value>碎石</value>
+  </data>
+  <data name="RockThrow" xml:space="preserve">
+    <value>抛石</value>
+  </data>
+  <data name="RockThrowFast" xml:space="preserve">
+    <value>快速抛石</value>
+  </data>
+  <data name="RockTomb" xml:space="preserve">
+    <value>岩墓</value>
+  </data>
+  <data name="Scald" xml:space="preserve">
+    <value>烫伤</value>
+  </data>
+  <data name="ScaldBlastoise" xml:space="preserve">
+    <value>烫伤</value>
+  </data>
+  <data name="ScratchFast" xml:space="preserve">
+    <value>草稿</value>
+  </data>
+  <data name="SeedBomb" xml:space="preserve">
+    <value>种子炸弹</value>
+  </data>
+  <data name="ShadowBall" xml:space="preserve">
+    <value>影子球</value>
+  </data>
+  <data name="ShadowClaw" xml:space="preserve">
+    <value>快速阴影之爪</value>
+  </data>
+  <data name="ShadowClawFast" xml:space="preserve">
+    <value>阴影之爪</value>
+  </data>
+  <data name="ShadowPunch" xml:space="preserve">
+    <value>影子拳</value>
+  </data>
+  <data name="ShadowSneak" xml:space="preserve">
+    <value>阴影潜行</value>
+  </data>
+  <data name="SignalBeam" xml:space="preserve">
+    <value>信号光</value>
+  </data>
+  <data name="Slam" xml:space="preserve">
+    <value>大满贯</value>
+  </data>
+  <data name="Slash" xml:space="preserve">
+    <value>杠</value>
+  </data>
+  <data name="SludgeBomb" xml:space="preserve">
+    <value>污泥炸弹</value>
+  </data>
+  <data name="SludgeWave" xml:space="preserve">
+    <value>污泥波</value>
+  </data>
+  <data name="SolarBeam" xml:space="preserve">
+    <value>太阳光</value>
+  </data>
+  <data name="Spark" xml:space="preserve">
+    <value>攻击</value>
+  </data>
+  <data name="SparkFast" xml:space="preserve">
+    <value>快速星火</value>
+  </data>
+  <data name="Splash" xml:space="preserve">
+    <value>启动</value>
+  </data>
+  <data name="SplashFast" xml:space="preserve">
+    <value>启动</value>
+  </data>
+  <data name="SteelWing" xml:space="preserve">
+    <value>钢翼</value>
+  </data>
+  <data name="SteelWingFast" xml:space="preserve">
+    <value>钢翼</value>
+  </data>
+  <data name="Stomp" xml:space="preserve">
+    <value>跺脚</value>
+  </data>
+  <data name="StoneEdge" xml:space="preserve">
+    <value>石之边缘</value>
+  </data>
+  <data name="Struggle" xml:space="preserve">
+    <value>斗争</value>
+  </data>
+  <data name="Submission" xml:space="preserve">
+    <value>提交</value>
+  </data>
+  <data name="SuckerPunchFast" xml:space="preserve">
+    <value>空隙攻击</value>
+  </data>
+  <data name="Swift" xml:space="preserve">
+    <value>褐雨燕</value>
+  </data>
+  <data name="TackleFast" xml:space="preserve">
+    <value>处理</value>
+  </data>
+  <data name="Thunder" xml:space="preserve">
+    <value>雷</value>
+  </data>
+  <data name="Thunderbolt" xml:space="preserve">
+    <value>迅雷</value>
+  </data>
+  <data name="ThunderPunch" xml:space="preserve">
+    <value>雷拳</value>
+  </data>
+  <data name="ThunderShockFast" xml:space="preserve">
+    <value>雷电冲击</value>
+  </data>
+  <data name="Twineedle" xml:space="preserve">
+    <value>双针</value>
+  </data>
+  <data name="Twister" xml:space="preserve">
+    <value>缠绕</value>
+  </data>
+  <data name="VineWhipFast" xml:space="preserve">
+    <value>藤鞭</value>
+  </data>
+  <data name="WaterGunFast" xml:space="preserve">
+    <value>水炮</value>
+  </data>
+  <data name="WaterGunFastBlastoise" xml:space="preserve">
+    <value>水炮</value>
+  </data>
+  <data name="WaterPulse" xml:space="preserve">
+    <value>水脉波</value>
+  </data>
+  <data name="WingAttackFast" xml:space="preserve">
+    <value>翅膀攻击</value>
+  </data>
+  <data name="WrapGreen" xml:space="preserve">
+    <value>绿色包装</value>
+  </data>
+  <data name="WrapPink" xml:space="preserve">
+    <value>粉红色包装</value>
+  </data>
+  <data name="XScissor" xml:space="preserve">
+    <value>X 剪刀手</value>
+  </data>
+  <data name="ZenHeadbuttFast" xml:space="preserve">
+    <value>铁头大师</value>
+  </data>
 </root>

@@ -64,10 +64,10 @@ namespace PokemonGo_UWP.ViewModels
                 case GameMapNavigationModes.PokestopUpdate:
                     // We came here after the catching page so we need to restart map update timer and update player data. We also check for level up.                   
                     GameClient.ToggleUpdateTimer();
-                    await UpdatePlayerData();
+                    await UpdatePlayerData(true);
                     break;
                 case GameMapNavigationModes.PokemonUpdate:
-                    // As above + check for level up   
+                    // As above   
                     GameClient.ToggleUpdateTimer();
                     await UpdatePlayerData(true);
                     break;

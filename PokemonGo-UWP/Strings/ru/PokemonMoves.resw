@@ -12,4 +12,529 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Bite" xml:space="preserve">
+    <value>Укус</value>
+  </data>
+  <data name="CrossChop" xml:space="preserve">
+    <value>Поперечный удар</value>
+  </data>
+  <data name="DarkPulse" xml:space="preserve">
+    <value>Тёмный пульс</value>
+  </data>
+  <data name="Dig" xml:space="preserve">
+    <value>Копание</value>
+  </data>
+  <data name="DoubleSlap" xml:space="preserve">
+    <value>Двойной шлепок</value>
+  </data>
+  <data name="Ember" xml:space="preserve">
+    <value>Угли</value>
+  </data>
+  <data name="Flamethrower" xml:space="preserve">
+    <value>Огнемёт</value>
+  </data>
+  <data name="FlameWheel" xml:space="preserve">
+    <value>Огненное колесо</value>
+  </data>
+  <data name="HyperBeam" xml:space="preserve">
+    <value>Гипер Луч</value>
+  </data>
+  <data name="Lick" xml:space="preserve">
+    <value>Лизание</value>
+  </data>
+  <data name="LowKick" xml:space="preserve">
+    <value>Удар снизу</value>
+  </data>
+  <data name="Megahorn" xml:space="preserve">
+    <value>Большой рог</value>
+  </data>
+  <data name="MetalClaw" xml:space="preserve">
+    <value>Металлическая клешня</value>
+  </data>
+  <data name="Pound" xml:space="preserve">
+    <value>Колотушка</value>
+  </data>
+  <data name="PsychoCut" xml:space="preserve">
+    <value>Ментальный меч</value>
+  </data>
+  <data name="QuickAttack" xml:space="preserve">
+    <value>Быстрая атака</value>
+  </data>
+  <data name="RazorLeaf" xml:space="preserve">
+    <value>Режущий лист</value>
+  </data>
+  <data name="Scratch" xml:space="preserve">
+    <value>Царапанье</value>
+  </data>
+  <data name="Sludge" xml:space="preserve">
+    <value>Слизь</value>
+  </data>
+  <data name="Smog" xml:space="preserve">
+    <value>Ядовитый дым</value>
+  </data>
+  <data name="SuckerPunch" xml:space="preserve">
+    <value>Удар новичка</value>
+  </data>
+  <data name="Tackle" xml:space="preserve">
+    <value>Толчок</value>
+  </data>
+  <data name="TakeDown" xml:space="preserve">
+    <value>Таран</value>
+  </data>
+  <data name="ThunderShock" xml:space="preserve">
+    <value>Электрошок</value>
+  </data>
+  <data name="ViceGrip" xml:space="preserve">
+    <value>Клешня</value>
+  </data>
+  <data name="VineWhip" xml:space="preserve">
+    <value>Удар хлыстом</value>
+  </data>
+  <data name="WaterGun" xml:space="preserve">
+    <value>Водяное ружьё</value>
+  </data>
+  <data name="WingAttack" xml:space="preserve">
+    <value>Атака крыльями</value>
+  </data>
+  <data name="Wrap" xml:space="preserve">
+    <value>Оплетение</value>
+  </data>
+  <data name="Absorb" xml:space="preserve">
+    <value>Поглощение</value>
+  </data>
+  <data name="Acid" xml:space="preserve">
+    <value>Кислота</value>
+  </data>
+  <data name="AcidFast" xml:space="preserve">
+    <value>Быстрая кислота</value>
+  </data>
+  <data name="AerialAce" xml:space="preserve">
+    <value>Воздушный ас</value>
+  </data>
+  <data name="AirCutter" xml:space="preserve">
+    <value>Воздушное лезвие</value>
+  </data>
+  <data name="AirSlash" xml:space="preserve">
+    <value>Воздушный разрез</value>
+  </data>
+  <data name="AncientPower" xml:space="preserve">
+    <value>Древняя мощь</value>
+  </data>
+  <data name="AquaJet" xml:space="preserve">
+    <value>Водяная струя</value>
+  </data>
+  <data name="AquaTail" xml:space="preserve">
+    <value>Водяной хвост</value>
+  </data>
+  <data name="BiteFast" xml:space="preserve">
+    <value>Укус</value>
+  </data>
+  <data name="Blizzard" xml:space="preserve">
+    <value>Метель</value>
+  </data>
+  <data name="BodySlam" xml:space="preserve">
+    <value>Удар телом</value>
+  </data>
+  <data name="BoneClub" xml:space="preserve">
+    <value>Удар костью</value>
+  </data>
+  <data name="BrickBreak" xml:space="preserve">
+    <value>Прорыв барьера</value>
+  </data>
+  <data name="Brine" xml:space="preserve">
+    <value>Фонтан</value>
+  </data>
+  <data name="BubbleBeam" xml:space="preserve">
+    <value>Луч пузырей</value>
+  </data>
+  <data name="BubbleFast" xml:space="preserve">
+    <value>Быстрые пузыри</value>
+  </data>
+  <data name="BugBite" xml:space="preserve">
+    <value>Укус жука</value>
+  </data>
+  <data name="BugBiteFast" xml:space="preserve">
+    <value>Укус жука</value>
+  </data>
+  <data name="BugBuzz" xml:space="preserve">
+    <value>Жужжание</value>
+  </data>
+  <data name="Bulldoze" xml:space="preserve">
+    <value>Удар в землю</value>
+  </data>
+  <data name="BulletPunch" xml:space="preserve">
+    <value>Стремительный удар</value>
+  </data>
+  <data name="BulletPunchFast" xml:space="preserve">
+    <value>Стремительный удар</value>
+  </data>
+  <data name="ConfusionFast" xml:space="preserve">
+    <value>Путаница</value>
+  </data>
+  <data name="CrossPoison" xml:space="preserve">
+    <value>Ядовитый крест</value>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>Резка</value>
+  </data>
+  <data name="CutFast" xml:space="preserve">
+    <value>Резка</value>
+  </data>
+  <data name="DazzlingGleam" xml:space="preserve">
+    <value>Ошеломляющий луч</value>
+  </data>
+  <data name="DisarmingVoice" xml:space="preserve">
+    <value>Обезоруживающий Голос</value>
+  </data>
+  <data name="Discharge" xml:space="preserve">
+    <value>Разряд</value>
+  </data>
+  <data name="DragonBreath" xml:space="preserve">
+    <value>Дыхание Дракона</value>
+  </data>
+  <data name="DragonBreathFast" xml:space="preserve">
+    <value>Дыхание Дракона</value>
+  </data>
+  <data name="DragonClaw" xml:space="preserve">
+    <value>Драконий Коготь</value>
+  </data>
+  <data name="DragonPulse" xml:space="preserve">
+    <value>Драконий Пульс</value>
+  </data>
+  <data name="DrainingKiss" xml:space="preserve">
+    <value>Истощающий поцелуй</value>
+  </data>
+  <data name="DrillPeck" xml:space="preserve">
+    <value>Сверлящий клюв</value>
+  </data>
+  <data name="DrillRun" xml:space="preserve">
+    <value>Дрель</value>
+  </data>
+  <data name="Earthquake" xml:space="preserve">
+    <value>Землетрясение</value>
+  </data>
+  <data name="EmberFast" xml:space="preserve">
+    <value>Быстрые Угли</value>
+  </data>
+  <data name="FeintAttackFast" xml:space="preserve">
+    <value>Притворство</value>
+  </data>
+  <data name="FireBlast" xml:space="preserve">
+    <value>Пламенный залп</value>
+  </data>
+  <data name="FireFangFast" xml:space="preserve">
+    <value>Огненный клык</value>
+  </data>
+  <data name="FirePunch" xml:space="preserve">
+    <value>Огненный кулак</value>
+  </data>
+  <data name="FlameBurst" xml:space="preserve">
+    <value>Пламенный рывок</value>
+  </data>
+  <data name="FlameCharge" xml:space="preserve">
+    <value>Пламенный заряд</value>
+  </data>
+  <data name="FlashCannon" xml:space="preserve">
+    <value>Световая пушка</value>
+  </data>
+  <data name="FrostBreath" xml:space="preserve">
+    <value>Холодное дыхание</value>
+  </data>
+  <data name="FrostBreathFast" xml:space="preserve">
+    <value>Холодное дыхание</value>
+  </data>
+  <data name="FuryCutter" xml:space="preserve">
+    <value>Лезвие ярости</value>
+  </data>
+  <data name="FuryCutterFast" xml:space="preserve">
+    <value>Лезвие ярости</value>
+  </data>
+  <data name="GigaDrain" xml:space="preserve">
+    <value>Иссушение</value>
+  </data>
+  <data name="GunkShot" xml:space="preserve">
+    <value>Струя яда</value>
+  </data>
+  <data name="Headbutt" xml:space="preserve">
+    <value>Лобовая атака</value>
+  </data>
+  <data name="HeartStamp" xml:space="preserve">
+    <value>Сердечное клеймо</value>
+  </data>
+  <data name="HeatWave" xml:space="preserve">
+    <value>Волна жара</value>
+  </data>
+  <data name="HornAttack" xml:space="preserve">
+    <value>Атака рогом</value>
+  </data>
+  <data name="Hurricane" xml:space="preserve">
+    <value>Ураган</value>
+  </data>
+  <data name="HydroPump" xml:space="preserve">
+    <value>Гидронасос</value>
+  </data>
+  <data name="HydroPumpBlastoise" xml:space="preserve">
+    <value>Гидронасос</value>
+  </data>
+  <data name="HyperFang" xml:space="preserve">
+    <value>Гиперклык</value>
+  </data>
+  <data name="IceBeam" xml:space="preserve">
+    <value>Ледяной луч</value>
+  </data>
+  <data name="IcePunch" xml:space="preserve">
+    <value>Ледяной кулак</value>
+  </data>
+  <data name="IceShard" xml:space="preserve">
+    <value>Ледяной осколок</value>
+  </data>
+  <data name="IceShardFast" xml:space="preserve">
+    <value>Ледяной осколок</value>
+  </data>
+  <data name="IcyWind" xml:space="preserve">
+    <value>Холодный воздух</value>
+  </data>
+  <data name="IronHead" xml:space="preserve">
+    <value>Стальная голова</value>
+  </data>
+  <data name="KarateChop" xml:space="preserve">
+    <value>Удар каратиста</value>
+  </data>
+  <data name="KarateChopFast" xml:space="preserve">
+    <value>Удар каратиста</value>
+  </data>
+  <data name="LeafBlade" xml:space="preserve">
+    <value>Лиственный меч</value>
+  </data>
+  <data name="LickFast" xml:space="preserve">
+    <value>Быстрое облизывание</value>
+  </data>
+  <data name="LowKickFast" xml:space="preserve">
+    <value>Удар снизу</value>
+  </data>
+  <data name="LowSweep" xml:space="preserve">
+    <value>Трение</value>
+  </data>
+  <data name="MagnetBomb" xml:space="preserve">
+    <value>Магнитная бомба</value>
+  </data>
+  <data name="MegaDrain" xml:space="preserve">
+    <value>Мега Истощение</value>
+  </data>
+  <data name="MetalClawFast" xml:space="preserve">
+    <value>Металлическая клешня</value>
+  </data>
+  <data name="Moonblast" xml:space="preserve">
+    <value>Лунный выстрел</value>
+  </data>
+  <data name="MudBomb" xml:space="preserve">
+    <value>Глиняная бомба</value>
+  </data>
+  <data name="MudShot" xml:space="preserve">
+    <value>Выстрел глиной</value>
+  </data>
+  <data name="MudShotFast" xml:space="preserve">
+    <value>Выстрел глиной</value>
+  </data>
+  <data name="MudSlapFast" xml:space="preserve">
+    <value>Глиняный удар</value>
+  </data>
+  <data name="NightSlash" xml:space="preserve">
+    <value>Удар из тьмы</value>
+  </data>
+  <data name="OminousWind" xml:space="preserve">
+    <value>Зловещий ветер</value>
+  </data>
+  <data name="ParabolicCharge" xml:space="preserve">
+    <value>Параболический заряд</value>
+  </data>
+  <data name="Peck" xml:space="preserve">
+    <value>Клевок</value>
+  </data>
+  <data name="PeckFast" xml:space="preserve">
+    <value>Клевок</value>
+  </data>
+  <data name="PetalBlizzard" xml:space="preserve">
+    <value>Липестковая метель</value>
+  </data>
+  <data name="PlayRough" xml:space="preserve">
+    <value>Грубая игра</value>
+  </data>
+  <data name="PoisonFang" xml:space="preserve">
+    <value>Ядовитый клык</value>
+  </data>
+  <data name="PoisonJab" xml:space="preserve">
+    <value>Отравляющий удар</value>
+  </data>
+  <data name="PoisonJabFast" xml:space="preserve">
+    <value>Отравляющий удар</value>
+  </data>
+  <data name="PoisonStingFast" xml:space="preserve">
+    <value>Ядовитое жало</value>
+  </data>
+  <data name="PoundFast" xml:space="preserve">
+    <value>Колотушка</value>
+  </data>
+  <data name="PowerGem" xml:space="preserve">
+    <value>Драгоценность</value>
+  </data>
+  <data name="PowerWhip" xml:space="preserve">
+    <value>Удар хлыстом</value>
+  </data>
+  <data name="Psybeam" xml:space="preserve">
+    <value>Пси-луч</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Сила мысли</value>
+  </data>
+  <data name="PsychoCutFast" xml:space="preserve">
+    <value>Ментальный меч</value>
+  </data>
+  <data name="Psyshock" xml:space="preserve">
+    <value>Пси-шок</value>
+  </data>
+  <data name="Psystrike" xml:space="preserve">
+    <value>Пси-нападение</value>
+  </data>
+  <data name="QuickAttackFast" xml:space="preserve">
+    <value>Быстрая атака</value>
+  </data>
+  <data name="RazorLeafFast" xml:space="preserve">
+    <value>Режущий лист</value>
+  </data>
+  <data name="Rest" xml:space="preserve">
+    <value>Отдых</value>
+  </data>
+  <data name="RockSlide" xml:space="preserve">
+    <value>Обвал</value>
+  </data>
+  <data name="RockSmashFast" xml:space="preserve">
+    <value>Разбивание скалы</value>
+  </data>
+  <data name="RockThrow" xml:space="preserve">
+    <value>Бросок камня</value>
+  </data>
+  <data name="RockThrowFast" xml:space="preserve">
+    <value>Бросок камня</value>
+  </data>
+  <data name="RockTomb" xml:space="preserve">
+    <value>Каменный склеп</value>
+  </data>
+  <data name="Scald" xml:space="preserve">
+    <value>Ожог</value>
+  </data>
+  <data name="ScaldBlastoise" xml:space="preserve">
+    <value>Ожог</value>
+  </data>
+  <data name="ScratchFast" xml:space="preserve">
+    <value>Царапание</value>
+  </data>
+  <data name="SeedBomb" xml:space="preserve">
+    <value>Зерно-бомба</value>
+  </data>
+  <data name="ShadowBall" xml:space="preserve">
+    <value>Теневой шар</value>
+  </data>
+  <data name="ShadowClaw" xml:space="preserve">
+    <value>Теневой коготь</value>
+  </data>
+  <data name="ShadowClawFast" xml:space="preserve">
+    <value>Теневой коготь</value>
+  </data>
+  <data name="ShadowPunch" xml:space="preserve">
+    <value>Теневой удар</value>
+  </data>
+  <data name="ShadowSneak" xml:space="preserve">
+    <value>Ночная кража</value>
+  </data>
+  <data name="SignalBeam" xml:space="preserve">
+    <value>Сигнальный луч</value>
+  </data>
+  <data name="Slam" xml:space="preserve">
+    <value>Тяжёлый удар</value>
+  </data>
+  <data name="Slash" xml:space="preserve">
+    <value>Разрез</value>
+  </data>
+  <data name="SludgeBomb" xml:space="preserve">
+    <value>Грязевая бомба</value>
+  </data>
+  <data name="SludgeWave" xml:space="preserve">
+    <value>Грязевая волна</value>
+  </data>
+  <data name="SolarBeam" xml:space="preserve">
+    <value>Солнечный луч</value>
+  </data>
+  <data name="Spark" xml:space="preserve">
+    <value>Искры</value>
+  </data>
+  <data name="SparkFast" xml:space="preserve">
+    <value>Стальное кольцо</value>
+  </data>
+  <data name="Splash" xml:space="preserve">
+    <value>Барахтанье</value>
+  </data>
+  <data name="SplashFast" xml:space="preserve">
+    <value>Барахтанье </value>
+  </data>
+  <data name="SteelWing" xml:space="preserve">
+    <value>Стальное кольцо</value>
+  </data>
+  <data name="SteelWingFast" xml:space="preserve">
+    <value>Стальное кольцо</value>
+  </data>
+  <data name="Stomp" xml:space="preserve">
+    <value>Топот</value>
+  </data>
+  <data name="StoneEdge" xml:space="preserve">
+    <value>Край скалы</value>
+  </data>
+  <data name="Struggle" xml:space="preserve">
+    <value>Борьба</value>
+  </data>
+  <data name="Submission" xml:space="preserve">
+    <value>Подчинение</value>
+  </data>
+  <data name="SuckerPunchFast" xml:space="preserve">
+    <value>Удар новичка</value>
+  </data>
+  <data name="Swift" xml:space="preserve">
+    <value>Звёзды</value>
+  </data>
+  <data name="TackleFast" xml:space="preserve">
+    <value>Толчок</value>
+  </data>
+  <data name="Thunder" xml:space="preserve">
+    <value>Шторм</value>
+  </data>
+  <data name="ThunderShockFast" xml:space="preserve">
+    <value>Электрошок</value>
+  </data>
+  <data name="Twineedle" xml:space="preserve">
+    <value>Двойная игла</value>
+  </data>
+  <data name="Twister" xml:space="preserve">
+    <value>Смерч</value>
+  </data>
+  <data name="VineWhipFast" xml:space="preserve">
+    <value>Удар плетью</value>
+  </data>
+  <data name="WaterGunFast" xml:space="preserve">
+    <value>Водяное ружьё</value>
+  </data>
+  <data name="WaterGunFastBlastoise" xml:space="preserve">
+    <value>Водяное ружьё</value>
+  </data>
+  <data name="WaterPulse" xml:space="preserve">
+    <value>Водный пульс</value>
+  </data>
+  <data name="WingAttackFast" xml:space="preserve">
+    <value>Атака крыльями</value>
+  </data>
+  <data name="XScissor" xml:space="preserve">
+    <value>Ножницы</value>
+  </data>
+  <data name="ZenHeadbuttFast" xml:space="preserve">
+    <value>Ясный удар</value>
+  </data>
 </root>

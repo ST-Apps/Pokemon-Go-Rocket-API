@@ -12,4 +12,63 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DateFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
+  <data name="DateTimeFormat" xml:space="preserve">
+    <value>dd.MM.yyyy hh:mm tt</value>
+  </data>
+  <data name="GettingGpsSignalText" xml:space="preserve">
+    <value>A procurar GPS...</value>
+  </data>
+  <data name="GettingUserDataText" xml:space="preserve">
+    <value>A obter dados de utilizador...</value>
+  </data>
+  <data name="GoogleErrorText" xml:space="preserve">
+    <value>Google retornou o erro:</value>
+  </data>
+  <data name="GoogleNotRespondingText" xml:space="preserve">
+    <value>Google não está a responder, tenta outra vez.</value>
+  </data>
+  <data name="LoggingInText" xml:space="preserve">
+    <value>A iniciar sessão...</value>
+  </data>
+  <data name="LoginFailedText" xml:space="preserve">
+    <value>Não conseguimos iniciar sessão, tenta outra vez.</value>
+  </data>
+  <data name="NoText" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="NoGpsPermissionsText" xml:space="preserve">
+    <value>Precisamos de autorização para usar a sua localização, por favor ative-a e tente outra vez.</value>
+  </data>
+  <data name="PokemonRanAwayText" xml:space="preserve">
+    <value>Pokemon fugiu :(</value>
+  </data>
+  <data name="PtcDownText" xml:space="preserve">
+    <value>PTC está em baixo, tenta depois</value>
+  </data>
+  <data name="UpdateDownloadingText" xml:space="preserve">
+    <value>A fazer download de atualizações{0}</value>
+  </data>
+  <data name="UpdatedVersionText" xml:space="preserve">
+    <value>Uma nova versão {0} está disponivel. Quer atualizar?
+{1}</value>
+  </data>
+  <data name="UpdateFailedText" xml:space="preserve">
+    <value>Falha na atualização : {0}
+Quer abrir a página com os ficheiros para uma atualização manual?</value>
+  </data>
+  <data name="UpdateInstallingText" xml:space="preserve">
+    <value>A instalar atualização, aplicação a reiniciar</value>
+  </data>
+  <data name="WrongUsernameText" xml:space="preserve">
+    <value>Username/password errados ou servidor ofline, tenta outra vez.</value>
+  </data>
+  <data name="YesText" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="NoTeamText" xml:space="preserve">
+    <value>Sem equipa</value>
+  </data>
 </root>

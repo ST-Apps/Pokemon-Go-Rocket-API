@@ -8,7 +8,7 @@
       <group id="POKEMONGO-UWP/STRINGS/EN-US/ACHIEVEMENTS.RESW" datatype="resx">
         <trans-unit id="BadgeBattleAttackWon" translate="yes" xml:space="preserve">
           <source>Battle Girl</source>
-          <target state="new">Battle Girl</target>
+          <target state="final">Rapariga da Batalha</target>
         </trans-unit>
         <trans-unit id="BadgeBattleTrainingWon" translate="yes" xml:space="preserve">
           <source>Ace Trainer</source>
@@ -16,19 +16,19 @@
         </trans-unit>
         <trans-unit id="BadgeBigMagikarp" translate="yes" xml:space="preserve">
           <source>Fisherman</source>
-          <target state="new">Fisherman</target>
+          <target state="final">Pescador</target>
         </trans-unit>
         <trans-unit id="BadgeCaptureTotal" translate="yes" xml:space="preserve">
           <source>Collector</source>
-          <target state="new">Collector</target>
+          <target state="final">Colecionador</target>
         </trans-unit>
         <trans-unit id="BadgeEvolvedTotal" translate="yes" xml:space="preserve">
           <source>Scientist</source>
-          <target state="new">Scientist</target>
+          <target state="final">Cientista</target>
         </trans-unit>
         <trans-unit id="BadgeHatchedTotal" translate="yes" xml:space="preserve">
           <source>Breeder</source>
-          <target state="new">Breeder</target>
+          <target state="final">Reprodutor</target>
         </trans-unit>
         <trans-unit id="BadgePikachu" translate="yes" xml:space="preserve">
           <source>Pikachu</source>
@@ -44,7 +44,7 @@
         </trans-unit>
         <trans-unit id="BadgeSmallRattata" translate="yes" xml:space="preserve">
           <source>Youngster</source>
-          <target state="new">Youngster</target>
+          <target state="translated">Something went wrong and app may be unstable now. Do you want to logout and try again?</target>
         </trans-unit>
         <trans-unit id="BadgeTravelKm" translate="yes" xml:space="preserve">
           <source>Jogger</source>
@@ -64,7 +64,7 @@
         </trans-unit>
         <trans-unit id="Fairy" translate="yes" xml:space="preserve">
           <source>Fairy Tale Girl</source>
-          <target state="new">Fairy Tale Girl</target>
+          <target state="final">Rapariga de conto de fadas</target>
         </trans-unit>
         <trans-unit id="Fighting" translate="yes" xml:space="preserve">
           <source>Black Belt</source>
@@ -76,7 +76,7 @@
         </trans-unit>
         <trans-unit id="Flying" translate="yes" xml:space="preserve">
           <source>Bird Keeper</source>
-          <target state="new">Bird Keeper</target>
+          <target state="final">Guardião de pássaros</target>
         </trans-unit>
         <trans-unit id="Ghost" translate="yes" xml:space="preserve">
           <source>Hex Maniac</source>
@@ -84,7 +84,7 @@
         </trans-unit>
         <trans-unit id="Grass" translate="yes" xml:space="preserve">
           <source>Gardener</source>
-          <target state="new">Gardener</target>
+          <target state="final">Jardineiro</target>
         </trans-unit>
         <trans-unit id="Ground" translate="yes" xml:space="preserve">
           <source>Ruin Maniac</source>
@@ -96,7 +96,7 @@
         </trans-unit>
         <trans-unit id="Normal" translate="yes" xml:space="preserve">
           <source>School Kid</source>
-          <target state="new">School Kid</target>
+          <target state="final">Rapaz da escola</target>
         </trans-unit>
         <trans-unit id="Poison" translate="yes" xml:space="preserve">
           <source>Punk Girl</source>
@@ -104,7 +104,7 @@
         </trans-unit>
         <trans-unit id="Psychic" translate="yes" xml:space="preserve">
           <source>Psychic</source>
-          <target state="new">Psychic</target>
+          <target state="final">Psíquico</target>
         </trans-unit>
         <trans-unit id="Rock" translate="yes" xml:space="preserve">
           <source>Hiker</source>
@@ -116,7 +116,119 @@
         </trans-unit>
         <trans-unit id="Water" translate="yes" xml:space="preserve">
           <source>Swimmer</source>
-          <target state="new">Swimmer</target>
+          <target state="final">Nadador</target>
+        </trans-unit>
+        <trans-unit id="BadgeBattleAttackWonDescription" translate="yes" xml:space="preserve">
+          <source>Won {0} gym battles</source>
+          <target state="new">Won {0} gym battles</target>
+        </trans-unit>
+        <trans-unit id="BadgeBattleTrainingWonDescription" translate="yes" xml:space="preserve">
+          <source>Won {0} training battles</source>
+          <target state="new">Won {0} training battles</target>
+        </trans-unit>
+        <trans-unit id="BadgeBigMagikarpDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Magikarp</source>
+          <target state="new">Caught {0} Magikarp</target>
+        </trans-unit>
+        <trans-unit id="BadgeCaptureTotalDescription" translate="yes" xml:space="preserve">
+          <source>Captured {0} Pokemon</source>
+          <target state="new">Captured {0} Pokemon</target>
+        </trans-unit>
+        <trans-unit id="BadgeEvolvedTotalDescription" translate="yes" xml:space="preserve">
+          <source>Evolved [x] Pokémon</source>
+          <target state="new">Evolved [x] Pokémon</target>
+        </trans-unit>
+        <trans-unit id="BadgeHatchedTotalDescription" translate="yes" xml:space="preserve">
+          <source>Hatched {x} Pokemon</source>
+          <target state="new">Hatched {x} Pokemon</target>
+        </trans-unit>
+        <trans-unit id="BadgePikachuDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Pikachu</source>
+          <target state="new">Caught {0} Pikachu</target>
+        </trans-unit>
+        <trans-unit id="BadgePokedexEntriesDescription" translate="yes" xml:space="preserve">
+          <source>Registered {0} Pokemon in the Pokedex</source>
+          <target state="new">Registered {0} Pokemon in the Pokedex</target>
+        </trans-unit>
+        <trans-unit id="BadgePokestopsVisitedDescription" translate="yes" xml:space="preserve">
+          <source>Visited {0} Pokestops</source>
+          <target state="new">Visited {0} Pokestops</target>
+        </trans-unit>
+        <trans-unit id="BadgeSmallRattataDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Rattata</source>
+          <target state="new">Caught {0} Rattata</target>
+        </trans-unit>
+        <trans-unit id="BadgeTravelKmDescription" translate="yes" xml:space="preserve">
+          <source>Walked {0} km</source>
+          <target state="new">Walked {0} km</target>
+        </trans-unit>
+        <trans-unit id="BugDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Bug Pokemon</source>
+          <target state="new">Caught {0} Bug Pokemon</target>
+        </trans-unit>
+        <trans-unit id="DragonDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Dragon Pokemon</source>
+          <target state="new">Caught {0} Dragon Pokemon</target>
+        </trans-unit>
+        <trans-unit id="ElectricDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Electric Pokemon</source>
+          <target state="new">Caught {0} Electric Pokemon</target>
+        </trans-unit>
+        <trans-unit id="FairyDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Fairy Pokemon</source>
+          <target state="new">Caught {0} Fairy Pokemon</target>
+        </trans-unit>
+        <trans-unit id="FightingDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Fighting Pokemon</source>
+          <target state="new">Caught {0} Fighting Pokemon</target>
+        </trans-unit>
+        <trans-unit id="FireDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Fire Pokemon</source>
+          <target state="new">Caught {0} Fire Pokemon</target>
+        </trans-unit>
+        <trans-unit id="FlyingDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Flying Pokemon</source>
+          <target state="new">Caught {0} Flying Pokemon</target>
+        </trans-unit>
+        <trans-unit id="GhostDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Ghost Pokemon</source>
+          <target state="new">Caught {0} Ghost Pokemon</target>
+        </trans-unit>
+        <trans-unit id="GrassDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Grass Pokemon</source>
+          <target state="new">Caught {0} Grass Pokemon</target>
+        </trans-unit>
+        <trans-unit id="GroundDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Ground Pokemon</source>
+          <target state="new">Caught {0} Ground Pokemon</target>
+        </trans-unit>
+        <trans-unit id="IceDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Ice Pokemon</source>
+          <target state="new">Caught {0} Ice Pokemon</target>
+        </trans-unit>
+        <trans-unit id="NormalDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Normal Pokemon</source>
+          <target state="new">Caught {0} Normal Pokemon</target>
+        </trans-unit>
+        <trans-unit id="PoisonDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Poison Pokemon</source>
+          <target state="new">Caught {0} Poison Pokemon</target>
+        </trans-unit>
+        <trans-unit id="PsychicDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Psychic Pokemon</source>
+          <target state="new">Caught {0} Psychic Pokemon</target>
+        </trans-unit>
+        <trans-unit id="RockDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Rock Pokemon</source>
+          <target state="new">Caught {0} Rock Pokemon</target>
+        </trans-unit>
+        <trans-unit id="SteelDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Steel Pokemon</source>
+          <target state="new">Caught {0} Steel Pokemon</target>
+        </trans-unit>
+        <trans-unit id="WaterDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Water Pokemon</source>
+          <target state="new">Caught {0} Water Pokemon</target>
         </trans-unit>
       </group>
     </body>
@@ -129,11 +241,11 @@
       <group id="POKEMONGO-UWP/STRINGS/EN-US/CODERESOURCES.RESW" datatype="resx">
         <trans-unit id="DateFormat" translate="yes" xml:space="preserve">
           <source>dd.MM.yyyy</source>
-          <target state="new">dd.MM.yyyy</target>
+          <target state="final">dd.MM.yyyy</target>
         </trans-unit>
         <trans-unit id="DateTimeFormat" translate="yes" xml:space="preserve">
           <source>dd.MM.yyyy hh:mm tt</source>
-          <target state="new">dd.MM.yyyy hh:mm tt</target>
+          <target state="final">dd.MM.yyyy hh:mm tt</target>
         </trans-unit>
         <trans-unit id="PokemonFledText" translate="yes" xml:space="preserve">
           <source>{0} fled</source>
@@ -141,19 +253,19 @@
         </trans-unit>
         <trans-unit id="GettingGpsSignalText" translate="yes" xml:space="preserve">
           <source>Getting GPS signal...</source>
-          <target state="new">Getting GPS signal...</target>
+          <target state="final">A procurar GPS...</target>
         </trans-unit>
         <trans-unit id="GettingUserDataText" translate="yes" xml:space="preserve">
           <source>Getting user data...</source>
-          <target state="new">Getting user data...</target>
+          <target state="final">A obter dados de utilizador...</target>
         </trans-unit>
         <trans-unit id="GoogleErrorText" translate="yes" xml:space="preserve">
           <source>Google returned error: </source>
-          <target state="new">Google returned error: </target>
+          <target state="final">Google retornou o erro:</target>
         </trans-unit>
         <trans-unit id="GoogleNotRespondingText" translate="yes" xml:space="preserve">
           <source>Google is not responding, please try again later.</source>
-          <target state="new">Google is not responding, please try again later.</target>
+          <target state="final">Google não está a responder, tenta outra vez.</target>
         </trans-unit>
         <trans-unit id="LoadingEncounterText" translate="yes" xml:space="preserve">
           <source>Loading encounter with {0}</source>
@@ -161,27 +273,27 @@
         </trans-unit>
         <trans-unit id="LoggingInText" translate="yes" xml:space="preserve">
           <source>Logging in...</source>
-          <target state="new">Logging in...</target>
+          <target state="final">A iniciar sessão...</target>
         </trans-unit>
         <trans-unit id="LoginFailedText" translate="yes" xml:space="preserve">
           <source>Login failed, please try again.</source>
-          <target state="new">Login failed, please try again.</target>
+          <target state="final">Não conseguimos iniciar sessão, tenta outra vez.</target>
         </trans-unit>
         <trans-unit id="NoText" translate="yes" xml:space="preserve">
           <source>No</source>
-          <target state="new">No</target>
+          <target state="final">Não</target>
         </trans-unit>
         <trans-unit id="NoGpsPermissionsText" translate="yes" xml:space="preserve">
           <source>We need GPS permissions to run the game, please enable it and try again.</source>
-          <target state="new">We need GPS permissions to run the game, please enable it and try again.</target>
+          <target state="final">Precisamos de autorização para usar a sua localização, por favor ative-a e tente outra vez.</target>
         </trans-unit>
         <trans-unit id="PokemonRanAwayText" translate="yes" xml:space="preserve">
           <source>Pokemon ran away, sorry :(</source>
-          <target state="new">Pokemon ran away, sorry :(</target>
+          <target state="final">Pokemon fugiu :(</target>
         </trans-unit>
         <trans-unit id="PtcDownText" translate="yes" xml:space="preserve">
           <source>PTC login is probably down, please retry later.</source>
-          <target state="new">PTC login is probably down, please retry later.</target>
+          <target state="final">PTC está em baixo, tenta depois</target>
         </trans-unit>
         <trans-unit id="SomethingWentWrongText" translate="yes" xml:space="preserve">
           <source>Something went wrong and app may be unstable now. Do you want to logout and try again?</source>
@@ -193,31 +305,31 @@
         </trans-unit>
         <trans-unit id="UpdateDownloadingText" translate="yes" xml:space="preserve">
           <source>Downloading update {0}</source>
-          <target state="new">Downloading update {0}</target>
+          <target state="final">A fazer download de atualizações{0}</target>
         </trans-unit>
         <trans-unit id="UpdatedVersionText" translate="yes" xml:space="preserve">
           <source>An updated version {0} is available. Do you want to update?
 {1}</source>
-          <target state="new">An updated version {0} is available. Do you want to update?
+          <target state="final">Uma nova versão {0} está disponivel. Quer atualizar?
 {1}</target>
         </trans-unit>
         <trans-unit id="UpdateFailedText" translate="yes" xml:space="preserve">
           <source>Update failed: {0}
 Open page with installation files for manual install?</source>
-          <target state="new">Update failed: {0}
-Open page with installation files for manual install?</target>
+          <target state="final">Falha na atualização : {0}
+Quer abrir a página com os ficheiros para uma atualização manual?</target>
         </trans-unit>
         <trans-unit id="UpdateInstallingText" translate="yes" xml:space="preserve">
           <source>Installing update, app is restarting...</source>
-          <target state="new">Installing update, app is restarting...</target>
+          <target state="final">A instalar atualização, aplicação a reiniciar</target>
         </trans-unit>
         <trans-unit id="WrongUsernameText" translate="yes" xml:space="preserve">
           <source>Wrong username/password or offline server, please try again.</source>
-          <target state="new">Wrong username/password or offline server, please try again.</target>
+          <target state="final">Username/password errados ou servidor ofline, tenta outra vez.</target>
         </trans-unit>
         <trans-unit id="YesText" translate="yes" xml:space="preserve">
           <source>Yes</source>
-          <target state="new">Yes</target>
+          <target state="final">Sim</target>
         </trans-unit>
         <trans-unit id="InstinctTeamText" translate="yes" xml:space="preserve">
           <source>Instinct</source>
@@ -225,7 +337,7 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="NoTeamText" translate="yes" xml:space="preserve">
           <source>No Team</source>
-          <target state="new">No Team</target>
+          <target state="final">Sem equipa</target>
         </trans-unit>
         <trans-unit id="ValorTeamText" translate="yes" xml:space="preserve">
           <source>Valor</source>
@@ -234,6 +346,14 @@ Open page with installation files for manual install?</target>
         <trans-unit id="MysticTeamText" translate="yes" xml:space="preserve">
           <source>Mystic</source>
           <target state="new">Mystic</target>
+        </trans-unit>
+        <trans-unit id="TransferPokemonSuccessText" translate="yes" xml:space="preserve">
+          <source>Transfer succeeded! Got a {0} Candy from the Professor.</source>
+          <target state="new">Transfer succeeded! Got a {0} Candy from the Professor.</target>
+        </trans-unit>
+        <trans-unit id="TransferPokemonWarningText" translate="yes" xml:space="preserve">
+          <source>You can't take it back after it's transferred to the Professor. Do you really want to transfer {0} to the Professor?</source>
+          <target state="new">You can't take it back after it's transferred to the Professor. Do you really want to transfer {0} to the Professor?</target>
         </trans-unit>
       </group>
     </body>
@@ -246,7 +366,7 @@ Open page with installation files for manual install?</target>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/RESOURCES.RESW" datatype="resx">
         <trans-unit id="CooldownTextBlock.Text" translate="yes" xml:space="preserve">
           <source>You have to wait some time</source>
-          <target state="new">You have to wait some time</target>
+          <target state="final">Tens que esperar algum tempo</target>
         </trans-unit>
         <trans-unit id="GoogleLoginTextBlock.Text" translate="yes" xml:space="preserve">
           <source>GOOGLE</source>
@@ -254,67 +374,67 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="InventoryFullTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Your inventory is full!</source>
-          <target state="new">Your inventory is full!</target>
+          <target state="final">O teu inventário está cheio!</target>
         </trans-unit>
         <trans-unit id="PtcLoginTextBlock.Text" translate="yes" xml:space="preserve">
           <source>LOGIN with PTC Account</source>
-          <target state="new">LOGIN with PTC Account</target>
+          <target state="final">INICIAR SESSÃO com a conta PTC</target>
         </trans-unit>
         <trans-unit id="LoginDisclaimerTextBox.Text" translate="yes" xml:space="preserve">
           <source>To login you need to insert your Username/Email and Password in this app. If you don't trust it, please, close it before going on. We are not responsible for anything.</source>
-          <target state="new">To login you need to insert your Username/Email and Password in this app. If you don't trust it, please, close it before going on. We are not responsible for anything.</target>
+          <target state="translated">To login you need to insert your Username/Email and Password in this app. If you don't trust it, please, close it before going on. We are not responsible for anything.</target>
         </trans-unit>
         <trans-unit id="NearbyPokemonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>nearby</source>
-          <target state="new">nearby</target>
+          <target state="final">perto</target>
         </trans-unit>
         <trans-unit id="OutOfRangeTextBlock.Text" translate="yes" xml:space="preserve">
           <source>You are out of range</source>
-          <target state="new">You are out of range</target>
+          <target state="final">Estás fora do raio de alcance</target>
         </trans-unit>
         <trans-unit id="LoginPasswordPasswordBox.PlaceholderText" translate="yes" xml:space="preserve">
           <source>Password</source>
-          <target state="new">Password</target>
+          <target state="final">Senha</target>
         </trans-unit>
         <trans-unit id="LoginUsernameTextBox.PlaceholderText" translate="yes" xml:space="preserve">
           <source>Username/email</source>
-          <target state="new">Username/email</target>
+          <target state="final">Username/email</target>
         </trans-unit>
         <trans-unit id="ExperienceTextBlock.Text" translate="yes" xml:space="preserve">
           <source>XP</source>
-          <target state="new">XP</target>
+          <target state="final">XP</target>
         </trans-unit>
         <trans-unit id="OkButton.Content" translate="yes" xml:space="preserve">
           <source>OK</source>
-          <target state="new">OK</target>
+          <target state="final">OK</target>
         </trans-unit>
         <trans-unit id="CpTextBlock.Text" translate="yes" xml:space="preserve">
           <source>CP</source>
-          <target state="new">CP</target>
+          <target state="final">CP</target>
         </trans-unit>
         <trans-unit id="EggsTextBlock.Text" translate="yes" xml:space="preserve">
           <source>EGGS</source>
-          <target state="new">EGGS</target>
+          <target state="final">OVOS</target>
         </trans-unit>
-        <trans-unit id="MusicTextBlock.Text" translate="yes" xml:space="preserve">
+        <trans-unit id="SettingsMusicTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Music</source>
-          <target state="new">Music</target>
+          <target state="final">Música</target>
         </trans-unit>
         <trans-unit id="PokemonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>POKÉMON</source>
-          <target state="new">POKÉMON</target>
+          <target state="final">POKÉMON</target>
         </trans-unit>
         <trans-unit id="SettingsHeaderTextBlock.Text" translate="yes" xml:space="preserve">
           <source>SETTINGS</source>
-          <target state="new">SETTINGS</target>
+          <target state="final">DEFINIÇÕES</target>
         </trans-unit>
-        <trans-unit id="SignOutTextBlock.Text" translate="yes" xml:space="preserve">
+        <trans-unit id="SettingsSignOutTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Sign Out</source>
-          <target state="new">Sign Out</target>
+          <target state="final">Terminar Sessão</target>
         </trans-unit>
-        <trans-unit id="VibrationTextBlock.Text" translate="yes" xml:space="preserve">
+        <trans-unit id="SettingsVibrationTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Vibration</source>
-          <target state="new">Vibration</target>
+          <target state="final">Vibração</target>
         </trans-unit>
         <trans-unit id="ItemsTextBlock.Text" translate="yes" xml:space="preserve">
           <source>ITEMS</source>
@@ -322,7 +442,7 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="PokedexTextBlock.Text" translate="yes" xml:space="preserve">
           <source>POKÉDEX</source>
-          <target state="new">POKÉDEX</target>
+          <target state="final">POKÉDEX</target>
         </trans-unit>
         <trans-unit id="LowercaseItemsTextBlock.Text" translate="yes" xml:space="preserve">
           <source>items</source>
@@ -347,47 +467,47 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="LevelUpTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Level up!</source>
-          <target state="new">Level up!</target>
+          <target state="final">Novo nivel!</target>
         </trans-unit>
         <trans-unit id="LevelTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Level</source>
-          <target state="new">Level</target>
+          <target state="final">Nivel</target>
         </trans-unit>
-        <trans-unit id="MapAutoRotateTextBlock.Text" translate="yes" xml:space="preserve">
+        <trans-unit id="SettingsMapAutoRotateTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Auto-Rotate Map</source>
-          <target state="new">Auto-Rotate Map</target>
+          <target state="translated"></target>
         </trans-unit>
         <trans-unit id="StartDateTextBlock.Text" translate="yes" xml:space="preserve">
           <source>START DATE</source>
-          <target state="new">START DATE</target>
+          <target state="final">DATA DE INICIO</target>
         </trans-unit>
         <trans-unit id="IncubatorsTextBlock.Text" translate="yes" xml:space="preserve">
           <source>INCUBATORS</source>
-          <target state="new">INCUBATORS</target>
+          <target state="final">INCUBADORAS</target>
         </trans-unit>
-        <trans-unit id="UseNianticMapTextBlock.Text" translate="yes" xml:space="preserve">
-          <source>Niantic map</source>
-          <target state="new">Niantic map</target>
+        <trans-unit id="SettingsUseNianticMapTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Use Niantic Map</source>
+          <target state="new">Mapa Niantic</target>
         </trans-unit>
         <trans-unit id="HpTextBlock.Text" translate="yes" xml:space="preserve">
           <source>HP </source>
-          <target state="new">HP </target>
+          <target state="final">HP </target>
         </trans-unit>
         <trans-unit id="TypeTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Type</source>
-          <target state="new">Type</target>
+          <target state="final">Tipo</target>
         </trans-unit>
         <trans-unit id="KgTextBlock.Text" translate="yes" xml:space="preserve">
           <source>kg</source>
-          <target state="new">kg</target>
+          <target state="final">kg</target>
         </trans-unit>
         <trans-unit id="WeightTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Weight</source>
-          <target state="new">Weight</target>
+          <target state="final">Peso</target>
         </trans-unit>
         <trans-unit id="HeightTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Height</source>
-          <target state="new">Height</target>
+          <target state="final">Altura</target>
         </trans-unit>
         <trans-unit id="MTextBlock.Text" translate="yes" xml:space="preserve">
           <source>m</source>
@@ -410,6 +530,10 @@ Open page with installation files for manual install?</target>
           <source>POWER UP</source>
           <target state="new">POWER UP</target>
         </trans-unit>
+        <trans-unit id="TransferButton.Content" translate="yes" xml:space="preserve">
+          <source>TRANSFER</source>
+          <target state="new">TRANSFER</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -425,19 +549,19 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseCool" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
-          <target state="new">Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</target>
+          <target state="translated">Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseFloral" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
-          <target state="new">Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</target>
+          <target state="translated">Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseOrdinary" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
-          <target state="new">Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</target>
+          <target state="translated">Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseSpicy" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
-          <target state="new">Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</target>
+          <target state="translated">Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</target>
         </trans-unit>
         <trans-unit id="D_ItemIncubatorBasic" translate="yes" xml:space="preserve">
           <source>A device that incubates an Egg as you walk until it is ready to hatch.</source>
@@ -457,11 +581,11 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="D_ItemPotion" translate="yes" xml:space="preserve">
           <source>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 20 points.</source>
-          <target state="new">A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 20 points.</target>
+          <target state="translated">Um medicamento tipo spray para o tratamento de feridas. Restaura o HP de um Pokémon por 20 pontos.</target>
         </trans-unit>
         <trans-unit id="D_ItemRevive" translate="yes" xml:space="preserve">
           <source>A medicine that can revive fainted Pokémon. It also restores half of a fainted Pokémon's maximum HP.</source>
-          <target state="new">A medicine that can revive fainted Pokémon. It also restores half of a fainted Pokémon's maximum HP.</target>
+          <target state="needs-review-translation">Um medicamento que pode reviver Pokémon desmaiado. Ele também restaura metade do HP máximo de um Pokémon desmaiado.</target>
         </trans-unit>
         <trans-unit id="D_ItemUltraBall" translate="yes" xml:space="preserve">
           <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
@@ -473,7 +597,7 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="ItemGreatBall" translate="yes" xml:space="preserve">
           <source>Great Ball</source>
-          <target state="new">Great Ball</target>
+          <target state="needs-review-translation">Bola Grande</target>
         </trans-unit>
         <trans-unit id="ItemHyperPotion" translate="yes" xml:space="preserve">
           <source>Hyper Potion</source>
@@ -485,23 +609,23 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="ItemIncenseFloral" translate="yes" xml:space="preserve">
           <source>Incense Floral</source>
-          <target state="new">Incense Floral</target>
+          <target state="final">Incenso Floral</target>
         </trans-unit>
         <trans-unit id="ItemIncenseOrdinary" translate="yes" xml:space="preserve">
           <source>Incense Ordinary</source>
-          <target state="new">Incense Ordinary</target>
+          <target state="final">Incenso Comum</target>
         </trans-unit>
         <trans-unit id="ItemIncenseSpicy" translate="yes" xml:space="preserve">
           <source>Incense Spicy</source>
-          <target state="new">Incense Spicy</target>
+          <target state="final">Incenso Picante</target>
         </trans-unit>
         <trans-unit id="ItemIncubatorBasic" translate="yes" xml:space="preserve">
           <source>Incubator Basic</source>
-          <target state="new">Incubator Basic</target>
+          <target state="final">Incubadora básica</target>
         </trans-unit>
         <trans-unit id="ItemIncubatorBasicUnlimited" translate="yes" xml:space="preserve">
           <source>Incubator Basic Unlimited</source>
-          <target state="new">Incubator Basic Unlimited</target>
+          <target state="final">Incubador básico ilimitado</target>
         </trans-unit>
         <trans-unit id="ItemItemStorageUpgrade" translate="yes" xml:space="preserve">
           <source>Item Storage Upgrade</source>
@@ -509,7 +633,7 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="ItemLuckyEgg" translate="yes" xml:space="preserve">
           <source>Lucky Egg</source>
-          <target state="new">Lucky Egg</target>
+          <target state="final">Ovo da sorte</target>
         </trans-unit>
         <trans-unit id="ItemMasterBall" translate="yes" xml:space="preserve">
           <source>Master Ball</source>
@@ -541,7 +665,7 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="ItemPotion" translate="yes" xml:space="preserve">
           <source>Potion</source>
-          <target state="new">Potion</target>
+          <target state="final">Poção</target>
         </trans-unit>
         <trans-unit id="ItemRazzBerry" translate="yes" xml:space="preserve">
           <source>Razz Berry</source>
@@ -553,11 +677,11 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="ItemSpecialCamera" translate="yes" xml:space="preserve">
           <source>Special Camera</source>
-          <target state="new">Special Camera</target>
+          <target state="final">Câmera especial</target>
         </trans-unit>
         <trans-unit id="ItemSuperPotion" translate="yes" xml:space="preserve">
           <source>Super Potion</source>
-          <target state="new">Super Potion</target>
+          <target state="final">Super Poção</target>
         </trans-unit>
         <trans-unit id="ItemTroyDisk" translate="yes" xml:space="preserve">
           <source>Troy Disk</source>
@@ -569,11 +693,11 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="ItemUnknown" translate="yes" xml:space="preserve">
           <source>Unknown</source>
-          <target state="new">Unknown</target>
+          <target state="final">Desconhecido</target>
         </trans-unit>
         <trans-unit id="ItemWeparBerry" translate="yes" xml:space="preserve">
           <source>Wepar Berry</source>
-          <target state="new">Wepar Berry</target>
+          <target state="translated">Wepar Berry</target>
         </trans-unit>
         <trans-unit id="ItemXAttack" translate="yes" xml:space="preserve">
           <source>X Attack</source>
@@ -1323,7 +1447,7 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="WaterGun" translate="yes" xml:space="preserve">
           <source>Water Gun</source>
-          <target state="new">Water Gun</target>
+          <target state="final">Pistola de água</target>
         </trans-unit>
         <trans-unit id="WingAttack" translate="yes" xml:space="preserve">
           <source>Wing Attack</source>
@@ -1339,7 +1463,7 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="Acid" translate="yes" xml:space="preserve">
           <source>Acid</source>
-          <target state="new">Acid</target>
+          <target state="needs-review-translation">Acido</target>
         </trans-unit>
         <trans-unit id="AcidFast" translate="yes" xml:space="preserve">
           <source>Acid Fast</source>
@@ -1427,7 +1551,7 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="ConfusionFast" translate="yes" xml:space="preserve">
           <source>Confusion</source>
-          <target state="new">Confusion</target>
+          <target state="needs-review-translation">Confusão</target>
         </trans-unit>
         <trans-unit id="CrossPoison" translate="yes" xml:space="preserve">
           <source>Cross Poison</source>
@@ -1435,11 +1559,11 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="Cut" translate="yes" xml:space="preserve">
           <source>Cut</source>
-          <target state="new">Cut</target>
+          <target state="final">Cortar</target>
         </trans-unit>
         <trans-unit id="CutFast" translate="yes" xml:space="preserve">
           <source>Cut</source>
-          <target state="new">Cut</target>
+          <target state="final">Cortar</target>
         </trans-unit>
         <trans-unit id="DazzlingGleam" translate="yes" xml:space="preserve">
           <source>Dazzling Gleam</source>
@@ -1447,7 +1571,7 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="DisarmingVoice" translate="yes" xml:space="preserve">
           <source>Disarming Voice</source>
-          <target state="new">Disarming Voice</target>
+          <target state="needs-review-translation">Desarmar a voz</target>
         </trans-unit>
         <trans-unit id="Discharge" translate="yes" xml:space="preserve">
           <source>Discharge</source>
@@ -1715,7 +1839,7 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="Psychic" translate="yes" xml:space="preserve">
           <source>Psychic</source>
-          <target state="new">Psychic</target>
+          <target state="final">Psíquico</target>
         </trans-unit>
         <trans-unit id="PsychoCutFast" translate="yes" xml:space="preserve">
           <source>Psycho Cut</source>
@@ -1903,11 +2027,11 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="WaterGunFast" translate="yes" xml:space="preserve">
           <source>Water Gun</source>
-          <target state="new">Water Gun</target>
+          <target state="final">Pistola de água</target>
         </trans-unit>
         <trans-unit id="WaterGunFastBlastoise" translate="yes" xml:space="preserve">
           <source>Water Gun</source>
-          <target state="new">Water Gun</target>
+          <target state="final">Pistola de água</target>
         </trans-unit>
         <trans-unit id="WaterPulse" translate="yes" xml:space="preserve">
           <source>Water Pulse</source>
@@ -1927,7 +2051,7 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="XScissor" translate="yes" xml:space="preserve">
           <source>XScissor</source>
-          <target state="new">XScissor</target>
+          <target state="translated">XScissor</target>
         </trans-unit>
         <trans-unit id="ZenHeadbuttFast" translate="yes" xml:space="preserve">
           <source>Zen Headbutt</source>

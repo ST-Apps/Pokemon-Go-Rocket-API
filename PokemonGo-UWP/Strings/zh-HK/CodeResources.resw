@@ -12,4 +12,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="LoggingInText" xml:space="preserve">
+    <value>正在登錄...</value>
+  </data>
+  <data name="LoginFailedText" xml:space="preserve">
+    <value>登錄失敗，請再次嘗試。</value>
+  </data>
+  <data name="NoText" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="NoGpsPermissionsText" xml:space="preserve">
+    <value>我們需要 GPS 權限來運行遊戲，請啟用它，然後再試一次。</value>
+  </data>
+  <data name="PokemonRanAwayText" xml:space="preserve">
+    <value>竉物精靈走了，抱歉:(</value>
+  </data>
+  <data name="PtcDownText" xml:space="preserve">
+    <value>PTC登錄可能是下來，請稍後重試</value>
+  </data>
+  <data name="SomethingWentWrongText" xml:space="preserve">
+    <value>發生錯誤，應用程序現在可能不穩定。你想退出，然後再試一次？</value>
+  </data>
+  <data name="TimeFormat" xml:space="preserve">
+    <value>hh:mm tt</value>
+  </data>
+  <data name="YesText" xml:space="preserve">
+    <value>是</value>
+  </data>
 </root>

@@ -183,6 +183,7 @@
     <Content Include="Assets\Icons\ic_name.png" />
     <Content Include="Assets\Icons\ic_number.png" />
     <Content Include="Assets\Icons\pokestop_far.png" />
+    <Content Include="Assets\Icons\pokestop_far_inactive.png" />
     <Content Include="Assets\Icons\pokestop_near.png" />
     <Content Include="Assets\Icons\pokestop_near_inactive.png" />
     <Content Include="Assets\Icons\stardust_painted.png" />
@@ -563,6 +564,7 @@
     <Compile Include="ViewModels\CapturePokemonPageViewModel.cs" />
     <Compile Include="ViewModels\EggDetailPageViewModel.cs" />
     <Compile Include="ViewModels\GameMapPageViewModel.cs" />
+    <Compile Include="ViewModels\AchievementDetailPageViewModel.cs" />
     <Compile Include="ViewModels\PlayerProfileViewModel.cs" />
     <Compile Include="ViewModels\PokemonDetailsPageViewModel.cs" />
     <Compile Include="ViewModels\PokemonInventoryPageViewModel.cs" />
@@ -571,6 +573,9 @@
     <Compile Include="ViewModels\SearchPokeStopPageViewModel.cs" />
     <Compile Include="Views\EggDetailPage.xaml.cs">
       <DependentUpon>EggDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AchievementDetailPage.xaml.cs">
+      <DependentUpon>AchievementDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PlayerProfilePage.xaml.cs">
       <DependentUpon>PlayerProfilePage.xaml</DependentUpon>
@@ -646,6 +651,10 @@
     <Page Include="Views\EggDetailPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AchievementDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\PlayerProfilePage.xaml">
       <Generator>MSBuild:Compile</Generator>

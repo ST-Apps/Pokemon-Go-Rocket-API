@@ -12,4 +12,85 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BadgeBattleAttackWon" xml:space="preserve">
+    <value>Μπατλ Γκιρλ</value>
+  </data>
+  <data name="BadgeBattleTrainingWon" xml:space="preserve">
+    <value>Εκπαιδευτής Έις</value>
+  </data>
+  <data name="BadgeBigMagikarp" xml:space="preserve">
+    <value>Ψαράς</value>
+  </data>
+  <data name="BadgeCaptureTotal" xml:space="preserve">
+    <value>Συλλέκτης</value>
+  </data>
+  <data name="BadgeEvolvedTotal" xml:space="preserve">
+    <value>Επιστήμονας</value>
+  </data>
+  <data name="BadgeHatchedTotal" xml:space="preserve">
+    <value>Εκτροφέας</value>
+  </data>
+  <data name="BadgePokedexEntries" xml:space="preserve">
+    <value>Κάντο</value>
+  </data>
+  <data name="BadgePokestopsVisited" xml:space="preserve">
+    <value>Μπάκπάκερ</value>
+  </data>
+  <data name="BadgeSmallRattata" xml:space="preserve">
+    <value>Νεαρός</value>
+  </data>
+  <data name="BadgeTravelKm" xml:space="preserve">
+    <value>Δρομέας</value>
+  </data>
+  <data name="Bug" xml:space="preserve">
+    <value>Μπάγκ Κάτσερ</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Θηριοδαμαστής Δράκων</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Ρόκερ</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Το Κορίτσι του Παραμυθιού</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Μαύρη ζώνη</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>Κίνντλερ</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Εκτροφέας πουλιών</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Μανιακός Χέξ</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Κηπουρός</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Μανίακος Ρούιν</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Σκιέρ</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Το παιδί του σχολείου</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Κορίτσι πανκ</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Ψυχικός</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Πεζοπόρος</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Ο πράκτορας του Αμαξοστασίου</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Κολυμβητής</value>
+  </data>
 </root>

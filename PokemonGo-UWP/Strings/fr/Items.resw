@@ -43,7 +43,7 @@
     <value>Un médicament en spray pour le traitement des plaies. Il restaure les PV d'un Pokémon de 20 points.</value>
   </data>
   <data name="D_ItemRevive" xml:space="preserve">
-    <value>Un médicament qui peut réanimer un Pokémon évanoui . Il restaure également la moitié des HP maximum du Pokémon évanoui.</value>
+    <value>Un médicament qui peut réanimer un Pokémon évanoui. Il restaure également la moitié des PV maximum du Pokémon évanoui.</value>
   </data>
   <data name="D_ItemUltraBall" xml:space="preserve">
     <value>Dispositif pour capturer des Pokémon sauvages. Il est jeté comme une balle à un Pokémon sauvage, encapsulant confortablement sa cible.</value>
@@ -55,7 +55,7 @@
     <value>Super Ball</value>
   </data>
   <data name="ItemIncenseCool" xml:space="preserve">
-    <value>Encens raffraichissant</value>
+    <value>Encens rafraichissant</value>
   </data>
   <data name="ItemIncenseFloral" xml:space="preserve">
     <value>Encens Floral</value>
@@ -67,10 +67,10 @@
     <value>Encens Epicé</value>
   </data>
   <data name="ItemIncubatorBasic" xml:space="preserve">
-    <value>Incubateur Basic</value>
+    <value>Incubateur Basique</value>
   </data>
   <data name="ItemIncubatorBasicUnlimited" xml:space="preserve">
-    <value>Incubateur Basic Illimité</value>
+    <value>Incubateur Basique Illimité</value>
   </data>
   <data name="ItemItemStorageUpgrade" xml:space="preserve">
     <value>Augmentation de la capacité de sotckage des objets</value>
@@ -112,6 +112,6 @@
     <value>X Attaque</value>
   </data>
   <data name="ItemXDefense" xml:space="preserve">
-    <value>X Defense</value>
+    <value>X Défense</value>
   </data>
 </root>

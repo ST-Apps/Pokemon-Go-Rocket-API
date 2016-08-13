@@ -12,4 +12,95 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CooldownTextBlock.Text" xml:space="preserve">
+    <value>Πρέπει να περιμένεις λίγη ώρα</value>
+  </data>
+  <data name="GoogleLoginTextBlock.Text" xml:space="preserve">
+    <value>GOOGLE</value>
+  </data>
+  <data name="InventoryFullTextBlock.Text" xml:space="preserve">
+    <value>Ο Αποθηκευτικός σας χώρος είναι πλήρης</value>
+  </data>
+  <data name="PtcLoginTextBlock.Text" xml:space="preserve">
+    <value>ΕΙΣΟΔΟΣ με PTC λογαργιασμό</value>
+  </data>
+  <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
+    <value>Για να συνδεθείτε πρέπει να βάλετε το Όνομα-Χρήστη/Email και τον Κωδικό σας σε αυτήν την εφαρμογή. Αν δεν την εμπιστεύεστε, παρακαλώ κλείστε την πριν συνεχίσετε. Δεν ευθυνόμαστε για τίποτα.</value>
+  </data>
+  <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
+    <value>Κοντά</value>
+  </data>
+  <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
+    <value>Είσαι εκτός εμβέλειας</value>
+  </data>
+  <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
+    <value>Κωδικός</value>
+  </data>
+  <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
+    <value>Όνομα-Χρήστη/email</value>
+  </data>
+  <data name="ExperienceTextBlock.Text" xml:space="preserve">
+    <value>XP</value>
+  </data>
+  <data name="OkButton.Content" xml:space="preserve">
+    <value>ΕΝΤΑΞΕΙ</value>
+  </data>
+  <data name="CpTextBlock.Text" xml:space="preserve">
+    <value>CP</value>
+  </data>
+  <data name="EggsTextBlock.Text" xml:space="preserve">
+    <value>ΑΥΓΑ</value>
+  </data>
+  <data name="MusicTextBlock.Text" xml:space="preserve">
+    <value>Μουσική</value>
+  </data>
+  <data name="PokemonTextBlock.Text" xml:space="preserve">
+    <value>ΠΟΚΕΜΟΝ</value>
+  </data>
+  <data name="SettingsHeaderTextBlock.Text" xml:space="preserve">
+    <value>ΡΥΘΜΙΣΕΙΣ</value>
+  </data>
+  <data name="SettingsSignOutTextBlock.Text" xml:space="preserve">
+    <value>Αποσύνδεση</value>
+  </data>
+  <data name="VibrationTextBlock.Text" xml:space="preserve">
+    <value>Δόνηση</value>
+  </data>
+  <data name="ItemsTextBlock.Text" xml:space="preserve">
+    <value>ΑΝΤΙΚΕΙΜΕΝΑ</value>
+  </data>
+  <data name="PokedexTextBlock.Text" xml:space="preserve">
+    <value>ΠΟΚΕΝΤΕΞ</value>
+  </data>
+  <data name="LowercaseItemsTextBlock.Text" xml:space="preserve">
+    <value>αντικέιμενα</value>
+  </data>
+  <data name="NumberTextBlock.Text" xml:space="preserve">
+    <value># </value>
+    <comment>Watch out: there is a space after the #</comment>
+  </data>
+  <data name="SlashSpaceCpTextBlock.Text" xml:space="preserve">
+    <value>/ CP</value>
+  </data>
+  <data name="SpaceXpTextBlock.Text" xml:space="preserve">
+    <value> XP</value>
+  </data>
+  <data name="TotalExperienceTextBlock.Text" xml:space="preserve">
+    <value>ΣΥΝΟΛΟ</value>
+  </data>
+  <data name="LevelUpTextBlock.Text" xml:space="preserve">
+    <value>Ανεβείκατε Επίπεδο!</value>
+  </data>
+  <data name="LevelTextBlock.Text" xml:space="preserve">
+    <value>Επίπεδο</value>
+  </data>
+  <data name="MapAutoRotateTextBlock.Text" xml:space="preserve">
+    <value>Αυτόματη-Περιστροφή Χάρτη</value>
+  </data>
+  <data name="StartDateTextBlock.Text" xml:space="preserve">
+    <value>ΜΕΡΑ ΕΚΚΙΝΗΣΗΣ</value>
+  </data>
+  <data name="IncubatorsTextBlock.Text" xml:space="preserve">
+    <value>ΕΚΟΛΑΠΤΥΡΙΑ</value>
+  </data>
 </root>

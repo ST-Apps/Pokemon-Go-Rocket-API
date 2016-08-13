@@ -799,7 +799,7 @@
                                 <Button Style="{StaticResource ButtonSubmit}"
                                         CharacterSpacing="40"
                                         Margin="15,15,15,64"
-                                        Content="TRANSFER"
+                                        x:Uid="TransferButton"
                                         FontSize="18"
                                         Command="{Binding TransferPokemonCommand}"
                                         FontFamily="ms-appx:/Assets/Fonts/Lato-Light.ttf#Lato Light"

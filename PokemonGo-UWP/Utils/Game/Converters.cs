@@ -623,7 +623,8 @@ namespace PokemonGo_UWP.Utils
         public object Convert(object value, Type targetType, object parameter, string language)
         {
             var activityType = (ActivityType) value;
-            return activityType.ToString().Replace("Activity", "");
+            var resActivityType = Resources.CodeResources.GetString(activityType.ToString()); ;
+            return string.IsNullOrEmpty(resActivityType)?activityType.ToString().Replace("Activity", ""):resActivityType;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
@@ -788,14 +789,18 @@ namespace PokemonGo_UWP.Utils
         public object Convert(object value, Type targetType, object parameter, string language)
         {
             var fortDataStatus = (FortDataStatus) value;
+            var resourceUriString = "ms-appx:///Assets/Icons/pokestop_";
+
             switch (fortDataStatus)
             {
                 case FortDataStatus.Opened:
                     return new Uri($"ms-appx:///Assets/Icons/pokestop_near.png");
                 case FortDataStatus.Closed:
                     return new Uri("ms-appx:///Assets/Icons/pokestop_far.png");
-                case FortDataStatus.Cooldown:
+                case FortDataStatus.Opened | FortDataStatus.Cooldown:
                     return new Uri($"ms-appx:///Assets/Icons/pokestop_near_inactive.png");
+                case FortDataStatus.Closed | FortDataStatus.Cooldown:
+                    return new Uri($"ms-appx:///Assets/Icons/pokestop_far_inactive.png");
                 default:
                     throw new ArgumentOutOfRangeException();
             }

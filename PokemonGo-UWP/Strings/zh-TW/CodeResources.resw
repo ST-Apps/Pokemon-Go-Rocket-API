@@ -12,4 +12,84 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DateFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
+  <data name="DateTimeFormat" xml:space="preserve">
+    <value>dd.MM.yyyy hh:mm tt</value>
+  </data>
+  <data name="PokemonFledText" xml:space="preserve">
+    <value>{0} 退出</value>
+  </data>
+  <data name="GettingGpsSignalText" xml:space="preserve">
+    <value>正在獲取 GPS 訊號...</value>
+  </data>
+  <data name="GettingUserDataText" xml:space="preserve">
+    <value>正在載入使用者資料...</value>
+  </data>
+  <data name="GoogleErrorText" xml:space="preserve">
+    <value>Google 回應錯誤︰</value>
+  </data>
+  <data name="GoogleNotRespondingText" xml:space="preserve">
+    <value>Google 目前沒有回應，請稍後再試。</value>
+  </data>
+  <data name="LoadingEncounterText" xml:space="preserve">
+    <value>登入遇到問題 {0}</value>
+  </data>
+  <data name="LoggingInText" xml:space="preserve">
+    <value>正在登入...</value>
+  </data>
+  <data name="LoginFailedText" xml:space="preserve">
+    <value>登入失敗，請再試一次。</value>
+  </data>
+  <data name="NoText" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="NoGpsPermissionsText" xml:space="preserve">
+    <value>遊戲需要 GPS 權限，請授權後再試一次。</value>
+  </data>
+  <data name="PokemonRanAwayText" xml:space="preserve">
+    <value>寶可夢逃跑了, 不好意思 :(</value>
+  </data>
+  <data name="PtcDownText" xml:space="preserve">
+    <value>PTC 登入系統出現問題，請稍後再試。</value>
+  </data>
+  <data name="SomethingWentWrongText" xml:space="preserve">
+    <value>遊戲目前遇上了一些問題不太穩定。您要登出再試一次嗎？</value>
+  </data>
+  <data name="TimeFormat" xml:space="preserve">
+    <value>hh:mm tt</value>
+  </data>
+  <data name="UpdateDownloadingText" xml:space="preserve">
+    <value>正在下載更新 {0}</value>
+  </data>
+  <data name="UpdatedVersionText" xml:space="preserve">
+    <value>新的更新版本 {0} 已推出。立即更新嗎?
+{1}</value>
+  </data>
+  <data name="UpdateFailedText" xml:space="preserve">
+    <value>更新失敗: {0}
+開啟手動更新網頁嗎?</value>
+  </data>
+  <data name="UpdateInstallingText" xml:space="preserve">
+    <value>正在安裝更新並重新啟動...</value>
+  </data>
+  <data name="WrongUsernameText" xml:space="preserve">
+    <value>錯誤的使用者名稱/密碼或伺服器維修中，請再試一次。</value>
+  </data>
+  <data name="YesText" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="InstinctTeamText" xml:space="preserve">
+    <value>Instinct 陣營</value>
+  </data>
+  <data name="NoTeamText" xml:space="preserve">
+    <value>沒有陣營</value>
+  </data>
+  <data name="ValorTeamText" xml:space="preserve">
+    <value>Valor 陣營</value>
+  </data>
+  <data name="MysticTeamText" xml:space="preserve">
+    <value>Mystic 陣營</value>
+  </data>
 </root>

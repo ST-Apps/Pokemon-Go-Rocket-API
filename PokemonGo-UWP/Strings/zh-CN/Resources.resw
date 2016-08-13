@@ -12,4 +12,98 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CooldownTextBlock.Text" xml:space="preserve">
+    <value>坐和放宽</value>
+  </data>
+  <data name="GoogleLoginTextBlock.Text" xml:space="preserve">
+    <value>Google 服务 </value>
+  </data>
+  <data name="InventoryFullTextBlock.Text" xml:space="preserve">
+    <value>您的物品已满。</value>
+  </data>
+  <data name="PtcLoginTextBlock.Text" xml:space="preserve">
+    <value>使用 口袋妖怪训练俱乐部 账号登录</value>
+  </data>
+  <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
+    <value>请先科学上网。我们不会滥用您的账户。请阅读免责声明。相信我们。</value>
+  </data>
+  <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
+    <value>附近</value>
+  </data>
+  <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
+    <value>超出范围</value>
+  </data>
+  <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
+    <value>用户名/电子邮件</value>
+  </data>
+  <data name="ExperienceTextBlock.Text" xml:space="preserve">
+    <value>XP</value>
+  </data>
+  <data name="OkButton.Content" xml:space="preserve">
+    <value>好的，我明白</value>
+  </data>
+  <data name="CpTextBlock.Text" xml:space="preserve">
+    <value>CP</value>
+  </data>
+  <data name="EggsTextBlock.Text" xml:space="preserve">
+    <value>鸡蛋</value>
+  </data>
+  <data name="MusicTextBlock.Text" xml:space="preserve">
+    <value>音乐</value>
+  </data>
+  <data name="PokemonTextBlock.Text" xml:space="preserve">
+    <value>Pokemon</value>
+  </data>
+  <data name="SettingsHeaderTextBlock.Text" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="SettingsSignOutTextBlock.Text" xml:space="preserve">
+    <value>注销</value>
+  </data>
+  <data name="VibrationTextBlock.Text" xml:space="preserve">
+    <value>振动</value>
+  </data>
+  <data name="ItemsTextBlock.Text" xml:space="preserve">
+    <value>项目</value>
+  </data>
+  <data name="PokedexTextBlock.Text" xml:space="preserve">
+    <value>图鉴</value>
+  </data>
+  <data name="LowercaseItemsTextBlock.Text" xml:space="preserve">
+    <value>物品</value>
+  </data>
+  <data name="NumberTextBlock.Text" xml:space="preserve">
+    <value># </value>
+    <comment>Watch out: there is a space after the #</comment>
+  </data>
+  <data name="SlashSpaceCpTextBlock.Text" xml:space="preserve">
+    <value>/ CP</value>
+  </data>
+  <data name="SpaceXpTextBlock.Text" xml:space="preserve">
+    <value>XP</value>
+  </data>
+  <data name="TotalExperienceTextBlock.Text" xml:space="preserve">
+    <value>总计</value>
+  </data>
+  <data name="LevelUpTextBlock.Text" xml:space="preserve">
+    <value>升级！</value>
+  </data>
+  <data name="LevelTextBlock.Text" xml:space="preserve">
+    <value>级</value>
+  </data>
+  <data name="MapAutoRotateTextBlock.Text" xml:space="preserve">
+    <value>地图自动旋转</value>
+  </data>
+  <data name="StartDateTextBlock.Text" xml:space="preserve">
+    <value>开始日期</value>
+  </data>
+  <data name="IncubatorsTextBlock.Text" xml:space="preserve">
+    <value>孵蛋器</value>
+  </data>
+  <data name="UseNianticMapTextBlock.Text" xml:space="preserve">
+    <value>Niantic 地图</value>
+  </data>
 </root>

@@ -226,6 +226,7 @@ namespace PokemonGo_UWP.ViewModels
                                 ItemCount = tmpItem.First().Count()
                             });
                         }
+                        CurrentPokestop.UpdateCooldown(CurrentSearchResponse.CooldownCompleteTimestampMs);
                         SearchSuccess?.Invoke(this, null);
                         await GameClient.UpdateInventory();
                         break;
@@ -241,7 +242,8 @@ namespace PokemonGo_UWP.ViewModels
                         break;
                     case FortSearchResponse.Types.Result.InventoryFull:
                         // Items can't be gathered because player's inventory is full, there's nothing that we can do
-                        // TODO: do something here!
+                        //TODO: even if inventory is full, we get the 50XP for search
+                        CurrentPokestop.UpdateCooldown(CurrentSearchResponse.CooldownCompleteTimestampMs);
                         SearchInventoryFull?.Invoke(this, null);
                         break;
                     default:

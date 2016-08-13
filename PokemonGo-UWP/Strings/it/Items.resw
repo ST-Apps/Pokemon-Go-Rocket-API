@@ -12,11 +12,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="D_ItemGreatBall" xml:space="preserve">
+    <value>Pokéball dalle ottime prestazioni: fornisce maggiori probabilità di cattura rispetto alla normale Pokéball.</value>
+  </data>
+  <data name="D_ItemIncenseCool" xml:space="preserve">
+    <value>Un intenso profumo che attrae i Pokémon selvatici per 30 minuti</value>
+  </data>
+  <data name="D_ItemIncenseFloral" xml:space="preserve">
+    <value>Un intenso profumo che attrae i Pokémon selvatici per 30 minuti</value>
+  </data>
+  <data name="D_ItemIncenseOrdinary" xml:space="preserve">
+    <value>Un intenso profumo che attrae i Pokémon selvatici per 30 minuti</value>
+  </data>
+  <data name="D_ItemIncenseSpicy" xml:space="preserve">
+    <value>Un intenso profumo che attrae i Pokémon selvatici per 30 minuti</value>
+  </data>
   <data name="D_ItemIncubatorBasic" xml:space="preserve">
     <value>Un dispositivo per mettere le Uova in incubazione mentre copri la distanza necessaria a farke schiudere. Si può usare tre volte.</value>
   </data>
   <data name="D_ItemIncubatorBasicUnlimited" xml:space="preserve">
     <value>Un dispositivo per mettere le Uova in incubazione mentre copri la distanza necessaria a farke schiudere. Si può usare un numero infinito di volte.</value>
+  </data>
+  <data name="D_ItemMasterBall" xml:space="preserve">
+    <value>Una palla che cattura qualsiasi Pokémon senza possibilità di fallire</value>
+  </data>
+  <data name="D_ItemPokeBall" xml:space="preserve">
+    <value>Strumento dotato di capsula usato per catturare Pokémon selvatici. Si lancia contro il bersaglio come una palla.</value>
+  </data>
+  <data name="D_ItemPotion" xml:space="preserve">
+    <value>Rimedio spray per le ferite. Restituisce 20 PS a un Pokémon.</value>
+  </data>
+  <data name="D_ItemRevive" xml:space="preserve">
+    <value>Rimedio che rianima un Pokémon esausto e gli restituisce metà dei suoi PS.</value>
+  </data>
+  <data name="D_ItemUltraBall" xml:space="preserve">
+    <value>Pokéball dalle prestazioni eccellenti: fornisce maggiori probabilità di cattura rispetto alla Megaball.</value>
   </data>
   <data name="ItemBlukBerry" xml:space="preserve">
     <value>Baccalampon</value>

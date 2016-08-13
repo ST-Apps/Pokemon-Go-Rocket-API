@@ -12,4 +12,551 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Bite" xml:space="preserve">
+    <value>Mordida</value>
+  </data>
+  <data name="CrossChop" xml:space="preserve">
+    <value>Golpe cruzado</value>
+  </data>
+  <data name="DarkPulse" xml:space="preserve">
+    <value>Pulso Sombrío</value>
+  </data>
+  <data name="Dig" xml:space="preserve">
+    <value>Excavar</value>
+  </data>
+  <data name="DoubleSlap" xml:space="preserve">
+    <value>Bofetada Doble</value>
+  </data>
+  <data name="Ember" xml:space="preserve">
+    <value>Ascuas</value>
+  </data>
+  <data name="Flamethrower" xml:space="preserve">
+    <value>Lanzallamas</value>
+  </data>
+  <data name="FlameWheel" xml:space="preserve">
+    <value>Rueda fuego</value>
+  </data>
+  <data name="HyperBeam" xml:space="preserve">
+    <value>Hiper Rayo</value>
+  </data>
+  <data name="Lick" xml:space="preserve">
+    <value>Lamida</value>
+  </data>
+  <data name="LowKick" xml:space="preserve">
+    <value>Patada Baja</value>
+  </data>
+  <data name="Megahorn" xml:space="preserve">
+    <value>Megacuerno</value>
+  </data>
+  <data name="MetalClaw" xml:space="preserve">
+    <value>Garras de Metal</value>
+  </data>
+  <data name="MoveUnset" xml:space="preserve">
+    <value>Movimiento no establecido</value>
+  </data>
+  <data name="Pound" xml:space="preserve">
+    <value>Golpe</value>
+  </data>
+  <data name="PsychoCut" xml:space="preserve">
+    <value>Corte Psiquico</value>
+  </data>
+  <data name="QuickAttack" xml:space="preserve">
+    <value>Ataque Rápido</value>
+  </data>
+  <data name="RazorLeaf" xml:space="preserve">
+    <value>Hojas Navaja</value>
+  </data>
+  <data name="Scratch" xml:space="preserve">
+    <value>Arañazo</value>
+  </data>
+  <data name="Sludge" xml:space="preserve">
+    <value>Lodo</value>
+  </data>
+  <data name="Smog" xml:space="preserve">
+    <value>Niebla Tóxica</value>
+  </data>
+  <data name="SuckerPunch" xml:space="preserve">
+    <value>Golpe bajo</value>
+  </data>
+  <data name="Tackle" xml:space="preserve">
+    <value>Tacleada</value>
+  </data>
+  <data name="TakeDown" xml:space="preserve">
+    <value>Derribo</value>
+  </data>
+  <data name="ThunderShock" xml:space="preserve">
+    <value>Impactrueno</value>
+  </data>
+  <data name="ViceGrip" xml:space="preserve">
+    <value>Fuerza de garra</value>
+  </data>
+  <data name="VineWhip" xml:space="preserve">
+    <value>Látigo Cepa</value>
+  </data>
+  <data name="WaterGun" xml:space="preserve">
+    <value>Pistola de Agua</value>
+  </data>
+  <data name="WingAttack" xml:space="preserve">
+    <value>Ataque Ala</value>
+  </data>
+  <data name="Wrap" xml:space="preserve">
+    <value>Envolver</value>
+  </data>
+  <data name="Absorb" xml:space="preserve">
+    <value>Absorber</value>
+  </data>
+  <data name="Acid" xml:space="preserve">
+    <value>Ácido</value>
+  </data>
+  <data name="AcidFast" xml:space="preserve">
+    <value>Ácido Rápido</value>
+  </data>
+  <data name="AerialAce" xml:space="preserve">
+    <value>As Aéreo</value>
+  </data>
+  <data name="AirCutter" xml:space="preserve">
+    <value>Cortador de Aire</value>
+  </data>
+  <data name="AirSlash" xml:space="preserve">
+    <value>Cuchilla Aire</value>
+  </data>
+  <data name="AncientPower" xml:space="preserve">
+    <value>Poder Antiguo</value>
+  </data>
+  <data name="AquaJet" xml:space="preserve">
+    <value>Jet Agua</value>
+  </data>
+  <data name="AquaTail" xml:space="preserve">
+    <value>Cola Agua</value>
+  </data>
+  <data name="BiteFast" xml:space="preserve">
+    <value>Mordida</value>
+  </data>
+  <data name="Blizzard" xml:space="preserve">
+    <value>Ventisca</value>
+  </data>
+  <data name="BodySlam" xml:space="preserve">
+    <value>Golpe Cuerpo</value>
+  </data>
+  <data name="BoneClub" xml:space="preserve">
+    <value>Palo Hueso</value>
+  </data>
+  <data name="BrickBreak" xml:space="preserve">
+    <value>Rompe Ladrillo</value>
+  </data>
+  <data name="Brine" xml:space="preserve">
+    <value>Agua Salada</value>
+  </data>
+  <data name="BubbleBeam" xml:space="preserve">
+    <value>Rayo Burbuja</value>
+  </data>
+  <data name="BubbleFast" xml:space="preserve">
+    <value>Burbuja Rápida</value>
+  </data>
+  <data name="BugBite" xml:space="preserve">
+    <value>Mordida Insecto</value>
+  </data>
+  <data name="BugBiteFast" xml:space="preserve">
+    <value>Mordida Insecto</value>
+  </data>
+  <data name="BugBuzz" xml:space="preserve">
+    <value>Zumbido Insecto</value>
+  </data>
+  <data name="Bulldoze" xml:space="preserve">
+    <value>Ataque Toro</value>
+  </data>
+  <data name="BulletPunch" xml:space="preserve">
+    <value>Puño Bala</value>
+  </data>
+  <data name="BulletPunchFast" xml:space="preserve">
+    <value>Puño Bala</value>
+  </data>
+  <data name="ConfusionFast" xml:space="preserve">
+    <value>Confusión</value>
+  </data>
+  <data name="CrossPoison" xml:space="preserve">
+    <value>Veneno Cruzado</value>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>Corte</value>
+  </data>
+  <data name="CutFast" xml:space="preserve">
+    <value>Corte</value>
+  </data>
+  <data name="DazzlingGleam" xml:space="preserve">
+    <value>Brillo Deslumbrante</value>
+  </data>
+  <data name="DisarmingVoice" xml:space="preserve">
+    <value>Voz Desarmadora</value>
+  </data>
+  <data name="Discharge" xml:space="preserve">
+    <value>Descarga</value>
+  </data>
+  <data name="DragonBreath" xml:space="preserve">
+    <value>Aliento Dragón</value>
+  </data>
+  <data name="DragonBreathFast" xml:space="preserve">
+    <value>Aliento Dragón</value>
+  </data>
+  <data name="DragonClaw" xml:space="preserve">
+    <value>Garra Dragón</value>
+  </data>
+  <data name="DragonPulse" xml:space="preserve">
+    <value>Pulso Dragón</value>
+  </data>
+  <data name="DrainingKiss" xml:space="preserve">
+    <value>Beso Drenador
+</value>
+  </data>
+  <data name="DrillPeck" xml:space="preserve">
+    <value>Pico Taladro</value>
+  </data>
+  <data name="DrillRun" xml:space="preserve">
+    <value>Taladreada</value>
+  </data>
+  <data name="Earthquake" xml:space="preserve">
+    <value>Terremoto</value>
+  </data>
+  <data name="EmberFast" xml:space="preserve">
+    <value>Ascuas Rápido</value>
+  </data>
+  <data name="FeintAttackFast" xml:space="preserve">
+    <value>Ataque Finta</value>
+  </data>
+  <data name="FireBlast" xml:space="preserve">
+    <value>Explosión Fuego</value>
+  </data>
+  <data name="FireFangFast" xml:space="preserve">
+    <value>Colmillo Fuego</value>
+  </data>
+  <data name="FirePunch" xml:space="preserve">
+    <value>Puño Fuego</value>
+  </data>
+  <data name="FlameBurst" xml:space="preserve">
+    <value>Llamas Ráfaga</value>
+  </data>
+  <data name="FlameCharge" xml:space="preserve">
+    <value>Tacleo Llama</value>
+  </data>
+  <data name="FlashCannon" xml:space="preserve">
+    <value>Cañón Flash</value>
+  </data>
+  <data name="FrostBreath" xml:space="preserve">
+    <value>Aliento Gélido</value>
+  </data>
+  <data name="FrostBreathFast" xml:space="preserve">
+    <value>Aliento Gélido</value>
+  </data>
+  <data name="FuryCutter" xml:space="preserve">
+    <value>Corte Furia</value>
+  </data>
+  <data name="FuryCutterFast" xml:space="preserve">
+    <value>Corte Furia Rápido</value>
+  </data>
+  <data name="GigaDrain" xml:space="preserve">
+    <value>Giga Absorber</value>
+  </data>
+  <data name="GunkShot" xml:space="preserve">
+    <value>Disparo Mugre</value>
+  </data>
+  <data name="Headbutt" xml:space="preserve">
+    <value>Cabezazo</value>
+  </data>
+  <data name="HeartStamp" xml:space="preserve">
+    <value>Sello Corazón</value>
+  </data>
+  <data name="HeatWave" xml:space="preserve">
+    <value>Onda Calor</value>
+  </data>
+  <data name="HornAttack" xml:space="preserve">
+    <value>Ataque Cuerno</value>
+  </data>
+  <data name="Hurricane" xml:space="preserve">
+    <value>Huracán</value>
+  </data>
+  <data name="HydroPump" xml:space="preserve">
+    <value>Hidro Bomba</value>
+  </data>
+  <data name="HydroPumpBlastoise" xml:space="preserve">
+    <value>Hidro Bomba</value>
+  </data>
+  <data name="HyperFang" xml:space="preserve">
+    <value>Hiper Colmillo</value>
+  </data>
+  <data name="IceBeam" xml:space="preserve">
+    <value>Rayo Hielo</value>
+  </data>
+  <data name="IcePunch" xml:space="preserve">
+    <value>Puño Hielo</value>
+  </data>
+  <data name="IceShard" xml:space="preserve">
+    <value>Trozo Hielo</value>
+  </data>
+  <data name="IceShardFast" xml:space="preserve">
+    <value>Trozo Hielo</value>
+  </data>
+  <data name="IcyWind" xml:space="preserve">
+    <value>Viento Glaciar</value>
+  </data>
+  <data name="IronHead" xml:space="preserve">
+    <value>Cabeza Hierro</value>
+  </data>
+  <data name="KarateChop" xml:space="preserve">
+    <value>Golpe Karate</value>
+  </data>
+  <data name="KarateChopFast" xml:space="preserve">
+    <value>Golpe Karate</value>
+  </data>
+  <data name="LeafBlade" xml:space="preserve">
+    <value>Hoja Cuchilla</value>
+  </data>
+  <data name="LickFast" xml:space="preserve">
+    <value>Lamer Rápido</value>
+  </data>
+  <data name="LowKickFast" xml:space="preserve">
+    <value>Patada Baja</value>
+  </data>
+  <data name="LowSweep" xml:space="preserve">
+    <value>Barrida </value>
+  </data>
+  <data name="MagnetBomb" xml:space="preserve">
+    <value>Bomba Magnética</value>
+  </data>
+  <data name="MegaDrain" xml:space="preserve">
+    <value>Mega Absorber</value>
+  </data>
+  <data name="MetalClawFast" xml:space="preserve">
+    <value>Garra Metal</value>
+  </data>
+  <data name="Moonblast" xml:space="preserve">
+    <value>Explosión Lunar</value>
+  </data>
+  <data name="MudBomb" xml:space="preserve">
+    <value>Bomba Barro</value>
+  </data>
+  <data name="MudShot" xml:space="preserve">
+    <value>Disparo Barro</value>
+  </data>
+  <data name="MudShotFast" xml:space="preserve">
+    <value>Disparo Barro</value>
+  </data>
+  <data name="MudSlapFast" xml:space="preserve">
+    <value>Bofetada Barro</value>
+  </data>
+  <data name="NightSlash" xml:space="preserve">
+    <value>Cuchillada Nocturna</value>
+  </data>
+  <data name="OminousWind" xml:space="preserve">
+    <value>Viento Siniestro</value>
+  </data>
+  <data name="ParabolicCharge" xml:space="preserve">
+    <value>Tacleada Parabólica</value>
+  </data>
+  <data name="Peck" xml:space="preserve">
+    <value>Picotazo</value>
+  </data>
+  <data name="PeckFast" xml:space="preserve">
+    <value>Picotazo</value>
+  </data>
+  <data name="PetalBlizzard" xml:space="preserve">
+    <value>Ventisca Pétalos</value>
+  </data>
+  <data name="PlayRough" xml:space="preserve">
+    <value>Jugar Brusco</value>
+  </data>
+  <data name="PoisonFang" xml:space="preserve">
+    <value>Colmillo Veneno</value>
+  </data>
+  <data name="PoisonJab" xml:space="preserve">
+    <value>Golpe Veneno</value>
+  </data>
+  <data name="PoisonJabFast" xml:space="preserve">
+    <value>Golpe Veneno</value>
+  </data>
+  <data name="PoisonStingFast" xml:space="preserve">
+    <value>Aguijón Venenoso</value>
+  </data>
+  <data name="PoundFast" xml:space="preserve">
+    <value>Golpe rápido</value>
+  </data>
+  <data name="PowerGem" xml:space="preserve">
+    <value>Gema Poder</value>
+  </data>
+  <data name="PowerWhip" xml:space="preserve">
+    <value>Látigo Poder</value>
+  </data>
+  <data name="Psybeam" xml:space="preserve">
+    <value>Rayo Psíquico</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Psíquico</value>
+  </data>
+  <data name="PsychoCutFast" xml:space="preserve">
+    <value>Corte Psíquico</value>
+  </data>
+  <data name="Psyshock" xml:space="preserve">
+    <value>Shock Psíquico</value>
+  </data>
+  <data name="Psystrike" xml:space="preserve">
+    <value>Ataque Psíquico</value>
+  </data>
+  <data name="QuickAttackFast" xml:space="preserve">
+    <value>Ataque Rápido</value>
+  </data>
+  <data name="RazorLeafFast" xml:space="preserve">
+    <value>Hojas Navaja</value>
+  </data>
+  <data name="Rest" xml:space="preserve">
+    <value>Descansar</value>
+  </data>
+  <data name="RockSlide" xml:space="preserve">
+    <value>Avalancha</value>
+  </data>
+  <data name="RockSmashFast" xml:space="preserve">
+    <value>Golpe Roca
+</value>
+  </data>
+  <data name="RockThrow" xml:space="preserve">
+    <value>Lanza Rocas
+
+</value>
+  </data>
+  <data name="RockThrowFast" xml:space="preserve">
+    <value>Lanza Rocas</value>
+  </data>
+  <data name="RockTomb" xml:space="preserve">
+    <value>Tumba Rocas</value>
+  </data>
+  <data name="Scald" xml:space="preserve">
+    <value>Escaldar</value>
+  </data>
+  <data name="ScaldBlastoise" xml:space="preserve">
+    <value>Escaldar</value>
+  </data>
+  <data name="ScratchFast" xml:space="preserve">
+    <value>Arañazo</value>
+  </data>
+  <data name="SeedBomb" xml:space="preserve">
+    <value>Bomba Semilla</value>
+  </data>
+  <data name="ShadowBall" xml:space="preserve">
+    <value>Bola Sombra</value>
+  </data>
+  <data name="ShadowClaw" xml:space="preserve">
+    <value>Garra Sombra</value>
+  </data>
+  <data name="ShadowClawFast" xml:space="preserve">
+    <value>Garra Sombra</value>
+  </data>
+  <data name="ShadowPunch" xml:space="preserve">
+    <value>Puño Sombra</value>
+  </data>
+  <data name="ShadowSneak" xml:space="preserve">
+    <value>Escabullir Sombra</value>
+  </data>
+  <data name="SignalBeam" xml:space="preserve">
+    <value>Rayo Señal</value>
+  </data>
+  <data name="Slam" xml:space="preserve">
+    <value>Portazo</value>
+  </data>
+  <data name="Slash" xml:space="preserve">
+    <value>Cuchillada</value>
+  </data>
+  <data name="SludgeBomb" xml:space="preserve">
+    <value>Bomba Lodo</value>
+  </data>
+  <data name="SludgeWave" xml:space="preserve">
+    <value>Onda Lodo</value>
+  </data>
+  <data name="SolarBeam" xml:space="preserve">
+    <value>Rayo Solar</value>
+  </data>
+  <data name="Spark" xml:space="preserve">
+    <value>Chispa</value>
+  </data>
+  <data name="SparkFast" xml:space="preserve">
+    <value>Chispa Rápida</value>
+  </data>
+  <data name="Splash" xml:space="preserve">
+    <value>Salpicadura
+</value>
+  </data>
+  <data name="SplashFast" xml:space="preserve">
+    <value>Salpicadura
+</value>
+  </data>
+  <data name="SteelWing" xml:space="preserve">
+    <value>Ala Acero</value>
+  </data>
+  <data name="SteelWingFast" xml:space="preserve">
+    <value>Ala Acero</value>
+  </data>
+  <data name="Stomp" xml:space="preserve">
+    <value>Pisotón</value>
+  </data>
+  <data name="StoneEdge" xml:space="preserve">
+    <value>Filo Roca</value>
+  </data>
+  <data name="Struggle" xml:space="preserve">
+    <value>Combate</value>
+  </data>
+  <data name="Submission" xml:space="preserve">
+    <value>Sumisión</value>
+  </data>
+  <data name="SuckerPunchFast" xml:space="preserve">
+    <value>Golpe Bajo</value>
+  </data>
+  <data name="Swift" xml:space="preserve">
+    <value>Rapidez</value>
+  </data>
+  <data name="TackleFast" xml:space="preserve">
+    <value>Tacleada</value>
+  </data>
+  <data name="Thunder" xml:space="preserve">
+    <value>Trueno</value>
+  </data>
+  <data name="Thunderbolt" xml:space="preserve">
+    <value>Rayo</value>
+  </data>
+  <data name="ThunderPunch" xml:space="preserve">
+    <value>Puño Trueno</value>
+  </data>
+  <data name="ThunderShockFast" xml:space="preserve">
+    <value>Impactrueno </value>
+  </data>
+  <data name="Twineedle" xml:space="preserve">
+    <value>Doble Aguijón</value>
+  </data>
+  <data name="Twister" xml:space="preserve">
+    <value>Ciclón</value>
+  </data>
+  <data name="VineWhipFast" xml:space="preserve">
+    <value>Látigo Cepa</value>
+  </data>
+  <data name="WaterGunFast" xml:space="preserve">
+    <value>Pistola Agua</value>
+  </data>
+  <data name="WaterGunFastBlastoise" xml:space="preserve">
+    <value>Pistola Agua</value>
+  </data>
+  <data name="WaterPulse" xml:space="preserve">
+    <value>Pulso Agua</value>
+  </data>
+  <data name="WingAttackFast" xml:space="preserve">
+    <value>Ataque Ala
+</value>
+  </data>
+  <data name="WrapGreen" xml:space="preserve">
+    <value>Constricción Verde</value>
+  </data>
+  <data name="WrapPink" xml:space="preserve">
+    <value>Constricción Rosa</value>
+  </data>
+  <data name="XScissor" xml:space="preserve">
+    <value>Tijera X</value>
+  </data>
+  <data name="ZenHeadbuttFast" xml:space="preserve">
+    <value>Cabezazo Zen</value>
+  </data>
 </root>

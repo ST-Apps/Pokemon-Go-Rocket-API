@@ -12,4 +12,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="LoginFailedText" xml:space="preserve">
+    <value>Вход не удался, попробуйте ещё раз.</value>
+  </data>
+  <data name="NoText" xml:space="preserve">
+    <value>Нет
+</value>
+  </data>
+  <data name="NoGpsPermissionsText" xml:space="preserve">
+    <value>Нам требуется GPS для запуска игры, пожалуйста, включите его и попробуйте ещё раз.</value>
+  </data>
+  <data name="PokemonRanAwayText" xml:space="preserve">
+    <value>Покемон сбежал :(</value>
+  </data>
+  <data name="PtcDownText" xml:space="preserve">
+    <value>Вход через PTC возможно не работает, попробуйте позже.</value>
+  </data>
+  <data name="SomethingWentWrongText" xml:space="preserve">
+    <value>Что-то пошло не так и приложение может работать не стабильно. Вы хотите выйти и попробовать ещё раз?</value>
+  </data>
+  <data name="UpdateDownloadingText" xml:space="preserve">
+    <value>Скачивается обновление {0}</value>
+  </data>
+  <data name="UpdatedVersionText" xml:space="preserve">
+    <value>Версия {0} доступна для скачивания. Вы хотите обновиться?
+{1}</value>
+  </data>
+  <data name="UpdateFailedText" xml:space="preserve">
+    <value>Обновление неудачно: {0}
+Открыть страницу с инструкцией по ручной установке?</value>
+  </data>
+  <data name="UpdateInstallingText" xml:space="preserve">
+    <value>Установка обновления, приложение перезагружается...</value>
+  </data>
+  <data name="WrongUsernameText" xml:space="preserve">
+    <value>Неправильный логин/пароль или сервера недоступный, попробуйте позже.</value>
+  </data>
+  <data name="YesText" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="InstinctTeamText" xml:space="preserve">
+    <value>Комнда "Инстинкт"</value>
+  </data>
+  <data name="NoTeamText" xml:space="preserve">
+    <value>Без команды</value>
+  </data>
+  <data name="ValorTeamText" xml:space="preserve">
+    <value>Команда "Отвага"</value>
+  </data>
+  <data name="MysticTeamText" xml:space="preserve">
+    <value>Команда "Мистика"</value>
+  </data>
 </root>

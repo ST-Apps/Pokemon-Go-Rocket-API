@@ -12,4 +12,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Acid" xml:space="preserve">
+    <value>迷幻</value>
+  </data>
+  <data name="Blizzard" xml:space="preserve">
+    <value>Blizzard</value>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>剪下</value>
+  </data>
+  <data name="CutFast" xml:space="preserve">
+    <value>剪下</value>
+  </data>
+  <data name="Pound" xml:space="preserve">
+    <value>磅</value>
+  </data>
+  <data name="Slash" xml:space="preserve">
+    <value>正斜線</value>
+  </data>
+  <data name="Splash" xml:space="preserve">
+    <value>Splash</value>
+  </data>
+  <data name="SplashFast" xml:space="preserve">
+    <value>Splash</value>
+  </data>
+  <data name="Wrap" xml:space="preserve">
+    <value>換行</value>
+  </data>
 </root>

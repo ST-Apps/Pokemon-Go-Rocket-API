@@ -12,4 +12,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ItemGreatBall" xml:space="preserve">
+    <value>超級球</value>
+  </data>
+  <data name="ItemHyperPotion" xml:space="preserve">
+    <value>超級恢復藥水</value>
+  </data>
+  <data name="ItemIncenseCool" xml:space="preserve">
+    <value>香薰</value>
+  </data>
+  <data name="ItemIncenseFloral" xml:space="preserve">
+    <value>花香</value>
+  </data>
+  <data name="ItemIncubatorBasic" xml:space="preserve">
+    <value>Incubator Basic</value>
+  </data>
+  <data name="ItemPokeBall" xml:space="preserve">
+    <value>精靈球</value>
+  </data>
+  <data name="ItemPokemonStorageUpgrade" xml:space="preserve">
+    <value>進化</value>
+  </data>
+  <data name="ItemPotion" xml:space="preserve">
+    <value>恢復藥水</value>
+  </data>
+  <data name="ItemRazzBerry" xml:space="preserve">
+    <value>木莓</value>
+  </data>
+  <data name="ItemRevive" xml:space="preserve">
+    <value>復活石</value>
+  </data>
+  <data name="ItemSuperPotion" xml:space="preserve">
+    <value>強效恢復藥水</value>
+  </data>
+  <data name="ItemUltraBall" xml:space="preserve">
+    <value>起級球</value>
+  </data>
+  <data name="ItemUnknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
 </root>

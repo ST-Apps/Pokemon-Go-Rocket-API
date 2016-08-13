@@ -12,4 +12,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BadgeBattleAttackWon" xml:space="preserve">
+    <value>Rapariga da Batalha</value>
+  </data>
+  <data name="BadgeBigMagikarp" xml:space="preserve">
+    <value>Pescador</value>
+  </data>
+  <data name="BadgeCaptureTotal" xml:space="preserve">
+    <value>Colecionador</value>
+  </data>
+  <data name="BadgeEvolvedTotal" xml:space="preserve">
+    <value>Cientista</value>
+  </data>
+  <data name="BadgeHatchedTotal" xml:space="preserve">
+    <value>Reprodutor</value>
+  </data>
+  <data name="BadgeSmallRattata" xml:space="preserve">
+    <value>Something went wrong and app may be unstable now. Do you want to logout and try again?</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Rapariga de conto de fadas</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Guardião de pássaros</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Jardineiro</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Rapaz da escola</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Psíquico</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Nadador</value>
+  </data>
 </root>

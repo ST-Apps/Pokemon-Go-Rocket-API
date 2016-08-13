@@ -8,27 +8,27 @@
       <group id="POKEMONGO-UWP/STRINGS/EN-US/ACHIEVEMENTS.RESW" datatype="resx">
         <trans-unit id="BadgeBattleAttackWon" translate="yes" xml:space="preserve">
           <source>Battle Girl</source>
-          <target state="new">Battle Girl</target>
+          <target state="final">Μπατλ Γκιρλ</target>
         </trans-unit>
         <trans-unit id="BadgeBattleTrainingWon" translate="yes" xml:space="preserve">
           <source>Ace Trainer</source>
-          <target state="new">Ace Trainer</target>
+          <target state="final">Εκπαιδευτής Έις</target>
         </trans-unit>
         <trans-unit id="BadgeBigMagikarp" translate="yes" xml:space="preserve">
           <source>Fisherman</source>
-          <target state="new">Fisherman</target>
+          <target state="final">Ψαράς</target>
         </trans-unit>
         <trans-unit id="BadgeCaptureTotal" translate="yes" xml:space="preserve">
           <source>Collector</source>
-          <target state="new">Collector</target>
+          <target state="final">Συλλέκτης</target>
         </trans-unit>
         <trans-unit id="BadgeEvolvedTotal" translate="yes" xml:space="preserve">
           <source>Scientist</source>
-          <target state="new">Scientist</target>
+          <target state="final">Επιστήμονας</target>
         </trans-unit>
         <trans-unit id="BadgeHatchedTotal" translate="yes" xml:space="preserve">
           <source>Breeder</source>
-          <target state="new">Breeder</target>
+          <target state="final">Εκτροφέας</target>
         </trans-unit>
         <trans-unit id="BadgePikachu" translate="yes" xml:space="preserve">
           <source>Pikachu</source>
@@ -36,87 +36,199 @@
         </trans-unit>
         <trans-unit id="BadgePokedexEntries" translate="yes" xml:space="preserve">
           <source>Kanto</source>
-          <target state="new">Kanto</target>
+          <target state="final">Κάντο</target>
         </trans-unit>
         <trans-unit id="BadgePokestopsVisited" translate="yes" xml:space="preserve">
           <source>Backpacker</source>
-          <target state="new">Backpacker</target>
+          <target state="final">Μπάκπάκερ</target>
         </trans-unit>
         <trans-unit id="BadgeSmallRattata" translate="yes" xml:space="preserve">
           <source>Youngster</source>
-          <target state="new">Youngster</target>
+          <target state="final">Νεαρός</target>
         </trans-unit>
         <trans-unit id="BadgeTravelKm" translate="yes" xml:space="preserve">
           <source>Jogger</source>
-          <target state="new">Jogger</target>
+          <target state="final">Δρομέας</target>
         </trans-unit>
         <trans-unit id="Bug" translate="yes" xml:space="preserve">
           <source>Bug Catcher</source>
-          <target state="new">Bug Catcher</target>
+          <target state="final">Μπάγκ Κάτσερ</target>
         </trans-unit>
         <trans-unit id="Dragon" translate="yes" xml:space="preserve">
           <source>Dragon Tamer</source>
-          <target state="new">Dragon Tamer</target>
+          <target state="final">Θηριοδαμαστής Δράκων</target>
         </trans-unit>
         <trans-unit id="Electric" translate="yes" xml:space="preserve">
           <source>Rocker</source>
-          <target state="new">Rocker</target>
+          <target state="final">Ρόκερ</target>
         </trans-unit>
         <trans-unit id="Fairy" translate="yes" xml:space="preserve">
           <source>Fairy Tale Girl</source>
-          <target state="new">Fairy Tale Girl</target>
+          <target state="final">Το Κορίτσι του Παραμυθιού</target>
         </trans-unit>
         <trans-unit id="Fighting" translate="yes" xml:space="preserve">
           <source>Black Belt</source>
-          <target state="new">Black Belt</target>
+          <target state="final">Μαύρη ζώνη</target>
         </trans-unit>
         <trans-unit id="Fire" translate="yes" xml:space="preserve">
           <source>Kindler</source>
-          <target state="new">Kindler</target>
+          <target state="final">Κίνντλερ</target>
         </trans-unit>
         <trans-unit id="Flying" translate="yes" xml:space="preserve">
           <source>Bird Keeper</source>
-          <target state="new">Bird Keeper</target>
+          <target state="final">Εκτροφέας πουλιών</target>
         </trans-unit>
         <trans-unit id="Ghost" translate="yes" xml:space="preserve">
           <source>Hex Maniac</source>
-          <target state="new">Hex Maniac</target>
+          <target state="final">Μανιακός Χέξ</target>
         </trans-unit>
         <trans-unit id="Grass" translate="yes" xml:space="preserve">
           <source>Gardener</source>
-          <target state="new">Gardener</target>
+          <target state="final">Κηπουρός</target>
         </trans-unit>
         <trans-unit id="Ground" translate="yes" xml:space="preserve">
           <source>Ruin Maniac</source>
-          <target state="new">Ruin Maniac</target>
+          <target state="final">Μανίακος Ρούιν</target>
         </trans-unit>
         <trans-unit id="Ice" translate="yes" xml:space="preserve">
           <source>Skier</source>
-          <target state="new">Skier</target>
+          <target state="final">Σκιέρ</target>
         </trans-unit>
         <trans-unit id="Normal" translate="yes" xml:space="preserve">
           <source>School Kid</source>
-          <target state="new">School Kid</target>
+          <target state="final">Το παιδί του σχολείου</target>
         </trans-unit>
         <trans-unit id="Poison" translate="yes" xml:space="preserve">
           <source>Punk Girl</source>
-          <target state="new">Punk Girl</target>
+          <target state="final">Κορίτσι πανκ</target>
         </trans-unit>
         <trans-unit id="Psychic" translate="yes" xml:space="preserve">
           <source>Psychic</source>
-          <target state="new">Psychic</target>
+          <target state="final">Ψυχικός</target>
         </trans-unit>
         <trans-unit id="Rock" translate="yes" xml:space="preserve">
           <source>Hiker</source>
-          <target state="new">Hiker</target>
+          <target state="final">Πεζοπόρος</target>
         </trans-unit>
         <trans-unit id="Steel" translate="yes" xml:space="preserve">
           <source>Depot Agent</source>
-          <target state="new">Depot Agent</target>
+          <target state="final">Ο πράκτορας του Αμαξοστασίου</target>
         </trans-unit>
         <trans-unit id="Water" translate="yes" xml:space="preserve">
           <source>Swimmer</source>
-          <target state="new">Swimmer</target>
+          <target state="final">Κολυμβητής</target>
+        </trans-unit>
+        <trans-unit id="BadgeBattleAttackWonDescription" translate="yes" xml:space="preserve">
+          <source>Won {0} gym battles</source>
+          <target state="new">Won {0} gym battles</target>
+        </trans-unit>
+        <trans-unit id="BadgeBattleTrainingWonDescription" translate="yes" xml:space="preserve">
+          <source>Won {0} training battles</source>
+          <target state="new">Won {0} training battles</target>
+        </trans-unit>
+        <trans-unit id="BadgeBigMagikarpDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Magikarp</source>
+          <target state="new">Caught {0} Magikarp</target>
+        </trans-unit>
+        <trans-unit id="BadgeCaptureTotalDescription" translate="yes" xml:space="preserve">
+          <source>Captured {0} Pokemon</source>
+          <target state="new">Captured {0} Pokemon</target>
+        </trans-unit>
+        <trans-unit id="BadgeEvolvedTotalDescription" translate="yes" xml:space="preserve">
+          <source>Evolved [x] Pokémon</source>
+          <target state="new">Evolved [x] Pokémon</target>
+        </trans-unit>
+        <trans-unit id="BadgeHatchedTotalDescription" translate="yes" xml:space="preserve">
+          <source>Hatched {x} Pokemon</source>
+          <target state="new">Hatched {x} Pokemon</target>
+        </trans-unit>
+        <trans-unit id="BadgePikachuDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Pikachu</source>
+          <target state="new">Caught {0} Pikachu</target>
+        </trans-unit>
+        <trans-unit id="BadgePokedexEntriesDescription" translate="yes" xml:space="preserve">
+          <source>Registered {0} Pokemon in the Pokedex</source>
+          <target state="new">Registered {0} Pokemon in the Pokedex</target>
+        </trans-unit>
+        <trans-unit id="BadgePokestopsVisitedDescription" translate="yes" xml:space="preserve">
+          <source>Visited {0} Pokestops</source>
+          <target state="new">Visited {0} Pokestops</target>
+        </trans-unit>
+        <trans-unit id="BadgeSmallRattataDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Rattata</source>
+          <target state="new">Caught {0} Rattata</target>
+        </trans-unit>
+        <trans-unit id="BadgeTravelKmDescription" translate="yes" xml:space="preserve">
+          <source>Walked {0} km</source>
+          <target state="new">Walked {0} km</target>
+        </trans-unit>
+        <trans-unit id="BugDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Bug Pokemon</source>
+          <target state="new">Caught {0} Bug Pokemon</target>
+        </trans-unit>
+        <trans-unit id="DragonDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Dragon Pokemon</source>
+          <target state="new">Caught {0} Dragon Pokemon</target>
+        </trans-unit>
+        <trans-unit id="ElectricDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Electric Pokemon</source>
+          <target state="new">Caught {0} Electric Pokemon</target>
+        </trans-unit>
+        <trans-unit id="FairyDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Fairy Pokemon</source>
+          <target state="new">Caught {0} Fairy Pokemon</target>
+        </trans-unit>
+        <trans-unit id="FightingDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Fighting Pokemon</source>
+          <target state="new">Caught {0} Fighting Pokemon</target>
+        </trans-unit>
+        <trans-unit id="FireDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Fire Pokemon</source>
+          <target state="new">Caught {0} Fire Pokemon</target>
+        </trans-unit>
+        <trans-unit id="FlyingDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Flying Pokemon</source>
+          <target state="new">Caught {0} Flying Pokemon</target>
+        </trans-unit>
+        <trans-unit id="GhostDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Ghost Pokemon</source>
+          <target state="new">Caught {0} Ghost Pokemon</target>
+        </trans-unit>
+        <trans-unit id="GrassDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Grass Pokemon</source>
+          <target state="new">Caught {0} Grass Pokemon</target>
+        </trans-unit>
+        <trans-unit id="GroundDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Ground Pokemon</source>
+          <target state="new">Caught {0} Ground Pokemon</target>
+        </trans-unit>
+        <trans-unit id="IceDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Ice Pokemon</source>
+          <target state="new">Caught {0} Ice Pokemon</target>
+        </trans-unit>
+        <trans-unit id="NormalDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Normal Pokemon</source>
+          <target state="new">Caught {0} Normal Pokemon</target>
+        </trans-unit>
+        <trans-unit id="PoisonDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Poison Pokemon</source>
+          <target state="new">Caught {0} Poison Pokemon</target>
+        </trans-unit>
+        <trans-unit id="PsychicDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Psychic Pokemon</source>
+          <target state="new">Caught {0} Psychic Pokemon</target>
+        </trans-unit>
+        <trans-unit id="RockDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Rock Pokemon</source>
+          <target state="new">Caught {0} Rock Pokemon</target>
+        </trans-unit>
+        <trans-unit id="SteelDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Steel Pokemon</source>
+          <target state="new">Caught {0} Steel Pokemon</target>
+        </trans-unit>
+        <trans-unit id="WaterDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Water Pokemon</source>
+          <target state="new">Caught {0} Water Pokemon</target>
         </trans-unit>
       </group>
     </body>
@@ -137,55 +249,55 @@
         </trans-unit>
         <trans-unit id="PokemonFledText" translate="yes" xml:space="preserve">
           <source>{0} fled</source>
-          <target state="new">{0} fled</target>
+          <target state="final">{0} Ξέφυγαν</target>
         </trans-unit>
         <trans-unit id="GettingGpsSignalText" translate="yes" xml:space="preserve">
           <source>Getting GPS signal...</source>
-          <target state="new">Getting GPS signal...</target>
+          <target state="final">Αναζήτηση σήματος GPS...</target>
         </trans-unit>
         <trans-unit id="GettingUserDataText" translate="yes" xml:space="preserve">
           <source>Getting user data...</source>
-          <target state="new">Getting user data...</target>
+          <target state="final">Λήψη αρχείων χρήστη...</target>
         </trans-unit>
         <trans-unit id="GoogleErrorText" translate="yes" xml:space="preserve">
           <source>Google returned error: </source>
-          <target state="new">Google returned error: </target>
+          <target state="final">Το Google επέστρεψε το σφάλμα:</target>
         </trans-unit>
         <trans-unit id="GoogleNotRespondingText" translate="yes" xml:space="preserve">
           <source>Google is not responding, please try again later.</source>
-          <target state="new">Google is not responding, please try again later.</target>
+          <target state="final">Το Google δέν ανταποκρίνεται, παρακαλώ προσπαθήστε ξανά αργότερα.</target>
         </trans-unit>
         <trans-unit id="LoadingEncounterText" translate="yes" xml:space="preserve">
           <source>Loading encounter with {0}</source>
-          <target state="new">Loading encounter with {0}</target>
+          <target state="final">Φόρτοση αντιμετόπισης με {0}</target>
         </trans-unit>
         <trans-unit id="LoggingInText" translate="yes" xml:space="preserve">
           <source>Logging in...</source>
-          <target state="new">Logging in...</target>
+          <target state="final">Είσοδος...</target>
         </trans-unit>
         <trans-unit id="LoginFailedText" translate="yes" xml:space="preserve">
           <source>Login failed, please try again.</source>
-          <target state="new">Login failed, please try again.</target>
+          <target state="final">Αποτυχία σύνδεσης, παρακαλώ δοκιμάστε ξανά.</target>
         </trans-unit>
         <trans-unit id="NoText" translate="yes" xml:space="preserve">
           <source>No</source>
-          <target state="new">No</target>
+          <target state="final">Όχι</target>
         </trans-unit>
         <trans-unit id="NoGpsPermissionsText" translate="yes" xml:space="preserve">
           <source>We need GPS permissions to run the game, please enable it and try again.</source>
-          <target state="new">We need GPS permissions to run the game, please enable it and try again.</target>
+          <target state="final">Χρειαζόμαστε άδεια να χρησιμοποιήσουμε το GPS σας για να τρέξουμε το παιχνίδι, παρακαλόυμε ενεργοποιήστε το και προσπαθήστε ξανά.</target>
         </trans-unit>
         <trans-unit id="PokemonRanAwayText" translate="yes" xml:space="preserve">
           <source>Pokemon ran away, sorry :(</source>
-          <target state="new">Pokemon ran away, sorry :(</target>
+          <target state="final">To Πόκεμον ξέφυγε, συγγνώμη :(</target>
         </trans-unit>
         <trans-unit id="PtcDownText" translate="yes" xml:space="preserve">
           <source>PTC login is probably down, please retry later.</source>
-          <target state="new">PTC login is probably down, please retry later.</target>
+          <target state="final">Η Σύνδεση με PTC κωδικό μάλλον δεν είναι διαθέσιμη, παρακαλώ προσπαθήστε αργότερα.</target>
         </trans-unit>
         <trans-unit id="SomethingWentWrongText" translate="yes" xml:space="preserve">
           <source>Something went wrong and app may be unstable now. Do you want to logout and try again?</source>
-          <target state="new">Something went wrong and app may be unstable now. Do you want to logout and try again?</target>
+          <target state="final">Κάτι πήγε λάθος και η εφαρμογή μπορεί να είναι ασταθής. Θέλετε να αποσυνδεθείτε και να ξαναπροσπαθήσετε;</target>
         </trans-unit>
         <trans-unit id="TimeFormat" translate="yes" xml:space="preserve">
           <source>hh:mm tt</source>
@@ -193,47 +305,55 @@
         </trans-unit>
         <trans-unit id="UpdateDownloadingText" translate="yes" xml:space="preserve">
           <source>Downloading update {0}</source>
-          <target state="new">Downloading update {0}</target>
+          <target state="final">Λήψη ενημέρωσης {0}</target>
         </trans-unit>
         <trans-unit id="UpdatedVersionText" translate="yes" xml:space="preserve">
           <source>An updated version {0} is available. Do you want to update?
 {1}</source>
-          <target state="new">An updated version {0} is available. Do you want to update?
+          <target state="final">Μία αναβαθμισμένη έκδοση {0} είναι διαθέσιμη. Θέλετε να αναβαθμίσετε;
 {1}</target>
         </trans-unit>
         <trans-unit id="UpdateFailedText" translate="yes" xml:space="preserve">
           <source>Update failed: {0}
 Open page with installation files for manual install?</source>
-          <target state="new">Update failed: {0}
-Open page with installation files for manual install?</target>
+          <target state="final">Η ενημέρωση απέτυχε: {0}
+Άνοιγμα της σελίδα με τα αρχεία εγκατάστασης για  χειροκίνιτη εγκατάσταση;</target>
         </trans-unit>
         <trans-unit id="UpdateInstallingText" translate="yes" xml:space="preserve">
           <source>Installing update, app is restarting...</source>
-          <target state="new">Installing update, app is restarting...</target>
+          <target state="final">Εγκατάσταση ενημέρωσης, η εφαρμογή κάνει επανεκκίνιση....</target>
         </trans-unit>
         <trans-unit id="WrongUsernameText" translate="yes" xml:space="preserve">
           <source>Wrong username/password or offline server, please try again.</source>
-          <target state="new">Wrong username/password or offline server, please try again.</target>
+          <target state="final">Λάθος Όνομα-Χρήστη/Κωδικός ή offline server, παρακαλώ δοκιμάστε ξανά.</target>
         </trans-unit>
         <trans-unit id="YesText" translate="yes" xml:space="preserve">
           <source>Yes</source>
-          <target state="new">Yes</target>
+          <target state="final">Ναί</target>
         </trans-unit>
         <trans-unit id="InstinctTeamText" translate="yes" xml:space="preserve">
           <source>Instinct</source>
-          <target state="new">Instinct</target>
+          <target state="final">Ίνστινκτ</target>
         </trans-unit>
         <trans-unit id="NoTeamText" translate="yes" xml:space="preserve">
           <source>No Team</source>
-          <target state="new">No Team</target>
+          <target state="final">Χωρίς Ομάδα</target>
         </trans-unit>
         <trans-unit id="ValorTeamText" translate="yes" xml:space="preserve">
           <source>Valor</source>
-          <target state="new">Valor</target>
+          <target state="final">Βάλορ</target>
         </trans-unit>
         <trans-unit id="MysticTeamText" translate="yes" xml:space="preserve">
           <source>Mystic</source>
-          <target state="new">Mystic</target>
+          <target state="final">Μύστικ</target>
+        </trans-unit>
+        <trans-unit id="TransferPokemonSuccessText" translate="yes" xml:space="preserve">
+          <source>Transfer succeeded! Got a {0} Candy from the Professor.</source>
+          <target state="new">Transfer succeeded! Got a {0} Candy from the Professor.</target>
+        </trans-unit>
+        <trans-unit id="TransferPokemonWarningText" translate="yes" xml:space="preserve">
+          <source>You can't take it back after it's transferred to the Professor. Do you really want to transfer {0} to the Professor?</source>
+          <target state="new">You can't take it back after it's transferred to the Professor. Do you really want to transfer {0} to the Professor?</target>
         </trans-unit>
       </group>
     </body>
@@ -246,128 +366,128 @@ Open page with installation files for manual install?</target>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/RESOURCES.RESW" datatype="resx">
         <trans-unit id="CooldownTextBlock.Text" translate="yes" xml:space="preserve">
           <source>You have to wait some time</source>
-          <target state="new">You have to wait some time</target>
+          <target state="final">Πρέπει να περιμένεις λίγη ώρα</target>
         </trans-unit>
         <trans-unit id="GoogleLoginTextBlock.Text" translate="yes" xml:space="preserve">
           <source>GOOGLE</source>
-          <target state="new">GOOGLE</target>
+          <target state="final">GOOGLE</target>
         </trans-unit>
         <trans-unit id="InventoryFullTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Your inventory is full!</source>
-          <target state="new">Your inventory is full!</target>
+          <target state="final">Ο Αποθηκευτικός σας χώρος είναι πλήρης</target>
         </trans-unit>
         <trans-unit id="PtcLoginTextBlock.Text" translate="yes" xml:space="preserve">
           <source>LOGIN with PTC Account</source>
-          <target state="new">LOGIN with PTC Account</target>
+          <target state="final">ΕΙΣΟΔΟΣ με PTC λογαργιασμό</target>
         </trans-unit>
         <trans-unit id="LoginDisclaimerTextBox.Text" translate="yes" xml:space="preserve">
           <source>To login you need to insert your Username/Email and Password in this app. If you don't trust it, please, close it before going on. We are not responsible for anything.</source>
-          <target state="new">To login you need to insert your Username/Email and Password in this app. If you don't trust it, please, close it before going on. We are not responsible for anything.</target>
+          <target state="final">Για να συνδεθείτε πρέπει να βάλετε το Όνομα-Χρήστη/Email και τον Κωδικό σας σε αυτήν την εφαρμογή. Αν δεν την εμπιστεύεστε, παρακαλώ κλείστε την πριν συνεχίσετε. Δεν ευθυνόμαστε για τίποτα.</target>
         </trans-unit>
         <trans-unit id="NearbyPokemonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>nearby</source>
-          <target state="new">nearby</target>
+          <target state="final">Κοντά</target>
         </trans-unit>
         <trans-unit id="OutOfRangeTextBlock.Text" translate="yes" xml:space="preserve">
           <source>You are out of range</source>
-          <target state="new">You are out of range</target>
+          <target state="final">Είσαι εκτός εμβέλειας</target>
         </trans-unit>
         <trans-unit id="LoginPasswordPasswordBox.PlaceholderText" translate="yes" xml:space="preserve">
           <source>Password</source>
-          <target state="new">Password</target>
+          <target state="final">Κωδικός</target>
         </trans-unit>
         <trans-unit id="LoginUsernameTextBox.PlaceholderText" translate="yes" xml:space="preserve">
           <source>Username/email</source>
-          <target state="new">Username/email</target>
+          <target state="final">Όνομα-Χρήστη/email</target>
         </trans-unit>
         <trans-unit id="ExperienceTextBlock.Text" translate="yes" xml:space="preserve">
           <source>XP</source>
-          <target state="new">XP</target>
+          <target state="final">XP</target>
         </trans-unit>
         <trans-unit id="OkButton.Content" translate="yes" xml:space="preserve">
           <source>OK</source>
-          <target state="new">OK</target>
+          <target state="final">ΕΝΤΑΞΕΙ</target>
         </trans-unit>
         <trans-unit id="CpTextBlock.Text" translate="yes" xml:space="preserve">
           <source>CP</source>
-          <target state="new">CP</target>
+          <target state="final">CP</target>
         </trans-unit>
         <trans-unit id="EggsTextBlock.Text" translate="yes" xml:space="preserve">
           <source>EGGS</source>
-          <target state="new">EGGS</target>
+          <target state="final">ΑΥΓΑ</target>
         </trans-unit>
-        <trans-unit id="MusicTextBlock.Text" translate="yes" xml:space="preserve">
+        <trans-unit id="SettingsMusicTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Music</source>
-          <target state="new">Music</target>
+          <target state="final">Μουσική</target>
         </trans-unit>
         <trans-unit id="PokemonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>POKÉMON</source>
-          <target state="new">POKÉMON</target>
+          <target state="final">ΠΟΚΕΜΟΝ</target>
         </trans-unit>
         <trans-unit id="SettingsHeaderTextBlock.Text" translate="yes" xml:space="preserve">
           <source>SETTINGS</source>
-          <target state="new">SETTINGS</target>
+          <target state="final">ΡΥΘΜΙΣΕΙΣ</target>
         </trans-unit>
-        <trans-unit id="SignOutTextBlock.Text" translate="yes" xml:space="preserve">
+        <trans-unit id="SettingsSignOutTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Sign Out</source>
-          <target state="new">Sign Out</target>
+          <target state="final">Αποσύνδεση</target>
         </trans-unit>
-        <trans-unit id="VibrationTextBlock.Text" translate="yes" xml:space="preserve">
+        <trans-unit id="SettingsVibrationTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Vibration</source>
-          <target state="new">Vibration</target>
+          <target state="final">Δόνηση</target>
         </trans-unit>
         <trans-unit id="ItemsTextBlock.Text" translate="yes" xml:space="preserve">
           <source>ITEMS</source>
-          <target state="new">ITEMS</target>
+          <target state="final">ΑΝΤΙΚΕΙΜΕΝΑ</target>
         </trans-unit>
         <trans-unit id="PokedexTextBlock.Text" translate="yes" xml:space="preserve">
           <source>POKÉDEX</source>
-          <target state="new">POKÉDEX</target>
+          <target state="final">ΠΟΚΕΝΤΕΞ</target>
         </trans-unit>
         <trans-unit id="LowercaseItemsTextBlock.Text" translate="yes" xml:space="preserve">
           <source>items</source>
-          <target state="new">items</target>
+          <target state="final">αντικέιμενα</target>
         </trans-unit>
         <trans-unit id="NumberTextBlock.Text" translate="yes" xml:space="preserve">
           <source># </source>
-          <target state="new"># </target>
+          <target state="final"># </target>
           <note from="MultilingualBuild" annotates="source" priority="2">Watch out: there is a space after the #</note>
         </trans-unit>
         <trans-unit id="SlashSpaceCpTextBlock.Text" translate="yes" xml:space="preserve">
           <source>/ CP</source>
-          <target state="new">/ CP</target>
+          <target state="final">/ CP</target>
         </trans-unit>
         <trans-unit id="SpaceXpTextBlock.Text" translate="yes" xml:space="preserve">
           <source> XP</source>
-          <target state="new"> XP</target>
+          <target state="final"> XP</target>
         </trans-unit>
         <trans-unit id="TotalExperienceTextBlock.Text" translate="yes" xml:space="preserve">
           <source>TOTAL</source>
-          <target state="new">TOTAL</target>
+          <target state="final">ΣΥΝΟΛΟ</target>
         </trans-unit>
         <trans-unit id="LevelUpTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Level up!</source>
-          <target state="new">Level up!</target>
+          <target state="final">Ανεβείκατε Επίπεδο!</target>
         </trans-unit>
         <trans-unit id="LevelTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Level</source>
-          <target state="new">Level</target>
+          <target state="final">Επίπεδο</target>
         </trans-unit>
-        <trans-unit id="MapAutoRotateTextBlock.Text" translate="yes" xml:space="preserve">
+        <trans-unit id="SettingsMapAutoRotateTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Auto-Rotate Map</source>
-          <target state="new">Auto-Rotate Map</target>
+          <target state="final">Αυτόματη-Περιστροφή Χάρτη</target>
         </trans-unit>
         <trans-unit id="StartDateTextBlock.Text" translate="yes" xml:space="preserve">
           <source>START DATE</source>
-          <target state="new">START DATE</target>
+          <target state="final">ΜΕΡΑ ΕΚΚΙΝΗΣΗΣ</target>
         </trans-unit>
         <trans-unit id="IncubatorsTextBlock.Text" translate="yes" xml:space="preserve">
           <source>INCUBATORS</source>
-          <target state="new">INCUBATORS</target>
+          <target state="final">ΕΚΟΛΑΠΤΥΡΙΑ</target>
         </trans-unit>
-        <trans-unit id="UseNianticMapTextBlock.Text" translate="yes" xml:space="preserve">
-          <source>Niantic map</source>
-          <target state="new">Niantic map</target>
+        <trans-unit id="SettingsUseNianticMapTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Use Niantic Map</source>
+          <target state="new">Use Niantic Map</target>
         </trans-unit>
         <trans-unit id="HpTextBlock.Text" translate="yes" xml:space="preserve">
           <source>HP </source>
@@ -410,6 +530,10 @@ Open page with installation files for manual install?</target>
           <source>POWER UP</source>
           <target state="new">POWER UP</target>
         </trans-unit>
+        <trans-unit id="TransferButton.Content" translate="yes" xml:space="preserve">
+          <source>TRANSFER</source>
+          <target state="new">TRANSFER</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -421,171 +545,171 @@ Open page with installation files for manual install?</target>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/ITEMS.RESW" datatype="resx">
         <trans-unit id="D_ItemGreatBall" translate="yes" xml:space="preserve">
           <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
-          <target state="new">A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</target>
+          <target state="final">Μία συσκευή για να πίανεις άγρια πόκεμον. Την πετάς σάν μπάλα σε ένα άγριο πόκεμον και με άνεση πίανει τον στόχο της.</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseCool" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
-          <target state="new">Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</target>
+          <target state="final">Ένα θυμίαμα με μία μυστηριόδη μυρωδία η οποία ελκύει Πόκεμον στην τοποθεσία σου για 30 λεπτά</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseFloral" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
-          <target state="new">Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</target>
+          <target state="final">Ένα θυμίαμα με μία μυστηριόδη μυρωδία η οποία ελκύει Πόκεμον στην τοποθεσία σου για 30 λεπτά</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseOrdinary" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
-          <target state="new">Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</target>
+          <target state="final">Ένα θυμίαμα με μία μυστηριόδη μυρωδία η οποία ελκύει Πόκεμον στην τοποθεσία σου για 30 λεπτά</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseSpicy" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
-          <target state="new">Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</target>
+          <target state="final">Ένα θυμίαμα με μία μυστηριόδη μυρωδία η οποία ελκύει Πόκεμον στην τοποθεσία σου για 30 λεπτά</target>
         </trans-unit>
         <trans-unit id="D_ItemIncubatorBasic" translate="yes" xml:space="preserve">
           <source>A device that incubates an Egg as you walk until it is ready to hatch.</source>
-          <target state="new">A device that incubates an Egg as you walk until it is ready to hatch.</target>
+          <target state="final">Μία συσκευή η οποία εκολάπτει ενα αυγό όσο περπατάς μέχρι να ειναι έτοιμο να ανοίξει</target>
         </trans-unit>
         <trans-unit id="D_ItemIncubatorBasicUnlimited" translate="yes" xml:space="preserve">
           <source>A device that incubates an Egg as you walk until it is ready to hatch.</source>
-          <target state="new">A device that incubates an Egg as you walk until it is ready to hatch.</target>
+          <target state="final">Μία συσκευή η οποία εκολάπτει ενα αυγό όσο περπατάς μέχρι να ειναι έτοιμο να ανοίξει</target>
         </trans-unit>
         <trans-unit id="D_ItemMasterBall" translate="yes" xml:space="preserve">
           <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
-          <target state="new">A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</target>
+          <target state="final">Μία συσκευή για να πίανεις άγρια πόκεμον. Την πετάς σάν μπάλα σε ένα άγριο πόκεμον και με άνεση πίανει τον στόχο του.</target>
         </trans-unit>
         <trans-unit id="D_ItemPokeBall" translate="yes" xml:space="preserve">
           <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
-          <target state="new">A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</target>
+          <target state="final">Μία συσκευή για να πίανεις άγρια πόκεμον. Την πετάς σάν μπάλα σε ένα άγριο πόκεμον και με άνεση πίανει τον στόχο του.</target>
         </trans-unit>
         <trans-unit id="D_ItemPotion" translate="yes" xml:space="preserve">
           <source>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 20 points.</source>
-          <target state="new">A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 20 points.</target>
+          <target state="final">Ένα φάρμακο τύπου ψεκάσματος για την περίθαλψη πλυγών. Επαναφέρει το HP ενός Πόκεμον κατα 20 πόντους</target>
         </trans-unit>
         <trans-unit id="D_ItemRevive" translate="yes" xml:space="preserve">
           <source>A medicine that can revive fainted Pokémon. It also restores half of a fainted Pokémon's maximum HP.</source>
-          <target state="new">A medicine that can revive fainted Pokémon. It also restores half of a fainted Pokémon's maximum HP.</target>
+          <target state="final">Ένα φάρμακο το οποίο επαναφέρει λιπόθυμα Πόκεμον. Επίσης επαναφέρει το μισό απο το μέγιστο HP ενός λιπόθυμου Πόκεμον.</target>
         </trans-unit>
         <trans-unit id="D_ItemUltraBall" translate="yes" xml:space="preserve">
           <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
-          <target state="new">A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</target>
+          <target state="final">Μία συσκευή για να πίανεις άγρια πόκεμον. Την πετάς σάν μπάλα σε ένα άγριο πόκεμον και με άνεση πίανει τον στόχο του.</target>
         </trans-unit>
         <trans-unit id="ItemBlukBerry" translate="yes" xml:space="preserve">
           <source>Bluk Berry</source>
-          <target state="new">Bluk Berry</target>
+          <target state="final">Μπλούκ Μούρο</target>
         </trans-unit>
         <trans-unit id="ItemGreatBall" translate="yes" xml:space="preserve">
           <source>Great Ball</source>
-          <target state="new">Great Ball</target>
+          <target state="final">Γκρέιτ Μπαλλ</target>
         </trans-unit>
         <trans-unit id="ItemHyperPotion" translate="yes" xml:space="preserve">
           <source>Hyper Potion</source>
-          <target state="new">Hyper Potion</target>
+          <target state="final">Ενεργειτικό Φίλτρο</target>
         </trans-unit>
         <trans-unit id="ItemIncenseCool" translate="yes" xml:space="preserve">
           <source>Incense Cool</source>
-          <target state="new">Incense Cool</target>
+          <target state="final">Δροσερό θυμίαμα</target>
         </trans-unit>
         <trans-unit id="ItemIncenseFloral" translate="yes" xml:space="preserve">
           <source>Incense Floral</source>
-          <target state="new">Incense Floral</target>
+          <target state="final">Άνθινο Θυμίαμα</target>
         </trans-unit>
         <trans-unit id="ItemIncenseOrdinary" translate="yes" xml:space="preserve">
           <source>Incense Ordinary</source>
-          <target state="new">Incense Ordinary</target>
+          <target state="final">Συνιθυσμένο Θυμίαμα</target>
         </trans-unit>
         <trans-unit id="ItemIncenseSpicy" translate="yes" xml:space="preserve">
           <source>Incense Spicy</source>
-          <target state="new">Incense Spicy</target>
+          <target state="final">Πικάντικο Θυμίαμα</target>
         </trans-unit>
         <trans-unit id="ItemIncubatorBasic" translate="yes" xml:space="preserve">
           <source>Incubator Basic</source>
-          <target state="new">Incubator Basic</target>
+          <target state="final">Βασικό Εκολαπτύριο</target>
         </trans-unit>
         <trans-unit id="ItemIncubatorBasicUnlimited" translate="yes" xml:space="preserve">
           <source>Incubator Basic Unlimited</source>
-          <target state="new">Incubator Basic Unlimited</target>
+          <target state="final">Απεριόριστο Βασικό Εκολαπτύριο</target>
         </trans-unit>
         <trans-unit id="ItemItemStorageUpgrade" translate="yes" xml:space="preserve">
           <source>Item Storage Upgrade</source>
-          <target state="new">Item Storage Upgrade</target>
+          <target state="final">Αντικείμενο Αναβάθμισης Αποθήκης Αντικειμένων</target>
         </trans-unit>
         <trans-unit id="ItemLuckyEgg" translate="yes" xml:space="preserve">
           <source>Lucky Egg</source>
-          <target state="new">Lucky Egg</target>
+          <target state="final">Τυχερό Αυγό</target>
         </trans-unit>
         <trans-unit id="ItemMasterBall" translate="yes" xml:space="preserve">
           <source>Master Ball</source>
-          <target state="new">Master Ball</target>
+          <target state="final">Μάστερ Μπαλ</target>
         </trans-unit>
         <trans-unit id="ItemMaxPotion" translate="yes" xml:space="preserve">
           <source>Max Potion</source>
-          <target state="new">Max Potion</target>
+          <target state="final">Μέγιστο Φίλτρο</target>
         </trans-unit>
         <trans-unit id="ItemMaxRevive" translate="yes" xml:space="preserve">
           <source>Max Revive</source>
-          <target state="new">Max Revive</target>
+          <target state="final">Μέγιστη Επαναφορά</target>
         </trans-unit>
         <trans-unit id="ItemNanabBerry" translate="yes" xml:space="preserve">
           <source>Nanab Berry</source>
-          <target state="new">Nanab Berry</target>
+          <target state="final">Νάναμπ Μούρο</target>
         </trans-unit>
         <trans-unit id="ItemPinapBerry" translate="yes" xml:space="preserve">
           <source>Pinap Berry</source>
-          <target state="new">Pinap Berry</target>
+          <target state="final">Πίναπ Μόυρο</target>
         </trans-unit>
         <trans-unit id="ItemPokeBall" translate="yes" xml:space="preserve">
           <source>Poke Ball</source>
-          <target state="new">Poke Ball</target>
+          <target state="final">Πόκεμπαλ</target>
         </trans-unit>
         <trans-unit id="ItemPokemonStorageUpgrade" translate="yes" xml:space="preserve">
           <source>Pokemon Storage Upgrade</source>
-          <target state="new">Pokemon Storage Upgrade</target>
+          <target state="final">Αντικείμενο Αναβάθμισης Αποθήκης Πόκεμον</target>
         </trans-unit>
         <trans-unit id="ItemPotion" translate="yes" xml:space="preserve">
           <source>Potion</source>
-          <target state="new">Potion</target>
+          <target state="final">Φίλτρο</target>
         </trans-unit>
         <trans-unit id="ItemRazzBerry" translate="yes" xml:space="preserve">
           <source>Razz Berry</source>
-          <target state="new">Razz Berry</target>
+          <target state="final">Ράζ Μούρο</target>
         </trans-unit>
         <trans-unit id="ItemRevive" translate="yes" xml:space="preserve">
           <source>Revive</source>
-          <target state="new">Revive</target>
+          <target state="final">Επαναφορά</target>
         </trans-unit>
         <trans-unit id="ItemSpecialCamera" translate="yes" xml:space="preserve">
           <source>Special Camera</source>
-          <target state="new">Special Camera</target>
+          <target state="final">Ειδική Κάμερα</target>
         </trans-unit>
         <trans-unit id="ItemSuperPotion" translate="yes" xml:space="preserve">
           <source>Super Potion</source>
-          <target state="new">Super Potion</target>
+          <target state="final">Σούπερ Φίλτρο</target>
         </trans-unit>
         <trans-unit id="ItemTroyDisk" translate="yes" xml:space="preserve">
           <source>Troy Disk</source>
-          <target state="new">Troy Disk</target>
+          <target state="final">Δίσκος Τρόι</target>
         </trans-unit>
         <trans-unit id="ItemUltraBall" translate="yes" xml:space="preserve">
           <source>Ultra Ball</source>
-          <target state="new">Ultra Ball</target>
+          <target state="final">Ούλτρα Μπαλ</target>
         </trans-unit>
         <trans-unit id="ItemUnknown" translate="yes" xml:space="preserve">
           <source>Unknown</source>
-          <target state="new">Unknown</target>
+          <target state="final">Άγνωστο</target>
         </trans-unit>
         <trans-unit id="ItemWeparBerry" translate="yes" xml:space="preserve">
           <source>Wepar Berry</source>
-          <target state="new">Wepar Berry</target>
+          <target state="final">Γουέπαρ Μούρο</target>
         </trans-unit>
         <trans-unit id="ItemXAttack" translate="yes" xml:space="preserve">
           <source>X Attack</source>
-          <target state="new">X Attack</target>
+          <target state="final">X Επίθεση</target>
         </trans-unit>
         <trans-unit id="ItemXDefense" translate="yes" xml:space="preserve">
           <source>X Defense</source>
-          <target state="new">X Defense</target>
+          <target state="final">X Άμυνα</target>
         </trans-unit>
         <trans-unit id="ItemXMiracle" translate="yes" xml:space="preserve">
           <source>X Miracle</source>
-          <target state="new">X Miracle</target>
+          <target state="final">X Θαύμα</target>
         </trans-unit>
       </group>
     </body>
@@ -1715,7 +1839,7 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="Psychic" translate="yes" xml:space="preserve">
           <source>Psychic</source>
-          <target state="new">Psychic</target>
+          <target state="final">Ψυχικός</target>
         </trans-unit>
         <trans-unit id="PsychoCutFast" translate="yes" xml:space="preserve">
           <source>Psycho Cut</source>

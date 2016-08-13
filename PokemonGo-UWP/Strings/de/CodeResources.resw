@@ -19,13 +19,13 @@
     <value>dd.MM.yyyy hh:mm tt</value>
   </data>
   <data name="PokemonFledText" xml:space="preserve">
-    <value>{0} Geflohen</value>
+    <value>{0} ist geflohen.</value>
   </data>
   <data name="GettingGpsSignalText" xml:space="preserve">
-    <value>Suche GPS-Signal...</value>
+    <value>Suche GPS-Signal ...</value>
   </data>
   <data name="GettingUserDataText" xml:space="preserve">
-    <value>Nutzerdaten abrufen...</value>
+    <value>Nutzerdaten abrufen ...</value>
   </data>
   <data name="GoogleErrorText" xml:space="preserve">
     <value>Google meldete einen Fehler:</value>
@@ -34,10 +34,10 @@
     <value>Google antwortet nicht. Bitte versuche es später noch einmal.</value>
   </data>
   <data name="LoadingEncounterText" xml:space="preserve">
-    <value>Lade Confrontation mit {0}</value>
+    <value>Lade Begegnung mit {0}</value>
   </data>
   <data name="LoggingInText" xml:space="preserve">
-    <value>Einloggen...</value>
+    <value>Einloggen ...</value>
   </data>
   <data name="LoginFailedText" xml:space="preserve">
     <value>Login fehlgeschlagen. Bitte versuche es erneut.</value>
@@ -46,7 +46,8 @@
     <value>Nein</value>
   </data>
   <data name="NoGpsPermissionsText" xml:space="preserve">
-    <value>Wir benötigen GPS-Berechtigung um das Spiel zu starten. Bitte aktiviere GPS und die Berechtigung und versuche es erneut.</value>
+    <value>Wir benötigen eine GPS-Berechtigung um das Spiel zu starten. Bitte aktiviere dein GPS und versuche es erneut.
+</value>
   </data>
   <data name="PokemonRanAwayText" xml:space="preserve">
     <value>Pokémon ist weggerannt, sorry :(</value>
@@ -55,13 +56,13 @@
     <value>PTC-Login ist scheinbar nicht erreichbar. Bitte versuche es später.</value>
   </data>
   <data name="SomethingWentWrongText" xml:space="preserve">
-    <value>Etwas ist schief gelaufen und die App könnte instabil sein. Möchtest du dich ausloggen und erneut versuchen?</value>
+    <value>Etwas ist schief gelaufen und die App könnte instabil laufen. Möchtest du dich ausloggen und es erneut versuchen?</value>
   </data>
   <data name="TimeFormat" xml:space="preserve">
     <value>hh:mm tt</value>
   </data>
   <data name="UpdateDownloadingText" xml:space="preserve">
-    <value> Update wird Herruntergeladen {0}</value>
+    <value>Update wird heruntergeladen {0}</value>
   </data>
   <data name="UpdatedVersionText" xml:space="preserve">
     <value>Ein Update (Version {0}) ist verfügbar. Jetzt aktualisieren?
@@ -72,10 +73,10 @@
 Seite zu den Dateien für manuelle Installation öffnen?</value>
   </data>
   <data name="UpdateInstallingText" xml:space="preserve">
-    <value>Installiere Update. App wird neu gestartet...</value>
+    <value>Installiere Update. App wird neu gestartet ...</value>
   </data>
   <data name="WrongUsernameText" xml:space="preserve">
-    <value>Falscher Benutzername, falsches Passwort oder der Server ist offline. Bitte erneut versuchen.</value>
+    <value>Falscher Benutzername, falsches Passwort oder Server offline, bitte erneut versuchen.</value>
   </data>
   <data name="YesText" xml:space="preserve">
     <value>Ja</value>
@@ -90,6 +91,7 @@ Seite zu den Dateien für manuelle Installation öffnen?</value>
     <value>Wagemut</value>
   </data>
   <data name="MysticTeamText" xml:space="preserve">
-    <value>Weisheit</value>
+    <value>Weisheit
+</value>
   </data>
 </root>

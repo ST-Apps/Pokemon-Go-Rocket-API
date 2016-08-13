@@ -34,7 +34,7 @@
     <value>Eine Maschine, die ein Ei ausbrütet, bis es beim Herumlaufen schlüpft. Unbegrenzt einsetzbar!</value>
   </data>
   <data name="D_ItemMasterBall" xml:space="preserve">
-    <value>Ein Ball mit 100% . Dem Pokéball in allen Punkten überlegen. </value>
+    <value>Ein Ball mit 100% Erfolgsquote. Dem Pokéball in allen Punkten überlegen. </value>
   </data>
   <data name="D_ItemPokeBall" xml:space="preserve">
     <value>Damit fängst du wilde Pokémon. Du wirfst ihn wie einen normalen Ball. Das Design ähnelt dem einer Kapsel. </value>
@@ -70,13 +70,13 @@
     <value>Würziger Rauch</value>
   </data>
   <data name="ItemIncubatorBasic" xml:space="preserve">
-    <value>Normale Brutmaschine</value>
+    <value>Ei-Brutmaschine</value>
   </data>
   <data name="ItemIncubatorBasicUnlimited" xml:space="preserve">
-    <value>Normale Brutmaschine (Unbegrenzt)</value>
+    <value>Ei-Brutmaschine (Unbegrenzt)</value>
   </data>
   <data name="ItemItemStorageUpgrade" xml:space="preserve">
-    <value>Item Platzerweiterung</value>
+    <value>Beutel Plus</value>
   </data>
   <data name="ItemLuckyEgg" xml:space="preserve">
     <value>Glücksei</value>
@@ -85,10 +85,10 @@
     <value>Meisterball</value>
   </data>
   <data name="ItemMaxPotion" xml:space="preserve">
-    <value>Top Trank</value>
+    <value>Top-Trank</value>
   </data>
   <data name="ItemMaxRevive" xml:space="preserve">
-    <value>Top Beleber</value>
+    <value>Top-Beleber</value>
   </data>
   <data name="ItemNanabBerry" xml:space="preserve">
     <value>Nanabbeere</value>
@@ -100,7 +100,7 @@
     <value>Pokéball</value>
   </data>
   <data name="ItemPokemonStorageUpgrade" xml:space="preserve">
-    <value>Pokémon Platzerweiterung</value>
+    <value>Pokémon-Aufbewahrung-Plus</value>
   </data>
   <data name="ItemPotion" xml:space="preserve">
     <value>Trank</value>
@@ -112,13 +112,13 @@
     <value>Beleber</value>
   </data>
   <data name="ItemSpecialCamera" xml:space="preserve">
-    <value>Spezial Kamera</value>
+    <value>Kamera</value>
   </data>
   <data name="ItemSuperPotion" xml:space="preserve">
     <value>Supertrank</value>
   </data>
   <data name="ItemTroyDisk" xml:space="preserve">
-    <value>Lock-Modul</value>
+    <value>Lockmodul</value>
   </data>
   <data name="ItemUltraBall" xml:space="preserve">
     <value>Hyperball</value>
@@ -130,12 +130,12 @@
     <value>Nirbebeere</value>
   </data>
   <data name="ItemXAttack" xml:space="preserve">
-    <value>X Angriff</value>
+    <value>X-Angriff</value>
   </data>
   <data name="ItemXDefense" xml:space="preserve">
-    <value>X Verteidigung</value>
+    <value>X-Verteidigung</value>
   </data>
   <data name="ItemXMiracle" xml:space="preserve">
-    <value>X Wunder</value>
+    <value>X-Wunder</value>
   </data>
 </root>

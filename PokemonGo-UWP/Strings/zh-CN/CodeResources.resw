@@ -12,4 +12,84 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DateFormat" xml:space="preserve">
+    <value>yyyy.MM.dd</value>
+  </data>
+  <data name="DateTimeFormat" xml:space="preserve">
+    <value>yyyy.MM.dd hh:mm tt</value>
+  </data>
+  <data name="PokemonFledText" xml:space="preserve">
+    <value>{0} 退出</value>
+  </data>
+  <data name="GettingGpsSignalText" xml:space="preserve">
+    <value>正在寻找你</value>
+  </data>
+  <data name="GettingUserDataText" xml:space="preserve">
+    <value>获取你的个人信息</value>
+  </data>
+  <data name="GoogleErrorText" xml:space="preserve">
+    <value>Google 服务错误（请先科学上网）：</value>
+  </data>
+  <data name="GoogleNotRespondingText" xml:space="preserve">
+    <value>Google 服务没有响应。坐和放宽，然后重试。（请先科学上网）</value>
+  </data>
+  <data name="LoadingEncounterText" xml:space="preserve">
+    <value>加载失败： {0} （请先科学上网）</value>
+  </data>
+  <data name="LoggingInText" xml:space="preserve">
+    <value>登录</value>
+  </data>
+  <data name="LoginFailedText" xml:space="preserve">
+    <value>登录遇到了问题。坐和放宽，然后重试。（请先科学上网）</value>
+  </data>
+  <data name="NoText" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="NoGpsPermissionsText" xml:space="preserve">
+    <value>口袋妖怪 Go 需要 GPS 权限。前往“设置&gt;隐私&gt;定位”开启。</value>
+  </data>
+  <data name="PokemonRanAwayText" xml:space="preserve">
+    <value>Pokemon 已经逃离。</value>
+  </data>
+  <data name="PtcDownText" xml:space="preserve">
+    <value>口袋妖怪训练俱乐部登陆系统出现问题。坐和放宽，然后重试。（请先科学上网）</value>
+  </data>
+  <data name="SomethingWentWrongText" xml:space="preserve">
+    <value>遇到了一些问题，口袋妖怪 Go 现在很不稳定。是否注销重试？</value>
+  </data>
+  <data name="TimeFormat" xml:space="preserve">
+    <value>hh:mm tt</value>
+  </data>
+  <data name="UpdateDownloadingText" xml:space="preserve">
+    <value>正在下载更新 {0}</value>
+  </data>
+  <data name="UpdatedVersionText" xml:space="preserve">
+    <value>已经有内核的新版本： {0} 是否更新？（这次更新将会禁用虚拟定位。）
+{1}</value>
+  </data>
+  <data name="UpdateFailedText" xml:space="preserve">
+    <value>更新失败︰ {0}
+是否手动下载？（请先科学上网）</value>
+  </data>
+  <data name="UpdateInstallingText" xml:space="preserve">
+    <value>正在安装更新。应用将会重启。坐和放宽</value>
+  </data>
+  <data name="WrongUsernameText" xml:space="preserve">
+    <value>用户名/密码或脱机服务器错误。坐和放宽，然后重试。（请先科学上网）</value>
+  </data>
+  <data name="YesText" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="InstinctTeamText" xml:space="preserve">
+    <value>充满</value>
+  </data>
+  <data name="NoTeamText" xml:space="preserve">
+    <value>没有队伍</value>
+  </data>
+  <data name="ValorTeamText" xml:space="preserve">
+    <value>勇气</value>
+  </data>
+  <data name="MysticTeamText" xml:space="preserve">
+    <value>神秘</value>
+  </data>
 </root>

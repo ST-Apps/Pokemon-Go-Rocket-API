@@ -40,7 +40,7 @@
     <value>Non</value>
   </data>
   <data name="NoGpsPermissionsText" xml:space="preserve">
-    <value>Nous avons besoin de l'autorisation d'accés au GPS pour faire fonctionner le jeu, activez le et réessayer.</value>
+    <value>Nous avons besoin de l'autorisation d'accès au GPS pour faire fonctionner le jeu, activez le et réessayer.</value>
   </data>
   <data name="PokemonRanAwayText" xml:space="preserve">
     <value>Le Pokémon s'est enfui, désolé :(</value>
@@ -49,7 +49,7 @@
     <value>La connexion à PTC est probablement hors service, réessayer plus tard.</value>
   </data>
   <data name="SomethingWentWrongText" xml:space="preserve">
-    <value>Quelque chose s'est mal passé et l'application peut être instable. Voule-vous vous déconnecter et recommencer?</value>
+    <value>Quelque chose s'est mal passé et l'application peut être instable. Voulez-vous vous déconnecter et recommencer?</value>
   </data>
   <data name="UpdateDownloadingText" xml:space="preserve">
     <value>Téléchargement de la mise à jour {0}</value>

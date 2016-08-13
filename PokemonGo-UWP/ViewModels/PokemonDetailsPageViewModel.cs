@@ -10,6 +10,7 @@ using Windows.UI.Xaml.Navigation;
 using Google.Common.Geometry;
 using PokemonGo_UWP.Entities;
 using PokemonGo_UWP.Utils;
+using PokemonGo_UWP.Views;
 using POGOProtos.Data;
 using POGOProtos.Enums;
 using POGOProtos.Inventory;
@@ -279,14 +280,30 @@ namespace PokemonGo_UWP.ViewModels
         public DelegateCommand TransferPokemonCommand => _transferPokemonCommand ?? (
           _transferPokemonCommand = new DelegateCommand(async () =>
           {
-              var mes = await GameClient.TransferPokemon(CurrentPokemon.Id);
-              switch (mes.Result)
+              // Ask for confirmation before moving the Pokemon
+              // TODO: better style maybe?
+              var dialog = 
+                  new MessageDialog(string.Format(Resources.CodeResources.GetString("TransferPokemonWarningText"),
+                      Resources.Pokemon.GetString(CurrentPokemon.PokemonId.ToString())));
+              dialog.Commands.Add(new UICommand(Resources.CodeResources.GetString("YesText")) { Id = 0 });
+              dialog.Commands.Add(new UICommand(Resources.CodeResources.GetString("NoText")) { Id = 1 });
+              dialog.DefaultCommandIndex = 0;
+              dialog.CancelCommandIndex = 1;
+              // User canceled transfer
+              if ((int)(await dialog.ShowAsyncQueue()).Id == 1) return;
+              // User confirmed transfer
+              var pokemonTransferResponse = await GameClient.TransferPokemon(CurrentPokemon.Id);
+              switch (pokemonTransferResponse.Result)
               {
                   case ReleasePokemonResponse.Types.Result.Unset:
                       break;
                   case ReleasePokemonResponse.Types.Result.Success:
-                      // TODO: candy awarded message
-                      // TODO: leave page and update inventory on OK   
+                      await
+                          new MessageDialog(
+                              string.Format(Resources.CodeResources.GetString("TransferPokemonSuccessText"),
+                                  Resources.Pokemon.GetString(CurrentPokemon.PokemonId.ToString()))).ShowAsyncQueue();
+                      await GameClient.UpdateInventory();
+                      NavigationService.Navigate(typeof(PokemonInventoryPage));
                       break;
                   // TODO: what to do on error?
                   case ReleasePokemonResponse.Types.Result.PokemonDeployed:

@@ -12,4 +12,131 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="D_ItemGreatBall" xml:space="preserve">
+    <value>Een apparaat voor het vangen van wilde Pokémon. Je gooit het als een bal op een wilde Pokémon.</value>
+  </data>
+  <data name="D_ItemIncenseCool" xml:space="preserve">
+    <value>Wierook met een mysterieuze geur die wilde Pokémon voor 30 minuten naar uw locatie lokt</value>
+  </data>
+  <data name="D_ItemIncenseFloral" xml:space="preserve">
+    <value>Wierook met een mysterieuze geur die wilde Pokémon naar uw locatie voor 30 minuten lokt</value>
+  </data>
+  <data name="D_ItemIncenseOrdinary" xml:space="preserve">
+    <value>Wierook met een mysterieuze geur die wilde Pokémon voor 30 minuten naar uw locatie lokt</value>
+  </data>
+  <data name="D_ItemIncenseSpicy" xml:space="preserve">
+    <value>Wierook met een mysterieuze geur die wilde Pokémon voor 30 minuten naar uw locatie lokt</value>
+  </data>
+  <data name="D_ItemIncubatorBasic" xml:space="preserve">
+    <value>Een apparaat waar je een ei in legt en waarmee je loopt totdat het klaar is om uit te komen.</value>
+  </data>
+  <data name="D_ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>Een apparaat waar je een ei in legt en waarmee je loopt totdat het klaar is om uit te komen.</value>
+  </data>
+  <data name="D_ItemMasterBall" xml:space="preserve">
+    <value>Een apparaat voor het vangen van wilde Pokémon. Je gooit het als een bal op een wilde Pokémon.</value>
+  </data>
+  <data name="D_ItemPokeBall" xml:space="preserve">
+    <value>Een apparaat voor het vangen van wilde Pokémon. Je gooit het als een bal op een wilde Pokémon.</value>
+  </data>
+  <data name="D_ItemPotion" xml:space="preserve">
+    <value>Een spray-type geneesmiddel voor de behandeling van wonden. Het herstelt de HP van een Pokémon met 20 punten.</value>
+  </data>
+  <data name="D_ItemRevive" xml:space="preserve">
+    <value>Een geneesmiddel dat een flauwgevallen Pokémon kan doen herleven. Het herstelt ook de helft van een flauwgevallen Pokémon maximale HP.</value>
+  </data>
+  <data name="D_ItemUltraBall" xml:space="preserve">
+    <value>Een apparaat voor het vangen van wilde Pokémon. Je gooit het als een bal op een wilde Pokémon.
+</value>
+  </data>
+  <data name="ItemBlukBerry" xml:space="preserve">
+    <value>Bluk Berry</value>
+  </data>
+  <data name="ItemGreatBall" xml:space="preserve">
+    <value>Grote bal</value>
+  </data>
+  <data name="ItemHyperPotion" xml:space="preserve">
+    <value>Hyper Potion</value>
+  </data>
+  <data name="ItemIncenseCool" xml:space="preserve">
+    <value>Wierook Cool</value>
+  </data>
+  <data name="ItemIncenseFloral" xml:space="preserve">
+    <value>Wierook Bloem</value>
+  </data>
+  <data name="ItemIncenseOrdinary" xml:space="preserve">
+    <value>Gewone wierook</value>
+  </data>
+  <data name="ItemIncenseSpicy" xml:space="preserve">
+    <value>Kruidige wierook</value>
+  </data>
+  <data name="ItemIncubatorBasic" xml:space="preserve">
+    <value>Incubator Basic</value>
+  </data>
+  <data name="ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>Incubator Basic onbeperkt</value>
+  </data>
+  <data name="ItemItemStorageUpgrade" xml:space="preserve">
+    <value>Object opslag Upgrade</value>
+  </data>
+  <data name="ItemLuckyEgg" xml:space="preserve">
+    <value>Gelukkige ei</value>
+  </data>
+  <data name="ItemMasterBall" xml:space="preserve">
+    <value>Master bal</value>
+  </data>
+  <data name="ItemMaxPotion" xml:space="preserve">
+    <value>Max Potion</value>
+  </data>
+  <data name="ItemMaxRevive" xml:space="preserve">
+    <value>Max herleven</value>
+  </data>
+  <data name="ItemNanabBerry" xml:space="preserve">
+    <value>Nanab Berry</value>
+  </data>
+  <data name="ItemPinapBerry" xml:space="preserve">
+    <value>Pinap Berry</value>
+  </data>
+  <data name="ItemPokeBall" xml:space="preserve">
+    <value>Poke bal</value>
+  </data>
+  <data name="ItemPokemonStorageUpgrade" xml:space="preserve">
+    <value>Pokemon opslag Upgrade</value>
+  </data>
+  <data name="ItemPotion" xml:space="preserve">
+    <value>Potion</value>
+  </data>
+  <data name="ItemRazzBerry" xml:space="preserve">
+    <value>Razz Berry</value>
+  </data>
+  <data name="ItemRevive" xml:space="preserve">
+    <value>Doen herleven</value>
+  </data>
+  <data name="ItemSpecialCamera" xml:space="preserve">
+    <value>Speciale Camera</value>
+  </data>
+  <data name="ItemSuperPotion" xml:space="preserve">
+    <value>Super Potion</value>
+  </data>
+  <data name="ItemTroyDisk" xml:space="preserve">
+    <value>Troy schijf</value>
+  </data>
+  <data name="ItemUltraBall" xml:space="preserve">
+    <value>Ultra bal</value>
+  </data>
+  <data name="ItemUnknown" xml:space="preserve">
+    <value>Onbekend</value>
+  </data>
+  <data name="ItemWeparBerry" xml:space="preserve">
+    <value>Wepar Berry</value>
+  </data>
+  <data name="ItemXAttack" xml:space="preserve">
+    <value>X aanval</value>
+  </data>
+  <data name="ItemXDefense" xml:space="preserve">
+    <value>X Defense</value>
+  </data>
+  <data name="ItemXMiracle" xml:space="preserve">
+    <value>X wonder</value>
+  </data>
 </root>

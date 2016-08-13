@@ -12,4 +12,82 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CooldownTextBlock.Text" xml:space="preserve">
+    <value>Вы должны немного подождать</value>
+  </data>
+  <data name="InventoryFullTextBlock.Text" xml:space="preserve">
+    <value>Ваш инвентарь полон!</value>
+  </data>
+  <data name="PtcLoginTextBlock.Text" xml:space="preserve">
+    <value>ВОЙТИ через аккаунт PTC</value>
+  </data>
+  <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
+    <value>Для входа вам нужно ввести свой Логин/Почту и Пароль в это приложение. Если вы ему не доверяете, пожалуйста, закройте его. Мы не отвечаем за всё, что может случиться.</value>
+  </data>
+  <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
+    <value>рядом</value>
+  </data>
+  <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
+    <value>Вы находитесь вне зоны действия.</value>
+  </data>
+  <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
+    <value>Логин/Почта</value>
+  </data>
+  <data name="ExperienceTextBlock.Text" xml:space="preserve">
+    <value>ОПЫТ</value>
+  </data>
+  <data name="OkButton.Content" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="EggsTextBlock.Text" xml:space="preserve">
+    <value>ЯЙЦА</value>
+  </data>
+  <data name="MusicTextBlock.Text" xml:space="preserve">
+    <value>Музыка</value>
+  </data>
+  <data name="PokemonTextBlock.Text" xml:space="preserve">
+    <value>ПОКЕМОНЫ</value>
+  </data>
+  <data name="SettingsHeaderTextBlock.Text" xml:space="preserve">
+    <value>НАСТРОЙКИ</value>
+  </data>
+  <data name="SettingsSignOutTextBlock.Text" xml:space="preserve">
+    <value>Выйти</value>
+  </data>
+  <data name="VibrationTextBlock.Text" xml:space="preserve">
+    <value>Вибрация</value>
+  </data>
+  <data name="ItemsTextBlock.Text" xml:space="preserve">
+    <value>ПРЕДМЕТЫ</value>
+  </data>
+  <data name="PokedexTextBlock.Text" xml:space="preserve">
+    <value>ПОКЕДЕКС</value>
+  </data>
+  <data name="LowercaseItemsTextBlock.Text" xml:space="preserve">
+    <value>предметы</value>
+  </data>
+  <data name="TotalExperienceTextBlock.Text" xml:space="preserve">
+    <value>TOTAL</value>
+  </data>
+  <data name="LevelUpTextBlock.Text" xml:space="preserve">
+    <value>Уровень повышен!</value>
+  </data>
+  <data name="LevelTextBlock.Text" xml:space="preserve">
+    <value>Уровень</value>
+  </data>
+  <data name="MapAutoRotateTextBlock.Text" xml:space="preserve">
+    <value>Автоповорот карты</value>
+  </data>
+  <data name="StartDateTextBlock.Text" xml:space="preserve">
+    <value>ДАТА НАЧАЛА</value>
+  </data>
+  <data name="IncubatorsTextBlock.Text" xml:space="preserve">
+    <value>ИНКУБАТОРЫ</value>
+  </data>
+  <data name="UseNianticMapTextBlock.Text" xml:space="preserve">
+    <value>Карта Niantic Inc.</value>
+  </data>
 </root>

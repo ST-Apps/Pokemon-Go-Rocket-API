@@ -111,7 +111,7 @@ namespace PokemonGo_UWP.Entities
     {
         private readonly EggIncubator _incubatorData;
         private readonly double playerWalkedKm;
-        public IncubatedEggDataWrapper(EggIncubator incubatorData, double playerWalkedKm, PokemonData pokemonData) : base(pokemonData)
+        public IncubatedEggDataWrapper(EggIncubator incubatorData, double playerWalkedKm, PokemonData incubatedEgg) : base(incubatedEgg)
         {
             _incubatorData = incubatorData;
             this.playerWalkedKm = playerWalkedKm;

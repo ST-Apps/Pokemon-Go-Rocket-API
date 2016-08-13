@@ -12,4 +12,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="D_ItemIncenseCool" xml:space="preserve">
+    <value>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</value>
+  </data>
+  <data name="D_ItemIncenseFloral" xml:space="preserve">
+    <value>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</value>
+  </data>
+  <data name="D_ItemIncenseOrdinary" xml:space="preserve">
+    <value>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</value>
+  </data>
+  <data name="D_ItemIncenseSpicy" xml:space="preserve">
+    <value>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</value>
+  </data>
+  <data name="D_ItemPotion" xml:space="preserve">
+    <value>Um medicamento tipo spray para o tratamento de feridas. Restaura o HP de um Pokémon por 20 pontos.</value>
+  </data>
+  <data name="D_ItemRevive" xml:space="preserve">
+    <value>Um medicamento que pode reviver Pokémon desmaiado. Ele também restaura metade do HP máximo de um Pokémon desmaiado.</value>
+  </data>
+  <data name="ItemGreatBall" xml:space="preserve">
+    <value>Bola Grande</value>
+  </data>
+  <data name="ItemIncenseFloral" xml:space="preserve">
+    <value>Incenso Floral</value>
+  </data>
+  <data name="ItemIncenseOrdinary" xml:space="preserve">
+    <value>Incenso Comum</value>
+  </data>
+  <data name="ItemIncenseSpicy" xml:space="preserve">
+    <value>Incenso Picante</value>
+  </data>
+  <data name="ItemIncubatorBasic" xml:space="preserve">
+    <value>Incubadora básica</value>
+  </data>
+  <data name="ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>Incubador básico ilimitado</value>
+  </data>
+  <data name="ItemLuckyEgg" xml:space="preserve">
+    <value>Ovo da sorte</value>
+  </data>
+  <data name="ItemPotion" xml:space="preserve">
+    <value>Poção</value>
+  </data>
+  <data name="ItemSpecialCamera" xml:space="preserve">
+    <value>Câmera especial</value>
+  </data>
+  <data name="ItemSuperPotion" xml:space="preserve">
+    <value>Super Poção</value>
+  </data>
+  <data name="ItemUnknown" xml:space="preserve">
+    <value>Desconhecido</value>
+  </data>
+  <data name="ItemWeparBerry" xml:space="preserve">
+    <value>Wepar Berry</value>
+  </data>
 </root>

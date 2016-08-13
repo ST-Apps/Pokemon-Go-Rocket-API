@@ -12,4 +12,130 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="D_ItemGreatBall" xml:space="preserve">
+    <value>捕捉野生寶可夢的道具，比精靈球有更高的機率捕捉成功。</value>
+  </data>
+  <data name="D_ItemIncenseCool" xml:space="preserve">
+    <value>充滿神祕香氣的薰香，30 分鐘內引誘野生寶可夢到您的周圍。</value>
+  </data>
+  <data name="D_ItemIncenseFloral" xml:space="preserve">
+    <value>充滿神祕香氣的薰香，30 分鐘內引誘野生寶可夢到您的周圍。</value>
+  </data>
+  <data name="D_ItemIncenseOrdinary" xml:space="preserve">
+    <value>充滿神祕香氣的薰香，30 分鐘內引誘野生寶可夢到您的周圍。</value>
+  </data>
+  <data name="D_ItemIncenseSpicy" xml:space="preserve">
+    <value>充滿神祕香氣的薰香，30 分鐘內引誘野生寶可夢到您的周圍。</value>
+  </data>
+  <data name="D_ItemIncubatorBasic" xml:space="preserve">
+    <value>開始孵化一隻寶可夢蛋，在行走距離達到要求後寶可夢蛋將會孵化(可以使用3次，能與其他孵化器同時使用)。</value>
+  </data>
+  <data name="D_ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>開始孵化一隻寶可夢蛋，在行走距離達到要求後寶可夢蛋將會孵化。</value>
+  </data>
+  <data name="D_ItemMasterBall" xml:space="preserve">
+    <value>捕捉野生寶可夢的道具，有最高的機率捕捉成功。</value>
+  </data>
+  <data name="D_ItemPokeBall" xml:space="preserve">
+    <value>捕捉野生寶可夢的道具。</value>
+  </data>
+  <data name="D_ItemPotion" xml:space="preserve">
+    <value>用於治療傷口的噴霧式藥物，能夠恢復精靈寶可夢 20 點HP。</value>
+  </data>
+  <data name="D_ItemRevive" xml:space="preserve">
+    <value>可以復活陷入昏迷的精靈寶可夢的藥並恢復一半的HP。</value>
+  </data>
+  <data name="D_ItemUltraBall" xml:space="preserve">
+    <value>捕捉野生寶可夢的道具，比超級球有更高的機率捕捉成功。</value>
+  </data>
+  <data name="ItemBlukBerry" xml:space="preserve">
+    <value>藍莓</value>
+  </data>
+  <data name="ItemGreatBall" xml:space="preserve">
+    <value>超級球</value>
+  </data>
+  <data name="ItemHyperPotion" xml:space="preserve">
+    <value>超高級藥水</value>
+  </data>
+  <data name="ItemIncenseCool" xml:space="preserve">
+    <value>冰涼熏香</value>
+  </data>
+  <data name="ItemIncenseFloral" xml:space="preserve">
+    <value>鮮花熏香</value>
+  </data>
+  <data name="ItemIncenseOrdinary" xml:space="preserve">
+    <value>普通熏香</value>
+  </data>
+  <data name="ItemIncenseSpicy" xml:space="preserve">
+    <value>辣味熏香</value>
+  </data>
+  <data name="ItemIncubatorBasic" xml:space="preserve">
+    <value>次數基礎孵蛋器</value>
+  </data>
+  <data name="ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>無限基礎孵蛋器</value>
+  </data>
+  <data name="ItemItemStorageUpgrade" xml:space="preserve">
+    <value>背包擴充</value>
+  </data>
+  <data name="ItemLuckyEgg" xml:space="preserve">
+    <value>幸運蛋</value>
+  </data>
+  <data name="ItemMasterBall" xml:space="preserve">
+    <value>掌門球</value>
+  </data>
+  <data name="ItemMaxPotion" xml:space="preserve">
+    <value>全滿藥水</value>
+  </data>
+  <data name="ItemMaxRevive" xml:space="preserve">
+    <value>特級復活石</value>
+  </data>
+  <data name="ItemNanabBerry" xml:space="preserve">
+    <value>粉蕉</value>
+  </data>
+  <data name="ItemPinapBerry" xml:space="preserve">
+    <value>黃旺梨</value>
+  </data>
+  <data name="ItemPokeBall" xml:space="preserve">
+    <value>精靈球</value>
+  </data>
+  <data name="ItemPokemonStorageUpgrade" xml:space="preserve">
+    <value>寶可夢空間擴充</value>
+  </data>
+  <data name="ItemPotion" xml:space="preserve">
+    <value>藥水</value>
+  </data>
+  <data name="ItemRazzBerry" xml:space="preserve">
+    <value>紅蔓莓</value>
+  </data>
+  <data name="ItemRevive" xml:space="preserve">
+    <value>復活石</value>
+  </data>
+  <data name="ItemSpecialCamera" xml:space="preserve">
+    <value>相機</value>
+  </data>
+  <data name="ItemSuperPotion" xml:space="preserve">
+    <value>超級藥水</value>
+  </data>
+  <data name="ItemTroyDisk" xml:space="preserve">
+    <value>Troy Disk</value>
+  </data>
+  <data name="ItemUltraBall" xml:space="preserve">
+    <value>高級球</value>
+  </data>
+  <data name="ItemUnknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="ItemWeparBerry" xml:space="preserve">
+    <value>青梨</value>
+  </data>
+  <data name="ItemXAttack" xml:space="preserve">
+    <value>力量增強</value>
+  </data>
+  <data name="ItemXDefense" xml:space="preserve">
+    <value>傷害預防</value>
+  </data>
+  <data name="ItemXMiracle" xml:space="preserve">
+    <value>奇蹟增強</value>
+  </data>
 </root>

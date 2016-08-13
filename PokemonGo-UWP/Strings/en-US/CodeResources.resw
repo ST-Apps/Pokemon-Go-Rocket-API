@@ -138,6 +138,9 @@
   <data name="GoogleNotRespondingText" xml:space="preserve">
     <value>Google is not responding, please try again later.</value>
   </data>
+  <data name="LoginExpired" xml:space="preserve">
+    <value>Previous login expired.</value>
+  </data>
   <data name="LoadingEncounterText" xml:space="preserve">
     <value>Loading encounter with {0}</value>
   </data>
@@ -154,7 +157,7 @@
     <value>We need GPS permissions to run the game, please enable it and try again.</value>
   </data>
   <data name="PokemonRanAwayText" xml:space="preserve">
-    <value>Pokemon ran away, sorry :(</value>
+    <value>Pokémon ran away, sorry :(</value>
   </data>
   <data name="PtcDownText" xml:space="preserve">
     <value>PTC login is probably down, please retry later.</value>
@@ -196,5 +199,83 @@ Open page with installation files for manual install?</value>
   </data>
   <data name="MysticTeamText" xml:space="preserve">
     <value>Mystic</value>
+  </data>
+  <data name="TransferPokemonSuccessText" xml:space="preserve">
+    <value>Transfer succeeded! Got a {0} Candy from the Professor.</value>
+  </data>
+  <data name="TransferPokemonWarningText" xml:space="preserve">
+    <value>You can't take it back after it's transferred to the Professor. Do you really want to transfer {0} to the Professor?</value>
+  </data>
+  <data name="ActivityUnknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="ActivityCatchPokemon" xml:space="preserve">
+    <value>Pokémon Caught</value>
+  </data>
+  <data name="ActivityCatchLegendPokemon" xml:space="preserve">
+    <value>Catch Legend Pokémon</value>
+  </data>
+  <data name="ActivityFleePokemon" xml:space="preserve">
+    <value>Pokémon Fled</value>
+  </data>
+  <data name="ActivityDefeatFort" xml:space="preserve">
+    <value>Defeat Fort</value>
+  </data>
+  <data name="ActivityEvolvePokemon" xml:space="preserve">
+    <value>Evolve a Pokémon</value>
+  </data>
+  <data name="ActivityHatchEgg" xml:space="preserve">
+    <value>Egg Hatched!</value>
+  </data>
+  <data name="ActivityWalkKm" xml:space="preserve">
+    <value>Walk Km</value>
+  </data>
+  <data name="ActivityPokedexEntryNew" xml:space="preserve">
+    <value>New Pokémon</value>
+  </data>
+  <data name="ActivityCatchFirstThrow" xml:space="preserve">
+    <value>First Throw</value>
+  </data>
+  <data name="ActivityCatchNiceThrow" xml:space="preserve">
+    <value>Nice Throw</value>
+  </data>
+  <data name="ActivityCatchGreatThrow" xml:space="preserve">
+    <value>Great Throw</value>
+  </data>
+  <data name="ActivityCatchExcellentThrow" xml:space="preserve">
+    <value>Excellent Throw</value>
+  </data>
+  <data name="ActivityCatchCurveball" xml:space="preserve">
+    <value>Curveball</value>
+  </data>
+  <data name="ActivityCatchFirstCatchOfDay" xml:space="preserve">
+    <value>First Catch of Day!</value>
+  </data>
+  <data name="ActivityCatchMilestone" xml:space="preserve">
+    <value>Catch Milestone</value>
+  </data>
+  <data name="ActivityTrainPokemon" xml:space="preserve">
+    <value>Train Pokémon</value>
+  </data>
+  <data name="ActivitySearchFort" xml:space="preserve">
+    <value>Search Fort</value>
+  </data>
+  <data name="ActivityReleasePokemon" xml:space="preserve">
+    <value>Release Pokémon</value>
+  </data>
+  <data name="ActivityHatchEggSmallBonus" xml:space="preserve">
+    <value>Hatch Egg Small Bonus</value>
+  </data>
+  <data name="ActivityHatchEggMediumBonus" xml:space="preserve">
+    <value>Hatch Egg Medium Bonus</value>
+  </data>
+  <data name="ActivityHatchEggLargeBonus" xml:space="preserve">
+    <value>Hatch Egg Large Bonus</value>
+  </data>
+  <data name="ActivityDefeatGymDefender" xml:space="preserve">
+    <value>Defeat Gym Defender</value>
+  </data>
+  <data name="ActivityDefeatGymLeader" xml:space="preserve">
+    <value>Defeat Gym Leader</value>
   </data>
 </root>

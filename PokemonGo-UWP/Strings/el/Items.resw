@@ -12,4 +12,130 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="D_ItemGreatBall" xml:space="preserve">
+    <value>Μία συσκευή για να πίανεις άγρια πόκεμον. Την πετάς σάν μπάλα σε ένα άγριο πόκεμον και με άνεση πίανει τον στόχο της.</value>
+  </data>
+  <data name="D_ItemIncenseCool" xml:space="preserve">
+    <value>Ένα θυμίαμα με μία μυστηριόδη μυρωδία η οποία ελκύει Πόκεμον στην τοποθεσία σου για 30 λεπτά</value>
+  </data>
+  <data name="D_ItemIncenseFloral" xml:space="preserve">
+    <value>Ένα θυμίαμα με μία μυστηριόδη μυρωδία η οποία ελκύει Πόκεμον στην τοποθεσία σου για 30 λεπτά</value>
+  </data>
+  <data name="D_ItemIncenseOrdinary" xml:space="preserve">
+    <value>Ένα θυμίαμα με μία μυστηριόδη μυρωδία η οποία ελκύει Πόκεμον στην τοποθεσία σου για 30 λεπτά</value>
+  </data>
+  <data name="D_ItemIncenseSpicy" xml:space="preserve">
+    <value>Ένα θυμίαμα με μία μυστηριόδη μυρωδία η οποία ελκύει Πόκεμον στην τοποθεσία σου για 30 λεπτά</value>
+  </data>
+  <data name="D_ItemIncubatorBasic" xml:space="preserve">
+    <value>Μία συσκευή η οποία εκολάπτει ενα αυγό όσο περπατάς μέχρι να ειναι έτοιμο να ανοίξει</value>
+  </data>
+  <data name="D_ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>Μία συσκευή η οποία εκολάπτει ενα αυγό όσο περπατάς μέχρι να ειναι έτοιμο να ανοίξει</value>
+  </data>
+  <data name="D_ItemMasterBall" xml:space="preserve">
+    <value>Μία συσκευή για να πίανεις άγρια πόκεμον. Την πετάς σάν μπάλα σε ένα άγριο πόκεμον και με άνεση πίανει τον στόχο του.</value>
+  </data>
+  <data name="D_ItemPokeBall" xml:space="preserve">
+    <value>Μία συσκευή για να πίανεις άγρια πόκεμον. Την πετάς σάν μπάλα σε ένα άγριο πόκεμον και με άνεση πίανει τον στόχο του.</value>
+  </data>
+  <data name="D_ItemPotion" xml:space="preserve">
+    <value>Ένα φάρμακο τύπου ψεκάσματος για την περίθαλψη πλυγών. Επαναφέρει το HP ενός Πόκεμον κατα 20 πόντους</value>
+  </data>
+  <data name="D_ItemRevive" xml:space="preserve">
+    <value>Ένα φάρμακο το οποίο επαναφέρει λιπόθυμα Πόκεμον. Επίσης επαναφέρει το μισό απο το μέγιστο HP ενός λιπόθυμου Πόκεμον.</value>
+  </data>
+  <data name="D_ItemUltraBall" xml:space="preserve">
+    <value>Μία συσκευή για να πίανεις άγρια πόκεμον. Την πετάς σάν μπάλα σε ένα άγριο πόκεμον και με άνεση πίανει τον στόχο του.</value>
+  </data>
+  <data name="ItemBlukBerry" xml:space="preserve">
+    <value>Μπλούκ Μούρο</value>
+  </data>
+  <data name="ItemGreatBall" xml:space="preserve">
+    <value>Γκρέιτ Μπαλλ</value>
+  </data>
+  <data name="ItemHyperPotion" xml:space="preserve">
+    <value>Ενεργειτικό Φίλτρο</value>
+  </data>
+  <data name="ItemIncenseCool" xml:space="preserve">
+    <value>Δροσερό θυμίαμα</value>
+  </data>
+  <data name="ItemIncenseFloral" xml:space="preserve">
+    <value>Άνθινο Θυμίαμα</value>
+  </data>
+  <data name="ItemIncenseOrdinary" xml:space="preserve">
+    <value>Συνιθυσμένο Θυμίαμα</value>
+  </data>
+  <data name="ItemIncenseSpicy" xml:space="preserve">
+    <value>Πικάντικο Θυμίαμα</value>
+  </data>
+  <data name="ItemIncubatorBasic" xml:space="preserve">
+    <value>Βασικό Εκολαπτύριο</value>
+  </data>
+  <data name="ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>Απεριόριστο Βασικό Εκολαπτύριο</value>
+  </data>
+  <data name="ItemItemStorageUpgrade" xml:space="preserve">
+    <value>Αντικείμενο Αναβάθμισης Αποθήκης Αντικειμένων</value>
+  </data>
+  <data name="ItemLuckyEgg" xml:space="preserve">
+    <value>Τυχερό Αυγό</value>
+  </data>
+  <data name="ItemMasterBall" xml:space="preserve">
+    <value>Μάστερ Μπαλ</value>
+  </data>
+  <data name="ItemMaxPotion" xml:space="preserve">
+    <value>Μέγιστο Φίλτρο</value>
+  </data>
+  <data name="ItemMaxRevive" xml:space="preserve">
+    <value>Μέγιστη Επαναφορά</value>
+  </data>
+  <data name="ItemNanabBerry" xml:space="preserve">
+    <value>Νάναμπ Μούρο</value>
+  </data>
+  <data name="ItemPinapBerry" xml:space="preserve">
+    <value>Πίναπ Μόυρο</value>
+  </data>
+  <data name="ItemPokeBall" xml:space="preserve">
+    <value>Πόκεμπαλ</value>
+  </data>
+  <data name="ItemPokemonStorageUpgrade" xml:space="preserve">
+    <value>Αντικείμενο Αναβάθμισης Αποθήκης Πόκεμον</value>
+  </data>
+  <data name="ItemPotion" xml:space="preserve">
+    <value>Φίλτρο</value>
+  </data>
+  <data name="ItemRazzBerry" xml:space="preserve">
+    <value>Ράζ Μούρο</value>
+  </data>
+  <data name="ItemRevive" xml:space="preserve">
+    <value>Επαναφορά</value>
+  </data>
+  <data name="ItemSpecialCamera" xml:space="preserve">
+    <value>Ειδική Κάμερα</value>
+  </data>
+  <data name="ItemSuperPotion" xml:space="preserve">
+    <value>Σούπερ Φίλτρο</value>
+  </data>
+  <data name="ItemTroyDisk" xml:space="preserve">
+    <value>Δίσκος Τρόι</value>
+  </data>
+  <data name="ItemUltraBall" xml:space="preserve">
+    <value>Ούλτρα Μπαλ</value>
+  </data>
+  <data name="ItemUnknown" xml:space="preserve">
+    <value>Άγνωστο</value>
+  </data>
+  <data name="ItemWeparBerry" xml:space="preserve">
+    <value>Γουέπαρ Μούρο</value>
+  </data>
+  <data name="ItemXAttack" xml:space="preserve">
+    <value>X Επίθεση</value>
+  </data>
+  <data name="ItemXDefense" xml:space="preserve">
+    <value>X Άμυνα</value>
+  </data>
+  <data name="ItemXMiracle" xml:space="preserve">
+    <value>X Θαύμα</value>
+  </data>
 </root>

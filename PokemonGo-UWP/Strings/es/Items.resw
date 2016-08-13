@@ -12,4 +12,100 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="D_ItemGreatBall" xml:space="preserve">
+    <value>Un dispositivo para capturar Pokémon salvajes. Se lanza como una pelota a un Pokémon salvaje, encapsulando cómodamente a su objetivo.</value>
+  </data>
+  <data name="D_ItemIncenseCool" xml:space="preserve">
+    <value>Incienso con una fragancia misteriosa que atrae a los Pokémon salvajes a tu ubicación durante 30 minutos.</value>
+  </data>
+  <data name="D_ItemIncenseFloral" xml:space="preserve">
+    <value>Incienso con una fragancia misteriosa que atrae a los Pokémon salvajes a tu ubicación durante 30 minutos.</value>
+  </data>
+  <data name="D_ItemIncenseOrdinary" xml:space="preserve">
+    <value>Incienso con una fragancia misteriosa que atrae a los Pokémon salvajes a tu ubicación durante 30 minutos.</value>
+  </data>
+  <data name="D_ItemIncenseSpicy" xml:space="preserve">
+    <value>Incienso con una fragancia misteriosa que atrae a los Pokémon salvajes a tu ubicación durante 30 minutos.</value>
+  </data>
+  <data name="D_ItemIncubatorBasic" xml:space="preserve">
+    <value>Un dispositivo que incuba un huevo mientras que caminas, hasta que este listo para nacer.</value>
+  </data>
+  <data name="D_ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>Un dispositivo que incuba un Huevo mientras caminas, hasta que este listo para eclosionar.</value>
+  </data>
+  <data name="D_ItemMasterBall" xml:space="preserve">
+    <value>Un dispositivo para capturar Pokémon salvajes. Se lanza como una pelota a un Pokémon salvaje, encapsulando cómodamente a su objetivo.</value>
+  </data>
+  <data name="D_ItemPokeBall" xml:space="preserve">
+    <value>Un dispositivo para capturar Pokémon salvajes. Se lanza como una pelota a un Pokémon salvaje, encapsulando cómodamente a su objetivo.</value>
+  </data>
+  <data name="D_ItemPotion" xml:space="preserve">
+    <value>Una medicina en forma de aerosol para curar heridas. Recupera 20 puntos de vida a un Pokémon.</value>
+  </data>
+  <data name="D_ItemRevive" xml:space="preserve">
+    <value>Una medicina que puede revivir a un Pokémon debilitado. Tambien restaura la mitad de los puntos de vida máximos del Pokémon debilitado.</value>
+  </data>
+  <data name="D_ItemUltraBall" xml:space="preserve">
+    <value>Un dispositivo para capturar Pokémon salvajes. Se lanza como una pelota a un Pokémon salvaje, encapsulando cómodamente a su objetivo.</value>
+  </data>
+  <data name="ItemHyperPotion" xml:space="preserve">
+    <value>Hiper Poción</value>
+  </data>
+  <data name="ItemIncenseCool" xml:space="preserve">
+    <value>Incienso Frio</value>
+  </data>
+  <data name="ItemIncenseFloral" xml:space="preserve">
+    <value>Incienso Floral</value>
+  </data>
+  <data name="ItemIncenseOrdinary" xml:space="preserve">
+    <value>Incienso Común</value>
+  </data>
+  <data name="ItemIncenseSpicy" xml:space="preserve">
+    <value>Incienso Picante</value>
+  </data>
+  <data name="ItemIncubatorBasic" xml:space="preserve">
+    <value>Incubadora Básica</value>
+  </data>
+  <data name="ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>Incubadora Básica Ilimitada</value>
+  </data>
+  <data name="ItemItemStorageUpgrade" xml:space="preserve">
+    <value>Mejora del Almacenamiento de Objetos</value>
+  </data>
+  <data name="ItemLuckyEgg" xml:space="preserve">
+    <value>Huevo de la Suerte</value>
+  </data>
+  <data name="ItemMaxPotion" xml:space="preserve">
+    <value>Poción Máxima</value>
+  </data>
+  <data name="ItemMaxRevive" xml:space="preserve">
+    <value>Máximo Revividor</value>
+  </data>
+  <data name="ItemPokemonStorageUpgrade" xml:space="preserve">
+    <value>Mejora del almacenamiento de Pokémon.</value>
+  </data>
+  <data name="ItemPotion" xml:space="preserve">
+    <value>Poción</value>
+  </data>
+  <data name="ItemRevive" xml:space="preserve">
+    <value>Revividor</value>
+  </data>
+  <data name="ItemSpecialCamera" xml:space="preserve">
+    <value>Cámara Especial</value>
+  </data>
+  <data name="ItemSuperPotion" xml:space="preserve">
+    <value>Super Poción</value>
+  </data>
+  <data name="ItemUnknown" xml:space="preserve">
+    <value>Desconocido</value>
+  </data>
+  <data name="ItemXAttack" xml:space="preserve">
+    <value>Ataque X</value>
+  </data>
+  <data name="ItemXDefense" xml:space="preserve">
+    <value>Defensa X</value>
+  </data>
+  <data name="ItemXMiracle" xml:space="preserve">
+    <value>Milagro X</value>
+  </data>
 </root>

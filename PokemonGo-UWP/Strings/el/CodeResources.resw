@@ -12,4 +12,75 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="PokemonFledText" xml:space="preserve">
+    <value>{0} Ξέφυγαν</value>
+  </data>
+  <data name="GettingGpsSignalText" xml:space="preserve">
+    <value>Αναζήτηση σήματος GPS...</value>
+  </data>
+  <data name="GettingUserDataText" xml:space="preserve">
+    <value>Λήψη αρχείων χρήστη...</value>
+  </data>
+  <data name="GoogleErrorText" xml:space="preserve">
+    <value>Το Google επέστρεψε το σφάλμα:</value>
+  </data>
+  <data name="GoogleNotRespondingText" xml:space="preserve">
+    <value>Το Google δέν ανταποκρίνεται, παρακαλώ προσπαθήστε ξανά αργότερα.</value>
+  </data>
+  <data name="LoadingEncounterText" xml:space="preserve">
+    <value>Φόρτοση αντιμετόπισης με {0}</value>
+  </data>
+  <data name="LoggingInText" xml:space="preserve">
+    <value>Είσοδος...</value>
+  </data>
+  <data name="LoginFailedText" xml:space="preserve">
+    <value>Αποτυχία σύνδεσης, παρακαλώ δοκιμάστε ξανά.</value>
+  </data>
+  <data name="NoText" xml:space="preserve">
+    <value>Όχι</value>
+  </data>
+  <data name="NoGpsPermissionsText" xml:space="preserve">
+    <value>Χρειαζόμαστε άδεια να χρησιμοποιήσουμε το GPS σας για να τρέξουμε το παιχνίδι, παρακαλόυμε ενεργοποιήστε το και προσπαθήστε ξανά.</value>
+  </data>
+  <data name="PokemonRanAwayText" xml:space="preserve">
+    <value>To Πόκεμον ξέφυγε, συγγνώμη :(</value>
+  </data>
+  <data name="PtcDownText" xml:space="preserve">
+    <value>Η Σύνδεση με PTC κωδικό μάλλον δεν είναι διαθέσιμη, παρακαλώ προσπαθήστε αργότερα.</value>
+  </data>
+  <data name="SomethingWentWrongText" xml:space="preserve">
+    <value>Κάτι πήγε λάθος και η εφαρμογή μπορεί να είναι ασταθής. Θέλετε να αποσυνδεθείτε και να ξαναπροσπαθήσετε;</value>
+  </data>
+  <data name="UpdateDownloadingText" xml:space="preserve">
+    <value>Λήψη ενημέρωσης {0}</value>
+  </data>
+  <data name="UpdatedVersionText" xml:space="preserve">
+    <value>Μία αναβαθμισμένη έκδοση {0} είναι διαθέσιμη. Θέλετε να αναβαθμίσετε;
+{1}</value>
+  </data>
+  <data name="UpdateFailedText" xml:space="preserve">
+    <value>Η ενημέρωση απέτυχε: {0}
+Άνοιγμα της σελίδα με τα αρχεία εγκατάστασης για  χειροκίνιτη εγκατάσταση;</value>
+  </data>
+  <data name="UpdateInstallingText" xml:space="preserve">
+    <value>Εγκατάσταση ενημέρωσης, η εφαρμογή κάνει επανεκκίνιση....</value>
+  </data>
+  <data name="WrongUsernameText" xml:space="preserve">
+    <value>Λάθος Όνομα-Χρήστη/Κωδικός ή offline server, παρακαλώ δοκιμάστε ξανά.</value>
+  </data>
+  <data name="YesText" xml:space="preserve">
+    <value>Ναί</value>
+  </data>
+  <data name="InstinctTeamText" xml:space="preserve">
+    <value>Ίνστινκτ</value>
+  </data>
+  <data name="NoTeamText" xml:space="preserve">
+    <value>Χωρίς Ομάδα</value>
+  </data>
+  <data name="ValorTeamText" xml:space="preserve">
+    <value>Βάλορ</value>
+  </data>
+  <data name="MysticTeamText" xml:space="preserve">
+    <value>Μύστικ</value>
+  </data>
 </root>

@@ -130,19 +130,19 @@
     <value>LOGIN with PTC Account</value>
   </data>
   <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
-    <value>To login you need to insert your Username/Email and Password in this app. If you don't trust it, please, close it before going on. We are not responsible for anything.</value>
+    <value>To login, enter your Username/Email and Password above. If you don't trust this app, please close it now. Niantic may ban you for using this app. Use at your own risk.</value>
   </data>
   <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
     <value>nearby</value>
   </data>
   <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
-    <value>You are out of range</value>
+    <value>THIS POKÉSTOP IS TOO FAR AWAY</value>
   </data>
   <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
     <value>Password</value>
   </data>
   <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
-    <value>Username/email</value>
+    <value>Username / Email</value>
   </data>
   <data name="ExperienceTextBlock.Text" xml:space="preserve">
     <value>XP</value>
@@ -156,7 +156,7 @@
   <data name="EggsTextBlock.Text" xml:space="preserve">
     <value>EGGS</value>
   </data>
-  <data name="MusicTextBlock.Text" xml:space="preserve">
+  <data name="SettingsMusicTextBlock.Text" xml:space="preserve">
     <value>Music</value>
   </data>
   <data name="PokemonTextBlock.Text" xml:space="preserve">
@@ -165,10 +165,10 @@
   <data name="SettingsHeaderTextBlock.Text" xml:space="preserve">
     <value>SETTINGS</value>
   </data>
-  <data name="SignOutTextBlock.Text" xml:space="preserve">
+  <data name="SettingsSignOutTextBlock.Text" xml:space="preserve">
     <value>Sign Out</value>
   </data>
-  <data name="VibrationTextBlock.Text" xml:space="preserve">
+  <data name="SettingsVibrationTextBlock.Text" xml:space="preserve">
     <value>Vibration</value>
   </data>
   <data name="ItemsTextBlock.Text" xml:space="preserve">
@@ -199,7 +199,7 @@
   <data name="LevelTextBlock.Text" xml:space="preserve">
     <value>Level</value>
   </data>
-  <data name="MapAutoRotateTextBlock.Text" xml:space="preserve">
+  <data name="SettingsMapAutoRotateTextBlock.Text" xml:space="preserve">
     <value>Auto-Rotate Map</value>
   </data>
   <data name="StartDateTextBlock.Text" xml:space="preserve">
@@ -208,8 +208,8 @@
   <data name="IncubatorsTextBlock.Text" xml:space="preserve">
     <value>INCUBATORS</value>
   </data>
-  <data name="UseNianticMapTextBlock.Text" xml:space="preserve">
-    <value>Niantic map</value>
+  <data name="SettingsUseNianticMapTextBlock.Text" xml:space="preserve">
+    <value>Use Niantic Map</value>
   </data>
   <data name="CandyTextBlock.Text" xml:space="preserve">
     <value> CANDY</value>
@@ -241,5 +241,11 @@
   </data>
   <data name="PowerUpButton.Content" xml:space="preserve">
     <value>POWER UP</value>
+  </data>
+  <data name="SettingsRememberMapZoomTextBlock" xml:space="preserve">
+    <value>Remember Map Zoom</value>
+  </data>
+  <data name="TransferButton.Content" xml:space="preserve">
+    <value>TRANSFER</value>
   </data>
 </root>

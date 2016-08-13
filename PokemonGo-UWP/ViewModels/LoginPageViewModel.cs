@@ -35,7 +35,7 @@ namespace PokemonGo_UWP.ViewModels
             }
             else
             {
-                // TODO: load only if user enabled this with the missing checkbox
+                if (!RememberLoginData) return;
                 var currentCredentials = SettingsService.Instance.UserCredentials;
                 if (currentCredentials == null) return;
                 currentCredentials.RetrievePassword();
@@ -101,6 +101,12 @@ namespace PokemonGo_UWP.ViewModels
                 DoPtcLoginCommand.RaiseCanExecuteChanged();
                 DoGoogleLoginCommand.RaiseCanExecuteChanged();
             }
+        }
+
+        public bool RememberLoginData
+        {
+            get { return SettingsService.Instance.RememberLoginData; }
+            set { SettingsService.Instance.RememberLoginData = value; }
         }
 
         #endregion

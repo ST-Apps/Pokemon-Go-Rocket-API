@@ -145,9 +145,9 @@ namespace PokemonGo_UWP
                     // We have a stored token, let's go to game page
                     NavigationService.Navigate(typeof(GameMapPage), GameMapNavigationModes.AppStart);
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
-                    await ExceptionHandler.HandleException();
+                    await ExceptionHandler.HandleException(e);
                 }
             }
             else

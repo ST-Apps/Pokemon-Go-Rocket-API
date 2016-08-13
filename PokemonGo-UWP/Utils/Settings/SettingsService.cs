@@ -25,6 +25,12 @@ namespace PokemonGo_UWP.Utils
 
         #region Login & Authentication
 
+        public bool RememberLoginData
+        {
+            get { return _helper.Read(nameof(RememberLoginData), false); }
+            set { _helper.Write(nameof(RememberLoginData), value); }
+        }
+
         public string Udid
         {
             get { return _helper.Read(nameof(Udid), string.Empty); }
@@ -85,22 +91,28 @@ namespace PokemonGo_UWP.Utils
 
         #region Game
 
+        public bool IsAutoRotateMapEnabled
+        {
+            get { return _helper.Read(nameof(IsAutoRotateMapEnabled), false); }
+            set { _helper.Write(nameof(IsAutoRotateMapEnabled), value); }
+        }
+
+        public bool IsLiveTileEnabled
+        {
+            get { return _helper.Read(nameof(IsLiveTileEnabled), false); }
+            set { _helper.Write(nameof(IsLiveTileEnabled), value); }
+        }
+
         public bool IsMusicEnabled
         {
             get { return _helper.Read(nameof(IsMusicEnabled), false); }
             set { _helper.Write(nameof(IsMusicEnabled), value); }
         }
 
-        public bool IsVibrationEnabled
+        public bool IsNianticMapEnabled
         {
-            get { return _helper.Read(nameof(IsVibrationEnabled), false); }
-            set { _helper.Write(nameof(IsVibrationEnabled), value); }
-        }
-
-        public bool IsAutoRotateMapEnabled
-        {
-            get { return _helper.Read(nameof(IsAutoRotateMapEnabled), false); }
-            set { _helper.Write(nameof(IsAutoRotateMapEnabled), value); }
+            get { return _helper.Read(nameof(IsNianticMapEnabled), false); }
+            set { _helper.Write(nameof(IsNianticMapEnabled), value); }
         }
 
         public bool IsRememberMapZoomEnabled
@@ -109,22 +121,22 @@ namespace PokemonGo_UWP.Utils
             set { _helper.Write(nameof(IsRememberMapZoomEnabled), value); }
         }
 
-        public double Zoomlevel
+        public bool IsVibrationEnabled
         {
-            get { return _helper.Read(nameof(Zoomlevel), (double) 12); }
-            set { _helper.Write(nameof(Zoomlevel), value); }
+            get { return _helper.Read(nameof(IsVibrationEnabled), false); }
+            set { _helper.Write(nameof(IsVibrationEnabled), value); }
         }
-
+        
         public PokemonSortingModes PokemonSortingMode
         {
             get { return _helper.Read(nameof(PokemonSortingMode), PokemonSortingModes.Combat); }
             set { _helper.Write(nameof(PokemonSortingMode), value); }
         }
-
-        public bool IsNianticMapEnabled
+        
+        public double Zoomlevel
         {
-            get { return _helper.Read(nameof(IsNianticMapEnabled), false); }
-            set { _helper.Write(nameof(IsNianticMapEnabled), value); }
+            get { return _helper.Read(nameof(Zoomlevel), (double)12); }
+            set { _helper.Write(nameof(Zoomlevel), value); }
         }
 
         #endregion

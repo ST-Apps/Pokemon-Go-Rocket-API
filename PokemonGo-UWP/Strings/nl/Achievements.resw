@@ -12,4 +12,83 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BadgeBattleTrainingWon" xml:space="preserve">
+    <value>ACE Trainer</value>
+  </data>
+  <data name="BadgeBigMagikarp" xml:space="preserve">
+    <value>Visser</value>
+  </data>
+  <data name="BadgeCaptureTotal" xml:space="preserve">
+    <value>Verzamelaar</value>
+  </data>
+  <data name="BadgeEvolvedTotal" xml:space="preserve">
+    <value>Wetenschapper</value>
+  </data>
+  <data name="BadgeHatchedTotal" xml:space="preserve">
+    <value>Fokker</value>
+  </data>
+  <data name="BadgePikachu" xml:space="preserve">
+    <value>Pikachu</value>
+  </data>
+  <data name="BadgePokedexEntries" xml:space="preserve">
+    <value>Kanto</value>
+  </data>
+  <data name="BadgePokestopsVisited" xml:space="preserve">
+    <value>Backpacker</value>
+  </data>
+  <data name="BadgeSmallRattata" xml:space="preserve">
+    <value>Jongere</value>
+  </data>
+  <data name="Bug" xml:space="preserve">
+    <value>Bug Catcher</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Dragon Tamer</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Rocker</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Sprookjes meisje</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Zwarte band</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>Kindler</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Vogel Houder
+</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Hex Maniac</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Tuinman</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Ruïne Maniac</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Skiër</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>School kind</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Punk meisje</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Psychic</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Wandelaar</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Depot Agent</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Zwemmer</value>
+  </data>
 </root>

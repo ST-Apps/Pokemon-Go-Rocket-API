@@ -228,8 +228,36 @@ namespace PokemonGo_UWP.Utils
             {
                 AuthToken = SettingsService.Instance.AuthToken
             };
-
-            await _client.Login.DoLogin();
+            try
+            {
+                await _client.Login.DoLogin();
+            }
+            catch (Exception e)
+            {
+                 if (e is PokemonGo.RocketAPI.Exceptions.AccessTokenExpiredException)
+                 {
+                     await Relogin();
+                 }
+                 else throw;
+            }
+        }
+    public static async Task<bool> Relogin()
+    {
+            switch (_clientSettings.AuthType)
+            {
+                case AuthType.Ptc:
+                    {
+                        return await DoPtcLogin(_clientSettings.PtcUsername, _clientSettings.PtcPassword);
+                    }
+                case AuthType.Google:
+                    {
+                        return await DoGoogleLogin(_clientSettings.GoogleUsername, _clientSettings.GooglePassword);
+                    }
+                default:
+                    {
+                        throw new InvalidOperationException();
+                    }
+            }
         }
 
         /// <summary>
@@ -238,7 +266,7 @@ namespace PokemonGo_UWP.Utils
         /// <param name="username"></param>
         /// <param name="password"></param>
         /// <returns>true if login worked</returns>
-        public static async Task<bool> DoPtcLogin(string username, string password)
+    public static async Task<bool> DoPtcLogin(string username, string password)
         {
             _clientSettings = new Settings
             {

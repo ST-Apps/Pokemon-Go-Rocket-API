@@ -12,4 +12,91 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CooldownTextBlock.Text" xml:space="preserve">
+    <value>Tens que esperar algum tempo</value>
+  </data>
+  <data name="InventoryFullTextBlock.Text" xml:space="preserve">
+    <value>O teu inventário está cheio!</value>
+  </data>
+  <data name="PtcLoginTextBlock.Text" xml:space="preserve">
+    <value>INICIAR SESSÃO com a conta PTC</value>
+  </data>
+  <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
+    <value>To login you need to insert your Username/Email and Password in this app. If you don't trust it, please, close it before going on. We are not responsible for anything.</value>
+  </data>
+  <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
+    <value>perto</value>
+  </data>
+  <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
+    <value>Estás fora do raio de alcance</value>
+  </data>
+  <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
+    <value>Username/email</value>
+  </data>
+  <data name="ExperienceTextBlock.Text" xml:space="preserve">
+    <value>XP</value>
+  </data>
+  <data name="OkButton.Content" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="CpTextBlock.Text" xml:space="preserve">
+    <value>CP</value>
+  </data>
+  <data name="EggsTextBlock.Text" xml:space="preserve">
+    <value>OVOS</value>
+  </data>
+  <data name="MusicTextBlock.Text" xml:space="preserve">
+    <value>Música</value>
+  </data>
+  <data name="PokemonTextBlock.Text" xml:space="preserve">
+    <value>POKÉMON</value>
+  </data>
+  <data name="SettingsHeaderTextBlock.Text" xml:space="preserve">
+    <value>DEFINIÇÕES</value>
+  </data>
+  <data name="SettingsSignOutTextBlock.Text" xml:space="preserve">
+    <value>Terminar Sessão</value>
+  </data>
+  <data name="VibrationTextBlock.Text" xml:space="preserve">
+    <value>Vibração</value>
+  </data>
+  <data name="PokedexTextBlock.Text" xml:space="preserve">
+    <value>POKÉDEX</value>
+  </data>
+  <data name="LevelUpTextBlock.Text" xml:space="preserve">
+    <value>Novo nivel!</value>
+  </data>
+  <data name="LevelTextBlock.Text" xml:space="preserve">
+    <value>Nivel</value>
+  </data>
+  <data name="MapAutoRotateTextBlock.Text" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="StartDateTextBlock.Text" xml:space="preserve">
+    <value>DATA DE INICIO</value>
+  </data>
+  <data name="IncubatorsTextBlock.Text" xml:space="preserve">
+    <value>INCUBADORAS</value>
+  </data>
+  <data name="UseNianticMapTextBlock.Text" xml:space="preserve">
+    <value>Mapa Niantic</value>
+  </data>
+  <data name="HpTextBlock.Text" xml:space="preserve">
+    <value>HP </value>
+  </data>
+  <data name="TypeTextBlock.Text" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="KgTextBlock.Text" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="WeightTextBlock.Text" xml:space="preserve">
+    <value>Peso</value>
+  </data>
+  <data name="HeightTextBlock.Text" xml:space="preserve">
+    <value>Altura</value>
+  </data>
 </root>

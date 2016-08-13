@@ -9,6 +9,7 @@ namespace PokemonGo_UWP.Utils.Game
     /// <summary>
     /// Fort can have 3 visual states: opened, closed, cooldown
     /// </summary>
+    [Flags]
     public enum FortDataStatus
     {
         Opened,

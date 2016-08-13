@@ -11,6 +11,24 @@ namespace PokemonGo_UWP.ViewModels
         public string CurrentVersion => GameClient.CurrentVersion;
 
         /// <summary>
+        ///     Whether the player wants the map to rotate following is heading
+        /// </summary>
+        public bool IsAutoRotateMapEnabled
+        {
+            get { return SettingsService.Instance.IsAutoRotateMapEnabled; }
+            set { SettingsService.Instance.IsAutoRotateMapEnabled = value; }
+        }
+
+        /// <summary>
+        ///     Whether the player wants the Live Tile turned on.
+        /// </summary>
+        public bool IsLiveTileEnabled
+        {
+            get { return SettingsService.Instance.IsLiveTileEnabled; }
+            set { SettingsService.Instance.IsLiveTileEnabled = value; }
+        }
+
+        /// <summary>
         ///     Whether the player wants music
         /// </summary>
         public bool IsMusicEnabled
@@ -20,29 +38,8 @@ namespace PokemonGo_UWP.ViewModels
         }
 
         /// <summary>
-        ///     Whether the player wants vibration (when a Pokémon is nearby)
+        /// 
         /// </summary>
-        public bool IsVibrationEnabled
-        {
-            get { return SettingsService.Instance.IsVibrationEnabled; }
-            set { SettingsService.Instance.IsVibrationEnabled = value; }
-        }
-
-        /// <summary>
-        ///     Whether the player wants the map to rotate following is heading
-        /// </summary>
-        public bool IsAutoRotateMapEnabled
-        {
-            get { return SettingsService.Instance.IsAutoRotateMapEnabled; }
-            set { SettingsService.Instance.IsAutoRotateMapEnabled = value; }
-        }
-
-        public bool IsRememberMapZoomEnabled
-        {
-            get { return SettingsService.Instance.IsRememberMapZoomEnabled; }
-            set { SettingsService.Instance.IsRememberMapZoomEnabled = value; }
-        }
-
         public bool IsNianticMapEnabled
         {
             get { return SettingsService.Instance.IsNianticMapEnabled; }
@@ -51,6 +48,24 @@ namespace PokemonGo_UWP.ViewModels
                 SettingsService.Instance.IsNianticMapEnabled = value;
                 _mapSettingsChangedCounter++;
             }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool IsRememberMapZoomEnabled
+        {
+            get { return SettingsService.Instance.IsRememberMapZoomEnabled; }
+            set { SettingsService.Instance.IsRememberMapZoomEnabled = value; }
+        }
+
+        /// <summary>
+        ///     Whether the player wants vibration (when a Pokémon is nearby)
+        /// </summary>
+        public bool IsVibrationEnabled
+        {
+            get { return SettingsService.Instance.IsVibrationEnabled; }
+            set { SettingsService.Instance.IsVibrationEnabled = value; }
         }
 
         #endregion

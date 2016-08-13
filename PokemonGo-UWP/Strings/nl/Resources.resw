@@ -12,4 +12,129 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CooldownTextBlock.Text" xml:space="preserve">
+    <value>Je moet een tijdje wachten</value>
+  </data>
+  <data name="GoogleLoginTextBlock.Text" xml:space="preserve">
+    <value>GOOGLE</value>
+  </data>
+  <data name="InventoryFullTextBlock.Text" xml:space="preserve">
+    <value>Uw voorraad is vol!</value>
+  </data>
+  <data name="PtcLoginTextBlock.Text" xml:space="preserve">
+    <value>LOGIN met PTC Account</value>
+  </data>
+  <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
+    <value>Om in te loggen je moeten je gebruikersnaam/Email en wachtwoord om in te voegen dit app. Als u het niet vertrouwt, sluit u dit alstublieft, alvorens over te gaan. Wij zijn niet verantwoordelijk voor om het even wat.</value>
+  </data>
+  <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
+    <value>in de buurt</value>
+  </data>
+  <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
+    <value>U bent buiten het bereik</value>
+  </data>
+  <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
+    <value>PASSWORD</value>
+  </data>
+  <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
+    <value>Gebruikersnaam/e-mail</value>
+  </data>
+  <data name="ExperienceTextBlock.Text" xml:space="preserve">
+    <value>XP</value>
+  </data>
+  <data name="OkButton.Content" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="CpTextBlock.Text" xml:space="preserve">
+    <value>CP</value>
+  </data>
+  <data name="EggsTextBlock.Text" xml:space="preserve">
+    <value>EIEREN</value>
+  </data>
+  <data name="MusicTextBlock.Text" xml:space="preserve">
+    <value>Muziek</value>
+  </data>
+  <data name="PokemonTextBlock.Text" xml:space="preserve">
+    <value>POKÉMON</value>
+  </data>
+  <data name="SettingsHeaderTextBlock.Text" xml:space="preserve">
+    <value>INSTELLINGEN</value>
+  </data>
+  <data name="SettingsSignOutTextBlock.Text" xml:space="preserve">
+    <value>Afmelden</value>
+  </data>
+  <data name="VibrationTextBlock.Text" xml:space="preserve">
+    <value>Vibratie</value>
+  </data>
+  <data name="ItemsTextBlock.Text" xml:space="preserve">
+    <value>ITEMS</value>
+  </data>
+  <data name="PokedexTextBlock.Text" xml:space="preserve">
+    <value>POKÉDEX</value>
+  </data>
+  <data name="LowercaseItemsTextBlock.Text" xml:space="preserve">
+    <value>Items</value>
+  </data>
+  <data name="NumberTextBlock.Text" xml:space="preserve">
+    <value># </value>
+    <comment>Watch out: there is a space after the #</comment>
+  </data>
+  <data name="SlashSpaceCpTextBlock.Text" xml:space="preserve">
+    <value>/ CP</value>
+  </data>
+  <data name="SpaceXpTextBlock.Text" xml:space="preserve">
+    <value> XP</value>
+  </data>
+  <data name="TotalExperienceTextBlock.Text" xml:space="preserve">
+    <value>TOTAAL</value>
+  </data>
+  <data name="LevelUpTextBlock.Text" xml:space="preserve">
+    <value>Niveau omhoog!</value>
+  </data>
+  <data name="LevelTextBlock.Text" xml:space="preserve">
+    <value>Niveau</value>
+  </data>
+  <data name="MapAutoRotateTextBlock.Text" xml:space="preserve">
+    <value>Kaart automatisch draaien</value>
+  </data>
+  <data name="StartDateTextBlock.Text" xml:space="preserve">
+    <value>BEGINDATUM</value>
+  </data>
+  <data name="IncubatorsTextBlock.Text" xml:space="preserve">
+    <value>INCUBATORS</value>
+  </data>
+  <data name="UseNianticMapTextBlock.Text" xml:space="preserve">
+    <value>Niantic kaart</value>
+  </data>
+  <data name="HpTextBlock.Text" xml:space="preserve">
+    <value>HP </value>
+  </data>
+  <data name="TypeTextBlock.Text" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="KgTextBlock.Text" xml:space="preserve">
+    <value>KG</value>
+  </data>
+  <data name="WeightTextBlock.Text" xml:space="preserve">
+    <value>Gewicht</value>
+  </data>
+  <data name="HeightTextBlock.Text" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="MTextBlock.Text" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="StardustTextBlock.Text" xml:space="preserve">
+    <value>STARDUST</value>
+  </data>
+  <data name="CandyTextBlock.Text" xml:space="preserve">
+    <value> CANDY</value>
+    <comment>Watch out: space before the word!</comment>
+  </data>
+  <data name="EvolveButton.Content" xml:space="preserve">
+    <value>EVOLUEREN</value>
+  </data>
+  <data name="PowerUpButton.Content" xml:space="preserve">
+    <value>POWER UP</value>
+  </data>
 </root>

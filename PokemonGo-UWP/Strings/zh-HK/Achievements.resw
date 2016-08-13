@@ -12,4 +12,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BadgeBattleAttackWon" xml:space="preserve">
+    <value>Battle Girl</value>
+  </data>
+  <data name="BadgeBattleTrainingWon" xml:space="preserve">
+    <value>訓練員</value>
+  </data>
+  <data name="BadgeBigMagikarp" xml:space="preserve">
+    <value>漁夫</value>
+  </data>
+  <data name="BadgeCaptureTotal" xml:space="preserve">
+    <value>收藏</value>
+  </data>
+  <data name="BadgeEvolvedTotal" xml:space="preserve">
+    <value>博士</value>
+  </data>
+  <data name="BadgeHatchedTotal" xml:space="preserve">
+    <value>飼養員</value>
+  </data>
+  <data name="BadgePikachu" xml:space="preserve">
+    <value>比卡超</value>
+  </data>
+  <data name="BadgePokedexEntries" xml:space="preserve">
+    <value>關東</value>
+  </data>
+  <data name="BadgePokestopsVisited" xml:space="preserve">
+    <value>背包</value>
+  </data>
+  <data name="BadgeSmallRattata" xml:space="preserve">
+    <value>少年</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>學生</value>
+  </data>
 </root>

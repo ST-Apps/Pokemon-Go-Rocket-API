@@ -29,11 +29,15 @@ namespace PokemonGo_UWP.Entities
             {
                 var distance = GeoAssist.CalculateDistanceBetweenTwoGeoPoints(Geoposition,
                 GameClient.Geoposition.Coordinate.Point);
+                FortDataStatus retVal = FortDataStatus.Opened;
+
                 if (distance > GameClient.GameSetting.FortSettings.InteractionRangeMeters)
-                    return FortDataStatus.Closed;
-                return CooldownCompleteTimestampMs < DateTime.UtcNow.ToUnixTime()
-                    ? FortDataStatus.Opened
-                    : FortDataStatus.Cooldown;
+                    retVal =  FortDataStatus.Closed;
+
+                if(CooldownCompleteTimestampMs > DateTime.UtcNow.ToUnixTime())
+                    retVal |= FortDataStatus.Cooldown;
+
+                return retVal;
             }
         }
 
@@ -86,6 +90,13 @@ namespace PokemonGo_UWP.Entities
             OnPropertyChanged(nameof(GuardPokemonCp));
             OnPropertyChanged(nameof(Latitude));
             OnPropertyChanged(nameof(Longitude));
+        }
+
+        public void UpdateCooldown(long newCooldownTimestampMs)
+        {
+            this._fortData.CooldownCompleteTimestampMs = newCooldownTimestampMs;
+            OnPropertyChanged(nameof(FortDataStatus));
+            OnPropertyChanged(nameof(CooldownCompleteTimestampMs));
         }
 
         #region Wrapped Properties
