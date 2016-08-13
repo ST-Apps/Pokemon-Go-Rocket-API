@@ -527,7 +527,7 @@
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
 
-            <Image Source="../Assets/UI/inventory.png"
+            <Image Source="../Assets/Buttons/btn_items_catch.png"
                    Stretch="Uniform"
                    HorizontalAlignment="Stretch" />
         </Button>
