@@ -80,7 +80,16 @@ Czy otworzyć stronę z plikami instalacyjnymi w celu instalacji manualnej?</val
   <data name="YesText" xml:space="preserve">
     <value>Tak</value>
   </data>
+  <data name="InstinctTeamText" xml:space="preserve">
+    <value>Drużyna instynktu</value>
+  </data>
   <data name="NoTeamText" xml:space="preserve">
     <value>Brak drużyny</value>
+  </data>
+  <data name="ValorTeamText" xml:space="preserve">
+    <value>Drużyna waleczności</value>
+  </data>
+  <data name="MysticTeamText" xml:space="preserve">
+    <value>Drużyna mistyczności</value>
   </data>
 </root>
