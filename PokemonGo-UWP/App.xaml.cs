@@ -16,6 +16,14 @@ using PokemonGo.RocketAPI.Logging;
 using PokemonGo_UWP.Utils;
 using PokemonGo_UWP.Views;
 using Template10.Common;
+using PokemonGo_UWP.Entities;
+using System.Collections.ObjectModel;
+using Windows.UI.Notifications;
+using Windows.Data.Xml.Dom;
+using System.Collections.Generic;
+using POGOProtos.Enums;
+using NotificationsExtensions.Tiles;
+using NotificationsExtensions;
 
 namespace PokemonGo_UWP
 {
@@ -28,6 +36,8 @@ namespace PokemonGo_UWP
         ///     We use it to notify that we found at least one catchable Pokemon in our area
         /// </summary>
         private VibrationDevice _vibrationDevice;
+        private TileUpdater updater = TileUpdateManager.CreateTileUpdaterForApplication();
+       
 
         private readonly DisplayRequest _displayRequest = new DisplayRequest();
 
@@ -76,7 +86,12 @@ namespace PokemonGo_UWP
             if (SettingsService.Instance.IsMusicEnabled)
                 await AudioUtils.PlaySound(@"pokemon_found_ding.wav");
         }
+        private void PokemonsInventory_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            UpdateLiveTile((IList<PokemonDataWrapper>)e.NewItems);
+        }
 
+       
         #endregion
 
         #region Overrides of BootStrapper
@@ -91,6 +106,7 @@ namespace PokemonGo_UWP
         public override Task OnSuspendingAsync(object s, SuspendingEventArgs e, bool prelaunchActivated)
         {
             GameClient.CatchablePokemons.CollectionChanged -= CatchablePokemons_CollectionChanged;
+            GameClient.PokemonsInventory.CollectionChanged -= PokemonsInventory_CollectionChanged;
             return base.OnSuspendingAsync(s, e, prelaunchActivated);
         }
 
@@ -107,6 +123,7 @@ namespace PokemonGo_UWP
             // Init logger
             Logger.SetLogger(new ConsoleLogger(LogLevel.Info));
 #endif
+            updater.EnableNotificationQueue(true);
 
             // If we have a phone contract, hide the status bar
             if (ApiInformation.IsApiContractPresent("Windows.Phone.PhoneContract", 1, 0))
@@ -129,9 +146,11 @@ namespace PokemonGo_UWP
 
             // Set to vibrate, based on user's preference, if a new Pokemon is found
             GameClient.CatchablePokemons.CollectionChanged += CatchablePokemons_CollectionChanged;
-
+            GameClient.PokemonsInventory.CollectionChanged += PokemonsInventory_CollectionChanged;
             await Task.CompletedTask;
         }
+
+        
 
         public override async Task OnStartAsync(StartKind startKind, IActivatedEventArgs args)
         {
@@ -182,5 +201,71 @@ namespace PokemonGo_UWP
             }
             await Task.CompletedTask;
         }
+
+         #region livetiles
+
+
+
+        private void UpdateLiveTile(IList<PokemonDataWrapper> PokemonInventory)
+        {
+
+
+
+
+
+            int i = 0;
+            foreach (PokemonDataWrapper poke in PokemonInventory)
+            {
+                TileBindingContentAdaptive bindingContent = new TileBindingContentAdaptive()
+                {
+                    PeekImage = new TilePeekImage()
+                    {
+                        Source = "ms-appx:///Assets/Pokemons/" + (int)poke.PokemonId + ".png"
+                    },
+                    
+                    Children =
+                    {
+                        new AdaptiveText()
+                        {
+                            Text = poke.Nickname,
+                            HintWrap= true,
+                            HintStyle = AdaptiveTextStyle.Body
+                        }
+                    }
+                };
+
+                TileBinding binding = new TileBinding()
+                {
+                    Branding = TileBranding.NameAndLogo,
+
+                    DisplayName = "New Pokemon!",
+
+                    Content = bindingContent
+                };
+                TileContent content = new TileContent()
+                {
+                    Visual = new TileVisual()
+                    {
+                        TileMedium = binding,
+                        TileWide = binding,
+                        TileLarge = binding
+                    }
+                };
+
+                XmlDocument doc = content.GetXml();
+
+                // Generate WinRT notification
+                
+                var x = new ScheduledTileNotification(doc, DateTime.Now.AddSeconds(i));
+
+                if (updater.GetScheduledTileNotifications().Count < 4095)
+                {
+                    updater.AddToSchedule(x);
+                }
+                i++;
+            }
+            
+        }
+        #endregion
     }
 }

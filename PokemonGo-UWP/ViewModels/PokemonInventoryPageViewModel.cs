@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -11,6 +11,8 @@ using POGOProtos.Data;
 using POGOProtos.Inventory;
 using Template10.Mvvm;
 using Template10.Services.NavigationService;
+using Windows.UI.Notifications;
+using Windows.Data.Xml.Dom;
 
 namespace PokemonGo_UWP.ViewModels
 {
@@ -50,6 +52,8 @@ namespace PokemonGo_UWP.ViewModels
                     GameClient.PokemonsInventory.Select(pokemonData => new PokemonDataWrapper(pokemonData)),
                     CurrentPokemonSortingMode));
 
+               
+
                 RaisePropertyChanged(() => PokemonInventory);
 
                 var unincubatedEggs = GameClient.EggsInventory.Where(o => string.IsNullOrEmpty(o.EggIncubatorId));
@@ -70,6 +74,7 @@ namespace PokemonGo_UWP.ViewModels
 
             await Task.CompletedTask;
         }
+
 
         /// <summary>
         ///     Save state before navigating
@@ -202,5 +207,7 @@ namespace PokemonGo_UWP.ViewModels
         #endregion
 
         #endregion
+
+       
     }
 }
