@@ -1,21 +1,25 @@
+using Microsoft.HockeyApp;
+using POGOProtos.Data;
+using PokemonGo.RocketAPI;
+using PokemonGo.RocketAPI.Logging;
+using PokemonGo_UWP.Entities;
+using PokemonGo_UWP.Utils;
+using PokemonGo_UWP.Views;
 using System;
+using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Threading.Tasks;
+using Template10.Common;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation.Metadata;
 using Windows.Phone.Devices.Notification;
 using Windows.System.Display;
+using Windows.UI.Notifications;
 using Windows.UI.Popups;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
-using Microsoft.HockeyApp;
-using PokemonGo.RocketAPI;
-using PokemonGo.RocketAPI.Logging;
-using PokemonGo_UWP.Utils;
-using PokemonGo_UWP.Views;
-using Template10.Common;
 
 namespace PokemonGo_UWP
 {
@@ -24,12 +28,31 @@ namespace PokemonGo_UWP
     [Bindable]
     sealed partial class App : BootStrapper
     {
+
+        #region Private Members
+
         /// <summary>
-        ///     We use it to notify that we found at least one catchable Pokemon in our area
+        ///     We use it to notify that we found at least one catchable Pokemon in our area.
         /// </summary>
         private VibrationDevice _vibrationDevice;
 
-        private readonly DisplayRequest _displayRequest = new DisplayRequest();
+        /// <summary>
+        ///     Stores the current <see cref="DisplayRequest"/> instance for the app.
+        /// </summary>
+        private readonly DisplayRequest _displayRequest;
+		
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// The TileUpdater instance for the app.
+        /// </summary>
+        public static TileUpdater LiveTileUpdater { get; private set; }
+
+        #endregion
+
+        #region Constructor
 
         public App()
         {
@@ -42,16 +65,27 @@ namespace PokemonGo_UWP
             // ensure general app exceptions are handled
             Application.Current.UnhandledException += App_UnhandledException;
 
-
             // Init HockeySDK
             if (!string.IsNullOrEmpty(ApplicationKeys.HockeyAppToken))
                 HockeyClient.Current.Configure(ApplicationKeys.HockeyAppToken);
+
+            // Set this in the instance constructor to prevent the creation of an unnecessary static constructor.
+            _displayRequest = new DisplayRequest();
+
+            // Initialize the Live Tile Updater.
+            LiveTileUpdater = TileUpdateManager.CreateTileUpdaterForApplication();
         }
+
+        #endregion
+
+        #region Event Handlers
 
         private static async void App_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             e.Handled = true;
             await ExceptionHandler.HandleException();
+            // We should be logging these exceptions too so they can be tracked down.
+            HockeyClient.Current.TrackException(e.Exception);
         }
 
         private static void TaskScheduler_UnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs e)
@@ -61,7 +95,33 @@ namespace PokemonGo_UWP
             HockeyClient.Current.TrackException(e.Exception);
         }
 
-        #region Toast & Notifications
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PokemonsInventory_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            if (!SettingsService.Instance.IsLiveTileEnabled) return;
+            // Using a Switch here because we might handle other changed events in other ways.
+            switch (e.Action)
+            {
+                case NotifyCollectionChangedAction.Add:
+                case NotifyCollectionChangedAction.Remove:
+                case NotifyCollectionChangedAction.Replace:
+                    var images = new List<string>();
+
+                    foreach (PokemonData pokemonData in e.NewItems)
+                    {
+                        var pokemon = new PokemonDataWrapper(pokemonData);
+                        images.Add($"Assets/Pokemons/{(int)pokemon.PokemonId}.png");
+                    }
+
+                    var tile = LiveTileHelper.GetPeopleTile(images);
+                    LiveTileUpdater.Update(new TileNotification(tile.GetXml()));
+                    break;
+            }
+        }
 
         /// <summary>
         ///     Vibrates and/or plays a sound when new pokemons are in the area
@@ -79,7 +139,7 @@ namespace PokemonGo_UWP
 
         #endregion
 
-        #region Overrides of BootStrapper
+        #region Application Lifecycle
 
         /// <summary>
         ///     Disable vibration on suspending
@@ -90,11 +150,11 @@ namespace PokemonGo_UWP
         /// <returns></returns>
         public override Task OnSuspendingAsync(object s, SuspendingEventArgs e, bool prelaunchActivated)
         {
+            GameClient.PokemonsInventory.CollectionChanged -= PokemonsInventory_CollectionChanged;
             GameClient.CatchablePokemons.CollectionChanged -= CatchablePokemons_CollectionChanged;
+            _displayRequest.RequestRelease();
             return base.OnSuspendingAsync(s, e, prelaunchActivated);
         }
-
-        #endregion
 
         /// <summary>
         ///     This runs everytime the app is launched, even after suspension, so we use this to initialize stuff
@@ -127,12 +187,19 @@ namespace PokemonGo_UWP
                 _vibrationDevice = VibrationDevice.GetDefault();
             }
 
-            // Set to vibrate, based on user's preference, if a new Pokemon is found
+            // Respond to changes in inventory and Pokemon in the immediate viscinity.
+            GameClient.PokemonsInventory.CollectionChanged += PokemonsInventory_CollectionChanged;
             GameClient.CatchablePokemons.CollectionChanged += CatchablePokemons_CollectionChanged;
 
             await Task.CompletedTask;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="startKind"></param>
+        /// <param name="args"></param>
+        /// <returns></returns>
         public override async Task OnStartAsync(StartKind startKind, IActivatedEventArgs args)
         {
             AsyncSynchronizationContext.Register();
@@ -182,5 +249,9 @@ namespace PokemonGo_UWP
             }
             await Task.CompletedTask;
         }
+
+        #endregion
+
     }
+
 }
