@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
   <file datatype="xml" source-language="en-US" target-language="zh-CN" original="POKEMONGO-UWP/STRINGS/EN-US/ACHIEVEMENTS.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
@@ -118,6 +118,118 @@
           <source>Swimmer</source>
           <target state="translated">比基尼姐姐</target>
         </trans-unit>
+        <trans-unit id="BadgeBattleAttackWonDescription" translate="yes" xml:space="preserve">
+          <source>Won {0} gym battles</source>
+          <target state="translated">战胜了 {0} 次道馆挑战</target>
+        </trans-unit>
+        <trans-unit id="BadgeBattleTrainingWonDescription" translate="yes" xml:space="preserve">
+          <source>Won {0} training battles</source>
+          <target state="translated">战胜了 {0} 次训练挑战</target>
+        </trans-unit>
+        <trans-unit id="BadgeBigMagikarpDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Magikarp</source>
+          <target state="translated">抓过 {0} 只鲤鱼王</target>
+        </trans-unit>
+        <trans-unit id="BadgeCaptureTotalDescription" translate="yes" xml:space="preserve">
+          <source>Captured {0} Pokemon</source>
+          <target state="translated">抓到了 {0} 只宝可梦</target>
+        </trans-unit>
+        <trans-unit id="BadgeEvolvedTotalDescription" translate="yes" xml:space="preserve">
+          <source>Evolved [x] Pokémon</source>
+          <target state="translated">进化了 [x] 只宝可梦</target>
+        </trans-unit>
+        <trans-unit id="BadgeHatchedTotalDescription" translate="yes" xml:space="preserve">
+          <source>Hatched {x} Pokemon</source>
+          <target state="translated">孵化了 {x} 只宝可梦</target>
+        </trans-unit>
+        <trans-unit id="BadgePikachuDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Pikachu</source>
+          <target state="translated">抓到过 {0} 只皮卡丘</target>
+        </trans-unit>
+        <trans-unit id="BadgePokedexEntriesDescription" translate="yes" xml:space="preserve">
+          <source>Registered {0} Pokemon in the Pokedex</source>
+          <target state="translated">在宝可梦图鉴里注册了 {0} 只宝可梦</target>
+        </trans-unit>
+        <trans-unit id="BadgePokestopsVisitedDescription" translate="yes" xml:space="preserve">
+          <source>Visited {0} Pokestops</source>
+          <target state="translated">拜访了 {0} 个补给站</target>
+        </trans-unit>
+        <trans-unit id="BadgeSmallRattataDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Rattata</source>
+          <target state="translated">遇到过 {0} 个短裤少年</target>
+        </trans-unit>
+        <trans-unit id="BadgeTravelKmDescription" translate="yes" xml:space="preserve">
+          <source>Walked {0} km</source>
+          <target state="translated">步行了 {0} km</target>
+        </trans-unit>
+        <trans-unit id="BugDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Bug Pokemon</source>
+          <target state="translated">抓到过 {0} 只虫系宝可梦</target>
+        </trans-unit>
+        <trans-unit id="DragonDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Dragon Pokemon</source>
+          <target state="translated">抓到过 {0} 只龙系宝可梦</target>
+        </trans-unit>
+        <trans-unit id="ElectricDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Electric Pokemon</source>
+          <target state="translated">抓到过 {0} 只电系宝可梦</target>
+        </trans-unit>
+        <trans-unit id="FairyDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Fairy Pokemon</source>
+          <target state="translated">抓到过 {0} 只妖精系宝可梦</target>
+        </trans-unit>
+        <trans-unit id="FightingDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Fighting Pokemon</source>
+          <target state="translated">抓到过 {0} 只格斗系宝可梦</target>
+        </trans-unit>
+        <trans-unit id="FireDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Fire Pokemon</source>
+          <target state="translated">抓到过 {0} 只火系宝可梦</target>
+        </trans-unit>
+        <trans-unit id="FlyingDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Flying Pokemon</source>
+          <target state="translated">抓到过 {0} 只飞行系宝可梦</target>
+        </trans-unit>
+        <trans-unit id="GhostDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Ghost Pokemon</source>
+          <target state="translated">抓到过 {0} 只幽灵系宝可梦</target>
+        </trans-unit>
+        <trans-unit id="GrassDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Grass Pokemon</source>
+          <target state="translated">抓到过 {0} 只草系宝可梦</target>
+        </trans-unit>
+        <trans-unit id="GroundDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Ground Pokemon</source>
+          <target state="translated">抓到过 {0} 只地面系宝可梦</target>
+        </trans-unit>
+        <trans-unit id="IceDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Ice Pokemon</source>
+          <target state="translated">抓到过 {0} 只冰系宝可梦</target>
+        </trans-unit>
+        <trans-unit id="NormalDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Normal Pokemon</source>
+          <target state="translated">抓到过 {0} 只常见的宝可梦</target>
+        </trans-unit>
+        <trans-unit id="PoisonDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Poison Pokemon</source>
+          <target state="translated">抓到过 {0} 只毒系宝可梦</target>
+        </trans-unit>
+        <trans-unit id="PsychicDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Psychic Pokemon</source>
+          <target state="translated">抓到过 {0} 只超能力系宝可梦</target>
+        </trans-unit>
+        <trans-unit id="RockDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Rock Pokemon</source>
+          <target state="translated">抓到过 {0} 只岩石系宝可梦</target>
+        </trans-unit>
+        <trans-unit id="SteelDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Steel Pokemon</source>
+          <target state="translated">抓到过 {0} 只钢系宝可梦</target>
+        </trans-unit>
+        <trans-unit id="WaterDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Water Pokemon</source>
+          <target state="translated">抓到过 {0} 只水系宝可梦</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -234,6 +346,14 @@ Open page with installation files for manual install?</source>
         <trans-unit id="MysticTeamText" translate="yes" xml:space="preserve">
           <source>Mystic</source>
           <target state="translated">神秘</target>
+        </trans-unit>
+        <trans-unit id="TransferPokemonSuccessText" translate="yes" xml:space="preserve">
+          <source>Transfer succeeded! Got a {0} Candy from the Professor.</source>
+          <target state="translated">成功放生！从教授那里得到了 {0} 个糖果。</target>
+        </trans-unit>
+        <trans-unit id="TransferPokemonWarningText" translate="yes" xml:space="preserve">
+          <source>You can't take it back after it's transferred to the Professor. Do you really want to transfer {0} to the Professor?</source>
+          <target state="translated">放生给教授之后就拿不回来了，你真的要把 {0} 放生给教授吗？</target>
         </trans-unit>
       </group>
     </body>
@@ -402,6 +522,18 @@ Open page with installation files for manual install?</source>
           <source> CANDY</source>
           <target state="translated"> 糖果</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Watch out: space before the word!</note>
+        </trans-unit>
+        <trans-unit id="EvolveButton.Content" translate="yes" xml:space="preserve">
+          <source>EVOLVE</source>
+          <target state="new">进化</target>
+        </trans-unit>
+        <trans-unit id="PowerUpButton.Content" translate="yes" xml:space="preserve">
+          <source>POWER UP</source>
+          <target state="new">力量強化</target>
+        </trans-unit>
+        <trans-unit id="TransferButton.Content" translate="yes" xml:space="preserve">
+          <source>TRANSFER</source>
+          <target state="new">放生</target>
         </trans-unit>
       </group>
     </body>
