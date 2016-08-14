@@ -9,10 +9,8 @@ using Windows.UI.Xaml.Controls.Maps;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
-using GeoExtensions;
 using Google.Common.Geometry;
 using Google.Protobuf.Collections;
-using PokemonGo.RocketAPI.Extensions;
 using PokemonGo_UWP.Entities;
 using PokemonGo_UWP.Utils.Game;
 using POGOProtos.Data;
@@ -445,6 +443,29 @@ namespace PokemonGo_UWP.Utils
                 ? double.Parse((string) nextValueConverted)
                 : nextValueConverted as int? ?? (byte) nextValueConverted;
             return currentValue/nextValue*100;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
+    public class AchievementDescriptionTranslationConverter : IValueConverter
+    {
+        //TODO: rewrite => returns wrong value
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            KeyValuePair<AchievementType, object> achievementType = (KeyValuePair<AchievementType, object>)value;
+            var type = achievementType.Key.GetType();
+            var fieldInfo = type.GetField(achievementType.Key.ToString());
+            var badgeType = (BadgeTypeAttribute)fieldInfo.GetCustomAttributes(typeof(BadgeTypeAttribute), false).First();
+
+            return badgeType == null ? "" : Resources.Achievements.GetString(badgeType.Value.ToString());
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
