@@ -1,5 +1,6 @@
 ﻿<Page
     x:Class="PokemonGo_UWP.Views.PlayerProfilePage"
+    x:Name="playerProfilePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -9,6 +10,7 @@
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:gif="using:XamlAnimatedGif"
     xmlns:controls="using:PokemonGo_UWP.Controls"
+    xmlns:interop="using:Windows.UI.Xaml.Interop"
     mc:Ignorable="d">
 
     <Page.DataContext>
@@ -276,6 +278,7 @@
                                    Canvas.ZIndex="0">
 
                         <GridView RelativePanel.AlignRightWithPanel="True"
+                                  x:Name="AchievementList"
                                   RelativePanel.AlignTopWithPanel="True"
                                   RelativePanel.AlignLeftWithPanel="True"
                                   RelativePanel.AlignBottomWithPanel="True"
@@ -298,6 +301,13 @@
                                     <RelativePanel Height="100"
                                        Margin="5"
                                        Width="80">
+
+                                        <interactivity:Interaction.Behaviors>
+                                            <core:EventTriggerBehavior EventName="Tapped">
+                                                <core:InvokeCommandAction Command="{Binding DataContext.GoToAchievementDetailPage, ElementName=playerProfilePage}" CommandParameter="{Binding}" />
+                                            </core:EventTriggerBehavior>
+                                        </interactivity:Interaction.Behaviors>
+
                                         <TextBlock x:Name="AchievementTypeText"
                                        Text="{Binding Key, Converter={StaticResource AchievementTranslationConverter}}"
                                        RelativePanel.AlignHorizontalCenterWithPanel="True"

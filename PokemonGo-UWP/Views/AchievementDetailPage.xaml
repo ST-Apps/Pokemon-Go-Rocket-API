@@ -48,20 +48,13 @@
                                    x:Name="AchievementDescriptionText"
                                    Margin="0,24" TextWrapping="Wrap"
                                    Style="{ThemeResource ProfilePageText}"
-                                   Text="{Binding Achievement, Converter={StaticResource AchievementDescriptionTranslationConverter}}"/>
-
-                        <Ellipse Width="180" Height="180"
-                                 Stroke="LightGray"
-                                 RelativePanel.AlignHorizontalCenterWithPanel="True"
-                                 RelativePanel.AlignVerticalCenterWithPanel="true"
-                                 StrokeThickness="2.5"
-                                 x:Name="AchievementImage">
-                            <Ellipse.Fill>
-                                <ImageBrush ImageSource="{Binding Achievement, Converter={StaticResource AchievementValueToMedalImageConverter}}" />
-                            </Ellipse.Fill>
-                        </Ellipse>
+                                   Text=""/>
+                        <!--{Binding Achievement, Converter={StaticResource AchievementDescriptionTranslationConverter}}-->
                         <controls:CircularProgressBar Height="180" Width="180" SegmentColor="DeepSkyBlue"
-                                                      Diameter="353" StrokeThickness="2"
+                                                      x:Name="AchievementImage"
+                                                      InnerSegmentColor="LightGray"
+                                                      ImageSourcePath="{Binding Achievement, Converter={StaticResource AchievementValueToMedalImageConverter}}"
+                                                      Diameter="{Binding ActualHeight, ElementName=AchievementImage, Mode=OneWay}" StrokeThickness="2"
                                                       RelativePanel.AlignHorizontalCenterWithPanel="True"
                                                       RelativePanel.AlignVerticalCenterWithPanel="true"
                                                       Maximum="{Binding Achievement, Converter={StaticResource AchievementNextValueConverter}}"

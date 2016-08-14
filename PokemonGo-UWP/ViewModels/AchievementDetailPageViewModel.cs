@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Navigation;
@@ -19,18 +18,21 @@ namespace PokemonGo_UWP.ViewModels {
         /// <param name="mode"></param>
         /// <param name="suspensionState"></param>
         /// <returns></returns>
-        public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode,
-            IDictionary<string, object> suspensionState) {
-            KeyValuePair<AchievementType, object> achievement;
-            if(suspensionState.Any()) {
+        public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
+        {
+            if (suspensionState.Any())
+            {
                 // Recovering the state                
-                achievement = (KeyValuePair<AchievementType, object>)parameter;
-            } else {
-                // No saved state, get them from the client                
-                achievement = (KeyValuePair<AchievementType, object>)parameter;
+                m_Achievement = (KeyValuePair<AchievementType, object>)parameter;
             }
-            Achievement = achievement;
+            else
+            {
+                // No saved state, get them from the client                
+                m_Achievement = (KeyValuePair<AchievementType, object>)parameter;
+            }
+            Achievement = m_Achievement;
             RaisePropertyChanged(nameof(Achievement));
+            
             await Task.CompletedTask;
         }
 
@@ -56,7 +58,18 @@ namespace PokemonGo_UWP.ViewModels {
 
         #region Bindable Game Vars
 
-        public KeyValuePair<AchievementType, object> Achievement { get; private set; }
+        private KeyValuePair<AchievementType, object> m_Achievement;
+
+        public KeyValuePair<AchievementType, object> Achievement
+        {
+            get
+            {
+                return m_Achievement.Equals(default(KeyValuePair<AchievementType, object>))
+                    ? new KeyValuePair<AchievementType, object>(AchievementType.Jogger, 0)
+                    : m_Achievement;
+            }
+            private set { m_Achievement = value; }
+        }
 
         #endregion
 

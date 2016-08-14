@@ -4,9 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Navigation;
 using PokemonGo_UWP.Utils;
+using PokemonGo_UWP.Views;
 using POGOProtos.Data;
 using POGOProtos.Data.Player;
 using POGOProtos.Enums;
+using Template10.Common;
 using Template10.Mvvm;
 using Template10.Services.NavigationService;
 using Windows.UI.Xaml.Controls;
@@ -119,6 +121,13 @@ namespace PokemonGo_UWP.ViewModels
             =>
                 _returnToGameScreen ??
                 (_returnToGameScreen = new DelegateCommand(() => { NavigationService.GoBack(); }, () => true));
+        
+        private DelegateCommand<object> m_GoToAchievementDetailPage;
+
+        public DelegateCommand<object> GoToAchievementDetailPage => m_GoToAchievementDetailPage ?? (m_GoToAchievementDetailPage = new DelegateCommand<object>(x =>
+        {
+                                                                BootStrapper.Current.NavigationService.Navigate(typeof (AchievementDetailPage), x);
+                                                            }));
 
         #endregion
 
