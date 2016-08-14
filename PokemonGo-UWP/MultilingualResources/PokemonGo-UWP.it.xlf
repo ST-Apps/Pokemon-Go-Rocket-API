@@ -416,23 +416,23 @@ Vuoi aprire la pagina con il file di installazione per l'installazione manuale?<
           <source>EGGS</source>
           <target state="final" state-qualifier="mt-suggestion">UOVA</target>
         </trans-unit>
-        <trans-unit id="MusicTextBlock.Text" translate="yes" xml:space="preserve">
+        <trans-unit id="SettingsMusicTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Music</source>
           <target state="final" state-qualifier="tm-suggestion">Musica</target>
         </trans-unit>
         <trans-unit id="PokemonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>POKÉMON</source>
-          <target state="new">POKÉMON</target>
+          <target state="final">POKÉMON</target>
         </trans-unit>
         <trans-unit id="SettingsHeaderTextBlock.Text" translate="yes" xml:space="preserve">
           <source>SETTINGS</source>
           <target state="final" state-qualifier="tm-suggestion">IMPOSTAZIONI</target>
         </trans-unit>
-        <trans-unit id="SignOutTextBlock.Text" translate="yes" xml:space="preserve">
+        <trans-unit id="SettingsSignOutTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Sign Out</source>
           <target state="final" state-qualifier="tm-suggestion">Disconnetti</target>
         </trans-unit>
-        <trans-unit id="VibrationTextBlock.Text" translate="yes" xml:space="preserve">
+        <trans-unit id="SettingsVibrationTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Vibration</source>
           <target state="final" state-qualifier="tm-suggestion">Vibrazione</target>
         </trans-unit>
@@ -473,7 +473,7 @@ Vuoi aprire la pagina con il file di installazione per l'installazione manuale?<
           <source>Level</source>
           <target state="final">Livello</target>
         </trans-unit>
-        <trans-unit id="MapAutoRotateTextBlock.Text" translate="yes" xml:space="preserve">
+        <trans-unit id="SettingsMapAutoRotateTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Auto-Rotate Map</source>
           <target state="final">Autorotazione mappa</target>
         </trans-unit>
