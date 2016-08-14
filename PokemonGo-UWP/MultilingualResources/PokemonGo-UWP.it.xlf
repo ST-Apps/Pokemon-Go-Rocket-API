@@ -118,6 +118,118 @@
           <source>Swimmer</source>
           <target state="final" state-qualifier="mt-suggestion">Nuotatore</target>
         </trans-unit>
+        <trans-unit id="BadgeBattleAttackWonDescription" translate="yes" xml:space="preserve">
+          <source>Won {0} gym battles</source>
+          <target state="new">{0} battaglie vinte in palestra</target>
+        </trans-unit>
+        <trans-unit id="BadgeBattleTrainingWonDescription" translate="yes" xml:space="preserve">
+          <source>Won {0} training battles</source>
+          <target state="new">{0} battaglie d'allenamento vinte</target>
+        </trans-unit>
+        <trans-unit id="BadgeBigMagikarpDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Magikarp</source>
+          <target state="new">{0} Magikarp catturati</target>
+        </trans-unit>
+        <trans-unit id="BadgeCaptureTotalDescription" translate="yes" xml:space="preserve">
+          <source>Captured {0} Pokemon</source>
+          <target state="new">{0} Pokémon catturati</target>
+        </trans-unit>
+        <trans-unit id="BadgeEvolvedTotalDescription" translate="yes" xml:space="preserve">
+          <source>Evolved [x] Pokémon</source>
+          <target state="new">[x] Pokémon evoluti</target>
+        </trans-unit>
+        <trans-unit id="BadgeHatchedTotalDescription" translate="yes" xml:space="preserve">
+          <source>Hatched {x} Pokemon</source>
+          <target state="new">{x} Uova covate</target>
+        </trans-unit>
+        <trans-unit id="BadgePikachuDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Pikachu</source>
+          <target state="new">{0} Pikachu catturati</target>
+        </trans-unit>
+        <trans-unit id="BadgePokedexEntriesDescription" translate="yes" xml:space="preserve">
+          <source>Registered {0} Pokemon in the Pokedex</source>
+          <target state="new">{0} Pokémon registrati nel Pokédex</target>
+        </trans-unit>
+        <trans-unit id="BadgePokestopsVisitedDescription" translate="yes" xml:space="preserve">
+          <source>Visited {0} Pokestops</source>
+          <target state="new">{0} Pokéstop visitati</target>
+        </trans-unit>
+        <trans-unit id="BadgeSmallRattataDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Rattata</source>
+          <target state="new">{0} Rattata catturati</target>
+        </trans-unit>
+        <trans-unit id="BadgeTravelKmDescription" translate="yes" xml:space="preserve">
+          <source>Walked {0} km</source>
+          <target state="new">Hai camminato per {0} km</target>
+        </trans-unit>
+        <trans-unit id="BugDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Bug Pokemon</source>
+          <target state="new">{0} Pokémon tipo insetto catturati</target>
+        </trans-unit>
+        <trans-unit id="DragonDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Dragon Pokemon</source>
+          <target state="new">{0} Pokémon tipo drago catturati</target>
+        </trans-unit>
+        <trans-unit id="ElectricDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Electric Pokemon</source>
+          <target state="new">{0} Pokémon tipo elettro catturati</target>
+        </trans-unit>
+        <trans-unit id="FairyDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Fairy Pokemon</source>
+          <target state="new">{0} Pokémon tipo fata catturati</target>
+        </trans-unit>
+        <trans-unit id="FightingDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Fighting Pokemon</source>
+          <target state="new">{0} Pokémon tipo lotta catturati</target>
+        </trans-unit>
+        <trans-unit id="FireDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Fire Pokemon</source>
+          <target state="new">{0} Pokémon tipo fuoco catturati</target>
+        </trans-unit>
+        <trans-unit id="FlyingDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Flying Pokemon</source>
+          <target state="new">{0} Pokémon tipo volante catturati</target>
+        </trans-unit>
+        <trans-unit id="GhostDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Ghost Pokemon</source>
+          <target state="new">{0} Pokémon tipo spettro gatturati</target>
+        </trans-unit>
+        <trans-unit id="GrassDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Grass Pokemon</source>
+          <target state="new">{0} Pokémon tipo erba catturati</target>
+        </trans-unit>
+        <trans-unit id="GroundDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Ground Pokemon</source>
+          <target state="new">{0} Pokémon tipo terra catturati</target>
+        </trans-unit>
+        <trans-unit id="IceDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Ice Pokemon</source>
+          <target state="new">{0} Pokémon tipo ghiaccio catturati</target>
+        </trans-unit>
+        <trans-unit id="NormalDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Normal Pokemon</source>
+          <target state="new">{0} Pokémon tipo normale catturati</target>
+        </trans-unit>
+        <trans-unit id="PoisonDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Poison Pokemon</source>
+          <target state="new">{0} Pokémon tipo veleno catturati</target>
+        </trans-unit>
+        <trans-unit id="PsychicDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Psychic Pokemon</source>
+          <target state="new">{0} Pokémon tipo psico catturati</target>
+        </trans-unit>
+        <trans-unit id="RockDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Rock Pokemon</source>
+          <target state="new">{0} Pokémon tipo roccia catturati</target>
+        </trans-unit>
+        <trans-unit id="SteelDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Steel Pokemon</source>
+          <target state="new">{0} Pokémon tipo acciaio catturati</target>
+        </trans-unit>
+        <trans-unit id="WaterDescription" translate="yes" xml:space="preserve">
+          <source>Caught {0} Water Pokemon</source>
+          <target state="new">{0} Pokémon tipo acqua catturati</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -234,6 +346,14 @@ Vuoi aprire la pagina con il file di installazione per l'installazione manuale?<
         <trans-unit id="MysticTeamText" translate="yes" xml:space="preserve">
           <source>Mystic</source>
           <target state="final">Saggezza</target>
+        </trans-unit>
+        <trans-unit id="TransferPokemonSuccessText" translate="yes" xml:space="preserve">
+          <source>Transfer succeeded! Got a {0} Candy from the Professor.</source>
+          <target state="new">Trasferimento riuscito! Ricevute {0} Caramelle dal Professore.</target>
+        </trans-unit>
+        <trans-unit id="TransferPokemonWarningText" translate="yes" xml:space="preserve">
+          <source>You can't take it back after it's transferred to the Professor. Do you really want to transfer {0} to the Professor?</source>
+          <target state="new">Una volta trasferito al Professore, non potrai riaverlo indietro. Sei sicuro di voler trasferire {0} al Professore?</target>
         </trans-unit>
       </group>
     </body>
@@ -365,9 +485,9 @@ Vuoi aprire la pagina con il file di installazione per l'installazione manuale?<
           <source>INCUBATORS</source>
           <target state="final">INCUBATRICI</target>
         </trans-unit>
-        <trans-unit id="UseNianticMapTextBlock.Text" translate="yes" xml:space="preserve">
-          <source>Niantic map</source>
-          <target state="new">Mappa Niantic</target>
+        <trans-unit id="SettingsUseNianticMapTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Use Niantic Map</source>
+          <target state="new">Usa la Mappa Niantic</target>
         </trans-unit>
         <trans-unit id="HpTextBlock.Text" translate="yes" xml:space="preserve">
           <source>HP </source>
@@ -399,7 +519,7 @@ Vuoi aprire la pagina con il file di installazione per l'installazione manuale?<
         </trans-unit>
         <trans-unit id="CandyTextBlock.Text" translate="yes" xml:space="preserve">
           <source> CANDY</source>
-          <target state="new"> CARAMELLA</target>
+          <target state="new"> CARAMELLE</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Watch out: space before the word!</note>
         </trans-unit>
         <trans-unit id="EvolveButton.Content" translate="yes" xml:space="preserve">
@@ -409,6 +529,10 @@ Vuoi aprire la pagina con il file di installazione per l'installazione manuale?<
         <trans-unit id="PowerUpButton.Content" translate="yes" xml:space="preserve">
           <source>POWER UP</source>
           <target state="new">POTENZIA</target>
+        </trans-unit>
+        <trans-unit id="TransferButton.Content" translate="yes" xml:space="preserve">
+          <source>TRANSFER</source>
+          <target state="new">TRASFERISCI</target>
         </trans-unit>
       </group>
     </body>
