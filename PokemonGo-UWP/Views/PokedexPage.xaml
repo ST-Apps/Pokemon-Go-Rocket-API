@@ -1,0 +1,115 @@
+﻿<Page
+    x:Class="PokemonGo_UWP.Views.PokedexPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PokemonGo_UWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:converters="using:Template10.Converters"
+    xmlns:viewModels="using:PokemonGo_UWP.ViewModels">
+
+    <Page.DataContext>
+        <viewModels:PokedexPageViewModel x:Name="ViewModel"/>
+    </Page.DataContext>
+
+    <Page.Resources>
+        <converters:ValueWhenConverter x:Key="BoolVisibility">
+            <converters:ValueWhenConverter.When>
+                <x:Boolean>True</x:Boolean>
+            </converters:ValueWhenConverter.When>
+            <converters:ValueWhenConverter.Value>
+                <Visibility>Visible</Visibility>
+            </converters:ValueWhenConverter.Value>
+            <converters:ValueWhenConverter.Otherwise>
+                <Visibility>Collapsed</Visibility>
+            </converters:ValueWhenConverter.Otherwise>
+        </converters:ValueWhenConverter>
+
+        <converters:ValueWhenConverter x:Key="NotBoolVisibility">
+            <converters:ValueWhenConverter.When>
+                <x:Boolean>True</x:Boolean>
+            </converters:ValueWhenConverter.When>
+            <converters:ValueWhenConverter.Value>
+                <Visibility>Collapsed</Visibility>
+            </converters:ValueWhenConverter.Value>
+            <converters:ValueWhenConverter.Otherwise>
+                <Visibility>Visible</Visibility>
+            </converters:ValueWhenConverter.Otherwise>
+        </converters:ValueWhenConverter>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" 
+                   Text="POKEDEX" 
+                   HorizontalAlignment="Center" 
+                   Style="{StaticResource HeaderTextBlockStyle}"/>
+
+        <TextBlock Grid.Row="1"
+            Style="{StaticResource TitleTextBlockStyle}"
+            HorizontalAlignment="Center"
+        >
+            <Run Text="CATCHED:"/>
+            <Run Text="{Binding CapturedPokemons}"/>
+            <Run Text="SEEN:"/>
+            <Run Text="{Binding SeenPokemons}"/>
+        </TextBlock>
+        <GridView ItemsSource="{Binding PokemonFoundAndSeen}" 
+                  Grid.Row="2">
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapGrid Orientation="Horizontal"
+                              HorizontalAlignment="Center"
+                              VerticalChildrenAlignment="Top"
+                              MaximumRowsOrColumns="5" 
+                              ScrollViewer.VerticalScrollMode="Auto"
+                              ScrollViewer.VerticalScrollBarVisibility="Hidden"/>
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="8,4,8,4" Width="92" Height="92">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid CornerRadius="5" 
+                              Background="Beige" 
+                              Grid.Row="0"
+                              Grid.RowSpan="2"
+                              HorizontalAlignment="Stretch" 
+                              VerticalAlignment="Stretch" 
+                              Visibility="{Binding Value, Converter={StaticResource NotBoolVisibility}}">
+                            
+                            <TextBlock Text="{Binding Key}" 
+                                       FontSize="18" 
+                                       HorizontalAlignment="Center" 
+                                       VerticalAlignment="Center" 
+                                       Foreground="White" />
+                        </Grid>
+
+                        <Image Source="{Binding Key, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"
+                               Stretch="Uniform"
+                               Grid.Row="0"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Margin="4,0" 
+                               Visibility="{Binding Value, Converter={StaticResource BoolVisibility}}"/>
+
+                        <TextBlock Text="{Binding Key, Converter={StaticResource PokemonIdToPokemonNameConverter}}"
+                                   Style="{StaticResource BodyTextBlockStyle}"
+                                   Grid.Row="1"
+                                   TextAlignment="Center"
+                                   Visibility="{Binding Value, Converter={StaticResource BoolVisibility}}"/>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
+</Page>

@@ -349,6 +349,7 @@
             <Button Style="{ThemeResource ImageButtonStyle}"
                     RelativePanel.AlignHorizontalCenterWithPanel="True"
                     RelativePanel.AlignVerticalCenterWithPanel="True"
+                    Command="{Binding GotoPokedexPageCommand}"
                     x:Name="PokedexButton">
 
                 <StackPanel Orientation="Vertical">
