@@ -4,14 +4,26 @@ using PokemonGo_UWP.Views;
 using Template10.Common;
 using Universal_Authenticator_v2.Views;
 using System;
+using System.Diagnostics;
 
 namespace PokemonGo_UWP.Utils
 {
+    internal class ApiHandledException : Exception
+    {
+        public ApiHandledException(string reloginCompleted) : base(reloginCompleted)
+        {
+        }
+    }
     public static class ExceptionHandler
     {
         public static async Task HandleException(Exception e = null)
         {
-            if (e.GetType().Namespace.Equals("PokemonGo.RocketAPI.Exceptions"))
+            if (e != null && (e.GetType().FullName.Contains("ApiHandledException") || e.Message == "Relogin completed."))
+            {
+                Debug.WriteLine("[Relogin] ApiHandledException from API handled.");
+                Debug.WriteLine("[Relogin] Successfuly ended.");
+            }
+            else if (e != null && e.GetType().Namespace.Equals("PokemonGo.RocketAPI.Exceptions"))
             {
                 await
                        new MessageDialog(Resources.CodeResources.GetString("LoginExpired")).ShowAsyncQueue();

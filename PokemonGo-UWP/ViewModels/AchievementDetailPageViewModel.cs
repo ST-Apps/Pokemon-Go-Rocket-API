@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Navigation;
@@ -19,8 +18,8 @@ namespace PokemonGo_UWP.ViewModels {
         /// <param name="mode"></param>
         /// <param name="suspensionState"></param>
         /// <returns></returns>
-        public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode,
-            IDictionary<string, object> suspensionState) {
+        public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
+        {
             KeyValuePair<AchievementType, object> achievement;
             if(suspensionState.Any()) {
                 // Recovering the state                
@@ -40,8 +39,10 @@ namespace PokemonGo_UWP.ViewModels {
         /// <param name="suspensionState"></param>
         /// <param name="suspending"></param>
         /// <returns></returns>
-        public override async Task OnNavigatedFromAsync(IDictionary<string, object> suspensionState, bool suspending) {
-            if(suspending) {
+        public override async Task OnNavigatedFromAsync(IDictionary<string, object> suspensionState, bool suspending)
+        {
+            if(suspending)
+            {
 
             }
             await Task.CompletedTask;
@@ -56,7 +57,18 @@ namespace PokemonGo_UWP.ViewModels {
 
         #region Bindable Game Vars
 
-        public KeyValuePair<AchievementType, object> Achievement { get; private set; }
+        private KeyValuePair<AchievementType, object> m_Achievement;
+
+        public KeyValuePair<AchievementType, object> Achievement
+        {
+            get
+            {
+                return m_Achievement.Equals(default(KeyValuePair<AchievementType, object>))
+                    ? new KeyValuePair<AchievementType, object>(AchievementType.Jogger, 0)
+                    : m_Achievement;
+            }
+            private set { m_Achievement = value; }
+        }
 
         #endregion
 

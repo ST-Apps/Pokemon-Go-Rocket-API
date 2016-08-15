@@ -13,7 +13,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Abra" xml:space="preserve">
-    <value>凯西</value>
+    <value>卡斯</value>
   </data>
   <data name="Aerodactyl" xml:space="preserve">
     <value>化石翼龙</value>
@@ -34,13 +34,13 @@
     <value>大针蜂</value>
   </data>
   <data name="Bellsprout" xml:space="preserve">
-    <value>喇叭芽</value>
+    <value>喇叭花</value>
   </data>
   <data name="Blastoise" xml:space="preserve">
     <value>水箭龟</value>
   </data>
   <data name="Bulbasaur" xml:space="preserve">
-    <value>妙蛙种子</value>
+    <value>妙娃种子</value>
   </data>
   <data name="Butterfree" xml:space="preserve">
     <value>巴大蝴</value>
@@ -61,7 +61,7 @@
     <value>火恐龙</value>
   </data>
   <data name="Clefable" xml:space="preserve">
-    <value>皮可西</value>
+    <value>皮可斯</value>
   </data>
   <data name="Clefairy" xml:space="preserve">
     <value>皮皮</value>
@@ -70,7 +70,7 @@
     <value>铁甲贝</value>
   </data>
   <data name="Cubone" xml:space="preserve">
-    <value>可拉可拉</value>
+    <value>卡拉卡拉</value>
   </data>
   <data name="Dewgong" xml:space="preserve">
     <value>白海狮</value>
@@ -82,10 +82,10 @@
     <value>百变怪</value>
   </data>
   <data name="Dodrio" xml:space="preserve">
-    <value>嘟嘟利</value>
+    <value>多多利</value>
   </data>
   <data name="Doduo" xml:space="preserve">
-    <value>嘟嘟</value>
+    <value>多多</value>
   </data>
   <data name="Dragonair" xml:space="preserve">
     <value>哈克龙</value>
@@ -97,7 +97,7 @@
     <value>迷你龙</value>
   </data>
   <data name="Drowzee" xml:space="preserve">
-    <value>素利普</value>
+    <value>食梦兽</value>
   </data>
   <data name="Dugtrio" xml:space="preserve">
     <value>三地鼠</value>
@@ -112,7 +112,7 @@
     <value>电击兽</value>
   </data>
   <data name="Electrode" xml:space="preserve">
-    <value>顽皮弹</value>
+    <value>雷霆球</value>
   </data>
   <data name="Exeggcute" xml:space="preserve">
     <value>蛋蛋</value>
@@ -127,7 +127,7 @@
     <value>大嘴雀</value>
   </data>
   <data name="Flareon" xml:space="preserve">
-    <value>火精灵</value>
+    <value>火伊布</value>
   </data>
   <data name="Gastly" xml:space="preserve">
     <value>鬼斯</value>
@@ -178,31 +178,31 @@
     <value>墨海马</value>
   </data>
   <data name="Hypno" xml:space="preserve">
-    <value>素利拍</value>
+    <value>催眠兽</value>
   </data>
   <data name="Ivysaur" xml:space="preserve">
-    <value>妙蛙草</value>
+    <value>妙娃草</value>
   </data>
   <data name="Jigglypuff" xml:space="preserve">
     <value>胖丁</value>
   </data>
   <data name="Jolteon" xml:space="preserve">
-    <value>雷精灵</value>
+    <value>雷伊布</value>
   </data>
   <data name="Jynx" xml:space="preserve">
     <value>迷唇姐</value>
   </data>
   <data name="Kabuto" xml:space="preserve">
-    <value>化石盔</value>
+    <value>万年虫</value>
   </data>
   <data name="Kabutops" xml:space="preserve">
-    <value>镰刀盔</value>
+    <value>镰刀虫</value>
   </data>
   <data name="Kadabra" xml:space="preserve">
     <value>勇吉拉</value>
   </data>
   <data name="Kakuna" xml:space="preserve">
-    <value>铁壳昆</value>
+    <value>铁壳蛹</value>
   </data>
   <data name="Kangaskhan" xml:space="preserve">
     <value>袋龙</value>
@@ -217,7 +217,7 @@
     <value>大钳蟹</value>
   </data>
   <data name="Lapras" xml:space="preserve">
-    <value>乘</value>
+    <value>乘龙</value>
   </data>
   <data name="Lickitung" xml:space="preserve">
     <value>大舌头</value>
@@ -226,10 +226,10 @@
     <value>怪力</value>
   </data>
   <data name="Machoke" xml:space="preserve">
-    <value>Machoke</value>
+    <value>豪力</value>
   </data>
   <data name="Machop" xml:space="preserve">
-    <value>豪力</value>
+    <value>腕力</value>
   </data>
   <data name="Magikarp" xml:space="preserve">
     <value>鲤鱼王</value>
@@ -241,7 +241,7 @@
     <value>小磁怪</value>
   </data>
   <data name="Magneton" xml:space="preserve">
-    <value>三合一磁怪</value>
+    <value>三磁怪</value>
   </data>
   <data name="Mankey" xml:space="preserve">
     <value>猴怪</value>
@@ -253,7 +253,7 @@
     <value>喵喵</value>
   </data>
   <data name="Metapod" xml:space="preserve">
-    <value>Metapod</value>
+    <value>铁甲蛹</value>
   </data>
   <data name="Mew" xml:space="preserve">
     <value>梦幻</value>
@@ -261,14 +261,11 @@
   <data name="Mewtwo" xml:space="preserve">
     <value>超梦</value>
   </data>
-  <data name="Missingno" xml:space="preserve">
-    <value>出错怪</value>
-  </data>
   <data name="Moltres" xml:space="preserve">
     <value>火焰鸟</value>
   </data>
   <data name="MrMime" xml:space="preserve">
-    <value>吸盘魔偶</value>
+    <value>魔偶</value>
   </data>
   <data name="Muk" xml:space="preserve">
     <value>臭臭泥</value>
@@ -280,13 +277,13 @@
     <value>尼多后</value>
   </data>
   <data name="NidoranFemale" xml:space="preserve">
-    <value>尼多兰</value>
+    <value>尼多兰 ♀</value>
   </data>
   <data name="NidoranMale" xml:space="preserve">
-    <value>尼多朗</value>
+    <value>尼多郎 ♂</value>
   </data>
   <data name="Nidorina" xml:space="preserve">
-    <value>尼多娜</value>
+    <value>尼多丽娜</value>
   </data>
   <data name="Nidorino" xml:space="preserve">
     <value>尼多力诺</value>
@@ -307,10 +304,10 @@
     <value>大岩蛇</value>
   </data>
   <data name="Paras" xml:space="preserve">
-    <value>派拉斯</value>
+    <value>蘑菇虫</value>
   </data>
   <data name="Parasect" xml:space="preserve">
-    <value>派拉斯特</value>
+    <value>巨菇虫</value>
   </data>
   <data name="Persian" xml:space="preserve">
     <value>猫老大</value>
@@ -328,7 +325,7 @@
     <value>皮卡丘</value>
   </data>
   <data name="Pinsir" xml:space="preserve">
-    <value>大甲</value>
+    <value>钳刀甲虫</value>
   </data>
   <data name="Poliwag" xml:space="preserve">
     <value>蚊香蝌蚪</value>
@@ -337,7 +334,7 @@
     <value>蚊香蛙</value>
   </data>
   <data name="Poliwrath" xml:space="preserve">
-    <value>快泳蛙</value>
+    <value>大力蛙</value>
   </data>
   <data name="Ponyta" xml:space="preserve">
     <value>小火马</value>
@@ -400,7 +397,7 @@
     <value>卡比兽</value>
   </data>
   <data name="Spearow" xml:space="preserve">
-    <value>烈雀</value>
+    <value>鬼雀</value>
   </data>
   <data name="Squirtle" xml:space="preserve">
     <value>杰尼龟</value>
@@ -409,7 +406,7 @@
     <value>宝石海星</value>
   </data>
   <data name="Staryu" xml:space="preserve">
-    <value>海星星</value>
+    <value>海星</value>
   </data>
   <data name="Tangela" xml:space="preserve">
     <value>蔓藤怪</value>
@@ -424,7 +421,7 @@
     <value>毒刺水母</value>
   </data>
   <data name="Vaporeon" xml:space="preserve">
-    <value>水精灵</value>
+    <value>水伊布</value>
   </data>
   <data name="Venomoth" xml:space="preserve">
     <value>末入蛾</value>
@@ -433,7 +430,7 @@
     <value>毛球</value>
   </data>
   <data name="Venusaur" xml:space="preserve">
-    <value>妙蛙花</value>
+    <value>妙娃花</value>
   </data>
   <data name="Victreebel" xml:space="preserve">
     <value>大食花</value>

@@ -11,6 +11,7 @@ using Template10.Mvvm;
 using Template10.Services.NavigationService;
 using Windows.UI.Xaml.Controls;
 using PokemonGo_UWP.Views;
+using Template10.Common;
 
 namespace PokemonGo_UWP.ViewModels
 {
@@ -184,9 +185,12 @@ namespace PokemonGo_UWP.ViewModels
 
         #region Navigate to detail page
 
-        public void NavigateToDetailPage(object sender, ItemClickEventArgs e) {
-            NavigationService.Navigate(typeof(AchievementDetailPage), e.ClickedItem);
-        }
+        private DelegateCommand<object> m_GoToAchievementDetailPage;
+
+        public DelegateCommand<object> GoToAchievementDetailPage => m_GoToAchievementDetailPage ?? (m_GoToAchievementDetailPage = new DelegateCommand<object>(x =>
+        {
+            BootStrapper.Current.NavigationService.Navigate(typeof(AchievementDetailPage), x);
+        }));
 
         #endregion
 

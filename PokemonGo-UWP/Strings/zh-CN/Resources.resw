@@ -13,94 +13,76 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CooldownTextBlock.Text" xml:space="preserve">
-    <value>坐和放宽</value>
-  </data>
-  <data name="GoogleLoginTextBlock.Text" xml:space="preserve">
-    <value>Google 服务 </value>
+    <value>请稍作等待</value>
   </data>
   <data name="InventoryFullTextBlock.Text" xml:space="preserve">
-    <value>您的物品已满。</value>
+    <value>你的仓库满了！</value>
   </data>
   <data name="PtcLoginTextBlock.Text" xml:space="preserve">
-    <value>使用 口袋妖怪训练俱乐部 账号登录</value>
+    <value>以 PTC 账户登陆</value>
   </data>
   <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
-    <value>请先科学上网。我们不会滥用您的账户。请阅读免责声明。相信我们。</value>
+    <value>登录需要输入您的帐号跟密码，如果您不信任我们的话，请不要接着往下操作。我们一概不负责任。</value>
   </data>
   <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
     <value>附近</value>
   </data>
   <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
-    <value>超出范围</value>
+    <value>您超出范围了</value>
   </data>
   <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
     <value>密码</value>
   </data>
   <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
-    <value>用户名/电子邮件</value>
-  </data>
-  <data name="ExperienceTextBlock.Text" xml:space="preserve">
-    <value>XP</value>
-  </data>
-  <data name="OkButton.Content" xml:space="preserve">
-    <value>好的，我明白</value>
-  </data>
-  <data name="CpTextBlock.Text" xml:space="preserve">
-    <value>CP</value>
+    <value>用户名/邮箱</value>
   </data>
   <data name="EggsTextBlock.Text" xml:space="preserve">
-    <value>鸡蛋</value>
-  </data>
-  <data name="SettingsMusicTextBlock.Text" xml:space="preserve">
-    <value>音乐</value>
+    <value>宝可梦蛋</value>
   </data>
   <data name="PokemonTextBlock.Text" xml:space="preserve">
-    <value>Pokemon</value>
+    <value>精灵宝可梦</value>
   </data>
   <data name="SettingsHeaderTextBlock.Text" xml:space="preserve">
     <value>设置</value>
   </data>
-  <data name="SettingsSignOutTextBlock.Text" xml:space="preserve">
-    <value>注销</value>
-  </data>
-  <data name="SettingsVibrationTextBlock.Text" xml:space="preserve">
-    <value>振动</value>
-  </data>
   <data name="ItemsTextBlock.Text" xml:space="preserve">
-    <value>项目</value>
+    <value>物品</value>
   </data>
   <data name="PokedexTextBlock.Text" xml:space="preserve">
-    <value>图鉴</value>
+    <value>宝可梦图鉴</value>
   </data>
   <data name="LowercaseItemsTextBlock.Text" xml:space="preserve">
     <value>物品</value>
   </data>
-  <data name="NumberTextBlock.Text" xml:space="preserve">
-    <value># </value>
-    <comment>Watch out: there is a space after the #</comment>
-  </data>
-  <data name="SlashSpaceCpTextBlock.Text" xml:space="preserve">
-    <value>/ CP</value>
-  </data>
-  <data name="SpaceXpTextBlock.Text" xml:space="preserve">
-    <value>XP</value>
-  </data>
   <data name="TotalExperienceTextBlock.Text" xml:space="preserve">
-    <value>总计</value>
+    <value>合计</value>
   </data>
   <data name="LevelUpTextBlock.Text" xml:space="preserve">
-    <value>升级！</value>
+    <value>升级了！</value>
   </data>
   <data name="LevelTextBlock.Text" xml:space="preserve">
-    <value>级</value>
-  </data>
-  <data name="SettingsMapAutoRotateTextBlock.Text" xml:space="preserve">
-    <value>地图自动旋转</value>
+    <value>等级</value>
   </data>
   <data name="StartDateTextBlock.Text" xml:space="preserve">
-    <value>开始日期</value>
+    <value>出发日期</value>
   </data>
   <data name="IncubatorsTextBlock.Text" xml:space="preserve">
     <value>孵蛋器</value>
+  </data>
+  <data name="TypeTextBlock.Text" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="WeightTextBlock.Text" xml:space="preserve">
+    <value>体重</value>
+  </data>
+  <data name="HeightTextBlock.Text" xml:space="preserve">
+    <value>身高</value>
+  </data>
+  <data name="StardustTextBlock.Text" xml:space="preserve">
+    <value>梦幻</value>
+  </data>
+  <data name="CandyTextBlock.Text" xml:space="preserve">
+    <value> 糖果</value>
+    <comment>Watch out: space before the word!</comment>
   </data>
 </root>

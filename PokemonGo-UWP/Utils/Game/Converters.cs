@@ -407,6 +407,18 @@ namespace PokemonGo_UWP.Utils
                 }
                 return float.Parse(gold.Value.ToString()).ToString("N1");
             }
+            if (achievement.Value is double)
+            {
+                if (double.Parse(achievement.Value.ToString()) < double.Parse(bronze.Value.ToString()))
+                {
+                    return float.Parse(bronze.Value.ToString()).ToString("N1");
+                }
+                if (double.Parse(achievement.Value.ToString()) < double.Parse(silver.Value.ToString()))
+                {
+                    return float.Parse(silver.Value.ToString()).ToString("N1");
+                }
+                return double.Parse(gold.Value.ToString()).ToString("N1");
+            }
             if (int.Parse(achievement.Value.ToString()) < int.Parse(bronze.Value.ToString()))
             {
                 return bronze.Value;

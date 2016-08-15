@@ -218,12 +218,18 @@ namespace PokemonGo_UWP.Views
             ViewModel.CatchFlee -= GameManagerViewModelOnCatchFlee;
         }
 
-        private void GameManagerViewModelOnCatchEscape(object sender, EventArgs eventArgs)
+        private async void GameManagerViewModelOnCatchEscape(object sender, EventArgs eventArgs)
         {
-            //CatchEscape.Begin();                        
-            CatchSuccess.AutoReverse = true;
+            //CatchEscape.Begin();            
+            //CatchSuccess.SkipToFill();                                       
+            CatchSuccess.AutoReverse = true;            
+            PokeballCatchAnimationStartingTranslateX.Value = PokeballTransform.TranslateX;
+            PokeballCatchAnimationStartingTranslateY.Value = PokeballTransform.TranslateY;
+            PokeballCatchAnimationStartingScaleX.Value = PokeballTransform.ScaleX;
+            PokeballCatchAnimationStartingScaleY.Value = PokeballTransform.ScaleY;
+            await Task.Delay(TimeSpan.FromSeconds(new Random().Next(1, 5)));
             CatchSuccess.Begin();
-            CatchSuccess.Seek(CatchSuccess.Duration.TimeSpan);
+            CatchEscape.Begin();
             //TODO (from advancedrei): This storyboard needs to delay 3 seconds, then reverse the animation so the user can try again.
         }
 

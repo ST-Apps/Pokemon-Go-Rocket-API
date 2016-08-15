@@ -9,8 +9,9 @@ namespace PokemonGo_UWP.Views
             InitializeComponent();
         }
 
-        private void GridView_ItemClick(object sender, ItemClickEventArgs e) {
-            ViewModel.NavigateToDetailPage(sender, e);
+        private void GridView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //ViewModel.NavigateToDetailPage(sender, e);
         }
     }
 }

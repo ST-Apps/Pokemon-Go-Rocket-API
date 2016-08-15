@@ -37,8 +37,10 @@ namespace Q42.WinRT.Storage
     {
         /// <summary>JSON</summary>
         JSON,
+#if USE_XML_SERIALIZER
         /// <summary>XML</summary>
         XML
+#endif
     }
 
     /// <summary>
@@ -95,8 +97,10 @@ namespace Q42.WinRT.Storage
             {
                 case StorageSerializer.JSON:
                     return ".json";
+#if USE_XML_SERIALIZER
                 case StorageSerializer.XML:
                     return ".xml";
+#endif
             }
 
             return string.Empty;
@@ -152,6 +156,7 @@ namespace Q42.WinRT.Storage
                             //Write content to file
                             await FileIO.WriteTextAsync(file, storageString);
                             break;
+#if USE_XML_SERIALIZER
                         case StorageSerializer.XML:
 
                             IRandomAccessStream sessionRandomAccess = await file.OpenAsync(FileAccessMode.ReadWrite);
@@ -162,6 +167,7 @@ namespace Q42.WinRT.Storage
                             await sessionOutputStream.FlushAsync();
                             sessionOutputStream.Dispose();
                             break;
+#endif
                     }
 
                 }
@@ -198,6 +204,7 @@ namespace Q42.WinRT.Storage
                             var data = await FileIO.ReadTextAsync(file);
                             result = JsonConvert.DeserializeObject<T>(data);
                             break;
+#if USE_XML_SERIALIZER
                         case StorageSerializer.XML:
                             XmlSerializer serializer = new XmlSerializer(typeof(T));
                             IInputStream sessionInputStream = await file.OpenReadAsync();
@@ -205,6 +212,7 @@ namespace Q42.WinRT.Storage
                             sessionInputStream.Dispose();
 
                             break;
+#endif
                     }
 
                     return result;

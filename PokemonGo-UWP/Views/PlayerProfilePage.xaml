@@ -1,5 +1,6 @@
 ﻿<Page
     x:Class="PokemonGo_UWP.Views.PlayerProfilePage"
+    x:Name="playerProfilePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -256,6 +257,7 @@
                                         <TextBlock x:Name="TeamText"
                                                    HorizontalAlignment="Center"
                                                    Style="{ThemeResource ProfilePageText}"
+                                                   TextWrapping="WrapWholeWords"
                                                    Text="{Binding PlayerProfile.Team, Converter={StaticResource PlayerTeamToTeamNameConverter}}" />
                                     </StackPanel>
                                 </Grid>
@@ -298,6 +300,13 @@
                                     <RelativePanel Height="100"
                                        Margin="5"
                                        Width="80">
+
+                                        <interactivity:Interaction.Behaviors>
+                                            <core:EventTriggerBehavior EventName="Tapped">
+                                                <core:InvokeCommandAction Command="{Binding DataContext.GoToAchievementDetailPage, ElementName=playerProfilePage}" CommandParameter="{Binding}" />
+                                            </core:EventTriggerBehavior>
+                                        </interactivity:Interaction.Behaviors>
+
                                         <TextBlock x:Name="AchievementTypeText"
                                        Text="{Binding Key, Converter={StaticResource AchievementTranslationConverter}}"
                                        RelativePanel.AlignHorizontalCenterWithPanel="True"

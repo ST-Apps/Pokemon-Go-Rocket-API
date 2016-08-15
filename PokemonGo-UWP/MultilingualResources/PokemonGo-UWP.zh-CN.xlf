@@ -288,8 +288,9 @@
           <target state="translated">运行游戏需要GPS权限，请启用GPS后重试。</target>
         </trans-unit>
         <trans-unit id="PokemonRanAwayText" translate="yes" xml:space="preserve">
-          <source>Pokemon ran away, sorry :(</source>
-          <target state="translated">宝可梦逃跑了，不好意思 :(</target>
+          <source>Pokémon ran away, sorry :(</source>
+          <target state="needs-review-translation">宝可梦逃跑了，不好意思 :(</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="PtcDownText" translate="yes" xml:space="preserve">
           <source>PTC login is probably down, please retry later.</source>
@@ -481,24 +482,27 @@ Open page with installation files for manual install?</source>
           <target state="translated">以 PTC 账户登陆</target>
         </trans-unit>
         <trans-unit id="LoginDisclaimerTextBox.Text" translate="yes" xml:space="preserve">
-          <source>To login you need to insert your Username/Email and Password in this app. If you don't trust it, please, close it before going on. We are not responsible for anything.</source>
-          <target state="translated">登录需要输入您的帐号跟密码，如果您不信任我们的话，请不要接着往下操作。我们一概不负责任。</target>
+          <source>To login, enter your Username/Email and Password above. If you don't trust this app, please close it now. Niantic may ban you for using this app. Use at your own risk.</source>
+          <target state="needs-review-translation">登录需要输入您的帐号跟密码，如果您不信任我们的话，请不要接着往下操作。我们一概不负责任。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="NearbyPokemonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>nearby</source>
           <target state="translated">附近</target>
         </trans-unit>
         <trans-unit id="OutOfRangeTextBlock.Text" translate="yes" xml:space="preserve">
-          <source>You are out of range</source>
-          <target state="translated">您超出范围了</target>
+          <source>THIS POKÉSTOP IS TOO FAR AWAY</source>
+          <target state="needs-review-translation">您超出范围了</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="LoginPasswordPasswordBox.PlaceholderText" translate="yes" xml:space="preserve">
           <source>Password</source>
           <target state="translated">密码</target>
         </trans-unit>
         <trans-unit id="LoginUsernameTextBox.PlaceholderText" translate="yes" xml:space="preserve">
-          <source>Username/email</source>
-          <target state="translated">用户名/邮箱</target>
+          <source>Username / Email</source>
+          <target state="needs-review-translation">用户名/邮箱</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="ExperienceTextBlock.Text" translate="yes" xml:space="preserve">
           <source>XP</source>
@@ -516,10 +520,6 @@ Open page with installation files for manual install?</source>
           <source>EGGS</source>
           <target state="translated">宝可梦蛋</target>
         </trans-unit>
-        <trans-unit id="MusicTextBlock.Text" translate="yes" xml:space="preserve">
-          <source>Music</source>
-          <target state="translated">音乐</target>
-        </trans-unit>
         <trans-unit id="PokemonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>POKÉMON</source>
           <target state="translated">精灵宝可梦</target>
@@ -527,14 +527,6 @@ Open page with installation files for manual install?</source>
         <trans-unit id="SettingsHeaderTextBlock.Text" translate="yes" xml:space="preserve">
           <source>SETTINGS</source>
           <target state="translated">设置</target>
-        </trans-unit>
-        <trans-unit id="SignOutTextBlock.Text" translate="yes" xml:space="preserve">
-          <source>Sign Out</source>
-          <target state="translated">登出</target>
-        </trans-unit>
-        <trans-unit id="VibrationTextBlock.Text" translate="yes" xml:space="preserve">
-          <source>Vibration</source>
-          <target state="translated">震动</target>
         </trans-unit>
         <trans-unit id="ItemsTextBlock.Text" translate="yes" xml:space="preserve">
           <source>ITEMS</source>
@@ -573,10 +565,6 @@ Open page with installation files for manual install?</source>
           <source>Level</source>
           <target state="translated">等级</target>
         </trans-unit>
-        <trans-unit id="MapAutoRotateTextBlock.Text" translate="yes" xml:space="preserve">
-          <source>Auto-Rotate Map</source>
-          <target state="translated">自动旋转地图</target>
-        </trans-unit>
         <trans-unit id="StartDateTextBlock.Text" translate="yes" xml:space="preserve">
           <source>START DATE</source>
           <target state="translated">出发日期</target>
@@ -584,10 +572,6 @@ Open page with installation files for manual install?</source>
         <trans-unit id="IncubatorsTextBlock.Text" translate="yes" xml:space="preserve">
           <source>INCUBATORS</source>
           <target state="translated">孵蛋器</target>
-        </trans-unit>
-        <trans-unit id="UseNianticMapTextBlock.Text" translate="yes" xml:space="preserve">
-          <source>Niantic map</source>
-          <target state="translated">任天堂地图</target>
         </trans-unit>
         <trans-unit id="HpTextBlock.Text" translate="yes" xml:space="preserve">
           <source>HP </source>
@@ -634,6 +618,30 @@ Open page with installation files for manual install?</source>
         <trans-unit id="TransferButton.Content" translate="yes" xml:space="preserve">
           <source>TRANSFER</source>
           <target state="new">放生</target>
+        </trans-unit>
+        <trans-unit id="SettingsMusicTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Music</source>
+          <target state="new">Music</target>
+        </trans-unit>
+        <trans-unit id="SettingsSignOutTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Sign Out</source>
+          <target state="new">Sign Out</target>
+        </trans-unit>
+        <trans-unit id="SettingsVibrationTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Vibration</source>
+          <target state="new">Vibration</target>
+        </trans-unit>
+        <trans-unit id="SettingsMapAutoRotateTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Auto-Rotate Map</source>
+          <target state="new">Auto-Rotate Map</target>
+        </trans-unit>
+        <trans-unit id="SettingsUseNianticMapTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Use Niantic Map</source>
+          <target state="new">Use Niantic Map</target>
+        </trans-unit>
+        <trans-unit id="SettingsRememberMapZoomTextBlock" translate="yes" xml:space="preserve">
+          <source>Remember Map Zoom</source>
+          <target state="new">Remember Map Zoom</target>
         </trans-unit>
       </group>
     </body>

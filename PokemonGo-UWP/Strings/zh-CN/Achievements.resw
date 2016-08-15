@@ -13,87 +13,171 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="BadgeBattleAttackWon" xml:space="preserve">
-    <value>战斗之女</value>
+    <value>对战少女</value>
   </data>
   <data name="BadgeBattleTrainingWon" xml:space="preserve">
-    <value>王牌教练</value>
+    <value>菁英训练家</value>
   </data>
   <data name="BadgeBigMagikarp" xml:space="preserve">
-    <value>渔夫？</value>
+    <value>钓客</value>
   </data>
   <data name="BadgeCaptureTotal" xml:space="preserve">
-    <value>收集者</value>
+    <value>宝可梦收藏家</value>
   </data>
   <data name="BadgeEvolvedTotal" xml:space="preserve">
-    <value>科学家</value>
+    <value>研究员</value>
   </data>
   <data name="BadgeHatchedTotal" xml:space="preserve">
-    <value>种鸡者？</value>
+    <value>宝可梦培育家</value>
   </data>
   <data name="BadgePikachu" xml:space="preserve">
-    <value>皮卡丘？</value>
+    <value>皮卡丘迷</value>
   </data>
   <data name="BadgePokedexEntries" xml:space="preserve">
-    <value>关东？</value>
+    <value>关都居民</value>
   </data>
   <data name="BadgePokestopsVisited" xml:space="preserve">
-    <value>背包客？</value>
+    <value>背包客</value>
   </data>
   <data name="BadgeSmallRattata" xml:space="preserve">
-    <value>童子？</value>
+    <value>短裤少年</value>
   </data>
   <data name="BadgeTravelKm" xml:space="preserve">
-    <value>慢跑者？</value>
+    <value>慢跑者</value>
   </data>
   <data name="Bug" xml:space="preserve">
-    <value>Bug 发现者</value>
+    <value>捕虫少年</value>
   </data>
   <data name="Dragon" xml:space="preserve">
-    <value>降龙者？</value>
+    <value>龙之使者</value>
   </data>
   <data name="Electric" xml:space="preserve">
-    <value>摇滚？</value>
+    <value>电气玩家</value>
   </data>
   <data name="Fairy" xml:space="preserve">
-    <value>童话之女</value>
+    <value>童话女孩</value>
   </data>
   <data name="Fighting" xml:space="preserve">
-    <value>黑带！</value>
+    <value>空手道王</value>
   </data>
   <data name="Fire" xml:space="preserve">
-    <value>金德勒？</value>
+    <value>生营火者</value>
   </data>
   <data name="Flying" xml:space="preserve">
-    <value>鸟之守护</value>
+    <value>饲鸟使者</value>
   </data>
   <data name="Ghost" xml:space="preserve">
-    <value>哈希的疯子！</value>
+    <value>灵异狂</value>
   </data>
   <data name="Grass" xml:space="preserve">
-    <value>园丁</value>
+    <value>园艺师</value>
   </data>
   <data name="Ground" xml:space="preserve">
-    <value>摧毁疯子！</value>
+    <value>遗迹狂</value>
   </data>
   <data name="Ice" xml:space="preserve">
     <value>滑雪者</value>
   </data>
   <data name="Normal" xml:space="preserve">
-    <value>学生……</value>
+    <value>刚下课的学生	</value>
   </data>
   <data name="Poison" xml:space="preserve">
-    <value>庞克女孩？</value>
+    <value>坏女孩</value>
   </data>
   <data name="Psychic" xml:space="preserve">
-    <value>通灵者</value>
+    <value>超能力者</value>
   </data>
   <data name="Rock" xml:space="preserve">
-    <value>徒步旅行者</value>
+    <value>登山客</value>
   </data>
   <data name="Steel" xml:space="preserve">
-    <value>车厂代理？</value>
+    <value>铁道员</value>
   </data>
   <data name="Water" xml:space="preserve">
-    <value>游泳者</value>
+    <value>比基尼姐姐</value>
+  </data>
+  <data name="BadgeBattleAttackWonDescription" xml:space="preserve">
+    <value>战胜了 {0} 次道馆挑战</value>
+  </data>
+  <data name="BadgeBattleTrainingWonDescription" xml:space="preserve">
+    <value>战胜了 {0} 次训练挑战</value>
+  </data>
+  <data name="BadgeBigMagikarpDescription" xml:space="preserve">
+    <value>抓过 {0} 只鲤鱼王</value>
+  </data>
+  <data name="BadgeCaptureTotalDescription" xml:space="preserve">
+    <value>抓到了 {0} 只宝可梦</value>
+  </data>
+  <data name="BadgeEvolvedTotalDescription" xml:space="preserve">
+    <value>进化了 [x] 只宝可梦</value>
+  </data>
+  <data name="BadgeHatchedTotalDescription" xml:space="preserve">
+    <value>孵化了 {x} 只宝可梦</value>
+  </data>
+  <data name="BadgePikachuDescription" xml:space="preserve">
+    <value>抓到过 {0} 只皮卡丘</value>
+  </data>
+  <data name="BadgePokedexEntriesDescription" xml:space="preserve">
+    <value>在宝可梦图鉴里注册了 {0} 只宝可梦</value>
+  </data>
+  <data name="BadgePokestopsVisitedDescription" xml:space="preserve">
+    <value>拜访了 {0} 个补给站</value>
+  </data>
+  <data name="BadgeSmallRattataDescription" xml:space="preserve">
+    <value>遇到过 {0} 个短裤少年</value>
+  </data>
+  <data name="BadgeTravelKmDescription" xml:space="preserve">
+    <value>步行了 {0} km</value>
+  </data>
+  <data name="BugDescription" xml:space="preserve">
+    <value>抓到过 {0} 只虫系宝可梦</value>
+  </data>
+  <data name="DragonDescription" xml:space="preserve">
+    <value>抓到过 {0} 只龙系宝可梦</value>
+  </data>
+  <data name="ElectricDescription" xml:space="preserve">
+    <value>抓到过 {0} 只电系宝可梦</value>
+  </data>
+  <data name="FairyDescription" xml:space="preserve">
+    <value>抓到过 {0} 只妖精系宝可梦</value>
+  </data>
+  <data name="FightingDescription" xml:space="preserve">
+    <value>抓到过 {0} 只格斗系宝可梦</value>
+  </data>
+  <data name="FireDescription" xml:space="preserve">
+    <value>抓到过 {0} 只火系宝可梦</value>
+  </data>
+  <data name="FlyingDescription" xml:space="preserve">
+    <value>抓到过 {0} 只飞行系宝可梦</value>
+  </data>
+  <data name="GhostDescription" xml:space="preserve">
+    <value>抓到过 {0} 只幽灵系宝可梦</value>
+  </data>
+  <data name="GrassDescription" xml:space="preserve">
+    <value>抓到过 {0} 只草系宝可梦</value>
+  </data>
+  <data name="GroundDescription" xml:space="preserve">
+    <value>抓到过 {0} 只地面系宝可梦</value>
+  </data>
+  <data name="IceDescription" xml:space="preserve">
+    <value>抓到过 {0} 只冰系宝可梦</value>
+  </data>
+  <data name="NormalDescription" xml:space="preserve">
+    <value>抓到过 {0} 只常见的宝可梦</value>
+  </data>
+  <data name="PoisonDescription" xml:space="preserve">
+    <value>抓到过 {0} 只毒系宝可梦</value>
+  </data>
+  <data name="PsychicDescription" xml:space="preserve">
+    <value>抓到过 {0} 只超能力系宝可梦</value>
+  </data>
+  <data name="RockDescription" xml:space="preserve">
+    <value>抓到过 {0} 只岩石系宝可梦</value>
+  </data>
+  <data name="SteelDescription" xml:space="preserve">
+    <value>抓到过 {0} 只钢系宝可梦</value>
+  </data>
+  <data name="WaterDescription" xml:space="preserve">
+    <value>抓到过 {0} 只水系宝可梦</value>
   </data>
 </root>

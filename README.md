@@ -1,12 +1,15 @@
-# Update: No working releases until API is safe to use
-Please do not install any builds that are not officially released at the link above. We currently are not releasing new builds for a reason, which currently is: We don't have the right tools to spoof your device like an Apple device. If you download and run any non-dev generated appx, your account is being flagged and there is a high chance you'll get your Pokemon Go account banned.
+# Update: New working release RC1 is here
+More info in [Releases](https://github.com/ST-Apps/PoGo-UWP/releases/tag/v1.1.0-rc1). **Please read the whole release information before installing.**
+
+# ~~Update: No working releases until API is safe to use~~
+~~Please do not install any builds that are not officially released at the link above. We currently are not releasing new builds for a reason, which currently is: We don't have the right tools to spoof your device like an Apple device. If you download and run any non-dev generated appx, your account is being flagged and there is a high chance you'll get your Pokemon Go account banned.
 Please also do not ask for new builds. We'll release them when we're comfortable releasing them, both in terms of stability & making sure it's safe for your account.(edited)
-To clarify a few things for those who are curious:
-- There are no official working releases
-- If you find any unofficial release and use it, you are risking getting yourself banned by Niantic
-- Why? The API fix for Unknown6 issue is working, but it contains some values, that we do not provide correctly. (For example DeviceID is one of them)
-- So until we figure out a fix for those incorrect values (to prevent our users getting banned) we won't release any new public version
-- Other problems with inability to catch pokemons or any other issues are just minor issues, which will get fixed eventually, but the DeviceID is top priority
+To clarify a few things for those who are curious:~~
+- ~~There are no official working releases~~
+- ~~If you find any unofficial release and use it, you are risking getting yourself banned by Niantic~~
+- ~~Why? The API fix for Unknown6 issue is working, but it contains some values, that we do not provide correctly. (For example DeviceID is one of them)~~
+- ~~So until we figure out a fix for those incorrect values (to prevent our users getting banned) we won't release any new public version~~
+- ~~Other problems with inability to catch pokemons or any other issues are just minor issues, which will get fixed eventually, but the DeviceID is top priority~~
 
 # ~~Update: PoGo currently experiences API access problems.~~
 
@@ -72,6 +75,8 @@ Q: How can I logout?
 A: Press the Pokeball and hit the "LOGOUT" button in the top right corner.
 
 # Changelog
+
+**From 14/08/2016 changelog will be kept in [Releases](https://github.com/ST-Apps/PoGo-UWP/releases/tag/v1.1.0-rc1) in each release.**
 
 ## (01/08/2016) [v 1.0.12.0-beta] - Bug fixes and improvements
 * Fixed crash when tapping on Pokebal menu

@@ -12,84 +12,150 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="DateFormat" xml:space="preserve">
-    <value>yyyy.MM.dd</value>
-  </data>
-  <data name="DateTimeFormat" xml:space="preserve">
-    <value>yyyy.MM.dd hh:mm tt</value>
-  </data>
   <data name="PokemonFledText" xml:space="preserve">
-    <value>{0} 退出</value>
+    <value>{0} 逃跑</value>
   </data>
   <data name="GettingGpsSignalText" xml:space="preserve">
-    <value>正在寻找你</value>
+    <value>正在获取GPS信号...</value>
   </data>
   <data name="GettingUserDataText" xml:space="preserve">
-    <value>获取你的个人信息</value>
+    <value>正在获取用户数据...</value>
   </data>
   <data name="GoogleErrorText" xml:space="preserve">
-    <value>Google 服务错误（请先科学上网）：</value>
+    <value>Google 返回错误:</value>
   </data>
   <data name="GoogleNotRespondingText" xml:space="preserve">
-    <value>Google 服务没有响应。坐和放宽，然后重试。（请先科学上网）</value>
+    <value>Google 没有响应，请稍后重试。</value>
   </data>
   <data name="LoadingEncounterText" xml:space="preserve">
-    <value>加载失败： {0} （请先科学上网）</value>
+    <value>遇到了 {0}</value>
   </data>
   <data name="LoggingInText" xml:space="preserve">
-    <value>登录</value>
+    <value>登陆中...</value>
   </data>
   <data name="LoginFailedText" xml:space="preserve">
-    <value>登录遇到了问题。坐和放宽，然后重试。（请先科学上网）</value>
-  </data>
-  <data name="NoText" xml:space="preserve">
-    <value>否</value>
+    <value>登陆失败，请重试。</value>
   </data>
   <data name="NoGpsPermissionsText" xml:space="preserve">
-    <value>口袋妖怪 Go 需要 GPS 权限。前往“设置&gt;隐私&gt;定位”开启。</value>
+    <value>运行游戏需要GPS权限，请启用GPS后重试。</value>
   </data>
   <data name="PokemonRanAwayText" xml:space="preserve">
-    <value>Pokemon 已经逃离。</value>
+    <value>宝可梦逃跑了，不好意思 :(</value>
   </data>
   <data name="PtcDownText" xml:space="preserve">
-    <value>口袋妖怪训练俱乐部登陆系统出现问题。坐和放宽，然后重试。（请先科学上网）</value>
+    <value>PTC 登陆可能临时下线了，请稍后重试。</value>
   </data>
   <data name="SomethingWentWrongText" xml:space="preserve">
-    <value>遇到了一些问题，口袋妖怪 Go 现在很不稳定。是否注销重试？</value>
-  </data>
-  <data name="TimeFormat" xml:space="preserve">
-    <value>hh:mm tt</value>
+    <value>好像出现了点问题，程序变得不稳定了。你要登出账户再重试吗？</value>
   </data>
   <data name="UpdateDownloadingText" xml:space="preserve">
     <value>正在下载更新 {0}</value>
   </data>
   <data name="UpdatedVersionText" xml:space="preserve">
-    <value>已经有内核的新版本： {0} 是否更新？（这次更新将会禁用虚拟定位。）
+    <value>发现新版本 {0} ， 你要更新吗?
 {1}</value>
   </data>
   <data name="UpdateFailedText" xml:space="preserve">
-    <value>更新失败︰ {0}
-是否手动下载？（请先科学上网）</value>
+    <value>更新失败: {0}
+需要打开安装文件的页面来手动更新吗？</value>
   </data>
   <data name="UpdateInstallingText" xml:space="preserve">
-    <value>正在安装更新。应用将会重启。坐和放宽</value>
+    <value>正在安装更新，程序即将重启..</value>
   </data>
   <data name="WrongUsernameText" xml:space="preserve">
-    <value>用户名/密码或脱机服务器错误。坐和放宽，然后重试。（请先科学上网）</value>
-  </data>
-  <data name="YesText" xml:space="preserve">
-    <value>是</value>
+    <value>用户名或密码错误，也可能是服务器下线了，请稍后重试。</value>
   </data>
   <data name="InstinctTeamText" xml:space="preserve">
-    <value>充满</value>
+    <value>属性</value>
   </data>
   <data name="NoTeamText" xml:space="preserve">
-    <value>没有队伍</value>
+    <value>未加入阵营</value>
   </data>
   <data name="ValorTeamText" xml:space="preserve">
-    <value>勇气</value>
+    <value>勇者</value>
   </data>
   <data name="MysticTeamText" xml:space="preserve">
     <value>神秘</value>
+  </data>
+  <data name="TransferPokemonSuccessText" xml:space="preserve">
+    <value>成功放生！从教授那里得到了 {0} 个糖果。</value>
+  </data>
+  <data name="TransferPokemonWarningText" xml:space="preserve">
+    <value>放生给教授之后就拿不回来了，你真的要把 {0} 放生给教授吗？</value>
+  </data>
+  <data name="LoginExpired" xml:space="preserve">
+    <value>登陆信息已过期。</value>
+  </data>
+  <data name="ActivityUnknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="ActivityCatchPokemon" xml:space="preserve">
+    <value>捕抓的宝可梦</value>
+  </data>
+  <data name="ActivityCatchLegendPokemon" xml:space="preserve">
+    <value>捕抓传奇宝可梦</value>
+  </data>
+  <data name="ActivityFleePokemon" xml:space="preserve">
+    <value>逃跑的宝可梦</value>
+  </data>
+  <data name="ActivityDefeatFort" xml:space="preserve">
+    <value>击败堡垒</value>
+  </data>
+  <data name="ActivityEvolvePokemon" xml:space="preserve">
+    <value>进化一只宝可梦</value>
+  </data>
+  <data name="ActivityHatchEgg" xml:space="preserve">
+    <value>宝可梦蛋孵化了！</value>
+  </data>
+  <data name="ActivityWalkKm" xml:space="preserve">
+    <value>步行里程</value>
+  </data>
+  <data name="ActivityPokedexEntryNew" xml:space="preserve">
+    <value>新的宝可梦</value>
+  </data>
+  <data name="ActivityCatchFirstThrow" xml:space="preserve">
+    <value>第一次投掷</value>
+  </data>
+  <data name="ActivityCatchNiceThrow" xml:space="preserve">
+    <value>投掷得不错</value>
+  </data>
+  <data name="ActivityCatchGreatThrow" xml:space="preserve">
+    <value>投掷得很好</value>
+  </data>
+  <data name="ActivityCatchExcellentThrow" xml:space="preserve">
+    <value>完美的投掷</value>
+  </data>
+  <data name="ActivityCatchCurveball" xml:space="preserve">
+    <value>曲线球</value>
+  </data>
+  <data name="ActivityCatchFirstCatchOfDay" xml:space="preserve">
+    <value>当日首抓！</value>
+  </data>
+  <data name="ActivityCatchMilestone" xml:space="preserve">
+    <value>捕抓里程碑</value>
+  </data>
+  <data name="ActivityTrainPokemon" xml:space="preserve">
+    <value>训练宝可梦</value>
+  </data>
+  <data name="ActivitySearchFort" xml:space="preserve">
+    <value>搜索堡垒</value>
+  </data>
+  <data name="ActivityReleasePokemon" xml:space="preserve">
+    <value>放生宝可梦</value>
+  </data>
+  <data name="ActivityHatchEggSmallBonus" xml:space="preserve">
+    <value>孵蛋小奖励</value>
+  </data>
+  <data name="ActivityHatchEggMediumBonus" xml:space="preserve">
+    <value>孵蛋普通奖励</value>
+  </data>
+  <data name="ActivityHatchEggLargeBonus" xml:space="preserve">
+    <value>孵蛋豪礼</value>
+  </data>
+  <data name="ActivityDefeatGymDefender" xml:space="preserve">
+    <value>击败了道馆的训练家</value>
+  </data>
+  <data name="ActivityDefeatGymLeader" xml:space="preserve">
+    <value>击败了道馆的首领</value>
   </data>
 </root>

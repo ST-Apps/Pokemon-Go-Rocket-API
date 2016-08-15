@@ -50,20 +50,13 @@
                                    Style="{ThemeResource ProfilePageText}"
                                    Text="{Binding Achievement, Converter={StaticResource AchievementDescriptionTranslationConverter}}"/>
 
-                        <Ellipse Width="180" Height="180"
-                                 Stroke="LightGray"
-                                 RelativePanel.AlignHorizontalCenterWithPanel="True"
-                                 RelativePanel.AlignVerticalCenterWithPanel="true"
-                                 StrokeThickness="2.5"
-                                 x:Name="AchievementImage">
-                            <Ellipse.Fill>
-                                <ImageBrush ImageSource="{Binding Achievement, Converter={StaticResource AchievementValueToMedalImageConverter}}" />
-                            </Ellipse.Fill>
-                        </Ellipse>
                         <controls:CircularProgressBar Height="180" Width="180" SegmentColor="DeepSkyBlue"
-                                                      Diameter="353" StrokeThickness="2"
+                                                      x:Name="AchievementImage"
+                                                      Diameter="{Binding ActualHeight, ElementName=AchievementImage}" StrokeThickness="2"
+                                                      InnerSegmentColor="LightGray"
                                                       RelativePanel.AlignHorizontalCenterWithPanel="True"
                                                       RelativePanel.AlignVerticalCenterWithPanel="true"
+                                                      ImageSourcePath="{Binding Achievement, Converter={StaticResource AchievementValueToMedalImageConverter}}"
                                                       Maximum="{Binding Achievement, Converter={StaticResource AchievementNextValueConverter}}"
                                                       Value="{Binding Achievement.Value, Converter={StaticResource AchievementValueConverter}}"/>
                         

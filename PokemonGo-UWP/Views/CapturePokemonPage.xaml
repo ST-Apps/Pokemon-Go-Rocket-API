@@ -109,7 +109,7 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1" />
             </DoubleAnimationUsingKeyFrames>
 
-            <DoubleAnimationUsingKeyFrames
+            <!--<DoubleAnimationUsingKeyFrames
                 Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)"
                 Storyboard.TargetName="CurrentPokemonIcon">
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0" />
@@ -120,7 +120,7 @@
                 Storyboard.TargetName="CurrentPokemonIcon">
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1" />
                 <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0" />
-            </DoubleAnimationUsingKeyFrames>
+            </DoubleAnimationUsingKeyFrames>-->
 
         </Storyboard>
 

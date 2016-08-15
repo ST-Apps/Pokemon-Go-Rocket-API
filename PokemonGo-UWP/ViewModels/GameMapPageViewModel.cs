@@ -22,7 +22,7 @@ namespace PokemonGo_UWP.ViewModels
 {
     public class GameMapPageViewModel : ViewModelBase
     {
-        #region Lifecycle Handlers        
+        #region Lifecycle Handlers
 
         /// <summary>
         /// </summary>
@@ -36,14 +36,14 @@ namespace PokemonGo_UWP.ViewModels
             // Prevent from going back to other pages
             NavigationService.ClearHistory();
             if (parameter == null || mode == NavigationMode.Back) return;
-            var gameMapNavigationMode = (GameMapNavigationModes) parameter;
+            var gameMapNavigationMode = (GameMapNavigationModes)parameter;
 
             // We just resumed from suspension so we restart update service and we get data from suspension state
             if (suspensionState.Any())
             {
-                // Recovering the state                
-                PlayerProfile = (PlayerData) suspensionState[nameof(PlayerProfile)];
-                PlayerStats = (PlayerStats) suspensionState[nameof(PlayerStats)];
+                // Recovering the state
+                PlayerProfile = (PlayerData)suspensionState[nameof(PlayerProfile)];
+                PlayerStats = (PlayerStats)suspensionState[nameof(PlayerStats)];
                 // Restarting update service
                 await StartGpsDataService();
                 return;
@@ -56,19 +56,19 @@ namespace PokemonGo_UWP.ViewModels
                     // App just started, so we get GPS access and eventually initialize the client
                     await StartGpsDataService();
                     await UpdatePlayerData(true);
-                    GameClient.ToggleUpdateTimer();
+                    await GameClient.ToggleUpdateTimer();
                     break;
                 case GameMapNavigationModes.SettingsUpdate:
-                    // We navigated back from Settings page after changing the Map provider, but this is managed in the page itself                                        
+                    // We navigated back from Settings page after changing the Map provider, but this is managed in the page itself
                     break;
                 case GameMapNavigationModes.PokestopUpdate:
-                    // We came here after the catching page so we need to restart map update timer and update player data. We also check for level up.                   
-                    GameClient.ToggleUpdateTimer();
+                    // We came here after the catching page so we need to restart map update timer and update player data. We also check for level up.
+                    await GameClient.ToggleUpdateTimer();
                     await UpdatePlayerData(true);
                     break;
                 case GameMapNavigationModes.PokemonUpdate:
-                    // As above   
-                    GameClient.ToggleUpdateTimer();
+                    // As above
+                    await GameClient.ToggleUpdateTimer();
                     await UpdatePlayerData(true);
                     break;
                 default:
@@ -94,7 +94,7 @@ namespace PokemonGo_UWP.ViewModels
 
         #endregion
 
-        #region Game Management Vars        
+        #region Game Management Vars
 
         /// <summary>
         ///     Player's profile, we use it just for the username
@@ -113,7 +113,7 @@ namespace PokemonGo_UWP.ViewModels
 
         #endregion
 
-        #region Bindable Game Vars   
+        #region Bindable Game Vars
 
         public ElementTheme CurrentTheme
         {
@@ -193,7 +193,7 @@ namespace PokemonGo_UWP.ViewModels
         ///     Waits for GPS auth and, if auth is given, starts updating data
         /// </summary>
         /// <returns></returns>
-        private async Task StartGpsDataService()
+        public async Task StartGpsDataService()
         {
             await Dispatcher.DispatchAsync(async () =>
             {
@@ -218,7 +218,7 @@ namespace PokemonGo_UWP.ViewModels
         /// </summary>
         /// <param name="checkForLevelUp"></param>
         /// <returns></returns>
-        private async Task UpdatePlayerData(bool checkForLevelUp = false)
+        public async Task UpdatePlayerData(bool checkForLevelUp = false)
         {
             await GameClient.UpdateProfile();
             LevelUpResponse = await GameClient.UpdatePlayerStats(checkForLevelUp);
