@@ -40,13 +40,13 @@
     <value>Nome utente/e-mail</value>
   </data>
   <data name="ExperienceTextBlock.Text" xml:space="preserve">
-    <value>EXP</value>
+    <value>PE</value>
   </data>
   <data name="OkButton.Content" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="CpTextBlock.Text" xml:space="preserve">
-    <value>CP</value>
+    <value>PL</value>
   </data>
   <data name="EggsTextBlock.Text" xml:space="preserve">
     <value>UOVA</value>
@@ -77,10 +77,10 @@
     <comment>Watch out: there is a space after the #</comment>
   </data>
   <data name="SlashSpaceCpTextBlock.Text" xml:space="preserve">
-    <value>/ CP</value>
+    <value>/ PL</value>
   </data>
   <data name="SpaceXpTextBlock.Text" xml:space="preserve">
-    <value> EXP</value>
+    <value> PE</value>
   </data>
   <data name="TotalExperienceTextBlock.Text" xml:space="preserve">
     <value>TOTALE</value>
