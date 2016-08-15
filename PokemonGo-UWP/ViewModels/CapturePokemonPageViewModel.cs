@@ -233,19 +233,39 @@ namespace PokemonGo_UWP.ViewModels
                 {
                     case ItemId.ItemPokeBall:
                         // Try with Greatball
-                        SelectedCaptureItem = ItemsInventory.First(item => item.ItemId == ItemId.ItemGreatBall);
+                        SelectedCaptureItem = ItemsInventory.FirstOrDefault(item => item.ItemId == ItemId.ItemGreatBall);
+                        if (SelectedCaptureItem == null) {
+                            SelectedCaptureItem = new ItemData() {
+                                ItemId = ItemId.ItemGreatBall
+                            };
+                        }
                         break;
                     case ItemId.ItemGreatBall:
                         // Try with Ultraball
-                        SelectedCaptureItem = ItemsInventory.First(item => item.ItemId == ItemId.ItemUltraBall);
+                        SelectedCaptureItem = ItemsInventory.FirstOrDefault(item => item.ItemId == ItemId.ItemUltraBall);
+                        if(SelectedCaptureItem == null) {
+                            SelectedCaptureItem = new ItemData() {
+                                ItemId = ItemId.ItemUltraBall
+                            };
+                        }
                         break;
                     case ItemId.ItemUltraBall:
                         // Try with Masterball
-                        SelectedCaptureItem = ItemsInventory.First(item => item.ItemId == ItemId.ItemMasterBall);
+                        SelectedCaptureItem = ItemsInventory.FirstOrDefault(item => item.ItemId == ItemId.ItemMasterBall);
+                        if(SelectedCaptureItem == null) {
+                            SelectedCaptureItem = new ItemData() {
+                                ItemId = ItemId.ItemMasterBall
+                            };
+                        }
                         break;
                     case ItemId.ItemMasterBall:
                         // User has no left balls, choose Pokeball to stop him from trying to capture
-                        SelectedCaptureItem = ItemsInventory.First(item => item.ItemId == ItemId.ItemPokeBall);
+                        SelectedCaptureItem = ItemsInventory.FirstOrDefault(item => item.ItemId == ItemId.ItemPokeBall);
+                        if(SelectedCaptureItem == null) {
+                            SelectedCaptureItem = new ItemData() {
+                                ItemId = ItemId.ItemPokeBall
+                            };
+                        }
                         return;
                 }
             }
