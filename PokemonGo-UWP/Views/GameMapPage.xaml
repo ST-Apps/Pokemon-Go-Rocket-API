@@ -592,7 +592,6 @@
             <Border CornerRadius="8,0,0,8"
                     x:Name="NearbyPokemonGrid"
                     BorderThickness="2,2,0,2"
-                    BorderBrush="#abefca"
                     VerticalAlignment="Center"
                     Grid.Column="2"
                     Padding="8,8,0,8"
