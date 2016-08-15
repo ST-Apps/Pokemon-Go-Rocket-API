@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +26,20 @@ namespace PokemonGo_UWP.Views
         public PokedexPage()
         {
             this.InitializeComponent();
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            SystemNavigationManager.GetForCurrentView().BackRequested += PokedexPage_BackRequested;
+        }
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            SystemNavigationManager.GetForCurrentView().BackRequested -= PokedexPage_BackRequested;
+        }
+
+        private void PokedexPage_BackRequested(object sender, BackRequestedEventArgs e)
+        {
+            e.Handled = true;
+            ViewModel.CloseCommand.Execute();
         }
     }
 }

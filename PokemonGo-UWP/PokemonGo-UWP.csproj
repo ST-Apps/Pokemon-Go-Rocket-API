@@ -537,6 +537,7 @@
     <Compile Include="Utils\Achievements\GoldAttribute.cs" />
     <Compile Include="Utils\Achievements\AchievementType.cs" />
     <Compile Include="Utils\ApplicationKeys.cs" />
+    <Compile Include="Utils\Game\DataTemplateSelectors.cs" />
     <Compile Include="Utils\Game\FortDataStatus.cs" />
     <Compile Include="Utils\Helpers\AsyncSynchronisationContext.cs" />
     <Compile Include="Utils\Helpers\AudioUtils.cs" />
