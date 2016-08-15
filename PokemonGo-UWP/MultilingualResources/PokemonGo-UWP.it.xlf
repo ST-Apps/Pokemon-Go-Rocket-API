@@ -355,6 +355,106 @@ Vuoi aprire la pagina con il file di installazione per l'installazione manuale?<
           <source>You can't take it back after it's transferred to the Professor. Do you really want to transfer {0} to the Professor?</source>
           <target state="new">Una volta trasferito al Professore, non potrai riaverlo indietro. Sei sicuro di voler trasferire {0} al Professore?</target>
         </trans-unit>
+        <trans-unit id="LoginExpired" translate="yes" xml:space="preserve">
+          <source>Previous login expired.</source>
+          <target state="new">Il login precedente è scaduto.</target>
+        </trans-unit>
+        <trans-unit id="ActivityUnknown" translate="yes" xml:space="preserve">
+          <source>Unknown</source>
+          <target state="new">Sconosciuto</target>
+        </trans-unit>
+        <trans-unit id="ActivityCatchPokemon" translate="yes" xml:space="preserve">
+          <source>Pokémon Caught</source>
+          <target state="new">Pokémon catturato</target>
+        </trans-unit>
+        <trans-unit id="ActivityCatchLegendPokemon" translate="yes" xml:space="preserve">
+          <source>Catch Legend Pokémon</source>
+          <target state="new">Cattura un Pokémon Leggendario</target>
+        </trans-unit>
+        <trans-unit id="ActivityFleePokemon" translate="yes" xml:space="preserve">
+          <source>Pokémon Fled</source>
+          <target state="new">Pokémon scappato</target>
+        </trans-unit>
+        <trans-unit id="ActivityDefeatFort" translate="yes" xml:space="preserve">
+          <source>Defeat Fort</source>
+          <target state="new">Sconfiggi Fort</target>
+        </trans-unit>
+        <trans-unit id="ActivityEvolvePokemon" translate="yes" xml:space="preserve">
+          <source>Evolve a Pokémon</source>
+          <target state="new">Fai evolvere un Pokémon</target>
+        </trans-unit>
+        <trans-unit id="ActivityHatchEgg" translate="yes" xml:space="preserve">
+          <source>Egg Hatched!</source>
+          <target state="new">Uovo schiuso!</target>
+        </trans-unit>
+        <trans-unit id="ActivityWalkKm" translate="yes" xml:space="preserve">
+          <source>Walk Km</source>
+          <target state="new">Km camminati</target>
+        </trans-unit>
+        <trans-unit id="ActivityPokedexEntryNew" translate="yes" xml:space="preserve">
+          <source>New Pokémon</source>
+          <target state="new">Nuovo Pokémon</target>
+        </trans-unit>
+        <trans-unit id="ActivityCatchFirstThrow" translate="yes" xml:space="preserve">
+          <source>First Throw</source>
+          <target state="new">Primo lancio</target>
+        </trans-unit>
+        <trans-unit id="ActivityCatchNiceThrow" translate="yes" xml:space="preserve">
+          <source>Nice Throw</source>
+          <target state="new">Bel lancio</target>
+        </trans-unit>
+        <trans-unit id="ActivityCatchGreatThrow" translate="yes" xml:space="preserve">
+          <source>Great Throw</source>
+          <target state="new">Grande lancio</target>
+        </trans-unit>
+        <trans-unit id="ActivityCatchExcellentThrow" translate="yes" xml:space="preserve">
+          <source>Excellent Throw</source>
+          <target state="new">Lancio eccellente</target>
+        </trans-unit>
+        <trans-unit id="ActivityCatchCurveball" translate="yes" xml:space="preserve">
+          <source>Curveball</source>
+          <target state="new">Palla curva</target>
+        </trans-unit>
+        <trans-unit id="ActivityCatchFirstCatchOfDay" translate="yes" xml:space="preserve">
+          <source>First Catch of Day!</source>
+          <target state="new">Prima Cattura del giorno!</target>
+        </trans-unit>
+        <trans-unit id="ActivityCatchMilestone" translate="yes" xml:space="preserve">
+          <source>Catch Milestone</source>
+          <target state="new">Pietra miliare delle catture</target>
+        </trans-unit>
+        <trans-unit id="ActivityTrainPokemon" translate="yes" xml:space="preserve">
+          <source>Train Pokémon</source>
+          <target state="new">Allena Pokémon</target>
+        </trans-unit>
+        <trans-unit id="ActivitySearchFort" translate="yes" xml:space="preserve">
+          <source>Search Fort</source>
+          <target state="new">Cerca Fort</target>
+        </trans-unit>
+        <trans-unit id="ActivityReleasePokemon" translate="yes" xml:space="preserve">
+          <source>Release Pokémon</source>
+          <target state="new">Libera Pokémon</target>
+        </trans-unit>
+        <trans-unit id="ActivityHatchEggSmallBonus" translate="yes" xml:space="preserve">
+          <source>Hatch Egg Small Bonus</source>
+          <target state="new">Bonus piccolo per la schiusa di un uovo</target>
+        </trans-unit>
+        <trans-unit id="ActivityHatchEggMediumBonus" translate="yes" xml:space="preserve">
+          <source>Hatch Egg Medium Bonus</source>
+          <target state="new">Bonus medio per la schiusa di un uovo</target>
+        </trans-unit>
+        <trans-unit id="ActivityHatchEggLargeBonus" translate="yes" xml:space="preserve">
+          <source>Hatch Egg Large Bonus</source>
+          <target state="new">Bonus grande per la schiusa di un uovo</target>
+        </trans-unit>
+        <trans-unit id="ActivityDefeatGymDefender" translate="yes" xml:space="preserve">
+          <source>Defeat Gym Defender</source>
+          <target state="new">Sconfiggi difensore palestra</target>
+        </trans-unit>
+        <trans-unit id="ActivityDefeatGymLeader" translate="yes" xml:space="preserve">
+          <source>Defeat Gym Leader</source>
+          <target state="new">Sconfiggi Capopalestra</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -533,6 +633,10 @@ Vuoi aprire la pagina con il file di installazione per l'installazione manuale?<
         <trans-unit id="TransferButton.Content" translate="yes" xml:space="preserve">
           <source>TRANSFER</source>
           <target state="new">TRASFERISCI</target>
+        </trans-unit>
+        <trans-unit id="SettingsRememberMapZoomTextBlock" translate="yes" xml:space="preserve">
+          <source>Remember Map Zoom</source>
+          <target state="new">Ricorda l'ingrandimento della mappa</target>
         </trans-unit>
       </group>
     </body>
