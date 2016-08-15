@@ -25,7 +25,7 @@
                MaxWidth="300"
                Source="../Assets/Ui/logoLight.png" />
         <Grid Grid.Row="1"
-              Style="{StaticResource GridContainer}">
+              Style="{StaticResource GridContainer}" MaxWidth="800">
             <StackPanel>
                 <TextBox x:Name="LoginUsernameTextBox"
                          x:Uid="LoginUsernameTextBox"
