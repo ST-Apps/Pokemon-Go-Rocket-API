@@ -13,6 +13,7 @@
                 <ResourceDictionary Source="Styles\Custom.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
+            <utils:PokemonIdToPokedexDescription x:Key="PokemonIdToPokedexDescription"/>
             <utils:PokemonIdToNumericId x:Key="PokemonIdToNumericId" />
             <utils:PokemonIdToPokemonSpriteConverter x:Key="PokemonIdToPokemonSpriteConverter" />
             <utils:EmptyConverter x:Key="EmptyConverter" />

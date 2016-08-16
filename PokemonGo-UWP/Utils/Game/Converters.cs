@@ -40,6 +40,20 @@ namespace PokemonGo_UWP.Utils
             return value;
         }
     }
+    public class PokemonIdToPokedexDescription : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var path = $"{value.ToString()}/Description";
+            var text = Resources.Pokedex.GetString(path);
+            return text;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+    }
     public class PokemonIdToPokemonNameConverter : IValueConverter
     {
         #region Implementation of IValueConverter

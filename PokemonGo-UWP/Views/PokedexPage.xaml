@@ -181,7 +181,7 @@
                        HorizontalAlignment="Center"
                        Margin="16"
                        Grid.Row="0"/>
-                    <StackPanel Grid.Row="1" Margin="16,4" Orientation="Horizontal" HorizontalAlignment="Left">
+                    <StackPanel Grid.Row="1" Margin="16,4" Orientation="Horizontal" HorizontalAlignment="Stretch">
                         <Image Source="/Assets/UI/Pokeball.png" Height="16" Width="16" VerticalAlignment="Center" Visibility="{Binding SelectedPokedexEntry.Value.TimesCaptured, Converter={StaticResource IntVisibility}}"/>
                         <TextBlock Text="{Binding SelectedPokedexEntry.Key, Converter={StaticResource PokemonIdToNumericId}}" FontSize="20" Margin="4,0" Typography.Capitals="AllSmallCaps" VerticalAlignment="Center"/>
                         <TextBlock Text="{Binding SelectedPokedexEntry.Key, Converter={StaticResource PokemonIdToPokemonNameConverter}}" Typography.Capitals="AllSmallCaps" FontSize="32" FontWeight="Thin" Margin="4,0" VerticalAlignment="Center"/>
@@ -209,7 +209,7 @@
                         <Run Text=""/>
                     </TextBlock>
                     <TextBlock Grid.Row="6" Margin="16,4" TextWrapping="Wrap" HorizontalAlignment="Left">
-                        <Run Text="{Binding SelectedPokedexEntry.Value.Descriptor.Name}"/>
+                        <Run Text="{Binding SelectedPokedexEntry.Key, Converter={StaticResource PokemonIdToPokedexDescription}}"/>
                     </TextBlock>
                     <StackPanel Grid.Row="7" Margin="16,4" HorizontalAlignment="Left">
                         <!-- Evolutions -->
