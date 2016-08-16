@@ -11,9 +11,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Google.Common.Geometry;
 using Google.Protobuf.Collections;
-using PokemonGo.RocketAPI.Extensions;
 using PokemonGo_UWP.Entities;
-using PokemonGo_UWP.Utils.Game;
+using PokemonGo_UWP.Utils.Achievements;
 using POGOProtos.Data;
 using POGOProtos.Data.Player;
 using POGOProtos.Enums;
@@ -23,7 +22,7 @@ using POGOProtos.Map.Fort;
 using POGOProtos.Map.Pokemon;
 using POGOProtos.Networking.Responses;
 
-namespace PokemonGo_UWP.Utils
+namespace PokemonGo_UWP.Utils.Game
 {
     public class PokemonIdToPokemonNameConverter : IValueConverter
     {

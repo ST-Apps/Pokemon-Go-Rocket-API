@@ -22,6 +22,10 @@ using Windows.UI.Popups;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
+using PokemonGo_UWP.Utils.Extensions;
+using PokemonGo_UWP.Utils.Game;
+using PokemonGo_UWP.Utils.Helpers;
+using PokemonGo_UWP.Utils.Settings;
 
 namespace PokemonGo_UWP
 {
@@ -232,11 +236,11 @@ namespace PokemonGo_UWP
                 if (latestUpdateInfo != null)
                 {
                     var dialog =
-                        new MessageDialog(string.Format(Utils.Resources.CodeResources.GetString("UpdatedVersion"),
+                        new MessageDialog(string.Format(Utils.Game.Resources.CodeResources.GetString("UpdatedVersion"),
                             latestUpdateInfo.Version, latestUpdateInfo.Description));
 
-                    dialog.Commands.Add(new UICommand(Utils.Resources.CodeResources.GetString("YesText")) { Id = 0 });
-                    dialog.Commands.Add(new UICommand(Utils.Resources.CodeResources.GetString("NoText")) { Id = 1 });
+                    dialog.Commands.Add(new UICommand(Utils.Game.Resources.CodeResources.GetString("YesText")) { Id = 0 });
+                    dialog.Commands.Add(new UICommand(Utils.Game.Resources.CodeResources.GetString("NoText")) { Id = 1 });
                     dialog.DefaultCommandIndex = 0;
                     dialog.CancelCommandIndex = 1;
 

@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Superbest_random
+namespace PokemonGo_UWP.Utils.Extensions
 {
     /// <summary>
     ///     Some extension methods for <see cref="Random" /> for creating a few more kinds of random stuff.

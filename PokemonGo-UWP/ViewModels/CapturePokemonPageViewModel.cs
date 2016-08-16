@@ -9,6 +9,9 @@ using Newtonsoft.Json;
 using PokemonGo.RocketAPI;
 using PokemonGo_UWP.Entities;
 using PokemonGo_UWP.Utils;
+using PokemonGo_UWP.Utils.Extensions;
+using PokemonGo_UWP.Utils.Game;
+using PokemonGo_UWP.Utils.Helpers;
 using PokemonGo_UWP.Views;
 using POGOProtos.Data.Capture;
 using POGOProtos.Inventory.Item;
@@ -16,7 +19,7 @@ using POGOProtos.Networking.Responses;
 using Template10.Mvvm;
 using Template10.Services.NavigationService;
 using Universal_Authenticator_v2.Views;
-using Resources = PokemonGo_UWP.Utils.Resources;
+using Resources = PokemonGo_UWP.Utils.Game.Resources;
 
 namespace PokemonGo_UWP.ViewModels
 {

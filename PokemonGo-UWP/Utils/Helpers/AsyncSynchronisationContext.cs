@@ -2,7 +2,7 @@
 using System.Threading;
 using PokemonGo.RocketAPI;
 
-namespace PokemonGo_UWP.Utils
+namespace PokemonGo_UWP.Utils.Helpers
 {
     public class AsyncSynchronizationContext : SynchronizationContext
     {

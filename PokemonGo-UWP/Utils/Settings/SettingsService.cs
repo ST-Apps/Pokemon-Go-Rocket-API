@@ -1,9 +1,11 @@
 ﻿using System.Linq;
 using Windows.Security.Credentials;
 using PokemonGo.RocketAPI.Enums;
+using PokemonGo_UWP.Utils.Game;
+using PokemonGo_UWP.Utils.Helpers;
 using Template10.Services.SettingsService;
 
-namespace PokemonGo_UWP.Utils
+namespace PokemonGo_UWP.Utils.Settings
 {
     public class SettingsService
     {

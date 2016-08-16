@@ -1,7 +1,7 @@
 ﻿using System;
 using POGOProtos.Enums;
 
-namespace PokemonGo_UWP.Utils
+namespace PokemonGo_UWP.Utils.Achievements
 {
     public class BadgeTypeAttribute : Attribute
     {

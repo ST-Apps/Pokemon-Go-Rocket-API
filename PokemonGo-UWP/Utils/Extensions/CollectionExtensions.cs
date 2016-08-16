@@ -4,7 +4,7 @@ using System.Linq;
 using PokemonGo_UWP.Entities;
 using Template10.Utils;
 
-namespace PokemonGo_UWP.Utils
+namespace PokemonGo_UWP.Utils.Extensions
 {
     public static class CollectionExtensions
     {

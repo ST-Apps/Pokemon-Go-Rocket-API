@@ -11,13 +11,15 @@ using Newtonsoft.Json;
 using PokemonGo.RocketAPI;
 using PokemonGo_UWP.Entities;
 using PokemonGo_UWP.Utils;
+using PokemonGo_UWP.Utils.Extensions;
+using PokemonGo_UWP.Utils.Game;
 using PokemonGo_UWP.Views;
 using POGOProtos.Data;
 using POGOProtos.Data.Player;
 using POGOProtos.Networking.Responses;
 using Template10.Common;
 using Template10.Mvvm;
-using Resources = PokemonGo_UWP.Utils.Resources;
+using Resources = PokemonGo_UWP.Utils.Game.Resources;
 
 namespace PokemonGo_UWP.ViewModels
 {

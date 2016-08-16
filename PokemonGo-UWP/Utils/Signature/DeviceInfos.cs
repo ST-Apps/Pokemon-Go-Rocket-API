@@ -1,9 +1,10 @@
-﻿using PokemonGo.RocketAPI.Helpers;
-using System;
+﻿using System;
 using Windows.Devices.Sensors;
-using Superbest_random;
+using PokemonGo.RocketAPI.Helpers;
+using PokemonGo_UWP.Utils.Extensions;
+using PokemonGo_UWP.Utils.Settings;
 
-namespace PokemonGo_UWP.Utils
+namespace PokemonGo_UWP.Utils.Signature
 {
     public class LocationFixFused : ILocationFix
     {

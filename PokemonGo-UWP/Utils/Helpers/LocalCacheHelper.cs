@@ -4,9 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Windows.Storage;
-using Q42.WinRT.Storage;
 
-namespace Q42.WinRT.Data
+namespace PokemonGo_UWP.Utils.Helpers
 {
     /// <summary>
     ///     Used as a wrapper around the stored file to keep metadata

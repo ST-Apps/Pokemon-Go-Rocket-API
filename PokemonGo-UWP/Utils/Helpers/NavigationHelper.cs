@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace PokemonGo_UWP.Utils
+namespace PokemonGo_UWP.Utils.Helpers
 {
     /// <summary>
     ///     Serialization fails when passing parameters, so we need to do this in a different way

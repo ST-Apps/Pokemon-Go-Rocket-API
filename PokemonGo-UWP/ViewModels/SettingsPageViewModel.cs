@@ -1,6 +1,9 @@
 ﻿using PokemonGo_UWP.Utils;
 using PokemonGo_UWP.Views;
 using System.Linq;
+using PokemonGo_UWP.Utils.Game;
+using PokemonGo_UWP.Utils.Helpers;
+using PokemonGo_UWP.Utils.Settings;
 using Template10.Mvvm;
 
 namespace PokemonGo_UWP.ViewModels

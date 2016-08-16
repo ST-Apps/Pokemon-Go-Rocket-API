@@ -6,7 +6,7 @@ using POGOProtos.Enums;
 using POGOProtos.Inventory;
 using POGOProtos.Settings.Master;
 
-namespace PokemonGo_UWP.Utils
+namespace PokemonGo_UWP.Utils.Game
 {
     /// <summary>
     ///     <seealso cref="https://github.com/NECROBOTIO/NecroBot/blob/master/PoGo.NecroBot.Logic/PoGoUtils/PokemonInfo.cs" />

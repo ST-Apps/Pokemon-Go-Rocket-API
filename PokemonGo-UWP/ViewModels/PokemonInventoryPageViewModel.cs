@@ -7,6 +7,8 @@ using Windows.UI.Xaml.Navigation;
 using Newtonsoft.Json;
 using PokemonGo_UWP.Entities;
 using PokemonGo_UWP.Utils;
+using PokemonGo_UWP.Utils.Game;
+using PokemonGo_UWP.Utils.Settings;
 using PokemonGo_UWP.Views;
 using POGOProtos.Data;
 using POGOProtos.Inventory;

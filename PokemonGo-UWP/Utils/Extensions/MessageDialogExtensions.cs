@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 
-namespace PokemonGo_UWP.Utils
+namespace PokemonGo_UWP.Utils.Extensions
 {
     /// <summary>
     ///     MessageDialog extension methods

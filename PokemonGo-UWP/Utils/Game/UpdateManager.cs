@@ -11,9 +11,10 @@ using Windows.System;
 using Windows.UI.Popups;
 using Windows.Web.Http;
 using Octokit;
+using PokemonGo_UWP.Utils.Extensions;
 using Universal_Authenticator_v2.Views;
 
-namespace PokemonGo_UWP.Utils
+namespace PokemonGo_UWP.Utils.Game
 {
     /// <summary>
     ///     Manager that checks if there's an updated version on GitHub

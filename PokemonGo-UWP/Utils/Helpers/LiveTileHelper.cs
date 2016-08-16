@@ -1,11 +1,12 @@
-﻿using NotificationsExtensions;
-using NotificationsExtensions.Tiles;
-using PokemonGo_UWP.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using NotificationsExtensions;
+using NotificationsExtensions.Tiles;
+using PokemonGo_UWP.Entities;
+using PokemonGo_UWP.Utils.Game;
 
-namespace PokemonGo_UWP.Utils
+namespace PokemonGo_UWP.Utils.Helpers
 {
 
     /// <summary>

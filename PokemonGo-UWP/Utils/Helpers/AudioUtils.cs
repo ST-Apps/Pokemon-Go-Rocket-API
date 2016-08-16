@@ -1,10 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.Storage;
 using Windows.UI.Xaml.Controls;
-using System;
 
-namespace PokemonGo_UWP.Utils
+namespace PokemonGo_UWP.Utils.Helpers
 {
     public static class AudioUtils
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace PokemonGo_UWP.Utils
+namespace PokemonGo_UWP.Utils.Signature
 {
     public static class Utilities
     {

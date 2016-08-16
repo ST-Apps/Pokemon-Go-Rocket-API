@@ -1,6 +1,6 @@
 ﻿using POGOProtos.Enums;
 
-namespace PokemonGo_UWP.Utils
+namespace PokemonGo_UWP.Utils.Achievements
 {
     public enum AchievementType
     {

@@ -3,6 +3,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using PokemonGo_UWP.Entities;
 using PokemonGo_UWP.Utils;
+using PokemonGo_UWP.Utils.Extensions;
 
 namespace PokemonGo_UWP.Tests.Utils
 {

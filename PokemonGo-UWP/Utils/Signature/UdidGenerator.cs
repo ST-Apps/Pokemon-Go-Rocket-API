@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace PokemonGo_UWP.Utils
+namespace PokemonGo_UWP.Utils.Signature
 {
     public static class UdidGenerator
     {

@@ -1,12 +1,14 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using Windows.UI.Popups;
+using PokemonGo_UWP.Utils.Extensions;
+using PokemonGo_UWP.Utils.Game;
 using PokemonGo_UWP.Views;
 using Template10.Common;
 using Universal_Authenticator_v2.Views;
-using System;
-using System.Diagnostics;
 
-namespace PokemonGo_UWP.Utils
+namespace PokemonGo_UWP.Utils.Helpers
 {
     internal class ApiHandledException : Exception
     {

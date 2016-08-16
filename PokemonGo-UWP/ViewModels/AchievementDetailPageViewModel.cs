@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Navigation;
 using PokemonGo_UWP.Utils;
+using PokemonGo_UWP.Utils.Achievements;
 using Template10.Mvvm;
 using Template10.Services.NavigationService;
 

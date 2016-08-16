@@ -2,6 +2,7 @@
 using Windows.Devices.Geolocation;
 using Windows.Foundation;
 using PokemonGo_UWP.Utils;
+using PokemonGo_UWP.Utils.Helpers;
 using PokemonGo_UWP.Views;
 using POGOProtos.Enums;
 using POGOProtos.Map.Pokemon;

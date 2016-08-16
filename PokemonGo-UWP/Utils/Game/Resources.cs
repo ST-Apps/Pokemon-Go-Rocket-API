@@ -1,6 +1,6 @@
 ﻿using Windows.ApplicationModel.Resources;
 
-namespace PokemonGo_UWP.Utils
+namespace PokemonGo_UWP.Utils.Game
 {
     public static class Resources
     {

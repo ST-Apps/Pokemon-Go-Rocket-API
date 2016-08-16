@@ -1,4 +1,4 @@
-﻿namespace PokemonGo_UWP.Utils
+﻿namespace PokemonGo_UWP.Utils.Game
 {
     /// <summary>
     ///     Sorting modes for Pokemon inventory

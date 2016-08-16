@@ -10,6 +10,9 @@ using Template10.Mvvm;
 using Template10.Services.NavigationService;
 using Universal_Authenticator_v2.Views;
 using Newtonsoft.Json.Linq;
+using PokemonGo_UWP.Utils.Extensions;
+using PokemonGo_UWP.Utils.Game;
+using PokemonGo_UWP.Utils.Settings;
 
 namespace PokemonGo_UWP.ViewModels
 {

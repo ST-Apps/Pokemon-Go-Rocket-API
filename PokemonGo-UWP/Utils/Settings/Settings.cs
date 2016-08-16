@@ -1,6 +1,7 @@
-﻿using PokemonGo.RocketAPI.Enums;
+﻿using PokemonGo.RocketAPI;
+using PokemonGo.RocketAPI.Enums;
 
-namespace PokemonGo.RocketAPI.Console
+namespace PokemonGo_UWP.Utils.Settings
 {
     public class Settings : ISettings
     {

@@ -1,6 +1,6 @@
 ﻿using PokemonGo_UWP.ViewModels;
 
-namespace PokemonGo_UWP.Utils
+namespace PokemonGo_UWP.Utils.Game
 {
     /// <summary>
     ///     We use this enum to tell to <see cref="GameMapPageViewModel" /> what's the action that generated the navigation, so

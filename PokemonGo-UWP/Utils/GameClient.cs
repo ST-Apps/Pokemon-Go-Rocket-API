@@ -9,7 +9,6 @@ using Windows.Devices.Geolocation;
 using Windows.Security.Credentials;
 using Windows.UI.Xaml;
 using PokemonGo.RocketAPI;
-using PokemonGo.RocketAPI.Console;
 using PokemonGo.RocketAPI.Enums;
 using PokemonGo.RocketAPI.Extensions;
 using PokemonGo_UWP.Entities;
@@ -25,13 +24,16 @@ using POGOProtos.Networking.Envelopes;
 using POGOProtos.Networking.Responses;
 using POGOProtos.Settings;
 using POGOProtos.Settings.Master;
-using Q42.WinRT.Data;
 using Template10.Common;
 using Template10.Utils;
 using Universal_Authenticator_v2.Views;
 using Windows.Devices.Sensors;
 using PokemonGo.RocketAPI.Rpc;
+using PokemonGo_UWP.Utils.Extensions;
 using PokemonGo_UWP.Utils.Helpers;
+using PokemonGo_UWP.Utils.Settings;
+using PokemonGo_UWP.Utils.Signature;
+using Resources = PokemonGo_UWP.Utils.Game.Resources;
 
 namespace PokemonGo_UWP.Utils
 {
@@ -317,7 +319,7 @@ namespace PokemonGo_UWP.Utils
 
             var credentials = SettingsService.Instance.UserCredentials;
             credentials.RetrievePassword();
-            _clientSettings = new Settings
+            _clientSettings = new Settings.Settings
             {
                 AuthType = SettingsService.Instance.LastLoginService,
                 PtcUsername = SettingsService.Instance.LastLoginService == AuthType.Ptc ? credentials.UserName : null,
@@ -372,7 +374,7 @@ namespace PokemonGo_UWP.Utils
         /// <returns>true if login worked</returns>
         public static async Task<bool> DoPtcLogin(string username, string password)
         {
-            _clientSettings = new Settings
+            _clientSettings = new Settings.Settings
             {
                 PtcUsername = username,
                 PtcPassword = password,
@@ -400,7 +402,7 @@ namespace PokemonGo_UWP.Utils
         /// <returns>true if login worked</returns>
         public static async Task<bool> DoGoogleLogin(string email, string password)
         {
-            _clientSettings = new Settings
+            _clientSettings = new Settings.Settings
             {
                 GoogleUsername = email,
                 GooglePassword = password,

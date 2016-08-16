@@ -11,6 +11,7 @@ using Template10.Mvvm;
 using Template10.Services.NavigationService;
 using Windows.UI.Xaml.Controls;
 using Newtonsoft.Json;
+using PokemonGo_UWP.Utils.Achievements;
 using PokemonGo_UWP.Views;
 using Template10.Common;
 

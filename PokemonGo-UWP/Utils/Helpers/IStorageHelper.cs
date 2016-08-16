@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
-namespace Q42.WinRT.Storage
+namespace PokemonGo_UWP.Utils.Helpers
 {
     /// <summary>
     /// StorageHelper interface

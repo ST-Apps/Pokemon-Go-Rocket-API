@@ -9,6 +9,8 @@ using PokemonGo.RocketAPI;
 using PokemonGo.RocketAPI.Extensions;
 using PokemonGo_UWP.Entities;
 using PokemonGo_UWP.Utils;
+using PokemonGo_UWP.Utils.Game;
+using PokemonGo_UWP.Utils.Helpers;
 using PokemonGo_UWP.Views;
 using POGOProtos.Inventory.Item;
 using POGOProtos.Networking.Responses;

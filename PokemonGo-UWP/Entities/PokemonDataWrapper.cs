@@ -1,4 +1,5 @@
 ﻿using PokemonGo_UWP.Utils;
+using PokemonGo_UWP.Utils.Helpers;
 using PokemonGo_UWP.Views;
 using POGOProtos.Data;
 using POGOProtos.Data.Player;

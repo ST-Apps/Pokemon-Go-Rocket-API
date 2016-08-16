@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 using Windows.Storage;
-using System.Xml.Serialization;
-using System.IO;
-using System.Text;
-using Windows.Storage.Streams;
+using Newtonsoft.Json;
 
 #if WINDOWS_PHONE
 using Q42.WinRT.Phone;
 #endif
 
-namespace Q42.WinRT.Storage
+namespace PokemonGo_UWP.Utils.Helpers
 {
     /// <summary>
     /// Possible storage locations
