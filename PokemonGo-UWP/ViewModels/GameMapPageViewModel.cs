@@ -57,19 +57,19 @@ namespace PokemonGo_UWP.ViewModels
                     // App just started, so we get GPS access and eventually initialize the client
                     await StartGpsDataService();
                     await UpdatePlayerData(true);
-                    await GameClient.ToggleUpdateTimer();
+                    GameClient.ToggleUpdateTimer();
                     break;
                 case GameMapNavigationModes.SettingsUpdate:
                     // We navigated back from Settings page after changing the Map provider, but this is managed in the page itself
                     break;
                 case GameMapNavigationModes.PokestopUpdate:
                     // We came here after the catching page so we need to restart map update timer and update player data. We also check for level up.
-                    await GameClient.ToggleUpdateTimer();
+                    GameClient.ToggleUpdateTimer();
                     await UpdatePlayerData(true);
                     break;
                 case GameMapNavigationModes.PokemonUpdate:
                     // As above
-                    await GameClient.ToggleUpdateTimer();
+                    GameClient.ToggleUpdateTimer();
                     await UpdatePlayerData(true);
                     break;
                 default:

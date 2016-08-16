@@ -24,16 +24,17 @@ namespace PokemonGo_UWP.Entities
         /// <summary>
         /// HACK - this should help updating pokestop icon on the map by binding to this
         /// </summary>
-        public FortDataStatus FortDataStatus {
+        public FortDataStatus FortDataStatus
+        {
             get
             {
                 var distance = GeoHelper.Distance(Geoposition, GameClient.Geoposition.Coordinate.Point);
                 FortDataStatus retVal = FortDataStatus.Opened;
 
                 if (distance > GameClient.GameSetting.FortSettings.InteractionRangeMeters)
-                    retVal =  FortDataStatus.Closed;
+                    retVal = FortDataStatus.Closed;
 
-                if(CooldownCompleteTimestampMs > DateTime.UtcNow.ToUnixTime())
+                if (CooldownCompleteTimestampMs > DateTime.UtcNow.ToUnixTime())
                     retVal |= FortDataStatus.Cooldown;
 
                 return retVal;
@@ -44,7 +45,7 @@ namespace PokemonGo_UWP.Entities
         {
             _fortData = fortData;
             Geoposition =
-                new Geopoint(new BasicGeoposition {Latitude = _fortData.Latitude, Longitude = _fortData.Longitude});
+                new Geopoint(new BasicGeoposition { Latitude = _fortData.Latitude, Longitude = _fortData.Longitude });
         }
 
         /// <summary>
@@ -58,11 +59,11 @@ namespace PokemonGo_UWP.Entities
         ///     the actual capture method.
         /// </summary>
         public DelegateCommand TrySearchPokestop => _trySearchPokestop ?? (
-            _trySearchPokestop = new DelegateCommand(async () =>
+            _trySearchPokestop = new DelegateCommand(() =>
             {
                 NavigationHelper.NavigationState["CurrentPokestop"] = this;
                 // Disable map update
-                await GameClient.ToggleUpdateTimer(false);
+                GameClient.ToggleUpdateTimer(false);
                 BootStrapper.Current.NavigationService.Navigate(typeof(SearchPokestopPage));
             }, () => true)
             );
