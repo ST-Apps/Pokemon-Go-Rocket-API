@@ -592,6 +592,7 @@
     <Compile Include="Utils\Helpers\GeoHelper.cs" />
     <Compile Include="Utils\Helpers\IStorageHelper.cs" />
     <Compile Include="Utils\Helpers\LiveTileHelper.cs" />
+    <Compile Include="Utils\Helpers\GeoHelper.сѕ" />
     <Compile Include="Utils\Helpers\LiveTileModes.cs" />
     <Compile Include="Utils\Helpers\LocalCacheHelper.cs" />
     <Compile Include="Utils\Helpers\StorageHelper.cs" />
