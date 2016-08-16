@@ -100,4 +100,37 @@
   <data name="IncubatorsTextBlock.Text" xml:space="preserve">
     <value>INCUBATRICI</value>
   </data>
+  <data name="HpTextBlock.Text" xml:space="preserve">
+    <value>PS </value>
+  </data>
+  <data name="TypeTextBlock.Text" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="WeightTextBlock.Text" xml:space="preserve">
+    <value>Peso</value>
+  </data>
+  <data name="HeightTextBlock.Text" xml:space="preserve">
+    <value>Altezza</value>
+  </data>
+  <data name="TransferButton.Content" xml:space="preserve">
+    <value>TRASFERISCI</value>
+  </data>
+  <data name="PokedexCaught.Text" xml:space="preserve">
+    <value>Catturati:</value>
+  </data>
+  <data name="PokedexEvolutions.Text" xml:space="preserve">
+    <value>Evoluzioni</value>
+  </data>
+  <data name="PokedexPokemonHeight.Text" xml:space="preserve">
+    <value>Altezza:</value>
+  </data>
+  <data name="PokedexPokemonType.Text" xml:space="preserve">
+    <value>Tipo:</value>
+  </data>
+  <data name="PokedexPokemonWeight.Text" xml:space="preserve">
+    <value>Peso:</value>
+  </data>
+  <data name="PokedexSeen.Text" xml:space="preserve">
+    <value>Visti:</value>
+  </data>
 </root>

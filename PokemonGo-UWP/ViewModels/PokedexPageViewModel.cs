@@ -80,17 +80,14 @@ namespace PokemonGo_UWP.ViewModels
             _closeCommand ??
             (_closeCommand = new DelegateCommand(() =>
                 {
-                    if (IsMoveOpen)
-                        IsMoveOpen = false;
-                    else if (IsPokemonDetailsOpen)
+                    if (IsPokemonDetailsOpen)
                         IsPokemonDetailsOpen = false;
                     else
                         NavigationService.Navigate(typeof(GameMapPage));
                 }, () => true)
             );
-        private bool _moveOpen, _pokemonDetailsOpen;
-        public bool IsMoveOpen { get { return _moveOpen; } set { Set(ref _moveOpen, value); } }
-        public bool IsPokemonDetailsOpen { get { return _pokemonDetailsOpen; } set { Debug.WriteLine("IsPokemonDetailsOpen = "+value); Set(ref _pokemonDetailsOpen, value); } }
+        private bool _pokemonDetailsOpen;
+        public bool IsPokemonDetailsOpen { get { return _pokemonDetailsOpen; } set { Set(ref _pokemonDetailsOpen, value); } }
         #endregion
         private KeyValuePair<PokemonId, PokedexEntry> _selectedPokedex;
         public KeyValuePair<PokemonId, PokedexEntry> SelectedPokedexEntry
@@ -98,8 +95,11 @@ namespace PokemonGo_UWP.ViewModels
             get { return _selectedPokedex; }
             set
             {
+                if (IsPokemonDetailsOpen && value.Key == _selectedPokedex.Key)
+                    return;
                 Set(ref _selectedPokedex, value);
                 PokemonDetails = GameClient.GetExtraDataForPokemon(value.Key);
+                PopulateEvolutions();
             }
         }
         private PokemonSettings _pokemonDetails;
@@ -117,5 +117,30 @@ namespace PokemonGo_UWP.ViewModels
                     (x) => { return true; }
                 )
             );
+        public ObservableCollection<KeyValuePair<PokemonId, PokedexEntry>> PokemonEvolutions { get; } =
+            new ObservableCollection<KeyValuePair<PokemonId, PokedexEntry>>();
+        private void PopulateEvolutions()
+        {
+            PokemonEvolutions.Clear();
+            PokemonId InitPokemon = SelectedPokedexEntry.Key;
+            PokemonSettings CurrPokemon = PokemonDetails;
+            PokemonEvolutions.Add(new KeyValuePair<PokemonId, PokedexEntry>(InitPokemon, GetPokedexEntry(InitPokemon)));
+            while (CurrPokemon.ParentPokemonId != PokemonId.Missingno)
+            {
+                PokemonEvolutions.Insert(0, new KeyValuePair<PokemonId, PokedexEntry>(CurrPokemon.ParentPokemonId, GetPokedexEntry(CurrPokemon.ParentPokemonId)));
+                CurrPokemon = GameClient.GetExtraDataForPokemon(CurrPokemon.ParentPokemonId);
+            }
+            CurrPokemon = PokemonDetails;
+            while(CurrPokemon.EvolutionIds.Count > 0)
+            {
+                foreach (var ev in CurrPokemon.EvolutionIds) //for Eevee
+                    PokemonEvolutions.Add(new KeyValuePair<PokemonId, PokedexEntry>(ev, GetPokedexEntry(ev)));
+                CurrPokemon = GameClient.GetExtraDataForPokemon(CurrPokemon.EvolutionIds.ElementAt(0));
+            }
+        }
+        private PokedexEntry GetPokedexEntry(PokemonId pokemon)
+        {
+            return PokemonFoundAndSeen.Where(x => x.Key == pokemon).ElementAt(0).Value;
+        }
     }
 }

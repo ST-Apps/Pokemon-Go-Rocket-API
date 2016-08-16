@@ -595,11 +595,11 @@ Apri pagina con il file di installazione per l'installazione manuale?</target>
         </trans-unit>
         <trans-unit id="HpTextBlock.Text" translate="yes" xml:space="preserve">
           <source>HP </source>
-          <target state="new">HP </target>
+          <target state="translated">PS </target>
         </trans-unit>
         <trans-unit id="TypeTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Type</source>
-          <target state="new">Type</target>
+          <target state="translated">Tipo</target>
         </trans-unit>
         <trans-unit id="KgTextBlock.Text" translate="yes" xml:space="preserve">
           <source>kg</source>
@@ -607,11 +607,11 @@ Apri pagina con il file di installazione per l'installazione manuale?</target>
         </trans-unit>
         <trans-unit id="WeightTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Weight</source>
-          <target state="new">Weight</target>
+          <target state="translated">Peso</target>
         </trans-unit>
         <trans-unit id="HeightTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Height</source>
-          <target state="new">Height</target>
+          <target state="translated">Altezza</target>
         </trans-unit>
         <trans-unit id="MTextBlock.Text" translate="yes" xml:space="preserve">
           <source>m</source>
@@ -636,11 +636,35 @@ Apri pagina con il file di installazione per l'installazione manuale?</target>
         </trans-unit>
         <trans-unit id="TransferButton.Content" translate="yes" xml:space="preserve">
           <source>TRANSFER</source>
-          <target state="new">TRANSFER</target>
+          <target state="translated">TRASFERISCI</target>
         </trans-unit>
         <trans-unit id="SettingsRememberMapZoomTextBlock" translate="yes" xml:space="preserve">
           <source>Remember Map Zoom</source>
           <target state="new">Remember Map Zoom</target>
+        </trans-unit>
+        <trans-unit id="PokedexCaught.Text" translate="yes" xml:space="preserve">
+          <source>Caught:</source>
+          <target state="translated">Catturati:</target>
+        </trans-unit>
+        <trans-unit id="PokedexEvolutions.Text" translate="yes" xml:space="preserve">
+          <source>Evolutions</source>
+          <target state="translated">Evoluzioni</target>
+        </trans-unit>
+        <trans-unit id="PokedexPokemonHeight.Text" translate="yes" xml:space="preserve">
+          <source>Height:</source>
+          <target state="translated">Altezza:</target>
+        </trans-unit>
+        <trans-unit id="PokedexPokemonType.Text" translate="yes" xml:space="preserve">
+          <source>Type:</source>
+          <target state="translated">Tipo:</target>
+        </trans-unit>
+        <trans-unit id="PokedexPokemonWeight.Text" translate="yes" xml:space="preserve">
+          <source>Weight:</source>
+          <target state="translated">Peso:</target>
+        </trans-unit>
+        <trans-unit id="PokedexSeen.Text" translate="yes" xml:space="preserve">
+          <source>Seen:</source>
+          <target state="translated">Visti:</target>
         </trans-unit>
       </group>
     </body>

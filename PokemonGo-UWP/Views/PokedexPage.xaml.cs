@@ -30,10 +30,19 @@ namespace PokemonGo_UWP.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             SystemNavigationManager.GetForCurrentView().BackRequested += PokedexPage_BackRequested;
+            ViewModel.PropertyChanged += ViewModel_PropertyChanged;
         }
+
+        private void ViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            if(e.PropertyName.CompareTo(nameof(ViewModel.SelectedPokedexEntry)) == 0)
+                scrollPokedexEntry.ChangeView(0, 0, scrollPokedexEntry.ZoomFactor);
+        }
+
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
             SystemNavigationManager.GetForCurrentView().BackRequested -= PokedexPage_BackRequested;
+            ViewModel.PropertyChanged -= ViewModel_PropertyChanged;
         }
 
         private void PokedexPage_BackRequested(object sender, BackRequestedEventArgs e)

@@ -409,6 +409,30 @@ Open page with installation files for manual install?</source>
           <source>Remember Map Zoom</source>
           <target state="new">Remember Map Zoom</target>
         </trans-unit>
+        <trans-unit id="PokedexCaught.Text" translate="yes" xml:space="preserve">
+          <source>Caught:</source>
+          <target state="new">Caught:</target>
+        </trans-unit>
+        <trans-unit id="PokedexEvolutions.Text" translate="yes" xml:space="preserve">
+          <source>Evolutions</source>
+          <target state="new">Evolutions</target>
+        </trans-unit>
+        <trans-unit id="PokedexPokemonHeight.Text" translate="yes" xml:space="preserve">
+          <source>Height:</source>
+          <target state="new">Height:</target>
+        </trans-unit>
+        <trans-unit id="PokedexPokemonType.Text" translate="yes" xml:space="preserve">
+          <source>Type:</source>
+          <target state="new">Type:</target>
+        </trans-unit>
+        <trans-unit id="PokedexPokemonWeight.Text" translate="yes" xml:space="preserve">
+          <source>Weight:</source>
+          <target state="new">Weight:</target>
+        </trans-unit>
+        <trans-unit id="PokedexSeen.Text" translate="yes" xml:space="preserve">
+          <source>Seen:</source>
+          <target state="new">Seen:</target>
+        </trans-unit>
       </group>
     </body>
   </file>
