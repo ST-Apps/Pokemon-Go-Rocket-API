@@ -96,4 +96,88 @@
   <data name="Water" xml:space="preserve">
     <value>泳褲男</value>
   </data>
+  <data name="BadgeBattleAttackWonDescription" xml:space="preserve">
+    <value>贏了 {0} 次道館挑戰</value>
+  </data>
+  <data name="BadgeBattleTrainingWonDescription" xml:space="preserve">
+    <value>贏了 {0} 次道館切磋</value>
+  </data>
+  <data name="BadgeBigMagikarpDescription" xml:space="preserve">
+    <value>捕捉了 {0} 隻精靈鯉魚王</value>
+  </data>
+  <data name="BadgeCaptureTotalDescription" xml:space="preserve">
+    <value>捕捉了 {0} 隻精靈寶可夢</value>
+  </data>
+  <data name="BadgeEvolvedTotalDescription" xml:space="preserve">
+    <value>進化了 [x] 隻精靈寶可夢</value>
+  </data>
+  <data name="BadgeHatchedTotalDescription" xml:space="preserve">
+    <value>孵化了 {x} 隻精靈寶可夢</value>
+  </data>
+  <data name="BadgePikachuDescription" xml:space="preserve">
+    <value>捕捉 {0} 隻皮卡丘</value>
+  </data>
+  <data name="BadgePokedexEntriesDescription" xml:space="preserve">
+    <value>在圖鑑裡登錄 {0} 隻精靈寶可夢</value>
+  </data>
+  <data name="BadgePokestopsVisitedDescription" xml:space="preserve">
+    <value>到過 {0} 個補給站</value>
+  </data>
+  <data name="BadgeSmallRattataDescription" xml:space="preserve">
+    <value>捕捉了 {0} 隻小拉達</value>
+  </data>
+  <data name="BadgeTravelKmDescription" xml:space="preserve">
+    <value>走了 {0} 公里</value>
+  </data>
+  <data name="BugDescription" xml:space="preserve">
+    <value>捕捉了 {0} 隻蟲系精靈寶可夢</value>
+  </data>
+  <data name="DragonDescription" xml:space="preserve">
+    <value>捕捉了 {0} 隻龍系精靈寶可夢</value>
+  </data>
+  <data name="ElectricDescription" xml:space="preserve">
+    <value>捕捉了 {0} 隻電系精靈寶可夢</value>
+  </data>
+  <data name="FairyDescription" xml:space="preserve">
+    <value>捕捉了 {0} 隻妖精系精靈寶可夢</value>
+  </data>
+  <data name="FightingDescription" xml:space="preserve">
+    <value>捕捉了 {0} 隻飛行系精靈寶可夢</value>
+  </data>
+  <data name="FireDescription" xml:space="preserve">
+    <value>捕捉了 {0} 隻火系精靈寶可夢</value>
+  </data>
+  <data name="FlyingDescription" xml:space="preserve">
+    <value>捕捉了 {0} 隻飛行系精靈寶可夢</value>
+  </data>
+  <data name="GhostDescription" xml:space="preserve">
+    <value>捕捉了 {0} 隻鬼系精靈寶可夢</value>
+  </data>
+  <data name="GrassDescription" xml:space="preserve">
+    <value>捕捉了 {0} 隻草系精靈寶可夢</value>
+  </data>
+  <data name="GroundDescription" xml:space="preserve">
+    <value>捕捉了 {0} 隻地面系精靈寶可夢</value>
+  </data>
+  <data name="IceDescription" xml:space="preserve">
+    <value>捕捉了 {0} 隻冰系精靈寶可夢</value>
+  </data>
+  <data name="NormalDescription" xml:space="preserve">
+    <value>捕捉了 {0} 隻一般系精靈寶可夢</value>
+  </data>
+  <data name="PoisonDescription" xml:space="preserve">
+    <value>捕捉了 {0} 隻毒系精靈寶可夢</value>
+  </data>
+  <data name="PsychicDescription" xml:space="preserve">
+    <value>捕捉了 {0} 隻超能力系精靈寶可夢</value>
+  </data>
+  <data name="RockDescription" xml:space="preserve">
+    <value>捕捉了 {0} 隻岩石系精靈寶可夢</value>
+  </data>
+  <data name="SteelDescription" xml:space="preserve">
+    <value>捕捉了 {0} 隻鋼系精靈寶可夢</value>
+  </data>
+  <data name="WaterDescription" xml:space="preserve">
+    <value>捕捉了 {0} 隻水系精靈寶可夢</value>
+  </data>
 </root>

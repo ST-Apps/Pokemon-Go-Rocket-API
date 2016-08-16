@@ -127,6 +127,7 @@ namespace PokemonGo_UWP.ViewModels
 
         private void ReadPlayerStatsValues()
         {
+            Achievements.Clear();
             Achievements.Add(new KeyValuePair<AchievementType, object>(AchievementType.Jogger, PlayerStats.KmWalked));
             Achievements.Add(new KeyValuePair<AchievementType, object>(AchievementType.Kanto,
                 PlayerStats.UniquePokedexEntries));

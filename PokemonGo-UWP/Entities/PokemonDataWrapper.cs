@@ -23,6 +23,11 @@ namespace PokemonGo_UWP.Entities
         public PokemonData WrappedData { get; }
 
         /// <summary>
+        /// The file name for this Pokemen, located in /Assets/Pokemons
+        /// </summary>
+        public string ImageFileName => $"{(int)PokemonId}.png";
+
+        /// <summary>
         ///     Navigate to detail page for the selected egg
         /// </summary>
         public DelegateCommand GotoEggDetailsCommand => _gotoEggDetailsCommand ?? (

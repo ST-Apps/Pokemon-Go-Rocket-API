@@ -52,6 +52,9 @@
   <data name="MetalClaw" xml:space="preserve">
     <value>Griffe Acier</value>
   </data>
+  <data name="MoveUnset" xml:space="preserve">
+    <value>Mouvement non définit</value>
+  </data>
   <data name="Pound" xml:space="preserve">
     <value>Écras'Face</value>
   </data>
@@ -529,10 +532,10 @@
     <value>Fouet Lianes</value>
   </data>
   <data name="WaterGunFast" xml:space="preserve">
-    <value>Pistolet à eau</value>
+    <value>Pistolet à O</value>
   </data>
   <data name="WaterGunFastBlastoise" xml:space="preserve">
-    <value>Pistolet à eau</value>
+    <value>Pistolet à O</value>
   </data>
   <data name="WaterPulse" xml:space="preserve">
     <value>Vibraqua</value>

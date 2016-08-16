@@ -47,6 +47,13 @@
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="ErrorMessageBorder">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
         </Storyboard>
 
     </Page.Resources>
@@ -185,7 +192,7 @@
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <Image Grid.Column="0"
-                                   Source="{Binding Converter={StaticResource ItemAwardToPokemonSpriteConverter}}"
+                                   Source="{Binding Converter={StaticResource ItemToItemIconConverter}}"
                                    Height="50"
                                    Stretch="Uniform"
                                    VerticalAlignment="Center"

@@ -231,8 +231,6 @@ namespace PokemonGo_UWP.ViewModels
                     case LevelUpRewardsResponse.Types.Result.Success:
                         LevelUpRewardsAwarded?.Invoke(this, null);
                         break;
-                    default:
-                        throw new ArgumentOutOfRangeException();
                 }
             }
         }
@@ -260,6 +258,18 @@ namespace PokemonGo_UWP.ViewModels
                 _gotoPokemonInventoryPage ??
                 (_gotoPokemonInventoryPage =
                     new DelegateCommand(() => { NavigationService.Navigate(typeof(PokemonInventoryPage), true); }));
+
+        #endregion
+
+        #region Items
+
+        private DelegateCommand _gotoItemsInventoryPage;
+
+        public DelegateCommand GotoItemsInventoryPageCommand
+            =>
+                _gotoItemsInventoryPage ??
+                (_gotoItemsInventoryPage =
+                    new DelegateCommand(() => { NavigationService.Navigate(typeof(ItemsInventoryPage), true); }));
 
         #endregion
 

@@ -18,57 +18,78 @@
   <data name="DateTimeFormat" xml:space="preserve">
     <value>dd.MM.yyyy hh:mm tt</value>
   </data>
+  <data name="PokemonFledText" xml:space="preserve">
+    <value>{0} fugiu</value>
+  </data>
   <data name="GettingGpsSignalText" xml:space="preserve">
-    <value>A procurar GPS...</value>
+    <value>A procurar sinal do GPS...</value>
   </data>
   <data name="GettingUserDataText" xml:space="preserve">
-    <value>A obter dados de utilizador...</value>
+    <value>A obter dados do utilizador...</value>
   </data>
   <data name="GoogleErrorText" xml:space="preserve">
-    <value>Google retornou o erro:</value>
+    <value>Google retornou um erro: </value>
   </data>
   <data name="GoogleNotRespondingText" xml:space="preserve">
-    <value>Google não está a responder, tenta outra vez.</value>
+    <value>Google não responde, tente novamente mais tarde.</value>
+  </data>
+  <data name="LoadingEncounterText" xml:space="preserve">
+    <value>A carregar encontro com {0}</value>
   </data>
   <data name="LoggingInText" xml:space="preserve">
-    <value>A iniciar sessão...</value>
+    <value>A fazer login...</value>
   </data>
   <data name="LoginFailedText" xml:space="preserve">
-    <value>Não conseguimos iniciar sessão, tenta outra vez.</value>
+    <value>Login falhou, por favor tente novamente.</value>
   </data>
   <data name="NoText" xml:space="preserve">
     <value>Não</value>
   </data>
   <data name="NoGpsPermissionsText" xml:space="preserve">
-    <value>Precisamos de autorização para usar a sua localização, por favor ative-a e tente outra vez.</value>
+    <value>Precisamos de permissões de GPS para correr o jogo, por favor ative-o e tente novamente.</value>
   </data>
   <data name="PokemonRanAwayText" xml:space="preserve">
-    <value>Pokemon fugiu :(</value>
+    <value>Peço desculpa, o pokemon fugiu :(</value>
   </data>
   <data name="PtcDownText" xml:space="preserve">
-    <value>PTC está em baixo, tenta depois</value>
+    <value>O servidor PTC encontra-se provavelmente em baixo, por favor tente novamente mais tarde.</value>
+  </data>
+  <data name="SomethingWentWrongText" xml:space="preserve">
+    <value>Algo correu mal e a aplicação pode estar instável. Quer sair e tentar de novo?</value>
+  </data>
+  <data name="TimeFormat" xml:space="preserve">
+    <value>hh:mm tt</value>
   </data>
   <data name="UpdateDownloadingText" xml:space="preserve">
-    <value>A fazer download de atualizações{0}</value>
+    <value>Descarregando atualização {0}</value>
   </data>
   <data name="UpdatedVersionText" xml:space="preserve">
-    <value>Uma nova versão {0} está disponivel. Quer atualizar?
+    <value>Uma nova versão {0} está disponível. Pretende atualizar?
 {1}</value>
   </data>
   <data name="UpdateFailedText" xml:space="preserve">
-    <value>Falha na atualização : {0}
-Quer abrir a página com os ficheiros para uma atualização manual?</value>
+    <value>Falha na atualização: {0}
+Abrir a página com os arquivos de instalação para instalação manual?</value>
   </data>
   <data name="UpdateInstallingText" xml:space="preserve">
-    <value>A instalar atualização, aplicação a reiniciar</value>
+    <value>A instalar atualizações, a aplicação vai reiniciar...</value>
   </data>
   <data name="WrongUsernameText" xml:space="preserve">
-    <value>Username/password errados ou servidor ofline, tenta outra vez.</value>
+    <value>Dados de Nome de utilizador/Password incorretos ou o servidor encontra-se offline, por favor tente novamente.</value>
   </data>
   <data name="YesText" xml:space="preserve">
     <value>Sim</value>
   </data>
+  <data name="InstinctTeamText" xml:space="preserve">
+    <value>Instinct</value>
+  </data>
   <data name="NoTeamText" xml:space="preserve">
     <value>Sem equipa</value>
+  </data>
+  <data name="ValorTeamText" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="MysticTeamText" xml:space="preserve">
+    <value>Mystic</value>
   </data>
 </root>

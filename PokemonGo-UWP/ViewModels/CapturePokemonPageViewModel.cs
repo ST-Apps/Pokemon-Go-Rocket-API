@@ -226,8 +226,12 @@ namespace PokemonGo_UWP.ViewModels
         private void SelectStartingBall()
         {
             // Set default item (switch to other balls if user has none)            
-            SelectedCaptureItem = ItemsInventory.First(item => item.ItemId == ItemId.ItemPokeBall);
-            while (SelectedCaptureItem.Count == 0)
+            SelectedCaptureItem = ItemsInventory.First(item => item.ItemId == ItemId.ItemPokeBall) ?? new ItemData
+            {
+                Count = 0,
+                ItemId = ItemId.ItemPokeBall
+            };
+            while (SelectedCaptureItem != null && SelectedCaptureItem.Count == 0)
             {
                 switch (SelectedCaptureItem.ItemId)
                 {
@@ -244,8 +248,12 @@ namespace PokemonGo_UWP.ViewModels
                         SelectedCaptureItem = ItemsInventory.First(item => item.ItemId == ItemId.ItemMasterBall);
                         break;
                     case ItemId.ItemMasterBall:
-                        // User has no left balls, choose Pokeball to stop him from trying to capture
-                        SelectedCaptureItem = ItemsInventory.First(item => item.ItemId == ItemId.ItemPokeBall);
+                        // User has no left balls, choose a non-existing Pokeball to stop him from trying to capture
+                        SelectedCaptureItem = new ItemData
+                        {
+                            Count = 0,
+                            ItemId = ItemId.ItemPokeBall
+                        };
                         return;
                 }
             }
@@ -286,9 +294,14 @@ namespace PokemonGo_UWP.ViewModels
         /// <returns></returns>
         private async Task ThrowPokeball(bool hitPokemon)
         {
+            // We use to simulate a 5 second wait to get animation going
+            // If server takes too much to reply then we don't use the delay
+            var requestTime = DateTime.Now;
             var caughtPokemonResponse =
                 await GameClient.CatchPokemon(CurrentPokemon.EncounterId, CurrentPokemon.SpawnpointId,
                         SelectedCaptureItem.ItemId, hitPokemon);
+            var responseDelay = DateTime.Now - requestTime;
+            if (responseDelay.TotalSeconds < 5) await Task.Delay(TimeSpan.FromSeconds(5 - (int)responseDelay.TotalSeconds));
             var nearbyPokemon = GameClient.NearbyPokemons.FirstOrDefault(pokemon => pokemon.EncounterId == CurrentPokemon.EncounterId);
 
             switch (caughtPokemonResponse.Status)
@@ -324,6 +337,7 @@ namespace PokemonGo_UWP.ViewModels
             }
             // We always need to update the inventory
             await GameClient.UpdateInventory();
+            SelectStartingBall();
         }
 
         /// <summary>

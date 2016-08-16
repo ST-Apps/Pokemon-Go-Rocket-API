@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:utils="using:PokemonGo_UWP.Utils"
     xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
     x:Name="Page"
     mc:Ignorable="d">
@@ -132,24 +133,75 @@
                 <TextBlock Grid.Row="6"
                            Grid.Column="0"
                            x:Uid="SettingsLiveTileTextBlock"
-                           Text="Enable Live Tile"
+                           Text="Live Tile Mode"
                            Style="{StaticResource TextSettingsTitle}"
                            VerticalAlignment="Center"
                            Margin="15,15,15,25" />
+               
+                <VariableSizedWrapGrid Grid.Row="7"
+                                       Grid.ColumnSpan="2"
+                                       Orientation="Horizontal"
+                                       MaximumRowsOrColumns="5"
+                                       ItemHeight="140"
+                                       ItemWidth="160"
+                                       VerticalAlignment="Top"
+                                       HorizontalAlignment="Center">
+                    <Button Grid.Row="0"
+                            Grid.Column="0"
+                            HorizontalAlignment="Center"
+                            Margin="10,0"
+                            Command="{Binding LiveTileSelectionCommand}" CommandParameter="0">
+                        <Image Source="/Assets/LiveTiles/Normal/Square150x150Logo.scale-200.png" 
+                               Width="120" 
+                               Height="120" />
+                    </Button>
+                    <Button Grid.Row="0"
+                            Grid.Column="1"
+                            HorizontalAlignment="Center"
+                            Margin="10,0"
+                            Command="{Binding LiveTileSelectionCommand}" CommandParameter="1">
+                        <Image Source="/Assets/LiveTiles/Transparent/Square150x150Logo.scale-200.png" 
+                               Width="120" 
+                               Height="120" />
+                    </Button>
+                    <Button Grid.Row="0"
+                            Grid.Column="1"
+                            HorizontalAlignment="Center"
+                            Margin="10,0"
+                            Command="{Binding LiveTileSelectionCommand}" CommandParameter="2">
+                        <Image Source="../Assets/LiveTiles/Peek.gif" 
+                               Width="120" 
+                               Height="120" />
+                    </Button>
+                    <Button Grid.Row="1"
+                            Grid.Column="0"
+                            HorizontalAlignment="Center"
+                            Margin="10,0"
+                            Command="{Binding LiveTileSelectionCommand}" CommandParameter="3">
+                        <Image Source="../Assets/LiveTiles/People.gif" 
+                               Width="140" 
+                               Height="140"
+                               HorizontalAlignment="Center" 
+                               VerticalAlignment="Center" />
+                    </Button>
+                    <Button Grid.Row="1"
+                            Grid.Column="1"
+                            HorizontalAlignment="Center"
+                            Margin="10,0"
+                            Command="{Binding LiveTileSelectionCommand}" CommandParameter="4">
+                        <Image Source="../Assets/Square150x150Logo.scale-200.png" 
+                               Width="140"
+                               Height="140" />
+                    </Button>
+                </VariableSizedWrapGrid>
 
-                <CheckBox Grid.Row="6"
-                          Grid.Column="1"
-                          IsChecked="{Binding IsLiveTileEnabled, Mode=TwoWay}"
-                          Style="{StaticResource SettingsCheckbox}"
-                          Margin="0,0,15,10" />
-
-                <Border Grid.Row="7"
+                <Border Grid.Row="8"
                         Grid.ColumnSpan="2"
                         Background="#33ffffff"
                         Height="1"
-                        Margin="0,8,0,15" />
+                        Margin="0,24,0,15" />
 
-                <Button Grid.Row="8"
+                <Button Grid.Row="9"
                         Grid.ColumnSpan="2"
                         Command="{Binding DoPtcLogoutCommand}"
                         Style="{StaticResource ButtonNoStyle}">

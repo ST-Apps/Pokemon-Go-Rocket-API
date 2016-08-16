@@ -25,28 +25,28 @@
     <value>LOGIN con Account PTC</value>
   </data>
   <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
-    <value>Per effettuare il login è necessario inserire il tuo Username/Email e Password. Se non ti fidi, per favore, chiudi prima di procedere. Non siamo responsabili di nulla.</value>
+    <value>Per effettuare il login, inserisci Username/Email e Password. Se non ti fidi, per favore chiudila ora. Niantic potrebbe bannarti nell'utilizzo di quest'app. Usa a tuo rischio e pericolo.</value>
   </data>
   <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
     <value>nelle vicinanze</value>
   </data>
   <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
-    <value>Sei troppo lontano</value>
+    <value>QUESTO POKÉSTOP È TROPPO LONTANO</value>
   </data>
   <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
     <value>Password</value>
   </data>
   <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
-    <value>Nome utente/e-mail</value>
+    <value>Nome utente / e-mail</value>
   </data>
   <data name="ExperienceTextBlock.Text" xml:space="preserve">
-    <value>EXP</value>
+    <value>PE</value>
   </data>
   <data name="OkButton.Content" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="CpTextBlock.Text" xml:space="preserve">
-    <value>CP</value>
+    <value>PL</value>
   </data>
   <data name="EggsTextBlock.Text" xml:space="preserve">
     <value>UOVA</value>
@@ -77,16 +77,16 @@
     <comment>Watch out: there is a space after the #</comment>
   </data>
   <data name="SlashSpaceCpTextBlock.Text" xml:space="preserve">
-    <value>/ CP</value>
+    <value>/ PL</value>
   </data>
   <data name="SpaceXpTextBlock.Text" xml:space="preserve">
-    <value> EXP</value>
+    <value> PE</value>
   </data>
   <data name="TotalExperienceTextBlock.Text" xml:space="preserve">
     <value>TOTALE</value>
   </data>
   <data name="LevelUpTextBlock.Text" xml:space="preserve">
-    <value>Aumento di livello</value>
+    <value>Aumento di livello!</value>
   </data>
   <data name="LevelTextBlock.Text" xml:space="preserve">
     <value>Livello</value>

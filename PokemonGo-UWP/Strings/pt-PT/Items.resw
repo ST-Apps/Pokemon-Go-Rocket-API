@@ -12,26 +12,53 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="D_ItemGreatBall" xml:space="preserve">
+    <value>Dispositivo para capturar Pokémons selvagens. É atirado como uma bola sobre um Pokémon selvagem, encapsulando confortavelmente o seu alvo.</value>
+  </data>
   <data name="D_ItemIncenseCool" xml:space="preserve">
-    <value>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</value>
+    <value>Incenso com uma  misteriosa fragrância que atrai os Pokémon selvagens para a sua localização durante 30 minutos</value>
   </data>
   <data name="D_ItemIncenseFloral" xml:space="preserve">
-    <value>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</value>
+    <value>Incenso com uma  misteriosa fragrância que atrai os Pokémon selvagens para a sua localização durante 30 minutos</value>
   </data>
   <data name="D_ItemIncenseOrdinary" xml:space="preserve">
-    <value>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</value>
+    <value>Incenso com uma  misteriosa fragrância que atrai os Pokémon selvagens para a sua localização durante 30 minutos</value>
   </data>
   <data name="D_ItemIncenseSpicy" xml:space="preserve">
-    <value>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</value>
+    <value>Incenso com uma  misteriosa fragrância que atrai os Pokémon selvagens para a sua localização durante 30 minutos</value>
+  </data>
+  <data name="D_ItemIncubatorBasic" xml:space="preserve">
+    <value>Dispositivo que incuba um ovo enquanto você caminha, até que esteja pronto para eclodir.</value>
+  </data>
+  <data name="D_ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>Dispositivo que incuba um ovo enquanto você caminha, até que esteja pronto para eclodir.</value>
+  </data>
+  <data name="D_ItemMasterBall" xml:space="preserve">
+    <value>Dispositivo para capturar Pokémons selvagens. É atirado como uma bola sobre um Pokémon selvagem, encapsulando confortavelmente o seu alvo.</value>
+  </data>
+  <data name="D_ItemPokeBall" xml:space="preserve">
+    <value>Dispositivo para capturar Pokémons selvagens. É atirado como uma bola sobre um Pokémon selvagem, encapsulando confortavelmente o seu alvo.</value>
   </data>
   <data name="D_ItemPotion" xml:space="preserve">
-    <value>Um medicamento tipo spray para o tratamento de feridas. Restaura o HP de um Pokémon por 20 pontos.</value>
+    <value>Medicamento em formato Spray para o tratamento de feridas. Ele restaura 20 pontos do HP de um Pokémon.</value>
   </data>
   <data name="D_ItemRevive" xml:space="preserve">
-    <value>Um medicamento que pode reviver Pokémon desmaiado. Ele também restaura metade do HP máximo de um Pokémon desmaiado.</value>
+    <value>Medicamento que permite reviver Pokémons desmaiados. Também restaura metade do HP máximo de um Pokémon desmaiado.</value>
+  </data>
+  <data name="D_ItemUltraBall" xml:space="preserve">
+    <value>Dispositivo para capturar Pokémons selvagens. É atirado como uma bola sobre um Pokémon selvagem, encapsulando confortavelmente o seu alvo.</value>
+  </data>
+  <data name="ItemBlukBerry" xml:space="preserve">
+    <value>Baga Bluk</value>
   </data>
   <data name="ItemGreatBall" xml:space="preserve">
-    <value>Bola Grande</value>
+    <value>Super Bola</value>
+  </data>
+  <data name="ItemHyperPotion" xml:space="preserve">
+    <value>Hiper Poção</value>
+  </data>
+  <data name="ItemIncenseCool" xml:space="preserve">
+    <value>Incenso Fresco</value>
   </data>
   <data name="ItemIncenseFloral" xml:space="preserve">
     <value>Incenso Floral</value>
@@ -43,27 +70,72 @@
     <value>Incenso Picante</value>
   </data>
   <data name="ItemIncubatorBasic" xml:space="preserve">
-    <value>Incubadora básica</value>
+    <value>Incubadora Básica</value>
   </data>
   <data name="ItemIncubatorBasicUnlimited" xml:space="preserve">
-    <value>Incubador básico ilimitado</value>
+    <value>Incubadora Básica ilimitada</value>
+  </data>
+  <data name="ItemItemStorageUpgrade" xml:space="preserve">
+    <value>Melhoria do Armazenamento de Itens</value>
   </data>
   <data name="ItemLuckyEgg" xml:space="preserve">
-    <value>Ovo da sorte</value>
+    <value>Ovo da Sorte</value>
+  </data>
+  <data name="ItemMasterBall" xml:space="preserve">
+    <value>Bola Mestra</value>
+  </data>
+  <data name="ItemMaxPotion" xml:space="preserve">
+    <value>Poção Máxima</value>
+  </data>
+  <data name="ItemMaxRevive" xml:space="preserve">
+    <value>Reanimador Máximo</value>
+  </data>
+  <data name="ItemNanabBerry" xml:space="preserve">
+    <value>Baga Nabab</value>
+  </data>
+  <data name="ItemPinapBerry" xml:space="preserve">
+    <value>Baga Pinap</value>
+  </data>
+  <data name="ItemPokeBall" xml:space="preserve">
+    <value>Pokebola</value>
+  </data>
+  <data name="ItemPokemonStorageUpgrade" xml:space="preserve">
+    <value>Melhoria do armazenamento de Pokemons</value>
   </data>
   <data name="ItemPotion" xml:space="preserve">
     <value>Poção</value>
   </data>
+  <data name="ItemRazzBerry" xml:space="preserve">
+    <value>Baga Razz</value>
+  </data>
+  <data name="ItemRevive" xml:space="preserve">
+    <value>Reanimador</value>
+  </data>
   <data name="ItemSpecialCamera" xml:space="preserve">
-    <value>Câmera especial</value>
+    <value>Câmara Especial</value>
   </data>
   <data name="ItemSuperPotion" xml:space="preserve">
     <value>Super Poção</value>
+  </data>
+  <data name="ItemTroyDisk" xml:space="preserve">
+    <value>Troy Disk</value>
+  </data>
+  <data name="ItemUltraBall" xml:space="preserve">
+    <value>Ultra Bola</value>
   </data>
   <data name="ItemUnknown" xml:space="preserve">
     <value>Desconhecido</value>
   </data>
   <data name="ItemWeparBerry" xml:space="preserve">
-    <value>Wepar Berry</value>
+    <value>Baga Wepar</value>
+  </data>
+  <data name="ItemXAttack" xml:space="preserve">
+    <value>Ataque X</value>
+  </data>
+  <data name="ItemXDefense" xml:space="preserve">
+    <value>Defesa X</value>
+  </data>
+  <data name="ItemXMiracle" xml:space="preserve">
+    <value>Milagre X</value>
   </data>
 </root>

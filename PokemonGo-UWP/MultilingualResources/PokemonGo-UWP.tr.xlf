@@ -369,8 +369,8 @@ Elle yükleme için yükleme dosyaları sayfası açılsın mı?</target>
           <target state="new">Pokémon Caught</target>
         </trans-unit>
         <trans-unit id="ActivityCatchLegendPokemon" translate="yes" xml:space="preserve">
-          <source>Catch Legend Pokémon</source>
-          <target state="new">Catch Legend Pokémon</target>
+          <source>Catch Legendary Pokémon</source>
+          <target state="new">Catch Legendary Pokémon</target>
         </trans-unit>
         <trans-unit id="ActivityFleePokemon" translate="yes" xml:space="preserve">
           <source>Pokémon Fled</source>

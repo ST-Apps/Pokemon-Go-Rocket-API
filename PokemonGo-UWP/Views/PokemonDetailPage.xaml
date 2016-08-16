@@ -768,11 +768,13 @@
                                 </Grid>
 
                                 <maps:MapControl BusinessLandmarksVisible="False"
-                                                 Height="200"                                                 
-                                                 Margin="24"                                                 
+                                                 Height="200"
+                                                 Margin="24"
                                                  Center="{Binding CurrentPokemon.WrappedData, Converter={StaticResource PokemonDataToCapturedGepositionConverter}}"
                                                  LandmarksVisible="False"
                                                  ColorScheme="{ThemeResource MapColorScheme}"
+                                                 IsHitTestVisible="False"
+                                                 IsEnabled="False"
                                                  PanInteractionMode="Disabled"
                                                  ZoomInteractionMode="Disabled"
                                                  RotateInteractionMode="Disabled"
@@ -784,15 +786,22 @@
                                                  ZoomLevel="17"
                                                  x:Name="DetailMapControl">
 
-                                    <Ellipse maps:MapControl.Location="{Binding CurrentPokemon.WrappedData, Converter={StaticResource PokemonDataToCapturedGepositionConverter}}"
-                                             maps:MapControl.NormalizedAnchorPoint="0.5,0.5"
-                                             Stroke="White"
-                                             StrokeThickness="2"
-                                             Width="80"
-                                             Height="80"/>
-                                    
+                                    <Rectangle Height="200"
+                                               maps:MapControl.Location="{Binding CurrentPokemon.WrappedData, Converter={StaticResource PokemonDataToCapturedGepositionConverter}}"
+                                               maps:MapControl.NormalizedAnchorPoint="0.5,0.5"
+                                               Width="{x:Bind DetailMapControl.ActualWidth}"
+                                               Fill="Transparent" />
+
+                                    <Ellipse
+                                        maps:MapControl.Location="{Binding CurrentPokemon.WrappedData, Converter={StaticResource PokemonDataToCapturedGepositionConverter}}"
+                                        maps:MapControl.NormalizedAnchorPoint="0.5,0.5"
+                                        Stroke="White"
+                                        StrokeThickness="2"
+                                        Width="80"
+                                        Height="80" />
+
                                 </maps:MapControl>
-                                
+
                                 <MenuFlyoutSeparator />
 
                                 <!-- Transfer -->

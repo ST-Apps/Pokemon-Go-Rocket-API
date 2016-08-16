@@ -25,19 +25,19 @@
     <value>LOGIN mit PTC Account</value>
   </data>
   <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
-    <value>Um dich einzuloggen, musst du deinen Benutzername/eMail und Passwort eingeben. Wenn du der App nicht vertraust, solltest du sie jetzt schließen. Wir sind nicht für alles verantwortlich.</value>
+    <value>Um dich einzuloggen, musst du deinen Benutzernamen/E-Mail und Passwort eingeben. Wenn du der App nicht vertraust, solltest du sie jetzt schließen. Niantic kann dich für die Verwendung dieser App sperren. Verwendung auf eigene Gefahr.</value>
   </data>
   <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
     <value>in der Nähe</value>
   </data>
   <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
-    <value>Du bist zu weit entfernt.</value>
+    <value>Dieser Pokéstop ist zu weit entfernt.</value>
   </data>
   <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
     <value>Passwort</value>
   </data>
   <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
-    <value>Benutzername/Email</value>
+    <value>Benutzername / E-Mail</value>
   </data>
   <data name="ExperienceTextBlock.Text" xml:space="preserve">
     <value>EP</value>
@@ -102,5 +102,45 @@
   </data>
   <data name="IncubatorsTextBlock.Text" xml:space="preserve">
     <value>Brutmaschine</value>
+  </data>
+  <data name="SettingsUseNianticMapTextBlock.Text" xml:space="preserve">
+    <value>Verwende Niantic Karte</value>
+  </data>
+  <data name="HpTextBlock.Text" xml:space="preserve">
+    <value>KP</value>
+  </data>
+  <data name="TypeTextBlock.Text" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="KgTextBlock.Text" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="WeightTextBlock.Text" xml:space="preserve">
+    <value>Gewicht</value>
+  </data>
+  <data name="HeightTextBlock.Text" xml:space="preserve">
+    <value>Größe</value>
+  </data>
+  <data name="MTextBlock.Text" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="StardustTextBlock.Text" xml:space="preserve">
+    <value>STERNSTAUB</value>
+  </data>
+  <data name="CandyTextBlock.Text" xml:space="preserve">
+    <value>BONBON</value>
+    <comment>Watch out: space before the word!</comment>
+  </data>
+  <data name="EvolveButton.Content" xml:space="preserve">
+    <value>ENTWICKELN</value>
+  </data>
+  <data name="PowerUpButton.Content" xml:space="preserve">
+    <value>POWER UP</value>
+  </data>
+  <data name="TransferButton.Content" xml:space="preserve">
+    <value>TRANSFER</value>
+  </data>
+  <data name="SettingsRememberMapZoomTextBlock" xml:space="preserve">
+    <value>Speichere Karten Zoom</value>
   </data>
 </root>

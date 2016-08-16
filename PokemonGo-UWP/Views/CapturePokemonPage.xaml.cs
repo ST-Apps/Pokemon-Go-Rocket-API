@@ -86,15 +86,16 @@ namespace PokemonGo_UWP.Views
 
                 await PokeballTransform.Dispatcher.RunAsync(CoreDispatcherPriority.High, () =>
                 {
-                    PokeballTransform.TranslateX = PokeballCatchAnimationStartingTranslateX.Value = translateX;
-                    PokeballTransform.TranslateY = PokeballCatchAnimationStartingTranslateY.Value = translateY;
-                    PokeballTransform.ScaleX = PokeballCatchAnimationStartingScaleX.Value = scaleX;
-                    PokeballTransform.ScaleY = PokeballCatchAnimationStartingScaleY.Value = scaleY;
+                    PokeballTransform.TranslateX = translateX;
+                    PokeballTransform.TranslateY = translateY;
+                    PokeballTransform.ScaleX = scaleX;
+                    PokeballTransform.ScaleY = scaleY;
                     if (pokeballStopped)
                     {
                         if (pokemonHit)
                         {
-                            CatchSuccess.Begin();
+                            // TODO: il casino è qua, se parte l'animazione poi non funziona più il movimento
+                            CatchStarted.Begin();
                             ViewModel.UseSelectedCaptureItem.Execute(true);
                         }
                         else
@@ -194,14 +195,14 @@ namespace PokemonGo_UWP.Views
             ViewModel.CatchSuccess += GameManagerViewModelOnCatchSuccess;
             ViewModel.CatchEscape += GameManagerViewModelOnCatchEscape;
             ViewModel.CatchFlee += GameManagerViewModelOnCatchFlee;
-            // Add also handlers to enable the button once the animation is done                                    
+            // Add also handlers to enable the button once the animation is done  
             CatchEscape.Completed += (s, e) =>
             {
-                // Get ready for a new shot
-                PokeballTransform.TranslateX = InitItemX;
-                PokeballTransform.TranslateY = InitItemY;
+                PokeballTransform.TranslateX = 0;
+                PokeballTransform.TranslateY = 0;
                 PokeballTransform.ScaleX = 1;
                 PokeballTransform.ScaleY = 1;
+                LaunchPokeballButton.RenderTransform = PokeballTransform;
                 LaunchPokeballButton.IsEnabled = true;
             };
             CatchFlee.Completed += (s, e) =>
@@ -218,30 +219,26 @@ namespace PokemonGo_UWP.Views
             ViewModel.CatchFlee -= GameManagerViewModelOnCatchFlee;
         }
 
-        private async void GameManagerViewModelOnCatchEscape(object sender, EventArgs eventArgs)
-        {
-            //CatchEscape.Begin();            
-            //CatchSuccess.SkipToFill();                                       
-            CatchSuccess.AutoReverse = true;            
-            PokeballCatchAnimationStartingTranslateX.Value = PokeballTransform.TranslateX;
-            PokeballCatchAnimationStartingTranslateY.Value = PokeballTransform.TranslateY;
-            PokeballCatchAnimationStartingScaleX.Value = PokeballTransform.ScaleX;
-            PokeballCatchAnimationStartingScaleY.Value = PokeballTransform.ScaleY;
-            await Task.Delay(TimeSpan.FromSeconds(new Random().Next(1, 5)));
-            CatchSuccess.Begin();
+        private void GameManagerViewModelOnCatchEscape(object sender, EventArgs eventArgs)
+        {            
+            CatchStarted.Stop();            
             CatchEscape.Begin();
-            //TODO (from advancedrei): This storyboard needs to delay 3 seconds, then reverse the animation so the user can try again.
         }
 
         private void GameManagerViewModelOnCatchSuccess(object sender, EventArgs eventArgs)
-        {
-            LaunchPokeballButton.IsEnabled = false;
+        {            
+            CatchStarted.Stop();
             ShowCatchStatsModalStoryboard.Begin();
         }
 
         private void GameManagerViewModelOnCatchFlee(object sender, EventArgs eventArgs)
         {
-            CatchFlee.Begin();
+            CatchEscape.Completed += (s, e) =>
+            {
+                CatchFlee.Begin();
+            };
+            CatchStarted.Stop();
+            CatchEscape.Begin();
         }
 
 

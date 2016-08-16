@@ -15,8 +15,17 @@
   <data name="Bite" xml:space="preserve">
     <value>Biss</value>
   </data>
+  <data name="CrossChop" xml:space="preserve">
+    <value>Kreuzhieb</value>
+  </data>
+  <data name="DarkPulse" xml:space="preserve">
+    <value>Finsteraura</value>
+  </data>
   <data name="Dig" xml:space="preserve">
     <value>Schaufler</value>
+  </data>
+  <data name="DoubleSlap" xml:space="preserve">
+    <value>Duplexhieb</value>
   </data>
   <data name="Ember" xml:space="preserve">
     <value>Glut</value>
@@ -24,14 +33,38 @@
   <data name="Flamethrower" xml:space="preserve">
     <value>Flammenwurf</value>
   </data>
+  <data name="FlameWheel" xml:space="preserve">
+    <value>Flammenrad</value>
+  </data>
+  <data name="HyperBeam" xml:space="preserve">
+    <value>Hyperstrahl</value>
+  </data>
   <data name="Lick" xml:space="preserve">
     <value>Schlecker</value>
+  </data>
+  <data name="LowKick" xml:space="preserve">
+    <value>Fußkick</value>
   </data>
   <data name="Megahorn" xml:space="preserve">
     <value>Vielender</value>
   </data>
+  <data name="MetalClaw" xml:space="preserve">
+    <value>Metallklaue</value>
+  </data>
+  <data name="MoveUnset" xml:space="preserve">
+    <value>Attacke unbesetzt</value>
+  </data>
   <data name="Pound" xml:space="preserve">
     <value>Pfund</value>
+  </data>
+  <data name="PsychoCut" xml:space="preserve">
+    <value>Psychoklinge</value>
+  </data>
+  <data name="QuickAttack" xml:space="preserve">
+    <value>Ruckzuckhieb</value>
+  </data>
+  <data name="RazorLeaf" xml:space="preserve">
+    <value>Rasierblatt</value>
   </data>
   <data name="Scratch" xml:space="preserve">
     <value>Kratzer</value>
@@ -42,8 +75,29 @@
   <data name="Smog" xml:space="preserve">
     <value>Smog</value>
   </data>
+  <data name="SuckerPunch" xml:space="preserve">
+    <value>Tiefschlag</value>
+  </data>
   <data name="Tackle" xml:space="preserve">
     <value>Tackle</value>
+  </data>
+  <data name="TakeDown" xml:space="preserve">
+    <value>Bodycheck</value>
+  </data>
+  <data name="ThunderShock" xml:space="preserve">
+    <value>Donnerschock</value>
+  </data>
+  <data name="ViceGrip" xml:space="preserve">
+    <value>Klammer</value>
+  </data>
+  <data name="VineWhip" xml:space="preserve">
+    <value>Rankenhieb</value>
+  </data>
+  <data name="WaterGun" xml:space="preserve">
+    <value>Aquaknarre</value>
+  </data>
+  <data name="WingAttack" xml:space="preserve">
+    <value>Flügelschlag</value>
   </data>
   <data name="Wrap" xml:space="preserve">
     <value>Wickel</value>
@@ -54,41 +108,281 @@
   <data name="Acid" xml:space="preserve">
     <value>Säure</value>
   </data>
+  <data name="AcidFast" xml:space="preserve">
+    <value>Säure Schnell</value>
+  </data>
+  <data name="AerialAce" xml:space="preserve">
+    <value>Aero-Ass</value>
+  </data>
+  <data name="AirCutter" xml:space="preserve">
+    <value>Windschnitt</value>
+  </data>
+  <data name="AirSlash" xml:space="preserve">
+    <value>Luftschnitt</value>
+  </data>
+  <data name="AncientPower" xml:space="preserve">
+    <value>Antik-Kraft</value>
+  </data>
+  <data name="AquaJet" xml:space="preserve">
+    <value>Finte</value>
+  </data>
+  <data name="AquaTail" xml:space="preserve">
+    <value>Nassschweif</value>
+  </data>
   <data name="BiteFast" xml:space="preserve">
-    <value>Biss</value>
+    <value>Biss Schnell</value>
   </data>
   <data name="Blizzard" xml:space="preserve">
     <value>Blizzard</value>
   </data>
+  <data name="BodySlam" xml:space="preserve">
+    <value>Bodyslam</value>
+  </data>
+  <data name="BoneClub" xml:space="preserve">
+    <value>Knochenkeule</value>
+  </data>
+  <data name="BrickBreak" xml:space="preserve">
+    <value>Durchbruch</value>
+  </data>
   <data name="Brine" xml:space="preserve">
     <value>Lake</value>
+  </data>
+  <data name="BubbleBeam" xml:space="preserve">
+    <value>Blubbstrahl</value>
+  </data>
+  <data name="BubbleFast" xml:space="preserve">
+    <value>Blubber Schnell</value>
+  </data>
+  <data name="BugBite" xml:space="preserve">
+    <value>Käferbiss</value>
+  </data>
+  <data name="BugBiteFast" xml:space="preserve">
+    <value>Käferbiss Schnell</value>
+  </data>
+  <data name="BugBuzz" xml:space="preserve">
+    <value>Käfergebrumm</value>
+  </data>
+  <data name="Bulldoze" xml:space="preserve">
+    <value>Dampfwalze</value>
+  </data>
+  <data name="BulletPunch" xml:space="preserve">
+    <value>Patronenhieb</value>
+  </data>
+  <data name="BulletPunchFast" xml:space="preserve">
+    <value>Patronenhieb Schnell</value>
+  </data>
+  <data name="ConfusionFast" xml:space="preserve">
+    <value>Konfusion Schnell</value>
+  </data>
+  <data name="CrossPoison" xml:space="preserve">
+    <value>Giftstreich</value>
   </data>
   <data name="Cut" xml:space="preserve">
     <value>Zerschneider</value>
   </data>
   <data name="CutFast" xml:space="preserve">
-    <value>Zerschneider</value>
+    <value>Zerschneider Schnell</value>
+  </data>
+  <data name="DazzlingGleam" xml:space="preserve">
+    <value>Zauberschein</value>
+  </data>
+  <data name="DisarmingVoice" xml:space="preserve">
+    <value>Säuselstimme</value>
   </data>
   <data name="Discharge" xml:space="preserve">
     <value>Ladungsstoß</value>
   </data>
+  <data name="DragonBreath" xml:space="preserve">
+    <value>Feuerodem</value>
+  </data>
+  <data name="DragonBreathFast" xml:space="preserve">
+    <value>Feuerodem Schnell</value>
+  </data>
+  <data name="DragonClaw" xml:space="preserve">
+    <value>Drachenklaue</value>
+  </data>
+  <data name="DragonPulse" xml:space="preserve">
+    <value>Drachenpuls</value>
+  </data>
+  <data name="DrainingKiss" xml:space="preserve">
+    <value>Diebeskuss</value>
+  </data>
+  <data name="DrillPeck" xml:space="preserve">
+    <value>Bohrschnabel</value>
+  </data>
+  <data name="DrillRun" xml:space="preserve">
+    <value>Fußtritt</value>
+  </data>
   <data name="Earthquake" xml:space="preserve">
     <value>Erdbeben</value>
+  </data>
+  <data name="EmberFast" xml:space="preserve">
+    <value>Glut Schnell</value>
+  </data>
+  <data name="FeintAttackFast" xml:space="preserve">
+    <value>Finte Schnell</value>
+  </data>
+  <data name="FireBlast" xml:space="preserve">
+    <value>Finte</value>
+  </data>
+  <data name="FireFangFast" xml:space="preserve">
+    <value>Feuerzahn Schnell</value>
+  </data>
+  <data name="FirePunch" xml:space="preserve">
+    <value>Feuerschlag</value>
+  </data>
+  <data name="FlameBurst" xml:space="preserve">
+    <value>Funkenflug</value>
+  </data>
+  <data name="FlameCharge" xml:space="preserve">
+    <value>Nitroladung</value>
+  </data>
+  <data name="FlashCannon" xml:space="preserve">
+    <value>Lichtkanone</value>
+  </data>
+  <data name="FrostBreath" xml:space="preserve">
+    <value>Eisesodem</value>
+  </data>
+  <data name="FrostBreathFast" xml:space="preserve">
+    <value>Eisesodem Schnell</value>
+  </data>
+  <data name="FuryCutter" xml:space="preserve">
+    <value>Zornklinge</value>
+  </data>
+  <data name="FuryCutterFast" xml:space="preserve">
+    <value>Zornklinge Schnell</value>
+  </data>
+  <data name="GigaDrain" xml:space="preserve">
+    <value>Gigasauger</value>
+  </data>
+  <data name="GunkShot" xml:space="preserve">
+    <value>Mülltreffer</value>
   </data>
   <data name="Headbutt" xml:space="preserve">
     <value>Kopfnuss</value>
   </data>
+  <data name="HeartStamp" xml:space="preserve">
+    <value>Herzstempel</value>
+  </data>
+  <data name="HeatWave" xml:space="preserve">
+    <value>Hitzewelle</value>
+  </data>
+  <data name="HornAttack" xml:space="preserve">
+    <value>Hornattacke</value>
+  </data>
   <data name="Hurricane" xml:space="preserve">
     <value>Wirbelsturm</value>
   </data>
+  <data name="HydroPump" xml:space="preserve">
+    <value>Hydropumpe</value>
+  </data>
+  <data name="HydroPumpBlastoise" xml:space="preserve">
+    <value>Hydropumpe</value>
+  </data>
+  <data name="HyperFang" xml:space="preserve">
+    <value>Hyperzahn</value>
+  </data>
+  <data name="IceBeam" xml:space="preserve">
+    <value>Eisstrahl</value>
+  </data>
+  <data name="IcePunch" xml:space="preserve">
+    <value>Eishieb</value>
+  </data>
+  <data name="IceShard" xml:space="preserve">
+    <value>Eissplitter</value>
+  </data>
+  <data name="IceShardFast" xml:space="preserve">
+    <value>Eissplitter Schnell</value>
+  </data>
+  <data name="IcyWind" xml:space="preserve">
+    <value>Eissturm</value>
+  </data>
+  <data name="IronHead" xml:space="preserve">
+    <value>Eisenschädel</value>
+  </data>
+  <data name="KarateChop" xml:space="preserve">
+    <value>Eisstrahl</value>
+  </data>
+  <data name="KarateChopFast" xml:space="preserve">
+    <value>Eisstrahl Schnell</value>
+  </data>
+  <data name="LeafBlade" xml:space="preserve">
+    <value>Laubklinge</value>
+  </data>
+  <data name="LickFast" xml:space="preserve">
+    <value>Schlecker Schnell</value>
+  </data>
+  <data name="LowKickFast" xml:space="preserve">
+    <value>Fußkick Schnell</value>
+  </data>
+  <data name="LowSweep" xml:space="preserve">
+    <value>Fußtritt</value>
+  </data>
+  <data name="MagnetBomb" xml:space="preserve">
+    <value>Magnetbombe</value>
+  </data>
+  <data name="MegaDrain" xml:space="preserve">
+    <value>Megasauger</value>
+  </data>
+  <data name="MetalClawFast" xml:space="preserve">
+    <value>Metallklaue Schnell</value>
+  </data>
   <data name="Moonblast" xml:space="preserve">
     <value>Mondgewalt</value>
+  </data>
+  <data name="MudBomb" xml:space="preserve">
+    <value>Schlammbombe</value>
+  </data>
+  <data name="MudShot" xml:space="preserve">
+    <value>Schlammbombe</value>
+  </data>
+  <data name="MudShotFast" xml:space="preserve">
+    <value>Lehmschuss Schnell</value>
+  </data>
+  <data name="MudSlapFast" xml:space="preserve">
+    <value>Lehmschelle Schnell</value>
+  </data>
+  <data name="NightSlash" xml:space="preserve">
+    <value>Nachthieb</value>
+  </data>
+  <data name="OminousWind" xml:space="preserve">
+    <value>Unheilböen</value>
+  </data>
+  <data name="ParabolicCharge" xml:space="preserve">
+    <value>Parabolladung</value>
   </data>
   <data name="Peck" xml:space="preserve">
     <value>Schnabel</value>
   </data>
   <data name="PeckFast" xml:space="preserve">
-    <value>Schnabel</value>
+    <value>Schnabel Schnell</value>
+  </data>
+  <data name="PetalBlizzard" xml:space="preserve">
+    <value>Blütenwirbel</value>
+  </data>
+  <data name="PlayRough" xml:space="preserve">
+    <value>Knuddler</value>
+  </data>
+  <data name="PoisonFang" xml:space="preserve">
+    <value>Giftzahn</value>
+  </data>
+  <data name="PoisonJab" xml:space="preserve">
+    <value>Gifthieb</value>
+  </data>
+  <data name="PoisonJabFast" xml:space="preserve">
+    <value>Gifthieb Schnell</value>
+  </data>
+  <data name="PoisonStingFast" xml:space="preserve">
+    <value>Giftstachel Schnell</value>
+  </data>
+  <data name="PoundFast" xml:space="preserve">
+    <value>Pfund Schnell</value>
+  </data>
+  <data name="PowerGem" xml:space="preserve">
+    <value>Juwelenkraft</value>
+  </data>
+  <data name="PowerWhip" xml:space="preserve">
+    <value>Blattgeißel</value>
   </data>
   <data name="Psybeam" xml:space="preserve">
     <value>Psystrahl</value>
@@ -96,14 +390,38 @@
   <data name="Psychic" xml:space="preserve">
     <value>Psychokinese</value>
   </data>
+  <data name="PsychoCutFast" xml:space="preserve">
+    <value>Psychoklinge Schnell</value>
+  </data>
   <data name="Psyshock" xml:space="preserve">
     <value>Psychoschock</value>
   </data>
   <data name="Psystrike" xml:space="preserve">
     <value>Psychostoß</value>
   </data>
+  <data name="QuickAttackFast" xml:space="preserve">
+    <value>Ruckzuckhieb Schnell</value>
+  </data>
+  <data name="RazorLeafFast" xml:space="preserve">
+    <value>Rasierblatt Schnell</value>
+  </data>
   <data name="Rest" xml:space="preserve">
     <value>Erholung</value>
+  </data>
+  <data name="RockSlide" xml:space="preserve">
+    <value>Steinhagel</value>
+  </data>
+  <data name="RockSmashFast" xml:space="preserve">
+    <value>Zertrümmerer Schnell</value>
+  </data>
+  <data name="RockThrow" xml:space="preserve">
+    <value>Steinwurf</value>
+  </data>
+  <data name="RockThrowFast" xml:space="preserve">
+    <value>Steinwurf Schnell</value>
+  </data>
+  <data name="RockTomb" xml:space="preserve">
+    <value>Felsgrab</value>
   </data>
   <data name="Scald" xml:space="preserve">
     <value>Siedewasser</value>
@@ -112,7 +430,28 @@
     <value>Siedewasser</value>
   </data>
   <data name="ScratchFast" xml:space="preserve">
-    <value>Kratzer</value>
+    <value>Kratzer Schnell</value>
+  </data>
+  <data name="SeedBomb" xml:space="preserve">
+    <value>Samenbomben</value>
+  </data>
+  <data name="ShadowBall" xml:space="preserve">
+    <value>Spukball</value>
+  </data>
+  <data name="ShadowClaw" xml:space="preserve">
+    <value>Dunkelklaue</value>
+  </data>
+  <data name="ShadowClawFast" xml:space="preserve">
+    <value>Dunkelklaue Schnell</value>
+  </data>
+  <data name="ShadowPunch" xml:space="preserve">
+    <value>Finsterfaust</value>
+  </data>
+  <data name="ShadowSneak" xml:space="preserve">
+    <value>Schattenstoß</value>
+  </data>
+  <data name="SignalBeam" xml:space="preserve">
+    <value>Ampelleuchte</value>
   </data>
   <data name="Slam" xml:space="preserve">
     <value>Slam</value>
@@ -120,17 +459,38 @@
   <data name="Slash" xml:space="preserve">
     <value>Schlitzer</value>
   </data>
+  <data name="SludgeBomb" xml:space="preserve">
+    <value>Matschbombe</value>
+  </data>
+  <data name="SludgeWave" xml:space="preserve">
+    <value>Schlammwoge</value>
+  </data>
+  <data name="SolarBeam" xml:space="preserve">
+    <value>Solarstrahl</value>
+  </data>
   <data name="Spark" xml:space="preserve">
     <value>Funkensprung</value>
+  </data>
+  <data name="SparkFast" xml:space="preserve">
+    <value>Funkensprung Schnell</value>
   </data>
   <data name="Splash" xml:space="preserve">
     <value>Platscher</value>
   </data>
   <data name="SplashFast" xml:space="preserve">
-    <value>Platscher</value>
+    <value>Platscher Schnell</value>
+  </data>
+  <data name="SteelWing" xml:space="preserve">
+    <value>Stahlflügel</value>
+  </data>
+  <data name="SteelWingFast" xml:space="preserve">
+    <value>Stahlflügel Schnell</value>
   </data>
   <data name="Stomp" xml:space="preserve">
     <value>Stampfer</value>
+  </data>
+  <data name="StoneEdge" xml:space="preserve">
+    <value>Steinkante</value>
   </data>
   <data name="Struggle" xml:space="preserve">
     <value>Verzweifler</value>
@@ -138,11 +498,14 @@
   <data name="Submission" xml:space="preserve">
     <value>Überroller</value>
   </data>
+  <data name="SuckerPunchFast" xml:space="preserve">
+    <value>Tiefschlag Schnell</value>
+  </data>
   <data name="Swift" xml:space="preserve">
     <value>Sternschauer</value>
   </data>
   <data name="TackleFast" xml:space="preserve">
-    <value>Tackle</value>
+    <value>Tackle Schnell</value>
   </data>
   <data name="Thunder" xml:space="preserve">
     <value>Donner</value>
@@ -150,13 +513,43 @@
   <data name="Thunderbolt" xml:space="preserve">
     <value>Donnerblitz</value>
   </data>
+  <data name="ThunderPunch" xml:space="preserve">
+    <value>Donnerschlag</value>
+  </data>
+  <data name="ThunderShockFast" xml:space="preserve">
+    <value>Donnerschock Schnell</value>
+  </data>
   <data name="Twineedle" xml:space="preserve">
     <value>Duonadel</value>
   </data>
   <data name="Twister" xml:space="preserve">
     <value>Windhose</value>
   </data>
+  <data name="VineWhipFast" xml:space="preserve">
+    <value>Rankenhieb Schnell</value>
+  </data>
+  <data name="WaterGunFast" xml:space="preserve">
+    <value>Aquaknarre Schnell</value>
+  </data>
+  <data name="WaterGunFastBlastoise" xml:space="preserve">
+    <value>Aquaknarre Schnell</value>
+  </data>
+  <data name="WaterPulse" xml:space="preserve">
+    <value>Aquawelle</value>
+  </data>
+  <data name="WingAttackFast" xml:space="preserve">
+    <value>Flügelschlag Schnell</value>
+  </data>
+  <data name="WrapGreen" xml:space="preserve">
+    <value>Wickel Grün</value>
+  </data>
+  <data name="WrapPink" xml:space="preserve">
+    <value>Wickel Rosa</value>
+  </data>
   <data name="XScissor" xml:space="preserve">
     <value>Kreuzschere</value>
+  </data>
+  <data name="ZenHeadbuttFast" xml:space="preserve">
+    <value>Zen-Kopfstoß Schnell</value>
   </data>
 </root>

@@ -5,7 +5,7 @@
   <Properties>
     <DisplayName>PoGo</DisplayName>
     <PublisherDisplayName>ST-Apps</PublisherDisplayName>
-    <Logo>Assets\StoreLogo.png</Logo>
+    <Logo>Assets\LiveTiles\Normal\NewStoreLogo.png</Logo>
   </Properties>
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
@@ -15,8 +15,13 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="PokemonGo-UWP.App">
-      <uap:VisualElements DisplayName="PoGo" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Sample" BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png">
+      <uap:VisualElements DisplayName="PoGo" Square150x150Logo="Assets\LiveTiles\Normal\Square150x150Logo.png" Square44x44Logo="Assets\LiveTiles\Normal\Square44x44Logo.png" Description="Sample" BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\LiveTiles\Normal\Wide310x150Logo.png" Square310x310Logo="Assets\LiveTiles\Normal\Square310x310Logo.png" Square71x71Logo="Assets\LiveTiles\Normal\Square71x71Logo.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+            <uap:ShowOn Tile="square310x310Logo" />
+          </uap:ShowNameOnTiles>
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
         <uap:InitialRotationPreference>

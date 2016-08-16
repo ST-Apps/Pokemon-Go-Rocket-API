@@ -49,13 +49,13 @@
     <value>Necesitamos permiso sobre tu ubicación para ejecutar el juego, por favor habilítalo e inténtelo de nuevo.</value>
   </data>
   <data name="PokemonRanAwayText" xml:space="preserve">
-    <value>El Pokemon se escapó, lo sentimos :(</value>
+    <value>El pokemon se ha escapado, lo sentimos :(</value>
   </data>
   <data name="PtcDownText" xml:space="preserve">
     <value>El inicio de sesión de PTC probablemente este caído, por favor intente más tarde.</value>
   </data>
   <data name="SomethingWentWrongText" xml:space="preserve">
-    <value>Algo fué mal y la aplicación puede ser inestable. ¿Desea desconectarse e intentarlo de nuevo?</value>
+    <value>Algo malo ocurrió y la aplicación puede estar inestable. ¿Desea desconectarse e intentarlo de nuevo?</value>
   </data>
   <data name="TimeFormat" xml:space="preserve">
     <value>hh:mm tt</value>
@@ -75,7 +75,7 @@
     <value>Instalando la actualización, reiniciando la aplicación...</value>
   </data>
   <data name="WrongUsernameText" xml:space="preserve">
-    <value>El usuario o contraseña son incorrectos o el servidor esta desconectado. Por favor intente nuevamente.</value>
+    <value>El usuario o contraseña son incorrectos o el servidor no está disponible. Por favor intentelo de nuevo.</value>
   </data>
   <data name="YesText" xml:space="preserve">
     <value>Sí</value>
@@ -91,5 +91,86 @@
   </data>
   <data name="MysticTeamText" xml:space="preserve">
     <value>Sabiduría</value>
+  </data>
+  <data name="LoginExpired" xml:space="preserve">
+    <value>Sesión anterior expirada</value>
+  </data>
+  <data name="TransferPokemonSuccessText" xml:space="preserve">
+    <value>Transferencia completada! Has obtenido un caramelo {0}  del profesor</value>
+  </data>
+  <data name="TransferPokemonWarningText" xml:space="preserve">
+    <value>No puedes recuperar el pokemon después de enviarlo al profesor. ¿De verdad quieres transferir a {0} al Profesor?</value>
+  </data>
+  <data name="ActivityUnknown" xml:space="preserve">
+    <value>Desconocido</value>
+  </data>
+  <data name="ActivityCatchPokemon" xml:space="preserve">
+    <value>¡Pokemon capturado!</value>
+  </data>
+  <data name="ActivityCatchLegendPokemon" xml:space="preserve">
+    <value>Capturar pokemon legendario</value>
+  </data>
+  <data name="ActivityFleePokemon" xml:space="preserve">
+    <value>¡El pokemon ha huído!</value>
+  </data>
+  <data name="ActivityDefeatFort" xml:space="preserve">
+    <value>Derrotar un gimnasio</value>
+  </data>
+  <data name="ActivityEvolvePokemon" xml:space="preserve">
+    <value>Evolucionar un pokemon</value>
+  </data>
+  <data name="ActivityHatchEgg" xml:space="preserve">
+    <value>¡Un huevo se ha abierto!</value>
+  </data>
+  <data name="ActivityWalkKm" xml:space="preserve">
+    <value>Recorrer Km</value>
+  </data>
+  <data name="ActivityPokedexEntryNew" xml:space="preserve">
+    <value>Nuevo pokemon</value>
+  </data>
+  <data name="ActivityCatchFirstThrow" xml:space="preserve">
+    <value>Primer lanzamiento</value>
+  </data>
+  <data name="ActivityCatchNiceThrow" xml:space="preserve">
+    <value>Buen lanzamiento</value>
+  </data>
+  <data name="ActivityCatchGreatThrow" xml:space="preserve">
+    <value>Lanzamiento genial</value>
+  </data>
+  <data name="ActivityCatchExcellentThrow" xml:space="preserve">
+    <value>Lanzamiento excelente</value>
+  </data>
+  <data name="ActivityCatchCurveball" xml:space="preserve">
+    <value>Bola curva</value>
+  </data>
+  <data name="ActivityCatchFirstCatchOfDay" xml:space="preserve">
+    <value>Primera captura del día</value>
+  </data>
+  <data name="ActivityCatchMilestone" xml:space="preserve">
+    <value>Meta de captura</value>
+  </data>
+  <data name="ActivityTrainPokemon" xml:space="preserve">
+    <value>Entrenar pokemon</value>
+  </data>
+  <data name="ActivitySearchFort" xml:space="preserve">
+    <value>Buscar gimnasio</value>
+  </data>
+  <data name="ActivityReleasePokemon" xml:space="preserve">
+    <value>Soltar pokemon</value>
+  </data>
+  <data name="ActivityHatchEggSmallBonus" xml:space="preserve">
+    <value>Bonus pequeño de abrir huevo</value>
+  </data>
+  <data name="ActivityHatchEggMediumBonus" xml:space="preserve">
+    <value>Bonus mediano de abrir huevo</value>
+  </data>
+  <data name="ActivityHatchEggLargeBonus" xml:space="preserve">
+    <value>Gran bonus de abrir huevo</value>
+  </data>
+  <data name="ActivityDefeatGymDefender" xml:space="preserve">
+    <value>Vencer al defensor del gimnasio</value>
+  </data>
+  <data name="ActivityDefeatGymLeader" xml:space="preserve">
+    <value>Vencer al líder del gimnasio</value>
   </data>
 </root>

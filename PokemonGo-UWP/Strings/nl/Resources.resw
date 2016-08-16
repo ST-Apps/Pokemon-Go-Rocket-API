@@ -19,19 +19,19 @@
     <value>GOOGLE</value>
   </data>
   <data name="InventoryFullTextBlock.Text" xml:space="preserve">
-    <value>Uw voorraad is vol!</value>
+    <value>Je voorraad is vol!</value>
   </data>
   <data name="PtcLoginTextBlock.Text" xml:space="preserve">
-    <value>LOGIN met PTC Account</value>
+    <value>Login met PTC Account</value>
   </data>
   <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
-    <value>Om in te loggen je moeten je gebruikersnaam/Email en wachtwoord om in te voegen dit app. Als u het niet vertrouwt, sluit u dit alstublieft, alvorens over te gaan. Wij zijn niet verantwoordelijk voor om het even wat.</value>
+    <value>Je moet je gebruikersnaam/e-mail en wachtwoord in voeren om in te loggen. Als je dit niet vertrouwt, sluit de app dan. Gebruik deze app op eigen risico</value>
   </data>
   <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
     <value>in de buurt</value>
   </data>
   <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
-    <value>U bent buiten het bereik</value>
+    <value>Je bent buiten het bereik</value>
   </data>
   <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
     <value>PASSWORD</value>
@@ -49,7 +49,7 @@
     <value>CP</value>
   </data>
   <data name="EggsTextBlock.Text" xml:space="preserve">
-    <value>EIEREN</value>
+    <value>Eieren</value>
   </data>
   <data name="SettingsMusicTextBlock.Text" xml:space="preserve">
     <value>Muziek</value>
@@ -58,7 +58,7 @@
     <value>POKÉMON</value>
   </data>
   <data name="SettingsHeaderTextBlock.Text" xml:space="preserve">
-    <value>INSTELLINGEN</value>
+    <value>Instellingen</value>
   </data>
   <data name="SettingsSignOutTextBlock.Text" xml:space="preserve">
     <value>Afmelden</value>
@@ -67,7 +67,7 @@
     <value>Vibratie</value>
   </data>
   <data name="ItemsTextBlock.Text" xml:space="preserve">
-    <value>ITEMS</value>
+    <value>Voorwerpen</value>
   </data>
   <data name="PokedexTextBlock.Text" xml:space="preserve">
     <value>POKÉDEX</value>
@@ -89,7 +89,7 @@
     <value>TOTAAL</value>
   </data>
   <data name="LevelUpTextBlock.Text" xml:space="preserve">
-    <value>Niveau omhoog!</value>
+    <value>Level omhoog!</value>
   </data>
   <data name="LevelTextBlock.Text" xml:space="preserve">
     <value>Niveau</value>

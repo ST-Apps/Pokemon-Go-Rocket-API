@@ -13,31 +13,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CooldownTextBlock.Text" xml:space="preserve">
-    <value>Tens que esperar algum tempo</value>
+    <value>Tem de esperar algum tempo</value>
+  </data>
+  <data name="GoogleLoginTextBlock.Text" xml:space="preserve">
+    <value>GOOGLE</value>
   </data>
   <data name="InventoryFullTextBlock.Text" xml:space="preserve">
-    <value>O teu inventário está cheio!</value>
+    <value>O seu inventário está cheio!</value>
   </data>
   <data name="PtcLoginTextBlock.Text" xml:space="preserve">
-    <value>INICIAR SESSÃO com a conta PTC</value>
+    <value>Efetuar LOGIN com uma conta do PTC</value>
   </data>
   <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
-    <value>To login you need to insert your Username/Email and Password in this app. If you don't trust it, please, close it before going on. We are not responsible for anything.</value>
+    <value>Para efetuar login nesta aplicação você deve inserir o seu Nome de Utilizador/E-mail. Se não confia nela, por favor, feche-a antes de avançar. Não assumimos qualquer responsabilidade por qualquer inconveniente.</value>
   </data>
   <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
-    <value>perto</value>
+    <value>próximo</value>
   </data>
   <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
-    <value>Estás fora do raio de alcance</value>
+    <value>Você está fora do raio de alcance</value>
   </data>
   <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
-    <value>Senha</value>
+    <value>Password</value>
   </data>
   <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
-    <value>Username/email</value>
+    <value>Nome de utilizador/email</value>
   </data>
   <data name="ExperienceTextBlock.Text" xml:space="preserve">
-    <value>XP</value>
+    <value>EXP</value>
   </data>
   <data name="OkButton.Content" xml:space="preserve">
     <value>OK</value>
@@ -48,52 +51,44 @@
   <data name="EggsTextBlock.Text" xml:space="preserve">
     <value>OVOS</value>
   </data>
-  <data name="SettingsMusicTextBlock.Text" xml:space="preserve">
-    <value>Música</value>
-  </data>
   <data name="PokemonTextBlock.Text" xml:space="preserve">
     <value>POKÉMON</value>
   </data>
   <data name="SettingsHeaderTextBlock.Text" xml:space="preserve">
-    <value>DEFINIÇÕES</value>
+    <value>OPÇÕES</value>
   </data>
-  <data name="SettingsSignOutTextBlock.Text" xml:space="preserve">
-    <value>Terminar Sessão</value>
-  </data>
-  <data name="SettingsVibrationTextBlock.Text" xml:space="preserve">
-    <value>Vibração</value>
+  <data name="ItemsTextBlock.Text" xml:space="preserve">
+    <value>ITENS</value>
   </data>
   <data name="PokedexTextBlock.Text" xml:space="preserve">
     <value>POKÉDEX</value>
   </data>
+  <data name="LowercaseItemsTextBlock.Text" xml:space="preserve">
+    <value>itens</value>
+  </data>
+  <data name="NumberTextBlock.Text" xml:space="preserve">
+    <value># </value>
+    <comment>Watch out: there is a space after the #</comment>
+  </data>
+  <data name="SlashSpaceCpTextBlock.Text" xml:space="preserve">
+    <value>/ CP</value>
+  </data>
+  <data name="SpaceXpTextBlock.Text" xml:space="preserve">
+    <value> EXP</value>
+  </data>
+  <data name="TotalExperienceTextBlock.Text" xml:space="preserve">
+    <value>TOTAL</value>
+  </data>
   <data name="LevelUpTextBlock.Text" xml:space="preserve">
-    <value>Novo nivel!</value>
+    <value>Subiu de nível!</value>
   </data>
   <data name="LevelTextBlock.Text" xml:space="preserve">
-    <value>Nivel</value>
-  </data>
-  <data name="SettingsMapAutoRotateTextBlock.Text" xml:space="preserve">
-    <value></value>
+    <value>Nível</value>
   </data>
   <data name="StartDateTextBlock.Text" xml:space="preserve">
-    <value>DATA DE INICIO</value>
+    <value>DATA DE INÍCIO</value>
   </data>
   <data name="IncubatorsTextBlock.Text" xml:space="preserve">
     <value>INCUBADORAS</value>
-  </data>
-  <data name="HpTextBlock.Text" xml:space="preserve">
-    <value>HP </value>
-  </data>
-  <data name="TypeTextBlock.Text" xml:space="preserve">
-    <value>Tipo</value>
-  </data>
-  <data name="KgTextBlock.Text" xml:space="preserve">
-    <value>kg</value>
-  </data>
-  <data name="WeightTextBlock.Text" xml:space="preserve">
-    <value>Peso</value>
-  </data>
-  <data name="HeightTextBlock.Text" xml:space="preserve">
-    <value>Altura</value>
   </data>
 </root>

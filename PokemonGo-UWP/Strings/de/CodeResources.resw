@@ -50,7 +50,7 @@
 </value>
   </data>
   <data name="PokemonRanAwayText" xml:space="preserve">
-    <value>Pokémon ist weggerannt, sorry :(</value>
+    <value>Pokémon ist leider weggerannt :(</value>
   </data>
   <data name="PtcDownText" xml:space="preserve">
     <value>PTC-Login ist scheinbar nicht erreichbar. Bitte versuche es später.</value>
@@ -93,5 +93,83 @@ Seite zu den Dateien für manuelle Installation öffnen?</value>
   <data name="MysticTeamText" xml:space="preserve">
     <value>Weisheit
 </value>
+  </data>
+  <data name="TransferPokemonSuccessText" xml:space="preserve">
+    <value>Transfer erfolgreich! Du hast ein {0} Bonbon vom Professor erhalten.</value>
+  </data>
+  <data name="TransferPokemonWarningText" xml:space="preserve">
+    <value>Nach dem Transfer zum Professor kannst du es nicht mehr zurückerhalten. Willst du {0} wirklich zum Professor transferieren?</value>
+  </data>
+  <data name="LoginExpired" xml:space="preserve">
+    <value>Letzter Login abgelaufen.</value>
+  </data>
+  <data name="ActivityUnknown" xml:space="preserve">
+    <value>Unbekannt</value>
+  </data>
+  <data name="ActivityCatchPokemon" xml:space="preserve">
+    <value>Pokémon gefangen</value>
+  </data>
+  <data name="ActivityCatchLegendPokemon" xml:space="preserve">
+    <value>Fange legendäres Pokémon</value>
+  </data>
+  <data name="ActivityFleePokemon" xml:space="preserve">
+    <value>Pokémon geflohen</value>
+  </data>
+  <data name="ActivityDefeatFort" xml:space="preserve">
+    <value>Besiege Festung</value>
+  </data>
+  <data name="ActivityEvolvePokemon" xml:space="preserve">
+    <value>Entwickle ein Pokémon</value>
+  </data>
+  <data name="ActivityHatchEgg" xml:space="preserve">
+    <value>Ei geschlüpft!</value>
+  </data>
+  <data name="ActivityWalkKm" xml:space="preserve">
+    <value>Gehe Km</value>
+  </data>
+  <data name="ActivityPokedexEntryNew" xml:space="preserve">
+    <value>Neues Pokémon</value>
+  </data>
+  <data name="ActivityCatchFirstThrow" xml:space="preserve">
+    <value>Erster Wurf</value>
+  </data>
+  <data name="ActivityCatchNiceThrow" xml:space="preserve">
+    <value>Guter Wurf</value>
+  </data>
+  <data name="ActivityCatchGreatThrow" xml:space="preserve">
+    <value>Großartiger Wurf</value>
+  </data>
+  <data name="ActivityCatchExcellentThrow" xml:space="preserve">
+    <value>Exzellenter Wurf</value>
+  </data>
+  <data name="ActivityCatchFirstCatchOfDay" xml:space="preserve">
+    <value>Erster Fang des Tages!</value>
+  </data>
+  <data name="ActivityCatchMilestone" xml:space="preserve">
+    <value>Fang Meilenstein</value>
+  </data>
+  <data name="ActivityTrainPokemon" xml:space="preserve">
+    <value>Trainiere Pokémon</value>
+  </data>
+  <data name="ActivitySearchFort" xml:space="preserve">
+    <value>Suche Festung</value>
+  </data>
+  <data name="ActivityReleasePokemon" xml:space="preserve">
+    <value>Lasse Pokémon frei</value>
+  </data>
+  <data name="ActivityHatchEggSmallBonus" xml:space="preserve">
+    <value>Eischlüpf-Bonus Klein</value>
+  </data>
+  <data name="ActivityHatchEggMediumBonus" xml:space="preserve">
+    <value>Eischlüpf-Bonus Mittel</value>
+  </data>
+  <data name="ActivityHatchEggLargeBonus" xml:space="preserve">
+    <value>Eischlüpf-Bonus Groß</value>
+  </data>
+  <data name="ActivityDefeatGymDefender" xml:space="preserve">
+    <value>Besiege Arenen Verteidiger</value>
+  </data>
+  <data name="ActivityDefeatGymLeader" xml:space="preserve">
+    <value>Besiege Arenen Anführer</value>
   </data>
 </root>

@@ -63,7 +63,8 @@
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
 
-        <Storyboard x:Name="CatchSuccess">
+        <Storyboard x:Name="CatchStarted">
+            <!-- Move Pokemon inside the Pokeball -->
             <DoubleAnimationUsingKeyFrames
                 Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)"
                 Storyboard.TargetName="CurrentPokemonIcon">
@@ -75,52 +76,36 @@
                 Storyboard.TargetName="CurrentPokemonIcon">
                 <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1" />
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+
+            <!-- Tilt the Pokeball to simulate waiting -->
+            <DoubleAnimationUsingKeyFrames
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)"
+                Storyboard.TargetName="LaunchPokeballButton"
+                RepeatBehavior="Forever"
+                SpeedRatio="2">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-16" />
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="16" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0" />
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
 
         <Storyboard x:Name="CatchEscape">
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)"
-                Storyboard.TargetName="LaunchPokeballButton">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5"
-                                      x:Name="PokeballCatchAnimationStartingScaleX" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)"
-                Storyboard.TargetName="LaunchPokeballButton">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5"
-                                      x:Name="PokeballCatchAnimationStartingScaleY" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1" />
-            </DoubleAnimationUsingKeyFrames>
 
             <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)"
-                Storyboard.TargetName="LaunchPokeballButton">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5"
-                                      x:Name="PokeballCatchAnimationStartingTranslateX" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1" />
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
-                Storyboard.TargetName="LaunchPokeballButton">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5"
-                                      x:Name="PokeballCatchAnimationStartingTranslateY" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1" />
-            </DoubleAnimationUsingKeyFrames>
-
-            <!--<DoubleAnimationUsingKeyFrames
                 Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)"
                 Storyboard.TargetName="CurrentPokemonIcon">
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1" />
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames
                 Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)"
                 Storyboard.TargetName="CurrentPokemonIcon">
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1" />
-                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0" />
-            </DoubleAnimationUsingKeyFrames>-->
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1" />
+            </DoubleAnimationUsingKeyFrames>
 
         </Storyboard>
 
@@ -214,22 +199,38 @@
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
 
-                                <StackPanel Grid.Column="0"
-                                            Margin="0,0,8,0">
+                                <Grid Grid.Column="0"
+                                      Margin="0,0,8,0">
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
 
                                     <Image
-                                        Source="{Binding ItemId, Converter={StaticResource ItemIdToItemIconConverter}, ConverterParameter=Inventory}"
-                                        Height="76"
+                                        Source="{Binding Converter={StaticResource ItemToItemIconConverter}, ConverterParameter=Inventory}"
                                         Stretch="Uniform"
-                                        HorizontalAlignment="Stretch" />
-
-                                    <TextBlock Text="{Binding Count}"
-                                               FontSize="18"
-                                               Margin="0,-16,0,0"
-                                               VerticalAlignment="Bottom"
-                                               HorizontalAlignment="Left" />
-
-                                </StackPanel>
+                                        VerticalAlignment="Center"
+                                        Width="84"
+                                        Height="84"
+                                        Margin="3,0"
+                                        Grid.RowSpan="2" />
+                                    <Border Grid.Row="1" 
+                                            Grid.Column="0"
+                                            HorizontalAlignment="Left"
+                                            VerticalAlignment="Bottom"
+                                            Visibility="{Binding Count, Converter={StaticResource VisibleWhenGreaterThanConverter}, ConverterParameter=1}"
+                                            Background="LightGray" 
+                                            CornerRadius="8" 
+                                            Padding="3,1">
+                                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"
+                                                   TextAlignment="Center">
+                                            <Run Text="x" />
+                                            <Run FontWeight="Bold" 
+                                                 Text="{Binding Count}" />
+                                        </TextBlock>
+                                    </Border>
+                                </Grid>
 
                                 <Grid Grid.Column="1">
                                     <Grid.RowDefinitions>
@@ -527,7 +528,7 @@
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
 
-            <Image Source="../Assets/UI/inventory.png"
+            <Image Source="../Assets/Buttons/btn_items_catch.png"
                    Stretch="Uniform"
                    HorizontalAlignment="Stretch" />
         </Button>
@@ -548,7 +549,8 @@
                     ManipulationMode="TranslateX, TranslateY"
                     ManipulationStarted="LaunchPokeballButton_ManipulationStarted"
                     ManipulationDelta="LaunchPokeballButton_ManipulationDelta"
-                    ManipulationCompleted="LaunchPokeballButton_ManipulationCompleted">
+                    ManipulationCompleted="LaunchPokeballButton_ManipulationCompleted"
+                    RenderTransformOrigin="0.5,0.5">
                 <Button.RenderTransform>
                     <CompositeTransform x:Name="PokeballTransform"
                                         Rotation="0"

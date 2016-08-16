@@ -73,10 +73,10 @@
     <value>Incubateur Basique Illimité</value>
   </data>
   <data name="ItemItemStorageUpgrade" xml:space="preserve">
-    <value>Augmentation de la capacité de sotckage des objets</value>
+    <value>Extension du stockage des objets</value>
   </data>
   <data name="ItemLuckyEgg" xml:space="preserve">
-    <value>Oeuf chanceux</value>
+    <value>Oeuf Chance</value>
   </data>
   <data name="ItemMaxPotion" xml:space="preserve">
     <value>Potion Max</value>
@@ -90,8 +90,11 @@
   <data name="ItemPinapBerry" xml:space="preserve">
     <value>Baie Nanana</value>
   </data>
+  <data name="ItemPokeBall" xml:space="preserve">
+    <value>Poké Ball</value>
+  </data>
   <data name="ItemPokemonStorageUpgrade" xml:space="preserve">
-    <value>Augmentation de la capacité de sotckage des pokémon</value>
+    <value>Extension du stockage de Pokémon</value>
   </data>
   <data name="ItemRazzBerry" xml:space="preserve">
     <value>Baie Framby</value>
@@ -103,10 +106,13 @@
     <value>Caméra spéciale</value>
   </data>
   <data name="ItemTroyDisk" xml:space="preserve">
-    <value>Disque de Troy</value>
+    <value>Disque de Troie</value>
   </data>
   <data name="ItemUnknown" xml:space="preserve">
     <value>Inconnu</value>
+  </data>
+  <data name="ItemWeparBerry" xml:space="preserve">
+    <value>Baies Framby</value>
   </data>
   <data name="ItemXAttack" xml:space="preserve">
     <value>X Attaque</value>

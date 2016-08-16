@@ -130,7 +130,7 @@
                           RelativePanel.AlignLeftWithPanel="True"
                           RelativePanel.AlignRightWithPanel="True"
                           RelativePanel.AlignHorizontalCenterWithPanel="True">
-                <StackPanel>
+                <StackPanel Margin="0,0,0,50">
                     <RelativePanel>
                         <Image RelativePanel.AlignTopWithPanel="True"
                                RelativePanel.AlignLeftWithPanel="True"
@@ -282,7 +282,6 @@
                                   RelativePanel.AlignLeftWithPanel="True"
                                   RelativePanel.AlignBottomWithPanel="True"
                                   ItemsSource="{Binding Achievements}"
-                                  ItemClick="GridView_ItemClick"
                                   IsItemClickEnabled="True"
                                   SelectionMode="None">
 
@@ -303,7 +302,8 @@
 
                                         <interactivity:Interaction.Behaviors>
                                             <core:EventTriggerBehavior EventName="Tapped">
-                                                <core:InvokeCommandAction Command="{Binding DataContext.GoToAchievementDetailPage, ElementName=playerProfilePage}" CommandParameter="{Binding}" />
+                                                <core:InvokeCommandAction Command="{Binding DataContext.GoToAchievementDetailPage, ElementName=playerProfilePage}" 
+                                                                          CommandParameter="{Binding}" />
                                             </core:EventTriggerBehavior>
                                         </interactivity:Interaction.Behaviors>
 
@@ -362,15 +362,9 @@
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
 
-                <Grid>
-                    <Image Source="../Assets/Buttons/btn_master.png"
-                           Stretch="Uniform"
-                           VerticalAlignment="Stretch"
-                           HorizontalAlignment="Stretch" />
-                    <Image Source="../Assets/UI/inventory.png"
+                <Image Source="../Assets/Buttons/btn_menu.png"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center" />
-                </Grid>
             </Button>
 
         </RelativePanel>

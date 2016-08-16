@@ -13,28 +13,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CooldownTextBlock.Text" xml:space="preserve">
-    <value>Vous devez attendre un moment</value>
+    <value>Essaye plus tard</value>
   </data>
   <data name="InventoryFullTextBlock.Text" xml:space="preserve">
-    <value>Votre inventaire est plein!</value>
+    <value>Ton inventaire est plein !</value>
   </data>
   <data name="PtcLoginTextBlock.Text" xml:space="preserve">
     <value>Connexion avec un compte PTC</value>
   </data>
   <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
-    <value>Pour vous connecter vous devez insérer votre Nom d'ulitisaeur/Email et votre mot de passe dans cette application. Si vous ne lui faites pas confiance, fermez la avant de continuer. Nous ne sommes pas responsable de quoi que ce soit.</value>
+    <value>Pour te connecter tu dois insérer ton Nom d'ulitisaeur/Email et ton mot de passe au dessus. Si tu n'as pas confiance en cette application, ferme là maintenant. Niantic peut te bannir pour l'utilisation de cette application. À utiliser à tes risques et périls.</value>
   </data>
   <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
-    <value>proche</value>
+    <value>Pokémon aperçus</value>
   </data>
   <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
-    <value>Vous êtes hors portée</value>
+    <value>CE POKÉSTOP EST TROP LOIN.</value>
   </data>
   <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
     <value>Mot de passe</value>
   </data>
   <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
-    <value>Nom d'utilisateur/email</value>
+    <value>Nom d'utilisateur / Email</value>
   </data>
   <data name="EggsTextBlock.Text" xml:space="preserve">
     <value>OEUFS</value>
@@ -43,7 +43,7 @@
     <value>Musique</value>
   </data>
   <data name="SettingsHeaderTextBlock.Text" xml:space="preserve">
-    <value>PARAMETRES</value>
+    <value>PARAMÈTRES</value>
   </data>
   <data name="SettingsSignOutTextBlock.Text" xml:space="preserve">
     <value>Déconnexion</value>
@@ -55,7 +55,7 @@
     <value>objets</value>
   </data>
   <data name="LevelUpTextBlock.Text" xml:space="preserve">
-    <value>Niveau supérieur!</value>
+    <value>Niveau supérieur !</value>
   </data>
   <data name="LevelTextBlock.Text" xml:space="preserve">
     <value>Niveau</value>
@@ -68,5 +68,33 @@
   </data>
   <data name="IncubatorsTextBlock.Text" xml:space="preserve">
     <value>INCUBATEURS</value>
+  </data>
+  <data name="SettingsUseNianticMapTextBlock.Text" xml:space="preserve">
+    <value>Utiliser la carte Niantic</value>
+  </data>
+  <data name="WeightTextBlock.Text" xml:space="preserve">
+    <value>Poids</value>
+  </data>
+  <data name="HeightTextBlock.Text" xml:space="preserve">
+    <value>Taille</value>
+  </data>
+  <data name="StardustTextBlock.Text" xml:space="preserve">
+    <value>POUSSIÈRE D'ÉTOILES</value>
+  </data>
+  <data name="CandyTextBlock.Text" xml:space="preserve">
+    <value> BONBON</value>
+    <comment>Watch out: space before the word!</comment>
+  </data>
+  <data name="EvolveButton.Content" xml:space="preserve">
+    <value>FAIRE ÉVOLUER</value>
+  </data>
+  <data name="PowerUpButton.Content" xml:space="preserve">
+    <value>RECHARGER</value>
+  </data>
+  <data name="TransferButton.Content" xml:space="preserve">
+    <value>TRANSFÉRER</value>
+  </data>
+  <data name="SettingsRememberMapZoomTextBlock" xml:space="preserve">
+    <value>Mémoriser le zoom de la carte</value>
   </data>
 </root>

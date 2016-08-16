@@ -1,4 +1,5 @@
 ﻿using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Navigation;
 
 namespace PokemonGo_UWP.Views
 {
@@ -7,11 +8,9 @@ namespace PokemonGo_UWP.Views
         public PlayerProfilePage()
         {
             InitializeComponent();
+
+            NavigationCacheMode = NavigationCacheMode.Enabled;
         }
 
-        private void GridView_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            //ViewModel.NavigateToDetailPage(sender, e);
-        }
     }
 }

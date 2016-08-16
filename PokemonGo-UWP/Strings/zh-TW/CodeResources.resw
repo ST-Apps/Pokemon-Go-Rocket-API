@@ -49,7 +49,7 @@
     <value>遊戲需要 GPS 權限，請授權後再試一次。</value>
   </data>
   <data name="PokemonRanAwayText" xml:space="preserve">
-    <value>寶可夢逃跑了, 不好意思 :(</value>
+    <value>寶可夢跑走了, 抱歉 :(</value>
   </data>
   <data name="PtcDownText" xml:space="preserve">
     <value>PTC 登入系統出現問題，請稍後再試。</value>
@@ -84,12 +84,93 @@
     <value>Instinct 陣營</value>
   </data>
   <data name="NoTeamText" xml:space="preserve">
-    <value>沒有陣營</value>
+    <value>未加入陣營</value>
   </data>
   <data name="ValorTeamText" xml:space="preserve">
     <value>Valor 陣營</value>
   </data>
   <data name="MysticTeamText" xml:space="preserve">
     <value>Mystic 陣營</value>
+  </data>
+  <data name="TransferPokemonSuccessText" xml:space="preserve">
+    <value>轉換成功! 從博士那拿到 {0} 顆糖果。</value>
+  </data>
+  <data name="TransferPokemonWarningText" xml:space="preserve">
+    <value>轉移給教授後將不能再收回。您確定要將 {0} 轉移給教授嗎？</value>
+  </data>
+  <data name="LoginExpired" xml:space="preserve">
+    <value>登入逾期。</value>
+  </data>
+  <data name="ActivityUnknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="ActivityCatchPokemon" xml:space="preserve">
+    <value>抓到精靈寶可夢</value>
+  </data>
+  <data name="ActivityCatchLegendPokemon" xml:space="preserve">
+    <value>捕捉傳說中的精靈寶可夢</value>
+  </data>
+  <data name="ActivityFleePokemon" xml:space="preserve">
+    <value>精靈寶可夢逃跑了</value>
+  </data>
+  <data name="ActivityDefeatFort" xml:space="preserve">
+    <value>推倒堡壘</value>
+  </data>
+  <data name="ActivityEvolvePokemon" xml:space="preserve">
+    <value>進化了一隻精靈寶可夢</value>
+  </data>
+  <data name="ActivityHatchEgg" xml:space="preserve">
+    <value>寶可夢蛋孵化了!</value>
+  </data>
+  <data name="ActivityWalkKm" xml:space="preserve">
+    <value>里程數</value>
+  </data>
+  <data name="ActivityPokedexEntryNew" xml:space="preserve">
+    <value>新的精靈寶可夢</value>
+  </data>
+  <data name="ActivityCatchFirstThrow" xml:space="preserve">
+    <value>第一次投擲</value>
+  </data>
+  <data name="ActivityCatchNiceThrow" xml:space="preserve">
+    <value>投得不錯</value>
+  </data>
+  <data name="ActivityCatchGreatThrow" xml:space="preserve">
+    <value>好球</value>
+  </data>
+  <data name="ActivityCatchExcellentThrow" xml:space="preserve">
+    <value>完美投擲</value>
+  </data>
+  <data name="ActivityCatchCurveball" xml:space="preserve">
+    <value>曲球</value>
+  </data>
+  <data name="ActivityCatchFirstCatchOfDay" xml:space="preserve">
+    <value>今日首抓!</value>
+  </data>
+  <data name="ActivityCatchMilestone" xml:space="preserve">
+    <value>捕捉里程碑</value>
+  </data>
+  <data name="ActivityTrainPokemon" xml:space="preserve">
+    <value>訓練精靈寶可夢</value>
+  </data>
+  <data name="ActivitySearchFort" xml:space="preserve">
+    <value>搜尋堡壘</value>
+  </data>
+  <data name="ActivityReleasePokemon" xml:space="preserve">
+    <value>放生精靈寶可夢</value>
+  </data>
+  <data name="ActivityHatchEggSmallBonus" xml:space="preserve">
+    <value>孵蛋獎勵(小)</value>
+  </data>
+  <data name="ActivityHatchEggMediumBonus" xml:space="preserve">
+    <value>孵蛋獎勵(中)</value>
+  </data>
+  <data name="ActivityHatchEggLargeBonus" xml:space="preserve">
+    <value>孵蛋獎勵(大)</value>
+  </data>
+  <data name="ActivityDefeatGymDefender" xml:space="preserve">
+    <value>擊敗道館訓練家</value>
+  </data>
+  <data name="ActivityDefeatGymLeader" xml:space="preserve">
+    <value>擊敗道館館主</value>
   </data>
 </root>

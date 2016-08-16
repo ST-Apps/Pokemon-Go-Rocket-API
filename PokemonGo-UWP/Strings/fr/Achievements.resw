@@ -13,7 +13,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="BadgeBattleAttackWon" xml:space="preserve">
-    <value>Combattant</value>
+    <value>Combattante</value>
   </data>
   <data name="BadgeBattleTrainingWon" xml:space="preserve">
     <value>Top Dresseur</value>
@@ -89,5 +89,89 @@
   </data>
   <data name="Water" xml:space="preserve">
     <value>Nageur</value>
+  </data>
+  <data name="BadgeBattleAttackWonDescription" xml:space="preserve">
+    <value>{0} combats d'Arènes gagnés</value>
+  </data>
+  <data name="BadgeBattleTrainingWonDescription" xml:space="preserve">
+    <value>{0} combats d'entraînement gagnés</value>
+  </data>
+  <data name="BadgeBigMagikarpDescription" xml:space="preserve">
+    <value>{0} Magicarpe capturés</value>
+  </data>
+  <data name="BadgeCaptureTotalDescription" xml:space="preserve">
+    <value>{0} Pokémon attrapés</value>
+  </data>
+  <data name="BadgeEvolvedTotalDescription" xml:space="preserve">
+    <value>[x] Pokémon évolués</value>
+  </data>
+  <data name="BadgeHatchedTotalDescription" xml:space="preserve">
+    <value>{x} oeufs éclos</value>
+  </data>
+  <data name="BadgePikachuDescription" xml:space="preserve">
+    <value>{0} Pikachu capturés</value>
+  </data>
+  <data name="BadgePokedexEntriesDescription" xml:space="preserve">
+    <value>{0} Pokémon inscrits dans le Pokédex</value>
+  </data>
+  <data name="BadgePokestopsVisitedDescription" xml:space="preserve">
+    <value>{0} PokéStops visités</value>
+  </data>
+  <data name="BadgeSmallRattataDescription" xml:space="preserve">
+    <value>{0} Rattata capturés</value>
+  </data>
+  <data name="BadgeTravelKmDescription" xml:space="preserve">
+    <value>{0} km parcourus</value>
+  </data>
+  <data name="BugDescription" xml:space="preserve">
+    <value>{0} Pokémon de type Insecte capturés</value>
+  </data>
+  <data name="DragonDescription" xml:space="preserve">
+    <value>{0} Pokémon de type Dragon capturés</value>
+  </data>
+  <data name="ElectricDescription" xml:space="preserve">
+    <value>{0} Pokémon de type Électrik capturés</value>
+  </data>
+  <data name="FairyDescription" xml:space="preserve">
+    <value>{0} Pokémon de type Fée capturés</value>
+  </data>
+  <data name="FightingDescription" xml:space="preserve">
+    <value>{0} Pokémon de type Combat capturés</value>
+  </data>
+  <data name="FireDescription" xml:space="preserve">
+    <value>{0} Pokémon de type Feu capturés</value>
+  </data>
+  <data name="FlyingDescription" xml:space="preserve">
+    <value>{0} Pokémon de type Vol capturés</value>
+  </data>
+  <data name="GhostDescription" xml:space="preserve">
+    <value>{0} Pokémon de type Spectre capturés</value>
+  </data>
+  <data name="GrassDescription" xml:space="preserve">
+    <value>{0} Pokémon de type Plante capturés</value>
+  </data>
+  <data name="GroundDescription" xml:space="preserve">
+    <value>{0} Pokémon de type Terre capturés</value>
+  </data>
+  <data name="IceDescription" xml:space="preserve">
+    <value>{0} Pokémon de type Glace capturés</value>
+  </data>
+  <data name="NormalDescription" xml:space="preserve">
+    <value>{0} Pokémon de type Normal capturés</value>
+  </data>
+  <data name="PoisonDescription" xml:space="preserve">
+    <value>{0} Pokémon de type Poison capturés</value>
+  </data>
+  <data name="PsychicDescription" xml:space="preserve">
+    <value>{0} Pokémon de type Psy capturés</value>
+  </data>
+  <data name="RockDescription" xml:space="preserve">
+    <value>{0} Pokémon de type Roche capturés</value>
+  </data>
+  <data name="SteelDescription" xml:space="preserve">
+    <value>{0} Pokémon de type Acier capturés</value>
+  </data>
+  <data name="WaterDescription" xml:space="preserve">
+    <value>{0} Pokémon de type Eau capturés</value>
   </data>
 </root>

@@ -97,12 +97,6 @@ namespace PokemonGo_UWP.Utils
             set { _helper.Write(nameof(IsAutoRotateMapEnabled), value); }
         }
 
-        public bool IsLiveTileEnabled
-        {
-            get { return _helper.Read(nameof(IsLiveTileEnabled), false); }
-            set { _helper.Write(nameof(IsLiveTileEnabled), value); }
-        }
-
         public bool IsMusicEnabled
         {
             get { return _helper.Read(nameof(IsMusicEnabled), false); }
@@ -126,7 +120,13 @@ namespace PokemonGo_UWP.Utils
             get { return _helper.Read(nameof(IsVibrationEnabled), false); }
             set { _helper.Write(nameof(IsVibrationEnabled), value); }
         }
-        
+
+        public LiveTileModes LiveTileMode
+        {
+            get { return _helper.Read(nameof(LiveTileMode), LiveTileModes.Off); }
+            set { _helper.Write(nameof(LiveTileMode), value); }
+        }
+
         public PokemonSortingModes PokemonSortingMode
         {
             get { return _helper.Read(nameof(PokemonSortingMode), PokemonSortingModes.Combat); }

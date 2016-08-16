@@ -13,10 +13,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DateFormat" xml:space="preserve">
-    <value>gg.MM.aaaa</value>
+    <value>dd.MM.yyyy</value>
   </data>
   <data name="DateTimeFormat" xml:space="preserve">
-    <value>gg.MM.aaaa hh.mm tt</value>
+    <value>dd.MM.yyyy hh:mm tt</value>
   </data>
   <data name="PokemonFledText" xml:space="preserve">
     <value>{0} è scappato</value>
@@ -46,13 +46,13 @@
     <value>No</value>
   </data>
   <data name="NoGpsPermissionsText" xml:space="preserve">
-    <value>Abilitare il gioco all'utilizzo del GPS per eseguirlo, si prega di attivarlo e riprovare.</value>
+    <value>Abilitare l'utilizzo del GPS per eseguire il gioco, si prega di attivarlo e riprovare.</value>
   </data>
   <data name="PokemonRanAwayText" xml:space="preserve">
-    <value>Il Pokémon è scappato, mi dispiace :(</value>
+    <value>Il Pokémon è scappato, ci spiace :(</value>
   </data>
   <data name="PtcDownText" xml:space="preserve">
-    <value>Il Login su PTC è probabilmente down, si prega di riprovare più tardi.</value>
+    <value>Il Login su PTC è probabilmente non disponibile, si prega di riprovare più tardi.</value>
   </data>
   <data name="SomethingWentWrongText" xml:space="preserve">
     <value>Qualcosa è andato storto e l'app può risultare instabile in questo momento. Vuoi effettuare il logout e riprovare?</value>
@@ -69,13 +69,13 @@
   </data>
   <data name="UpdateFailedText" xml:space="preserve">
     <value>Aggiornamento non riuscito: {0}
-Apri pagina con il file di installazione per l'installazione manuale?</value>
+Vuoi aprire la pagina con il file di installazione per l'installazione manuale?</value>
   </data>
   <data name="UpdateInstallingText" xml:space="preserve">
     <value>Aggiornamento installato, l'app si riavvierà</value>
   </data>
   <data name="WrongUsernameText" xml:space="preserve">
-    <value>nome utente/password errati o il server risulta offline, si prega di riprovare.</value>
+    <value>Nome utente/password errati o il server risulta offline, si prega di riprovare.</value>
   </data>
   <data name="YesText" xml:space="preserve">
     <value>Sì</value>

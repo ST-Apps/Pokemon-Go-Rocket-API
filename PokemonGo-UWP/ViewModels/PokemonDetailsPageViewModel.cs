@@ -254,9 +254,11 @@ namespace PokemonGo_UWP.ViewModels
                     Convert.ToInt32(Math.Round(PokemonInfo.GetLevel(CurrentPokemon.WrappedData)) - 1)];
             CandiesToPowerUp = Convert.ToInt32(upgradeCosts[0]);
             StardustToPowerUp = Convert.ToInt32(upgradeCosts[1]);
-            PokemonExtraData = GameClient.GetExtraDataForPokemon(CurrentPokemon.PokemonId);            
+            PokemonExtraData = GameClient.GetExtraDataForPokemon(CurrentPokemon.PokemonId);
             CurrentCandy = GameClient.CandyInventory.FirstOrDefault(item => item.FamilyId == PokemonExtraData.FamilyId);
             RaisePropertyChanged(() => PokemonExtraData);
+            PowerUpPokemonCommand.RaiseCanExecuteChanged();
+            EvolvePokemonCommand.RaiseCanExecuteChanged();
         }
 
         private DelegateCommand _returnToPokemonInventoryScreen;
@@ -304,7 +306,7 @@ namespace PokemonGo_UWP.ViewModels
                                   Resources.Pokemon.GetString(CurrentCandy.FamilyId.ToString().Replace("Family", "")))).ShowAsyncQueue();
                       await GameClient.UpdateInventory();
                       await GameClient.UpdatePlayerStats();
-                      NavigationService.Navigate(typeof(PokemonInventoryPage));
+                      NavigationService.GoBack();
                       break;
                   // TODO: what to do on error?
                   case ReleasePokemonResponse.Types.Result.PokemonDeployed:
@@ -351,7 +353,7 @@ namespace PokemonGo_UWP.ViewModels
                 default:
                     throw new ArgumentOutOfRangeException();
             }
-        }, () => StardustAmount >= StardustToPowerUp));
+        }, () => CurrentCandy != null && StardustAmount >= StardustToPowerUp && CurrentCandy.Candy_ >= CandiesToPowerUp));
 
         #endregion
 

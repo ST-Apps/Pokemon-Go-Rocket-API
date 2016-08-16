@@ -13,7 +13,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="BadgeBattleAttackWon" xml:space="preserve">
-    <value>Rapariga da Batalha</value>
+    <value>Lutadora</value>
+  </data>
+  <data name="BadgeBattleTrainingWon" xml:space="preserve">
+    <value>Perito</value>
   </data>
   <data name="BadgeBigMagikarp" xml:space="preserve">
     <value>Pescador</value>
@@ -25,25 +28,70 @@
     <value>Cientista</value>
   </data>
   <data name="BadgeHatchedTotal" xml:space="preserve">
-    <value>Reprodutor</value>
+    <value>Criador</value>
+  </data>
+  <data name="BadgePikachu" xml:space="preserve">
+    <value>Pikachu</value>
+  </data>
+  <data name="BadgePokedexEntries" xml:space="preserve">
+    <value>Kanto</value>
+  </data>
+  <data name="BadgePokestopsVisited" xml:space="preserve">
+    <value>Mochileiro</value>
   </data>
   <data name="BadgeSmallRattata" xml:space="preserve">
-    <value>Something went wrong and app may be unstable now. Do you want to logout and try again?</value>
+    <value>Jovem</value>
+  </data>
+  <data name="BadgeTravelKm" xml:space="preserve">
+    <value>Corredor</value>
+  </data>
+  <data name="Bug" xml:space="preserve">
+    <value>Caçador de Insetos</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Domador de Dragões</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Roqueiro</value>
   </data>
   <data name="Fairy" xml:space="preserve">
-    <value>Rapariga de conto de fadas</value>
+    <value>Sonhadora</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Cinturão Negro</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>Incendiário</value>
   </data>
   <data name="Flying" xml:space="preserve">
-    <value>Guardião de pássaros</value>
+    <value>Tratador de Pássaros</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Bruxa</value>
   </data>
   <data name="Grass" xml:space="preserve">
     <value>Jardineiro</value>
   </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Arqueólogo</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Esquiador</value>
+  </data>
   <data name="Normal" xml:space="preserve">
-    <value>Rapaz da escola</value>
+    <value>Estudante</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Rapariga Punk</value>
   </data>
   <data name="Psychic" xml:space="preserve">
     <value>Psíquico</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Alpinista</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Ferroviário</value>
   </data>
   <data name="Water" xml:space="preserve">
     <value>Nadador</value>

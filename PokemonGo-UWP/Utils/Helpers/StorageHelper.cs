@@ -191,7 +191,7 @@ namespace Q42.WinRT.Storage
                 
                 StorageFolder folder = await GetFolderAsync().ConfigureAwait(false);
 
-                var file = await folder.GetFileAsync(fileName);
+                var file = await folder.CreateFileAsync(fileName, CreationCollisionOption.OpenIfExists);
                 if (file != null)
                 {                    
 

@@ -96,4 +96,88 @@
   <data name="Water" xml:space="preserve">
     <value>Schwimmer</value>
   </data>
+  <data name="BadgeBattleAttackWonDescription" xml:space="preserve">
+    <value>{0} Arenenkämpfe gewonnen</value>
+  </data>
+  <data name="BadgeBattleTrainingWonDescription" xml:space="preserve">
+    <value>{0} Trainingskämpfe gewonnen</value>
+  </data>
+  <data name="BadgeBigMagikarpDescription" xml:space="preserve">
+    <value>{0} Karpador gefangen</value>
+  </data>
+  <data name="BadgeCaptureTotalDescription" xml:space="preserve">
+    <value>{0} Pokémon gefangen</value>
+  </data>
+  <data name="BadgeEvolvedTotalDescription" xml:space="preserve">
+    <value>[x] Pokémon entwickelt</value>
+  </data>
+  <data name="BadgeHatchedTotalDescription" xml:space="preserve">
+    <value>{x} Pokemon geschlüpft</value>
+  </data>
+  <data name="BadgePikachuDescription" xml:space="preserve">
+    <value>{0} Pikachu gefangen</value>
+  </data>
+  <data name="BadgePokedexEntriesDescription" xml:space="preserve">
+    <value>{0} Pokémon im Pokédex registriert</value>
+  </data>
+  <data name="BadgePokestopsVisitedDescription" xml:space="preserve">
+    <value>{0} Pokregistrierte stops besucht</value>
+  </data>
+  <data name="BadgeSmallRattataDescription" xml:space="preserve">
+    <value>{0} Rattfratz gefangen</value>
+  </data>
+  <data name="BadgeTravelKmDescription" xml:space="preserve">
+    <value>{0} km gegangen</value>
+  </data>
+  <data name="BugDescription" xml:space="preserve">
+    <value>{0} Käfer Pokémon gefangen</value>
+  </data>
+  <data name="DragonDescription" xml:space="preserve">
+    <value>{0} Drachen Pokémon gefangen</value>
+  </data>
+  <data name="ElectricDescription" xml:space="preserve">
+    <value>{0} Elektro Pokémon gefangen</value>
+  </data>
+  <data name="FairyDescription" xml:space="preserve">
+    <value>{0} Feen Pokémon gefangen</value>
+  </data>
+  <data name="FightingDescription" xml:space="preserve">
+    <value>{0} Kampf Pokémon gefangen</value>
+  </data>
+  <data name="FireDescription" xml:space="preserve">
+    <value>{0} Feuer Pokémon gefangen</value>
+  </data>
+  <data name="FlyingDescription" xml:space="preserve">
+    <value>{0} Flug Pokémon gefangen</value>
+  </data>
+  <data name="GhostDescription" xml:space="preserve">
+    <value>{0} Geist Pokémon gefange</value>
+  </data>
+  <data name="GrassDescription" xml:space="preserve">
+    <value>{0} Pflanzen Pokémon gefangen</value>
+  </data>
+  <data name="GroundDescription" xml:space="preserve">
+    <value>{0} Boden Pokémon gefangen</value>
+  </data>
+  <data name="IceDescription" xml:space="preserve">
+    <value>{0} Eis Pokémon gefangen</value>
+  </data>
+  <data name="NormalDescription" xml:space="preserve">
+    <value>{0} Normal Pokémon gefangen</value>
+  </data>
+  <data name="PoisonDescription" xml:space="preserve">
+    <value>{0} Gift Pokémon gefangen</value>
+  </data>
+  <data name="PsychicDescription" xml:space="preserve">
+    <value>{0} Psycho Pokémon gefangen</value>
+  </data>
+  <data name="RockDescription" xml:space="preserve">
+    <value>{0} Stein Pokémon gefangen</value>
+  </data>
+  <data name="SteelDescription" xml:space="preserve">
+    <value>{0} Stahl Pokémon gefangen</value>
+  </data>
+  <data name="WaterDescription" xml:space="preserve">
+    <value>{0} Wasser Pokémon gefangen</value>
+  </data>
 </root>

@@ -252,8 +252,7 @@
 
                     <Border CornerRadius="8,8,0,0"
                             Margin="16,0"
-                            Background="White"
-                            x:Name="NarbyPokemonGrid">
+                            Background="White">
                         <Border Padding="8">
                             <Grid>
                                 <Grid.RowDefinitions>
@@ -380,6 +379,7 @@
                     RelativePanel.AlignRightWithPanel="True"
                     RelativePanel.AlignBottomWithPanel="True"
                     Margin="0,0,24,128"
+                    Command="{Binding GotoItemsInventoryPageCommand}"
                     x:Name="ToolsButton">
 
                 <StackPanel Orientation="Vertical">
@@ -425,7 +425,7 @@
             <RelativePanel.Background>
                 <LinearGradientBrush StartPoint="0,0"
                                      EndPoint="1,1"
-                                     Opacity="0.5">
+                                     Opacity="0.7">
                     <GradientStop Color="#4ab583" Offset="0" />
                     <GradientStop Color="#266378" Offset="0.8" />
                 </LinearGradientBrush>
@@ -437,6 +437,7 @@
                            FontSize="48"
                            Foreground="White" />
                 <TextBlock Text="{Binding PlayerStats.Level}"
+                           HorizontalAlignment="Center"
                            Foreground="Cyan"
                            FontSize="60" />
             </StackPanel>
@@ -455,34 +456,68 @@
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Grid HorizontalAlignment="Right">
+                        <Grid Margin="8"
+                              Height="64">
+                            
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
                             <TextBlock
-                                Text="{Binding ItemId, Converter={StaticResource ItemToItemDescriptionConverter}}"
-                                Grid.Column="0"
-                                FontSize="18"
-                                VerticalAlignment="Center"
-                                Foreground="White"
-                                FontWeight="Medium"
-                                FontFamily="../Assets/Fonts/Lato-Medium.ttf#Lato" />
+                                        Text="{Binding Converter={StaticResource ItemToItemNameConverter}}"
+                                        FontFamily="../Assets/Fonts/Lato-Bold.ttf#Lato"
+                                        Foreground="White"
+                                        Grid.Column="0"
+                                       Grid.Row="0"
+                                     Grid.RowSpan="2"
+                                HorizontalAlignment="Right"
+                                       VerticalAlignment="Center"
+                                Margin="8"
+                                        FontSize="18"
+                                        FontWeight="SemiBold" />
 
-                            <Image Source="{Binding ItemId, Converter={StaticResource ItemIdToItemIconConverter}}"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
+                            <Ellipse Grid.Row="0"
+                                     Grid.RowSpan="2"
+                                     Grid.Column="1"
+                                     Height="64"
+                              Width="64"
+                                     Stroke="White"
+                                     StrokeThickness="3">
+                                <Ellipse.Fill>
+                                    <SolidColorBrush Color="White" 
+                                                     Opacity="0.5"/>
+                                </Ellipse.Fill>
+                            </Ellipse>
+
+                            <Image Grid.Row="0"
                                    Grid.Column="1"
-                                   Height="36"
-                                   Width="36"
-                                   Margin="16" />
-
-                            <TextBlock Grid.Column="1"
-                                       VerticalAlignment="Bottom"
-                                       Foreground="Red">
+                                        Source="{Binding Converter={StaticResource ItemToItemIconConverter}, ConverterParameter=Inventory}"
+                                        Stretch="Uniform"
+                                        VerticalAlignment="Center"
+                                        Width="48"
+                                        Height="48"
+                                        Margin="3,0"
+                                        Grid.RowSpan="2" />
+                            <Border Grid.Row="1" 
+                                    Grid.Column="1"
+                                            HorizontalAlignment="Right"
+                                            VerticalAlignment="Bottom"                                            
+                                            Background="#CCD3D3D3" 
+                                            CornerRadius="8" 
+                                            Padding="3,1">
+                                <TextBlock Style="{StaticResource BodyTextBlockStyle}"
+                                                   TextAlignment="Center"
+                                           Foreground="Red">
                                 <Run Text="+" />
                                 <Run Text="{Binding ItemCount}" />
-                            </TextBlock>
+                                </TextBlock>
+                            </Border>
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>
@@ -589,7 +624,7 @@
             </Button>
 
             <Border CornerRadius="8,0,0,8"
-                    x:Name="NearbyPokemonGrid"
+                    x:Name="NearbyPokemonBorder"
                     BorderThickness="2,2,0,2"
                     BorderBrush="#abefca"
                     VerticalAlignment="Center"
@@ -639,22 +674,21 @@
 
         </Grid>
 
-        <Grid RelativePanel.AlignBottomWithPanel="True"
-              RelativePanel.AlignLeftWithPanel="True"
-              RelativePanel.AlignRightWithPanel="True"
-              Canvas.ZIndex="1"
-              Background="Transparent"
-              Height="200">
-            <Button
-                Style="{ThemeResource ButtonNoStyle}"
-                Height="{ThemeResource UiButtonSize}"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top"
-                x:Name="ReactivateMapAutoUpdate" Tapped="ReactivateMapAutoUpdate_Tapped"
-                FontSize="36" Margin="0,0,20,0">
-                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE81D;" Width="42" Height="36" FontSize="24"
-                          Foreground="#FF00FF2E" />
-            </Button>
-        </Grid>
+			<Button
+				x:Name="ReactivateMapAutoUpdate" 
+				Canvas.ZIndex="1"
+				Style="{ThemeResource ImageButtonStyle}"
+				Height="{ThemeResource UiButtonSize}"
+				HorizontalAlignment="Right"
+				Tapped="ReactivateMapAutoUpdate_Tapped"
+				FontSize="36" Margin="0,150,34,0" 
+				RelativePanel.AlignVerticalCenterWithPanel="True" 
+				RelativePanel.AlignRightWithPanel="True">
+				<Image Source="../Assets/Icons/RecenterMapIcon.png"
+                       Stretch="Uniform"
+                       HorizontalAlignment="Stretch" 
+							 Height="32"/>
+
+			</Button>
     </RelativePanel>
 </Page>

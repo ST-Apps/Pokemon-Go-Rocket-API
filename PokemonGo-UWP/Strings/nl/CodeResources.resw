@@ -28,7 +28,7 @@
     <value>Gebruikersgegevens ophalen...</value>
   </data>
   <data name="GoogleErrorText" xml:space="preserve">
-    <value>Google fout geretourneerd: </value>
+    <value>Google geeft een fout terug: </value>
   </data>
   <data name="GoogleNotRespondingText" xml:space="preserve">
     <value>Google reageert niet, probeer later opnieuw.</value>
@@ -40,22 +40,22 @@
     <value>Aanmelden...</value>
   </data>
   <data name="LoginFailedText" xml:space="preserve">
-    <value>De aanmelding is mislukt, probeer het a.u.b. opnieuw.</value>
+    <value>De aanmelding is mislukt, probeer het later opnieuw.</value>
   </data>
   <data name="NoText" xml:space="preserve">
     <value>Nee</value>
   </data>
   <data name="NoGpsPermissionsText" xml:space="preserve">
-    <value>We moeten de GPS machtigingen voor het uitvoeren van het spel, kunt u in staat stellen en probeer het opnieuw.</value>
+    <value>Voor dit spel zijn GPS machtigingen nodig. Activeer deze in je telefoon en probeer het opnieuw.</value>
   </data>
   <data name="PokemonRanAwayText" xml:space="preserve">
     <value>Pokemon weggelopen, jammer :(</value>
   </data>
   <data name="PtcDownText" xml:space="preserve">
-    <value>PTC login is waarschijnlijk down, gelieve later opnieuw te proberen.</value>
+    <value>PTC login is waarschijnlijk offline, probeer later opnieuw.</value>
   </data>
   <data name="SomethingWentWrongText" xml:space="preserve">
-    <value>Er ging iets mis en app kan onstabiel zijn nu. U wilt uitloggen en opnieuw proberen?</value>
+    <value>Er ging iets mis en app kan nu onstabiel zijn. Wil je uitloggen en opnieuw proberen?</value>
   </data>
   <data name="TimeFormat" xml:space="preserve">
     <value>uu:mm tt</value>
@@ -67,7 +67,7 @@
     <value>Het installeren van update, opstarten app...</value>
   </data>
   <data name="WrongUsernameText" xml:space="preserve">
-    <value>Verkeerde gebruikersnaam/wachtwoord of server off line, probeer het a.u.b. opnieuw.</value>
+    <value>Verkeerde gebruikersnaam/wachtwoord of de server is offline, probeer het later opnieuw.</value>
   </data>
   <data name="YesText" xml:space="preserve">
     <value>Ja</value>
@@ -79,7 +79,7 @@
     <value>Geen Team</value>
   </data>
   <data name="ValorTeamText" xml:space="preserve">
-    <value>VALOR</value>
+    <value>Valor</value>
   </data>
   <data name="MysticTeamText" xml:space="preserve">
     <value>Mystic</value>

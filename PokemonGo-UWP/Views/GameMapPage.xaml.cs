@@ -116,7 +116,7 @@ namespace PokemonGo_UWP.Views
             if (e.Parameter != null && e.NavigationMode != NavigationMode.Back)
             {
                 var mode =
-                    ((JObject) JsonConvert.DeserializeObject((string) e.Parameter)).Last
+                    ((JObject)JsonConvert.DeserializeObject((string)e.Parameter)).Last
                         .ToObject<GameMapNavigationModes>();
                 if (mode == GameMapNavigationModes.AppStart || mode == GameMapNavigationModes.SettingsUpdate)
                     SetupMap();
@@ -191,17 +191,17 @@ namespace PokemonGo_UWP.Views
                         ReactivateMapAutoUpdate.Visibility = Visibility.Collapsed;
                         GameMapControl.Center = position.Coordinate.Point;
                         lastAutoPosition = GameMapControl.Center;
-                        if (!SettingsService.Instance.IsAutoRotateMapEnabled || position.Coordinate.Heading == null ||
-                            double.IsNaN(position.Coordinate.Heading.Value)) return;
-                        GameMapControl.Heading = position.Coordinate.Heading.Value;
-                        if (!SettingsService.Instance.IsRememberMapZoomEnabled) return;
-                        try
+
+                        if (SettingsService.Instance.IsAutoRotateMapEnabled == true && position.Coordinate.Heading != null)
+                        {
+                            GameMapControl.Heading = position.Coordinate.Heading.Value;
+                        }
+
+                        if (SettingsService.Instance.IsRememberMapZoomEnabled == true)
                         {
                             GameMapControl.ZoomLevel = SettingsService.Instance.Zoomlevel;
                         }
-                        catch
-                        {
-                        }
+
                     }
                     else
                     {
@@ -215,12 +215,19 @@ namespace PokemonGo_UWP.Views
         private void SubscribeToCaptureEvents()
         {
             GameClient.GeopositionUpdated += GeopositionUpdated;
+            GameClient.HeadingUpdated += HeadingUpdated;
             ViewModel.LevelUpRewardsAwarded += ViewModelOnLevelUpRewardsAwarded;
+        }
+
+        private void HeadingUpdated(object sender, Windows.Devices.Sensors.CompassReading e)
+        {
+            GameMapControl.Heading = e.HeadingTrueNorth ?? e.HeadingMagneticNorth;
         }
 
         private void UnsubscribeToCaptureEvents()
         {
             GameClient.GeopositionUpdated -= GeopositionUpdated;
+            GameClient.HeadingUpdated -= HeadingUpdated;
             ViewModel.LevelUpRewardsAwarded -= ViewModelOnLevelUpRewardsAwarded;
         }
 

@@ -25,13 +25,13 @@
     <value>使用 PTC 帳號登入</value>
   </data>
   <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
-    <value>登入需要使用您的使用者名稱/信箱與密碼，如果您不相信請關閉遊戲，我們並不負任何責任。</value>
+    <value>登入需要使用您的使用者名稱/信箱與密碼，如果您不信任這個應用程式請立即關閉，使用這應用程式帳號或許會遭到 Niantic 封鎖，請自行承擔風險。</value>
   </data>
   <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
     <value>附近</value>
   </data>
   <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
-    <value>超出範圍外</value>
+    <value>補給站太遠了</value>
   </data>
   <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
     <value>密碼</value>
@@ -103,6 +103,9 @@
   <data name="IncubatorsTextBlock.Text" xml:space="preserve">
     <value>孵蛋器</value>
   </data>
+  <data name="SettingsUseNianticMapTextBlock.Text" xml:space="preserve">
+    <value>使用 Niantic 地圖</value>
+  </data>
   <data name="HpTextBlock.Text" xml:space="preserve">
     <value>HP </value>
   </data>
@@ -127,5 +130,17 @@
   <data name="CandyTextBlock.Text" xml:space="preserve">
     <value> 糖果</value>
     <comment>Watch out: space before the word!</comment>
+  </data>
+  <data name="EvolveButton.Content" xml:space="preserve">
+    <value>進化</value>
+  </data>
+  <data name="PowerUpButton.Content" xml:space="preserve">
+    <value>強化</value>
+  </data>
+  <data name="TransferButton.Content" xml:space="preserve">
+    <value>轉換成糖果</value>
+  </data>
+  <data name="SettingsRememberMapZoomTextBlock" xml:space="preserve">
+    <value>記住地圖縮放</value>
   </data>
 </root>
