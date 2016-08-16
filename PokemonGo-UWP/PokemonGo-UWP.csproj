@@ -477,6 +477,7 @@
     <Content Include="Assets\Fonts\Lato-Regular.ttf" />
     <Content Include="Assets\Fonts\Lato-Bold.ttf" />
     <None Include="project.json" />
+    <PRIResource Include="Strings\en-US\Pokedex.resw" />
     <PRIResource Include="Strings\de-CH\Resources.resw" />
     <PRIResource Include="Strings\de-CH\PokemonTypes.resw" />
     <PRIResource Include="Strings\de-CH\PokemonMoves.resw" />
@@ -579,7 +580,9 @@
     <PRIResource Include="Strings\en-US\Achievements.resw" />
     <PRIResource Include="Strings\en-US\PokemonMoves.resw" />
     <PRIResource Include="Strings\en-US\Items.resw" />
-    <PRIResource Include="Strings\en-US\Resources.resw" />
+    <PRIResource Include="Strings\en-US\Resources.resw">
+      <SubType>Designer</SubType>
+    </PRIResource>
     <PRIResource Include="Strings\en-US\Pokemon.resw" />
     <PRIResource Include="Strings\es\Achievements.resw" />
     <PRIResource Include="Strings\es\CodeResources.resw" />
@@ -687,6 +690,7 @@
     <Compile Include="Utils\Achievements\GoldAttribute.cs" />
     <Compile Include="Utils\Achievements\AchievementType.cs" />
     <Compile Include="Utils\ApplicationKeys.cs" />
+    <Compile Include="Utils\Game\DataTemplateSelectors.cs" />
     <Compile Include="Utils\Game\FortDataStatus.cs" />
     <Compile Include="Utils\Helpers\AsyncSynchronisationContext.cs" />
     <Compile Include="Utils\Helpers\AudioUtils.cs" />
@@ -719,6 +723,7 @@
     <Compile Include="ViewModels\GameMapPageViewModel.cs" />
     <Compile Include="ViewModels\AchievementDetailPageViewModel.cs" />
     <Compile Include="ViewModels\PlayerProfileViewModel.cs" />
+    <Compile Include="ViewModels\PokedexPageViewModel.cs" />
     <Compile Include="ViewModels\PokemonDetailsPageViewModel.cs" />
     <Compile Include="ViewModels\ItemsInventoryPageViewModel.cs" />
     <Compile Include="ViewModels\PokemonInventoryPageViewModel.cs" />
@@ -733,6 +738,9 @@
     </Compile>
     <Compile Include="Views\PlayerProfilePage.xaml.cs">
       <DependentUpon>PlayerProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PokedexPage.xaml.cs">
+      <DependentUpon>PokedexPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PokemonDetailPage.xaml.cs">
       <DependentUpon>PokemonDetailPage.xaml</DependentUpon>
@@ -817,6 +825,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\PlayerProfilePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PokedexPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
