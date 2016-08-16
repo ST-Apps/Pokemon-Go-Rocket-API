@@ -156,7 +156,7 @@
         </trans-unit>
         <trans-unit id="BadgeSmallRattataDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Rattata</source>
-          <target state="translated">遇到过 {0} 个短裤少年</target>
+          <target state="translated">抓到过 {0} 只小拉达</target>
         </trans-unit>
         <trans-unit id="BadgeTravelKmDescription" translate="yes" xml:space="preserve">
           <source>Walked {0} km</source>
@@ -330,11 +330,11 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="YesText" translate="yes" xml:space="preserve">
           <source>Yes</source>
-          <target state="new">Yes</target>
+          <target state="translated">是</target>
         </trans-unit>
         <trans-unit id="InstinctTeamText" translate="yes" xml:space="preserve">
           <source>Instinct</source>
-          <target state="translated">属性</target>
+          <target state="translated">Instinct 阵营</target>
         </trans-unit>
         <trans-unit id="NoTeamText" translate="yes" xml:space="preserve">
           <source>No Team</source>
@@ -342,19 +342,19 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="ValorTeamText" translate="yes" xml:space="preserve">
           <source>Valor</source>
-          <target state="translated">勇者</target>
+          <target state="translated">Valor 阵营</target>
         </trans-unit>
         <trans-unit id="MysticTeamText" translate="yes" xml:space="preserve">
           <source>Mystic</source>
-          <target state="translated">神秘</target>
+          <target state="translated">Mystic 阵营</target>
         </trans-unit>
         <trans-unit id="TransferPokemonSuccessText" translate="yes" xml:space="preserve">
           <source>Transfer succeeded! Got a {0} Candy from the Professor.</source>
-          <target state="translated">成功放生！从教授那里得到了 {0} 个糖果。</target>
+          <target state="translated">转换成功！从博士那里得到了 {0} 个糖果。</target>
         </trans-unit>
         <trans-unit id="TransferPokemonWarningText" translate="yes" xml:space="preserve">
           <source>You can't take it back after it's transferred to the Professor. Do you really want to transfer {0} to the Professor?</source>
-          <target state="translated">放生给教授之后就拿不回来了，你真的要把 {0} 放生给教授吗？</target>
+          <target state="translated">转换给博士之后就拿不回来了，你真的要把 {0} 放生给博士吗？</target>
         </trans-unit>
         <trans-unit id="LoginExpired" translate="yes" xml:space="preserve">
           <source>Previous login expired.</source>
@@ -366,16 +366,16 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="ActivityCatchPokemon" translate="yes" xml:space="preserve">
           <source>Pokémon Caught</source>
-          <target state="translated">捕抓的宝可梦</target>
+          <target state="translated">抓到宝可梦</target>
         </trans-unit>
         <trans-unit id="ActivityCatchLegendPokemon" translate="yes" xml:space="preserve">
           <source>Catch Legendary Pokémon</source>
-          <target state="needs-review-translation">捕抓传奇宝可梦</target>
+          <target state="needs-review-translation">捕抓传说中的宝可梦</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="ActivityFleePokemon" translate="yes" xml:space="preserve">
           <source>Pokémon Fled</source>
-          <target state="translated">逃跑的宝可梦</target>
+          <target state="translated">宝可梦逃跑了</target>
         </trans-unit>
         <trans-unit id="ActivityDefeatFort" translate="yes" xml:space="preserve">
           <source>Defeat Fort</source>
@@ -419,7 +419,7 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="ActivityCatchFirstCatchOfDay" translate="yes" xml:space="preserve">
           <source>First Catch of Day!</source>
-          <target state="translated">当日首抓！</target>
+          <target state="translated">今日首抓！</target>
         </trans-unit>
         <trans-unit id="ActivityCatchMilestone" translate="yes" xml:space="preserve">
           <source>Catch Milestone</source>
@@ -455,7 +455,7 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="ActivityDefeatGymLeader" translate="yes" xml:space="preserve">
           <source>Defeat Gym Leader</source>
-          <target state="translated">击败了道馆的首领</target>
+          <target state="translated">击败了道馆的馆主</target>
         </trans-unit>
       </group>
     </body>
@@ -476,7 +476,7 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="InventoryFullTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Your inventory is full!</source>
-          <target state="translated">你的仓库满了！</target>
+          <target state="translated">你的背包满了！</target>
         </trans-unit>
         <trans-unit id="PtcLoginTextBlock.Text" translate="yes" xml:space="preserve">
           <source>LOGIN with PTC Account</source>
@@ -493,8 +493,7 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="OutOfRangeTextBlock.Text" translate="yes" xml:space="preserve">
           <source>THIS POKÉSTOP IS TOO FAR AWAY</source>
-          <target state="needs-review-translation">您超出范围了</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated">补给站离你太远了</target>
         </trans-unit>
         <trans-unit id="LoginPasswordPasswordBox.PlaceholderText" translate="yes" xml:space="preserve">
           <source>Password</source>
@@ -531,7 +530,7 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="ItemsTextBlock.Text" translate="yes" xml:space="preserve">
           <source>ITEMS</source>
-          <target state="translated">物品</target>
+          <target state="translated">背包</target>
         </trans-unit>
         <trans-unit id="PokedexTextBlock.Text" translate="yes" xml:space="preserve">
           <source>POKÉDEX</source>
@@ -539,7 +538,7 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="LowercaseItemsTextBlock.Text" translate="yes" xml:space="preserve">
           <source>items</source>
-          <target state="translated">物品</target>
+          <target state="translated">道具</target>
         </trans-unit>
         <trans-unit id="NumberTextBlock.Text" translate="yes" xml:space="preserve">
           <source># </source>
@@ -622,27 +621,27 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="SettingsMusicTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Music</source>
-          <target state="new">Music</target>
+          <target state="translated">开启音乐</target>
         </trans-unit>
         <trans-unit id="SettingsSignOutTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Sign Out</source>
-          <target state="new">Sign Out</target>
+          <target state="translated">登出</target>
         </trans-unit>
         <trans-unit id="SettingsVibrationTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Vibration</source>
-          <target state="new">Vibration</target>
+          <target state="translated">开启震动</target>
         </trans-unit>
         <trans-unit id="SettingsMapAutoRotateTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Auto-Rotate Map</source>
-          <target state="new">Auto-Rotate Map</target>
+          <target state="translated">自动旋转地图</target>
         </trans-unit>
         <trans-unit id="SettingsUseNianticMapTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Use Niantic Map</source>
-          <target state="new">Use Niantic Map</target>
+          <target state="translated">使用任天堂地图</target>
         </trans-unit>
         <trans-unit id="SettingsRememberMapZoomTextBlock" translate="yes" xml:space="preserve">
           <source>Remember Map Zoom</source>
-          <target state="new">Remember Map Zoom</target>
+          <target state="translated">记住地图缩放</target>
         </trans-unit>
       </group>
     </body>
@@ -655,51 +654,51 @@ Open page with installation files for manual install?</source>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/ITEMS.RESW" datatype="resx">
         <trans-unit id="D_ItemGreatBall" translate="yes" xml:space="preserve">
           <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
-          <target state="translated">捕捉宠物小精灵的道具，比精灵球有更高的概率成功。</target>
+          <target state="translated">捕捉宝可梦的道具，比精灵球有更高的概率成功。</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseCool" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
-          <target state="translated">迷香的神秘芳香将野生小精灵吸引到你所在的位置，持续时间30分钟</target>
+          <target state="translated">迷香的神秘芳香将野生宝可梦吸引到你所在的位置，持续时间30分钟</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseFloral" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
-          <target state="translated">迷香的神秘芳香将野生小精灵吸引到你所在的位置，持续时间30分钟</target>
+          <target state="translated">迷香的神秘芳香将野生宝可梦吸引到你所在的位置，持续时间30分钟</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseOrdinary" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
-          <target state="translated">迷香的神秘芳香将野生小精灵吸引到你所在的位置，持续时间30分钟</target>
+          <target state="translated">迷香的神秘芳香将野生宝可梦吸引到你所在的位置，持续时间30分钟</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseSpicy" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
-          <target state="translated">迷香的神秘芳香将野生小精灵吸引到你所在的位置，持续时间30分钟</target>
+          <target state="translated">迷香的神秘芳香将野生宝可梦吸引到你所在的位置，持续时间30分钟</target>
         </trans-unit>
         <trans-unit id="D_ItemIncubatorBasic" translate="yes" xml:space="preserve">
           <source>A device that incubates an Egg as you walk until it is ready to hatch.</source>
-          <target state="translated">将精灵蛋放在孵蛋器里，然后你走路的时候就开始孵蛋了。</target>
+          <target state="translated">将宝可梦蛋放在孵蛋器里，然后你走路的时候就开始孵蛋了。</target>
         </trans-unit>
         <trans-unit id="D_ItemIncubatorBasicUnlimited" translate="yes" xml:space="preserve">
           <source>A device that incubates an Egg as you walk until it is ready to hatch.</source>
-          <target state="translated">将精灵蛋放在孵蛋器里，然后你走路的时候就开始孵蛋了，可无限使用。</target>
+          <target state="translated">将宝可梦蛋放在孵蛋器里，然后你走路的时候就开始孵蛋了，可无限使用。</target>
         </trans-unit>
         <trans-unit id="D_ItemMasterBall" translate="yes" xml:space="preserve">
           <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
-          <target state="translated">捕捉宠物小精灵的道具，一定能捕捉到野生神奇宝贝的最高性能的宝贝球。</target>
+          <target state="translated">捕捉宠物小精灵的道具，一定能捕捉到野生宝可梦的最高性能的宝贝球。</target>
         </trans-unit>
         <trans-unit id="D_ItemPokeBall" translate="yes" xml:space="preserve">
           <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
-          <target state="translated">可以捕捉到野生神奇宝贝的装置，像丢球一样丢向目标。</target>
+          <target state="translated">可以捕捉到野生宝可梦的装置，像丢球一样丢向目标。</target>
         </trans-unit>
         <trans-unit id="D_ItemPotion" translate="yes" xml:space="preserve">
           <source>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 20 points.</source>
-          <target state="translated">喷雾型的药水，可以回复一只神奇宝贝20点HP。</target>
+          <target state="translated">喷雾型的药水，可以回复一只宝可梦20点HP。</target>
         </trans-unit>
         <trans-unit id="D_ItemRevive" translate="yes" xml:space="preserve">
           <source>A medicine that can revive fainted Pokémon. It also restores half of a fainted Pokémon's maximum HP.</source>
-          <target state="translated">让一只神奇宝贝从濒死的状态恢复精神，并回复一半的HP。</target>
+          <target state="translated">让一只宝可梦从濒死的状态恢复精神，并回复一半的HP。</target>
         </trans-unit>
         <trans-unit id="D_ItemUltraBall" translate="yes" xml:space="preserve">
           <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
-          <target state="translated">捕捉宠物小精灵的道具，比超级球更容易捕捉到神奇宝贝的性能好的宝贝球。</target>
+          <target state="translated">捕捉宝可梦的道具，比超级球更容易捕捉到宝可梦的性能好的宝贝球。</target>
         </trans-unit>
         <trans-unit id="ItemBlukBerry" translate="yes" xml:space="preserve">
           <source>Bluk Berry</source>
@@ -719,7 +718,7 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="ItemIncenseFloral" translate="yes" xml:space="preserve">
           <source>Incense Floral</source>
-          <target state="translated">植物迷香</target>
+          <target state="translated">鲜花迷香</target>
         </trans-unit>
         <trans-unit id="ItemIncenseOrdinary" translate="yes" xml:space="preserve">
           <source>Incense Ordinary</source>
@@ -811,15 +810,15 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="ItemXAttack" translate="yes" xml:space="preserve">
           <source>X Attack</source>
-          <target state="translated">X 攻击</target>
+          <target state="translated">力量增强</target>
         </trans-unit>
         <trans-unit id="ItemXDefense" translate="yes" xml:space="preserve">
           <source>X Defense</source>
-          <target state="translated">X 防御</target>
+          <target state="translated">伤害预防</target>
         </trans-unit>
         <trans-unit id="ItemXMiracle" translate="yes" xml:space="preserve">
           <source>X Miracle</source>
-          <target state="translated">X 奇迹</target>
+          <target state="translated">奇迹增强</target>
         </trans-unit>
       </group>
     </body>
