@@ -161,10 +161,10 @@ namespace PokemonGo_UWP.ViewModels
         ///     Going back to map page
         /// </summary>
         public DelegateCommand AbandonPokestop => _abandonPokestop ?? (
-            _abandonPokestop = new DelegateCommand(async () =>
+            _abandonPokestop = new DelegateCommand(() =>
             {
                 // Re-enable update timer
-                await GameClient.ToggleUpdateTimer();
+                GameClient.ToggleUpdateTimer();
                 NavigationService.GoBack();
             }, () => true)
             );

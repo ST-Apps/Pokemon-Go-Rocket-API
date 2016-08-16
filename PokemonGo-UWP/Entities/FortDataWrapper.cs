@@ -58,11 +58,11 @@ namespace PokemonGo_UWP.Entities
         ///     the actual capture method.
         /// </summary>
         public DelegateCommand TrySearchPokestop => _trySearchPokestop ?? (
-            _trySearchPokestop = new DelegateCommand(async () =>
+            _trySearchPokestop = new DelegateCommand(() =>
             {
                 NavigationHelper.NavigationState["CurrentPokestop"] = this;
                 // Disable map update
-                await GameClient.ToggleUpdateTimer(false);
+                GameClient.ToggleUpdateTimer(false);
                 BootStrapper.Current.NavigationService.Navigate(typeof(SearchPokestopPage));
             }, () => true)
             );
