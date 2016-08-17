@@ -22,6 +22,10 @@ using Windows.UI.Xaml.Controls.Maps;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
+using Template10.Common;
+using Windows.UI.ViewManagement;
+using Windows.Graphics.Display;
+using Windows.Foundation;
 
 namespace PokemonGo_UWP.Utils
 {
@@ -1281,5 +1285,26 @@ namespace PokemonGo_UWP.Utils
         }
 
         #endregion
+    }
+    public class WidthConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            int maxColumns = (int)value;
+            Thickness margins = parameter != null ? new Thickness(Int32.Parse(parameter.ToString())) : new Thickness(0);//(Thickness)parameter;
+            var bounds = ApplicationView.GetForCurrentView().VisibleBounds;
+            var scaleFactor = 1;//DisplayInformation.GetForCurrentView().RawPixelsPerViewPixel;
+            var size = new Size(bounds.Width * scaleFactor, bounds.Height * scaleFactor);
+            var res = (size.Width / maxColumns) - margins.Left - margins.Right;
+            
+            //https://msdn.microsoft.com/en-us/windows/uwp/layout/design-and-ui-intro#effective-pixels-and-scaling
+            var width = ((int)res / 4) * 4; //round to 4 - win 10 optimized 
+            return width;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

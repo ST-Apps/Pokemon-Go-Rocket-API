@@ -53,8 +53,16 @@
             </converters:ValueWhenConverter.Otherwise>
         </converters:ValueWhenConverter>
 
+        <x:Int32 x:Key="MinItemsForRow">3</x:Int32>
+
         <DataTemplate x:Key="PokemonSeen">
-            <Grid Margin="8,4,8,4" Width="92" Height="92">
+            <Grid Margin="8,4,8,4" MinWidth="80" MinHeight="80" MaxWidth="92" MaxHeight="92">
+                <Grid.Width>
+                    <Binding Converter="{StaticResource WidthConverter}" Source="{StaticResource MinItemsForRow}" ConverterParameter="10"/>
+                </Grid.Width>
+                <Grid.Height>
+                    <Binding Converter="{StaticResource WidthConverter}" Source="{StaticResource MinItemsForRow}" ConverterParameter="10"/>
+                </Grid.Height>
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Tapped">
                         <core:InvokeCommandAction Command="{Binding DataContext.OpenPokedexEntry, ElementName=page}" CommandParameter="{Binding}" />
@@ -74,7 +82,9 @@
                 <TextBlock Text="{Binding Key, Converter={StaticResource PokemonIdToPokemonNameConverter}}"
                            Style="{StaticResource BodyTextBlockStyle}"
                            Grid.Row="1"
-                           TextAlignment="Center"/>
+                           TextAlignment="Center"
+                           TextTrimming="CharacterEllipsis"
+                           TextWrapping="NoWrap"/>
             </Grid>
         </DataTemplate>
         <DataTemplate x:Key="PokemonUnseen">
@@ -90,7 +100,9 @@
                            Typography.SlashedZero="True"
                            HorizontalAlignment="Center" 
                            VerticalAlignment="Center" 
-                           Foreground="White" />
+                           Foreground="White" >
+                    
+                </TextBlock>
             </Grid>
         </DataTemplate>
     </Page.Resources>
@@ -119,15 +131,15 @@
         </TextBlock>
         <GridView ItemsSource="{Binding PokemonFoundAndSeen}" 
                   Grid.Row="2"
-                  Canvas.ZIndex="0">
+                  Canvas.ZIndex="0"
+                  ScrollViewer.VerticalScrollMode="Auto"
+                  ScrollViewer.VerticalScrollBarVisibility="Hidden">
             <GridView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapGrid Orientation="Horizontal"
                               HorizontalAlignment="Center"
                               VerticalChildrenAlignment="Top"
-                              MaximumRowsOrColumns="5" 
-                              ScrollViewer.VerticalScrollMode="Auto"
-                              ScrollViewer.VerticalScrollBarVisibility="Hidden"/>
+                              MaximumRowsOrColumns="5" />
                 </ItemsPanelTemplate>
             </GridView.ItemsPanel>
             <GridView.ItemTemplateSelector>
@@ -148,6 +160,7 @@
                        Stretch="Uniform"
                        HorizontalAlignment="Stretch" />
         </Button>
+
         <ScrollViewer x:Name="scrollPokedexEntry"
                       Grid.Row="0" 
                       Grid.RowSpan="3" 
@@ -157,7 +170,7 @@
                       Visibility="{Binding IsPokemonDetailsOpen, Converter={StaticResource BoolVisibility}}"
                       >
             <Grid Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                <Grid HorizontalAlignment="Center" MaxWidth="800">
+                <Grid HorizontalAlignment="Center" MaxWidth="800" MinWidth="320">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <!-- Image -->
@@ -174,26 +187,26 @@
                         <RowDefinition Height="Auto"/>
                         <!-- Description -->
                         <RowDefinition Height="Auto"/>
-                        <!-- Nickname -->
+                        <!-- Evolutions -->
                     </Grid.RowDefinitions>
                     <Image Source="{Binding SelectedPokedexEntry.Key, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}" 
                        Stretch="Uniform"
                        Height="250"
                        HorizontalAlignment="Center"
-                       Margin="16"
+                       Margin="8,16"
                        Grid.Row="0"/>
-                    <StackPanel Grid.Row="1" Margin="16,4" Orientation="Horizontal" HorizontalAlignment="Stretch">
+                    <StackPanel Grid.Row="1" Margin="8,4" Orientation="Horizontal" HorizontalAlignment="Stretch">
                         <Image Source="/Assets/UI/Pokeball.png" Height="16" Width="16" VerticalAlignment="Bottom" Visibility="{Binding SelectedPokedexEntry.Value.TimesCaptured, Converter={StaticResource IntVisibility}}" Margin="0,0,0,8.666"/>
                         <TextBlock Text="{Binding SelectedPokedexEntry.Key, Converter={StaticResource PokemonIdToNumericId}}" FontSize="20" Margin="4,0,0,4.666" Typography.Capitals="AllSmallCaps" VerticalAlignment="Bottom"/>
                         <TextBlock Text="{Binding SelectedPokedexEntry.Key, Converter={StaticResource PokemonIdToPokemonNameConverter}}" Typography.Capitals="AllSmallCaps" FontSize="32" Margin="4,0,0,0" VerticalAlignment="Bottom" CharacterSpacing="-60" FontWeight="Thin" HorizontalAlignment="Center"/>
                     </StackPanel>
-                    <TextBlock Grid.Row="2" Margin="16,4" HorizontalAlignment="Left">
+                    <TextBlock Grid.Row="2" Margin="8,4" HorizontalAlignment="Left">
                         <Run x:Uid="PokedexSeen" Text="Seen:"/>
                         <Run Text="{Binding SelectedPokedexEntry.Value.TimesEncountered}"/>
                         <Run x:Uid="PokedexCaught" Text="Caught:"/>
                         <Run Text="{Binding SelectedPokedexEntry.Value.TimesCaptured}"/>
                     </TextBlock>
-                    <TextBlock Grid.Row="3" Margin="16,4" HorizontalAlignment="Left">
+                    <TextBlock Grid.Row="3" Margin="8,4" HorizontalAlignment="Left">
                         <Run x:Uid="PokedexPokemonWeight" Text="Weight:"/>
                         <Run Text="{Binding PokemonDetails.PokedexWeightKg}"/>
                         <Run Text="kg "/>
@@ -201,23 +214,23 @@
                         <Run Text="{Binding PokemonDetails.PokedexHeightM}"/>
                         <Run Text="m"/>
                     </TextBlock>
-                    <TextBlock Grid.Row="4" Margin="16,4" HorizontalAlignment="Left" Visibility="{Binding PokemonDetails.Type2, Converter={StaticResource VisibleWhenTypeIsNotNoneConverter}}">
+                    <TextBlock Grid.Row="4" Margin="8,4" HorizontalAlignment="Left" Visibility="{Binding PokemonDetails.Type2, Converter={StaticResource VisibleWhenTypeIsNotNoneConverter}}">
                         <Run x:Uid="PokedexPokemonType" Text="Type:"/>
                         <Run Text="{Binding PokemonDetails.Type}"/>
                         <Run Text="/"/>
                         <Run Text="{Binding PokemonDetails.Type2}"/>
                     </TextBlock>
-                    <TextBlock Grid.Row="4" Margin="16,4" HorizontalAlignment="Left" Visibility="{Binding PokemonDetails.Type2, Converter={StaticResource InverseVisibleWhenTypeIsNotNoneConverter}}">
+                    <TextBlock Grid.Row="4" Margin="8,4" HorizontalAlignment="Left" Visibility="{Binding PokemonDetails.Type2, Converter={StaticResource InverseVisibleWhenTypeIsNotNoneConverter}}">
                         <Run x:Uid="PokedexPokemonType" Text="Type:"/>
                         <Run Text="{Binding PokemonDetails.Type}"/>
                     </TextBlock>
-                    <TextBlock Grid.Row="5" Margin="16,4" HorizontalAlignment="Left">
+                    <TextBlock Grid.Row="5" Margin="8,4" HorizontalAlignment="Left">
                         <Run Text=""/> <!-- Bug Pokemon, Flying Pokemon etc etc-->
                     </TextBlock>
-                    <TextBlock Grid.Row="6" Margin="16,4" TextWrapping="Wrap" HorizontalAlignment="Left">
+                    <TextBlock Grid.Row="6" Margin="8,4" TextWrapping="Wrap" HorizontalAlignment="Left">
                         <Run Text="{Binding SelectedPokedexEntry.Key, Converter={StaticResource PokemonIdToPokedexDescription}}"/>
                     </TextBlock>
-                    <StackPanel Grid.Row="7" Margin="16,4" HorizontalAlignment="Stretch">
+                    <StackPanel Grid.Row="7" Margin="0,4,0,96" HorizontalAlignment="Center">
                         <TextBlock x:Uid="PokedexEvolutions" Text="Evolutions" Typography.Capitals="AllSmallCaps" Margin="16,8" FontSize="28" HorizontalAlignment="Center" FontWeight="SemiBold"/>
                         <GridView ItemsSource="{Binding PokemonEvolutions}">
                             <GridView.ItemsPanel>

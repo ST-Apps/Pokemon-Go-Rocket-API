@@ -12,12 +12,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Template10.Mvvm;
+using Windows.ApplicationModel;
 using Windows.UI.Xaml.Navigation;
 
 namespace PokemonGo_UWP.ViewModels
 {
     public class PokedexPageViewModel : ViewModelBase
     {
+        public PokedexPageViewModel()
+        {
+            if (DesignMode.DesignModeEnabled)
+            {
+                PokedexEntry entry = new PokedexEntry() { PokemonId = PokemonId.Missingno, TimesCaptured = 0, TimesEncountered = 10 };
+                PokemonFoundAndSeen.Add(new KeyValuePair<PokemonId, PokedexEntry>(PokemonId.Missingno, entry));
+                CapturedPokemons = 10;
+                SeenPokemons = 15;
+            }
+        }
         #region Lifecycle Handlers
         public override Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> state)
         {

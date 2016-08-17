@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bulbasaur.Description" xml:space="preserve">
+    <value>ひなたで　ひるねを　する　すがたを　 かける。 たいようの　ひかりを　いっぱい　あびることで せなかの　タネが　おおきく　そだつのだ。</value>
+  </data>
+  <data name="Ivysaur.Description" xml:space="preserve">
+    <value>つぼ を　ささえるため　あしこしが　つよくなる。 ひなたで　じっとする　じかんが　ながくなれば いよいよ　たいりんの　はなが　さくころだ。</value>
+  </data>
+  <data name="Venusaur.Description" xml:space="preserve">
+    <value>じゅうぶんな　えいようと　たいようの　ひかりが はなの　いろを　あざやかに　すると　いわれる。 はなの　かおりは　ひとの　こころを　いやす。</value>
+  </data>
+  <data name="Charmander.Description" xml:space="preserve">
+    <value>しっぽの　ほのおは　きぶんを　ひょうげん。 たのしい　ときには　ゆらゆら　ほのおが　ゆれて おこった　ときには　めらめら　さかんに　もえる。</value>
+  </data>
+  <data name="Charmeleon.Description" xml:space="preserve">
+    <value>するどい　ツメで　ようしゃなく　たたきのめす。 きょうてきと　むかいあうと　きぶんが　たかぶり しっぽの　ほのおが　あおじろく　もえあがる。</value>
+  </data>
+  <data name="Charizard.Description" xml:space="preserve">
+    <value>つよい　あいてを　もとめて　そらを　とびまわる。 なんでも　とかして　しまう　こうねつの　ほのおを じぶんより　よわいものに　むけることは　しない。</value>
+  </data>
+  <data name="Squirtle.Description" xml:space="preserve">
+    <value>こうらの　やくめは　 を　まもる　だけではない。 まるい　かたちと　ひょうめんの　 ぞが　 ずの ていこうを　へらすので　はやく　およげるのだ。</value>
+  </data>
+  <data name="Wartortle.Description" xml:space="preserve">
+    <value>ふさふさの　けで　おおわれた　おおきな　しっぽは ながいき　するほど　ふかい　いろあいに　かわる。 こうらの　キズは　つわものの　あかし。</value>
+  </data>
+  <data name="Blastoise.Description" xml:space="preserve">
+    <value>こうらの　ふんしゃこうの　ねらいは　せいかく。  ずの　だんがんを　５０メートル　はなれた あきかんに　めいちゅうさせる　ことが　できるぞ。</value>
+  </data>
+  <data name="Caterpie.Description" xml:space="preserve">
+    <value>からだ　よりも　おおきな　はっぱを　 る る たべつくして　しまうほどの　しょくよくを　もつ。 しょっかくから　きょうれつな　においを　だすぞ。</value>
+  </data>
+  <data name="Metapod.Description" xml:space="preserve">
+    <value>からだの　カラは　てっぱんの　ように　かたい。 あまり　うごかないのは　カラのなかで　やわらかい なか が　しんかの　じゅんびを　しているからだ。</value>
+  </data>
+  <data name="Butterfree.Description" xml:space="preserve">
+    <value>おいしい　はなの　ミツを　さがす　のうりょくに すぐれ　す かから　１０キロはなれた　ばしょに さく　はなから　ミツを　あつめて　はこんでいる。</value>
+  </data>
+  <data name="Weedle.Description" xml:space="preserve">
+    <value>とても　するどい　きゅうかくを　もっている。 こうぶつの　はっぱか　きらいな　はっぱか おおきな　あかい　はなで　かぎわける。</value>
+  </data>
+  <data name="Kakuna.Description" xml:space="preserve">
+    <value>ほとんど　うごかず　きに　つかまっているが なかでは　しんかの　じゅんびで　おおいそがし。 その　しょうこに　からだが　あつくなっているぞ。</value>
+  </data>
+  <data name="Beedrill.Description" xml:space="preserve">
+    <value>なわばりいしきが　とても　つよいので　スピアーの す かには　ちかづかない　ほうが　 の　ためだ。 おこると　しゅうだんで　おそって　くるぞ。</value>
+  </data>
+  <data name="Pidgey.Description" xml:space="preserve">
+    <value>ほうこう　かんかくに　とても　すぐれているので どんなに　はなれた　ばしょからでも　まよわずに じぶんの　す　まで　かえる　ことが　できる。</value>
+  </data>
+  <data name="Pidgeotto.Description" xml:space="preserve">
+    <value>ひろい　なわばりを　とんで　 まわりを　する。 なわばりを　あらす　あいては　ようしゃ　しない。 するどい　ツメで　てっていてきに　こらしめるぞ。</value>
+  </data>
+  <data name="Pidgeot.Description" xml:space="preserve">
+    <value>うつくしい　こうたくの　はねを　もつ　ポケモン。 あたまの　はねの　うつくしさに　こころ　うばわれ ピジョットを　そだてる　トレーナーも　おおい。</value>
+  </data>
+  <data name="Rattata.Description" xml:space="preserve">
+    <value>けいかいしんが　とても　つよく　ねている　ときも   を　うごかし　まわりの　おとを　きいている。 どこにでも　す つき　す　を　つくる。</value>
+  </data>
+  <data name="Raticate.Description" xml:space="preserve">
+    <value>じょうぶな　キバは　どんどん　のびるので いわや　たいぼくを　かじって　けずっている。 いえの　カベを　かじられる　ことも　あるよ。</value>
+  </data>
+  <data name="Spearow.Description" xml:space="preserve">
+    <value>おおきな　なきごえは　１キロ　さきまで　とどく。 あちこちで　カンだかい　こえが　きこえる　ときは なかまたちに　きけんを　しらせている　あいずだ。</value>
+  </data>
+  <data name="Fearow.Description" xml:space="preserve">
+    <value>ながい　くびと　くちばしは　つちや　 ずの なかに　いる　エサを　つかまえるのに　べんり。 ほそながい　くちばしで　きように　つまむぞ。</value>
+  </data>
+  <data name="Ekans.Description" xml:space="preserve">
+    <value>ぐるぐる　からだを　まいて　やすんでいるのは どの　ほうこうから　てきが　おそってきても とっさに　あたまを　むけて　いかくできるからだ。</value>
+  </data>
+  <data name="Arbok.Description" xml:space="preserve">
+    <value>しめつける　ちからは　とても　きょうりょく。 ドラムかんも　ぺしゃんこに　してしまうぞ。 まきつかれたら　にげだす　ことは　ふかのうだ。</value>
+  </data>
+  <data name="Pikachu.Description" xml:space="preserve">
+    <value>ほっぺの　でんきぶくろの　でんきは　まよなか ねている　あいだに　ためられている　らしいよ。 ねぼけて　ほうでんしてしまう　ことが　ある。</value>
+  </data>
+  <data name="Raichu.Description" xml:space="preserve">
+    <value>よわい　でんきを　ぜんしんから　だしているので くらや では　うっすら　ひかって　 えるよ。 シッポを　じめんに　さして　でんきを　にがす。</value>
+  </data>
+  <data name="Sandshrew.Description" xml:space="preserve">
+    <value>からからに　かわいた　ひふは　とても　かたく まるくなると　どんな　こうげきでも　はねかえす。 よなかは　さばくの　すなに　もぐって　ねむる。</value>
+  </data>
+  <data name="Sandslash.Description" xml:space="preserve">
+    <value>せなかを　まるめると　トゲトゲの　ボール たい。 トゲに　さされて　ひるんだ　あいてに　とびかかり するどい　ツメで　ばりばり　ひっかきまくるぞ。</value>
+  </data>
+  <data name="NidoranFemale.Description" xml:space="preserve">
+    <value>ちいさい　からだを　まもるため　きょうりょくな どくばりが　はったつしたと　かんがえられている。 おこると　ツノの　さきから　もうどくを　だす。</value>
+  </data>
+  <data name="Nidorina.Description" xml:space="preserve">
+    <value>なかまや　かぞくと　いっしょの　ときは　おたがい きずつかないように　トゲが　ひっこんでいる。 なかまから　はなれると　ふあんに　なるらしい。</value>
+  </data>
+  <data name="Nidoqueen.Description" xml:space="preserve">
+    <value>かたい　ウロコで　おおわれた　からだを　ぶつけて あいてを　はじきとばす　こうげきが　とくいだ。 こどもを　まもる　ときが　いちばん　つよい。</value>
+  </data>
+  <data name="NidoranMale.Description" xml:space="preserve">
+    <value>  を　うごかす　きんにくが　はったつしていて どんな　むきにも　じざいに　  を　うごかせる。 かすかな　ものおとも　ききもらさない　ポケモン。</value>
+  </data>
+  <data name="Nidorino.Description" xml:space="preserve">
+    <value>ダイヤモンドよりも　かたい　ツノを　もつ。 てきの　けはいを　かんじると　せなかの　トゲが いっせいに　さかだち　ぜんりょくで　たちむかう。</value>
+  </data>
+  <data name="Nidoking.Description" xml:space="preserve">
+    <value>ふとい　しっぽの　ひとふりは　がんじょうな てっとうも　へしおる　すさまじい　はかいりょく。 いちど　あばれだすと　てが　つけられない。</value>
+  </data>
+  <data name="Clefairy.Description" xml:space="preserve">
+    <value>まんげつの　よるは　げんき　いっぱいに　あそぶ。 あけがた　つかれた　ピッピたちは　しずかな やまおくで　なかまたちと　よりそって　ねむる。</value>
+  </data>
+  <data name="Clefable.Description" xml:space="preserve">
+    <value>つばさを　つかって　とぶように　スキップ。 すいめんを　あるく　ことだって　できるのだ。 しずかな　つきよに　 ずう を　あるく。</value>
+  </data>
+  <data name="Vulpix.Description" xml:space="preserve">
+    <value>からだの　なかで　ほのおが　いつも　もえている。 ひるま　きおんが　あがると　たいおんも　たかく なってしまうので　くちから　ほのおを　にがす。</value>
+  </data>
+  <data name="Ninetales.Description" xml:space="preserve">
+    <value>９にんの　せいなる　ちからを　もった　せんにんが がったいして　うまれたという　でんせつが　ある。 ちのうが　たかく　ひとの　ことばを　りかいする。</value>
+  </data>
+  <data name="Jigglypuff.Description" xml:space="preserve">
+    <value>うたう　ときは　いちども　いきつぎをしない。 なかなか　ねむらない　てきを　あいてに　した ときは　いきを　できない　プリンも　いのちがけ。</value>
+  </data>
+  <data name="Wigglytuff.Description" xml:space="preserve">
+    <value>だんりょくせいに　すぐれた　からだは　おおきく いきを　すいこむと　どこまでも　ふくれていく。 ふくらんだ　プクリンは　ふんわり　はねるよ。</value>
+  </data>
+  <data name="Zubat.Description" xml:space="preserve">
+    <value>たいようの　ひかりを　あびると　たいちょうが わるくなるので　ひるまは　どうくつや　ふるびた いえの　のきしたに　ぶらさがって　ねている。</value>
+  </data>
+  <data name="Golbat.Description" xml:space="preserve">
+    <value>４ほんの　キバで　か つき　けつえきを　のむ。 つきの　でてない　まっくらな　よるは　かっぱつに とびまわり　ひとや　ポケモンを　おそうぞ。</value>
+  </data>
+  <data name="Oddish.Description" xml:space="preserve">
+    <value>えいよう　たっぷりの　つちを　さがして　うまる。 ひるま　つちに　うまっている　ときには　あしが きの　ねっこのような　かたちを　しているらしい。</value>
+  </data>
+  <data name="Gloom.Description" xml:space="preserve">
+    <value>どうやら　クサイハナは　くちから　たらしている もうれつに　くさい　ニオイが　だいすき　らしい。 ニオイを　かいで　さらに　 つを　あふれさせる。</value>
+  </data>
+  <data name="Vileplume.Description" xml:space="preserve">
+    <value>せかいいち　おおきな　はなびらで　えものを おびきよせ　どくの　かふんを　あびせかける。 うごけなくなった　えものを　つかまえて　たべる。</value>
+  </data>
+  <data name="Paras.Description" xml:space="preserve">
+    <value>パラスから　ようぶんを　すいとって　おおきくなる キノコは　とうちゅうかそう　と　よばれている。 ちょうじゅの　くすりになる　きちょうな　キノコ。</value>
+  </data>
+  <data name="Parasect.Description" xml:space="preserve">
+    <value>パラセクトは　しゅうだんで　たいぼくの　ねもとに くっついて　えいようを　すいとってしまう。 かれると　いっせいに　べつの　きに　いどうする。</value>
+  </data>
+  <data name="Venonat.Description" xml:space="preserve">
+    <value> を　まもるために　ほそく　かたい　たいもうが ぜんしんを　おおうように　なったと　いわれる。 ちいさな　えものも　 のがさない　めを　もつ。</value>
+  </data>
+  <data name="Venomoth.Description" xml:space="preserve">
+    <value>やこうせいで　よるに　かつどうを　はじめる。 がいとうの　あかりに　さそわれ　あつまった ちいさな　むしを　このんで　たべる。</value>
+  </data>
+  <data name="Diglett.Description" xml:space="preserve">
+    <value>ほとんどの　のうかは　ディグダを　そだてている。 ディグダが　あなを　ほった　とちは　ほどよく たがやされ　おいしい　やさいが　つくれるからだ。</value>
+  </data>
+  <data name="Dugtrio.Description" xml:space="preserve">
+    <value>もともと　ひとつの　からだから　３つごに なったので　 んな　かんがえることは　おなじ。 ちからを　あわせ　どこまでも　ほりすすむ。</value>
+  </data>
+  <data name="Meowth.Description" xml:space="preserve">
+    <value>するどい　ツメを　ひっこめて　ぬきあし　さしあし あしおとを　たてずに　あるくことが　できる。 キラキラ　ひかる　コインが　なぜか　だいすきだ。</value>
+  </data>
+  <data name="Persian.Description" xml:space="preserve">
+    <value>たくましい　６ぽんの　ヒゲは　くうきの　うごきで まわりの　ようすを　キャッチする　やくわり。 ヒゲを　つかまれると　おとなしくなって　しまう。</value>
+  </data>
+  <data name="Psyduck.Description" xml:space="preserve">
+    <value>ふしぎな　ちからを　つかった　きおくが　ないのは ちからを　はっきした　ときは　じゅくすいしている ときと　おなじ　じょうたいだから　らしい。</value>
+  </data>
+  <data name="Golduck.Description" xml:space="preserve">
+    <value>およぐ　スピードは　ポケモンじゅうで　いちばん。 あらしで　おおあれの　う でも　へっちゃら。 なんぱせんから　ひとを　たすける　ことも　ある。</value>
+  </data>
+  <data name="Mankey.Description" xml:space="preserve">
+    <value>からだが　ふるえ　はないきが　あらくなれば おこりだす　まえぶれ　なのだが　あっというまに はげしく　おこるので　にげだす　ひまは　ない。</value>
+  </data>
+  <data name="Primeape.Description" xml:space="preserve">
+    <value>はげしく　おこる　ことで　けっこうが　よくなり きんにくの　ちからを　つよくするのだ。 ただし　あたまの　かいてんは　おそくなるぞ。</value>
+  </data>
+  <data name="Growlithe.Description" xml:space="preserve">
+    <value>きゅうかくに　すぐれ　いちど　かいだ　においは なにが　あっても　ぜったいに　わすれない。 あいての　きもちを　においで　さっちする。</value>
+  </data>
+  <data name="Arcanine.Description" xml:space="preserve">
+    <value>１００００キロの　きょりを　いっちゅうやで はしると　いわれている　かいそくの　ポケモン。 たいないで　もえさかる　ほのおが　パワーとなる。</value>
+  </data>
+  <data name="Poliwag.Description" xml:space="preserve">
+    <value>うずまき　もようの　ないぞうが　すけてしまうほど うすい　ひふだが　するどい　キバを　はねかえす だんりょくを　もっているのだ。</value>
+  </data>
+  <data name="Poliwhirl.Description" xml:space="preserve">
+    <value>いつも　からだの　ひょうめんが　えきたいで ぬるぬる　ぬれているため　てきに　つかまっても ぬるりと　すりぬけ　にげる　ことが　できるぞ。</value>
+  </data>
+  <data name="Poliwrath.Description" xml:space="preserve">
+    <value>はったつした　きょうじんな　きんにくは　どんなに うんどうしても　つかれる　ことは　ない。 たいへいようも　かるく　おうだん　できるほどだ。</value>
+  </data>
+  <data name="Abra.Description" xml:space="preserve">
+    <value>まいにち　１８じかん　ねむらないと　ねぶそくで ちょうのうりょくが　つかえなくなってしまう。 おそわれると　ねたまま　テレポートで　にげる。</value>
+  </data>
+  <data name="Kadabra.Description" xml:space="preserve">
+    <value>ぎんの　スプーンは　アルファはを　たかめる。 スプーンが　ないと　いつもの　はんぶんしか ちょうのうりょくを　つかえなくなると　いう。</value>
+  </data>
+  <data name="Alakazam.Description" xml:space="preserve">
+    <value>むげんに　ふえる　のうさいぼうが　ちのうしすう ５０００の　スーパーずのうを　つくりだした。 せかいの　できごとを　すべて　きおくしている。</value>
+  </data>
+  <data name="Machop.Description" xml:space="preserve">
+    <value>ゴローンを　もちあげて　からだを　きたえる。 すべての　かくとうぎを　マスターするために せかいじゅうを　たびする　ワンリキーも　いる。</value>
+  </data>
+  <data name="Machoke.Description" xml:space="preserve">
+    <value>にんげんの　ちからしごとを　てつだいながら からだを　まいにち　きたえている　ポケモン。 やす の　ひには　のやまで　からだを　きたえる。</value>
+  </data>
+  <data name="Machamp.Description" xml:space="preserve">
+    <value>あらゆる　かくとうぎを　マスターした　ポケモン。 ４ほんの　うでで　つかまれたら　もう　おわり。 ちへいせんの　むこうまで　なげとばされてしまう。</value>
+  </data>
+  <data name="Bellsprout.Description" xml:space="preserve">
+    <value>ほそく　しなやかな　からだは　どんな　つよい こうげきでも　しなって　よける　ことが　できる。 くちから　てつも　とかしてしまう　えきを　だす。</value>
+  </data>
+  <data name="Weepinbell.Description" xml:space="preserve">
+    <value>よるに　なると　おしりの　フックを　きの　えだに ひっかけて　ぶらさがり　ねむりに　つく。 ねぞうが　わるいと　あさ　おっこちているよ。</value>
+  </data>
+  <data name="Victreebel.Description" xml:space="preserve">
+    <value>あたまに　ついた　ながい　つるを　ちいさな いきものの　ように　うごかし　えものを　さそう。 ちかづいてきた　ところを　ぱくりと　ひとの 。</value>
+  </data>
+  <data name="Tentacool.Description" xml:space="preserve">
+    <value>たいようこうせんを　からだの　なかの　すいぶんで くっせつさせて　ビームの　エネルギーに　かえる。 すいしょうの　ような　めだまから　はっしゃする。</value>
+  </data>
+  <data name="Tentacruel.Description" xml:space="preserve">
+    <value>じゆうに　のびちぢ する　しょくしゅで　えものを からめとり　もうどくを　あたえて　よわらせる。 いっぺんに　８０ぴきの　えものを　つかまえるぞ。</value>
+  </data>
+  <data name="Geodude.Description" xml:space="preserve">
+    <value>じめんに　はんぶん　うまり　ぐっすり　ねむる。 とざんしゃに　ふまれても　まったく　おきないよ。 あさ　エサを　さがして　さかを　ころがりおちる。</value>
+  </data>
+  <data name="Graveler.Description" xml:space="preserve">
+    <value>やまの　ふもとから　さんちょうまで　のぼる あいだに　だいすきな　いわを　ガリガリ　たべる。 ちょうじょうに　つくと　また　ころがりおちる。</value>
+  </data>
+  <data name="Golem.Description" xml:space="preserve">
+    <value>やまの　しゃめんに　ほってある　 ぞは　ころがり おちてきた　ゴローニャが　 んかに　ぶつからない ように　するための　とおり ちに　なっているぞ。</value>
+  </data>
+  <data name="Ponyta.Description" xml:space="preserve">
+    <value>うまれて　すぐは　たちあがるのも　やっとだが ころびながら　おやの　あとを　おいかけている うちに　じょうぶな　あしこしに　そだつのだ。</value>
+  </data>
+  <data name="Rapidash.Description" xml:space="preserve">
+    <value>いつもは　のんびり　のはらを　かけまわっているが ひとたび　ほんきを　だすと　たてが の　ほのおが もえあがり　じそく２４０キロで　はしりだす。</value>
+  </data>
+  <data name="Slowpoke.Description" xml:space="preserve">
+    <value>しっぽを　かわに　いれて　エサを　つっているが そのうち　なにを　しているのか　わすれてしまい かわべりに　ねそべったまま　１にちを　おえる。</value>
+  </data>
+  <data name="Slowbro.Description" xml:space="preserve">
+    <value>シェルダーが　か ついて　いるので　しっぽで エサを　つれなくなった　ヤドランは　しぶしぶ すいちゅうを　およいで　エサを　つかまえている。</value>
+  </data>
+  <data name="Magnemite.Description" xml:space="preserve">
+    <value>さゆうの　ユニットから　でんじはを　だす　ことで じゅうりょくを　さえぎり　くうちゅうに　うかぶ。 たいないの　でんきが　なくなると　とべなくなる。</value>
+  </data>
+  <data name="Magneton.Description" xml:space="preserve">
+    <value>きょうりょくな　じりょくせんで　せい つきかいを こわしてしまうため　モンスターボールに　いれて おかないと　ちゅういされる　まちも　あるという。</value>
+  </data>
+  <data name="Farfetchd.Description" xml:space="preserve">
+    <value>もっている　しょくぶつの　クキにも　よいものと そうでない　ものが　あるらしく　カモネギどうしが クキを　めぐって　たたかう　ことが　ある。</value>
+  </data>
+  <data name="Doduo.Description" xml:space="preserve">
+    <value>２つの　あたまは　おなじ　のう そを　もつ。 まれに　べつべつの　のうを　もった　ドードーが うまれてくると　けんきゅうで　ほうこくされた。</value>
+  </data>
+  <data name="Dodrio.Description" xml:space="preserve">
+    <value>３つあるのは　あたまだけでは　ないらしい。 しんぞうと　はいも　３つなので　いきぎれしないで ながい　きょりを　はしる　ことが　できるのだ。</value>
+  </data>
+  <data name="Seel.Description" xml:space="preserve">
+    <value>こおりに　おおわれた　う で　エサを　とる。 いきつぎを　するときは　あたまの　でっぱりで こおりを　わって　う から　かおを　だす。</value>
+  </data>
+  <data name="Dewgong.Description" xml:space="preserve">
+    <value>つめたい　こおりの　うえで　ねるのが　だいすき。 むかし　ひょうざんで　ねむる　すがたを　 た ふなのりが　にんぎょと　まちがえた。</value>
+  </data>
+  <data name="Grimer.Description" xml:space="preserve">
+    <value>おせんされた　かいていの　ヘドロから　うまれた。 きたない　ものが　だいすきで　からだじゅうから バイキンだらけの　えきたいを　たれながしている。</value>
+  </data>
+  <data name="Muk.Description" xml:space="preserve">
+    <value>きたない　ものが　だいこうぶつなので　ゴミを  ちばたに　すてる　ような　ひとが　すんでいる まちには　ベトベトンが　あつまってくるぞ。</value>
+  </data>
+  <data name="Shellder.Description" xml:space="preserve">
+    <value>よるに　なると　おおきな　ベロで　かいていの すなに　あなを　ほり　そのなかで　ねむる。 カラを　とじて　ねむるが　ベロは　だしたまま。</value>
+  </data>
+  <data name="Cloyster.Description" xml:space="preserve">
+    <value>の こんだ　かいすいを　うしろへ　いきおい　よく ふんしゃする　ことで　う の　なかを　およぐ。 トゲを　はっしゃする　しく も　おなじ。</value>
+  </data>
+  <data name="Gastly.Description" xml:space="preserve">
+    <value>きょうふうを　うけると　ガスじょうの　からだは  る る　ふきとばされ　ちいさくなって　しまう。 かぜを　さけた　ゴースが　のきしたに　あつまる。</value>
+  </data>
+  <data name="Haunter.Description" xml:space="preserve">
+    <value>や に　うかぶ　ゴーストが　てまねきしても ぜったいに　ちかよっては　いけないよ。 ペロリと　なめられ　いのちを　すわれてしまうぞ。</value>
+  </data>
+  <data name="Gengar.Description" xml:space="preserve">
+    <value>まよなか　がいとうの　あかりで　できた　かげが じぶんを　おいこして　いくのは　ゲンガーが かげに　なりすまして　はしって　いくからだ。</value>
+  </data>
+  <data name="Onix.Description" xml:space="preserve">
+    <value>のう そに　じしゃくが　あるので　つちの　なかを ほり　すすんでいても　ほうこうを　まちがえない。 としを　とるほど　からだは　まる を　おびる。</value>
+  </data>
+  <data name="Drowzee.Description" xml:space="preserve">
+    <value>ねむっているとき　キミの　はなが　ムズムズしたら まくらもとに　たった　スリープが　はなの あなから　ゆめを　たべようとしている　あいず。</value>
+  </data>
+  <data name="Hypno.Description" xml:space="preserve">
+    <value>てに　もっている　ふりこの　うごきと　かがやきが あいてを　ふかい　さい んじょうたいに　おとす。 えものを　さがしながら　ふりこを　 がいている。</value>
+  </data>
+  <data name="Krabby.Description" xml:space="preserve">
+    <value>すなはまに　あなを　ほり　そこで　くらしている。 エサの　すくない　すなはまでは　ばしょとりをする クラブたちの　あらそいを　 る　ことが　できる。</value>
+  </data>
+  <data name="Kingler.Description" xml:space="preserve">
+    <value>キングラーは　きょだいな　ハサミを　ふって なかまどうしで　あいずを　おくりあっているが ハサミが　おもすぎて　すぐに　つかれてしまう。</value>
+  </data>
+  <data name="Voltorb.Description" xml:space="preserve">
+    <value>すこしの　ショックで　すぐに　ばくはつする。 モンスターボールに　きょうりょくな　パルスを あびせた　ときに　うまれたと　ウワサされている。</value>
+  </data>
+  <data name="Electrode.Description" xml:space="preserve">
+    <value>でんきに　ひきよせられる　せいしつを　もつ。 おもに　はつでんしょに　あつまってきて　つくった ばかりの　でんきを　たべてしまう　こまりものだ。</value>
+  </data>
+  <data name="Exeggcute.Description" xml:space="preserve">
+    <value>なかまおもいの　６この　たまごは　おたがいに ひきつけあい　くるくる　かいてんしている。 カラの　ヒビが　ふえると　しんかは　まぢかだ。</value>
+  </data>
+  <data name="Exeggutor.Description" xml:space="preserve">
+    <value>なんごく　うまれの　ナッシーの　あたまは　つよい ひざしを　いっぱい　あびて　どんどん　そだち じめんに　おちると　タマタマに　なると　いう。</value>
+  </data>
+  <data name="Cubone.Description" xml:space="preserve">
+    <value>２どと　あえない　ははおやの　おもかげを まんげつに　 つけて　なきごえを　あげる。 かぶっている　ホネの　し は　な だの　あと。</value>
+  </data>
+  <data name="Marowak.Description" xml:space="preserve">
+    <value>ははおやに　あえない　かなし を　のりこえた カラカラが　たくましく　しんかした　すがた。 きたえられた　こころは　かんたんに　くじけない。</value>
+  </data>
+  <data name="Hitmonlee.Description" xml:space="preserve">
+    <value>じざいに　のびちぢ する　あしで　きょうれつな キックを　はなち　あいてを　けりたおす。 たたかいの　あと　つかれた　あしを　も ほぐす。</value>
+  </data>
+  <data name="Hitmonchan.Description" xml:space="preserve">
+    <value>せかいチャンピオンを　めざしていた　ボクサーの たましいが　やどったと　いわれる　エビワラーは ふくつの　せいしんで　ぜったいに　へこたれない。</value>
+  </data>
+  <data name="Lickitung.Description" xml:space="preserve">
+    <value>はじめて　めに　する　ものは　かならず　ペロリ。 したざわりと　あじで　きおくしているのだ。 でも　すっぱい　ものは　ちょっと　にがて。</value>
+  </data>
+  <data name="Koffing.Description" xml:space="preserve">
+    <value>なまゴミと　からだの　どくそを　かがくはんのう させる　ことで　もうどくの　ガスを　つくりだす。 きおんが　たかいほど　ガスが　たくさん　できる。</value>
+  </data>
+  <data name="Weezing.Description" xml:space="preserve">
+    <value>ふたごの　からだを　こうごに　しぼませたり ふくらませたりして　どくガスを　まぜている。 まぜるほど　どくそが　つよまり　くさくなる。</value>
+  </data>
+  <data name="Rhyhorn.Description" xml:space="preserve">
+    <value>はしっているうちに　もくてきを　わすれるほど のう そが　ちいさく　あたまが　わるいぞ。 なにかを　こわすと　たまに　おもいだすらしい。</value>
+  </data>
+  <data name="Rhydon.Description" xml:space="preserve">
+    <value>ドリルに　なる　ツノで　がんせきを　はかいする。 マグマを　ふきださせてしまう　ことも　あるが よろいの　ような　ひふは　あつさを　かんじない。</value>
+  </data>
+  <data name="Chansey.Description" xml:space="preserve">
+    <value>えいよう　まんてんの　タマゴを　まいにち　うむ。 しょくよくを　なくした　ひとでも　ペロリと たべてしまうほど　おいしい　タマゴだ。</value>
+  </data>
+  <data name="Tangela.Description" xml:space="preserve">
+    <value>てきに　つかまれると　ツルは　ぷちっと　きれる。 ぜんぜん　いたくないので　その　スキに　にげる。 よくじつには　あたらしい　ツルが　はえそろうぞ。</value>
+  </data>
+  <data name="Kangaskhan.Description" xml:space="preserve">
+    <value>ガルーラの　こどもが　１ぴきで　あそんでいても ぜったいに　つかまえたりしては　いけないよ。 ちかくに　いる　おやが　はげしく　おこりだすぞ。</value>
+  </data>
+  <data name="Horsea.Description" xml:space="preserve">
+    <value>きけんを　かんじると　はんしゃてきに　くちから まっくろい　スミを　はきだして　にげるぞ。 せびれを　きように　うごかして　およぐ。</value>
+  </data>
+  <data name="Seadra.Description" xml:space="preserve">
+    <value>からだを　かいてんさせて　うずまきを　つくる。 ぎょせんも　の こまれる　ほどの　げきりゅうで えものを　よわらせてから　まるごと　の こむ。</value>
+  </data>
+  <data name="Goldeen.Description" xml:space="preserve">
+    <value>かわや　いけを　およぐ　ことが　だいすきなので すいそう　なんかに　いれていたら　ぶあつい ガラスも　ツノの　ひとつきで　わって　にげるぞ。</value>
+  </data>
+  <data name="Seaking.Description" xml:space="preserve">
+    <value>タマゴを　まもるため　オスと　メスは　こうたいで すの　まわりを　およぎまわり　パトロールする。 タマゴが　かえるまで　ひとつきいじょう　つづく。</value>
+  </data>
+  <data name="Staryu.Description" xml:space="preserve">
+    <value>ちゅうしんの　あかい　コアを　てんめつさせて よぞらの　ほしと　こうしん　している　らしい。 からだは　ちぎれても　じこさいせい　するぞ。</value>
+  </data>
+  <data name="Starmie.Description" xml:space="preserve">
+    <value>ほしがたの　からだを　スクリューの　ように かいてんさせて　すいちゅうを　およぎまわる。 ちゅうおうに　ある　コアが　なないろに　ひかる。</value>
+  </data>
+  <data name="MrMime.Description" xml:space="preserve">
+    <value>めに　 えない　ものを　 ぶりで　そこに　あると しんじこませる　パントマイムの　たつじん。 しんじさせた　ものは　ほんとうに　あらわれる。</value>
+  </data>
+  <data name="Scyther.Description" xml:space="preserve">
+    <value>めにも　とまらぬ　スピードが　りょううでの カマの　きれあじを　さらに　するどく　するのだ。 ひとふり　すれば　たいぼくも　まっぷたつだ。</value>
+  </data>
+  <data name="Jynx.Description" xml:space="preserve">
+    <value>おどるような　こしつきで　リズミカルに　あるく。 その　うごきは　 ている　ひとも　おもわず こしを　ふってしまうほど　かろやかなのだ。</value>
+  </data>
+  <data name="Electabuzz.Description" xml:space="preserve">
+    <value>あらしが　くると　きの　うえ　など　カミナリの おちそうな　たかい　ばしょへ　きそって　のぼる。 ひらいしん　がわりに　する　まちも　ある。</value>
+  </data>
+  <data name="Magmar.Description" xml:space="preserve">
+    <value>たたかいに　なると　からだから　しゃくねつの ほのおを　ふきあげ　あいてを　いかくする。 その　ねっぷうで　まわりの　くさきも　もやすぞ。</value>
+  </data>
+  <data name="Pinsir.Description" xml:space="preserve">
+    <value>たくましい　２ほんの　ツノの　ひょうめんに　ある トゲが　あいての　からだに　ふかく　くいこむので はさまれると　かんたんに　はずせないのだ。</value>
+  </data>
+  <data name="Tauros.Description" xml:space="preserve">
+    <value>いつも　あばれて　いないと　きが　すまない。 たたかう　あいてが　いない　ときは　たいぼくに ぶちあたり　なぎたおす　ことで　きを　しずめる。</value>
+  </data>
+  <data name="Magikarp.Description" xml:space="preserve">
+    <value>はねている　だけで　まんぞくに　たたかえないため よわいと　おもわれているが　どんなに　よごれた  ずでも　くらせる　しぶとい　ポケモンなのだ。</value>
+  </data>
+  <data name="Gyarados.Description" xml:space="preserve">
+    <value>いちど　あばれはじめると　すべてを　もやさないと きょうぼうな　ちが　おさまらなく　なってしまう。 ひとつき　あばれつづけた　きろくが　のこる。</value>
+  </data>
+  <data name="Lapras.Description" xml:space="preserve">
+    <value>ひとが　ぜつめつの　ききに　おいこんでしまった。 ゆうぐれどきになると　すくなくなった　なかまを さがして　かなしそうな　こえで　うたうと　いう。</value>
+  </data>
+  <data name="Ditto.Description" xml:space="preserve">
+    <value>からだの　さいぼうを　く かえて　へんしんする。 おもいだしながら　いぜん　 た　ものに　かわると ちょっと　ちがう　かたちに　なってしまうのだ。</value>
+  </data>
+  <data name="Eevee.Description" xml:space="preserve">
+    <value>くらしている　かんきょうで　とつぜんへんい　する ふあんていな　いでんしを　もつ　ポケモン。 いしの　ほうしゃせんが　しんかを　ひきおこす。</value>
+  </data>
+  <data name="Vaporeon.Description" xml:space="preserve">
+    <value>とつぜんへんいに　より　すいちゅうで　せいかつ できる　ように　ヒレと　エラが　はえてきた。  ずを　じざいに　あやつる　ちからを　もつ。</value>
+  </data>
+  <data name="Jolteon.Description" xml:space="preserve">
+    <value>さいぼうの　だす　よわい　でんきを　たいもうの せいでんきで　ぞうふくさせ　カミナリを　おとす。 さかだった　たいもうは　でんきを　おびた　はり。</value>
+  </data>
+  <data name="Flareon.Description" xml:space="preserve">
+    <value>ふさふさの　たいもうは　あがりすぎた　たいおんを くうきに　ほうねつして　さげる　きのうを　もつ。 たいおんは　さいこう　９００ど　まで　あがるぞ。</value>
+  </data>
+  <data name="Porygon.Description" xml:space="preserve">
+    <value>ぜんしんを　プログラム　データに　もどして でんし　くうかんに　はいる　ことが　できる。 コピーガードされて　いるので　コピー　できない。</value>
+  </data>
+  <data name="Omanyte.Description" xml:space="preserve">
+    <value>おおむかしに　ぜつめつしたが　にんげんの　てで かせきから　ふっかつさせた　ポケモンの　ひとつ。 てきに　おそわれると　かたい　カラに　かくれる。</value>
+  </data>
+  <data name="Omastar.Description" xml:space="preserve">
+    <value>しょくしゅを　あやつり　えものを　つかまえる。 カラが　おおきく　なりすぎた　ことで　うごきが にぶくなり　ぜつめつしたと　かんがえられている。</value>
+  </data>
+  <data name="Kabuto.Description" xml:space="preserve">
+    <value>かせきから　ふっかつした　ポケモンだが　まれに いきつづけている　カブトを　はっけん　できる。 その　すがたは　３おくねん　かわっていない。</value>
+  </data>
+  <data name="Kabutops.Description" xml:space="preserve">
+    <value>すいちゅうを　およぎ　えものを　とらえていた。  ずの　せいかつから　ちじょうで　くらせるように エラや　あし　などが　へんかを　はじめていた。</value>
+  </data>
+  <data name="Aerodactyl.Description" xml:space="preserve">
+    <value>コハクから　とりだした　いでんしを　さいせいして ふっかつした　きょうりゅう　じだいの　ポケモン。 そらの　おうじゃだったと　そうぞうされている。</value>
+  </data>
+  <data name="Snorlax.Description" xml:space="preserve">
+    <value>たべて　ねての　くりかえしで　１にちが　おわる。 おおきな　おなかの　うえを　あそびばに　している こどもたちも　いるほど　おとなしい　ポケモンだ。</value>
+  </data>
+  <data name="Articuno.Description" xml:space="preserve">
+    <value>こおりを　あやつる　でんせつの　とりポケモン。 はばたく　ことで　くうきを　つめたく　ひやすので フリーザーが　とぶと　ゆきが　ふると　いわれる。</value>
+  </data>
+  <data name="Zapdos.Description" xml:space="preserve">
+    <value>でんきを　あやつる　でんせつの　とりポケモン。 ふだんは　カミナリぐもの　なかで　くらしている。 カミナリに　うたれると　ちからが　わいてくる。</value>
+  </data>
+  <data name="Moltres.Description" xml:space="preserve">
+    <value>ほのおを　あやつる　でんせつの　とりポケモン。 からだが　きずつくと　かこうの　マグマに　はいり ぜんしんを　もやして　きずを　いやすと　いう。</value>
+  </data>
+  <data name="Dratini.Description" xml:space="preserve">
+    <value>ミニリュウが　だっぴを　くりかえして　いるのは からだの　なかで　せいめいの　エネルギーが どんどん　ふくら 　おさえきれなく　なるからだ。</value>
+  </data>
+  <data name="Dragonair.Description" xml:space="preserve">
+    <value>おおきな　エネルギーを　からだに　ためている。 くびと　しっぽの　すいしょうから　エネルギーを ときはなち　あたりの　てんきを　かえると　いう。</value>
+  </data>
+  <data name="Dragonite.Description" xml:space="preserve">
+    <value>１６じかんで　ちきゅうを　１しゅうできる。 あらしで　なんぱしかけた　ふねを　 つけると りくちまで　ゆうどうする　やさしい　ポケモン。</value>
+  </data>
+  <data name="Mewtwo.Description" xml:space="preserve">
+    <value>いでんしそうさに　よって　つくられた　ポケモン。 にんげんの　かがくりょくで　からだは　つくれても やさしい　こころを　つくることは　できなかった。</value>
+  </data>
+  <data name="Mew.Description" xml:space="preserve">
+    <value>すべての　ポケモンの　いでんしを　もつと　いう。 じゆうじざいに　すがたを　けすことが　できるので ひとに　ちかづいても　まったく　きづかれない。</value>
+  </data>
+</root>

@@ -68,7 +68,7 @@
             <utils:InverseVisibleWhenTypeIsNotNoneConverter x:Key="InverseVisibleWhenTypeIsNotNoneConverter"/>
             <utils:PokemonDataToCapturedGepositionConverter x:Key="PokemonDataToCapturedGepositionConverter"/>
             <utils:AchievementDescriptionTranslationConverter x:Key="AchievementDescriptionTranslationConverter"/>
-            
+            <utils:WidthConverter x:Key="WidthConverter" />
 
             <converters:ValueWhenConverter x:Key="EnabledWhenHasElementsConverter">
                 <converters:ValueWhenConverter.When>
