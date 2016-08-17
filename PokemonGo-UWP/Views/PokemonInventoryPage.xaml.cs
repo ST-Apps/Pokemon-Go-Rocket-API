@@ -27,7 +27,8 @@ namespace PokemonGo_UWP.Views
 									HideIncubatorsModalAnimation.To = IncubatorsModal.ActualHeight;
 				HideIncubatorsModalStoryboard.Completed += (ss, ee) => { IncubatorsModal.IsModal = false; };
 
-                foreach(var pokemon in ViewModel.PokemonInventory)
+			    PokemonInventoryGridView.Items.Clear();
+                foreach (var pokemon in ViewModel.PokemonInventory)
                 {
                     PokemonInventoryGridView.Items.Add(pokemon);
                     PokemonInventoryGridView.UpdateLayout();
