@@ -437,14 +437,15 @@
                 </StackPanel>
             </Button>
 
-            <Button Style="{ThemeResource ImageButtonStyle}"
-                    x:Name="PokedexButton"
+            <Button Style="{ThemeResource ImageButtonStyle}"       
+                    x:Name="PokedexButton" 
                     RelativePanel.AlignBottomWithPanel="True"
-                    Margin="0,0,0,24"
-                    RelativePanel.AlignHorizontalCenterWithPanel="True"
+                    Margin="0,0,0,24" 
+                    RelativePanel.AlignHorizontalCenterWithPanel="True" 
+                    Command="{Binding GotoPokedexPageCommand}"
                     RenderTransformOrigin="0.5,0.5">
                 <Button.RenderTransform>
-                    <CompositeTransform x:Name="PokedexButtonTrans" />
+                    <CompositeTransform x:Name="PokedexButtonTrans"/>
                 </Button.RenderTransform>
 
                 <StackPanel Orientation="Vertical">
