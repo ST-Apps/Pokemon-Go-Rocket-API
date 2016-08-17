@@ -39,7 +39,8 @@ namespace PokemonGo_UWP.Views
                 ReactivateMapAutoUpdate.Visibility = Visibility.Collapsed;
             };
         }
-
+       if (GameMapControl.ZoomLevel < 19)
+                GameMapControl.ZoomLevel = 19;
         private void SetupMap()
         {
             if (ApplicationKeys.MapBoxTokens.Length > 0 && SettingsService.Instance.IsNianticMapEnabled)
@@ -126,6 +127,8 @@ namespace PokemonGo_UWP.Views
                 UpdateMap(GameClient.Geoposition);
             SubscribeToCaptureEvents();
             SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
+            AudioUtils.mysong.Stop();
+            AudioUtils.mysong1.Play();
         }
 
         private void OnBackRequested(object sender, BackRequestedEventArgs backRequestedEventArgs)
