@@ -308,7 +308,7 @@ namespace PokemonGo_UWP.Utils
             var badgeType =
                 (BadgeTypeAttribute)fieldInfo.GetCustomAttributes(typeof(BadgeTypeAttribute), false).First();
 
-            return badgeType == null ? "" : Resources.Achievements.GetString(badgeType.Value.ToString());
+            return badgeType == null ? "" : Resources.Achievements.GetString(badgeType.Value.ToString()).ToUpper();
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
