@@ -19,7 +19,8 @@ namespace PokemonGo_UWP.Views
 
             NavigationCacheMode = NavigationCacheMode.Enabled;
 
-            // TODO: Setup incubators translation
+            // TODO: fix header
+            // Setup incubators translation
             Loaded += (s, e) =>
             {
                 ShowIncubatorsModalAnimation.From =
