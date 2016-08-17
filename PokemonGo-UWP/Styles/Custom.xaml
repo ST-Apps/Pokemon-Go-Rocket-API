@@ -693,6 +693,15 @@
         <Setter Property="TextAlignment" Value="Center" />
     </Style>
 
+    <Style x:Key="TextItemName" TargetType="TextBlock" BasedOn="{StaticResource TextGridViewTop}">
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="TextAlignment" Value="Left" />
+    </Style>
+
+    <Style x:Key="TextItemInfo" TargetType="TextBlock" BasedOn="{StaticResource TextGridViewTop}">
+        <Setter Property="TextAlignment" Value="Left" />
+    </Style>
+
     <Style x:Key="TextPokemonName" TargetType="TextBlock">
         <Setter Property="TextWrapping" Value="Wrap" />
         <Setter Property="Foreground" Value="#000000" />
