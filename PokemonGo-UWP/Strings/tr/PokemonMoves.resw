@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bite" xml:space="preserve">
+    <value>Isırık</value>
+  </data>
+  <data name="CrossChop" xml:space="preserve">
+    <value>Çapraz Kesiş</value>
+  </data>
+  <data name="DarkPulse" xml:space="preserve">
+    <value>Karanlık Dalga</value>
+  </data>
+  <data name="Dig" xml:space="preserve">
+    <value>Kaz</value>
+  </data>
+  <data name="DoubleSlap" xml:space="preserve">
+    <value>Çifte Dayak</value>
+  </data>
+  <data name="Ember" xml:space="preserve">
+    <value>Ateş</value>
+  </data>
+  <data name="Flamethrower" xml:space="preserve">
+    <value>Alev Makinesi</value>
+  </data>
+  <data name="FlameWheel" xml:space="preserve">
+    <value>Ateş Çemberi</value>
+  </data>
+  <data name="HyperBeam" xml:space="preserve">
+    <value>Hiper Işın</value>
+  </data>
+  <data name="Lick" xml:space="preserve">
+    <value>Yala</value>
+  </data>
+  <data name="LowKick" xml:space="preserve">
+    <value>Alttan Tekme</value>
+  </data>
+  <data name="Megahorn" xml:space="preserve">
+    <value>Mega Boynuz</value>
+  </data>
+  <data name="MetalClaw" xml:space="preserve">
+    <value>Metal Pençe</value>
+  </data>
+  <data name="MoveUnset" xml:space="preserve">
+    <value>Hareket Belli Değil</value>
+  </data>
+  <data name="Pound" xml:space="preserve">
+    <value>Yumruk</value>
+  </data>
+  <data name="PsychoCut" xml:space="preserve">
+    <value>Psişik Kesiş</value>
+  </data>
+  <data name="QuickAttack" xml:space="preserve">
+    <value>Hızlı Saldırı</value>
+  </data>
+  <data name="RazorLeaf" xml:space="preserve">
+    <value>Jilet Yaprak</value>
+  </data>
+  <data name="Scratch" xml:space="preserve">
+    <value>Pençe</value>
+  </data>
+  <data name="Sludge" xml:space="preserve">
+    <value>Çamur</value>
+  </data>
+  <data name="Smog" xml:space="preserve">
+    <value>Sis</value>
+  </data>
+  <data name="SuckerPunch" xml:space="preserve">
+    <value>Bitirici Yumruk</value>
+  </data>
+  <data name="Tackle" xml:space="preserve">
+    <value>Darbe</value>
+  </data>
+  <data name="TakeDown" xml:space="preserve">
+    <value>İndirme</value>
+  </data>
+  <data name="ThunderShock" xml:space="preserve">
+    <value>Şimşek Şoku</value>
+  </data>
+  <data name="ViceGrip" xml:space="preserve">
+    <value>Mengene Kavrama</value>
+  </data>
+  <data name="VineWhip" xml:space="preserve">
+    <value>Kamçı Darbesi</value>
+  </data>
+  <data name="WaterGun" xml:space="preserve">
+    <value>Su Tabancası</value>
+  </data>
+  <data name="WingAttack" xml:space="preserve">
+    <value>Kanat Saldırısı</value>
+  </data>
+  <data name="Wrap" xml:space="preserve">
+    <value>Sar</value>
+  </data>
+  <data name="Absorb" xml:space="preserve">
+    <value>Em</value>
+  </data>
+  <data name="Acid" xml:space="preserve">
+    <value>Asit</value>
+  </data>
+  <data name="AcidFast" xml:space="preserve">
+    <value>Hızlı Asit</value>
+  </data>
+  <data name="AerialAce" xml:space="preserve">
+    <value>Havasal Kesiş</value>
+  </data>
+  <data name="AirCutter" xml:space="preserve">
+    <value>Hava Kesici</value>
+  </data>
+  <data name="AirSlash" xml:space="preserve">
+    <value>Hava Kamçısı</value>
+  </data>
+  <data name="AncientPower" xml:space="preserve">
+    <value>Antik Güç</value>
+  </data>
+  <data name="AquaJet" xml:space="preserve">
+    <value>Su Jeti</value>
+  </data>
+  <data name="AquaTail" xml:space="preserve">
+    <value>Su Kuyruğu</value>
+  </data>
+  <data name="BiteFast" xml:space="preserve">
+    <value>Hızlı Isırık</value>
+  </data>
+  <data name="Blizzard" xml:space="preserve">
+    <value>Buz Fırtınası</value>
+  </data>
+  <data name="BodySlam" xml:space="preserve">
+    <value>Vücut Darbesi</value>
+  </data>
+  <data name="BoneClub" xml:space="preserve">
+    <value>Kemik Sopa</value>
+  </data>
+  <data name="BrickBreak" xml:space="preserve">
+    <value>Tuğla Kırma</value>
+  </data>
+  <data name="Brine" xml:space="preserve">
+    <value>Salamura</value>
+  </data>
+  <data name="BubbleBeam" xml:space="preserve">
+    <value>Köpük Işını</value>
+  </data>
+  <data name="BubbleFast" xml:space="preserve">
+    <value>Hızlı Köpük</value>
+  </data>
+  <data name="BugBite" xml:space="preserve">
+    <value>Böcek Isırığı</value>
+  </data>
+  <data name="BugBiteFast" xml:space="preserve">
+    <value>Hızlı Böcek Isırığı</value>
+  </data>
+  <data name="BugBuzz" xml:space="preserve">
+    <value>Böcek Vızıldanması</value>
+  </data>
+  <data name="Bulldoze" xml:space="preserve">
+    <value>Yıkım</value>
+  </data>
+  <data name="BulletPunch" xml:space="preserve">
+    <value>Mermi Yumruğu</value>
+  </data>
+  <data name="BulletPunchFast" xml:space="preserve">
+    <value>Hızlı Mermi Yumruğu</value>
+  </data>
+  <data name="ConfusionFast" xml:space="preserve">
+    <value>Hızlı Şaşkınlık</value>
+  </data>
+  <data name="CrossPoison" xml:space="preserve">
+    <value>Çapraz Zehir</value>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>Kes</value>
+  </data>
+  <data name="CutFast" xml:space="preserve">
+    <value>Hızlı Kes</value>
+  </data>
+  <data name="DazzlingGleam" xml:space="preserve">
+    <value>Büyüleyici Parıltı</value>
+  </data>
+  <data name="DisarmingVoice" xml:space="preserve">
+    <value>Yatıştıran Ses</value>
+  </data>
+  <data name="Discharge" xml:space="preserve">
+    <value>Deşarj</value>
+  </data>
+  <data name="DragonBreath" xml:space="preserve">
+    <value>Ejder Nefesi</value>
+  </data>
+  <data name="DragonBreathFast" xml:space="preserve">
+    <value>Hızlı Ejder Nefesi</value>
+  </data>
+  <data name="DragonClaw" xml:space="preserve">
+    <value>Ejder Pençesi</value>
+  </data>
+  <data name="DragonPulse" xml:space="preserve">
+    <value>Ejder Dalgası</value>
+  </data>
+  <data name="DrainingKiss" xml:space="preserve">
+    <value>Emici Öpücük</value>
+  </data>
+  <data name="DrillPeck" xml:space="preserve">
+    <value>Delici Gaga</value>
+  </data>
+  <data name="DrillRun" xml:space="preserve">
+    <value>Delme Koşusu</value>
+  </data>
+  <data name="Earthquake" xml:space="preserve">
+    <value>Deprem</value>
+  </data>
+  <data name="EmberFast" xml:space="preserve">
+    <value>Hızlı Ateş</value>
+  </data>
+  <data name="FeintAttackFast" xml:space="preserve">
+    <value>Hızlı Hafif Saldırı</value>
+  </data>
+  <data name="FireBlast" xml:space="preserve">
+    <value>Ateş Patlaması</value>
+  </data>
+  <data name="FireFangFast" xml:space="preserve">
+    <value>Hızlı Ateşli Sivridiş</value>
+  </data>
+  <data name="FirePunch" xml:space="preserve">
+    <value>Alev Yumruğu</value>
+  </data>
+  <data name="FlameBurst" xml:space="preserve">
+    <value>Alev Patlaması</value>
+  </data>
+  <data name="FlameCharge" xml:space="preserve">
+    <value>Alev Darbesi</value>
+  </data>
+  <data name="FlashCannon" xml:space="preserve">
+    <value>Flaş Topu</value>
+  </data>
+  <data name="FrostBreath" xml:space="preserve">
+    <value>Buz Nefesi</value>
+  </data>
+  <data name="FrostBreathFast" xml:space="preserve">
+    <value>Hızlı Buz Nefesi</value>
+  </data>
+  <data name="FuryCutter" xml:space="preserve">
+    <value>Öfke Kesicisi</value>
+  </data>
+  <data name="FuryCutterFast" xml:space="preserve">
+    <value>Hızlı Öfke Kesicisi</value>
+  </data>
+  <data name="GigaDrain" xml:space="preserve">
+    <value>Giga Emiş</value>
+  </data>
+  <data name="GunkShot" xml:space="preserve">
+    <value>Yapışkan Vuruş</value>
+  </data>
+  <data name="Headbutt" xml:space="preserve">
+    <value>Kafa Darbesi</value>
+  </data>
+  <data name="HeartStamp" xml:space="preserve">
+    <value>Kalp Damgası</value>
+  </data>
+  <data name="HeatWave" xml:space="preserve">
+    <value>Sıcak Dalgası</value>
+  </data>
+  <data name="HornAttack" xml:space="preserve">
+    <value>Boynuz Saldırısı</value>
+  </data>
+  <data name="Hurricane" xml:space="preserve">
+    <value>Fırtına</value>
+  </data>
+  <data name="HydroPump" xml:space="preserve">
+    <value>Su Pompası</value>
+  </data>
+  <data name="HydroPumpBlastoise" xml:space="preserve">
+    <value>Blastoise Su Pompası</value>
+  </data>
+  <data name="HyperFang" xml:space="preserve">
+    <value>Hiper Diş</value>
+  </data>
+  <data name="IceBeam" xml:space="preserve">
+    <value>Buz Işını</value>
+  </data>
+  <data name="IcePunch" xml:space="preserve">
+    <value>Buz Yumruğu</value>
+  </data>
+  <data name="IceShard" xml:space="preserve">
+    <value>Buz Parçası</value>
+  </data>
+  <data name="IceShardFast" xml:space="preserve">
+    <value>Hızlı Buz Parçası</value>
+  </data>
+  <data name="IcyWind" xml:space="preserve">
+    <value>Buzlu Rüzgar</value>
+  </data>
+  <data name="IronHead" xml:space="preserve">
+    <value>Demir Kafa</value>
+  </data>
+  <data name="KarateChop" xml:space="preserve">
+    <value>Karate Vuruşu</value>
+  </data>
+  <data name="KarateChopFast" xml:space="preserve">
+    <value>Hızlı Karate Vuruşu</value>
+  </data>
+  <data name="LeafBlade" xml:space="preserve">
+    <value>Kılıç Yaprak</value>
+  </data>
+  <data name="LickFast" xml:space="preserve">
+    <value>Hızlı Yala</value>
+  </data>
+  <data name="LowKickFast" xml:space="preserve">
+    <value>Hızlı Alttan Tekme</value>
+  </data>
+  <data name="LowSweep" xml:space="preserve">
+    <value>Alt Kesiş</value>
+  </data>
+  <data name="MagnetBomb" xml:space="preserve">
+    <value>Magnet Bombası</value>
+  </data>
+  <data name="MegaDrain" xml:space="preserve">
+    <value>Mega Emiş</value>
+  </data>
+  <data name="MetalClawFast" xml:space="preserve">
+    <value>Hızlı Metal Pençe</value>
+  </data>
+  <data name="Moonblast" xml:space="preserve">
+    <value>Ay Patlaması</value>
+  </data>
+  <data name="MudBomb" xml:space="preserve">
+    <value>Çamur Bombası</value>
+  </data>
+  <data name="MudShot" xml:space="preserve">
+    <value>Çamur Vuruşu</value>
+  </data>
+  <data name="MudShotFast" xml:space="preserve">
+    <value>Hızlı Çamur Vuruşu</value>
+  </data>
+  <data name="MudSlapFast" xml:space="preserve">
+    <value>Hızlı Çamur Dayağı</value>
+  </data>
+  <data name="NightSlash" xml:space="preserve">
+    <value>Gece Kesişi</value>
+  </data>
+  <data name="OminousWind" xml:space="preserve">
+    <value>Uğursuz Rüzgar</value>
+  </data>
+  <data name="ParabolicCharge" xml:space="preserve">
+    <value>Parabolik Şarj</value>
+  </data>
+  <data name="Peck" xml:space="preserve">
+    <value>Gaga</value>
+  </data>
+  <data name="PeckFast" xml:space="preserve">
+    <value>Hızlı Gaga</value>
+  </data>
+  <data name="PetalBlizzard" xml:space="preserve">
+    <value>Yaprak Fırtınası</value>
+  </data>
+  <data name="PlayRough" xml:space="preserve">
+    <value>Sert Oyun</value>
+  </data>
+  <data name="PoisonFang" xml:space="preserve">
+    <value>Zehirli Diş</value>
+  </data>
+  <data name="PoisonJab" xml:space="preserve">
+    <value>Zehirli Vuruş</value>
+  </data>
+  <data name="PoisonJabFast" xml:space="preserve">
+    <value>Hızlı Zehirli Vuruş</value>
+  </data>
+  <data name="PoisonStingFast" xml:space="preserve">
+    <value>Hızlı Zehirli Isırık</value>
+  </data>
+  <data name="PoundFast" xml:space="preserve">
+    <value>Hızlı Yumruk</value>
+  </data>
+  <data name="PowerGem" xml:space="preserve">
+    <value>Güç Kristali</value>
+  </data>
+  <data name="PowerWhip" xml:space="preserve">
+    <value>Güç Kamçısı</value>
+  </data>
+  <data name="Psybeam" xml:space="preserve">
+    <value>Psy Işın</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Psişik</value>
+  </data>
+  <data name="PsychoCutFast" xml:space="preserve">
+    <value>Hızlı Psişik Kesiş</value>
+  </data>
+  <data name="Psyshock" xml:space="preserve">
+    <value>Psyşok</value>
+  </data>
+  <data name="Psystrike" xml:space="preserve">
+    <value>Psyvuruş</value>
+  </data>
+  <data name="QuickAttackFast" xml:space="preserve">
+    <value>Çevik Hızlı Saldırı</value>
+  </data>
+  <data name="RazorLeafFast" xml:space="preserve">
+    <value>Hızlı Jilet Yaprak</value>
+  </data>
+  <data name="Rest" xml:space="preserve">
+    <value>Dinlen</value>
+  </data>
+  <data name="RockSlide" xml:space="preserve">
+    <value>Kaya Kayması</value>
+  </data>
+  <data name="RockSmashFast" xml:space="preserve">
+    <value>Hızlı Kaya Kayması</value>
+  </data>
+  <data name="RockThrow" xml:space="preserve">
+    <value>Kaya Atışı</value>
+  </data>
+  <data name="RockThrowFast" xml:space="preserve">
+    <value>Hızlı Kaya Atışı</value>
+  </data>
+  <data name="RockTomb" xml:space="preserve">
+    <value>Kaya Mezarı</value>
+  </data>
+  <data name="Scald" xml:space="preserve">
+    <value>Haşlama</value>
+  </data>
+  <data name="ScaldBlastoise" xml:space="preserve">
+    <value>Blastoise Haşlama</value>
+  </data>
+  <data name="ScratchFast" xml:space="preserve">
+    <value>Hızlı Pençe</value>
+  </data>
+  <data name="SeedBomb" xml:space="preserve">
+    <value>Çekirdek Bombası</value>
+  </data>
+  <data name="ShadowBall" xml:space="preserve">
+    <value>Gölge Topu</value>
+  </data>
+  <data name="ShadowClaw" xml:space="preserve">
+    <value>Gölge Pençesi</value>
+  </data>
+  <data name="ShadowClawFast" xml:space="preserve">
+    <value>Hızlı Gölge Pençesi</value>
+  </data>
+  <data name="ShadowPunch" xml:space="preserve">
+    <value>Gölge Yumruğu</value>
+  </data>
+  <data name="ShadowSneak" xml:space="preserve">
+    <value>Gölge Gizli Saldırısı</value>
+  </data>
+  <data name="SignalBeam" xml:space="preserve">
+    <value>Sinyal Işığı</value>
+  </data>
+  <data name="Slam" xml:space="preserve">
+    <value>Darbe</value>
+  </data>
+  <data name="Slash" xml:space="preserve">
+    <value>Pençe</value>
+  </data>
+  <data name="SludgeBomb" xml:space="preserve">
+    <value>Çamur Bombası</value>
+  </data>
+  <data name="SludgeWave" xml:space="preserve">
+    <value>Çamur Dalgası</value>
+  </data>
+  <data name="SolarBeam" xml:space="preserve">
+    <value>Solar Işın</value>
+  </data>
+  <data name="Spark" xml:space="preserve">
+    <value>Kıvılcım</value>
+  </data>
+  <data name="SparkFast" xml:space="preserve">
+    <value>Hızlı Kıvılcım</value>
+  </data>
+  <data name="Splash" xml:space="preserve">
+    <value>Su Sıçratma</value>
+  </data>
+  <data name="SplashFast" xml:space="preserve">
+    <value>Hızlı Su Sıçratma</value>
+  </data>
+  <data name="SteelWing" xml:space="preserve">
+    <value>Çelik Kanat</value>
+  </data>
+  <data name="SteelWingFast" xml:space="preserve">
+    <value>Hızlı Çelik Kanat</value>
+  </data>
+  <data name="Stomp" xml:space="preserve">
+    <value>Ezme</value>
+  </data>
+  <data name="StoneEdge" xml:space="preserve">
+    <value>Taş Kenar</value>
+  </data>
+  <data name="Struggle" xml:space="preserve">
+    <value>Mücadele</value>
+  </data>
+  <data name="Submission" xml:space="preserve">
+    <value>Bitiriş</value>
+  </data>
+  <data name="SuckerPunchFast" xml:space="preserve">
+    <value>Hızlı Bitirici Yumruk</value>
+  </data>
+  <data name="Swift" xml:space="preserve">
+    <value>Çevik</value>
+  </data>
+  <data name="TackleFast" xml:space="preserve">
+    <value>Hızlı Darbe</value>
+  </data>
+  <data name="Thunder" xml:space="preserve">
+    <value>Şimşek</value>
+  </data>
+  <data name="Thunderbolt" xml:space="preserve">
+    <value>Yıldırım</value>
+  </data>
+  <data name="ThunderPunch" xml:space="preserve">
+    <value>Şimşek Yumruğu</value>
+  </data>
+  <data name="ThunderShockFast" xml:space="preserve">
+    <value>Hızlı Şimşek Şoku</value>
+  </data>
+  <data name="Twineedle" xml:space="preserve">
+    <value>Çifte İğne</value>
+  </data>
+  <data name="Twister" xml:space="preserve">
+    <value>Kasırga</value>
+  </data>
+  <data name="VineWhipFast" xml:space="preserve">
+    <value>Hızlı Kamçı Darbesi</value>
+  </data>
+  <data name="WaterGunFast" xml:space="preserve">
+    <value>Hızlı Su Tüfeği</value>
+  </data>
+  <data name="WaterGunFastBlastoise" xml:space="preserve">
+    <value>Hızlı Blastoise Su Tüfeği</value>
+  </data>
+  <data name="WaterPulse" xml:space="preserve">
+    <value>Su Dalgası</value>
+  </data>
+  <data name="WingAttackFast" xml:space="preserve">
+    <value>Hızlı Kanat Saldırısı</value>
+  </data>
+  <data name="WrapGreen" xml:space="preserve">
+    <value>Yeşil Sar</value>
+  </data>
+  <data name="WrapPink" xml:space="preserve">
+    <value>Pembe Sar</value>
+  </data>
+  <data name="XScissor" xml:space="preserve">
+    <value>XMakas</value>
+  </data>
+  <data name="ZenHeadbuttFast" xml:space="preserve">
+    <value>Hızlı Zen Kafa Darbesi</value>
+  </data>
+</root>

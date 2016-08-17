@@ -14,11 +14,5 @@ namespace PokemonGo.RocketAPI.Helpers
 
             return Math.Abs(longRand%(max - min)) + min;
         }
-
-        public static float GetFloatRandom(float min, float max)
-        {
-            var floatRand = (float) Random.NextDouble();
-            return Math.Abs(floatRand % (max - min)) + min;
-        }
     }
 }

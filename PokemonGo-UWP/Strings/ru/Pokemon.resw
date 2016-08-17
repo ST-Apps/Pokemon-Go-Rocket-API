@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Abra" xml:space="preserve">
+    <value>Абра</value>
+  </data>
+  <data name="Aerodactyl" xml:space="preserve">
+    <value>Аэродактиль</value>
+  </data>
+  <data name="Alakazam" xml:space="preserve">
+    <value>Алаказам</value>
+  </data>
+  <data name="Arbok" xml:space="preserve">
+    <value>Арбок</value>
+  </data>
+  <data name="Arcanine" xml:space="preserve">
+    <value>Арканин</value>
+  </data>
+  <data name="Articuno" xml:space="preserve">
+    <value>Артикуно</value>
+  </data>
+  <data name="Beedrill" xml:space="preserve">
+    <value>Бидрилл</value>
+  </data>
+  <data name="Bellsprout" xml:space="preserve">
+    <value>Беллспраут</value>
+  </data>
+  <data name="Blastoise" xml:space="preserve">
+    <value>Бластойз</value>
+  </data>
+  <data name="Bulbasaur" xml:space="preserve">
+    <value>Бульбазавр</value>
+  </data>
+  <data name="Butterfree" xml:space="preserve">
+    <value>Баттерфри</value>
+  </data>
+  <data name="Caterpie" xml:space="preserve">
+    <value>Катерпи</value>
+  </data>
+  <data name="Chansey" xml:space="preserve">
+    <value>Ченси</value>
+  </data>
+  <data name="Charizard" xml:space="preserve">
+    <value>Чаризард</value>
+  </data>
+  <data name="Charmander" xml:space="preserve">
+    <value>Чармандер</value>
+  </data>
+  <data name="Charmeleon" xml:space="preserve">
+    <value>Чармилион</value>
+  </data>
+  <data name="Clefable" xml:space="preserve">
+    <value>Клефабл</value>
+  </data>
+  <data name="Clefairy" xml:space="preserve">
+    <value>Клефера</value>
+  </data>
+  <data name="Cloyster" xml:space="preserve">
+    <value>Клойстер</value>
+  </data>
+  <data name="Cubone" xml:space="preserve">
+    <value>Кубон</value>
+  </data>
+  <data name="Dewgong" xml:space="preserve">
+    <value>Дьюгонг</value>
+  </data>
+  <data name="Diglett" xml:space="preserve">
+    <value>Диглетт</value>
+  </data>
+  <data name="Ditto" xml:space="preserve">
+    <value>Дитто</value>
+  </data>
+  <data name="Dodrio" xml:space="preserve">
+    <value>Додрио</value>
+  </data>
+  <data name="Doduo" xml:space="preserve">
+    <value>Додуо</value>
+  </data>
+  <data name="Dragonair" xml:space="preserve">
+    <value>Драгонир</value>
+  </data>
+  <data name="Dragonite" xml:space="preserve">
+    <value>Драгонит</value>
+  </data>
+  <data name="Dratini" xml:space="preserve">
+    <value>Дратини</value>
+  </data>
+  <data name="Drowzee" xml:space="preserve">
+    <value>Дроузи</value>
+  </data>
+  <data name="Dugtrio" xml:space="preserve">
+    <value>Дагтрио</value>
+  </data>
+  <data name="Eevee" xml:space="preserve">
+    <value>Иви</value>
+  </data>
+  <data name="Ekans" xml:space="preserve">
+    <value>Эканс</value>
+  </data>
+  <data name="Electabuzz" xml:space="preserve">
+    <value>Электабуз</value>
+  </data>
+  <data name="Electrode" xml:space="preserve">
+    <value>Электрод</value>
+  </data>
+  <data name="Exeggcute" xml:space="preserve">
+    <value>Экзеггут</value>
+  </data>
+  <data name="Exeggutor" xml:space="preserve">
+    <value>Экзеггутор</value>
+  </data>
+  <data name="Farfetchd" xml:space="preserve">
+    <value>Фарфечд</value>
+  </data>
+  <data name="Fearow" xml:space="preserve">
+    <value>Фироу</value>
+  </data>
+  <data name="Flareon" xml:space="preserve">
+    <value>Флареон</value>
+  </data>
+  <data name="Gastly" xml:space="preserve">
+    <value>Гэстли</value>
+  </data>
+  <data name="Gengar" xml:space="preserve">
+    <value>Генгар</value>
+  </data>
+  <data name="Geodude" xml:space="preserve">
+    <value>Джеодуд</value>
+  </data>
+  <data name="Gloom" xml:space="preserve">
+    <value>Глуь</value>
+  </data>
+  <data name="Golbat" xml:space="preserve">
+    <value>Голбат</value>
+  </data>
+  <data name="Goldeen" xml:space="preserve">
+    <value>Голдин</value>
+  </data>
+  <data name="Golduck" xml:space="preserve">
+    <value>Голдак</value>
+  </data>
+  <data name="Golem" xml:space="preserve">
+    <value>Голем</value>
+  </data>
+  <data name="Graveler" xml:space="preserve">
+    <value>Гравлер</value>
+  </data>
+  <data name="Grimer" xml:space="preserve">
+    <value>Граймер</value>
+  </data>
+  <data name="Growlithe" xml:space="preserve">
+    <value>Гроулит</value>
+  </data>
+  <data name="Gyarados" xml:space="preserve">
+    <value>Гярадос</value>
+  </data>
+  <data name="Haunter" xml:space="preserve">
+    <value>Хаунтер</value>
+  </data>
+  <data name="Hitmonchan" xml:space="preserve">
+    <value>Хитмончан</value>
+  </data>
+  <data name="Hitmonlee" xml:space="preserve">
+    <value>Хитмонли</value>
+  </data>
+  <data name="Horsea" xml:space="preserve">
+    <value>Хорси</value>
+  </data>
+  <data name="Hypno" xml:space="preserve">
+    <value>Гипно</value>
+  </data>
+  <data name="Ivysaur" xml:space="preserve">
+    <value>Ивизавр</value>
+  </data>
+  <data name="Jigglypuff" xml:space="preserve">
+    <value>Джигглипуфф</value>
+  </data>
+  <data name="Jolteon" xml:space="preserve">
+    <value>Джолтеон</value>
+  </data>
+  <data name="Jynx" xml:space="preserve">
+    <value>Джинкс</value>
+  </data>
+  <data name="Kabuto" xml:space="preserve">
+    <value>Кабуто</value>
+  </data>
+  <data name="Kabutops" xml:space="preserve">
+    <value>Кабутопс</value>
+  </data>
+  <data name="Kadabra" xml:space="preserve">
+    <value>Кадабра</value>
+  </data>
+  <data name="Kakuna" xml:space="preserve">
+    <value>Какуна</value>
+  </data>
+  <data name="Kangaskhan" xml:space="preserve">
+    <value>Кангасханна</value>
+  </data>
+  <data name="Kingler" xml:space="preserve">
+    <value>Кинглер</value>
+  </data>
+  <data name="Koffing" xml:space="preserve">
+    <value>Коффинг</value>
+  </data>
+  <data name="Krabby" xml:space="preserve">
+    <value>Крабби</value>
+  </data>
+  <data name="Lapras" xml:space="preserve">
+    <value>Лапрас</value>
+  </data>
+  <data name="Lickitung" xml:space="preserve">
+    <value>Ликитунг</value>
+  </data>
+  <data name="Machamp" xml:space="preserve">
+    <value>Мачемп</value>
+  </data>
+  <data name="Machoke" xml:space="preserve">
+    <value>Мачок</value>
+  </data>
+  <data name="Machop" xml:space="preserve">
+    <value>Мачоп</value>
+  </data>
+  <data name="Magikarp" xml:space="preserve">
+    <value>Мэджикарп</value>
+  </data>
+  <data name="Magmar" xml:space="preserve">
+    <value>Магмар</value>
+  </data>
+  <data name="Magnemite" xml:space="preserve">
+    <value>Магнемайт</value>
+  </data>
+  <data name="Magneton" xml:space="preserve">
+    <value>Магнетон</value>
+  </data>
+  <data name="Mankey" xml:space="preserve">
+    <value>Мэнки</value>
+  </data>
+  <data name="Marowak" xml:space="preserve">
+    <value>Маровак</value>
+  </data>
+  <data name="Meowth" xml:space="preserve">
+    <value>Мяут</value>
+  </data>
+  <data name="Metapod" xml:space="preserve">
+    <value>Метапод</value>
+  </data>
+  <data name="Mew" xml:space="preserve">
+    <value>Мью</value>
+  </data>
+  <data name="Mewtwo" xml:space="preserve">
+    <value>Мьюту</value>
+  </data>
+  <data name="Missingno" xml:space="preserve">
+    <value>Миссингно</value>
+  </data>
+  <data name="Moltres" xml:space="preserve">
+    <value>Молтрес</value>
+  </data>
+  <data name="MrMime" xml:space="preserve">
+    <value>Майм</value>
+  </data>
+  <data name="Muk" xml:space="preserve">
+    <value>Мак</value>
+  </data>
+  <data name="Nidoking" xml:space="preserve">
+    <value>Нидокинг</value>
+  </data>
+  <data name="Nidoqueen" xml:space="preserve">
+    <value>Нидоквин</value>
+  </data>
+  <data name="NidoranFemale" xml:space="preserve">
+    <value>Нидоран ♀</value>
+  </data>
+  <data name="NidoranMale" xml:space="preserve">
+    <value>Нидоран ♂</value>
+  </data>
+  <data name="Nidorina" xml:space="preserve">
+    <value>Нидорина</value>
+  </data>
+  <data name="Nidorino" xml:space="preserve">
+    <value>Нидорино</value>
+  </data>
+  <data name="Ninetales" xml:space="preserve">
+    <value>Найнтэйлс</value>
+  </data>
+  <data name="Oddish" xml:space="preserve">
+    <value>Оддиш</value>
+  </data>
+  <data name="Omanyte" xml:space="preserve">
+    <value>Оманит</value>
+  </data>
+  <data name="Omastar" xml:space="preserve">
+    <value>Омастар</value>
+  </data>
+  <data name="Onix" xml:space="preserve">
+    <value>Оникс</value>
+  </data>
+  <data name="Paras" xml:space="preserve">
+    <value>Парас</value>
+  </data>
+  <data name="Parasect" xml:space="preserve">
+    <value>Парасект</value>
+  </data>
+  <data name="Persian" xml:space="preserve">
+    <value>Персиан</value>
+  </data>
+  <data name="Pidgeot" xml:space="preserve">
+    <value>Пиджеот</value>
+  </data>
+  <data name="Pidgeotto" xml:space="preserve">
+    <value>Пиджеотто</value>
+  </data>
+  <data name="Pidgey" xml:space="preserve">
+    <value>Пиджи</value>
+  </data>
+  <data name="Pikachu" xml:space="preserve">
+    <value>Пикачу</value>
+  </data>
+  <data name="Pinsir" xml:space="preserve">
+    <value>Пинсир</value>
+  </data>
+  <data name="Poliwag" xml:space="preserve">
+    <value>Поливаг</value>
+  </data>
+  <data name="Poliwhirl" xml:space="preserve">
+    <value>Поливёрл</value>
+  </data>
+  <data name="Poliwrath" xml:space="preserve">
+    <value>Полирас</value>
+  </data>
+  <data name="Ponyta" xml:space="preserve">
+    <value>Понита</value>
+  </data>
+  <data name="Porygon" xml:space="preserve">
+    <value>Поригон</value>
+  </data>
+  <data name="Primeape" xml:space="preserve">
+    <value>Примап</value>
+  </data>
+  <data name="Psyduck" xml:space="preserve">
+    <value>Псидак</value>
+  </data>
+  <data name="Raichu" xml:space="preserve">
+    <value>Райчу</value>
+  </data>
+  <data name="Rapidash" xml:space="preserve">
+    <value>Рапидэш</value>
+  </data>
+  <data name="Raticate" xml:space="preserve">
+    <value>Ратикейт</value>
+  </data>
+  <data name="Rattata" xml:space="preserve">
+    <value>Раттата</value>
+  </data>
+  <data name="Rhydon" xml:space="preserve">
+    <value>Райдон</value>
+  </data>
+  <data name="Rhyhorn" xml:space="preserve">
+    <value>Райхорн</value>
+  </data>
+  <data name="Sandshrew" xml:space="preserve">
+    <value>Сэндшрю</value>
+  </data>
+  <data name="Sandslash" xml:space="preserve">
+    <value>Сэндслэш</value>
+  </data>
+  <data name="Scyther" xml:space="preserve">
+    <value>Скайтер</value>
+  </data>
+  <data name="Seadra" xml:space="preserve">
+    <value>Сидра</value>
+  </data>
+  <data name="Seaking" xml:space="preserve">
+    <value>Сикинг</value>
+  </data>
+  <data name="Seel" xml:space="preserve">
+    <value>Силл</value>
+  </data>
+  <data name="Shellder" xml:space="preserve">
+    <value>Шелдер</value>
+  </data>
+  <data name="Slowbro" xml:space="preserve">
+    <value>Слоубро</value>
+  </data>
+  <data name="Slowpoke" xml:space="preserve">
+    <value>Слоупок</value>
+  </data>
+  <data name="Snorlax" xml:space="preserve">
+    <value>Снорлакс</value>
+  </data>
+  <data name="Spearow" xml:space="preserve">
+    <value>Спироу</value>
+  </data>
+  <data name="Squirtle" xml:space="preserve">
+    <value>Сквиртл</value>
+  </data>
+  <data name="Starmie" xml:space="preserve">
+    <value>Старми</value>
+  </data>
+  <data name="Staryu" xml:space="preserve">
+    <value>Старью</value>
+  </data>
+  <data name="Tangela" xml:space="preserve">
+    <value>Тангела</value>
+  </data>
+  <data name="Tauros" xml:space="preserve">
+    <value>Таурос</value>
+  </data>
+  <data name="Tentacool" xml:space="preserve">
+    <value>Тентакул</value>
+  </data>
+  <data name="Tentacruel" xml:space="preserve">
+    <value>Тентакруэль</value>
+  </data>
+  <data name="Vaporeon" xml:space="preserve">
+    <value>Вапореон</value>
+  </data>
+  <data name="Venomoth" xml:space="preserve">
+    <value>Веномот</value>
+  </data>
+  <data name="Venonat" xml:space="preserve">
+    <value>Венонат</value>
+  </data>
+  <data name="Venusaur" xml:space="preserve">
+    <value>Венузавр</value>
+  </data>
+  <data name="Victreebel" xml:space="preserve">
+    <value>Виктрибел</value>
+  </data>
+  <data name="Vileplume" xml:space="preserve">
+    <value>Вилплум</value>
+  </data>
+  <data name="Voltorb" xml:space="preserve">
+    <value>Волторб</value>
+  </data>
+  <data name="Vulpix" xml:space="preserve">
+    <value>Вульпикс</value>
+  </data>
+  <data name="Wartortle" xml:space="preserve">
+    <value>Вартортл</value>
+  </data>
+  <data name="Weedle" xml:space="preserve">
+    <value>Видл</value>
+  </data>
+  <data name="Weepinbell" xml:space="preserve">
+    <value>Випинбел</value>
+  </data>
+  <data name="Weezing" xml:space="preserve">
+    <value>Виззинг</value>
+  </data>
+  <data name="Wigglytuff" xml:space="preserve">
+    <value>Вигглитуф</value>
+  </data>
+  <data name="Zapdos" xml:space="preserve">
+    <value>Запдос</value>
+  </data>
+  <data name="Zubat" xml:space="preserve">
+    <value>Зубат</value>
+  </data>
+</root>

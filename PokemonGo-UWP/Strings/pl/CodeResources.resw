@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DateFormat" xml:space="preserve">
+    <value>dd.MM.rrrr</value>
+  </data>
+  <data name="DateTimeFormat" xml:space="preserve">
+    <value>dd.MM.rrrr gg:mm tt</value>
+  </data>
+  <data name="PokemonFledText" xml:space="preserve">
+    <value>{0} uciekł</value>
+  </data>
+  <data name="GettingGpsSignalText" xml:space="preserve">
+    <value>Uzyskiwanie sygnału GPS...</value>
+  </data>
+  <data name="GettingUserDataText" xml:space="preserve">
+    <value>Uzyskiwanie danych użytkownika...</value>
+  </data>
+  <data name="GoogleErrorText" xml:space="preserve">
+    <value>Google zwróciło błąd: </value>
+  </data>
+  <data name="GoogleNotRespondingText" xml:space="preserve">
+    <value>Google nie odpowiada, spróbuj ponownie później.</value>
+  </data>
+  <data name="LoadingEncounterText" xml:space="preserve">
+    <value>Ładowanie starcia z {0}</value>
+  </data>
+  <data name="LoggingInText" xml:space="preserve">
+    <value>Logowanie...</value>
+  </data>
+  <data name="LoginFailedText" xml:space="preserve">
+    <value>Logowanie nie powiodło się, spróbuj ponownie.</value>
+  </data>
+  <data name="NoText" xml:space="preserve">
+    <value>Nie</value>
+  </data>
+  <data name="NoGpsPermissionsText" xml:space="preserve">
+    <value>Potrzebujemy pozwolenia na użycie GPS żeby uruchomić grę, włącz je i spróbuj ponownie.</value>
+  </data>
+  <data name="PokemonRanAwayText" xml:space="preserve">
+    <value>Pokemon uciekł :(</value>
+  </data>
+  <data name="PtcDownText" xml:space="preserve">
+    <value>Logowanie przez PTC prawdpodobnie nie działa, spróbuj ponownie później.</value>
+  </data>
+  <data name="SomethingWentWrongText" xml:space="preserve">
+    <value>Coś się nie powiodło, aplikacja może być niestabilna. Czy chcesz się wylogować i spróbować ponownie?</value>
+  </data>
+  <data name="TimeFormat" xml:space="preserve">
+    <value>gg:mm tt</value>
+  </data>
+  <data name="UpdateDownloadingText" xml:space="preserve">
+    <value>Pobieranie aktualizacji {0}</value>
+  </data>
+  <data name="UpdatedVersionText" xml:space="preserve">
+    <value>Zaktualizowana wersja {0} jest dostępna. Pobrać?
+{1}</value>
+  </data>
+  <data name="UpdateFailedText" xml:space="preserve">
+    <value>Aktualizacja nie powiodła się: {0}
+Czy otworzyć stronę z plikami instalacyjnymi w celu instalacji manualnej?</value>
+  </data>
+  <data name="UpdateInstallingText" xml:space="preserve">
+    <value>Instalowanie aktualizacji, aplikacje restartuje się...</value>
+  </data>
+  <data name="WrongUsernameText" xml:space="preserve">
+    <value>Zła nazwa użytkownika lub hasło albo serwer jest offline, spróbuj ponownie.</value>
+  </data>
+  <data name="YesText" xml:space="preserve">
+    <value>Tak</value>
+  </data>
+  <data name="NoTeamText" xml:space="preserve">
+    <value>Brak drużyny</value>
+  </data>
+</root>

@@ -32,6 +32,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
     <OutputPath>bin\ARM\Release\</OutputPath>
@@ -91,8 +92,34 @@
     <Prefer32Bit>true</Prefer32Bit>
     <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
   </PropertyGroup>
+  <PropertyGroup Label="MultilingualAppToolkit">
+    <MultilingualAppToolkitVersion>4.0</MultilingualAppToolkitVersion>
+    <MultilingualFallbackLanguage>en-US</MultilingualFallbackLanguage>
+  </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\Achievements\badge_lv0.png" />
+    <Content Include="Assets\Achievements\badge_lv1.png" />
+    <Content Include="Assets\Achievements\badge_lv2.png" />
+    <Content Include="Assets\Achievements\badge_lv3.png" />
+    <Content Include="Assets\Audio\pokemon_found_ding.wav" />
+    <Content Include="Assets\Backgrounds\details_type_bg_bug.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_default.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_dragon.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_electric.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_fairy.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_fighting.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_fire.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_flying.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_ghost.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_ground.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_ice.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_grass.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_normal.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_poison.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_psychic.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_rock.png" />
+    <Content Include="Assets\Backgrounds\details_type_bg_water.png" />
     <Content Include="Assets\Backgrounds\Park.png" />
     <Content Include="Assets\Backgrounds\Parkscene_Background.png" />
     <Content Include="Assets\Backgrounds\Parkscene_Background_Night.png" />
@@ -107,30 +134,69 @@
     <Content Include="Assets\Backgrounds\ui_settings_bg.png" />
     <Content Include="Assets\Buttons\btn_action_menu.png" />
     <Content Include="Assets\Buttons\btn_back_normal_dark.png" />
+    <Content Include="Assets\Buttons\btn_close.png" />
+    <Content Include="Assets\Buttons\btn_close_dark.png" />
     <Content Include="Assets\Buttons\btn_close_normal.png" />
     <Content Include="Assets\Buttons\btn_close_normal_dark.png" />
     <Content Include="Assets\Buttons\btn_empty.png" />
     <Content Include="Assets\Buttons\btn_incubator.png" />
+    <Content Include="Assets\Buttons\btn_incubator_dark.png" />
+    <Content Include="Assets\Buttons\btn_items.png" />
+    <Content Include="Assets\Buttons\btn_items_catch.png" />
     <Content Include="Assets\Buttons\btn_master.png" />
+    <Content Include="Assets\Buttons\btn_menu.png" />
+    <Content Include="Assets\Buttons\btn_ok.png" />
+    <Content Include="Assets\Buttons\btn_ok_dark.png" />
     <Content Include="Assets\Buttons\btn_ok_normal_dark.png" />
+    <Content Include="Assets\Buttons\btn_pokedex.png" />
+    <Content Include="Assets\Buttons\btn_pokemon.png" />
     <Content Include="Assets\Buttons\btn_run_away.png" />
+    <Content Include="Assets\Buttons\btn_settings.png" />
     <Content Include="Assets\Buttons\btn_swap.png" />
     <Content Include="Assets\Buttons\btn_train.png" />
+    <Content Include="Assets\Candy\Bug.png" />
+    <Content Include="Assets\Candy\Dark.png" />
+    <Content Include="Assets\Candy\Default.png" />
+    <Content Include="Assets\Candy\Dragon.png" />
+    <Content Include="Assets\Candy\Electric.png" />
+    <Content Include="Assets\Candy\Fairy.png" />
+    <Content Include="Assets\Candy\Fighting.png" />
+    <Content Include="Assets\Candy\Fire.png" />
+    <Content Include="Assets\Candy\Flying.png" />
+    <Content Include="Assets\Candy\Ghost.png" />
+    <Content Include="Assets\Candy\Grass.png" />
+    <Content Include="Assets\Candy\Ground.png" />
+    <Content Include="Assets\Candy\Ice.png" />
+    <Content Include="Assets\Candy\Normal.png" />
+    <Content Include="Assets\Candy\Poison.png" />
+    <Content Include="Assets\Candy\Psychic.png" />
+    <Content Include="Assets\Candy\Rock.png" />
+    <Content Include="Assets\Candy\Steel.png" />
+    <Content Include="Assets\Candy\Water.png" />
     <Content Include="Assets\Icons\circle_255_filled_01.png" />
     <Content Include="Assets\Icons\CompassIcon.png" />
     <Content Include="Assets\Icons\Footprint_Far.png" />
     <Content Include="Assets\Icons\Footprint_Mid.png" />
     <Content Include="Assets\Icons\Footprint_Near.png" />
     <Content Include="Assets\Icons\FrontPortraitRing.png" />
+    <Content Include="Assets\Icons\ic_combat.png" />
+    <Content Include="Assets\Icons\ic_date.png" />
+    <Content Include="Assets\Icons\ic_fav.png" />
+    <Content Include="Assets\Icons\ic_health.png" />
+    <Content Include="Assets\Icons\ic_name.png" />
+    <Content Include="Assets\Icons\ic_number.png" />
+    <Content Include="Assets\Icons\pokestop_far.png" />
+    <Content Include="Assets\Icons\pokestop_far_inactive.png" />
     <Content Include="Assets\Icons\pokestop_near.png" />
     <Content Include="Assets\Icons\pokestop_near_inactive.png" />
+    <Content Include="Assets\Icons\RecenterMapIcon.png" />
     <Content Include="Assets\Icons\stardust_painted.png" />
     <Content Include="Assets\Icons\stardust_vector.png" />
     <Content Include="Assets\Items\Egg.png" />
-    <Content Include="Assets\Items\EggIncubator.png" />
-    <Content Include="Assets\Items\EggIncubatorEmpty.png" />
-    <Content Include="Assets\Items\EggIncubatorEmptyUnlimited.png" />
-    <Content Include="Assets\Items\EggIncubatorUnlimited.png" />
+    <Content Include="Assets\Items\E_Item_902.png" />
+    <Content Include="Assets\Items\Item_902.png" />
+    <Content Include="Assets\Items\Item_901.png" />
+    <Content Include="Assets\Items\E_Item_901.png" />
     <Content Include="Assets\Items\Item_1.png" />
     <Content Include="Assets\Items\Item_2.png" />
     <Content Include="Assets\Items\Item_3.png" />
@@ -155,6 +221,48 @@
     <Content Include="Assets\Items\Item_COIN_HEAP_01.png" />
     <Content Include="Assets\Items\Item_COIN_POUCH_01.png" />
     <Content Include="Assets\Items\Item_COIN_STACK_01.png" />
+    <Content Include="Assets\LiveTiles\Normal\NewStoreLogo.scale-100.png" />
+    <Content Include="Assets\LiveTiles\Normal\NewStoreLogo.scale-125.png" />
+    <Content Include="Assets\LiveTiles\Normal\NewStoreLogo.scale-150.png" />
+    <Content Include="Assets\LiveTiles\Normal\NewStoreLogo.scale-200.png" />
+    <Content Include="Assets\LiveTiles\Normal\NewStoreLogo.scale-400.png" />
+    <Content Include="Assets\LiveTiles\Normal\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\LiveTiles\Normal\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\LiveTiles\Normal\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\LiveTiles\Normal\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\LiveTiles\Normal\Square310x310Logo.scale-100.png" />
+    <Content Include="Assets\LiveTiles\Normal\Square310x310Logo.scale-125.png" />
+    <Content Include="Assets\LiveTiles\Normal\Square310x310Logo.scale-150.png" />
+    <Content Include="Assets\LiveTiles\Normal\Square310x310Logo.scale-200.png" />
+    <Content Include="Assets\LiveTiles\Normal\Square310x310Logo.scale-400.png" />
+    <Content Include="Assets\LiveTiles\Normal\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\LiveTiles\Normal\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\LiveTiles\Normal\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\LiveTiles\Normal\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\LiveTiles\Normal\Square71x71Logo.scale-100.png" />
+    <Content Include="Assets\LiveTiles\Normal\Square71x71Logo.scale-125.png" />
+    <Content Include="Assets\LiveTiles\Normal\Square71x71Logo.scale-150.png" />
+    <Content Include="Assets\LiveTiles\Normal\Square71x71Logo.scale-200.png" />
+    <Content Include="Assets\LiveTiles\Normal\Square71x71Logo.scale-400.png" />
+    <Content Include="Assets\LiveTiles\Normal\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\LiveTiles\Normal\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\LiveTiles\Normal\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\LiveTiles\Normal\Wide310x150Logo.scale-400.png" />
+    <Content Include="Assets\LiveTiles\Peek.gif" />
+    <Content Include="Assets\LiveTiles\People.gif" />
+    <Content Include="Assets\LiveTiles\People.png" />
+    <Content Include="Assets\LiveTiles\Transparent\LineLogo.svg" />
+    <Content Include="Assets\LiveTiles\Transparent\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\LiveTiles\Transparent\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\LiveTiles\Transparent\Square310x310Logo.scale-200.png" />
+    <Content Include="Assets\LiveTiles\Transparent\Square310x310Logo.scale-400.png" />
+    <Content Include="Assets\LiveTiles\Transparent\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\LiveTiles\Transparent\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\LiveTiles\Transparent\Square71x71Logo.scale-200.png" />
+    <Content Include="Assets\LiveTiles\Transparent\Square71x71Logo.scale-400.png" />
+    <Content Include="Assets\LiveTiles\Transparent\Wide310x150Logo.scale-200.png" />
+    <Content Include="Assets\LiveTiles\Transparent\Wide310x150Logo.scale-400.png" />
+    <Content Include="Assets\UI\night_sky_texture_by_amdillon.jpg" />
     <Content Include="Assets\Pokemons\1.png" />
     <Content Include="Assets\Pokemons\10.png" />
     <Content Include="Assets\Pokemons\100.png" />
@@ -306,11 +414,19 @@
     <Content Include="Assets\Pokemons\97.png" />
     <Content Include="Assets\Pokemons\98.png" />
     <Content Include="Assets\Pokemons\99.png" />
+    <Content Include="Assets\Pokemons\Egg.png" />
+    <Content Include="Assets\Teams\instinct.png" />
+    <Content Include="Assets\Teams\mystic.png" />
+    <Content Include="Assets\Teams\no-team.png" />
+    <Content Include="Assets\Teams\valor.png" />
+    <Content Include="Assets\UI\avatar.gif" />
     <Content Include="Assets\UI\panelBG.png" />
     <Content Include="Assets\UI\candy.png" />
     <Content Include="Assets\UI\close.png" />
     <Content Include="Assets\UI\egg.png" />
     <Content Include="Assets\UI\escape.png" />
+    <Content Include="Assets\UI\logoDark.png" />
+    <Content Include="Assets\UI\logoLight.png" />
     <Content Include="Assets\Fonts\Generica Bold.otf" />
     <Content Include="Assets\Fonts\Generica.otf" />
     <Content Include="Assets\Fonts\Lato-Italic.ttf" />
@@ -319,28 +435,214 @@
     <Content Include="Assets\Fonts\Lato-Regular.ttf" />
     <Content Include="Assets\Fonts\Lato-Bold.ttf" />
     <None Include="project.json" />
+    <PRIResource Include="Strings\fi\Resources.resw" />
+    <PRIResource Include="Strings\fi\PokemonMoves.resw" />
+    <PRIResource Include="Strings\fi\Pokemon.resw" />
+    <PRIResource Include="Strings\fi\Items.resw" />
+    <PRIResource Include="Strings\fi\CodeResources.resw" />
+    <PRIResource Include="Strings\fi\Achievements.resw" />
+    <PRIResource Include="Strings\zh-HK\Resources.resw" />
+    <PRIResource Include="Strings\zh-HK\PokemonMoves.resw" />
+    <PRIResource Include="Strings\zh-HK\Pokemon.resw" />
+    <PRIResource Include="Strings\zh-HK\Items.resw" />
+    <PRIResource Include="Strings\zh-HK\CodeResources.resw" />
+    <PRIResource Include="Strings\zh-HK\Achievements.resw" />
+    <PRIResource Include="Strings\id\Resources.resw" />
+    <PRIResource Include="Strings\id\PokemonMoves.resw" />
+    <PRIResource Include="Strings\id\Pokemon.resw" />
+    <PRIResource Include="Strings\id\Items.resw" />
+    <PRIResource Include="Strings\id\CodeResources.resw" />
+    <PRIResource Include="Strings\id\Achievements.resw" />
+    <PRIResource Include="Strings\zh-TW\Resources.resw" />
+    <PRIResource Include="Strings\zh-TW\PokemonMoves.resw" />
+    <PRIResource Include="Strings\zh-TW\Pokemon.resw" />
+    <PRIResource Include="Strings\zh-TW\Items.resw" />
+    <PRIResource Include="Strings\zh-TW\CodeResources.resw" />
+    <PRIResource Include="Strings\zh-TW\Achievements.resw" />
+    <PRIResource Include="Strings\cs\Achievements.resw" />
+    <PRIResource Include="Strings\cs\CodeResources.resw" />
+    <PRIResource Include="Strings\cs\Items.resw" />
+    <PRIResource Include="Strings\cs\Pokemon.resw" />
+    <PRIResource Include="Strings\cs\PokemonMoves.resw" />
+    <PRIResource Include="Strings\cs\Resources.resw" />
+    <PRIResource Include="Strings\de\Achievements.resw" />
+    <PRIResource Include="Strings\de\CodeResources.resw" />
+    <PRIResource Include="Strings\de\Items.resw" />
+    <PRIResource Include="Strings\de\Pokemon.resw" />
+    <PRIResource Include="Strings\de\PokemonMoves.resw" />
+    <PRIResource Include="Strings\de\Resources.resw" />
+    <PRIResource Include="Strings\el\Achievements.resw" />
+    <PRIResource Include="Strings\el\CodeResources.resw" />
+    <PRIResource Include="Strings\el\Items.resw" />
+    <PRIResource Include="Strings\el\Pokemon.resw" />
+    <PRIResource Include="Strings\el\PokemonMoves.resw" />
+    <PRIResource Include="Strings\el\Resources.resw" />
+    <PRIResource Include="Strings\en-US\CodeResources.resw" />
+    <PRIResource Include="Strings\en-US\Achievements.resw" />
+    <PRIResource Include="Strings\en-US\PokemonMoves.resw" />
+    <PRIResource Include="Strings\en-US\Items.resw" />
+    <PRIResource Include="Strings\en-US\Resources.resw" />
+    <PRIResource Include="Strings\en-US\Pokemon.resw" />
+    <PRIResource Include="Strings\es\Achievements.resw" />
+    <PRIResource Include="Strings\es\CodeResources.resw" />
+    <PRIResource Include="Strings\es\Items.resw" />
+    <PRIResource Include="Strings\es\Pokemon.resw" />
+    <PRIResource Include="Strings\es\PokemonMoves.resw" />
+    <PRIResource Include="Strings\es\Resources.resw" />
+    <PRIResource Include="Strings\fr\Achievements.resw" />
+    <PRIResource Include="Strings\fr\CodeResources.resw" />
+    <PRIResource Include="Strings\fr\Items.resw" />
+    <PRIResource Include="Strings\fr\Pokemon.resw" />
+    <PRIResource Include="Strings\fr\PokemonMoves.resw" />
+    <PRIResource Include="Strings\fr\Resources.resw" />
+    <PRIResource Include="Strings\hu\Achievements.resw" />
+    <PRIResource Include="Strings\hu\CodeResources.resw" />
+    <PRIResource Include="Strings\hu\Items.resw" />
+    <PRIResource Include="Strings\hu\Pokemon.resw" />
+    <PRIResource Include="Strings\hu\PokemonMoves.resw" />
+    <PRIResource Include="Strings\hu\Resources.resw" />
+    <PRIResource Include="Strings\it\Achievements.resw" />
+    <PRIResource Include="Strings\it\CodeResources.resw" />
+    <PRIResource Include="Strings\it\Items.resw" />
+    <PRIResource Include="Strings\it\Pokemon.resw" />
+    <PRIResource Include="Strings\it\PokemonMoves.resw" />
+    <PRIResource Include="Strings\it\Resources.resw" />
+    <PRIResource Include="Strings\ja\Achievements.resw" />
+    <PRIResource Include="Strings\ja\CodeResources.resw" />
+    <PRIResource Include="Strings\ja\Items.resw" />
+    <PRIResource Include="Strings\ja\Pokemon.resw" />
+    <PRIResource Include="Strings\ja\PokemonMoves.resw" />
+    <PRIResource Include="Strings\ja\Resources.resw" />
+    <PRIResource Include="Strings\nl\Achievements.resw" />
+    <PRIResource Include="Strings\nl\CodeResources.resw" />
+    <PRIResource Include="Strings\nl\Items.resw" />
+    <PRIResource Include="Strings\nl\Pokemon.resw" />
+    <PRIResource Include="Strings\nl\PokemonMoves.resw" />
+    <PRIResource Include="Strings\nl\Resources.resw" />
+    <PRIResource Include="Strings\pl\Achievements.resw" />
+    <PRIResource Include="Strings\pl\CodeResources.resw" />
+    <PRIResource Include="Strings\pl\Items.resw" />
+    <PRIResource Include="Strings\pl\Pokemon.resw" />
+    <PRIResource Include="Strings\pl\PokemonMoves.resw" />
+    <PRIResource Include="Strings\pl\Resources.resw" />
+    <PRIResource Include="Strings\pt-BR\Achievements.resw" />
+    <PRIResource Include="Strings\pt-BR\CodeResources.resw" />
+    <PRIResource Include="Strings\pt-BR\Items.resw" />
+    <PRIResource Include="Strings\pt-BR\Pokemon.resw" />
+    <PRIResource Include="Strings\pt-BR\PokemonMoves.resw" />
+    <PRIResource Include="Strings\pt-BR\Resources.resw" />
+    <PRIResource Include="Strings\pt-PT\Achievements.resw" />
+    <PRIResource Include="Strings\pt-PT\CodeResources.resw" />
+    <PRIResource Include="Strings\pt-PT\Items.resw" />
+    <PRIResource Include="Strings\pt-PT\Pokemon.resw" />
+    <PRIResource Include="Strings\pt-PT\PokemonMoves.resw" />
+    <PRIResource Include="Strings\pt-PT\Resources.resw" />
+    <PRIResource Include="Strings\ru\Achievements.resw" />
+    <PRIResource Include="Strings\ru\CodeResources.resw" />
+    <PRIResource Include="Strings\ru\Items.resw" />
+    <PRIResource Include="Strings\ru\Pokemon.resw" />
+    <PRIResource Include="Strings\ru\PokemonMoves.resw" />
+    <PRIResource Include="Strings\ru\Resources.resw" />
+    <PRIResource Include="Strings\sk\Achievements.resw" />
+    <PRIResource Include="Strings\sk\CodeResources.resw" />
+    <PRIResource Include="Strings\sk\Items.resw" />
+    <PRIResource Include="Strings\sk\Pokemon.resw" />
+    <PRIResource Include="Strings\sk\PokemonMoves.resw" />
+    <PRIResource Include="Strings\sk\Resources.resw" />
+    <PRIResource Include="Strings\tr\Achievements.resw" />
+    <PRIResource Include="Strings\tr\CodeResources.resw" />
+    <PRIResource Include="Strings\tr\Items.resw" />
+    <PRIResource Include="Strings\tr\Pokemon.resw" />
+    <PRIResource Include="Strings\tr\PokemonMoves.resw" />
+    <PRIResource Include="Strings\tr\Resources.resw" />
+    <PRIResource Include="Strings\zh-CN\Achievements.resw" />
+    <PRIResource Include="Strings\zh-CN\CodeResources.resw" />
+    <PRIResource Include="Strings\zh-CN\Items.resw" />
+    <PRIResource Include="Strings\zh-CN\Pokemon.resw" />
+    <PRIResource Include="Strings\zh-CN\PokemonMoves.resw" />
+    <PRIResource Include="Strings\zh-CN\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CircularProgressBar.xaml.cs">
+      <DependentUpon>CircularProgressBar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Entities\FortDataWrapper.cs" />
+    <Compile Include="Entities\IUpdatable.cs" />
     <Compile Include="Entities\MapPokemonWrapper.cs" />
     <Compile Include="Entities\NearbyPokemonWrapper.cs" />
+    <Compile Include="Entities\ObservableCollectionPlus.cs" />
+    <Compile Include="Entities\ItemDataWrapper.cs" />
+    <Compile Include="Entities\PokemonDataWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Achievements\AchievementValueAttribute.cs" />
+    <Compile Include="Utils\Achievements\BronzeAttribute.cs" />
+    <Compile Include="Utils\Achievements\BadgeTypeAttribute.cs" />
+    <Compile Include="Utils\Achievements\SilverAttribute.cs" />
+    <Compile Include="Utils\Achievements\GoldAttribute.cs" />
+    <Compile Include="Utils\Achievements\AchievementType.cs" />
     <Compile Include="Utils\ApplicationKeys.cs" />
-    <Compile Include="Utils\Converters.cs" />
-    <Compile Include="Utils\ExceptionHandler.cs" />
+    <Compile Include="Utils\Game\FortDataStatus.cs" />
+    <Compile Include="Utils\Helpers\AsyncSynchronisationContext.cs" />
+    <Compile Include="Utils\Helpers\AudioUtils.cs" />
+    <Compile Include="Utils\Extensions\CollectionExtensions.cs" />
+    <Compile Include="Utils\Game\Converters.cs" />
+    <Compile Include="Utils\Helpers\DispatcherHelper.cs" />
+    <Compile Include="Utils\Helpers\GeoHelper.cs" />
+    <Compile Include="Utils\Helpers\IStorageHelper.cs" />
+    <Compile Include="Utils\Helpers\LiveTileHelper.cs" />
+    <Compile Include="Utils\Helpers\LiveTileModes.cs" />
+    <Compile Include="Utils\Helpers\LocalCacheHelper.cs" />
+    <Compile Include="Utils\Helpers\StorageHelper.cs" />
+    <Compile Include="Utils\Signature\DeviceInfos.cs" />
+    <Compile Include="Utils\Helpers\ExceptionHandler.cs" />
     <Compile Include="Utils\GameClient.cs" />
-    <Compile Include="Utils\MessageDialogExtensions.cs" />
-    <Compile Include="Utils\NavigationHelper.cs" />
-    <Compile Include="Utils\Settings.cs" />
-    <Compile Include="Utils\SettingsService.cs" />
-    <Compile Include="Utils\UpdateManager.cs" />
+    <Compile Include="Utils\Game\GameMapNavigationModes.cs" />
+    <Compile Include="Utils\Extensions\MessageDialogExtensions.cs" />
+    <Compile Include="Utils\Helpers\NavigationHelper.cs" />
+    <Compile Include="Utils\Game\PokemonInfo.cs" />
+    <Compile Include="Utils\Extensions\RandomExtensions.cs" />
+    <Compile Include="Utils\Game\Resources.cs" />
+    <Compile Include="Utils\Settings\Settings.cs" />
+    <Compile Include="Utils\Settings\SettingsService.cs" />
+    <Compile Include="Utils\Game\SortingModes.cs" />
+    <Compile Include="Utils\Signature\UdidGenerator.cs" />
+    <Compile Include="Utils\Game\UpdateManager.cs" />
+    <Compile Include="Utils\Signature\Utilities.cs" />
     <Compile Include="ViewModels\CapturePokemonPageViewModel.cs" />
+    <Compile Include="ViewModels\EggDetailPageViewModel.cs" />
     <Compile Include="ViewModels\GameMapPageViewModel.cs" />
+    <Compile Include="ViewModels\AchievementDetailPageViewModel.cs" />
+    <Compile Include="ViewModels\PlayerProfileViewModel.cs" />
+    <Compile Include="ViewModels\PokemonDetailsPageViewModel.cs" />
+    <Compile Include="ViewModels\ItemsInventoryPageViewModel.cs" />
+    <Compile Include="ViewModels\PokemonInventoryPageViewModel.cs" />
+    <Compile Include="ViewModels\SettingsPageViewModel.cs" />
     <Compile Include="ViewModels\LoginPageViewModel.cs" />
     <Compile Include="ViewModels\SearchPokeStopPageViewModel.cs" />
+    <Compile Include="Views\EggDetailPage.xaml.cs">
+      <DependentUpon>EggDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AchievementDetailPage.xaml.cs">
+      <DependentUpon>AchievementDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PlayerProfilePage.xaml.cs">
+      <DependentUpon>PlayerProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PokemonDetailPage.xaml.cs">
+      <DependentUpon>PokemonDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ItemsInventoryPage.xaml.cs">
+      <DependentUpon>ItemsInventoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PokemonInventoryPage.xaml.cs">
+      <DependentUpon>PokemonInventoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CapturePokemonPage.xaml.cs">
       <DependentUpon>CapturePokemonPage.xaml</DependentUpon>
     </Compile>
@@ -355,6 +657,9 @@
     </Compile>
     <Compile Include="Views\SearchPokestopPage.xaml.cs">
       <DependentUpon>SearchPokestopPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Splash.xaml.cs">
+      <DependentUpon>Splash.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -377,21 +682,53 @@
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
-    <Content Include="Assets\Square150x150Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\LiveTiles\Normal\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\LiveTiles\Normal\Square44x44Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Assets\LiveTiles\Normal\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\CircularProgressBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\Custom.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Views\EggDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AchievementDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PlayerProfilePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PokemonDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ItemsInventoryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PokemonInventoryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\CapturePokemonPage.xaml">
       <SubType>Designer</SubType>
@@ -413,6 +750,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Splash.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Google.Protobuf\Google.Protobuf.csproj">
@@ -429,10 +770,38 @@
       <Name>Windows Mobile Extensions for the UWP</Name>
     </SDKReference>
   </ItemGroup>
+  <ItemGroup>
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.cs.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.de.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.el.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.es.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.fi.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.fr.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.hu.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.id.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.it.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.ja.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.nl.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.pl.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.pt-BR.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.pt-PT.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.ru.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.sk.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.tr.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.zh-CN.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.zh-HK.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.zh-TW.xlf" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.PriResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.PriResources.targets')" />
+  <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.PriResources.targets')" Label="MultilingualAppToolkit">
+    <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
+  </Target>
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>

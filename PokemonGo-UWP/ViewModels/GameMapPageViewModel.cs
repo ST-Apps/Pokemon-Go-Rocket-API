@@ -2,86 +2,114 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using Windows.Devices.Geolocation;
-using Windows.Devices.Sensors;
-using Windows.Phone.Devices.Notification;
-using Windows.System.Threading;
 using Windows.UI.Popups;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Navigation;
-using AllEnum;
+using Newtonsoft.Json;
 using PokemonGo.RocketAPI;
-using PokemonGo.RocketAPI.Extensions;
-using PokemonGo.RocketAPI.GeneratedCode;
 using PokemonGo_UWP.Entities;
 using PokemonGo_UWP.Utils;
 using PokemonGo_UWP.Views;
+using POGOProtos.Data;
+using POGOProtos.Data.Player;
+using POGOProtos.Networking.Responses;
 using Template10.Common;
 using Template10.Mvvm;
-using Template10.Services.NavigationService;
-using Universal_Authenticator_v2.Views;
+using Resources = PokemonGo_UWP.Utils.Resources;
+using POGOProtos.Enums;
+using POGOProtos.Map.Pokemon;
 
 namespace PokemonGo_UWP.ViewModels
 {
     public class GameMapPageViewModel : ViewModelBase
     {
 
+        public GameMapPageViewModel()
+        {
+            if (Windows.ApplicationModel.DesignMode.DesignModeEnabled)
+            {
+                var poke1 = new NearbyPokemon()
+                {
+                    PokemonId = PokemonId.Abra,
+                    DistanceInMeters = 10,
+                };
+                var poke2 = new NearbyPokemon()
+                {
+                    PokemonId = PokemonId.Arbok,
+                    DistanceInMeters = 11,
+                };
+                var poke3 = new NearbyPokemon()
+                {
+                    PokemonId = PokemonId.Blastoise,
+                    DistanceInMeters = 12,
+                };
+                GameClient.NearbyPokemons.Add(new NearbyPokemonWrapper(poke1));
+                GameClient.NearbyPokemons.Add(new NearbyPokemonWrapper(poke2));
+                GameClient.NearbyPokemons.Add(new NearbyPokemonWrapper(poke3));
+                GameClient.PokedexInventory.Add(new PokedexEntry { PokemonId = poke1.PokemonId, TimesCaptured = 1 });
+                GameClient.PokedexInventory.Add(new PokedexEntry { PokemonId = poke2.PokemonId, TimesCaptured = 1 });
+            }
+        }
+
+
         #region Lifecycle Handlers
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="parameter"></param>
         /// <param name="mode"></param>
         /// <param name="suspensionState"></param>
         /// <returns></returns>
-        public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
+        public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode,
+            IDictionary<string, object> suspensionState)
         {
             // Prevent from going back to other pages
             NavigationService.ClearHistory();
-            if (parameter is bool)
-            {
-                // First time navigating here, we need to initialize data updating but only if we have GPS access
-                await Dispatcher.DispatchAsync(async () => { 
-                    var accessStatus = await Geolocator.RequestAccessAsync();
-                    switch (accessStatus)
-                    {
-                        case GeolocationAccessStatus.Allowed:
-                            await GameClient.InitializeDataUpdate();
-                            break;
-                        default:
-                            Logger.Write("Error during GPS activation");
-                            await new MessageDialog("We need GPS permissions to run the game, please enable it and try again.").ShowAsyncQueue();
-                            BootStrapper.Current.Exit();
-                            break;
-                    }
-                });
-            }
+            if (parameter == null || mode == NavigationMode.Back) return;
+            var gameMapNavigationMode = (GameMapNavigationModes)parameter;
+
+            // We just resumed from suspension so we restart update service and we get data from suspension state
             if (suspensionState.Any())
             {
-                // Recovering the state                
-                PlayerProfile = (Profile) suspensionState[nameof(PlayerProfile)];
-                PlayerStats = (PlayerStats) suspensionState[nameof(PlayerStats)];                
+                // Recovering the state
+                PlayerProfile = JsonConvert.DeserializeObject<PlayerData>((string)suspensionState[nameof(PlayerProfile)]);
+                PlayerStats = JsonConvert.DeserializeObject<PlayerStats>((string)suspensionState[nameof(PlayerStats)]);
+                // Restarting update service
+                await StartGpsDataService();
+                return;
             }
-            else
+
+            // Let's do the proper action
+            switch (gameMapNavigationMode)
             {
-                // No saved state, get them from the client                
-                PlayerProfile = (await GameClient.GetProfile()).Profile;
-                InventoryDelta = (await GameClient.GetInventoryDelta()).InventoryDelta;
-                var tmpStats = InventoryDelta.InventoryItems.First(item => item.InventoryItemData.PlayerStats != null).InventoryItemData.PlayerStats;
-                if (PlayerStats != null && PlayerStats.Level != tmpStats.Level)
-                {
-                    // TODO: report level increase
-                }
-                PlayerStats = tmpStats;
+                case GameMapNavigationModes.AppStart:
+                    // App just started, so we get GPS access and eventually initialize the client
+                    await StartGpsDataService();
+                    await UpdatePlayerData(true);
+                    GameClient.ToggleUpdateTimer();
+                    break;
+                case GameMapNavigationModes.SettingsUpdate:
+                    // We navigated back from Settings page after changing the Map provider, but this is managed in the page itself
+                    break;
+                case GameMapNavigationModes.PokestopUpdate:
+                    // We came here after the catching page so we need to restart map update timer and update player data. We also check for level up.
+                    GameClient.ToggleUpdateTimer();
+                    await UpdatePlayerData(true);
+                    break;
+                case GameMapNavigationModes.PokemonUpdate:
+                    // As above
+                    GameClient.ToggleUpdateTimer();
+                    await UpdatePlayerData(true);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
-            await Task.CompletedTask;
         }
 
         /// <summary>
-        /// Save state before navigating
+        ///     Save state before navigating
         /// </summary>
         /// <param name="suspensionState"></param>
         /// <param name="suspending"></param>
@@ -90,15 +118,9 @@ namespace PokemonGo_UWP.ViewModels
         {
             if (suspending)
             {
-                suspensionState[nameof(PlayerProfile)] = PlayerProfile;
-                suspensionState[nameof(PlayerStats)] = PlayerStats;
+                suspensionState[nameof(PlayerProfile)] = JsonConvert.SerializeObject(PlayerProfile);
+                suspensionState[nameof(PlayerStats)] = JsonConvert.SerializeObject(PlayerStats);
             }
-            await Task.CompletedTask;
-        }
-
-        public override async Task OnNavigatingFromAsync(NavigatingEventArgs args)
-        {
-            args.Cancel = false;
             await Task.CompletedTask;
         }
 
@@ -107,19 +129,9 @@ namespace PokemonGo_UWP.ViewModels
         #region Game Management Vars
 
         /// <summary>
-        ///     We use it to notify that we found at least one catchable Pokemon in our area
-        /// </summary>
-        private readonly VibrationDevice _vibrationDevice;
-
-        /// <summary>
-        ///     True if the phone can vibrate (e.g. the app is not in background)
-        /// </summary>
-        public bool CanVibrate;
-
-        /// <summary>
         ///     Player's profile, we use it just for the username
         /// </summary>
-        private Profile _playerProfile;
+        private PlayerData _playerProfile;
 
         /// <summary>
         ///     Stats for the current player, including current level and experience related stuff
@@ -127,14 +139,23 @@ namespace PokemonGo_UWP.ViewModels
         private PlayerStats _playerStats;
 
         /// <summary>
-        ///     Player's inventory
-        ///     TODO: do we really need it?
+        ///     Response to the level up event
         /// </summary>
-        private InventoryDelta _inventoryDelta;
+        private LevelUpRewardsResponse _levelUpRewards;
 
         #endregion
 
-        #region Bindable Game Vars   
+        #region Bindable Game Vars
+
+        public ElementTheme CurrentTheme
+        {
+            get
+            {
+                // Set theme
+                var currentTime = int.Parse(DateTime.Now.ToString("HH"));
+                return currentTime > 7 && currentTime < 19 ? ElementTheme.Light : ElementTheme.Dark;
+            }
+        }
 
         public string CurrentVersion => GameClient.CurrentVersion;
 
@@ -146,10 +167,10 @@ namespace PokemonGo_UWP.ViewModels
         /// <summary>
         ///     Player's profile, we use it just for the username
         /// </summary>
-        public Profile PlayerProfile
+        public PlayerData PlayerProfile
         {
             get { return _playerProfile; }
-            set { Set(ref _playerProfile, value); }
+            private set { Set(ref _playerProfile, value); }
         }
 
         /// <summary>
@@ -158,13 +179,16 @@ namespace PokemonGo_UWP.ViewModels
         public PlayerStats PlayerStats
         {
             get { return _playerStats; }
-            set { Set(ref _playerStats, value); }
+            private set { Set(ref _playerStats, value); }
         }
 
-        public InventoryDelta InventoryDelta
+        /// <summary>
+        ///     Response to the level up event
+        /// </summary>
+        public LevelUpRewardsResponse LevelUpResponse
         {
-            get { return _inventoryDelta; }
-            set { Set(ref _inventoryDelta, value); }
+            get { return _levelUpRewards; }
+            private set { Set(ref _levelUpRewards, value); }
         }
 
         /// <summary>
@@ -175,7 +199,7 @@ namespace PokemonGo_UWP.ViewModels
         /// <summary>
         ///     Collection of Pokemon in 2 steps from current position
         /// </summary>
-        public static ObservableCollection<NearbyPokemon> NearbyPokemons => GameClient.NearbyPokemons;
+        public static ObservableCollection<NearbyPokemonWrapper> NearbyPokemons => GameClient.NearbyPokemons;
 
         /// <summary>
         ///     Collection of Pokestops in the current area
@@ -186,24 +210,119 @@ namespace PokemonGo_UWP.ViewModels
 
         #region Game Logic
 
-        #region Logout
+        #region Player
 
-        private DelegateCommand _doPtcLogoutCommand;
+        #region Level Up Events
 
-        public DelegateCommand DoPtcLogoutCommand => _doPtcLogoutCommand ?? (
-            _doPtcLogoutCommand = new DelegateCommand(() =>
-            {
-                // Clear stored token
-                GameClient.DoLogout();
-                // Navigate to login page
-                NavigationService.Navigate(typeof(MainPage));
-            }, () => true)
-            );
-
-
-        #endregion       
+        /// <summary>
+        ///     Event fired when level up rewards are awarded to user
+        /// </summary>
+        public event EventHandler LevelUpRewardsAwarded;
 
         #endregion
 
+        /// <summary>
+        ///     Waits for GPS auth and, if auth is given, starts updating data
+        /// </summary>
+        /// <returns></returns>
+        public async Task StartGpsDataService()
+        {
+            await Dispatcher.DispatchAsync(async () =>
+            {
+                var accessStatus = await Geolocator.RequestAccessAsync();
+                switch (accessStatus)
+                {
+                    case GeolocationAccessStatus.Allowed:
+                        await GameClient.InitializeDataUpdate();
+                        break;
+                    default:
+                        Logger.Write("Error during GPS activation");
+                        await
+                            new MessageDialog(Resources.CodeResources.GetString("NoGpsPermissionsText")).ShowAsyncQueue();
+                        BootStrapper.Current.Exit();
+                        break;
+                }
+            });
+        }
+
+        /// <summary>
+        /// HACK - Needed to fix #655 (PlayerStats binding converter is not called on update)
+        /// </summary>
+        public object DummyProperty { get; set; }
+
+        /// <summary>
+        ///     Updates player profile & stats
+        /// </summary>
+        /// <param name="checkForLevelUp"></param>
+        /// <returns></returns>
+        public async Task UpdatePlayerData(bool checkForLevelUp = false)
+        {
+            await GameClient.UpdateProfile();
+            LevelUpResponse = await GameClient.UpdatePlayerStats(checkForLevelUp);
+            PlayerProfile = GameClient.PlayerProfile;
+            PlayerStats = GameClient.PlayerStats;
+            RaisePropertyChanged(() => DummyProperty);
+            if (checkForLevelUp && LevelUpResponse != null)
+            {
+                switch (LevelUpResponse.Result)
+                {
+                    case LevelUpRewardsResponse.Types.Result.Success:
+                        LevelUpRewardsAwarded?.Invoke(this, null);
+                        break;
+                }
+            }
+        }
+
+        #endregion
+
+        #region Settings
+
+        private DelegateCommand _openSettingsCommand;
+
+        public DelegateCommand SettingsCommand
+            =>
+                _openSettingsCommand ??
+                (_openSettingsCommand = new DelegateCommand(() => { NavigationService.Navigate(typeof(SettingsPage)); }))
+            ;
+
+        #endregion
+
+        #region Inventory
+
+        private DelegateCommand _gotoPokemonInventoryPage;
+
+        public DelegateCommand GotoPokemonInventoryPageCommand
+            =>
+                _gotoPokemonInventoryPage ??
+                (_gotoPokemonInventoryPage =
+                    new DelegateCommand(() => { NavigationService.Navigate(typeof(PokemonInventoryPage), true); }));
+
+        #endregion
+
+        #region Items
+
+        private DelegateCommand _gotoItemsInventoryPage;
+
+        public DelegateCommand GotoItemsInventoryPageCommand
+            =>
+                _gotoItemsInventoryPage ??
+                (_gotoItemsInventoryPage =
+                    new DelegateCommand(() => { NavigationService.Navigate(typeof(ItemsInventoryPage), true); }));
+
+        #endregion
+
+        #region Pokedex
+
+        private DelegateCommand _gotoPlayerProfilePage;
+
+        public DelegateCommand GotoPlayerProfilePageCommand
+            =>
+                _gotoPlayerProfilePage ??
+                (_gotoPlayerProfilePage =
+                    new DelegateCommand(() => { NavigationService.Navigate(typeof(PlayerProfilePage), true); }));
+
+        #endregion
+
+        #endregion
     }
 }

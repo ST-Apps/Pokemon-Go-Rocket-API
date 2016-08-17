@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BadgeBattleAttackWon" xml:space="preserve">
+    <value>Gadis Petarung</value>
+  </data>
+  <data name="BadgeBattleTrainingWon" xml:space="preserve">
+    <value>Pelatih Jagoan</value>
+  </data>
+  <data name="BadgeBigMagikarp" xml:space="preserve">
+    <value>Nelayan</value>
+  </data>
+  <data name="BadgeCaptureTotal" xml:space="preserve">
+    <value>Kolektor</value>
+  </data>
+  <data name="BadgeEvolvedTotal" xml:space="preserve">
+    <value>Ilmuan</value>
+  </data>
+  <data name="BadgeHatchedTotal" xml:space="preserve">
+    <value>Peternak</value>
+  </data>
+  <data name="BadgeSmallRattata" xml:space="preserve">
+    <value>Pemuda</value>
+  </data>
+  <data name="BadgeTravelKm" xml:space="preserve">
+    <value>Pelari</value>
+  </data>
+  <data name="Bug" xml:space="preserve">
+    <value>Penangkap Serangga</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Penjinak Naga</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Gadir Dongeng</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Sabuk Hitam</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Penjaga Burung</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Mainak Hex</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Tukang Kebun</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Maniak Kehancuran</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Pemain Ski</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Anak Sekolah</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Gadis Punk</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Cenayang</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Pendaki</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Agen Depot</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Perenang</value>
+  </data>
+</root>

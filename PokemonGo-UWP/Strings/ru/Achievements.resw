@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BadgeBattleAttackWon" xml:space="preserve">
+    <value>Воительница</value>
+  </data>
+  <data name="BadgeBattleTrainingWon" xml:space="preserve">
+    <value>Тренер-ас</value>
+  </data>
+  <data name="BadgeBigMagikarp" xml:space="preserve">
+    <value>Рыбак</value>
+  </data>
+  <data name="BadgeCaptureTotal" xml:space="preserve">
+    <value>Коллекицонер</value>
+  </data>
+  <data name="BadgeEvolvedTotal" xml:space="preserve">
+    <value>Учёный</value>
+  </data>
+  <data name="BadgeHatchedTotal" xml:space="preserve">
+    <value>Заводчик</value>
+  </data>
+  <data name="BadgePikachu" xml:space="preserve">
+    <value>Пикачу!</value>
+  </data>
+  <data name="BadgePokedexEntries" xml:space="preserve">
+    <value>Канто</value>
+  </data>
+  <data name="BadgePokestopsVisited" xml:space="preserve">
+    <value>Турист</value>
+  </data>
+  <data name="BadgeSmallRattata" xml:space="preserve">
+    <value>Малыш</value>
+  </data>
+  <data name="BadgeTravelKm" xml:space="preserve">
+    <value>Бегун</value>
+  </data>
+  <data name="Bug" xml:space="preserve">
+    <value>Клополов</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Дрессировщик драконов</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Каменщик</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Сказочница</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Чёрный пояс</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>Кочегар</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Птицелов</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Чокнутый Колдун</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Садовник</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Маньяк-разрушитель</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Лыжник</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Школьник</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Девушка-панк</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Медиум</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Ходок</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Агент "Депот"</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Пловец</value>
+  </data>
+</root>

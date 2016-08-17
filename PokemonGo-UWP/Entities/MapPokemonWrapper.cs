@@ -1,18 +1,20 @@
-﻿using Windows.Devices.Geolocation;
+﻿using System.ComponentModel;
+using Windows.Devices.Geolocation;
 using Windows.Foundation;
-using AllEnum;
-using Newtonsoft.Json;
-using PokemonGo.RocketAPI.GeneratedCode;
 using PokemonGo_UWP.Utils;
 using PokemonGo_UWP.Views;
+using POGOProtos.Enums;
+using POGOProtos.Map.Pokemon;
 using Template10.Common;
 using Template10.Mvvm;
 
 namespace PokemonGo_UWP.Entities
 {
-    public class MapPokemonWrapper
+    public class MapPokemonWrapper : IUpdatable<MapPokemon>, INotifyPropertyChanged
     {
-        private readonly MapPokemon _mapPokemon;
+        private MapPokemon _mapPokemon;
+
+        private DelegateCommand _tryCatchPokemon;
 
         public MapPokemonWrapper(MapPokemon mapPokemon)
         {
@@ -22,11 +24,9 @@ namespace PokemonGo_UWP.Entities
         }
 
         /// <summary>
-        /// HACK - this should fix Pokestop floating on map
+        ///     HACK - this should fix Pokestop floating on map
         /// </summary>
         public Point Anchor => new Point(0.5, 1);
-
-        private DelegateCommand _tryCatchPokemon;
 
         /// <summary>
         ///     We're just navigating to the capture page, reporting that the player wants to capture the selected Pokemon.
@@ -35,10 +35,24 @@ namespace PokemonGo_UWP.Entities
             _tryCatchPokemon = new DelegateCommand(() =>
             {
                 NavigationHelper.NavigationState["CurrentPokemon"] = this;
-                BootStrapper.Current.NavigationService.Navigate(typeof(CapturePokemonPage), true);
+                // Disable map update
+                GameClient.ToggleUpdateTimer(false);
+                BootStrapper.Current.NavigationService.Navigate(typeof(CapturePokemonPage));
             }, () => true)
-            );
+        );
 
+        public void Update(MapPokemon update)
+        {
+            _mapPokemon = update;
+
+            OnPropertyChanged(nameof(PokemonId));
+            OnPropertyChanged(nameof(EncounterId));
+            OnPropertyChanged(nameof(ExpirationTimestampMs));
+            OnPropertyChanged(nameof(SpawnpointId));
+            OnPropertyChanged(nameof(Geoposition));
+            OnPropertyChanged(nameof(Latitude));
+            OnPropertyChanged(nameof(Longitude));
+        }
 
         #region Wrapped Properties
 
@@ -48,13 +62,24 @@ namespace PokemonGo_UWP.Entities
 
         public long ExpirationTimestampMs => _mapPokemon.ExpirationTimestampMs;
 
-        public string SpawnpointId => _mapPokemon.SpawnpointId;
+        public string SpawnpointId => _mapPokemon.SpawnPointId;
 
         public Geopoint Geoposition { get; set; }
 
         public double Latitude => _mapPokemon.Latitude;
 
         public double Longitude => _mapPokemon.Longitude;
+
+        #endregion
+
+        #region INotifyPropertyChanged
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         #endregion
     }

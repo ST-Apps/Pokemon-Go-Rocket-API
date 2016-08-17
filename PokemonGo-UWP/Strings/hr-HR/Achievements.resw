@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BadgeBattleAttackWon" xml:space="preserve">
+    <value>Borbena djevojka
+</value>
+  </data>
+  <data name="BadgeBattleTrainingWon" xml:space="preserve">
+    <value>Trener prvaka</value>
+  </data>
+  <data name="BadgeBigMagikarp" xml:space="preserve">
+    <value>Ribič</value>
+  </data>
+  <data name="BadgeCaptureTotal" xml:space="preserve">
+    <value>Sakupljač</value>
+  </data>
+  <data name="BadgeEvolvedTotal" xml:space="preserve">
+    <value>Znanstvenik</value>
+  </data>
+  <data name="BadgeHatchedTotal" xml:space="preserve">
+    <value>Uzgajivač</value>
+  </data>
+  <data name="BadgePikachu" xml:space="preserve">
+    <value>Pikachu</value>
+  </data>
+  <data name="BadgePokedexEntries" xml:space="preserve">
+    <value>Kanto</value>
+  </data>
+  <data name="BadgePokestopsVisited" xml:space="preserve">
+    <value>Ruksak-turist</value>
+  </data>
+  <data name="BadgeSmallRattata" xml:space="preserve">
+    <value>Tinejđer</value>
+  </data>
+  <data name="BadgeTravelKm" xml:space="preserve">
+    <value>Trkač</value>
+  </data>
+  <data name="Bug" xml:space="preserve">
+    <value>Hvatač buba</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Krotitelj zmaja</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Električni</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Djevojka iz bajke</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Crni pojas</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>Vatreni</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Čuvar ptica</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Magičar</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Vrtlar</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Razbijač</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Ledeni</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Školarac</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Pankerica</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Psiho</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Stoper</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Željezničar</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Plivač</value>
+  </data>
+</root>

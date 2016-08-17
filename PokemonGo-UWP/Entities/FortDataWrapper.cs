@@ -1,38 +1,57 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel;
 using Windows.Devices.Geolocation;
 using Windows.Foundation;
-using AllEnum;
 using Google.Protobuf;
-using PokemonGo.RocketAPI.GeneratedCode;
+using PokemonGo.RocketAPI.Extensions;
 using PokemonGo_UWP.Utils;
+using PokemonGo_UWP.Utils.Game;
+using PokemonGo_UWP.Utils.Helpers;
 using PokemonGo_UWP.Views;
+using POGOProtos.Enums;
+using POGOProtos.Map.Fort;
 using Template10.Common;
 using Template10.Mvvm;
+using Google.Protobuf.Collections;
 
 namespace PokemonGo_UWP.Entities
 {
-    public class FortDataWrapper
+    public class FortDataWrapper : IUpdatable<FortData>, INotifyPropertyChanged
     {
+        private FortData _fortData;
 
-        private readonly FortData _fortData;
+        private DelegateCommand _trySearchPokestop;
+
+        /// <summary>
+        /// HACK - this should help updating pokestop icon on the map by binding to this
+        /// </summary>
+        public FortDataStatus FortDataStatus {
+            get
+            {
+                var distance = GeoHelper.Distance(Geoposition, GameClient.Geoposition.Coordinate.Point);
+                FortDataStatus retVal = FortDataStatus.Opened;
+
+                if (distance > GameClient.GameSetting.FortSettings.InteractionRangeMeters)
+                    retVal =  FortDataStatus.Closed;
+
+                if(CooldownCompleteTimestampMs > DateTime.UtcNow.ToUnixTime())
+                    retVal |= FortDataStatus.Cooldown;
+
+                return retVal;
+            }
+        }
 
         public FortDataWrapper(FortData fortData)
         {
-            _fortData = fortData;           
+            _fortData = fortData;
             Geoposition =
-                new Geopoint(new BasicGeoposition { Latitude = _fortData.Latitude, Longitude = _fortData.Longitude });
+                new Geopoint(new BasicGeoposition {Latitude = _fortData.Latitude, Longitude = _fortData.Longitude});
         }
 
         /// <summary>
-        /// HACK - this should fix Pokestop floating on map
+        ///     HACK - this should fix Pokestop floating on map
         /// </summary>
         public Point Anchor => new Point(0.5, 1);
-
-        private DelegateCommand _trySearchPokestop;
 
         /// <summary>
         ///     We're just navigating to the capture page, reporting that the player wants to capture the selected Pokemon.
@@ -43,16 +62,48 @@ namespace PokemonGo_UWP.Entities
             _trySearchPokestop = new DelegateCommand(() =>
             {
                 NavigationHelper.NavigationState["CurrentPokestop"] = this;
-                BootStrapper.Current.NavigationService.Navigate(typeof(SearchPokestopPage), true);
+                // Disable map update
+                GameClient.ToggleUpdateTimer(false);
+                BootStrapper.Current.NavigationService.Navigate(typeof(SearchPokestopPage));
             }, () => true)
             );
 
+        public void Update(FortData update)
+        {
+            _fortData = update;
+
+            OnPropertyChanged(nameof(FortDataStatus));
+            OnPropertyChanged(nameof(Id));
+            OnPropertyChanged(nameof(Type));
+            OnPropertyChanged(nameof(ActiveFortModifier));
+            OnPropertyChanged(nameof(CooldownCompleteTimestampMs));
+            OnPropertyChanged(nameof(Enabled));
+            OnPropertyChanged(nameof(GuardPokemonId));
+            OnPropertyChanged(nameof(GymPoints));
+            OnPropertyChanged(nameof(IsInBattle));
+            OnPropertyChanged(nameof(LastModifiedTimestampMs));
+            OnPropertyChanged(nameof(LureInfo));
+            OnPropertyChanged(nameof(OwnedByTeam));
+            OnPropertyChanged(nameof(RenderingType));
+            OnPropertyChanged(nameof(Sponsor));
+            OnPropertyChanged(nameof(Geoposition));
+            OnPropertyChanged(nameof(GuardPokemonCp));
+            OnPropertyChanged(nameof(Latitude));
+            OnPropertyChanged(nameof(Longitude));
+        }
+
+        public void UpdateCooldown(long newCooldownTimestampMs)
+        {
+            this._fortData.CooldownCompleteTimestampMs = newCooldownTimestampMs;
+            OnPropertyChanged(nameof(FortDataStatus));
+            OnPropertyChanged(nameof(CooldownCompleteTimestampMs));
+        }
 
         #region Wrapped Properties
 
         public FortType Type => _fortData.Type;
 
-        public ByteString ActiveFortModifier => _fortData.ActiveFortModifier;
+        public RepeatedField<POGOProtos.Inventory.Item.ItemId> ActiveFortModifier => _fortData.ActiveFortModifier;
 
         public long CooldownCompleteTimestampMs => _fortData.CooldownCompleteTimestampMs;
 
@@ -86,5 +137,15 @@ namespace PokemonGo_UWP.Entities
 
         #endregion
 
+        #region INotifyPropertyChanged
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        #endregion
     }
 }

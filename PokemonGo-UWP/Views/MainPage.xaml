@@ -1,66 +1,76 @@
 <Page x:Class="PokemonGo_UWP.Views.MainPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:controls="using:Template10.Controls"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
       mc:Ignorable="d">
-    
     <Page.DataContext>
-        <viewModels:LoginPageViewModel x:Name="ViewModel"/>
+        <viewModels:LoginPageViewModel x:Name="ViewModel" />
     </Page.DataContext>
-
-    <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-        <controls:PageHeader x:Name="pageHeader"
-                             Content="PTC Login"
-                             RelativePanel.AlignLeftWithPanel="True"
-                             RelativePanel.AlignRightWithPanel="True"
-                             RelativePanel.AlignTopWithPanel="True" />
-
-        <TextBox x:Name="usernameTextBox"
-                 Margin="16,12"
-                 Header="username:"
-                 Text="{Binding PtcUsername, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                 RelativePanel.AlignLeftWithPanel="True"
-                 RelativePanel.AlignRightWithPanel="True"
-                 RelativePanel.Below="pageHeader" />
-
-        <PasswordBox x:Name="passwordBox"
-                     Margin="16,0"
-                     Header="password:"
-                     Password="{Binding PtcPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                     RelativePanel.AlignLeftWithPanel="True"
-                     RelativePanel.AlignRightWithPanel="True"
-                     RelativePanel.Below="usernameTextBox" 
-                     KeyDown="passwordBox_KeyDown" />
-
-        <Grid Margin="16,12"
-              RelativePanel.AlignLeftWithPanel="True"
-              RelativePanel.AlignRightWithPanel="True"
-              RelativePanel.AlignBottomWithPanel="True">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <TextBlock TextWrapping="WrapWholeWords"
-                       Margin="16,12"
-                       Text="WARNING: to login to PTC server you'll need to insert your username and password in this app. If you don't trust it, please, close it before going on." />
-
-            <Button HorizontalAlignment="Stretch"
-                    Grid.Row="1"
-                    x:Name="loginButton"
-                    Content="login"
-                    Command="{Binding DoPtcLoginCommand}" />
+    <Grid x:Name="MainGrid">
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#a8e090" Offset="0" />
+                <GradientStop Color="#35908f" Offset="0.8" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0"
+               Margin="15,20"
+               MaxWidth="300"
+               Source="../Assets/Ui/logoLight.png" />
+        <Grid Grid.Row="1"
+              Style="{StaticResource GridContainer}">
+            <StackPanel>
+                <TextBox x:Name="LoginUsernameTextBox"
+                         x:Uid="LoginUsernameTextBox"
+                         Style="{StaticResource TextBox}"
+                         Margin="15,20"
+                         InputScope="EmailSmtpAddress"
+                         Text="{Binding Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                         PlaceholderText="USERNAME / EMAIL" />
+                <PasswordBox x:Name="LoginPasswordPasswordBox"
+                             x:Uid="LoginPasswordPasswordBox"
+                             Style="{StaticResource PasswordBox}"
+                             Margin="15,0"
+                             KeyDown="passwordBox_KeyDown"
+                             Password="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                             PlaceholderText="PASSWORD" />
+                <CheckBox x:Name="RememberMeCheckBox"
+                          x:Uid="RememberMeCheckBox"
+                          IsChecked="{Binding RememberLoginData, Mode=TwoWay}"
+                          Margin="15,20,15,0">
+                    <TextBlock x:Uid="RememberMeTextBlock" 
+                               Text="REMEMBER ME" />
+                </CheckBox>
+                <Button x:Name="PtcLoginButton"
+                        Style="{StaticResource ButtonSubmit}"
+                        Command="{Binding DoPtcLoginCommand}">
+                    <TextBlock x:Uid="PtcLoginTextBlock"
+                               Text="LOGIN WITH PTC ACCOUNT" />
+                </Button>
+                <Button x:Name="GoogleLoginButton"
+                        Style="{StaticResource ButtonSubmitRed}"
+                        Margin="15,0,15,15"
+                        Command="{Binding DoGoogleLoginCommand}">
+                	<TextBlock x:Uid="GoogleLoginTextBlock"
+                               Margin="10,0,0,0"
+                               Text="LOGIN WITH GOOGLE ACCOUNT" />
+                </Button>
+                <TextBlock x:Uid="LoginDisclaimerTextBox"
+                           Style="{StaticResource TextNormal}"
+                           Margin="15,0,15,20"
+                           TextAlignment="Center" />
+            </StackPanel>
         </Grid>
-        
-        <TextBlock Text="{Binding CurrentVersion}"
-                   RelativePanel.AlignTopWithPanel="True"
-                   RelativePanel.AlignRightWithPanel="True"
-                   Margin="6"
-                   />
-
-    </RelativePanel>
-
+        <TextBlock Grid.Row="2"
+                   Style="{StaticResource TextNormal}"
+                   Margin="20,15,20,15"
+                   Text="{Binding CurrentVersion}" />
+    </Grid>
 </Page>

@@ -1,0 +1,94 @@
+﻿<Page
+    x:Class="PokemonGo_UWP.Views.AchievementDetailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PokemonGo_UWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:controls="using:PokemonGo_UWP.Controls"
+    mc:Ignorable="d">
+
+    <Page.DataContext>
+        <viewModels:AchievementDetailPageViewModel x:Name="ViewModel" />
+    </Page.DataContext>
+    <RelativePanel RelativePanel.AlignTopWithPanel="True"
+                   RelativePanel.AlignLeftWithPanel="True"
+                   RelativePanel.AlignBottomWithPanel="True"
+                   RelativePanel.AlignRightWithPanel="True">
+
+        <RelativePanel.Background>
+            <ImageBrush ImageSource="../Assets/Backgrounds/ui_bg_green_03.png"
+                        Stretch="Fill" />
+        </RelativePanel.Background>
+        <Border CornerRadius="8"
+                Margin="16, 32"
+                Background="White"
+                RelativePanel.Above="CloseAchievementPageButton"
+                RelativePanel.AlignTopWithPanel="True"
+                RelativePanel.AlignLeftWithPanel="True"
+                RelativePanel.AlignRightWithPanel="True">
+
+            <Border Padding="8">
+                <Grid HorizontalAlignment="Stretch"
+                      VerticalAlignment="Stretch">
+                    <RelativePanel>
+
+                        <TextBlock RelativePanel.Above="AchievementDescriptionText"
+                                   RelativePanel.AlignHorizontalCenterWithPanel="True"
+                                   x:Name="AchievementNameText"
+                                   Margin="0"
+                                   Style="{ThemeResource ProfilePageLargeText}"
+                                   Text="{Binding Achievement.Key, Converter={StaticResource AchievementTranslationConverter}}"/>
+
+                        <TextBlock RelativePanel.Above="AchievementImage"
+                                   RelativePanel.AlignHorizontalCenterWithPanel="True"
+                                   x:Name="AchievementDescriptionText"
+                                   Margin="0,24" TextWrapping="Wrap"
+                                   Style="{ThemeResource ProfilePageText}"
+                                   Text="{Binding Achievement, Converter={StaticResource AchievementDescriptionTranslationConverter}}"/>
+
+                        <controls:CircularProgressBar Height="180" Width="180" SegmentColor="DeepSkyBlue"
+                                                      x:Name="AchievementImage"
+                                                      Diameter="{Binding ActualHeight, ElementName=AchievementImage}" StrokeThickness="2"
+                                                      InnerSegmentColor="LightGray"
+                                                      RelativePanel.AlignHorizontalCenterWithPanel="True"
+                                                      RelativePanel.AlignVerticalCenterWithPanel="true"
+                                                      ImageSourcePath="{Binding Achievement, Converter={StaticResource AchievementValueToMedalImageConverter}}"
+                                                      Maximum="{Binding Achievement, Converter={StaticResource AchievementNextValueConverter}}"
+                                                      Value="{Binding Achievement.Value, Converter={StaticResource AchievementValueConverter}}"/>
+                        
+                        <StackPanel Orientation="Horizontal"
+                                    RelativePanel.Below="AchievementImage"
+                                    RelativePanel.AlignHorizontalCenterWithPanel="True"
+                                    Margin="0,24">
+                            <TextBlock Style="{ThemeResource ProfilePageMediumText}"
+                                       Text="{Binding Achievement.Value, Converter={StaticResource AchievementValueConverter}}"/>
+                            <TextBlock Style="{ThemeResource ProfilePageMediumText}"
+                                       Text="/" Margin="5,0"/>
+                            <TextBlock Style="{ThemeResource ProfilePageMediumText}"
+                                       Text="{Binding Achievement, Converter={StaticResource AchievementNextValueConverter}}"/>
+                        </StackPanel>
+
+                    </RelativePanel>
+                </Grid>
+            </Border>
+        </Border>
+        <Button RelativePanel.AlignBottomWithPanel="True"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Style="{ThemeResource ImageButtonStyle}"
+                Height="{ThemeResource UiButtonSize}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Margin="0,0,0,24"
+                Command="{Binding ReturnToProfileScreen}"
+                x:Name="CloseAchievementPageButton">
+
+            <Image Source="../Assets/Buttons/btn_close_normal_dark.png"
+                   Stretch="Uniform" HorizontalAlignment="Stretch" />
+        </Button>
+
+    </RelativePanel>
+</Page>

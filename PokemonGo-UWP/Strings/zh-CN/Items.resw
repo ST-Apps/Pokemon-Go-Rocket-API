@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="D_ItemGreatBall" xml:space="preserve">
+    <value>捕捉宠物小精灵的道具，比精灵球有更高的概率成功。</value>
+  </data>
+  <data name="D_ItemIncenseCool" xml:space="preserve">
+    <value>迷香的神秘芳香将野生小精灵吸引到你所在的位置，持续时间30分钟</value>
+  </data>
+  <data name="D_ItemIncenseFloral" xml:space="preserve">
+    <value>迷香的神秘芳香将野生小精灵吸引到你所在的位置，持续时间30分钟</value>
+  </data>
+  <data name="D_ItemIncenseOrdinary" xml:space="preserve">
+    <value>迷香的神秘芳香将野生小精灵吸引到你所在的位置，持续时间30分钟</value>
+  </data>
+  <data name="D_ItemIncenseSpicy" xml:space="preserve">
+    <value>迷香的神秘芳香将野生小精灵吸引到你所在的位置，持续时间30分钟</value>
+  </data>
+  <data name="D_ItemIncubatorBasic" xml:space="preserve">
+    <value>将精灵蛋放在孵蛋器里，然后你走路的时候就开始孵蛋了。</value>
+  </data>
+  <data name="D_ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>将精灵蛋放在孵蛋器里，然后你走路的时候就开始孵蛋了，可无限使用。</value>
+  </data>
+  <data name="D_ItemMasterBall" xml:space="preserve">
+    <value>捕捉宠物小精灵的道具，一定能捕捉到野生神奇宝贝的最高性能的宝贝球。</value>
+  </data>
+  <data name="D_ItemPokeBall" xml:space="preserve">
+    <value>可以捕捉到野生神奇宝贝的装置，像丢球一样丢向目标。</value>
+  </data>
+  <data name="D_ItemPotion" xml:space="preserve">
+    <value>喷雾型的药水，可以回复一只神奇宝贝20点HP。</value>
+  </data>
+  <data name="D_ItemRevive" xml:space="preserve">
+    <value>让一只神奇宝贝从濒死的状态恢复精神，并回复一半的HP。</value>
+  </data>
+  <data name="D_ItemUltraBall" xml:space="preserve">
+    <value>捕捉宠物小精灵的道具，比超级球更容易捕捉到神奇宝贝的性能好的宝贝球。</value>
+  </data>
+  <data name="ItemBlukBerry" xml:space="preserve">
+    <value>蓝莓</value>
+  </data>
+  <data name="ItemGreatBall" xml:space="preserve">
+    <value>超级球</value>
+  </data>
+  <data name="ItemHyperPotion" xml:space="preserve">
+    <value>超高级药水</value>
+  </data>
+  <data name="ItemIncenseCool" xml:space="preserve">
+    <value>清凉迷香</value>
+  </data>
+  <data name="ItemIncenseFloral" xml:space="preserve">
+    <value>植物迷香</value>
+  </data>
+  <data name="ItemIncenseOrdinary" xml:space="preserve">
+    <value>普通迷香</value>
+  </data>
+  <data name="ItemIncenseSpicy" xml:space="preserve">
+    <value>辛辣迷香</value>
+  </data>
+  <data name="ItemIncubatorBasic" xml:space="preserve">
+    <value>孵蛋器</value>
+  </data>
+  <data name="ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>无限孵蛋器</value>
+  </data>
+  <data name="ItemItemStorageUpgrade" xml:space="preserve">
+    <value>升级背包</value>
+  </data>
+  <data name="ItemLuckyEgg" xml:space="preserve">
+    <value>幸运蛋</value>
+  </data>
+  <data name="ItemMasterBall" xml:space="preserve">
+    <value>大师球</value>
+  </data>
+  <data name="ItemMaxPotion" xml:space="preserve">
+    <value>全满药水</value>
+  </data>
+  <data name="ItemMaxRevive" xml:space="preserve">
+    <value>特级更生剂</value>
+  </data>
+  <data name="ItemNanabBerry" xml:space="preserve">
+    <value>粉蕉</value>
+  </data>
+  <data name="ItemPinapBerry" xml:space="preserve">
+    <value>黄旺梨</value>
+  </data>
+  <data name="ItemPokeBall" xml:space="preserve">
+    <value>精灵球</value>
+  </data>
+  <data name="ItemPokemonStorageUpgrade" xml:space="preserve">
+    <value>宝可梦空间升级</value>
+  </data>
+  <data name="ItemPotion" xml:space="preserve">
+    <value>药水</value>
+  </data>
+  <data name="ItemRazzBerry" xml:space="preserve">
+    <value>红蔓梅</value>
+  </data>
+  <data name="ItemRevive" xml:space="preserve">
+    <value>复活石</value>
+  </data>
+  <data name="ItemSpecialCamera" xml:space="preserve">
+    <value>特殊相机</value>
+  </data>
+  <data name="ItemSuperPotion" xml:space="preserve">
+    <value>强效药水</value>
+  </data>
+  <data name="ItemTroyDisk" xml:space="preserve">
+    <value>特洛伊磁盘</value>
+  </data>
+  <data name="ItemUltraBall" xml:space="preserve">
+    <value>超级球</value>
+  </data>
+  <data name="ItemUnknown" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="ItemWeparBerry" xml:space="preserve">
+    <value>青梨</value>
+  </data>
+  <data name="ItemXAttack" xml:space="preserve">
+    <value>X 攻击</value>
+  </data>
+  <data name="ItemXDefense" xml:space="preserve">
+    <value>X 防御</value>
+  </data>
+  <data name="ItemXMiracle" xml:space="preserve">
+    <value>X 奇迹</value>
+  </data>
+</root>

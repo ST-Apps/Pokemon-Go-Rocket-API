@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CooldownTextBlock.Text" xml:space="preserve">
+    <value>Вы должны немного подождать</value>
+  </data>
+  <data name="GoogleLoginTextBlock.Text" xml:space="preserve">
+    <value>GOOGLE</value>
+  </data>
+  <data name="InventoryFullTextBlock.Text" xml:space="preserve">
+    <value>Ваш инвентарь полон!</value>
+  </data>
+  <data name="PtcLoginTextBlock.Text" xml:space="preserve">
+    <value>ВОЙТИ через аккаунт PTC</value>
+  </data>
+  <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
+    <value>Для входа вам нужно ввести свой Логин/Почту и Пароль в это приложение. Если вы ему не доверяете, пожалуйста, закройте его. Мы не отвечаем за всё, что может случиться.</value>
+  </data>
+  <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
+    <value>рядом</value>
+  </data>
+  <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
+    <value>Вы находитесь вне зоны действия.</value>
+  </data>
+  <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
+    <value>Логин/Почта</value>
+  </data>
+  <data name="ExperienceTextBlock.Text" xml:space="preserve">
+    <value>ОПЫТ</value>
+  </data>
+  <data name="OkButton.Content" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="CpTextBlock.Text" xml:space="preserve">
+    <value>CP</value>
+  </data>
+  <data name="EggsTextBlock.Text" xml:space="preserve">
+    <value>ЯЙЦА</value>
+  </data>
+  <data name="SettingsMusicTextBlock.Text" xml:space="preserve">
+    <value>Музыка</value>
+  </data>
+  <data name="PokemonTextBlock.Text" xml:space="preserve">
+    <value>ПОКЕМОНЫ</value>
+  </data>
+  <data name="SettingsHeaderTextBlock.Text" xml:space="preserve">
+    <value>НАСТРОЙКИ</value>
+  </data>
+  <data name="SettingsSignOutTextBlock.Text" xml:space="preserve">
+    <value>Выйти</value>
+  </data>
+  <data name="SettingsVibrationTextBlock.Text" xml:space="preserve">
+    <value>Вибрация</value>
+  </data>
+  <data name="ItemsTextBlock.Text" xml:space="preserve">
+    <value>ПРЕДМЕТЫ</value>
+  </data>
+  <data name="PokedexTextBlock.Text" xml:space="preserve">
+    <value>ПОКЕДЕКС</value>
+  </data>
+  <data name="LowercaseItemsTextBlock.Text" xml:space="preserve">
+    <value>предметы</value>
+  </data>
+  <data name="NumberTextBlock.Text" xml:space="preserve">
+    <value># </value>
+    <comment>Watch out: there is a space after the #</comment>
+  </data>
+  <data name="SlashSpaceCpTextBlock.Text" xml:space="preserve">
+    <value>/ Мощь</value>
+  </data>
+  <data name="SpaceXpTextBlock.Text" xml:space="preserve">
+    <value> ХП</value>
+  </data>
+  <data name="TotalExperienceTextBlock.Text" xml:space="preserve">
+    <value>ВСЕГО</value>
+  </data>
+  <data name="LevelUpTextBlock.Text" xml:space="preserve">
+    <value>Уровень повышен!</value>
+  </data>
+  <data name="LevelTextBlock.Text" xml:space="preserve">
+    <value>Уровень</value>
+  </data>
+  <data name="SettingsMapAutoRotateTextBlock.Text" xml:space="preserve">
+    <value>Автоповорот карты</value>
+  </data>
+  <data name="StartDateTextBlock.Text" xml:space="preserve">
+    <value>ДАТА НАЧАЛА</value>
+  </data>
+  <data name="IncubatorsTextBlock.Text" xml:space="preserve">
+    <value>ИНКУБАТОРЫ</value>
+  </data>
+  <data name="CandyTextBlock.Text" xml:space="preserve">
+    <value>Конфета</value>
+    <comment>Watch out: space before the word!</comment>
+  </data>
+  <data name="HeightTextBlock.Text" xml:space="preserve">
+    <value>Высота</value>
+  </data>
+  <data name="HpTextBlock.Text" xml:space="preserve">
+    <value>ХП</value>
+  </data>
+  <data name="KgTextBlock.Text" xml:space="preserve">
+    <value>кг</value>
+  </data>
+  <data name="MTextBlock.Text" xml:space="preserve">
+    <value>м</value>
+  </data>
+  <data name="StardustTextBlock.Text" xml:space="preserve">
+    <value>STARDUST</value>
+  </data>
+  <data name="TypeTextBlock.Text" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="WeightTextBlock.Text" xml:space="preserve">
+    <value>Вес</value>
+  </data>
+  <data name="EvolveButton.Content" xml:space="preserve">
+    <value>Развить</value>
+  </data>
+  <data name="PowerUpButton.Content" xml:space="preserve">
+    <value>Улучшить</value>
+  </data>
+  <data name="TransferButton.Content" xml:space="preserve">
+    <value>Передать</value>
+  </data>
+</root>

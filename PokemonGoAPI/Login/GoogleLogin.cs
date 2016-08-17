@@ -1,86 +1,72 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.Threading.Tasks;
-using PokemonGo.RocketAPI.Helpers;
+using Windows.System;
+using DankMemes.GPSOAuthSharp;
+using PokemonGo.RocketAPI.Enums;
+using PokemonGo.RocketAPI.Exceptions;
+using PokemonGo.RocketAPI.Extensions;
+using PokemonGoAPI.Session;
 
 namespace PokemonGo.RocketAPI.Login
 {
-    internal static class GoogleLogin
+    public class GoogleLogin : ILoginType
     {
-        private const string OauthTokenEndpoint = "https://www.googleapis.com/oauth2/v4/token";
-        private const string OauthEndpoint = "https://accounts.google.com/o/oauth2/device/code";
-        private const string ClientId = "848232511240-73ri3t7plvk96pj4f85uj8otdat2alem.apps.googleusercontent.com";
-        private const string ClientSecret = "NCjF1TLi2CcY6t5mt0ZveuL7";
+        public const string GoogleLoginAndroidId = "9774d56d682e549c";
 
-        internal static async Task<TokenResponseModel> GetAccessToken()
+        public const string GoogleLoginService =
+            "audience:server:client_id:848232511240-7so421jotr2609rmqakceuu1luuq0ptb.apps.googleusercontent.com";
+
+        public const string GoogleLoginApp = "com.nianticlabs.pokemongo";
+        public const string GoogleLoginClientSig = "321187995bc7cdc2b5fc91b11a96e2baa8602c62";
+
+        private readonly string _email;
+        private readonly string _password;
+
+        public GoogleLogin(string email, string password)
         {
-            var deviceCodeResponse = await GetDeviceCode();
-            Logger.Write(
-                "Please visit " + deviceCodeResponse.verification_url + " and enter " + deviceCodeResponse.user_code,
-                LogLevel.None);
+            _email = email;
+            _password = password;
+        }
 
-            //Poll until user submitted code..
-            TokenResponseModel tokenResponse;
-            do
+#pragma warning disable 1998
+        public async Task<AccessToken> GetAccessToken()
+#pragma warning restore 1998
+        {
+            var client = new GPSOAuthClient(_email, _password);
+            var response = await client.PerformMasterLogin(GoogleLoginAndroidId);
+
+            if (response.ContainsKey("Error"))
             {
-                await Task.Delay(2000);
-                tokenResponse = await PollSubmittedToken(deviceCodeResponse.device_code);
-            } while (tokenResponse.access_token == null || tokenResponse.refresh_token == null);
+                if (response.ContainsKey("Url"))
+                {
+                    await Launcher.LaunchUriAsync(new Uri(response["Url"]));
+                }
+                else
+                    throw new GoogleException(response["Error"]);
+            }
 
-            return tokenResponse;
-        }
+            //Todo: captcha/2fa implementation
 
-        private static async Task<DeviceCodeModel> GetDeviceCode()
-        {
-            return await HttpClientHelper.PostFormEncodedAsync<DeviceCodeModel>(OauthEndpoint,
-                new KeyValuePair<string, string>("client_id", ClientId),
-                new KeyValuePair<string, string>("scope", "openid email https://www.googleapis.com/auth/userinfo.email"));
-        }
+            if (!response.ContainsKey("Auth"))
+                throw new GoogleOfflineException();
 
-        private static async Task<TokenResponseModel> PollSubmittedToken(string deviceCode)
-        {
-            return await HttpClientHelper.PostFormEncodedAsync<TokenResponseModel>(OauthTokenEndpoint,
-                new KeyValuePair<string, string>("client_id", ClientId),
-                new KeyValuePair<string, string>("client_secret", ClientSecret),
-                new KeyValuePair<string, string>("code", deviceCode),
-                new KeyValuePair<string, string>("grant_type", "http://oauth.net/grant_type/device/1.0"),
-                new KeyValuePair<string, string>("scope", "openid email https://www.googleapis.com/auth/userinfo.email"));
-        }
+            var oauthResponse =
+                await
+                    client.PerformOAuth(response["Token"], GoogleLoginService, GoogleLoginAndroidId, GoogleLoginApp,
+                        GoogleLoginClientSig);
 
-        public static async Task<TokenResponseModel> GetAccessToken(string refreshToken)
-        {
-            return await HttpClientHelper.PostFormEncodedAsync<TokenResponseModel>(OauthTokenEndpoint,
-                new KeyValuePair<string, string>("access_type", "offline"),
-                new KeyValuePair<string, string>("client_id", ClientId),
-                new KeyValuePair<string, string>("client_secret", ClientSecret),
-                new KeyValuePair<string, string>("refresh_token", refreshToken),
-                new KeyValuePair<string, string>("grant_type", "refresh_token"),
-                new KeyValuePair<string, string>("scope", "openid email https://www.googleapis.com/auth/userinfo.email"));
-        }
+            if (!oauthResponse.ContainsKey("Auth"))
+                throw new GoogleOfflineException();
 
+            //return oauthResponse["Auth"];
 
-        internal class ErrorResponseModel
-        {
-            public string error { get; set; }
-            public string error_description { get; set; }
-        }
-
-        internal class TokenResponseModel
-        {
-            public string access_token { get; set; }
-            public string token_type { get; set; }
-            public int expires_in { get; set; }
-            public string refresh_token { get; set; }
-            public string id_token { get; set; }
-        }
-
-
-        public class DeviceCodeModel
-        {
-            public string verification_url { get; set; }
-            public int expires_in { get; set; }
-            public int interval { get; set; }
-            public string device_code { get; set; }
-            public string user_code { get; set; }
+            return new AccessToken
+            {
+                Username = _email,
+                Token = oauthResponse["Auth"],
+                Expiry = DateTimeExtensions.GetDateTimeFromSeconds(int.Parse(oauthResponse["Expiry"])),
+                AuthType = AuthType.Google
+            };
         }
     }
 }

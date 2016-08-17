@@ -2,8 +2,9 @@
                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                      xmlns:common="using:Template10.Common"
-                     xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
                      xmlns:utils="using:PokemonGo_UWP.Utils"
+                     xmlns:converters="using:Template10.Converters"
+                     xmlns:enums="using:POGOProtos.Enums"
                      RequestedTheme="Light">
 
     <Application.Resources>
@@ -22,9 +23,84 @@
             <utils:MapObjectToGeopointConverter x:Key="MapObjectToGeopointConverter" />
             <utils:ItemIdToItemIconConverter x:Key="ItemIdToItemIconConverter" />
             <utils:PokemonDataToVisibilityConverter x:Key="PokemonDataToVisibilityConverter" />
-            <utils:ItemAwardToPokemonSpriteConverter x:Key="ItemAwardToPokemonSpriteConverter" />
+            <utils:ItemToItemIconConverter x:Key="ItemToItemIconConverter" />
             <utils:NearbyPokemonDistanceToDistanceImageConverter x:Key="NearbyPokemonDistanceToDistanceImageConverter" />
             <utils:PokestopToIconConverter x:Key="PokestopToIconConverter" />
+            <utils:CurrentTimeToMapColorSchemeConverter x:Key="CurrentTimeToMapColorSchemeConverter" />
+            <utils:PokemonDataToPokemonStaminaConverter x:Key="PokemonDataToPokemonStaminaConverter" />
+            <utils:PokemonIdToPokemonNameConverter x:Key="PokemonIdToPokemonNameConverter" />
+            <utils:PokemonSortingModesToSortingModesListConverter
+                x:Key="PokemonSortingModesToSortingModesListConverter" />
+            <utils:PokemonSortingModesToIconConverter x:Key="PokemonSortingModesToIconConverter" />
+            <utils:EggDataToEggProgressConverter x:Key="EggDataToEggProgressConverter" />
+            <utils:ItemToItemDescriptionConverter x:Key="ItemToItemDescriptionConverter" />
+            <utils:IncubatorUsagesCountToUsagesTextConverter x:Key="IncubatorUsagesCountToUsagesTextConverter" />
+            <utils:EggDataToEggIconConverter x:Key="EggDataToEggIconConverter" />
+            <utils:VisibleWhenStringEmptyConverter x:Key="VisibleWhenStringEmptyConverter" />
+            <utils:VisibleWhenGreaterThanConverter x:Key="VisibleWhenGreaterThanConverter" />
+            <utils:PlayerStatsTranslationConverter x:Key="PlayerStatsTranslationConverter" />
+            <utils:MsToDateFormatConverter x:Key="MsToDateFormatConverter" />
+            <utils:PlayerTeamToTeamImageConverter x:Key="PlayerTeamToTeamImageConverter" />
+            <utils:PlayerTeamToTeamNameConverter x:Key="PlayerTeamToTeamNameConverter" />
+            <utils:AchievementValueToMedalImageConverter x:Key="AchievementValueToMedalImageConverter" />
+            <utils:PlayerTeamToTeamBackgroundImageConverter x:Key="PlayerTeamToTeamBackgroundImageConverter" />
+            <utils:AchievementNextValueConverter x:Key="AchievementNextValueConverter" />
+            <utils:AchievementValueConverter x:Key="AchievementValueConverter" />
+            <utils:AchievementTranslationConverter x:Key="AchievementTranslationConverter" />
+            <utils:PlayerDataToCurrentExperienceConverter x:Key="PlayerDataToCurrentExperienceConverter" />
+            <utils:PlayerDataToTotalLevelExperienceConverter x:Key="PlayerDataToTotalLevelExperienceConverter" />
+            <utils:PlayerDataToPokeCoinsConverter x:Key="PlayerDataToPokeCoinsConverter" />
+            <utils:AchievementToCompletedPercentageConverter x:Key="AchievementToCompletedPercentageConverter" />
+            <utils:StringFormatConverter x:Key="StringFormatConverter" />
+            <utils:PokemonDataToPokemonTypeBackgroundConverter x:Key="PokemonDataToPokemonTypeBackgroundConverter"/>
+            <utils:PokemonDataToMaxLevelBarConverter x:Key="PokemonDataToMaxLevelBarConverter"/>
+            <utils:PokemonDataToLevelBarConverter x:Key="PokemonDataToLevelBarConverter"/>
+            <utils:PokemonFamilyToCandyImageConverter x:Key="PokemonFamilyToCandyImageConverter"/>
+            <utils:PokemonFamilyNameToStringConverter x:Key="PokemonFamilyNameToStringConverter"/>
+            <utils:PokemonMoveToMoveTypeStringConverter x:Key="PokemonMoveToMoveTypeStringConverter"/>
+            <utils:PokemonMoveToMoveNameConverter x:Key="PokemonMoveToMoveNameConverter"/>
+            <utils:PokemonMoveToMovePowerConverter x:Key="PokemonMoveToMovePowerConverter"/>
+            <utils:VisibleWhenTypeIsNotNoneConverter x:Key="VisibleWhenTypeIsNotNoneConverter"/>
+            <utils:InverseVisibleWhenTypeIsNotNoneConverter x:Key="InverseVisibleWhenTypeIsNotNoneConverter"/>
+            <utils:PokemonDataToCapturedGepositionConverter x:Key="PokemonDataToCapturedGepositionConverter"/>
+            <utils:AchievementDescriptionTranslationConverter x:Key="AchievementDescriptionTranslationConverter"/>
+            
+
+            <converters:ValueWhenConverter x:Key="EnabledWhenHasElementsConverter">
+                <converters:ValueWhenConverter.When>
+                    <x:Double>0</x:Double>
+                </converters:ValueWhenConverter.When>
+                <converters:ValueWhenConverter.Value>
+                    <x:Boolean>False</x:Boolean>
+                </converters:ValueWhenConverter.Value>
+                <converters:ValueWhenConverter.Otherwise>
+                    <x:Boolean>True</x:Boolean>
+                </converters:ValueWhenConverter.Otherwise>
+            </converters:ValueWhenConverter>
+
+            <converters:ValueWhenConverter x:Key="VisibleWhenCanEvolveConverter">
+                <converters:ValueWhenConverter.When>
+                    <x:Int32>0</x:Int32>
+                </converters:ValueWhenConverter.When>
+                <converters:ValueWhenConverter.Value>
+                    <Visibility>Collapsed</Visibility>
+                </converters:ValueWhenConverter.Value>
+                <converters:ValueWhenConverter.Otherwise>
+                    <Visibility>Visible</Visibility>
+                </converters:ValueWhenConverter.Otherwise>
+            </converters:ValueWhenConverter>
+
+            <!--<converters:ValueWhenConverter x:Key="VisibleWhenStringNotEmptyConverter">
+                <converters:ValueWhenConverter.When>
+                    <x:String></x:String>
+                </converters:ValueWhenConverter.When>
+                <converters:ValueWhenConverter.Value>
+                    <Visibility>Visible</Visibility>
+                </converters:ValueWhenConverter.Value>
+                <converters:ValueWhenConverter.Otherwise>
+                    <Visibility>Collapsed</Visibility>
+                </converters:ValueWhenConverter.Otherwise>
+            </converters:ValueWhenConverter>-->
 
         </ResourceDictionary>
     </Application.Resources>

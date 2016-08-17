@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Windows.UI.Popups;
 using Windows.UI.Xaml.Navigation;
-using AllEnum;
+using Newtonsoft.Json;
 using PokemonGo.RocketAPI;
 using PokemonGo.RocketAPI.Extensions;
-using PokemonGo.RocketAPI.GeneratedCode;
 using PokemonGo_UWP.Entities;
 using PokemonGo_UWP.Utils;
 using PokemonGo_UWP.Views;
+using POGOProtos.Inventory.Item;
+using POGOProtos.Networking.Responses;
 using Template10.Mvvm;
 using Template10.Services.NavigationService;
 using Universal_Authenticator_v2.Views;
@@ -21,11 +20,9 @@ namespace PokemonGo_UWP.ViewModels
 {
     public class SearchPokeStopPageViewModel : ViewModelBase
     {
-
         #region Lifecycle Handlers
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="parameter">FortData containing the Pokestop that we're visiting</param>
         /// <param name="mode"></param>
@@ -37,31 +34,31 @@ namespace PokemonGo_UWP.ViewModels
             if (suspensionState.Any())
             {
                 // Recovering the state
-                CurrentPokestop = (FortDataWrapper) suspensionState[nameof(CurrentPokestop)];
-                CurrentPokestopInfo = (FortDetailsResponse) suspensionState[nameof(CurrentPokestopInfo)];
-                CurrentSearchResponse = (FortSearchResponse) suspensionState[nameof(CurrentSearchResponse)];
+                CurrentPokestop = JsonConvert.DeserializeObject<FortDataWrapper>((string)suspensionState[nameof(CurrentPokestop)]);
+                CurrentPokestopInfo = JsonConvert.DeserializeObject<FortDetailsResponse>((string)suspensionState[nameof(CurrentPokestopInfo)]);
+                CurrentSearchResponse = JsonConvert.DeserializeObject<FortSearchResponse>((string)suspensionState[nameof(CurrentSearchResponse)]);
             }
-            else if (parameter is bool)
+            else
             {
-                // Navigating from game page, so we need to actually load the Pokestop                  
+                // Navigating from game page, so we need to actually load the Pokestop
                 Busy.SetBusy(true, "Loading Pokestop");
-                CurrentPokestop = (FortDataWrapper)NavigationHelper.NavigationState[nameof(CurrentPokestop)];                
+                CurrentPokestop = (FortDataWrapper)NavigationHelper.NavigationState[nameof(CurrentPokestop)];
                 NavigationHelper.NavigationState.Remove(nameof(CurrentPokestop));
-                Logger.Write($"Searching {CurrentPokestop.Id}");                
-                CurrentPokestopInfo = await GameClient.GetFort(CurrentPokestop.Id, CurrentPokestop.Latitude, CurrentPokestop.Longitude);
+                Logger.Write($"Searching {CurrentPokestop.Id}");
+                CurrentPokestopInfo =
+                    await GameClient.GetFort(CurrentPokestop.Id, CurrentPokestop.Latitude, CurrentPokestop.Longitude);
                 Busy.SetBusy(false);
-                // If timeout is expired we can go to to pokestop page          
+                // If timeout is expired we can go to to pokestop page
                 if (CurrentPokestop.CooldownCompleteTimestampMs >= DateTime.UtcNow.ToUnixTime())
                 {
                     // Timeout is not expired yet, player can't get items from the fort
                     SearchInCooldown?.Invoke(null, null);
                 }
             }
-            await Task.CompletedTask;
         }
 
         /// <summary>
-        /// Save state before navigating
+        ///     Save state before navigating
         /// </summary>
         /// <param name="suspensionState"></param>
         /// <param name="suspending"></param>
@@ -70,9 +67,9 @@ namespace PokemonGo_UWP.ViewModels
         {
             if (suspending)
             {
-                suspensionState[nameof(CurrentPokestop)] = CurrentPokestop;
-                suspensionState[nameof(CurrentPokestopInfo)] = CurrentPokestopInfo;
-                suspensionState[nameof(CurrentSearchResponse)] = CurrentSearchResponse;
+                suspensionState[nameof(CurrentPokestop)] = JsonConvert.SerializeObject(CurrentPokestop);
+                suspensionState[nameof(CurrentPokestopInfo)] = JsonConvert.SerializeObject(CurrentPokestopInfo);
+                suspensionState[nameof(CurrentSearchResponse)] = JsonConvert.SerializeObject(CurrentSearchResponse);
             }
             await Task.CompletedTask;
         }
@@ -133,6 +130,11 @@ namespace PokemonGo_UWP.ViewModels
             set { Set(ref _currentSearchResponse, value); }
         }
 
+        /// <summary>
+        ///     Items awarded by Pokestop searching
+        /// </summary>
+        public ObservableCollection<ItemAward> AwardedItems { get; } = new ObservableCollection<ItemAward>();
+
         #endregion
 
         #region Game Logic
@@ -145,11 +147,25 @@ namespace PokemonGo_UWP.ViewModels
         ///     Going back to map page
         /// </summary>
         public DelegateCommand ReturnToGameScreen => _returnToGameScreen ?? (
-            _returnToGameScreen = new DelegateCommand(() =>
-            {
-                NavigationService.Navigate(typeof(GameMapPage));
-            }, () => true)
+            _returnToGameScreen =
+                new DelegateCommand(
+                    () => { NavigationService.Navigate(typeof(GameMapPage), GameMapNavigationModes.PokestopUpdate); },
+                    () => true)
             );
+
+        private DelegateCommand _abandonPokestop;
+
+        /// <summary>
+        ///     Going back to map page
+        /// </summary>
+        public DelegateCommand AbandonPokestop => _abandonPokestop ?? (
+            _abandonPokestop = new DelegateCommand(() =>
+            {
+                // Re-enable update timer
+                GameClient.ToggleUpdateTimer();
+                Dispatcher.Dispatch(() => NavigationService.GoBack());
+            }, () => true)
+        );
 
         #endregion
 
@@ -177,7 +193,7 @@ namespace PokemonGo_UWP.ViewModels
         /// </summary>
         public event EventHandler SearchInventoryFull;
 
-        #endregion        
+        #endregion
 
         private DelegateCommand _searchCurrentPokestop;
 
@@ -199,7 +215,20 @@ namespace PokemonGo_UWP.ViewModels
                     case FortSearchResponse.Types.Result.Success:
                         // Success, we play the animation and update inventory
                         Logger.Write("Searching Pokestop success");
-                        SearchSuccess?.Invoke(this, null);                        
+                        AwardedItems.Clear();
+                        // TODO: can this be improved?
+                        var tmpAwardedItems = CurrentSearchResponse.ItemsAwarded.GroupBy(item => item.ItemId);
+                        foreach (var tmpAwardedItem in tmpAwardedItems)
+                        {
+                            var tmpItem = tmpAwardedItem.GroupBy(item => item.ItemId);
+                            AwardedItems.Add(new ItemAward
+                            {
+                                ItemId = tmpItem.First().First().ItemId,
+                                ItemCount = tmpItem.First().Count()
+                            });
+                        }
+                        CurrentPokestop.UpdateCooldown(CurrentSearchResponse.CooldownCompleteTimestampMs);
+                        SearchSuccess?.Invoke(this, null);
                         await GameClient.UpdateInventory();
                         break;
                     case FortSearchResponse.Types.Result.OutOfRange:
@@ -214,7 +243,19 @@ namespace PokemonGo_UWP.ViewModels
                         break;
                     case FortSearchResponse.Types.Result.InventoryFull:
                         // Items can't be gathered because player's inventory is full, there's nothing that we can do
-                        // TODO: do something here!
+                        AwardedItems.Clear();
+                        // TODO: can this be improved?
+                        tmpAwardedItems = CurrentSearchResponse.ItemsAwarded.GroupBy(item => item.ItemId);
+                        foreach (var tmpAwardedItem in tmpAwardedItems)
+                        {
+                            var tmpItem = tmpAwardedItem.GroupBy(item => item.ItemId);
+                            AwardedItems.Add(new ItemAward
+                            {
+                                ItemId = tmpItem.First().First().ItemId,
+                                ItemCount = tmpItem.First().Count()
+                            });
+                        }
+                        CurrentPokestop.UpdateCooldown(CurrentSearchResponse.CooldownCompleteTimestampMs);
                         SearchInventoryFull?.Invoke(this, null);
                         break;
                     default:
@@ -225,6 +266,5 @@ namespace PokemonGo_UWP.ViewModels
         #endregion
 
         #endregion
-
     }
 }

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CooldownTextBlock.Text" xml:space="preserve">
+    <value>Você tem que esperar algum tempo</value>
+  </data>
+  <data name="InventoryFullTextBlock.Text" xml:space="preserve">
+    <value>Seu inventário está cheio!</value>
+  </data>
+  <data name="PtcLoginTextBlock.Text" xml:space="preserve">
+    <value>Faça o LOGIN com uma conta do PTC</value>
+  </data>
+  <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
+    <value>Para entrar você precisa inserir seu nome de usuário/E-mail e senha neste app. Se não confia nele, por favor, feche-o antes de continuar. Não nos responsabilizamos por nada.</value>
+  </data>
+  <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
+    <value>nas proximidades</value>
+  </data>
+  <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
+    <value>Você está fora do alcance</value>
+  </data>
+  <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
+    <value>Nome de usuário/e-mail</value>
+  </data>
+  <data name="EggsTextBlock.Text" xml:space="preserve">
+    <value>OVOS</value>
+  </data>
+  <data name="SettingsMusicTextBlock.Text" xml:space="preserve">
+    <value>Música</value>
+  </data>
+  <data name="SettingsHeaderTextBlock.Text" xml:space="preserve">
+    <value>CONFIGURAÇÕES</value>
+  </data>
+  <data name="SettingsSignOutTextBlock.Text" xml:space="preserve">
+    <value>Desconectar</value>
+  </data>
+  <data name="SettingsVibrationTextBlock.Text" xml:space="preserve">
+    <value>Vibração</value>
+  </data>
+  <data name="ItemsTextBlock.Text" xml:space="preserve">
+    <value>ITENS</value>
+  </data>
+  <data name="LowercaseItemsTextBlock.Text" xml:space="preserve">
+    <value>Itens</value>
+  </data>
+  <data name="TotalExperienceTextBlock.Text" xml:space="preserve">
+    <value>TOTAL</value>
+  </data>
+  <data name="LevelUpTextBlock.Text" xml:space="preserve">
+    <value>Subiu de nível!</value>
+  </data>
+  <data name="LevelTextBlock.Text" xml:space="preserve">
+    <value>Nível</value>
+  </data>
+  <data name="SettingsMapAutoRotateTextBlock.Text" xml:space="preserve">
+    <value>Girar automaticamente o mapa</value>
+  </data>
+  <data name="StartDateTextBlock.Text" xml:space="preserve">
+    <value>DATA DE INÍCIO</value>
+  </data>
+  <data name="IncubatorsTextBlock.Text" xml:space="preserve">
+    <value>INCUBADORAS</value>
+  </data>
+</root>

@@ -1,0 +1,255 @@
+﻿<Page
+    x:Class="PokemonGo_UWP.Views.ItemsInventoryPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    mc:Ignorable="d">
+
+    <Page.DataContext>
+        <viewModels:ItemsInventoryPageViewModel x:Name="ViewModel" />
+    </Page.DataContext>
+
+    <Page.Resources>
+        <Storyboard x:Name="ShowDiscardStoryboard">
+
+            <DoubleAnimation
+                Storyboard.TargetName="DiscardPanel"
+                Storyboard.TargetProperty="Opacity"
+                From="0"
+                To="1"
+                Duration="0:0:0.2" />
+
+            <DoubleAnimation
+                Storyboard.TargetName="MainUIPanel"
+                Storyboard.TargetProperty="Opacity"
+                From="1"
+                To="0"
+                Duration="0:0:0.2" />
+
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.ZIndex)"
+                                           Storyboard.TargetName="DiscardPanel">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>0</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>10</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Name="HideDiscardStoryboard">
+            <DoubleAnimation
+                Storyboard.TargetName="DiscardPanel"
+                Storyboard.TargetProperty="Opacity"
+                From="1"
+                To="0"
+                Duration="0:0:0.2" />
+
+            <DoubleAnimation
+                Storyboard.TargetName="MainUIPanel"
+                Storyboard.TargetProperty="Opacity"
+                From="0"
+                To="1"
+                Duration="0:0:0.2" />
+
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.ZIndex)"
+                                           Storyboard.TargetName="DiscardPanel">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>10</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>0</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </Page.Resources>
+
+    <Grid>
+
+        <RelativePanel x:Name="DiscardPanel"
+                       RelativePanel.AlignTopWithPanel="True"
+                       RelativePanel.AlignLeftWithPanel="True"
+                       RelativePanel.AlignBottomWithPanel="True"
+                       RelativePanel.AlignRightWithPanel="True"
+                       Opacity="0"
+                       Canvas.ZIndex="0">
+
+            <RelativePanel.Background>
+                <ImageBrush ImageSource="../Assets/Backgrounds/ui_bg_green_02.png"
+                            Stretch="UniformToFill" />
+            </RelativePanel.Background>
+
+            <Button RelativePanel.AlignBottomWithPanel="True"
+                    RelativePanel.AlignRightWithPanel="True"
+                    Style="{ThemeResource ImageButtonStyle}"
+                    Height="{ThemeResource UiButtonSize}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    x:Name="CloseDiscardButton"
+                    Margin="24">
+
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:CallMethodAction MethodName="Begin"
+                                               TargetObject="{Binding ElementName=HideDiscardStoryboard}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+
+                <Image Source="../Assets/Buttons/btn_close_normal_dark.png"
+                       Stretch="Uniform"
+                       HorizontalAlignment="Stretch" />
+            </Button>
+        </RelativePanel>
+
+        <RelativePanel x:Name="MainUIPanel">
+
+            <RelativePanel.Background>
+                <ImageBrush ImageSource="../Assets/UI/panelBG.png"
+                            Stretch="Uniform" />
+            </RelativePanel.Background>
+
+            <Border
+                x:Name="header"
+                RelativePanel.AlignTopWithPanel="True"
+                RelativePanel.AlignLeftWithPanel="True"
+                RelativePanel.AlignRightWithPanel="True">
+                <StackPanel VerticalAlignment="Bottom" Margin="0,20,0,0">
+                    <TextBlock HorizontalAlignment="Center" x:Uid="ITEMS" Text="ITEMS"/>
+                    <TextBlock HorizontalAlignment="Center" FontSize="12">
+                        <Run Text="{Binding ItemsTotalCount}"/><Run Text="/"/><Run Text="{Binding MaxItemStorageFieldNumber}"/>
+                    </TextBlock>
+                </StackPanel>
+            </Border>
+            
+            <ListView
+                ItemsSource="{Binding ItemsInventory}"
+                IsItemClickEnabled="False"
+                SelectionMode="None"
+                Margin="8,0"
+                RelativePanel.AlignRightWithPanel="True"
+                RelativePanel.Below="header"
+                RelativePanel.AlignLeftWithPanel="True"
+                RelativePanel.AlignBottomWithPanel="True">
+
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+                
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="0,8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Grid.Column="0"
+                                      Margin="0,0,8,0">
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <Image
+                                        Source="{Binding Converter={StaticResource ItemToItemIconConverter}, ConverterParameter=Inventory}"
+                                        Stretch="Uniform"
+                                        VerticalAlignment="Center"
+                                        Width="84"
+                                        Height="84"
+                                        Margin="3,0"
+                                        Grid.RowSpan="2" />
+                                <Border Grid.Row="1" 
+                                            Grid.Column="0"
+                                            HorizontalAlignment="Left"
+                                            VerticalAlignment="Bottom"
+                                            Visibility="{Binding Count, Converter={StaticResource VisibleWhenGreaterThanConverter}, ConverterParameter=1}"
+                                            Background="LightGray" 
+                                            CornerRadius="8" 
+                                            Padding="3,1">
+                                    <TextBlock Style="{StaticResource BodyTextBlockStyle}"
+                                                   TextAlignment="Center">
+                                            <Run Text="x" />
+                                            <Run FontWeight="Bold" 
+                                                 Text="{Binding Count}" />
+                                    </TextBlock>
+                                </Border>
+                            </Grid>
+
+                            <Grid Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+
+                                <TextBlock
+                                        Text="{Binding Converter={StaticResource ItemToItemNameConverter}}"
+                                        FontFamily="../Assets/Fonts/Lato-Bold.ttf#Lato"
+                                        Foreground="#FF45686A"
+                                        Grid.Row="0"
+                                        FontSize="22"
+                                        FontWeight="SemiBold" />
+
+                                <!--<Button IsEnabled="False"
+                                            Grid.Row="0"
+                                            Grid.Column="1"
+                                            Padding="0"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center">
+                                
+                                <interactivity:Interaction.Behaviors>
+                                    <core:EventTriggerBehavior EventName="Tapped">
+                                        <core:CallMethodAction MethodName="Begin"
+                                                   TargetObject="{Binding ElementName=ShowDiscardStoryboard}" />
+                                    </core:EventTriggerBehavior>
+                                </interactivity:Interaction.Behaviors>
+                                
+                                        <SymbolIcon Symbol="Delete" />
+                                    </Button>-->
+
+                                <TextBlock
+                                        Text="{Binding Converter={StaticResource ItemToItemDescriptionConverter}}"
+                                        TextWrapping="WrapWholeWords"
+                                        FontFamily="../Assets/Fonts/Lato-Light.ttf#Lato"
+                                        Foreground="#FF45686A"
+                                        Grid.Row="1"
+                                        FontSize="14"
+                                        FontWeight="SemiLight" />
+                            </Grid>
+
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button RelativePanel.AlignBottomWithPanel="True"
+                    RelativePanel.AlignHorizontalCenterWithPanel="True"
+                    Style="{ThemeResource ImageButtonStyle}"
+                    Height="{ThemeResource UiButtonSize}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,0,24"
+                    Command="{Binding ReturnToGameScreen}">
+                <Image Source="../Assets/Buttons/btn_close_normal_dark.png"
+                       Stretch="Uniform"
+                       HorizontalAlignment="Stretch" />
+            </Button>
+        </RelativePanel>
+
+    </Grid>
+
+</Page>

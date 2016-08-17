@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Dig" xml:space="preserve">
+    <value>Hrabat</value>
+  </data>
+  <data name="Ember" xml:space="preserve">
+    <value>Žavý Popel</value>
+  </data>
+  <data name="Flamethrower" xml:space="preserve">
+    <value>Plamenomet</value>
+  </data>
+  <data name="Lick" xml:space="preserve">
+    <value>Olíznout</value>
+  </data>
+  <data name="Megahorn" xml:space="preserve">
+    <value>Megaroh</value>
+  </data>
+  <data name="Pound" xml:space="preserve">
+    <value>Rána</value>
+  </data>
+  <data name="Scratch" xml:space="preserve">
+    <value>Škrábnutí</value>
+  </data>
+  <data name="Sludge" xml:space="preserve">
+    <value>Bahení Bomba</value>
+  </data>
+  <data name="Smog" xml:space="preserve">
+    <value>Smog</value>
+  </data>
+  <data name="Tackle" xml:space="preserve">
+    <value>Srazit</value>
+  </data>
+  <data name="Wrap" xml:space="preserve">
+    <value>Obal</value>
+  </data>
+  <data name="Absorb" xml:space="preserve">
+    <value>Vsáknout</value>
+  </data>
+  <data name="Acid" xml:space="preserve">
+    <value>Kyselina</value>
+  </data>
+  <data name="Blizzard" xml:space="preserve">
+    <value>Vánice</value>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>Seknout</value>
+  </data>
+  <data name="CutFast" xml:space="preserve">
+    <value>Seknout</value>
+  </data>
+  <data name="Discharge" xml:space="preserve">
+    <value>Vybití</value>
+  </data>
+  <data name="Earthquake" xml:space="preserve">
+    <value>Zemětřesení</value>
+  </data>
+  <data name="Headbutt" xml:space="preserve">
+    <value>Srazit Hlavou</value>
+  </data>
+  <data name="Hurricane" xml:space="preserve">
+    <value>Huikán</value>
+  </data>
+  <data name="Peck" xml:space="preserve">
+    <value>Klov</value>
+  </data>
+  <data name="PeckFast" xml:space="preserve">
+    <value>Klov</value>
+  </data>
+  <data name="Psybeam" xml:space="preserve">
+    <value>Psy Paprsek</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Psychik</value>
+  </data>
+  <data name="Psyshock" xml:space="preserve">
+    <value>Psycho Shock</value>
+  </data>
+  <data name="Psystrike" xml:space="preserve">
+    <value>Psy Útok</value>
+  </data>
+  <data name="Scald" xml:space="preserve">
+    <value>Spařit</value>
+  </data>
+  <data name="ScaldBlastoise" xml:space="preserve">
+    <value>Spařit</value>
+  </data>
+  <data name="ScratchFast" xml:space="preserve">
+    <value>Škrábnutí</value>
+  </data>
+  <data name="Slam" xml:space="preserve">
+    <value>Bouchnutí</value>
+  </data>
+  <data name="Slash" xml:space="preserve">
+    <value>Rána</value>
+  </data>
+  <data name="Spark" xml:space="preserve">
+    <value>Jiskra</value>
+  </data>
+  <data name="Splash" xml:space="preserve">
+    <value>Cáknutí</value>
+  </data>
+  <data name="SplashFast" xml:space="preserve">
+    <value>Cáknutí</value>
+  </data>
+  <data name="Stomp" xml:space="preserve">
+    <value>Dupnutí</value>
+  </data>
+  <data name="Struggle" xml:space="preserve">
+    <value>Zápasit</value>
+  </data>
+  <data name="Submission" xml:space="preserve">
+    <value>Poslušnost</value>
+  </data>
+  <data name="Swift" xml:space="preserve">
+    <value>Rychlost</value>
+  </data>
+  <data name="TackleFast" xml:space="preserve">
+    <value>Srazit</value>
+  </data>
+  <data name="Thunder" xml:space="preserve">
+    <value>Bouře</value>
+  </data>
+  <data name="Thunderbolt" xml:space="preserve">
+    <value>Bleskový Útok</value>
+  </data>
+  <data name="Twineedle" xml:space="preserve">
+    <value>Dvojitá Jehla</value>
+  </data>
+  <data name="Twister" xml:space="preserve">
+    <value>Tornádo</value>
+  </data>
+  <data name="XScissor" xml:space="preserve">
+    <value>Křížové Seknutí</value>
+  </data>
+</root>

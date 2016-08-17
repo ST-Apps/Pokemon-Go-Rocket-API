@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DateFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
+  <data name="DateTimeFormat" xml:space="preserve">
+    <value>dd.MM.yyyy hh:mm tt</value>
+  </data>
+  <data name="PokemonFledText" xml:space="preserve">
+    <value>{0} fugiu</value>
+  </data>
+  <data name="GettingGpsSignalText" xml:space="preserve">
+    <value>A procurar sinal do GPS...</value>
+  </data>
+  <data name="GettingUserDataText" xml:space="preserve">
+    <value>A obter dados do utilizador...</value>
+  </data>
+  <data name="GoogleErrorText" xml:space="preserve">
+    <value>Google retornou um erro: </value>
+  </data>
+  <data name="GoogleNotRespondingText" xml:space="preserve">
+    <value>Google não responde, tente novamente mais tarde.</value>
+  </data>
+  <data name="LoadingEncounterText" xml:space="preserve">
+    <value>A carregar encontro com {0}</value>
+  </data>
+  <data name="LoggingInText" xml:space="preserve">
+    <value>A fazer login...</value>
+  </data>
+  <data name="LoginFailedText" xml:space="preserve">
+    <value>Login falhou, por favor tente novamente.</value>
+  </data>
+  <data name="NoText" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="NoGpsPermissionsText" xml:space="preserve">
+    <value>Precisamos de permissões de GPS para correr o jogo, por favor ative-o e tente novamente.</value>
+  </data>
+  <data name="PokemonRanAwayText" xml:space="preserve">
+    <value>Peço desculpa, o pokemon fugiu :(</value>
+  </data>
+  <data name="PtcDownText" xml:space="preserve">
+    <value>O servidor PTC encontra-se provavelmente em baixo, por favor tente novamente mais tarde.</value>
+  </data>
+  <data name="SomethingWentWrongText" xml:space="preserve">
+    <value>Algo correu mal e a aplicação pode estar instável. Quer sair e tentar de novo?</value>
+  </data>
+  <data name="TimeFormat" xml:space="preserve">
+    <value>hh:mm tt</value>
+  </data>
+  <data name="UpdateDownloadingText" xml:space="preserve">
+    <value>Descarregando atualização {0}</value>
+  </data>
+  <data name="UpdatedVersionText" xml:space="preserve">
+    <value>Uma nova versão {0} está disponível. Pretende atualizar?
+{1}</value>
+  </data>
+  <data name="UpdateFailedText" xml:space="preserve">
+    <value>Falha na atualização: {0}
+Abrir a página com os arquivos de instalação para instalação manual?</value>
+  </data>
+  <data name="UpdateInstallingText" xml:space="preserve">
+    <value>A instalar atualizações, a aplicação vai reiniciar...</value>
+  </data>
+  <data name="WrongUsernameText" xml:space="preserve">
+    <value>Dados de Nome de utilizador/Password incorretos ou o servidor encontra-se offline, por favor tente novamente.</value>
+  </data>
+  <data name="YesText" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="InstinctTeamText" xml:space="preserve">
+    <value>Instinct</value>
+  </data>
+  <data name="NoTeamText" xml:space="preserve">
+    <value>Sem equipa</value>
+  </data>
+  <data name="ValorTeamText" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="MysticTeamText" xml:space="preserve">
+    <value>Mystic</value>
+  </data>
+</root>

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CooldownTextBlock.Text" xml:space="preserve">
+    <value>Tendrás que esperar un poco</value>
+  </data>
+  <data name="GoogleLoginTextBlock.Text" xml:space="preserve">
+    <value>GOOGLE</value>
+  </data>
+  <data name="InventoryFullTextBlock.Text" xml:space="preserve">
+    <value>¡Tu inventario está lleno!</value>
+  </data>
+  <data name="PtcLoginTextBlock.Text" xml:space="preserve">
+    <value>Iniciar Sesión con una cuenta PTC</value>
+  </data>
+  <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
+    <value>Para entrar, debes introducir tu usuario y contraseña arriba. Si no confias en la aplicación, ciérrala ahora mismo. Niantic te podría banear por usarla. Al entrar asumes ese riesgo</value>
+  </data>
+  <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
+    <value>cerca</value>
+  </data>
+  <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
+    <value>La parada está demasiado lejos</value>
+  </data>
+  <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
+    <value>Nombre de usuario / Correo electrónico</value>
+  </data>
+  <data name="ExperienceTextBlock.Text" xml:space="preserve">
+    <value>EXP</value>
+  </data>
+  <data name="OkButton.Content" xml:space="preserve">
+    <value>ENTENDIDO</value>
+  </data>
+  <data name="CpTextBlock.Text" xml:space="preserve">
+    <value>CP</value>
+  </data>
+  <data name="EggsTextBlock.Text" xml:space="preserve">
+    <value>HUEVOS</value>
+  </data>
+  <data name="PokemonTextBlock.Text" xml:space="preserve">
+    <value>POKÉMON</value>
+  </data>
+  <data name="SettingsHeaderTextBlock.Text" xml:space="preserve">
+    <value>OPCIONES</value>
+  </data>
+  <data name="ItemsTextBlock.Text" xml:space="preserve">
+    <value>OBJETOS</value>
+  </data>
+  <data name="PokedexTextBlock.Text" xml:space="preserve">
+    <value>POKÉDEX</value>
+  </data>
+  <data name="LowercaseItemsTextBlock.Text" xml:space="preserve">
+    <value>objetos</value>
+  </data>
+  <data name="NumberTextBlock.Text" xml:space="preserve">
+    <value># </value>
+    <comment>Watch out: there is a space after the #</comment>
+  </data>
+  <data name="SlashSpaceCpTextBlock.Text" xml:space="preserve">
+    <value>/ CP</value>
+  </data>
+  <data name="SpaceXpTextBlock.Text" xml:space="preserve">
+    <value> EXP</value>
+  </data>
+  <data name="TotalExperienceTextBlock.Text" xml:space="preserve">
+    <value>TOTAL</value>
+  </data>
+  <data name="LevelUpTextBlock.Text" xml:space="preserve">
+    <value>¡Subes de nivel!</value>
+  </data>
+  <data name="LevelTextBlock.Text" xml:space="preserve">
+    <value>Nivel</value>
+  </data>
+  <data name="StartDateTextBlock.Text" xml:space="preserve">
+    <value>FECHA DE INICIO</value>
+  </data>
+  <data name="IncubatorsTextBlock.Text" xml:space="preserve">
+    <value>INCUBADORAS</value>
+  </data>
+  <data name="SettingsMusicTextBlock.Text" xml:space="preserve">
+    <value>Música</value>
+  </data>
+  <data name="SettingsSignOutTextBlock.Text" xml:space="preserve">
+    <value>Salir</value>
+  </data>
+  <data name="SettingsVibrationTextBlock.Text" xml:space="preserve">
+    <value>Vibración</value>
+  </data>
+  <data name="SettingsMapAutoRotateTextBlock.Text" xml:space="preserve">
+    <value>Girar mapa automáticamente</value>
+  </data>
+  <data name="SettingsUseNianticMapTextBlock.Text" xml:space="preserve">
+    <value>Usar mapa de Niantic</value>
+  </data>
+  <data name="CandyTextBlock.Text" xml:space="preserve">
+    <value>Caramelo</value>
+    <comment>Watch out: space before the word!</comment>
+  </data>
+  <data name="HeightTextBlock.Text" xml:space="preserve">
+    <value>Peso</value>
+  </data>
+  <data name="HpTextBlock.Text" xml:space="preserve">
+    <value>PS</value>
+  </data>
+  <data name="KgTextBlock.Text" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="MTextBlock.Text" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="StardustTextBlock.Text" xml:space="preserve">
+    <value>Polvo estelar</value>
+  </data>
+  <data name="TypeTextBlock.Text" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="WeightTextBlock.Text" xml:space="preserve">
+    <value>Peso</value>
+  </data>
+  <data name="EvolveButton.Content" xml:space="preserve">
+    <value>Evolucionar</value>
+  </data>
+  <data name="PowerUpButton.Content" xml:space="preserve">
+    <value>Más poder</value>
+  </data>
+  <data name="SettingsRememberMapZoomTextBlock" xml:space="preserve">
+    <value>Recordar zoom del mapa</value>
+  </data>
+  <data name="TransferButton.Content" xml:space="preserve">
+    <value>Transferir</value>
+  </data>
+</root>
