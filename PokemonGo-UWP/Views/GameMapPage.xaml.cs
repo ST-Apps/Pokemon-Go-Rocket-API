@@ -216,7 +216,8 @@ namespace PokemonGo_UWP.Views
 
         private void HeadingUpdated(object sender, Windows.Devices.Sensors.CompassReading e)
         {
-            GameMapControl.Heading = e.HeadingTrueNorth ?? e.HeadingMagneticNorth;
+            if (SettingsService.Instance.IsCompassEnabled)
+                GameMapControl.Heading = e.HeadingTrueNorth ?? e.HeadingMagneticNorth;
         }
 
         private void UnsubscribeToCaptureEvents()

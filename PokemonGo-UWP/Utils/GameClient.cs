@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -115,7 +116,7 @@ namespace PokemonGo_UWP.Utils
                             canRefresh = true;
                         }
                     }
-                } 
+                }
                 // Update!
                 if (!canRefresh)
                 {
@@ -209,12 +210,12 @@ namespace PokemonGo_UWP.Utils
         /// </summary>
         public static ObservableCollection<NearbyPokemonWrapper> NearbyPokemons { get; set; } =
             new ObservableCollection<NearbyPokemonWrapper>();
-            //{
-            //    //To prevent errors from NearbyPokemons[0-2].PokemonId in GameMapPage.xaml
-            //    new NearbyPokemonWrapper(new NearbyPokemon {PokemonId = 0}),
-            //    new NearbyPokemonWrapper(new NearbyPokemon {PokemonId = 0}),
-            //    new NearbyPokemonWrapper(new NearbyPokemon {PokemonId = 0})
-            //};
+        //{
+        //    //To prevent errors from NearbyPokemons[0-2].PokemonId in GameMapPage.xaml
+        //    new NearbyPokemonWrapper(new NearbyPokemon {PokemonId = 0}),
+        //    new NearbyPokemonWrapper(new NearbyPokemon {PokemonId = 0}),
+        //    new NearbyPokemonWrapper(new NearbyPokemon {PokemonId = 0})
+        //};
 
         /// <summary>
         ///     Collection of Pokestops in the current area
@@ -363,7 +364,7 @@ namespace PokemonGo_UWP.Utils
                 GooglePassword = SettingsService.Instance.LastLoginService == AuthType.Google ? credentials.Password : null,
             };
 
-            _client = new Client(_clientSettings, null, DeviceInfos.Instance) {AccessToken = LoadAccessToken()};
+            _client = new Client(_clientSettings, null, DeviceInfos.Instance) { AccessToken = LoadAccessToken() };
             var apiFailureStrategy = new ApiFailureStrategy(_client);
             _client.ApiFailure = apiFailureStrategy;
             // Register to AccessTokenChanged       
@@ -490,25 +491,35 @@ namespace PokemonGo_UWP.Utils
         /// </summary>
         public static async Task InitializeDataUpdate()
         {
-            if (SettingsService.Instance.IsCompassEnabled)
+            #region Compass management
+            _compass = Compass.GetDefault();
+            if (_compass != null)
             {
-                _compass = Compass.GetDefault();
-                if (_compass != null)
+                _compassTimer = new DispatcherTimer
                 {
-                    _compassTimer = new DispatcherTimer
-                    {
-                        Interval = TimeSpan.FromMilliseconds(Math.Max(_compass.MinimumReportInterval, 50))
-                    };
-                    _compassTimer.Tick += (s, e) =>
-                    {
-                        if (SettingsService.Instance.IsAutoRotateMapEnabled)
-                        {
-                            HeadingUpdated?.Invoke(null, _compass.GetCurrentReading());
-                        }
-                    };
+                    Interval = TimeSpan.FromMilliseconds(Math.Max(_compass.MinimumReportInterval, 50))
+                };
+                _compassTimer.Tick += (s, e) =>
+                {
+                    if (SettingsService.Instance.IsCompassEnabled) //avoid reading compass value if compass is off, should'nt be needed as we stop the compass tick on prop change but who knows!
+                        HeadingUpdated?.Invoke(null, _compass.GetCurrentReading());
+                };
+                if (SettingsService.Instance.IsCompassEnabled)
                     _compassTimer.Start();
-                }
+
+                SettingsService.Instance.PropertyChanged += (object sender, PropertyChangedEventArgs e) => 
+                {
+                  if (e.PropertyName == nameof(SettingsService.Instance.IsCompassEnabled))
+                    {
+                        if (SettingsService.Instance.IsCompassEnabled && !_compassTimer.IsEnabled)
+                            _compassTimer.Start();
+                        if (!SettingsService.Instance.IsCompassEnabled && _compassTimer.IsEnabled)
+                            _compassTimer.Stop();
+                    }
+                };
             }
+            #endregion
+
             _geolocator = new Geolocator
             {
                 DesiredAccuracy = PositionAccuracy.High,
@@ -620,7 +631,7 @@ namespace PokemonGo_UWP.Utils
                         <GetMapObjectsResponse, GetHatchedEggsResponse, GetInventoryResponse, CheckAwardedBadgesResponse,
                             DownloadSettingsResponse>> GetMapObjects(Geoposition geoposition)
         {
-            _lastGeopositionMapObjectsRequest = geoposition;      
+            _lastGeopositionMapObjectsRequest = geoposition;
             return await _client.Map.GetMapObjects();
         }
 
@@ -671,7 +682,7 @@ namespace PokemonGo_UWP.Utils
                 var levelUpResponse = await GetLevelUpRewards(tmpStats.Level);
                 return levelUpResponse;
             }
-            PlayerStats = tmpStats;            
+            PlayerStats = tmpStats;
             return null;
         }
 
@@ -770,7 +781,7 @@ namespace PokemonGo_UWP.Utils
             PokemonsInventory.AddRange(fullInventory.Select(item => item.InventoryItemData.PokemonData)
                 .Where(item => item != null && item.PokemonId > 0), true);
             EggsInventory.AddRange(fullInventory.Select(item => item.InventoryItemData.PokemonData)
-                .Where(item => item != null && item.IsEgg), true);            
+                .Where(item => item != null && item.IsEgg), true);
 
             // Update candies
             CandyInventory.AddRange(from item in fullInventory

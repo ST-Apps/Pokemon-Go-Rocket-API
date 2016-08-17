@@ -2,21 +2,19 @@
 using Windows.Security.Credentials;
 using PokemonGo.RocketAPI.Enums;
 using Template10.Services.SettingsService;
+using System.ComponentModel;
+using System;
+using Template10.Mvvm;
 
 namespace PokemonGo_UWP.Utils
 {
-    public class SettingsService
+    public class SettingsService: BindableBase
     {
-        public static readonly SettingsService Instance;
+        private readonly static Lazy<SettingsService> _instance = new Lazy<SettingsService>(() => new SettingsService());
+        public static SettingsService Instance { get { return _instance.Value; } }
 
         private readonly SettingsHelper _helper;
-
         private readonly PasswordVault _passwordVault = new PasswordVault();
-
-        static SettingsService()
-        {
-            Instance = Instance ?? new SettingsService();
-        }
 
         private SettingsService()
         {
@@ -100,7 +98,11 @@ namespace PokemonGo_UWP.Utils
         public bool IsCompassEnabled
         {
             get { return _helper.Read(nameof(IsCompassEnabled), false); }
-            set { _helper.Write(nameof(IsCompassEnabled), value); }
+            set
+            {
+                _helper.Write(nameof(IsCompassEnabled), value);
+                RaisePropertyChanged();
+            }
         }
 
         public bool IsMusicEnabled

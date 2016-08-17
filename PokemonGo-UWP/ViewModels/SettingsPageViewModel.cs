@@ -21,6 +21,15 @@ namespace PokemonGo_UWP.ViewModels
         }
 
         /// <summary>
+        ///     Whether the player wants the map to rotate using compass
+        /// </summary>
+        public bool IsCompassEnabled
+        {
+            get { return SettingsService.Instance.IsCompassEnabled; }
+            set { SettingsService.Instance.IsCompassEnabled = value; }
+        }
+
+        /// <summary>
         ///     Whether the player wants music
         /// </summary>
         public bool IsMusicEnabled
