@@ -41,8 +41,8 @@ namespace PokemonGo_UWP.Views
         }
       private void GameMapControl_ZoomLevelChanged(MapControl sender, object args)
         {
-            if (GameMapControl.ZoomLevel < 19)
-                GameMapControl.ZoomLevel = 19;
+            if (GameMapControl.ZoomLevel < 18)
+                GameMapControl.ZoomLevel = 18;
         }
         private void SetupMap()
         {
