@@ -39,8 +39,11 @@ namespace PokemonGo_UWP.Views
                 ReactivateMapAutoUpdate.Visibility = Visibility.Collapsed;
             };
         }
-       if (GameMapControl.ZoomLevel < 19)
+      private void GameMapControl_ZoomLevelChanged(MapControl sender, object args)
+        {
+            if (GameMapControl.ZoomLevel < 19)
                 GameMapControl.ZoomLevel = 19;
+        }
         private void SetupMap()
         {
             if (ApplicationKeys.MapBoxTokens.Length > 0 && SettingsService.Instance.IsNianticMapEnabled)
