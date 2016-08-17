@@ -34,6 +34,7 @@ namespace PokemonGo_UWP.Views
             Loaded += (s, e) =>
             {
                 ShowEvolveStatsModalAnimation.From = EvolveStatsTranslateTransform.Y = ActualHeight;
+                LevelProgressBar.Diameter = (int) this.ActualWidth*3/2 -16;
             };
         }
 

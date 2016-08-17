@@ -350,7 +350,7 @@
                                             <Grid>
                                                 <Image Canvas.ZIndex="100"
                                                        Source="{Binding PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"
-                                                       Visibility="{Binding Converter={StaticResource NearbyPokemonInPokedexToVisibilityConverter}}"
+                                                       Visibility="{Binding PokemonId, Converter={StaticResource NearbyPokemonInPokedexToVisibilityConverter}}"
                                                        Height="60"
                                                        Width="60"
                                                        VerticalAlignment="Center"
@@ -358,8 +358,9 @@
                                                        Stretch="Uniform"
                                                        Margin="6,0" />
                                                 
-                                                <BitmapIcon UriSource="{Binding PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"
+                                                <BitmapIcon UriSource="{Binding PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}, ConverterParameter=uri}"                                                            
                                                             Style="{ThemeResource NearbyPokemonNotInPokedexBitmapIconStyle}"
+                                                            Visibility="{Binding PokemonId, Converter={StaticResource InverseNearbyPokemonInPokedexToVisibilityConverter}}"
                                                             Height="60"
                                                             Width="60"
                                                             VerticalAlignment="Center"
@@ -746,16 +747,16 @@
                             <Grid>
                                 <Image Canvas.ZIndex="100"
                                            Source="{Binding PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"
-                                           Visibility="{Binding Converter={StaticResource NearbyPokemonInPokedexToVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}"
+                                           Visibility="{Binding PokemonId, Converter={StaticResource NearbyPokemonInPokedexToVisibilityConverter}}"
                                            VerticalAlignment="Center"
                                            HorizontalAlignment="Center"
                                            Stretch="Uniform"
                                            Height="36"
                                            Width="36"/>
 
-                                <BitmapIcon UriSource="{Binding PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"
+                                <BitmapIcon UriSource="{Binding PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}, ConverterParameter=uri}"
                                                 Style="{ThemeResource NearbyPokemonNotInPokedexBitmapIconStyle}" 
-                                            Visibility="{Binding Converter={StaticResource InverseNearbyPokemonInPokedexToVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}"
+                                            Visibility="{Binding PokemonId, Converter={StaticResource InverseNearbyPokemonInPokedexToVisibilityConverter}}"
                                                 HorizontalAlignment="Center"
                                                 Height="36"
                                                 Width="36" />

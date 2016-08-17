@@ -358,28 +358,27 @@
                                Stretch="Uniform"
                                HorizontalAlignment="Stretch" />
                     </Button>
+                </RelativePanel>
 
-                    <Button RelativePanel.AlignBottomWithPanel="True"
+                <Button RelativePanel.AlignBottomWithPanel="True"
                             RelativePanel.AlignRightWithPanel="True"
                             Style="{ThemeResource ImageButtonStyle}"
                             Height="{ThemeResource UiButtonSize}"
-                            Margin="0,0,8,0"
+                            Margin="16"
                             Canvas.ZIndex="10"
                             x:Name="ShowInventoryButton">
 
-                        <interactivity:Interaction.Behaviors>
-                            <core:EventTriggerBehavior EventName="Click">
-                                <core:CallMethodAction MethodName="Begin"
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Click">
+                            <core:CallMethodAction MethodName="Begin"
                                                        TargetObject="{Binding ElementName=ShowInventoryStoryboard}" />
-                            </core:EventTriggerBehavior>
-                        </interactivity:Interaction.Behaviors>
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
 
-                        <Image Source="../Assets/Buttons/btn_menu.png"
+                    <Image Source="../Assets/Buttons/btn_menu.png"
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center" />
-                    </Button>
-
-                </RelativePanel>
+                </Button>
 
             </RelativePanel>
         </Border>

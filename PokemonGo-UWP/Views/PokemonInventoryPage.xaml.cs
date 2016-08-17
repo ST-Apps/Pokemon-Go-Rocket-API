@@ -68,29 +68,29 @@ namespace PokemonGo_UWP.Views
 		private void SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
 
-			SortingButton.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-			IncubatorButton.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+			//SortingButton.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+			//IncubatorButton.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
 
-			switch (((Pivot)sender).SelectedIndex)
-			{
-				case 0:
-					SortingButton.Visibility = Windows.UI.Xaml.Visibility.Visible;
-					break;
+			//switch (((Pivot)sender).SelectedIndex)
+			//{
+			//	case 0:
+			//		SortingButton.Visibility = Windows.UI.Xaml.Visibility.Visible;
+			//		break;
 
-				case 1:
-					IncubatorButton.Visibility = Windows.UI.Xaml.Visibility.Visible;
-					break;
-			}
+			//	case 1:
+			//		IncubatorButton.Visibility = Windows.UI.Xaml.Visibility.Visible;
+			//		break;
+			//}
 		}
 
 		private void GridViewPokemonSizeChanged(object sender, SizeChangedEventArgs e)
 		{
-			if (e.PreviousSize != e.NewSize)
-			{
-				var panel_threads = (ItemsWrapGrid)PokemonInventoryGridView.ItemsPanelRoot;
-				panel_threads.ItemWidth = e.NewSize.Width / 3;
-			}
-		}
+            if (e.PreviousSize != e.NewSize)
+            {
+                var panel_threads = (ItemsWrapGrid)PokemonInventoryGridView.ItemsPanelRoot;
+                panel_threads.ItemWidth = e.NewSize.Width / 3;
+            }
+        }
 
 		private void GridViewEggsSizeChanged(object sender, SizeChangedEventArgs e)
 		{

@@ -48,6 +48,9 @@ namespace PokemonGo_UWP.Utils
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
+            var s = parameter as string;
+            if (s != null && s.Equals("uri"))
+                return new Uri($"ms-appx:///Assets/Pokemons/{(int) value}.png");
             return new BitmapImage(new Uri($"ms-appx:///Assets/Pokemons/{(int)value}.png"));
             //return new Uri($"ms-appx:///Assets/Pokemons/{(int)value}.png");
         }
@@ -838,12 +841,12 @@ namespace PokemonGo_UWP.Utils
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
+            if (value == null) return Visibility.Collapsed;
             // Get the Pokemon passed in. If it's null, you can't see the real deal.
-            NearbyPokemonWrapper pokemon = value as NearbyPokemonWrapper;
-            if (pokemon == null) return Visibility.Visible;
+            var pokemon = (PokemonId) value;
 
             // Get the Pokedex entry for this Pokemon. If it's null, you can't see the real deal.
-            var entry = GameClient.PokedexInventory.FirstOrDefault(c => c.PokemonId == pokemon.PokemonId);
+            var entry = GameClient.PokedexInventory.FirstOrDefault(c => c.PokemonId == pokemon);
             if (entry == null) return Visibility.Visible;
 
             // Get the Pokedex entry for this Pokemon. If it's null, you can't see the real deal.
@@ -867,12 +870,12 @@ namespace PokemonGo_UWP.Utils
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
+            if (value == null) return Visibility.Collapsed;
             // Get the Pokemon passed in. If it's null, you can't see the real deal.
-            NearbyPokemonWrapper pokemon = value as NearbyPokemonWrapper;
-            if (pokemon == null) return Visibility.Collapsed;
+            var pokemon = (PokemonId) value;
 
             // Get the Pokedex entry for this Pokemon. If it's null, you can't see the real deal.
-            var entry = GameClient.PokedexInventory.FirstOrDefault(c => c.PokemonId == pokemon.PokemonId);
+            var entry = GameClient.PokedexInventory.FirstOrDefault(c => c.PokemonId == pokemon);
             if (entry == null) return Visibility.Collapsed;
 
             // Get the Pokedex entry for this Pokemon. If it's null, you can't see the real deal.

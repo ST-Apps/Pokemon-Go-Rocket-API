@@ -9,6 +9,7 @@
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
+    xmlns:controls="using:PokemonGo_UWP.Controls"
     mc:Ignorable="d">
 
     <Page.DataContext>
@@ -325,22 +326,23 @@
                              FontSize="29"
                              FontFamily="ms-appx:/Assets/Fonts/Lato-Medium.ttf#Lato Medium" />
                     </TextBlock>
-                    <Border Grid.Row="1"
-                            Margin="10,0"
-                            VerticalAlignment="Top"
-                            CornerRadius="2"
-                            BorderBrush="#7EDAB5"
-                            BorderThickness="1">
-                        <ProgressBar
-                            Maximum="{Binding CurrentPokemon, Converter={StaticResource PokemonDataToMaxLevelBarConverter}}"
-                            Value="{Binding CurrentPokemon, Converter={StaticResource PokemonDataToLevelBarConverter}}"
-                            HorizontalAlignment="Stretch"
-                            Foreground="#6BEFB6"
-                            IsIndeterminate="False"
-                            HorizontalContentAlignment="Center"
-                            VerticalAlignment="Center" />
 
-                    </Border>
+                    <controls:SemiCircularProgressBar Grid.Row="1"
+                                                      Diameter="600"
+                                                      x:Name="LevelProgressBar"
+                                                      Maximum="{Binding CurrentPokemon, Converter={StaticResource PokemonDataToMaxLevelBarConverter}}"
+                                                      Value="{Binding CurrentPokemon, Converter={StaticResource PokemonDataToLevelBarConverter}}"
+                                                      HorizontalAlignment="Stretch"
+                                                      SegmentColor="White"
+                                                      InnerSegmentColor="Gray"
+                                                      StrokeThickness="5"
+                                                      HorizontalContentAlignment="Center"
+                                                      RenderTransformOrigin="0.5,0.5" VerticalAlignment="Center">
+                        <controls:SemiCircularProgressBar.RenderTransform>
+                            <CompositeTransform Rotation="-90" />
+                        </controls:SemiCircularProgressBar.RenderTransform>
+                    </controls:SemiCircularProgressBar>
+
                 </Grid>
 
                 <Image x:Name="PokemonImage"

@@ -98,10 +98,43 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\Achievements\acetrainer_lv1.png" />
+    <Content Include="Assets\Achievements\acetrainer_lv2.png" />
+    <Content Include="Assets\Achievements\acetrainer_lv3.png" />
+    <Content Include="Assets\Achievements\backpacker_lv1.png" />
+    <Content Include="Assets\Achievements\backpacker_lv2.png" />
+    <Content Include="Assets\Achievements\backpacker_lv3.png" />
     <Content Include="Assets\Achievements\badge_lv0.png" />
     <Content Include="Assets\Achievements\badge_lv1.png" />
     <Content Include="Assets\Achievements\badge_lv2.png" />
     <Content Include="Assets\Achievements\badge_lv3.png" />
+    <Content Include="Assets\Achievements\battlegirl_lv1.png" />
+    <Content Include="Assets\Achievements\battlegirl_lv2.png" />
+    <Content Include="Assets\Achievements\battlegirl_lv3.png" />
+    <Content Include="Assets\Achievements\breeder_lv1.png" />
+    <Content Include="Assets\Achievements\breeder_lv2.png" />
+    <Content Include="Assets\Achievements\breeder_lv3.png" />
+    <Content Include="Assets\Achievements\collector_lv1.png" />
+    <Content Include="Assets\Achievements\collector_lv2.png" />
+    <Content Include="Assets\Achievements\collector_lv3.png" />
+    <Content Include="Assets\Achievements\fisherman_lv1.png" />
+    <Content Include="Assets\Achievements\fisherman_lv2.png" />
+    <Content Include="Assets\Achievements\fisherman_lv3.png" />
+    <Content Include="Assets\Achievements\jogger_lv1.png" />
+    <Content Include="Assets\Achievements\jogger_lv2.png" />
+    <Content Include="Assets\Achievements\jogger_lv3.png" />
+    <Content Include="Assets\Achievements\kanto_lv1.png" />
+    <Content Include="Assets\Achievements\kanto_lv2.png" />
+    <Content Include="Assets\Achievements\kanto_lv3.png" />
+    <Content Include="Assets\Achievements\pikachufan_lv1.png" />
+    <Content Include="Assets\Achievements\pikachufan_lv2.png" />
+    <Content Include="Assets\Achievements\pikachufan_lv3.png" />
+    <Content Include="Assets\Achievements\scientist_lv1.png" />
+    <Content Include="Assets\Achievements\scientist_lv2.png" />
+    <Content Include="Assets\Achievements\scientist_lv3.png" />
+    <Content Include="Assets\Achievements\youngster_lv1.png" />
+    <Content Include="Assets\Achievements\youngster_lv2.png" />
+    <Content Include="Assets\Achievements\youngster_lv3.png" />
     <Content Include="Assets\Audio\pokemon_found_ding.wav" />
     <Content Include="Assets\Backgrounds\details_type_bg_bug.png" />
     <Content Include="Assets\Backgrounds\details_type_bg_default.png" />
@@ -566,6 +599,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\SemiCircularProgressBar.xaml.cs">
+      <DependentUpon>SemiCircularProgressBar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CircularProgressBar.xaml.cs">
       <DependentUpon>CircularProgressBar.xaml</DependentUpon>
     </Compile>
@@ -693,6 +729,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\SemiCircularProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\CircularProgressBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
