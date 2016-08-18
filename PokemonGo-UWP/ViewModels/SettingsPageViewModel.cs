@@ -1,5 +1,6 @@
 ﻿using PokemonGo_UWP.Utils;
 using PokemonGo_UWP.Views;
+using System.Collections.Generic;
 using System.Linq;
 using Template10.Mvvm;
 
@@ -89,34 +90,14 @@ namespace PokemonGo_UWP.ViewModels
             set { Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = value.Replace("System", ""); }
         }
 
-        public System.Collections.Generic.List<string> languageList
+        public List<string> languageList
         {
             get {
-                System.Collections.Generic.List<string> tmp = new System.Collections.Generic.List<string>();
-                tmp.Clear();
-                tmp.Add("System");
-                tmp.Add("cs");
-                tmp.Add("de");
-                tmp.Add("el");
-                tmp.Add("en-US");
-                tmp.Add("es");
-                tmp.Add("fi");
-                tmp.Add("fr");
-                tmp.Add("hu");
-                tmp.Add("id");
-                tmp.Add("it");
-                tmp.Add("ja");
-                tmp.Add("nl");
-                tmp.Add("pl");
-                tmp.Add("pt-BR");
-                tmp.Add("pt-PT");
-                tmp.Add("ru");
-                tmp.Add("sk");
-                tmp.Add("tr");
-                tmp.Add("zh-CN");
-                tmp.Add("zh-HK");
-                tmp.Add("zh-TW");
-                return tmp;
+                var languageCollection = new List<string>() {
+                    "System", "cs", "de", "el", "en-US", "es", "fi", "fr", "hu", "id", "it", "ja", "nl",
+                    "pl", "pt-BR", "pt-PT", "ru", "sk", "tr", "zh-CN", "zh-HK", "zh-TW"
+                };
+                return languageCollection;
             }
             set { }
         }
