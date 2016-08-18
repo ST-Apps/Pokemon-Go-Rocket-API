@@ -723,6 +723,30 @@
         <Setter Property="TextWrapping" Value="WrapWholeWords" />
     </Style>
 
+    <Style x:Key="TextGymTitle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="#000000" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="Margin" Value="15" />
+        <Setter Property="TextWrapping" Value="WrapWholeWords" />
+    </Style>
+
+    <Style x:Key="TextGymStrength" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="#000000" />
+        <Setter Property="FontSize" Value="30" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="Margin" Value="15" />
+        <Setter Property="TextWrapping" Value="WrapWholeWords" />
+    </Style>
+
+    <Style x:Key="TextGymGuardCp" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="Green" />
+        <Setter Property="FontSize" Value="28" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="TextWrapping" Value="WrapWholeWords" />
+    </Style>
+
     <Style x:Key="TextSettingsTitle" TargetType="TextBlock">
         <Setter Property="TextWrapping" Value="Wrap" />
         <Setter Property="Foreground" Value="#ffffff" />

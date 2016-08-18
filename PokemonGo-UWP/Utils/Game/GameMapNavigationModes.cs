@@ -15,6 +15,8 @@ namespace PokemonGo_UWP.Utils
         // Navigating from Pokemon catching page and requiring an update
         PokemonUpdate,
         // Navigating from Pokestop searching page and requiring an update
-        PokestopUpdate
+        PokestopUpdate,
+        // Navigating from Gym page and requiring an update
+        GymUpdate
     }
 }

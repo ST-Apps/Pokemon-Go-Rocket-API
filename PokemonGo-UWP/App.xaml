@@ -26,6 +26,7 @@
             <utils:ItemToItemIconConverter x:Key="ItemToItemIconConverter" />
             <utils:NearbyPokemonDistanceToDistanceImageConverter x:Key="NearbyPokemonDistanceToDistanceImageConverter" />
             <utils:PokestopToIconConverter x:Key="PokestopToIconConverter" />
+            <utils:GymToIconConverter x:Key="GymToIconConverter" />
             <utils:CurrentTimeToMapColorSchemeConverter x:Key="CurrentTimeToMapColorSchemeConverter" />
             <utils:PokemonDataToPokemonStaminaConverter x:Key="PokemonDataToPokemonStaminaConverter" />
             <utils:PokemonIdToPokemonNameConverter x:Key="PokemonIdToPokemonNameConverter" />

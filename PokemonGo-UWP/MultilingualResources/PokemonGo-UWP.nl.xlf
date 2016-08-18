@@ -290,8 +290,7 @@
         </trans-unit>
         <trans-unit id="PokemonRanAwayText" translate="yes" xml:space="preserve">
           <source>Pokémon ran away, sorry :(</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pokemon weggelopen, jammer :(</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated" state-qualifier="mt-suggestion">Pokemon weggelopen, jammer :(</target>
         </trans-unit>
         <trans-unit id="PtcDownText" translate="yes" xml:space="preserve">
           <source>PTC login is probably down, please retry later.</source>
@@ -387,75 +386,76 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="ActivityHatchEgg" translate="yes" xml:space="preserve">
           <source>Egg Hatched!</source>
-          <target state="new">Ei is uitgekomen!</target>
+          <target state="translated">Ei is uitgekomen!</target>
         </trans-unit>
         <trans-unit id="ActivityWalkKm" translate="yes" xml:space="preserve">
           <source>Walk Km</source>
-          <target state="new">Gelopen Km</target>
+          <target state="translated">Gelopen Km</target>
         </trans-unit>
         <trans-unit id="ActivityPokedexEntryNew" translate="yes" xml:space="preserve">
           <source>New Pokémon</source>
-          <target state="new">Nieuwe Pokémon</target>
+          <target state="translated">Nieuwe Pokémon</target>
         </trans-unit>
         <trans-unit id="ActivityCatchFirstThrow" translate="yes" xml:space="preserve">
           <source>First Throw</source>
-          <target state="new">Eerste worp</target>
+          <target state="translated">Eerste worp</target>
         </trans-unit>
         <trans-unit id="ActivityCatchNiceThrow" translate="yes" xml:space="preserve">
           <source>Nice Throw</source>
-          <target state="new">Goede worp</target>
+          <target state="translated">Goede worp</target>
         </trans-unit>
         <trans-unit id="ActivityCatchGreatThrow" translate="yes" xml:space="preserve">
           <source>Great Throw</source>
-          <target state="new">Geweldige worp</target>
+          <target state="translated">Geweldige worp</target>
         </trans-unit>
         <trans-unit id="ActivityCatchExcellentThrow" translate="yes" xml:space="preserve">
           <source>Excellent Throw</source>
-          <target state="new">Uitstekende worp</target>
+          <target state="translated">Uitstekende worp</target>
         </trans-unit>
         <trans-unit id="ActivityCatchCurveball" translate="yes" xml:space="preserve">
           <source>Curveball</source>
-          <target state="new">Effectbal</target>
+          <target state="translated">Effectbal</target>
         </trans-unit>
         <trans-unit id="ActivityCatchFirstCatchOfDay" translate="yes" xml:space="preserve">
           <source>First Catch of Day!</source>
-          <target state="new">Eerste vangst van de dag!</target>
+          <target state="translated">Eerste vangst van de dag!</target>
         </trans-unit>
         <trans-unit id="ActivityCatchMilestone" translate="yes" xml:space="preserve">
           <source>Catch Milestone</source>
-          <target state="new">Mijlpaal gevangen</target>
+          <target state="needs-review-translation">Mijlpaal gevangen</target>
+          <note from="MultilingualEditor" annotates="source" priority="4">mtaheij: Heb je een mijlpaal gevangen of heb je een mijlpaal bereikt met deze vangst?</note>
         </trans-unit>
         <trans-unit id="ActivityTrainPokemon" translate="yes" xml:space="preserve">
           <source>Train Pokémon</source>
-          <target state="new">Train Pokémon</target>
+          <target state="translated">Train Pokémon</target>
         </trans-unit>
         <trans-unit id="ActivitySearchFort" translate="yes" xml:space="preserve">
           <source>Search Fort</source>
-          <target state="new">Zoek Fort</target>
+          <target state="translated">Zoek Pokestop</target>
         </trans-unit>
         <trans-unit id="ActivityReleasePokemon" translate="yes" xml:space="preserve">
           <source>Release Pokémon</source>
-          <target state="new">Laat Pokémon los</target>
+          <target state="translated">Laat Pokémon los</target>
         </trans-unit>
         <trans-unit id="ActivityHatchEggSmallBonus" translate="yes" xml:space="preserve">
           <source>Hatch Egg Small Bonus</source>
-          <target state="new">Ei uitgekomen kleine bonus</target>
+          <target state="translated">Ei uitgekomen kleine bonus</target>
         </trans-unit>
         <trans-unit id="ActivityHatchEggMediumBonus" translate="yes" xml:space="preserve">
           <source>Hatch Egg Medium Bonus</source>
-          <target state="new">Ei uitgekomen bonus</target>
+          <target state="translated">Ei uitgekomen bonus</target>
         </trans-unit>
         <trans-unit id="ActivityHatchEggLargeBonus" translate="yes" xml:space="preserve">
           <source>Hatch Egg Large Bonus</source>
-          <target state="new">Ei uitgekomen grote bonus</target>
+          <target state="translated">Ei uitgekomen grote bonus</target>
         </trans-unit>
         <trans-unit id="ActivityDefeatGymDefender" translate="yes" xml:space="preserve">
           <source>Defeat Gym Defender</source>
-          <target state="new">Versla Gym verdediger</target>
+          <target state="translated">Versla Gym verdediger</target>
         </trans-unit>
         <trans-unit id="ActivityDefeatGymLeader" translate="yes" xml:space="preserve">
           <source>Defeat Gym Leader</source>
-          <target state="new">Versla Gym leider</target>
+          <target state="translated">Versla Gym leider</target>
         </trans-unit>
       </group>
     </body>
@@ -484,8 +484,7 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="LoginDisclaimerTextBox.Text" translate="yes" xml:space="preserve">
           <source>To login, enter your Username/Email and Password above. If you don't trust this app, please close it now. Niantic may ban you for using this app. Use at your own risk.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Je moet je gebruikersnaam/e-mail en wachtwoord in voeren om in te loggen. Als je dit niet vertrouwt, sluit de app dan. Gebruik deze app op eigen risico</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated">Je moet je gebruikersnaam/e-mail en wachtwoord invoeren om je aan te melden. Als je dit niet vertrouwt, sluit de app dan. Gebruik deze app op eigen risico</target>
         </trans-unit>
         <trans-unit id="NearbyPokemonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>nearby</source>
@@ -493,8 +492,7 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="OutOfRangeTextBlock.Text" translate="yes" xml:space="preserve">
           <source>THIS POKÉSTOP IS TOO FAR AWAY</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Je bent buiten het bereik</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated">Je bent te ver weg</target>
         </trans-unit>
         <trans-unit id="LoginPasswordPasswordBox.PlaceholderText" translate="yes" xml:space="preserve">
           <source>Password</source>
@@ -502,8 +500,7 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="LoginUsernameTextBox.PlaceholderText" translate="yes" xml:space="preserve">
           <source>Username / Email</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gebruikersnaam/e-mail</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated" state-qualifier="mt-suggestion">Gebruikersnaam/e-mail</target>
         </trans-unit>
         <trans-unit id="ExperienceTextBlock.Text" translate="yes" xml:space="preserve">
           <source>XP</source>
@@ -592,7 +589,7 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="SettingsUseNianticMapTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Use Niantic Map</source>
-          <target state="new" state-qualifier="mt-suggestion">Niantic kaart</target>
+          <target state="translated" state-qualifier="mt-suggestion">Niantic kaart</target>
         </trans-unit>
         <trans-unit id="HpTextBlock.Text" translate="yes" xml:space="preserve">
           <source>HP </source>
@@ -637,11 +634,12 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="TransferButton.Content" translate="yes" xml:space="preserve">
           <source>TRANSFER</source>
-          <target state="new">TRANSFER</target>
+          <target state="needs-review-translation">TRANSFER</target>
+          <note from="MultilingualEditor" annotates="source" priority="4">mtaheij: mogelijk 'OVERBRENGEN'?</note>
         </trans-unit>
         <trans-unit id="SettingsRememberMapZoomTextBlock" translate="yes" xml:space="preserve">
           <source>Remember Map Zoom</source>
-          <target state="new">Remember Map Zoom</target>
+          <target state="translated">Onthou kaart zoom</target>
         </trans-unit>
       </group>
     </body>
@@ -1613,7 +1611,7 @@ Open page with installation files for manual install?</target>
         </trans-unit>
         <trans-unit id="BodySlam" translate="yes" xml:space="preserve">
           <source>Body Slam</source>
-          <target state="new">Lichaambeuk</target>
+          <target state="needs-review-translation">Lichaambeuk</target>
         </trans-unit>
         <trans-unit id="BoneClub" translate="yes" xml:space="preserve">
           <source>Bone Club</source>

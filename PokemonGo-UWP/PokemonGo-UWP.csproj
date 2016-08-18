@@ -173,7 +173,6 @@
     <Content Include="Assets\Buttons\btn_close_normal_dark.png" />
     <Content Include="Assets\Buttons\btn_empty.png" />
     <Content Include="Assets\Buttons\btn_incubator.png" />
-    <Content Include="Assets\Buttons\btn_incubator_dark.png" />
     <Content Include="Assets\Buttons\btn_items.png" />
     <Content Include="Assets\Buttons\btn_items_catch.png" />
     <Content Include="Assets\Buttons\btn_master.png" />
@@ -212,6 +211,10 @@
     <Content Include="Assets\Icons\Footprint_Mid.png" />
     <Content Include="Assets\Icons\Footprint_Near.png" />
     <Content Include="Assets\Icons\FrontPortraitRing.png" />
+    <Content Include="Assets\Icons\hint_gym_blue.png" />
+    <Content Include="Assets\Icons\hint_gym_neutral.png" />
+    <Content Include="Assets\Icons\hint_gym_red.png" />
+    <Content Include="Assets\Icons\hint_gym_yellow.png" />
     <Content Include="Assets\Icons\ic_combat.png" />
     <Content Include="Assets\Icons\ic_date.png" />
     <Content Include="Assets\Icons\ic_fav.png" />
@@ -222,7 +225,6 @@
     <Content Include="Assets\Icons\pokestop_far_inactive.png" />
     <Content Include="Assets\Icons\pokestop_near.png" />
     <Content Include="Assets\Icons\pokestop_near_inactive.png" />
-    <Content Include="Assets\Icons\RecenterMapIcon.png" />
     <Content Include="Assets\Icons\stardust_painted.png" />
     <Content Include="Assets\Icons\stardust_vector.png" />
     <Content Include="Assets\Items\Egg.png" />
@@ -447,7 +449,6 @@
     <Content Include="Assets\Pokemons\97.png" />
     <Content Include="Assets\Pokemons\98.png" />
     <Content Include="Assets\Pokemons\99.png" />
-    <Content Include="Assets\Pokemons\Egg.png" />
     <Content Include="Assets\Teams\instinct.png" />
     <Content Include="Assets\Teams\mystic.png" />
     <Content Include="Assets\Teams\no-team.png" />
@@ -606,11 +607,11 @@
       <DependentUpon>CircularProgressBar.xaml</DependentUpon>
     </Compile>
     <Compile Include="Entities\FortDataWrapper.cs" />
+    <Compile Include="Entities\ItemDataWrapper.cs" />
     <Compile Include="Entities\IUpdatable.cs" />
     <Compile Include="Entities\MapPokemonWrapper.cs" />
     <Compile Include="Entities\NearbyPokemonWrapper.cs" />
     <Compile Include="Entities\ObservableCollectionPlus.cs" />
-    <Compile Include="Entities\ItemDataWrapper.cs" />
     <Compile Include="Entities\PokemonDataWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Achievements\AchievementValueAttribute.cs" />
@@ -651,10 +652,11 @@
     <Compile Include="ViewModels\EggDetailPageViewModel.cs" />
     <Compile Include="ViewModels\GameMapPageViewModel.cs" />
     <Compile Include="ViewModels\AchievementDetailPageViewModel.cs" />
+    <Compile Include="ViewModels\ItemsInventoryPageViewModel.cs" />
     <Compile Include="ViewModels\PlayerProfileViewModel.cs" />
     <Compile Include="ViewModels\PokemonDetailsPageViewModel.cs" />
-    <Compile Include="ViewModels\ItemsInventoryPageViewModel.cs" />
     <Compile Include="ViewModels\PokemonInventoryPageViewModel.cs" />
+    <Compile Include="ViewModels\EnterGymPageViewModel.cs" />
     <Compile Include="ViewModels\SettingsPageViewModel.cs" />
     <Compile Include="ViewModels\LoginPageViewModel.cs" />
     <Compile Include="ViewModels\SearchPokeStopPageViewModel.cs" />
@@ -664,17 +666,20 @@
     <Compile Include="Views\AchievementDetailPage.xaml.cs">
       <DependentUpon>AchievementDetailPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ItemsInventoryPage.xaml.cs">
+      <DependentUpon>ItemsInventoryPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\PlayerProfilePage.xaml.cs">
       <DependentUpon>PlayerProfilePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PokemonDetailPage.xaml.cs">
       <DependentUpon>PokemonDetailPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ItemsInventoryPage.xaml.cs">
-      <DependentUpon>ItemsInventoryPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\PokemonInventoryPage.xaml.cs">
       <DependentUpon>PokemonInventoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EnterGymPage.xaml.cs">
+      <DependentUpon>EnterGymPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
@@ -750,6 +755,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\ItemsInventoryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\PlayerProfilePage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -758,13 +767,13 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ItemsInventoryPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Views\PokemonInventoryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EnterGymPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\SettingsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -810,18 +819,24 @@
       <Name>Windows Mobile Extensions for the UWP</Name>
     </SDKReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.cs.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.de.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.el.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.es-MX.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.es.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.fi.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.fr.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.hr-HR.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.hr.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.hu.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.id.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.it.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.ja.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.nb-NO.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.nl.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.nn-NO.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.pl.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.pt-BR.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.pt-PT.xlf" />
@@ -832,8 +847,6 @@
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.zh-HK.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.zh-TW.xlf" />
   </ItemGroup>
-  <ItemGroup />
-  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

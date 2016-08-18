@@ -925,6 +925,37 @@ namespace PokemonGo_UWP.Utils
         #endregion
     }
 
+    public class GymToIconConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var teamColor = (TeamColor)value;
+
+            switch (teamColor)
+            {
+                case TeamColor.Red:
+                    return new Uri($"ms-appx:///Assets/Icons/hint_gym_red.png");
+                case TeamColor.Yellow:
+                    return new Uri($"ms-appx:///Assets/Icons/hint_gym_yellow.png");
+                case TeamColor.Blue:
+                    return new Uri($"ms-appx:///Assets/Icons/hint_gym_blue.png");
+                case TeamColor.Neutral:
+                    return new Uri($"ms-appx:///Assets/Icons/hint_gym.png");
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
     public class CurrentTimeToMapColorSchemeConverter : IValueConverter
     {
         #region Implementation of IValueConverter

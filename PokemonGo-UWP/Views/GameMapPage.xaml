@@ -287,6 +287,23 @@
                 </maps:MapItemsControl.ItemTemplate>
             </maps:MapItemsControl>
 
+            <maps:MapItemsControl ItemsSource="{Binding NearbyGyms}">
+                <maps:MapItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="entities:FortDataWrapper">
+                        <Button Style="{ThemeResource ImageButtonStyle}"
+                                Command="{x:Bind TryEnterGym}">
+                            <Image
+                                Source="{Binding OwnedByTeam, Converter={StaticResource GymToIconConverter}}"
+                                maps:MapControl.Location="{Binding Geoposition}"
+                                maps:MapControl.NormalizedAnchorPoint="{Binding Anchor}"
+                                Stretch="Uniform"
+                                Height="160"
+                                Width="160" />
+                        </Button>
+                    </DataTemplate>
+                </maps:MapItemsControl.ItemTemplate>
+            </maps:MapItemsControl>
+
         </maps:MapControl>
 
         <Grid x:Name="NearbyPokemonContainer"
