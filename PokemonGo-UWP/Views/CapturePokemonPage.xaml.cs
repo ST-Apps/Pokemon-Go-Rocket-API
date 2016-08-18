@@ -7,6 +7,7 @@ using Windows.System.Threading;
 using Windows.UI.Core;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
+using PokemonGo_UWP.Utils;
 using Windows.UI.Xaml.Navigation;
 using PokemonGo.RocketAPI;
 using Template10.Common;
@@ -27,7 +28,8 @@ namespace PokemonGo_UWP.Views
                 ShowCatchStatsModalAnimation.From = CatchStatsTranslateTransform.Y = ActualHeight;
                 // HACK - somehow binding doesn't work as expected so we manually disable the item if count is 0
                 LaunchPokeballButton.IsEnabled =
-                    LaunchPokeballButton.IsHitTestVisible = ViewModel.SelectedCaptureItem.Count > 0;                
+                    LaunchPokeballButton.IsHitTestVisible = ViewModel.SelectedCaptureItem.Count > 0;   
+                 AudioUtils.PlaySoundCapture(@"EncounterPokemon.mp3");
             };
         }
 

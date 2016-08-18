@@ -608,7 +608,7 @@ namespace PokemonGo_UWP.Utils
             NearbyPokestops.UpdateWith(newPokeStops, x => new FortDataWrapper(x), (x, y) => x.Id == y.Id);
 
             // Update LuredPokemon
-            var newLuredPokemon = newPokeStops.Where(item => item.ActiveFortModifier != null && item.ActiveFortModifier.Contains(ItemId.ItemTroyDisk)).Select(item => new LuredPokemon(item.LureInfo, item.Latitude, item.Longitude)).ToArray();
+            var newLuredPokemon = newPokeStops.Where(item => item.LureInfo != null).Select(item => new LuredPokemon(item.LureInfo, item.Latitude, item.Longitude)).ToArray();
             Logger.Write($"Found {newLuredPokemon.Length} lured Pokemon");
             LuredPokemons.UpdateByIndexWith(newLuredPokemon, x => x);
             Logger.Write("Finished updating map objects");

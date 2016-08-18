@@ -667,37 +667,48 @@
                         Style="{ThemeResource ImageButtonStyle}"
                         RelativePanel.AlignTopWithPanel="true"
                         Command="{Binding GotoPlayerProfilePageCommand}">
-                    <Ellipse Width="64"
+                    <Grid>
+                        <Ellipse Width="64"
                              Height="64"
                              Stroke="{Binding PlayerProfile.Team, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}"
-                             StrokeThickness="2.5"
+                             StrokeThickness="2"
                              x:Name="AvatarEllipse">
-                        <Ellipse.Fill>
-                            <ImageBrush ImageSource="../Assets/UI/avatar.png" />
-                        </Ellipse.Fill>
-                    </Ellipse>
+                            <Ellipse.Fill>
+                                <SolidColorBrush Opacity="0.4" Color="Black" />
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <Ellipse Width="64"
+                             Height="64"
+                             x:Name="AvatarImageEllipse">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="../Assets/UI/avatar.png" />
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
                 </Button>
 
-                <ProgressBar
-                    Value="{Binding PlayerStats, Converter={StaticResource PlayerDataToCurrentExperienceConverter}, Mode=TwoWay}"
-                    Maximum="{Binding PlayerStats, Converter={StaticResource PlayerDataToTotalLevelExperienceConverter}}"
-                    Foreground="{Binding PlayerProfile.Team, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}"
-                    Height="5"
-                    Margin="0,-5,0,0"
-                    RelativePanel.AlignLeftWithPanel="True"
-                    RelativePanel.AlignRightWithPanel="True"
-                    RelativePanel.Below="AvatarButton"
-                    x:Name="ExperienceProgressBar" />
+                <ProgressBar x:Name="ExperienceProgressBar" 
+                             Value="{Binding PlayerStats, Converter={StaticResource PlayerDataToCurrentExperienceConverter}, Mode=TwoWay}"
+                             Maximum="{Binding PlayerStats, Converter={StaticResource PlayerDataToTotalLevelExperienceConverter}}"
+                             Foreground="{Binding PlayerProfile.Team, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}"
+                             Height="5"
+                             Margin="0,-5,0,0"
+                             RelativePanel.AlignLeftWithPanel="True"
+                             RelativePanel.AlignRightWithPanel="True"
+                             RelativePanel.Below="AvatarButton"
+                             Style="{StaticResource ExperienceProgressbarStyle}"
+                             BorderBrush="Black"
+                             BorderThickness="1" />
 
                 <TextBlock Text="{Binding PlayerStats.Level}"
-                           FontSize="38"
+                           FontSize="34"
                            Foreground="{ThemeResource ContrastColorBrush}"
                            Style="{ThemeResource BodyTextBlockStyle}"
                            FontWeight="SemiBold"
-                           TextAlignment="Right"
-                           RelativePanel.RightOf="AvatarButton"
+                           TextAlignment="Left"
+                           RelativePanel.AlignLeftWith="AvatarButton"
                            RelativePanel.Above="ExperienceProgressBar"
-                           Margin="-6,0,0,-4" />
+                           Margin="54,0,0,0" />
 
                 <TextBlock Text="{Binding PlayerProfile.Username}"
                            FontSize="15"
