@@ -130,7 +130,7 @@
     <value>Su Kuyruğu</value>
   </data>
   <data name="BiteFast" xml:space="preserve">
-    <value>Hızlı Isırık</value>
+    <value>Isırık</value>
   </data>
   <data name="Blizzard" xml:space="preserve">
     <value>Buz Fırtınası</value>
@@ -157,7 +157,7 @@
     <value>Böcek Isırığı</value>
   </data>
   <data name="BugBiteFast" xml:space="preserve">
-    <value>Hızlı Böcek Isırığı</value>
+    <value>Böcek Isırığı</value>
   </data>
   <data name="BugBuzz" xml:space="preserve">
     <value>Böcek Vızıldanması</value>
@@ -169,10 +169,10 @@
     <value>Mermi Yumruğu</value>
   </data>
   <data name="BulletPunchFast" xml:space="preserve">
-    <value>Hızlı Mermi Yumruğu</value>
+    <value>Mermi Yumruğu</value>
   </data>
   <data name="ConfusionFast" xml:space="preserve">
-    <value>Hızlı Şaşkınlık</value>
+    <value>Şaşkınlık</value>
   </data>
   <data name="CrossPoison" xml:space="preserve">
     <value>Çapraz Zehir</value>
@@ -181,7 +181,7 @@
     <value>Kes</value>
   </data>
   <data name="CutFast" xml:space="preserve">
-    <value>Hızlı Kes</value>
+    <value>Kes</value>
   </data>
   <data name="DazzlingGleam" xml:space="preserve">
     <value>Büyüleyici Parıltı</value>
@@ -196,7 +196,7 @@
     <value>Ejder Nefesi</value>
   </data>
   <data name="DragonBreathFast" xml:space="preserve">
-    <value>Hızlı Ejder Nefesi</value>
+    <value>Ejder Nefesi</value>
   </data>
   <data name="DragonClaw" xml:space="preserve">
     <value>Ejder Pençesi</value>
@@ -220,13 +220,13 @@
     <value>Hızlı Ateş</value>
   </data>
   <data name="FeintAttackFast" xml:space="preserve">
-    <value>Hızlı Hafif Saldırı</value>
+    <value>Hafif Saldırı</value>
   </data>
   <data name="FireBlast" xml:space="preserve">
     <value>Ateş Patlaması</value>
   </data>
   <data name="FireFangFast" xml:space="preserve">
-    <value>Hızlı Ateşli Sivridiş</value>
+    <value>Ateşli Sivridiş</value>
   </data>
   <data name="FirePunch" xml:space="preserve">
     <value>Alev Yumruğu</value>
@@ -244,13 +244,13 @@
     <value>Buz Nefesi</value>
   </data>
   <data name="FrostBreathFast" xml:space="preserve">
-    <value>Hızlı Buz Nefesi</value>
+    <value>Buz Nefesi</value>
   </data>
   <data name="FuryCutter" xml:space="preserve">
     <value>Öfke Kesicisi</value>
   </data>
   <data name="FuryCutterFast" xml:space="preserve">
-    <value>Hızlı Öfke Kesicisi</value>
+    <value>Öfke Kesicisi</value>
   </data>
   <data name="GigaDrain" xml:space="preserve">
     <value>Giga Emiş</value>
@@ -277,7 +277,7 @@
     <value>Su Pompası</value>
   </data>
   <data name="HydroPumpBlastoise" xml:space="preserve">
-    <value>Blastoise Su Pompası</value>
+    <value>Su Pompası</value>
   </data>
   <data name="HyperFang" xml:space="preserve">
     <value>Hiper Diş</value>
@@ -292,7 +292,7 @@
     <value>Buz Parçası</value>
   </data>
   <data name="IceShardFast" xml:space="preserve">
-    <value>Hızlı Buz Parçası</value>
+    <value>Buz Parçası</value>
   </data>
   <data name="IcyWind" xml:space="preserve">
     <value>Buzlu Rüzgar</value>
@@ -304,7 +304,7 @@
     <value>Karate Vuruşu</value>
   </data>
   <data name="KarateChopFast" xml:space="preserve">
-    <value>Hızlı Karate Vuruşu</value>
+    <value>Karate Vuruşu</value>
   </data>
   <data name="LeafBlade" xml:space="preserve">
     <value>Kılıç Yaprak</value>
@@ -313,7 +313,7 @@
     <value>Hızlı Yala</value>
   </data>
   <data name="LowKickFast" xml:space="preserve">
-    <value>Hızlı Alttan Tekme</value>
+    <value>Alttan Tekme</value>
   </data>
   <data name="LowSweep" xml:space="preserve">
     <value>Alt Kesiş</value>
@@ -325,7 +325,7 @@
     <value>Mega Emiş</value>
   </data>
   <data name="MetalClawFast" xml:space="preserve">
-    <value>Hızlı Metal Pençe</value>
+    <value>Metal Pençe</value>
   </data>
   <data name="Moonblast" xml:space="preserve">
     <value>Ay Patlaması</value>
@@ -337,10 +337,10 @@
     <value>Çamur Vuruşu</value>
   </data>
   <data name="MudShotFast" xml:space="preserve">
-    <value>Hızlı Çamur Vuruşu</value>
+    <value>Çamur Vuruşu</value>
   </data>
   <data name="MudSlapFast" xml:space="preserve">
-    <value>Hızlı Çamur Dayağı</value>
+    <value>Çamur Dayağı</value>
   </data>
   <data name="NightSlash" xml:space="preserve">
     <value>Gece Kesişi</value>
@@ -355,7 +355,7 @@
     <value>Gaga</value>
   </data>
   <data name="PeckFast" xml:space="preserve">
-    <value>Hızlı Gaga</value>
+    <value>Gaga</value>
   </data>
   <data name="PetalBlizzard" xml:space="preserve">
     <value>Yaprak Fırtınası</value>
@@ -370,10 +370,10 @@
     <value>Zehirli Vuruş</value>
   </data>
   <data name="PoisonJabFast" xml:space="preserve">
-    <value>Hızlı Zehirli Vuruş</value>
+    <value>Zehirli Vuruş</value>
   </data>
   <data name="PoisonStingFast" xml:space="preserve">
-    <value>Hızlı Zehirli Isırık</value>
+    <value>Zehirli Isırık</value>
   </data>
   <data name="PoundFast" xml:space="preserve">
     <value>Hızlı Yumruk</value>
@@ -391,7 +391,7 @@
     <value>Psişik</value>
   </data>
   <data name="PsychoCutFast" xml:space="preserve">
-    <value>Hızlı Psişik Kesiş</value>
+    <value>Psişik Kesiş</value>
   </data>
   <data name="Psyshock" xml:space="preserve">
     <value>Psyşok</value>
@@ -400,10 +400,10 @@
     <value>Psyvuruş</value>
   </data>
   <data name="QuickAttackFast" xml:space="preserve">
-    <value>Çevik Hızlı Saldırı</value>
+    <value>Hızlı Saldırı</value>
   </data>
   <data name="RazorLeafFast" xml:space="preserve">
-    <value>Hızlı Jilet Yaprak</value>
+    <value>Jilet Yaprak</value>
   </data>
   <data name="Rest" xml:space="preserve">
     <value>Dinlen</value>
@@ -412,13 +412,13 @@
     <value>Kaya Kayması</value>
   </data>
   <data name="RockSmashFast" xml:space="preserve">
-    <value>Hızlı Kaya Kayması</value>
+    <value>Kaya Parçalama</value>
   </data>
   <data name="RockThrow" xml:space="preserve">
     <value>Kaya Atışı</value>
   </data>
   <data name="RockThrowFast" xml:space="preserve">
-    <value>Hızlı Kaya Atışı</value>
+    <value>Kaya Atışı</value>
   </data>
   <data name="RockTomb" xml:space="preserve">
     <value>Kaya Mezarı</value>
@@ -427,10 +427,10 @@
     <value>Haşlama</value>
   </data>
   <data name="ScaldBlastoise" xml:space="preserve">
-    <value>Blastoise Haşlama</value>
+    <value>Haşlama</value>
   </data>
   <data name="ScratchFast" xml:space="preserve">
-    <value>Hızlı Pençe</value>
+    <value>Pençe</value>
   </data>
   <data name="SeedBomb" xml:space="preserve">
     <value>Çekirdek Bombası</value>
@@ -442,7 +442,7 @@
     <value>Gölge Pençesi</value>
   </data>
   <data name="ShadowClawFast" xml:space="preserve">
-    <value>Hızlı Gölge Pençesi</value>
+    <value>Gölge Pençesi</value>
   </data>
   <data name="ShadowPunch" xml:space="preserve">
     <value>Gölge Yumruğu</value>
@@ -478,13 +478,13 @@
     <value>Su Sıçratma</value>
   </data>
   <data name="SplashFast" xml:space="preserve">
-    <value>Hızlı Su Sıçratma</value>
+    <value>Su Sıçratma</value>
   </data>
   <data name="SteelWing" xml:space="preserve">
     <value>Çelik Kanat</value>
   </data>
   <data name="SteelWingFast" xml:space="preserve">
-    <value>Hızlı Çelik Kanat</value>
+    <value>Çelik Kanat</value>
   </data>
   <data name="Stomp" xml:space="preserve">
     <value>Ezme</value>
@@ -499,13 +499,13 @@
     <value>Bitiriş</value>
   </data>
   <data name="SuckerPunchFast" xml:space="preserve">
-    <value>Hızlı Bitirici Yumruk</value>
+    <value>Bitirici Yumruk</value>
   </data>
   <data name="Swift" xml:space="preserve">
     <value>Çevik</value>
   </data>
   <data name="TackleFast" xml:space="preserve">
-    <value>Hızlı Darbe</value>
+    <value>Darbe</value>
   </data>
   <data name="Thunder" xml:space="preserve">
     <value>Şimşek</value>
@@ -517,7 +517,7 @@
     <value>Şimşek Yumruğu</value>
   </data>
   <data name="ThunderShockFast" xml:space="preserve">
-    <value>Hızlı Şimşek Şoku</value>
+    <value>Şimşek Şoku</value>
   </data>
   <data name="Twineedle" xml:space="preserve">
     <value>Çifte İğne</value>
@@ -526,19 +526,19 @@
     <value>Kasırga</value>
   </data>
   <data name="VineWhipFast" xml:space="preserve">
-    <value>Hızlı Kamçı Darbesi</value>
+    <value>Kamçı Darbesi</value>
   </data>
   <data name="WaterGunFast" xml:space="preserve">
-    <value>Hızlı Su Tüfeği</value>
+    <value>Su Tüfeği</value>
   </data>
   <data name="WaterGunFastBlastoise" xml:space="preserve">
-    <value>Hızlı Blastoise Su Tüfeği</value>
+    <value>Su Tüfeği</value>
   </data>
   <data name="WaterPulse" xml:space="preserve">
     <value>Su Dalgası</value>
   </data>
   <data name="WingAttackFast" xml:space="preserve">
-    <value>Hızlı Kanat Saldırısı</value>
+    <value>Kanat Saldırısı</value>
   </data>
   <data name="WrapGreen" xml:space="preserve">
     <value>Yeşil Sar</value>
@@ -550,6 +550,6 @@
     <value>XMakas</value>
   </data>
   <data name="ZenHeadbuttFast" xml:space="preserve">
-    <value>Hızlı Zen Kafa Darbesi</value>
+    <value>Zen Kafa Darbesi</value>
   </data>
 </root>

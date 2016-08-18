@@ -145,15 +145,34 @@
                           Style="{StaticResource SettingsCheckbox}"
                           Margin="0,0,15,10" />
 
-                <TextBlock Grid.Row="7"
+                <StackPanel Grid.Row="7" Grid.Column="0" Orientation="Vertical" Margin="0" >
+                    <TextBlock
+                           x:Uid="SettingsLanguageTextBlock"
+                           Text="Language"
+                           Style="{StaticResource TextSettingsTitle}"
+                           VerticalAlignment="Center"
+                           Margin="15,15,15,0" />
+                    <TextBlock
+                           x:Uid="SettingsLanguageRestartTextBlock"
+                           Text="You must restart the App to take effect."
+                           Style="{StaticResource TextSettingsTitle}"
+                           VerticalAlignment="Center"
+                           Margin="15,0,15,25" FontSize="10" />
+                </StackPanel>
+
+                <ComboBox x:Name="LanguageComboBox" Grid.Row="7"
+                          Grid.Column="1"
+                           Margin="0,10,15,10" ItemsSource="{Binding languageList, Mode=OneWay}" SelectedItem="{Binding UserLanguage, Mode=TwoWay}" HorizontalAlignment="Right" />
+
+                <TextBlock Grid.Row="8"
                            Grid.Column="0"
                            x:Uid="SettingsLiveTileTextBlock"
                            Text="Live Tile Mode"
                            Style="{StaticResource TextSettingsTitle}"
                            VerticalAlignment="Center"
                            Margin="15,15,15,25" />
-               
-                <VariableSizedWrapGrid Grid.Row="8"
+
+                <VariableSizedWrapGrid Grid.Row="9"
                                        Grid.ColumnSpan="2"
                                        Orientation="Horizontal"
                                        MaximumRowsOrColumns="5"
@@ -166,8 +185,8 @@
                             HorizontalAlignment="Center"
                             Margin="10,0"
                             Command="{Binding LiveTileSelectionCommand}" CommandParameter="0">
-                        <Image Source="/Assets/LiveTiles/Normal/Square150x150Logo.scale-200.png" 
-                               Width="120" 
+                        <Image Source="/Assets/LiveTiles/Normal/Square150x150Logo.scale-200.png"
+                               Width="120"
                                Height="120" />
                     </Button>
                     <Button Grid.Row="0"
@@ -175,8 +194,8 @@
                             HorizontalAlignment="Center"
                             Margin="10,0"
                             Command="{Binding LiveTileSelectionCommand}" CommandParameter="1">
-                        <Image Source="/Assets/LiveTiles/Transparent/Square150x150Logo.scale-200.png" 
-                               Width="120" 
+                        <Image Source="/Assets/LiveTiles/Transparent/Square150x150Logo.scale-200.png"
+                               Width="120"
                                Height="120" />
                     </Button>
                     <Button Grid.Row="0"
@@ -184,8 +203,8 @@
                             HorizontalAlignment="Center"
                             Margin="10,0"
                             Command="{Binding LiveTileSelectionCommand}" CommandParameter="2">
-                        <Image Source="../Assets/LiveTiles/Peek.gif" 
-                               Width="120" 
+                        <Image Source="../Assets/LiveTiles/Peek.gif"
+                               Width="120"
                                Height="120" />
                     </Button>
                     <Button Grid.Row="1"
@@ -193,10 +212,10 @@
                             HorizontalAlignment="Center"
                             Margin="10,0"
                             Command="{Binding LiveTileSelectionCommand}" CommandParameter="3">
-                        <Image Source="../Assets/LiveTiles/People.gif" 
-                               Width="140" 
+                        <Image Source="../Assets/LiveTiles/People.gif"
+                               Width="140"
                                Height="140"
-                               HorizontalAlignment="Center" 
+                               HorizontalAlignment="Center"
                                VerticalAlignment="Center" />
                     </Button>
                     <Button Grid.Row="1"
@@ -204,19 +223,19 @@
                             HorizontalAlignment="Center"
                             Margin="10,0"
                             Command="{Binding LiveTileSelectionCommand}" CommandParameter="4">
-                        <Image Source="../Assets/Square150x150Logo.scale-200.png" 
+                        <Image Source="../Assets/Square150x150Logo.scale-200.png"
                                Width="140"
                                Height="140" />
                     </Button>
                 </VariableSizedWrapGrid>
 
-                <Border Grid.Row="9"
+                <Border Grid.Row="10"
                         Grid.ColumnSpan="2"
                         Background="#33ffffff"
                         Height="1"
                         Margin="0,24,0,15" />
 
-                <Button Grid.Row="10"
+                <Button Grid.Row="11"
                         Grid.ColumnSpan="2"
                         Command="{Binding DoPtcLogoutCommand}"
                         Style="{StaticResource ButtonNoStyle}">

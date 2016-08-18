@@ -100,4 +100,10 @@
   <data name="IncubatorsTextBlock.Text" xml:space="preserve">
     <value>INCUBATRICI</value>
   </data>
+  <data name="EggDetailButtonTextBlock.Text" xml:space="preserve">
+    <value>METTI NELL'INCUBATRICE</value>
+  </data>
+  <data name="EggDetailTextBlock.Text" xml:space="preserve">
+    <value>Usa un'incubatrice per far schiudere questo Uovo.</value>
+  </data>
 </root>

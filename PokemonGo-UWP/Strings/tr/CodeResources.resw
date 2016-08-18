@@ -80,10 +80,118 @@ Elle yükleme için yükleme dosyaları sayfası açılsın mı?</value>
   <data name="YesText" xml:space="preserve">
     <value>Evet</value>
   </data>
+  <data name="InstinctTeamText" xml:space="preserve">
+    <value>Instinct</value>
+  </data>
   <data name="NoTeamText" xml:space="preserve">
     <value>Takım Yok</value>
   </data>
+  <data name="ValorTeamText" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="MysticTeamText" xml:space="preserve">
+    <value>Mystic</value>
+  </data>
+  <data name="TransferPokemonSuccessText" xml:space="preserve">
+    <value>Transfer başarılı! Profesör'den bir {0} Şekeri aldın.</value>
+  </data>
+  <data name="TransferPokemonWarningText" xml:space="preserve">
+    <value>Transfer ettikten sonra Pokémon'u geri alamazsın. {0} gerçekten Profesör'e aktarılsın mı?</value>
+  </data>
+  <data name="LoginExpired" xml:space="preserve">
+    <value>Önceki giriş zamanı doldu.</value>
+  </data>
   <data name="ActivityUnknown" xml:space="preserve">
     <value>Bilinmez</value>
+  </data>
+  <data name="ActivityCatchPokemon" xml:space="preserve">
+    <value>Pokémon Yakalandı</value>
+  </data>
+  <data name="ActivityCatchLegendPokemon" xml:space="preserve">
+    <value>Efsane Pokemon Yakala</value>
+  </data>
+  <data name="ActivityFleePokemon" xml:space="preserve">
+    <value>Pokémon Kaçtı</value>
+  </data>
+  <data name="ActivityDefeatFort" xml:space="preserve">
+    <value>Kale Yen</value>
+  </data>
+  <data name="ActivityEvolvePokemon" xml:space="preserve">
+    <value>Bir Pokémon Geliştir</value>
+  </data>
+  <data name="ActivityHatchEgg" xml:space="preserve">
+    <value>Yumurta Çatladı!</value>
+  </data>
+  <data name="ActivityWalkKm" xml:space="preserve">
+    <value>Km Yürü</value>
+  </data>
+  <data name="ActivityPokedexEntryNew" xml:space="preserve">
+    <value>Yeni Pokémon</value>
+  </data>
+  <data name="ActivityCatchFirstThrow" xml:space="preserve">
+    <value>İlk Atış</value>
+  </data>
+  <data name="ActivityCatchNiceThrow" xml:space="preserve">
+    <value>İyi Atış</value>
+  </data>
+  <data name="ActivityCatchGreatThrow" xml:space="preserve">
+    <value>Harika Atış</value>
+  </data>
+  <data name="ActivityCatchExcellentThrow" xml:space="preserve">
+    <value>Mükemmel Atış</value>
+  </data>
+  <data name="ActivityCatchCurveball" xml:space="preserve">
+    <value>Falsolu Atış</value>
+  </data>
+  <data name="ActivityCatchFirstCatchOfDay" xml:space="preserve">
+    <value>Günün İlk Yakalaması!</value>
+  </data>
+  <data name="ActivityCatchMilestone" xml:space="preserve">
+    <value>Yakalama Hedefi</value>
+  </data>
+  <data name="ActivityTrainPokemon" xml:space="preserve">
+    <value>Pokémon Eğit</value>
+  </data>
+  <data name="ActivitySearchFort" xml:space="preserve">
+    <value>Kaleyi Ara</value>
+  </data>
+  <data name="ActivityReleasePokemon" xml:space="preserve">
+    <value>Pokémon'u Serbest Bırak</value>
+  </data>
+  <data name="ActivityHatchEggSmallBonus" xml:space="preserve">
+    <value>Küçük Yumurta Çatlatma Bonusu</value>
+  </data>
+  <data name="ActivityHatchEggMediumBonus" xml:space="preserve">
+    <value>Orta Yumurta Çatlatma Bonusu</value>
+  </data>
+  <data name="ActivityHatchEggLargeBonus" xml:space="preserve">
+    <value>Büyük Yumurta Çatlatma Bonusu</value>
+  </data>
+  <data name="ActivityDefeatGymDefender" xml:space="preserve">
+    <value>Gym Savunmacısını Yen</value>
+  </data>
+  <data name="ActivityDefeatGymLeader" xml:space="preserve">
+    <value>Gym Liderini Yen</value>
+  </data>
+  <data name="Combat" xml:space="preserve">
+    <value>Savaş</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Tarih</value>
+  </data>
+  <data name="Fav" xml:space="preserve">
+    <value>Favori</value>
+  </data>
+  <data name="Health" xml:space="preserve">
+    <value>Can</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>İsim</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Numara</value>
+  </data>
+  <data name="PokemonInventoryFullText" xml:space="preserve">
+    <value>Pokémon çantanız dolu, {0} yakalamadan önce Pokémon transfer edin.</value>
   </data>
 </root>

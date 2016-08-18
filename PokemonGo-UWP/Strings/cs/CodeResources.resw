@@ -40,7 +40,7 @@
     <value>Ne</value>
   </data>
   <data name="NoGpsPermissionsText" xml:space="preserve">
-    <value>K používání hry potřebujeme GPS, prosím zkuste to později.</value>
+    <value>K používání hry potřebujete GPS, prosím zapněte GPS v nastavení.</value>
   </data>
   <data name="PokemonRanAwayText" xml:space="preserve">
     <value>Bohužel, pokemon utekl :(</value>
@@ -52,18 +52,18 @@
     <value>Něco se pokazilo a aplikace by mohla být nestabilní. Chcete se odhlásit a zkusit to znovu?</value>
   </data>
   <data name="UpdateDownloadingText" xml:space="preserve">
-    <value>Stahování updatu {0}</value>
+    <value>Stahování aktualizace {0}</value>
   </data>
   <data name="UpdatedVersionText" xml:space="preserve">
-    <value>Update verze {0} je k dispozici. Chcete updatovat?
+    <value>Aktualizace verze {0} je k dispozici. Chcete aktualizovat?
 {1}</value>
   </data>
   <data name="UpdateFailedText" xml:space="preserve">
-    <value>Update selhal: {0}
+    <value>Aktualizace {0} selhala
 Chcete otevřít stránku se soubory pro manuální instalaci? </value>
   </data>
   <data name="UpdateInstallingText" xml:space="preserve">
-    <value>Update se instaluje, aplikace bude restartována...</value>
+    <value>Aktualizace se instaluje, aplikace bude restartována...</value>
   </data>
   <data name="WrongUsernameText" xml:space="preserve">
     <value>Chybné uživatelské jméno/heslo nebo offline server, prosím zkuste to znovu.</value>

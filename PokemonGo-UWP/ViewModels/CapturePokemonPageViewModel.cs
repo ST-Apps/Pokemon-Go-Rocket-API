@@ -314,21 +314,40 @@ namespace PokemonGo_UWP.ViewModels
                 {
                     case ItemId.ItemPokeBall:
                         // Try with Greatball
-                        SelectedCaptureItem = ItemsInventory.First(item => item.ItemId == ItemId.ItemGreatBall);
+                        SelectedCaptureItem = ItemsInventory.FirstOrDefault(item => item.ItemId == ItemId.ItemGreatBall);
+                        if (SelectedCaptureItem == null) {
+                            SelectedCaptureItem = new ItemData() {
+                                Count = 0,
+                                ItemId = ItemId.ItemGreatBall
+                            };
+                        }
                         break;
                     case ItemId.ItemGreatBall:
                         // Try with Ultraball
-                        SelectedCaptureItem = ItemsInventory.First(item => item.ItemId == ItemId.ItemUltraBall);
+                        SelectedCaptureItem = ItemsInventory.FirstOrDefault(item => item.ItemId == ItemId.ItemUltraBall);
+                        if(SelectedCaptureItem == null) {
+                            SelectedCaptureItem = new ItemData() {
+                                Count = 0,
+                                ItemId = ItemId.ItemUltraBall
+                            };
+                        }
                         break;
                     case ItemId.ItemUltraBall:
                         // Try with Masterball
-                        SelectedCaptureItem = ItemsInventory.First(item => item.ItemId == ItemId.ItemMasterBall);
+                        SelectedCaptureItem = ItemsInventory.FirstOrDefault(item => item.ItemId == ItemId.ItemMasterBall);
+                        if(SelectedCaptureItem == null) {
+                            SelectedCaptureItem = new ItemData() {
+                                Count = 0,
+                                ItemId = ItemId.ItemMasterBall
+                            };
+                        }
                         break;
                     case ItemId.ItemMasterBall:
                         // User has no left balls, choose a non-existing Pokeball to stop him from trying to capture
                         SelectedCaptureItem = new ItemData
                         {
-                            Count = 0, ItemId = ItemId.ItemPokeBall
+                            Count = 0,
+                            ItemId = ItemId.ItemPokeBall
                         };
                         return;
                 }

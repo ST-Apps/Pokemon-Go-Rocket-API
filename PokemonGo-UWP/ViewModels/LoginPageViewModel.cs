@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.HockeyApp;
 using PokemonGo.RocketAPI.Exceptions;
 using PokemonGo_UWP.Utils;
 using PokemonGo_UWP.Views;
@@ -30,7 +32,7 @@ namespace PokemonGo_UWP.ViewModels
             NavigationService.ClearHistory();
             if (suspensionState.Any())
             {
-                // Recovering the state                
+                // Recovering the state
                 Username = (string) suspensionState[nameof(Username)];
                 Password = (string) suspensionState[nameof(Password)];
             }
@@ -112,7 +114,7 @@ namespace PokemonGo_UWP.ViewModels
 
         #endregion
 
-        #region Game Logic        
+        #region Game Logic
 
         private DelegateCommand _doPtcLoginCommand;
 
@@ -120,6 +122,10 @@ namespace PokemonGo_UWP.ViewModels
             _doPtcLoginCommand = new DelegateCommand(async () =>
             {
                 Busy.SetBusy(true, Resources.CodeResources.GetString("LoggingInText"));
+
+                //Let's hack the shit out of SetBusy, it didn't want to populate itself, so we will HELP IT!
+                await Task.Delay(50);
+
                 try
                 {
                     var loginSuccess = await GameClient.DoPtcLogin(Username, Password);
@@ -143,18 +149,25 @@ namespace PokemonGo_UWP.ViewModels
                 }
                 catch (LoginFailedException e)
                 {
-                    string errorMessage = Resources.CodeResources.GetString("LoginFailedText");
+                    var errorMessage = Resources.CodeResources.GetString("LoginFailedText");
 
                     try
                     {
-                        Task<string> result = e.GetLoginResponseContentAsString();
-                        JObject json = JObject.Parse(result.Result);
-                        JToken token = json.SelectToken("$.errors[0]");
+                        var result = e.GetLoginResponseContentAsString();
+                        var json = JObject.Parse(result.Result);
+                        var token = json.SelectToken("$.errors[0]");
                         if (token != null)
                             errorMessage = token.ToString();
-                    } catch { }
+                    }
+                    catch
+                    {
+                    }
 
                     await new MessageDialog(errorMessage).ShowAsyncQueue();
+                }
+                catch (Exception e)
+                {
+                    HockeyClient.Current.TrackEvent(e.Message);
                 }
                 finally
                 {
@@ -169,6 +182,10 @@ namespace PokemonGo_UWP.ViewModels
             _doGoogleLoginCommand = new DelegateCommand(async () =>
             {
                 Busy.SetBusy(true, Resources.CodeResources.GetString("LoggingInText"));
+
+                //Let's hack the shit out of SetBusy, it didn't want to populate itself, so we will HELP IT!
+                await Task.Delay(50);
+
                 try
                 {
                     if (!await GameClient.DoGoogleLogin(Username.Trim(), Password.Trim()))

@@ -12,7 +12,50 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Bug" xml:space="preserve">
+    <value>Insecte</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Ténèbres</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Électrik</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Fée</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Combat</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>Feu
+</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Vol</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Spectre</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Plante</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Sol</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Glace</value>
+  </data>
   <data name="Psychic" xml:space="preserve">
-    <value>Kinésiste</value>
+    <value>Psy</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Roche</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Acier</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Eau</value>
   </data>
 </root>

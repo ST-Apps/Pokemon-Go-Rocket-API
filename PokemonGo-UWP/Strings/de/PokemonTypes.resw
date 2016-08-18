@@ -12,7 +12,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Bug" xml:space="preserve">
+    <value>Käfer</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Unlicht</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Drache</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Elektro</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Fee</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Kampf</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>Feuer</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Flug</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Geist</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Pflanze</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Boden</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Eis</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Gift</value>
+  </data>
   <data name="Psychic" xml:space="preserve">
     <value>Psycho</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Stein</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Stahl</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Wasser</value>
   </data>
 </root>

@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BadgeBattleAttackWon" xml:space="preserve">
+    <value>Kämpferin</value>
+  </data>
+  <data name="BadgeBattleAttackWonDescription" xml:space="preserve">
+    <value>{0} Arenakämpf gwunne</value>
+  </data>
+  <data name="BadgeBattleTrainingWon" xml:space="preserve">
+    <value>Ass-Trainer</value>
+  </data>
+  <data name="BadgeBattleTrainingWonDescription" xml:space="preserve">
+    <value>{0} Trainingskämpf gwunne</value>
+  </data>
+  <data name="BadgeBigMagikarp" xml:space="preserve">
+    <value>Angler</value>
+  </data>
+  <data name="BadgeBigMagikarpDescription" xml:space="preserve">
+    <value>{0} Karpador gfange</value>
+  </data>
+  <data name="BadgeCaptureTotal" xml:space="preserve">
+    <value>Sammler</value>
+  </data>
+  <data name="BadgeCaptureTotalDescription" xml:space="preserve">
+    <value>{0} Pokémon gfange</value>
+  </data>
+  <data name="BadgeEvolvedTotal" xml:space="preserve">
+    <value>Forscher</value>
+  </data>
+  <data name="BadgeEvolvedTotalDescription" xml:space="preserve">
+    <value>[x] Pokémon entwicklet</value>
+  </data>
+  <data name="BadgeHatchedTotal" xml:space="preserve">
+    <value>Züchter</value>
+  </data>
+  <data name="BadgeHatchedTotalDescription" xml:space="preserve">
+    <value>{x} Pokémon gschlüpft</value>
+  </data>
+  <data name="BadgePikachu" xml:space="preserve">
+    <value>Pikachu</value>
+  </data>
+  <data name="BadgePikachuDescription" xml:space="preserve">
+    <value>{0} Pikachu gfange</value>
+  </data>
+  <data name="BadgePokedexEntries" xml:space="preserve">
+    <value>Kanto</value>
+  </data>
+  <data name="BadgePokedexEntriesDescription" xml:space="preserve">
+    <value>{0} Pokémon im Pokédex registriert</value>
+  </data>
+  <data name="BadgePokestopsVisited" xml:space="preserve">
+    <value>Rucksackträger</value>
+  </data>
+  <data name="BadgePokestopsVisitedDescription" xml:space="preserve">
+    <value>{0} Pokestops besuecht</value>
+  </data>
+  <data name="BadgeSmallRattata" xml:space="preserve">
+    <value>Jüngling</value>
+  </data>
+  <data name="BadgeSmallRattataDescription" xml:space="preserve">
+    <value>{0} Rattfratz gfange</value>
+  </data>
+  <data name="BadgeTravelKm" xml:space="preserve">
+    <value>Jogger</value>
+  </data>
+  <data name="BadgeTravelKmDescription" xml:space="preserve">
+    <value>{0} km gloffe</value>
+  </data>
+  <data name="Bug" xml:space="preserve">
+    <value>Chäfersammler</value>
+  </data>
+  <data name="BugDescription" xml:space="preserve">
+    <value>{0} Chäfer Pokémon gfange</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Drachäprofi</value>
+  </data>
+  <data name="DragonDescription" xml:space="preserve">
+    <value>{0} Drachä Pokémon gfange</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Rocker</value>
+  </data>
+  <data name="ElectricDescription" xml:space="preserve">
+    <value>{0} Elektro Pokémon gfange</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Träumerin</value>
+  </data>
+  <data name="FairyDescription" xml:space="preserve">
+    <value>{0} Feeä Pokémon gfange</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Schwarzgurt</value>
+  </data>
+  <data name="FightingDescription" xml:space="preserve">
+    <value>{0} Kampf Pokémon gfange</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>Hitzchopf</value>
+  </data>
+  <data name="FireDescription" xml:space="preserve">
+    <value>{0} Füür Pokémon gfange</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Vogelfänger</value>
+  </data>
+  <data name="FlyingDescription" xml:space="preserve">
+    <value>{0} Flug Pokémon gfange</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Häx</value>
+  </data>
+  <data name="GhostDescription" xml:space="preserve">
+    <value>{0} Geischt Pokémon gefange</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Gärtner</value>
+  </data>
+  <data name="GrassDescription" xml:space="preserve">
+    <value>{0} Pflanzä Pokémon gfange</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Ruinäfanatiker</value>
+  </data>
+  <data name="GroundDescription" xml:space="preserve">
+    <value>{0} Bodä Pokémon gfange</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Skifahrer</value>
+  </data>
+  <data name="IceDescription" xml:space="preserve">
+    <value>{0} iis Pokémon gfange</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Schuelchind</value>
+  </data>
+  <data name="NormalDescription" xml:space="preserve">
+    <value>{0} Normals Pokémon gfange</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Punker</value>
+  </data>
+  <data name="PoisonDescription" xml:space="preserve">
+    <value>{0} Gift Pokémon gfange</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Psycho</value>
+  </data>
+  <data name="PsychicDescription" xml:space="preserve">
+    <value>{0} Psycho Pokémon gfange</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Wanderer</value>
+  </data>
+  <data name="RockDescription" xml:space="preserve">
+    <value>{0} Stei Pokémon gfange</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Billetkontrollör</value>
+  </data>
+  <data name="SteelDescription" xml:space="preserve">
+    <value>{0} Stahl Pokémon gfange</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Schwimmer</value>
+  </data>
+  <data name="WaterDescription" xml:space="preserve">
+    <value>{0} Wasser Pokémon gfange</value>
+  </data>
+</root>

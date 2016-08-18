@@ -135,6 +135,8 @@
     <Content Include="Assets\Achievements\youngster_lv1.png" />
     <Content Include="Assets\Achievements\youngster_lv2.png" />
     <Content Include="Assets\Achievements\youngster_lv3.png" />
+    <Content Include="Assets\Audio\EncounterPokemon.mp3" />
+    <Content Include="Assets\Audio\Gameplay.mp3" />
     <Content Include="Assets\Audio\pokemon_found_ding.wav" />
     <Content Include="Assets\Backgrounds\details_type_bg_bug.png" />
     <Content Include="Assets\Backgrounds\details_type_bg_default.png" />
@@ -301,6 +303,7 @@
     <Content Include="Assets\LiveTiles\Transparent\Square71x71Logo.scale-400.png" />
     <Content Include="Assets\LiveTiles\Transparent\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\LiveTiles\Transparent\Wide310x150Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.png" />
     <Content Include="Assets\UI\night_sky_texture_by_amdillon.jpg" />
     <Content Include="Assets\Pokemons\1.png" />
     <Content Include="Assets\Pokemons\10.png" />
@@ -474,6 +477,13 @@
     <Content Include="Assets\Fonts\Lato-Regular.ttf" />
     <Content Include="Assets\Fonts\Lato-Bold.ttf" />
     <None Include="project.json" />
+    <PRIResource Include="Strings\de-CH\Resources.resw" />
+    <PRIResource Include="Strings\de-CH\PokemonTypes.resw" />
+    <PRIResource Include="Strings\de-CH\PokemonMoves.resw" />
+    <PRIResource Include="Strings\de-CH\Pokemon.resw" />
+    <PRIResource Include="Strings\de-CH\Items.resw" />
+    <PRIResource Include="Strings\de-CH\CodeResources.resw" />
+    <PRIResource Include="Strings\de-CH\Achievements.resw" />
     <PRIResource Include="Strings\tr\PokemonTypes.resw" />
     <PRIResource Include="Strings\es\PokemonTypes.resw" />
     <PRIResource Include="Strings\sk\PokemonTypes.resw" />
@@ -777,7 +787,6 @@
     <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\LiveTiles\Normal\Square150x150Logo.scale-200.png" />
     <Content Include="Assets\LiveTiles\Normal\Square44x44Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\LiveTiles\Normal\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
@@ -869,6 +878,7 @@
   </ItemGroup>
   <ItemGroup>
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.cs.xlf" />
+    <XliffResource Include="MultilingualResources\PokemonGo-UWP.de-CH.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.de.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.el.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.es.xlf" />

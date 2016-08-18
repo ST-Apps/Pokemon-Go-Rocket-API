@@ -13,7 +13,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CooldownTextBlock.Text" xml:space="preserve">
-    <value>MUsíte chvíli počkat</value>
+    <value>Musíte chvíli počkat</value>
   </data>
   <data name="InventoryFullTextBlock.Text" xml:space="preserve">
     <value>Váš inventář je plný!</value>
@@ -25,7 +25,7 @@
     <value>Pro přihlášení do této aplikace potřebujete zadat Přihlašovací jméno/Email. Pokud aplikaci nevěříte, nepoužívejte ji. Neneseme za ně žádnou zodpovědnost.</value>
   </data>
   <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
-    <value>poblíž</value>
+    <value>POBLÍŽ</value>
   </data>
   <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
     <value>Jste mimo dosah</value>
@@ -58,7 +58,7 @@
     <value>PŘEDMĚTY</value>
   </data>
   <data name="LowercaseItemsTextBlock.Text" xml:space="preserve">
-    <value>předměty</value>
+    <value>PŘEDMĚTY</value>
   </data>
   <data name="TotalExperienceTextBlock.Text" xml:space="preserve">
     <value>CELKEM</value>

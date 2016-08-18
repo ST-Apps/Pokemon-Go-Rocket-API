@@ -25,25 +25,25 @@
     <value>Iniciar Sesión con una cuenta PTC</value>
   </data>
   <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
-    <value>Para entrar, debes introducir tu usuario y contraseña arriba. Si no confias en la aplicación, ciérrala ahora mismo. Niantic te podría banear por usarla. Al entrar asumes ese riesgo</value>
+    <value>Para entrar, debe introducir su usuario y contraseña arriba. Si no confia en la aplicación, por favor ciérrela ahora. Niantic le podría bloquear por usarla. Úsela bajo su propio riesgo.</value>
   </data>
   <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
-    <value>cerca</value>
+    <value>CERCA</value>
   </data>
   <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
-    <value>La parada está demasiado lejos</value>
+    <value>ESTA POKÉPARADA ESTÁ DEMASIADO LEJOS</value>
   </data>
   <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
     <value>Contraseña</value>
   </data>
   <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
-    <value>Nombre de usuario / Correo electrónico</value>
+    <value>Usuario / Correo electrónico</value>
   </data>
   <data name="ExperienceTextBlock.Text" xml:space="preserve">
     <value>EXP</value>
   </data>
   <data name="OkButton.Content" xml:space="preserve">
-    <value>ENTENDIDO</value>
+    <value>VALE</value>
   </data>
   <data name="CpTextBlock.Text" xml:space="preserve">
     <value>CP</value>
@@ -107,7 +107,7 @@
     <value>Usar mapa de Niantic</value>
   </data>
   <data name="CandyTextBlock.Text" xml:space="preserve">
-    <value>Caramelo</value>
+    <value> CARAMELOS</value>
     <comment>Watch out: space before the word!</comment>
   </data>
   <data name="HeightTextBlock.Text" xml:space="preserve">
@@ -123,7 +123,7 @@
     <value>m</value>
   </data>
   <data name="StardustTextBlock.Text" xml:space="preserve">
-    <value>Polvo estelar</value>
+    <value>POLVOESTERLARES</value>
   </data>
   <data name="TypeTextBlock.Text" xml:space="preserve">
     <value>Tipo</value>
@@ -132,15 +132,21 @@
     <value>Peso</value>
   </data>
   <data name="EvolveButton.Content" xml:space="preserve">
-    <value>Evolucionar</value>
+    <value>EVOLUCIONAR</value>
   </data>
   <data name="PowerUpButton.Content" xml:space="preserve">
-    <value>Más poder</value>
+    <value>MÁS PODER</value>
   </data>
   <data name="SettingsRememberMapZoomTextBlock" xml:space="preserve">
     <value>Recordar zoom del mapa</value>
   </data>
   <data name="TransferButton.Content" xml:space="preserve">
-    <value>Transferir</value>
+    <value>TRANSFERIR</value>
+  </data>
+  <data name="EggDetailButtonTextBlock.Text" xml:space="preserve">
+    <value>EMPEZAR INCUBACIÓN</value>
+  </data>
+  <data name="EggDetailTextBlock.Text" xml:space="preserve">
+    <value>Usa una incubadora para incubar este Huevo.</value>
   </data>
 </root>

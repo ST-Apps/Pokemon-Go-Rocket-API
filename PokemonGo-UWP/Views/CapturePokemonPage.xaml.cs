@@ -234,9 +234,10 @@ namespace PokemonGo_UWP.Views
         }
 
         private void GameManagerViewModelOnCatchFlee(object sender, EventArgs eventArgs)
-        {
+        {            
             CatchEscape.Completed += (s, e) =>
             {
+                LaunchPokeballButton.IsEnabled = false;
                 CatchFlee.Begin();
             };
             CatchStarted.Stop();
