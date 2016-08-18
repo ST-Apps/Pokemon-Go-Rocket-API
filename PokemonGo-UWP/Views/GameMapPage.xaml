@@ -237,6 +237,7 @@
                          TrafficFlowVisible="False"
                          TransitFeaturesVisible="False"
                          ZoomLevel="20"
+                         ZoomLevelChanged="GameMapControl_ZoomLevelChanged"
                          RelativePanel.AlignTopWithPanel="True"
                          RelativePanel.AlignBottomWithPanel="True"
                          RelativePanel.AlignLeftWithPanel="True"
