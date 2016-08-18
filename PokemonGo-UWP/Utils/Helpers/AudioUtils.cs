@@ -8,8 +8,8 @@ namespace PokemonGo_UWP.Utils
 {
     public static class AudioUtils
     {
-        private static readonly MediaElement NormalSounds = new MediaElement();
-        private static readonly MediaElement CaptureSound = new MediaElement();
+        public static MediaElement NormalSounds = new MediaElement();
+        public static MediaElement CaptureSound = new MediaElement();
         private static bool _isPlaying;
 
         public static async Task PlaySound(string asset)

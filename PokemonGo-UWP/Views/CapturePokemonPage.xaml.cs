@@ -7,7 +7,7 @@ using Windows.System.Threading;
 using Windows.UI.Core;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
-using PokemonGo_UWP.Utils
+using PokemonGo_UWP.Utils;
 using Windows.UI.Xaml.Navigation;
 using PokemonGo.RocketAPI;
 using Template10.Common;
