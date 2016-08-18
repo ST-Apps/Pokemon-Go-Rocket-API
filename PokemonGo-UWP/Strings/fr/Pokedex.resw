@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bulbasaur.Description" xml:space="preserve">
+    <value>Bulbizarre passe son temps à faire la sieste sous le soleil. Il y a une graine sur son dos. Il absorbe les rayons du soleil pour faire doucement pousser la graine.</value>
+  </data>
+  <data name="Ivysaur.Description" xml:space="preserve">
+    <value>Un bourgeon a poussé sur le dos de ce Pokémon. Pour en supporter le poids, Herbizarre a dû se muscler les pattes. Lorsqu’il commence à se prélasser au soleil, ça signifie que son bourgeon va éclore, donnant naissance à une fleur.</value>
+  </data>
+  <data name="Venusaur.Description" xml:space="preserve">
+    <value>Une belle fleur se trouve sur le dos de Florizarre. Elle prend une couleur vive lorsqu’elle est bien nourrie et bien ensoleillée. Le parfum de cette fleur peut apaiser les gens.</value>
+  </data>
+  <data name="Charmander.Description" xml:space="preserve">
+    <value>La flamme qui brûle au bout de sa queue indique l’humeur de ce Pokémon. Elle vacille lorsque Salamèche est content. En revanche, lorsqu’il s’énerve, la flamme prend de l’importance et brûle plus ardemment.</value>
+  </data>
+  <data name="Charmeleon.Description" xml:space="preserve">
+    <value>Reptincel lacère ses ennemis sans pitié grâce à ses griffes acérées. S’il rencontre un ennemi puissant, il devient agressif et la flamme au bout de sa queue s’embrase et prend une couleur bleu clair.</value>
+  </data>
+  <data name="Charizard.Description" xml:space="preserve">
+    <value>Dracaufeu parcourt les cieux pour trouver des adversaires à sa mesure. Il crache de puissantes flammes capables de faire fondre n’importe quoi. Mais il ne dirige jamais son souffle destructeur vers un ennemi plus faible.</value>
+  </data>
+  <data name="Squirtle.Description" xml:space="preserve">
+    <value>La carapace de Carapuce ne sert pas qu’à le protéger. La forme ronde de sa carapace et ses rainures lui permettent d’améliorer son hydrodynamisme. Ce Pokémon nage extrêmement vite.</value>
+  </data>
+  <data name="Wartortle.Description" xml:space="preserve">
+    <value>Carabaffe a une large queue recouverte d’une épaisse fourrure. Elle devient de plus en plus foncée avec l’âge. Les éraflures sur la carapace de ce Pokémon témoignent de son expérience au combat.</value>
+  </data>
+  <data name="Blastoise.Description" xml:space="preserve">
+    <value>Tortank dispose de canons à eau émergeant de sa carapace. Ils sont très précis et peuvent envoyer des balles d’eau capables de faire mouche sur une cible située à plus de 50 m.</value>
+  </data>
+  <data name="Caterpie.Description" xml:space="preserve">
+    <value>Chenipan a un appétit d’ogre. Il peut engloutir des feuilles plus grosses que lui. Les antennes de ce Pokémon dégagent une odeur particulièrement entêtante.</value>
+  </data>
+  <data name="Metapod.Description" xml:space="preserve">
+    <value>La carapace protégeant ce Pokémon est dure comme du métal. Chrysacier ne bouge pas beaucoup. Il reste immobile pour préparer les organes à l’intérieur de sa carapace en vue d’une évolution future.</value>
+  </data>
+  <data name="Butterfree.Description" xml:space="preserve">
+    <value>Papilusion est très doué pour repérer le délicieux nectar qu’il butine dans les fleurs. Il peut détecter, extraire et transporter le nectar de fleurs situées à plus de 10 km de son nid.</value>
+  </data>
+  <data name="Weedle.Description" xml:space="preserve">
+    <value>L’odorat d’Aspicot est extrêmement développé. Il lui suffit de renifler ses feuilles préférées avec son gros appendice nasal pour les reconnaître entre mille.</value>
+  </data>
+  <data name="Kakuna.Description" xml:space="preserve">
+    <value>Coconfort est la plupart du temps immobile et reste accroché à un arbre. Cependant, intérieurement, il est très actif, car il se prépare pour sa prochaine évolution. En touchant sa carapace, on peut sentir sa chaleur.</value>
+  </data>
+  <data name="Beedrill.Description" xml:space="preserve">
+    <value>Dardargnan est extrêmement possessif. Il vaut mieux ne pas toucher son nid si on veut éviter d’avoir des ennuis. Lorsqu’ils sont en colère, ces Pokémon attaquent en masse.</value>
+  </data>
+  <data name="Pidgey.Description" xml:space="preserve">
+    <value>Roucool a un excellent sens de l’orientation. Il est capable de retrouver son nid sans jamais se tromper, même s’il est très loin de chez lui et dans un environnement qu’il ne connaît pas.</value>
+  </data>
+  <data name="Pidgeotto.Description" xml:space="preserve">
+    <value>Roucoups utilise une vaste surface pour son territoire. Ce Pokémon surveille régulièrement son espace aérien. Si quelqu’un pénètre sur son territoire, il corrige l’ennemi sans pitié d’un coup de ses terribles serres.</value>
+  </data>
+  <data name="Pidgeot.Description" xml:space="preserve">
+    <value>Ce Pokémon est doté d’un plumage magnifique et luisant. Bien des Dresseurs sont captivés par la beauté fatale de sa huppe et décident de choisir Roucarnage comme leur Pokémon favori.</value>
+  </data>
+  <data name="Rattata.Description" xml:space="preserve">
+    <value>Rattata est extrêmement prudent. Même lorsqu’il est endormi, il fait pivoter ses oreilles pour écouter autour de lui. En ce qui concerne son habitat, il n’est vraiment pas difficile. Il peut faire son nid n’importe où.</value>
+  </data>
+  <data name="Raticate.Description" xml:space="preserve">
+    <value>Les crocs robustes de Rattatac poussent constamment. Pour éviter qu’ils raclent le sol, il se fait les dents sur des cailloux ou des troncs d’arbre. Il lui arrive même de ronger les murs des maisons.</value>
+  </data>
+  <data name="Spearow.Description" xml:space="preserve">
+    <value>Piafabec crie tellement fort qu’il peut être entendu à 1 km de distance. Ces Pokémon se préviennent d’un danger en entonnant une mélopée très aiguë, qu’ils se renvoient les uns les autres, comme un écho.</value>
+  </data>
+  <data name="Fearow.Description" xml:space="preserve">
+    <value>On reconnaît un Rapasdepic à son long cou et à son bec allongé. Ces attributs lui permettent d’attraper facilement ses proies dans la terre ou dans l’eau. Il bouge son bec long et fin avec une grande agilité.</value>
+  </data>
+  <data name="Ekans.Description" xml:space="preserve">
+    <value>Abo s’enroule en spirale pour dormir. Sa tête reste relevée de telle sorte que cette position lui permette de réagir rapidement si une menace survenait.</value>
+  </data>
+  <data name="Arbok.Description" xml:space="preserve">
+    <value>Ce Pokémon doté d’une force extraordinaire peut étrangler ses proies avec son corps. Il peut même écraser des tonneaux métalliques. Une fois sous l’étreinte d’Arbok, il est impossible de lui échapper.</value>
+  </data>
+  <data name="Pikachu.Description" xml:space="preserve">
+    <value>Ce Pokémon dispose de petites poches dans les joues pour stocker de l’électricité. Elles semblent se charger pendant que Pikachu dort. Il libère parfois un peu d’électricité lorsqu’il n’est pas encore bien réveillé.</value>
+  </data>
+  <data name="Raichu.Description" xml:space="preserve">
+    <value>Ce Pokémon libère un faible champ électrique tout autour de son corps, ce qui le rend légèrement lumineux dans le noir. Raichu plante sa queue dans le sol pour évacuer de l’électricité.</value>
+  </data>
+  <data name="Sandshrew.Description" xml:space="preserve">
+    <value>Sabelette a une peau très sèche et extrêmement dure. Ce Pokémon peut s’enrouler sur lui-même pour repousser les attaques. La nuit, il s’enterre dans le sable du désert pour dormir.</value>
+  </data>
+  <data name="Sandslash.Description" xml:space="preserve">
+    <value>Sablaireau peut enrouler son corps pour prendre la forme d’une balle hérissée de pointes. Ce Pokémon essaie de faire peur à son ennemi en le frappant avec ses pointes. Puis, il se rue sur lui avec ses griffes acérées.</value>
+  </data>
+  <data name="NidoranFemale.Description" xml:space="preserve">
+    <value>Nidoran♀ est couvert de pointes qui sécrètent un poison puissant. On pense que ce petit Pokémon a développé ces pointes pour se défendre. Lorsqu’il est en colère, une horrible toxine sort de sa corne.</value>
+  </data>
+  <data name="Nidorina.Description" xml:space="preserve">
+    <value>Lorsqu’un Nidorina est avec ses amis ou sa famille, il replie ses pointes pour ne pas blesser ses proches. Ce Pokémon devient vite nerveux lorsqu’il est séparé de son groupe.</value>
+  </data>
+  <data name="Nidoqueen.Description" xml:space="preserve">
+    <value>Le corps de Nidoqueen est protégé par des écailles extrêmement dures. Il aime envoyer ses ennemis voler en leur fonçant dessus. Ce Pokémon utilise toute sa puissance lorsqu’il protège ses petits.</value>
+  </data>
+  <data name="NidoranMale.Description" xml:space="preserve">
+    <value>Nidoran♂ a développé des muscles pour bouger ses oreilles. Ainsi, il peut les orienter à sa guise. Ce Pokémon peut entendre le plus discret des bruits.</value>
+  </data>
+  <data name="Nidorino.Description" xml:space="preserve">
+    <value>Nidorino dispose d’une corne plus dure que du diamant. S’il sent une présence hostile, toutes les pointes de son dos se hérissent d’un coup, puis il défie son ennemi.</value>
+  </data>
+  <data name="Nidoking.Description" xml:space="preserve">
+    <value>L’épaisse queue de Nidoking est d’une puissance incroyable. En un seul coup, il peut renverser une tour métallique. Lorsque ce Pokémon se déchaîne, plus rien ne peut l’arrêter.</value>
+  </data>
+  <data name="Clefairy.Description" xml:space="preserve">
+    <value>Les nuits de pleine lune, des groupes de ces Pokémon sortent jouer. Lorsque l’aube commence à poindre, les Mélofée fatigués rentrent dans leur retraite montagneuse et vont dormir, blottis les uns contre les autres.</value>
+  </data>
+  <data name="Clefable.Description" xml:space="preserve">
+    <value>Les Mélodelfe se déplacent en sautant doucement, comme s’ils volaient. Leur démarche légère leur permet même de marcher sur l’eau. On raconte qu’ils se promènent sur les lacs, les soirs où la lune est claire.</value>
+  </data>
+  <data name="Vulpix.Description" xml:space="preserve">
+    <value>À l’intérieur du corps de Goupix se trouve une flamme qui ne s’éteint jamais. Pendant la journée, lorsque la température augmente, ce Pokémon crache des flammes pour éviter que son corps ne devienne trop chaud.</value>
+  </data>
+  <data name="Ninetales.Description" xml:space="preserve">
+    <value>La légende raconte que Feunard est apparu lorsque neuf sorciers aux pouvoirs sacrés décidèrent de fusionner. Ce Pokémon est très intelligent. Il comprend la langue des hommes.</value>
+  </data>
+  <data name="Jigglypuff.Description" xml:space="preserve">
+    <value>Lorsque ce Pokémon chante, il ne s’arrête pas pour respirer. Quand il se bat contre un adversaire qu’il ne peut pas facilement endormir, Rondoudou reste donc sans respirer, mettant sa vie en danger.</value>
+  </data>
+  <data name="Wigglytuff.Description" xml:space="preserve">
+    <value>Le corps de Grodoudou est très élastique. S’il inspire profondément, ce Pokémon peut se gonfler à volonté. Une fois gonflé, Grodoudou peut rebondir comme un ballon.</value>
+  </data>
+  <data name="Zubat.Description" xml:space="preserve">
+    <value>Nosferapti évite la lumière du soleil, car ça le rend malade. Pendant la journée, il reste dans les cavernes ou à l’ombre des vieilles maisons, où il dort, la tête à l’envers.</value>
+  </data>
+  <data name="Golbat.Description" xml:space="preserve">
+    <value>Nosferalto mord sa proie grâce à ses quatre crocs pour boire son sang. Il ne sort que lorsque la nuit est noire et sans lune, pour voleter en quête de gens et de Pokémon à mordre.</value>
+  </data>
+  <data name="Oddish.Description" xml:space="preserve">
+    <value>Mystherbe cherche un sol fertile et riche en nutriments, pour s’y planter. Pendant la journée, quand il est planté, les pieds de ce Pokémon changent de forme et deviennent similaires à des racines.</value>
+  </data>
+  <data name="Gloom.Description" xml:space="preserve">
+    <value>Ortide bave un miel qui sent horriblement mauvais. Apparemment, il adore cette odeur nauséabonde. Il en renifle les fumées toxiques et se met à baver du miel de plus belle.</value>
+  </data>
+  <data name="Vileplume.Description" xml:space="preserve">
+    <value>Rafflesia dispose des plus grands pétales du monde. Il s’en sert pour attirer ses proies avant de les endormir avec ses spores toxiques. Ce Pokémon n’a plus alors qu’à attraper sa proie et à la manger.</value>
+  </data>
+  <data name="Paras.Description" xml:space="preserve">
+    <value>Paras accueille des champignons parasites appelés tochukaso qui poussent sur son dos. Ils grandissent grâce aux nutriments trouvés sur le dos de ce Pokémon Insecte. Ils peuvent rallonger l’espérance de vie.</value>
+  </data>
+  <data name="Parasect.Description" xml:space="preserve">
+    <value>On sait que les Parasect vivent en groupe dans les grands arbres et se nourrissent des nutriments contenus dans le tronc et les racines. Lorsqu’un arbre infesté meurt, ils se précipitent vers le prochain.</value>
+  </data>
+  <data name="Venonat.Description" xml:space="preserve">
+    <value>On raconte que Mimitoss a évolué avec une fourrure de poils fins et drus qui protège son corps tout entier. Il est doté de grands yeux capables de repérer ses proies, même minuscules.</value>
+  </data>
+  <data name="Venomoth.Description" xml:space="preserve">
+    <value>Aéromite est un Pokémon nocturne, il ne sort donc que la nuit. Ses proies préférées sont les petits insectes qui se rassemblent autour des réverbères, attirés par la lumière.</value>
+  </data>
+  <data name="Diglett.Description" xml:space="preserve">
+    <value>Les Taupiqueur sont élevés dans la plupart des fermes. En effet, lorsque ce Pokémon creuse quelque part, le sol est comme labouré, prêt à recevoir les semences. On peut alors y planter de délicieux légumes.</value>
+  </data>
+  <data name="Dugtrio.Description" xml:space="preserve">
+    <value>Les Triopikeur sont en fait des triplés qui ont émergé du même corps. C’est pourquoi chaque triplé pense exactement comme les deux autres. Ils creusent inlassablement, dans une coopération parfaite.</value>
+  </data>
+  <data name="Meowth.Description" xml:space="preserve">
+    <value>Miaouss peut rentrer ses griffes dans ses pattes pour rôder gracieusement sans laisser de traces. Étrangement, ce Pokémon raffole des pièces d’or qui brillent à la lumière.</value>
+  </data>
+  <data name="Persian.Description" xml:space="preserve">
+    <value>Persian a six grosses vibrisses qui lui donnent un air costaud et lui permettent de sentir les mouvements de l’air pour savoir ce qui se trouve à proximité. Il devient docile lorsqu’on l’attrape par les moustaches.</value>
+  </data>
+  <data name="Psyduck.Description" xml:space="preserve">
+    <value>Lorsqu’il utilise son mystérieux pouvoir, Psykokwak ne s’en souvient pas. Apparemment, il ne peut pas garder ce genre d’événement en mémoire, car il pratique ce pouvoir dans un état proche du sommeil profond.</value>
+  </data>
+  <data name="Golduck.Description" xml:space="preserve">
+    <value>Akwakwak est le Pokémon qui nage le plus vite. Il nage sans se fatiguer, même lorsque la mer est agitée. Il sauve parfois des gens coincés dans les navires bloqués en haute mer.</value>
+  </data>
+  <data name="Mankey.Description" xml:space="preserve">
+    <value>Lorsque Férosinge commence à trembler et que sa respiration devient haletante, cela signifie qu’il est en colère. En outre, la moutarde lui monte au nez tellement vite qu’il est presque impossible d’échapper à sa colère.</value>
+  </data>
+  <data name="Primeape.Description" xml:space="preserve">
+    <value>Lorsque Colossinge devient furieux, sa circulation sanguine s’accélère. Du coup, ses muscles sont encore plus puissants. En revanche, il devient bien moins intelligent.</value>
+  </data>
+  <data name="Growlithe.Description" xml:space="preserve">
+    <value>Caninos a un odorat très développé. Ce Pokémon n’oublie jamais un parfum, quel qu’il soit. Il utilise son puissant sens olfactif pour deviner les émotions des autres créatures vivantes.</value>
+  </data>
+  <data name="Arcanine.Description" xml:space="preserve">
+    <value>Arcanin est célèbre pour son extraordinaire vitesse. On le dit capable de parcourir plus de 10000 km en 24 h. Le feu qui fait rage à l’intérieur du corps de ce Pokémon est la source de son pouvoir.</value>
+  </data>
+  <data name="Poliwag.Description" xml:space="preserve">
+    <value>Ptitard a une peau très fine. On peut même voir les entrailles en spirale de ce Pokémon à travers sa peau. Malgré sa finesse, cette peau est aussi très élastique. Même les crocs les plus acérés rebondissent dessus.</value>
+  </data>
+  <data name="Poliwhirl.Description" xml:space="preserve">
+    <value>La peau de Têtarte est toujours maintenue humide par un liquide huileux. Grâce à cette protection graisseuse, il peut facilement se glisser hors de l’étreinte de n’importe quel ennemi.</value>
+  </data>
+  <data name="Poliwrath.Description" xml:space="preserve">
+    <value>Les muscles solides et surdéveloppés de Tartard ne se fatiguent jamais, quels que soient les efforts qu’il produit. Ce Pokémon est tellement endurant qu’il peut traverser un océan à la nage avec une étonnante facilité.</value>
+  </data>
+  <data name="Abra.Description" xml:space="preserve">
+    <value>Abra doit dormir dix-huit heures par jour. S’il dort moins, ce Pokémon ne peut plus utiliser ses pouvoirs télékinétiques. Lorsqu’il est attaqué, Abra s’enfuit en utilisant Téléport, sans même se réveiller.</value>
+  </data>
+  <data name="Kadabra.Description" xml:space="preserve">
+    <value>Kadabra tient une cuiller en argent dans la main. Elle est utilisée pour amplifier les ondes alpha de son cerveau. Sans elle, on raconte que ce Pokémon ne peut utiliser que la moitié de ses pouvoirs télékinétiques.</value>
+  </data>
+  <data name="Alakazam.Description" xml:space="preserve">
+    <value>Le cerveau d’Alakazam grossit sans arrêt, multipliant sans cesse ses cellules. Ce Pokémon a un QI incroyablement élevé, de 5000. Il peut garder en mémoire tout ce qui s’est passé dans le monde.</value>
+  </data>
+  <data name="Machop.Description" xml:space="preserve">
+    <value>Machoc s’entraîne en soulevant un Gravalanch, comme s’il s’agissait d’haltères. Certains Machoc voyagent un peu partout dans le monde pour apprendre à maîtriser tous les types d’arts martiaux.</value>
+  </data>
+  <data name="Machoke.Description" xml:space="preserve">
+    <value>Machopeur pratique le body-building tous les jours, même lorsqu’il aide les gens à réaliser de durs travaux. Pendant ses congés, ce Pokémon va s’entraîner dans les champs et les montagnes.</value>
+  </data>
+  <data name="Machamp.Description" xml:space="preserve">
+    <value>Mackogneur est célèbre, car c’est le seul Pokémon qui a réussi à maîtriser tous les types d’arts martiaux. S’il parvient à attraper son ennemi avec ses quatre bras, il le projette par-delà l’horizon.</value>
+  </data>
+  <data name="Bellsprout.Description" xml:space="preserve">
+    <value>Le corps long et flexible de Chétiflor lui permet de se tordre et d’osciller pour éviter tout type d’attaque, même les plus puissantes. Ce Pokémon crache un fluide corrosif qui peut même dissoudre le fer.</value>
+  </data>
+  <data name="Weepinbell.Description" xml:space="preserve">
+    <value>Boustiflor est doté d’un gros crochet. La nuit, ce Pokémon s’accroche à une branche pour s’endormir. Quand il a un sommeil agité, il se réveille par terre.</value>
+  </data>
+  <data name="Victreebel.Description" xml:space="preserve">
+    <value>Empiflor est doté d’une longue liane qui part de sa tête. Cette liane se balance et remue comme un animal pour attirer ses proies. Lorsque l’une d’elles s’approche un peu trop près, ce Pokémon l’avale entièrement.</value>
+  </data>
+  <data name="Tentacool.Description" xml:space="preserve">
+    <value>Grâce à l’eau de son corps, Tentacool convertit la lumière du soleil absorbée et la renvoie sous forme de rayon d’énergie. Ce Pokémon lance ces rayons par le petit organe rond situé au-dessus de ses yeux.</value>
+  </data>
+  <data name="Tentacruel.Description" xml:space="preserve">
+    <value>Les tentacules de Tentacruel peuvent s’allonger et se rétracter à volonté. Il serre sa proie dans ses tentacules et l’affaiblit en lui injectant une toxine. Il peut attraper jusqu’à 80 proies en même temps.</value>
+  </data>
+  <data name="Geodude.Description" xml:space="preserve">
+    <value>Pour dormir profondément, Racaillou s’enterre à moitié dans le sol. Il ne se réveille pas, même si des randonneurs lui marchent dessus. Au petit matin, ce Pokémon roule en contrebas en quête de nourriture.</value>
+  </data>
+  <data name="Graveler.Description" xml:space="preserve">
+    <value>La nourriture préférée de Gravalanch est la roche. Ce Pokémon escalade parfois les montagnes, dévorant les rochers sur son passage. Une fois au sommet, il se laisse rouler jusqu’en bas.</value>
+  </data>
+  <data name="Golem.Description" xml:space="preserve">
+    <value>On sait que les Grolem se laissent rouler en bas des montagnes. Afin d’éviter qu’ils roulent sur les maisons des gens, des tranchées ont été creusées le long des montagnes pour les guider dans leurs descentes infernales.</value>
+  </data>
+  <data name="Ponyta.Description" xml:space="preserve">
+    <value>À sa naissance, Ponyta est très faible. Il peut à peine tenir debout. Ce Pokémon se muscle en trébuchant et en tombant, lorsqu’il essaie de suivre ses parents.</value>
+  </data>
+  <data name="Rapidash.Description" xml:space="preserve">
+    <value>On voit souvent Galopa trotter dans les champs et les plaines. Cependant, lorsque ce Pokémon s’en donne la peine, il peut galoper à plus de 240 km/h et sa crinière flamboyante s’embrase.</value>
+  </data>
+  <data name="Slowpoke.Description" xml:space="preserve">
+    <value>Ramoloss trempe sa queue dans l’eau au bord des rivières pour attraper ses proies. Cependant, ce Pokémon oublie souvent ce qu’il fait là et passe des jours entiers à traîner au bord de l’eau.</value>
+  </data>
+  <data name="Slowbro.Description" xml:space="preserve">
+    <value>Flagadoss a un Kokiyas solidement attaché à sa queue. Du coup, il ne peut plus l’utiliser pour pêcher. Flagadoss est donc obligé, à contrecœur, de nager pour attraper ses proies.</value>
+  </data>
+  <data name="Magnemite.Description" xml:space="preserve">
+    <value>Magnéti flotte dans les airs en émettant des ondes électromagnétiques par les aimants sur ses côtés. Ces ondes annulent les effets de la gravité. Ce Pokémon ne peut plus voler si son stock d’électricité est épuisé.</value>
+  </data>
+  <data name="Magneton.Description" xml:space="preserve">
+    <value>Magnéton émet un puissant champ magnétique qui neutralise les appareils électroniques. Certaines villes demandent aux propriétaires de ces Pokémon de les garder dans leurs Poké Balls.</value>
+  </data>
+  <data name="Farfetchd.Description" xml:space="preserve">
+    <value>On voit souvent des Canarticho avec une tige, récupérée sur une plante quelconque. Apparemment, ils peuvent distinguer les bonnes des mauvaises. On a vu ces Pokémon se battre pour des histoires de tiges.</value>
+  </data>
+  <data name="Doduo.Description" xml:space="preserve">
+    <value>Les deux têtes de Doduo contiennent des cerveaux totalement identiques. Une étude scientifique démontra que dans des cas rares, certains de ces Pokémon possèdent des cerveaux différents.</value>
+  </data>
+  <data name="Dodrio.Description" xml:space="preserve">
+    <value>Apparemment, Dodrio ne se contente pas d’avoir trois têtes. Il semble également avoir trois cœurs et six poumons, ce qui lui permet de courir très longtemps sans s’épuiser.</value>
+  </data>
+  <data name="Seel.Description" xml:space="preserve">
+    <value>Otaria chasse ses proies dans l’eau gelée, sous la couche de glace. Lorsqu’il cherche à respirer, il perce un trou en frappant la glace avec la partie saillante de sa tête.</value>
+  </data>
+  <data name="Dewgong.Description" xml:space="preserve">
+    <value>Lamantine adore piquer un roupillon à même la glace. Il y a très longtemps, un marin ayant aperçu ce Pokémon dormant sur un glacier a cru voir une sirène.</value>
+  </data>
+  <data name="Grimer.Description" xml:space="preserve">
+    <value>Tadmorv est apparu dans la vase accumulée sur un bord de mer pollué. Ce Pokémon aime tout ce qui est dégoûtant. Une substance pleine de germes suinte constamment de tout son corps.</value>
+  </data>
+  <data name="Muk.Description" xml:space="preserve">
+    <value>Ce Pokémon ne mange que ce qui est répugnant et abject. Les Grotadmorv se rassemblent dans les villes où les gens jettent tout par terre, dans la rue.</value>
+  </data>
+  <data name="Shellder.Description" xml:space="preserve">
+    <value>La nuit, ce Pokémon utilise sa grande langue pour creuser un trou dans le sable des fonds marins afin d’y dormir. Une fois endormi, Kokiyas referme sa coquille, mais laisse sa langue dépasser.</value>
+  </data>
+  <data name="Cloyster.Description" xml:space="preserve">
+    <value>Crustabri est capable de se déplacer dans les fonds marins en avalant de l’eau et en la rejetant vers l’arrière. Ce Pokémon envoie des pointes en utilisant la même méthode.</value>
+  </data>
+  <data name="Gastly.Description" xml:space="preserve">
+    <value>Fantominus est principalement constitué de matière gazeuse. Lorsqu’il est exposé au vent, son corps gazeux se disperse et diminue. Des groupes de ce Pokémon se rassemblent sous les auvents des maisons pour se protéger.</value>
+  </data>
+  <data name="Haunter.Description" xml:space="preserve">
+    <value>Spectrum est un Pokémon dangereux. Si l’un d’entre eux fait signe d’approcher, il ne faut jamais l’écouter. Ce Pokémon risque de sortir sa langue pour essayer de voler votre vie.</value>
+  </data>
+  <data name="Gengar.Description" xml:space="preserve">
+    <value>Parfois, pendant les nuits noires, une ombre projetée par un réverbère peut tout à coup vous dépasser. Il s’agit d’un Ectoplasma qui court, en se faisant passer pour l’ombre de quelqu’un d’autre.</value>
+  </data>
+  <data name="Onix.Description" xml:space="preserve">
+    <value>Onix a dans le cerveau un aimant qui lui sert de boussole. Il permet à ce Pokémon de ne pas se perdre pendant qu’il creuse. En prenant de l’âge, son corps s’arrondit et se polit.</value>
+  </data>
+  <data name="Drowzee.Description" xml:space="preserve">
+    <value>Lorsque les enfants ont le nez qui les démange en dormant, c’est sans doute parce que ce Pokémon se tient au-dessus de leur oreiller, afin d’essayer de manger leurs rêves par leurs narines.</value>
+  </data>
+  <data name="Hypno.Description" xml:space="preserve">
+    <value>Hypnomade tient un pendule dans sa main. Le mouvement de balancier et les reflets brillants du pendule hypnotisent profondément son ennemi. Lorsque ce Pokémon cherche ses proies, il nettoie son pendule.</value>
+  </data>
+  <data name="Krabby.Description" xml:space="preserve">
+    <value>Krabby vit sur les plages, enterré dans le sable. Sur les plages où on trouve peu de nourriture, on peut voir ces Pokémon se disputer pour défendre leur territoire.</value>
+  </data>
+  <data name="Kingler.Description" xml:space="preserve">
+    <value>Krabboss est doté d’une pince gigantesque, surdimensionnée. Il l’agite en l’air pour communiquer avec ses semblables. En revanche, sa pince est tellement lourde que ce Pokémon se fatigue très vite.</value>
+  </data>
+  <data name="Voltorb.Description" xml:space="preserve">
+    <value>Voltorbe est extrêmement sensible. Il explose au moindre choc. On raconte qu’il fut créé par l’exposition d’une Poké Ball à une puissante dose d’énergie.</value>
+  </data>
+  <data name="Electrode.Description" xml:space="preserve">
+    <value>L’une des caractéristiques d’Électrode est son attirance pour l’électricité. Ces Pokémon posent problème lorsqu’ils se rassemblent dans les centrales électriques pour se nourrir de courant fraîchement généré.</value>
+  </data>
+  <data name="Exeggcute.Description" xml:space="preserve">
+    <value>Ce Pokémon est constitué de six œufs formant une grappe serrée. Ces six œufs s’attirent mutuellement et pivotent. Quand des fissures apparaissent sur les coquilles, ça signifie que Noeunoeuf est sur le point d’évoluer.</value>
+  </data>
+  <data name="Exeggutor.Description" xml:space="preserve">
+    <value>Noadkoko vient des tropiques. À force de vivre sous un soleil ardent, ses têtes ont rapidement grandi. On raconte que lorsque ses têtes tombent, elles se rassemblent et forment un Noeunoeuf.</value>
+  </data>
+  <data name="Cubone.Description" xml:space="preserve">
+    <value>La maman d’Osselait lui manque terriblement et il ne la reverra jamais. La lune le fait pleurer, car elle lui rappelle sa mère. Les taches sur le crâne que porte ce Pokémon sont les marques de ses larmes.</value>
+  </data>
+  <data name="Marowak.Description" xml:space="preserve">
+    <value>Ossatueur est la forme évoluée d’Osselait. Il a surmonté le chagrin causé par la perte de sa maman et s’est endurci. Le tempérament décidé et entier de ce Pokémon le rend très difficile à amadouer.</value>
+  </data>
+  <data name="Hitmonlee.Description" xml:space="preserve">
+    <value>Les jambes de Kicklee peuvent se contracter et s’étirer à volonté. Grâce à ces jambes à ressort, il terrasse ses ennemis en les rouant de coups de pied. Après les combats, il masse ses jambes pour éviter de sentir la fatigue.</value>
+  </data>
+  <data name="Hitmonchan.Description" xml:space="preserve">
+    <value>On raconte que Tygnon dispose de l’état d’esprit d’un boxeur qui s’entraîne pour le championnat du monde. Ce Pokémon est doté d’une ténacité à toute épreuve et n’abandonne jamais face à l’adversité.</value>
+  </data>
+  <data name="Lickitung.Description" xml:space="preserve">
+    <value>Chaque fois qu’Excelangue découvre quelque chose de nouveau, il le lèche. Sa mémoire est basée sur le goût et la texture des objets. Il n’aime pas les choses acides.</value>
+  </data>
+  <data name="Koffing.Description" xml:space="preserve">
+    <value>Smogo est composé de substances toxiques. Il mélange des toxines et des détritus pour déclencher une réaction chimique générant un gaz très dangereux. Plus la température est élevée, plus la quantité de gaz est importante.</value>
+  </data>
+  <data name="Weezing.Description" xml:space="preserve">
+    <value>Smogogo rétrécit ou gonfle ses deux corps pour mélanger les gaz toxiques qui s’y trouvent. Lorsque les gaz sont bien mélangés, la toxine devient très puissante. Le Pokémon se putréfie aussi un peu plus.</value>
+  </data>
+  <data name="Rhyhorn.Description" xml:space="preserve">
+    <value>Le cerveau de Rhinocorne est tout petit, à tel point que lorsqu’il attaque, il lui arrive d’oublier pourquoi il a commencé à charger. Il lui arrive de se souvenir qu’il a démoli certaines choses.</value>
+  </data>
+  <data name="Rhydon.Description" xml:space="preserve">
+    <value>La corne de Rhinoféros lui sert de foreuse. Il l’utilise pour détruire des rochers et des cailloux. Ce Pokémon charge de temps en temps dans du magma en fusion, mais sa peau blindée le protège de la chaleur.</value>
+  </data>
+  <data name="Chansey.Description" xml:space="preserve">
+    <value>Leveinard pond tous les jours des œufs pleins de vitamines. Ces œufs sont tellement bons que les gens les mangent même quand ils n’ont pas faim.</value>
+  </data>
+  <data name="Tangela.Description" xml:space="preserve">
+    <value>Les lianes de Saquedeneu se brisent facilement lorsqu’on les attrape. Cela ne lui fait pas mal et lui permet simplement de s’échapper rapidement. Les lianes cassées repoussent le lendemain.</value>
+  </data>
+  <data name="Kangaskhan.Description" xml:space="preserve">
+    <value>Lorsqu’on rencontre un petit Kangourex qui joue tout seul, il ne faut jamais le déranger ou essayer de l’attraper. Les parents du bébé Pokémon sont sûrement dans le coin et ils risquent d’entrer dans une colère noire.</value>
+  </data>
+  <data name="Horsea.Description" xml:space="preserve">
+    <value>Lorsque Hypotrempe sent un danger, il libère instinctivement une épaisse encre noire pour pouvoir s’échapper. Ce Pokémon nage en agitant sa nageoire dorsale.</value>
+  </data>
+  <data name="Seadra.Description" xml:space="preserve">
+    <value>Hypocéan déclenche des tourbillons en faisant tournoyer son corps. Ces tourbillons sont assez puissants pour engloutir des bateaux de pêche. Ce Pokémon affaiblit sa proie grâce à ces courants, puis l’avale en une bouchée.</value>
+  </data>
+  <data name="Goldeen.Description" xml:space="preserve">
+    <value>Poissirène adore nager librement dans les rivières et les étangs. Si l’un de ces Pokémon est mis dans un aquarium, il n’hésitera pas à casser la vitre avec sa puissante corne pour s’enfuir.</value>
+  </data>
+  <data name="Seaking.Description" xml:space="preserve">
+    <value>Les Poissoroy font tout pour protéger leurs œufs. Les mâles et les femelles patrouillent pour surveiller le nid et les œufs. La garde de ces œufs dure un peu plus d’un mois.</value>
+  </data>
+  <data name="Staryu.Description" xml:space="preserve">
+    <value>Stari communique apparemment avec les étoiles dans le ciel en faisant clignoter son cœur rouge. Si des parties de son corps sont cassées, ce Pokémon les régénère.</value>
+  </data>
+  <data name="Starmie.Description" xml:space="preserve">
+    <value>Staross nage en faisant tournoyer son corps en forme d’étoile, un peu à la manière d’une hélice de bateau. Le cœur au centre du corps de ce Pokémon brille de sept couleurs.</value>
+  </data>
+  <data name="MrMime.Description" xml:space="preserve">
+    <value>M. Mime est un pantomime hors pair. Ses gestes et ses mouvements parviennent à faire croire que quelque chose d’invisible existe réellement. Lorsqu’on y croit, ces choses deviennent palpables.</value>
+  </data>
+  <data name="Scyther.Description" xml:space="preserve">
+    <value>Insécateur est incroyablement rapide. Sa vitesse fulgurante améliore l’efficacité des deux lames situées sur ses avant-bras. Elles sont si coupantes qu’elles peuvent trancher un énorme tronc d’arbre en un coup.</value>
+  </data>
+  <data name="Jynx.Description" xml:space="preserve">
+    <value>Lippoutou marche en rythme, ondule de tout son corps et se déhanche comme s’il dansait. Ses mouvements sont si communicatifs que les gens qui le voient sont soudain pris d’une terrible envie de bouger les hanches, sans réfléchir.</value>
+  </data>
+  <data name="Electabuzz.Description" xml:space="preserve">
+    <value>Lorsqu’une tempête approche, des groupes entiers de ce Pokémon se battent pour grimper sur les hauteurs, où la foudre a le plus de chance de tomber. Certaines villes se servent d’Élektek en guise de paratonnerres.</value>
+  </data>
+  <data name="Magmar.Description" xml:space="preserve">
+    <value>Lorsqu’il se bat, Magmar fait jaillir des flammes de son corps pour intimider son adversaire. Les explosions enflammées de ce Pokémon déclenchent des vagues de chaleur qui embrasent la végétation environnante.</value>
+  </data>
+  <data name="Pinsir.Description" xml:space="preserve">
+    <value>Scarabrute est doté de cornes imposantes. Des pointes jaillissent de la surface de ses cornes. Ces pointes s’enfoncent profondément dans le corps de l’ennemi, l’empêchant ainsi de s’échapper.</value>
+  </data>
+  <data name="Tauros.Description" xml:space="preserve">
+    <value>Ce Pokémon n’est pas satisfait s’il ne détruit pas tout sur son passage. Lorsque Tauros ne trouve pas d’adversaire, il se rue sur de gros arbres et les déracine pour passer ses nerfs.</value>
+  </data>
+  <data name="Magikarp.Description" xml:space="preserve">
+    <value>Magicarpe est virtuellement inutile en combat. Il se contente de faire des ronds dans l’eau. On le considère plutôt faible. Pourtant, ce Pokémon est très robuste et peut survivre dans n’importe quel environnement, même très pollué.</value>
+  </data>
+  <data name="Gyarados.Description" xml:space="preserve">
+    <value>Lorsque Léviator commence à s’énerver, sa nature violente ne se calme qu’une fois qu’il a tout réduit en cendres. La fureur de ce Pokémon peut durer pendant un mois.</value>
+  </data>
+  <data name="Lapras.Description" xml:space="preserve">
+    <value>Les Lokhlass sont en voie d’extinction. Le soir, on entend ce Pokémon chantonner une complainte mélancolique, espérant retrouver ses rares congénères.</value>
+  </data>
+  <data name="Ditto.Description" xml:space="preserve">
+    <value>Métamorph peut modifier sa structure moléculaire pour prendre d’autres formes. Lorsqu’il essaie de se transformer de mémoire, il lui arrive de se tromper sur certains détails.</value>
+  </data>
+  <data name="Eevee.Description" xml:space="preserve">
+    <value>Évoli a une structure génétique instable qui se transforme en fonction de l’environnement dans lequel il vit. Ce Pokémon peut évoluer grâce aux radiations de diverses pierres.</value>
+  </data>
+  <data name="Vaporeon.Description" xml:space="preserve">
+    <value>Aquali a subi une mutation spontanée. Des nageoires et des branchies sont apparues sur son corps, ce qui lui permet de vivre dans les fonds marins. Ce Pokémon peut contrôler l’eau à volonté.</value>
+  </data>
+  <data name="Jolteon.Description" xml:space="preserve">
+    <value>Les cellules de Voltali génèrent un courant de faible intensité. Ce pouvoir est amplifié par l’électricité statique de ses poils, ce qui lui permet d’envoyer des éclairs. Sa fourrure hérissée est faite d’aiguilles chargées d’électricité.</value>
+  </data>
+  <data name="Flareon.Description" xml:space="preserve">
+    <value>La fourrure soyeuse de Pyroli a une fonction anatomique. Elle rejette la chaleur dans l’air pour que son corps ne surchauffe pas. La température du corps de ce Pokémon peut atteindre 900 °C.</value>
+  </data>
+  <data name="Porygon.Description" xml:space="preserve">
+    <value>Porygon est capable de se décompiler et de retourner à l’état de programme informatique pour entrer dans le cyberespace. Ce Pokémon est protégé contre le piratage, il est donc impossible de le copier.</value>
+  </data>
+  <data name="Omanyte.Description" xml:space="preserve">
+    <value>Amonita est l’un des Pokémon disparus depuis longtemps et qui furent ressuscités à partir de fossiles. Lorsqu’il est attaqué par un ennemi, il se rétracte dans sa coquille.</value>
+  </data>
+  <data name="Omastar.Description" xml:space="preserve">
+    <value>Amonistar utilise ses tentacules pour capturer ses proies. On pense que l’espèce s’est éteinte parce que sa coquille était devenue trop grande et trop lourde, ce qui rendait ses mouvements lents et pesants.</value>
+  </data>
+  <data name="Kabuto.Description" xml:space="preserve">
+    <value>Kabuto est un Pokémon ressuscité à partir d’un fossile. Cependant, on a découvert des spécimens vivants. Ce Pokémon n’a pas changé depuis 300 millions d’années.</value>
+  </data>
+  <data name="Kabutops.Description" xml:space="preserve">
+    <value>Jadis, Kabutops plongeait dans les profondeurs pour trouver ses proies. Apparemment, ce Pokémon vivant sur terre est l’évolution d’une créature marine, comme le prouvent les changements dans ses branchies.</value>
+  </data>
+  <data name="Aerodactyl.Description" xml:space="preserve">
+    <value>Ptéra est un Pokémon de l’ère des dinosaures. Il fut ressuscité à partir de cellules extraites d’un morceau d’ambre. On pense qu’il était le roi des cieux à l’époque préhistorique.</value>
+  </data>
+  <data name="Snorlax.Description" xml:space="preserve">
+    <value>Les journées de Ronflex se résument aux repas et aux siestes. C’est un Pokémon tellement gentil que les enfants n’hésitent pas à jouer sur son énorme ventre.</value>
+  </data>
+  <data name="Articuno.Description" xml:space="preserve">
+    <value>Artikodin est un Pokémon Oiseau légendaire qui peut contrôler la glace. Le battement de ses ailes gèle l’air tout autour de lui. C’est pourquoi on dit que lorsque ce Pokémon vole, il va neiger.</value>
+  </data>
+  <data name="Zapdos.Description" xml:space="preserve">
+    <value>Électhor est un Pokémon Oiseau légendaire capable de contrôler l’électricité. Il vit généralement dans les nuages orageux. Ce Pokémon gagne en puissance lorsqu’il est frappé par la foudre.</value>
+  </data>
+  <data name="Moltres.Description" xml:space="preserve">
+    <value>Sulfura est un Pokémon Oiseau légendaire capable de contrôler le feu. On raconte que lorsque ce Pokémon est blessé, il se baigne dans le magma en ébullition d’un volcan pour se soigner.</value>
+  </data>
+  <data name="Dratini.Description" xml:space="preserve">
+    <value>Minidraco mue constamment, renouvelant sans arrêt sa peau. En effet, l’énergie vitale de son corps augmente régulièrement et sa mue lui permet d’éviter d’atteindre des niveaux incontrôlables.</value>
+  </data>
+  <data name="Dragonair.Description" xml:space="preserve">
+    <value>Draco stocke une quantité d’énergie considérable dans son corps. On raconte qu’il peut modifier les conditions climatiques autour de lui en déchargeant l’énergie contenue dans les cristaux de son cou et de sa queue.</value>
+  </data>
+  <data name="Dragonite.Description" xml:space="preserve">
+    <value>Dracolosse est capable de faire le tour de la planète en seize heures à peine. C’est un Pokémon au grand cœur qui ramène à bon port les navires perdus dans les tempêtes.</value>
+  </data>
+  <data name="Mewtwo.Description" xml:space="preserve">
+    <value>Mewtwo est un Pokémon créé par manipulation génétique. Cependant, bien que les connaissances scientifiques des humains aient réussi à créer son corps, elles n’ont pas pu doter Mewtwo d’un cœur sensible.</value>
+  </data>
+  <data name="Mew.Description" xml:space="preserve">
+    <value>On dit que Mew possède le code génétique de tous les autres Pokémon. Il peut se rendre invisible à sa guise, ce qui lui permet de ne pas se faire remarquer quand il s’approche des gens.</value>
+  </data>
+</root>
