@@ -95,10 +95,10 @@ Seite zu den Dateien für manuelle Installation öffnen?</value>
 </value>
   </data>
   <data name="TransferPokemonSuccessText" xml:space="preserve">
-    <value>Transfer erfolgreich! Du hast ein {0} Bonbon vom Professor erhalten.</value>
+    <value>Erfolgreich verschickt! {0}-Bonbon vom Professor erhalten!</value>
   </data>
   <data name="TransferPokemonWarningText" xml:space="preserve">
-    <value>Nach dem Transfer zum Professor kannst du es nicht mehr zurückerhalten. Willst du {0} wirklich zum Professor transferieren?</value>
+    <value>Nachdem du es an den Professor geschickt hast, kannst du es nicht zurückholen. Möchtest du {0} wirklich an den Professor schicken?</value>
   </data>
   <data name="LoginExpired" xml:space="preserve">
     <value>Letzter Login abgelaufen.</value>
@@ -171,5 +171,24 @@ Seite zu den Dateien für manuelle Installation öffnen?</value>
   </data>
   <data name="ActivityDefeatGymLeader" xml:space="preserve">
     <value>Besiege Arenen Anführer</value>
+  </data>
+  <data name="Combat" xml:space="preserve">
+    <value>Angiffspunkte</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="Fav" xml:space="preserve">
+    <value>Favorit</value>
+  </data>
+  <data name="Health" xml:space="preserve">
+    <value>Gesundheit</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Nummer
+</value>
   </data>
 </root>

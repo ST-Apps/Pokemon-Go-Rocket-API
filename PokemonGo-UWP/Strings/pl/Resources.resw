@@ -28,7 +28,7 @@
     <value>w pobliżu</value>
   </data>
   <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
-    <value>Jesteś poza zasięgiem</value>
+    <value>TEN POKÉSTOP JEST ZA DALEKO</value>
   </data>
   <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
     <value>Hasło</value>
@@ -87,5 +87,26 @@
   </data>
   <data name="SettingsUseNianticMapTextBlock.Text" xml:space="preserve">
     <value>Mapa Niantic</value>
+  </data>
+  <data name="TypeTextBlock.Text" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="WeightTextBlock.Text" xml:space="preserve">
+    <value>Waga</value>
+  </data>
+  <data name="HeightTextBlock.Text" xml:space="preserve">
+    <value>Wzrost</value>
+  </data>
+  <data name="EvolveButton.Content" xml:space="preserve">
+    <value>EWOLUUJ</value>
+  </data>
+  <data name="PowerUpButton.Content" xml:space="preserve">
+    <value>ULEPSZ</value>
+  </data>
+  <data name="TransferButton.Content" xml:space="preserve">
+    <value>PRZENIEŚ</value>
+  </data>
+  <data name="SettingsRememberMapZoomTextBlock" xml:space="preserve">
+    <value>Zapamiętaj powiększenie mapy</value>
   </data>
 </root>

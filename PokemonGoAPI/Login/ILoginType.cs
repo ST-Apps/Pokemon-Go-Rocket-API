@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using PokemonGoAPI.Session;
 
 namespace PokemonGo.RocketAPI.Login
 {
@@ -11,6 +12,6 @@ namespace PokemonGo.RocketAPI.Login
         ///     Gets the access token.
         /// </summary>
         /// <returns></returns>
-        Task<string> GetAccessToken();
+        Task<AccessToken> GetAccessToken();
     }
 }

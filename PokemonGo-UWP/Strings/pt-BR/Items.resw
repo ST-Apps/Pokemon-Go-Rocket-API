@@ -43,13 +43,13 @@
     <value>Um medicamento tipo spray para o tratamento de feridas. Ele restaura 20 pontos do HP de um Pokémon.</value>
   </data>
   <data name="D_ItemRevive" xml:space="preserve">
-    <value>Um medicamento que pode reviver Pokémon desmaiados. Ele também restaura metade do HP máximo de um Pokémon desmaiado.</value>
+    <value>Um medicamento que pode reviver Pokémons desmaiados. Ele também restaura metade do HP máximo de um Pokémon desmaiado.</value>
   </data>
   <data name="D_ItemUltraBall" xml:space="preserve">
     <value>Um dispositivo para capturar Pokémon selvagens. É jogado como uma bola em um Pokémon selvagem, encapsulando confortavelmente seu alvo.</value>
   </data>
   <data name="ItemHyperPotion" xml:space="preserve">
-    <value>Poção Hiper</value>
+    <value>Hiper Poção</value>
   </data>
   <data name="ItemIncenseCool" xml:space="preserve">
     <value>Incenso legal</value>
@@ -67,13 +67,13 @@
     <value>Incubadora Básica</value>
   </data>
   <data name="ItemIncubatorBasicUnlimited" xml:space="preserve">
-    <value>Incubadora Básica ilimitada</value>
+    <value>Incubadora Básica Ilimitada</value>
   </data>
   <data name="ItemItemStorageUpgrade" xml:space="preserve">
-    <value>Atualização de armazenamento de itens</value>
+    <value>Atualização de Armazenamento de Itens</value>
   </data>
   <data name="ItemLuckyEgg" xml:space="preserve">
-    <value>Ovo de sorte</value>
+    <value>Ovo da Sorte</value>
   </data>
   <data name="ItemMaxPotion" xml:space="preserve">
     <value>Poção Máxima</value>
@@ -82,7 +82,7 @@
     <value>Reviver Máximo</value>
   </data>
   <data name="ItemPokemonStorageUpgrade" xml:space="preserve">
-    <value>Atualização de armazenamento de Pokemon</value>
+    <value>Atualização de Armazenamento de Pokemon</value>
   </data>
   <data name="ItemPotion" xml:space="preserve">
     <value>Poção</value>
@@ -97,7 +97,7 @@
     <value>Super Poção</value>
   </data>
   <data name="ItemTroyDisk" xml:space="preserve">
-    <value>Disco de Troy</value>
+    <value>Disco do Troy</value>
   </data>
   <data name="ItemUnknown" xml:space="preserve">
     <value>Desconhecido</value>

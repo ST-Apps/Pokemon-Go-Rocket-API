@@ -12,12 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="DateFormat" xml:space="preserve">
-    <value>dd.MM.rrrr</value>
-  </data>
-  <data name="DateTimeFormat" xml:space="preserve">
-    <value>dd.MM.rrrr gg:mm tt</value>
-  </data>
   <data name="PokemonFledText" xml:space="preserve">
     <value>{0} uciekł</value>
   </data>
@@ -57,9 +51,6 @@
   <data name="SomethingWentWrongText" xml:space="preserve">
     <value>Coś się nie powiodło, aplikacja może być niestabilna. Czy chcesz się wylogować i spróbować ponownie?</value>
   </data>
-  <data name="TimeFormat" xml:space="preserve">
-    <value>gg:mm tt</value>
-  </data>
   <data name="UpdateDownloadingText" xml:space="preserve">
     <value>Pobieranie aktualizacji {0}</value>
   </data>
@@ -82,5 +73,44 @@ Czy otworzyć stronę z plikami instalacyjnymi w celu instalacji manualnej?</val
   </data>
   <data name="NoTeamText" xml:space="preserve">
     <value>Brak drużyny</value>
+  </data>
+  <data name="LoginExpired" xml:space="preserve">
+    <value>Twoje poświadczenia wygasły.</value>
+  </data>
+  <data name="ActivityUnknown" xml:space="preserve">
+    <value>Nieznane</value>
+  </data>
+  <data name="ActivityCatchPokemon" xml:space="preserve">
+    <value>Złapano Pokémona</value>
+  </data>
+  <data name="ActivityCatchLegendPokemon" xml:space="preserve">
+    <value>Złapano legendarnego Pokémona</value>
+  </data>
+  <data name="ActivityFleePokemon" xml:space="preserve">
+    <value>Pokémon uciekł</value>
+  </data>
+  <data name="ActivityEvolvePokemon" xml:space="preserve">
+    <value>Ewolucja Pokémona</value>
+  </data>
+  <data name="ActivityPokedexEntryNew" xml:space="preserve">
+    <value>Nowy Pokémon</value>
+  </data>
+  <data name="ActivityCatchFirstThrow" xml:space="preserve">
+    <value>Pierwszy rzut</value>
+  </data>
+  <data name="ActivityCatchNiceThrow" xml:space="preserve">
+    <value>Ładny rzut</value>
+  </data>
+  <data name="ActivityCatchGreatThrow" xml:space="preserve">
+    <value>Świetny rzut</value>
+  </data>
+  <data name="ActivityCatchExcellentThrow" xml:space="preserve">
+    <value>Idealny rzut</value>
+  </data>
+  <data name="ActivityCatchCurveball" xml:space="preserve">
+    <value>Podkręcona piłka</value>
+  </data>
+  <data name="ActivityCatchFirstCatchOfDay" xml:space="preserve">
+    <value>Pierwsze złapanie dnia!</value>
   </data>
 </root>

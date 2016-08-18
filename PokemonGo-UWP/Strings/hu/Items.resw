@@ -12,4 +12,130 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="D_ItemGreatBall" xml:space="preserve">
+    <value>Egy eszköz a vadonban élő Pokémonok elfogásához. Dobd neki egy vad Pokémonnak és ez kényelmesen magába zárja a célpontot.</value>
+  </data>
+  <data name="D_ItemIncenseCool" xml:space="preserve">
+    <value>A füstölő egy titokzatos illattal a közeledbe csalogatja a vad Pokémonokat 30 percig.</value>
+  </data>
+  <data name="D_ItemIncenseFloral" xml:space="preserve">
+    <value>A füstölő egy titokzatos illattal a közeledbe csalogatja a vad Pokémonokat 30 percig.</value>
+  </data>
+  <data name="D_ItemIncenseOrdinary" xml:space="preserve">
+    <value>A füstölő egy titokzatos illattal a közeledbe csalogatja a vad Pokémonokat 30 percig.</value>
+  </data>
+  <data name="D_ItemIncenseSpicy" xml:space="preserve">
+    <value>A füstölő egy titokzatos illattal a közeledbe csalogatja a vad Pokémonokat 30 percig.</value>
+  </data>
+  <data name="D_ItemIncubatorBasic" xml:space="preserve">
+    <value>Egy eszköz, ami kikelti a tojásod úgy, hogy addig kell sétálnod, ameddig ki nem kel a Pokémonod.</value>
+  </data>
+  <data name="D_ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>Egy eszköz, ami kikelti a tojásod úgy, hogy addig kell sétálnod, ameddig ki nem kel a Pokémonod.</value>
+  </data>
+  <data name="D_ItemMasterBall" xml:space="preserve">
+    <value>Egy eszköz a vadonban élő Pokémonok elfogásához. Dobd neki egy vad Pokémonnak és ez kényelmesen magába zárja a célpontot.</value>
+  </data>
+  <data name="D_ItemPokeBall" xml:space="preserve">
+    <value>Egy eszköz a vadonban élő Pokémonok elfogásához. Dobd neki egy vad Pokémonnak és ez kényelmesen magába zárja a célpontot.</value>
+  </data>
+  <data name="D_ItemPotion" xml:space="preserve">
+    <value>Egy olyan növényi spray típusú gyógyszer, ami a sebek kezelésére van. Használatkor 20 HP-t ad a Pokémonodnak.</value>
+  </data>
+  <data name="D_ItemRevive" xml:space="preserve">
+    <value>Egy gyógyszer, amely képes újraéleszteni az elájult Pokémonod. Visszatölti az elájult Pokémonod maximum életpontjának felét.</value>
+  </data>
+  <data name="D_ItemUltraBall" xml:space="preserve">
+    <value>Egy eszköz a vadonban élő Pokémonok elfogásához. Dobd neki egy vad Pokémonnak és ez kényelmesen magába zárja a célpontot.</value>
+  </data>
+  <data name="ItemBlukBerry" xml:space="preserve">
+    <value>Bluk Bogyó</value>
+  </data>
+  <data name="ItemGreatBall" xml:space="preserve">
+    <value>Kitűnő Labda</value>
+  </data>
+  <data name="ItemHyperPotion" xml:space="preserve">
+    <value>Hyper Főzet</value>
+  </data>
+  <data name="ItemIncenseCool" xml:space="preserve">
+    <value>Hűvös Füstölő</value>
+  </data>
+  <data name="ItemIncenseFloral" xml:space="preserve">
+    <value>Virágos Füstölő</value>
+  </data>
+  <data name="ItemIncenseOrdinary" xml:space="preserve">
+    <value>Átlagos Füstölő</value>
+  </data>
+  <data name="ItemIncenseSpicy" xml:space="preserve">
+    <value>Fűszeres Füstölő</value>
+  </data>
+  <data name="ItemIncubatorBasic" xml:space="preserve">
+    <value>Alap Inkubátor</value>
+  </data>
+  <data name="ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>Korlátlan Alap Inkubátor</value>
+  </data>
+  <data name="ItemItemStorageUpgrade" xml:space="preserve">
+    <value>Tárgy Kapacitás Növelés</value>
+  </data>
+  <data name="ItemLuckyEgg" xml:space="preserve">
+    <value>Szerencse Tojás</value>
+  </data>
+  <data name="ItemMasterBall" xml:space="preserve">
+    <value>Mester Labda</value>
+  </data>
+  <data name="ItemMaxPotion" xml:space="preserve">
+    <value>Maximális Főzet</value>
+  </data>
+  <data name="ItemMaxRevive" xml:space="preserve">
+    <value>Maximális Felélesztés</value>
+  </data>
+  <data name="ItemNanabBerry" xml:space="preserve">
+    <value>Nanab Bogyó</value>
+  </data>
+  <data name="ItemPinapBerry" xml:space="preserve">
+    <value>Pinap Bogyó</value>
+  </data>
+  <data name="ItemPokeBall" xml:space="preserve">
+    <value>Pokélabda</value>
+  </data>
+  <data name="ItemPokemonStorageUpgrade" xml:space="preserve">
+    <value>Pokémon Kapacitás Növelés</value>
+  </data>
+  <data name="ItemPotion" xml:space="preserve">
+    <value>Főzet</value>
+  </data>
+  <data name="ItemRazzBerry" xml:space="preserve">
+    <value>Málna</value>
+  </data>
+  <data name="ItemRevive" xml:space="preserve">
+    <value>Felélesztés</value>
+  </data>
+  <data name="ItemSpecialCamera" xml:space="preserve">
+    <value>Speciális Kamera</value>
+  </data>
+  <data name="ItemSuperPotion" xml:space="preserve">
+    <value>Szuper Főzet</value>
+  </data>
+  <data name="ItemTroyDisk" xml:space="preserve">
+    <value>Trójai Lemez</value>
+  </data>
+  <data name="ItemUltraBall" xml:space="preserve">
+    <value>Ultra Labda</value>
+  </data>
+  <data name="ItemUnknown" xml:space="preserve">
+    <value>Ismeretlen</value>
+  </data>
+  <data name="ItemWeparBerry" xml:space="preserve">
+    <value>Wepar Bogyó</value>
+  </data>
+  <data name="ItemXAttack" xml:space="preserve">
+    <value>X Támadás</value>
+  </data>
+  <data name="ItemXDefense" xml:space="preserve">
+    <value>X Védekezés</value>
+  </data>
+  <data name="ItemXMiracle" xml:space="preserve">
+    <value>X Képesség</value>
+  </data>
 </root>

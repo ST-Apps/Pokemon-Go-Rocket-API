@@ -17,6 +17,7 @@ using Windows.ApplicationModel.Activation;
 using Windows.Foundation.Metadata;
 using Windows.Phone.Devices.Notification;
 using Windows.System.Display;
+using Windows.UI.Core;
 using Windows.UI.Notifications;
 using Windows.UI.Popups;
 using Windows.UI.ViewManagement;
@@ -87,14 +88,16 @@ namespace PokemonGo_UWP
             e.Handled = true;
             await ExceptionHandler.HandleException(new Exception(e.Message));
             // We should be logging these exceptions too so they can be tracked down.
-            HockeyClient.Current.TrackException(e.Exception);
+            if (!string.IsNullOrEmpty(ApplicationKeys.HockeyAppToken))
+                HockeyClient.Current.TrackException(e.Exception);
         }
 
         private static void TaskScheduler_UnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs e)
         {
             e.SetObserved();
             Logger.Write(e.Exception.Message);
-            HockeyClient.Current.TrackException(e.Exception);
+            if (!string.IsNullOrEmpty(ApplicationKeys.HockeyAppToken))
+                HockeyClient.Current.TrackException(e.Exception);
         }
 
         /// <summary>
@@ -143,10 +146,9 @@ namespace PokemonGo_UWP
         /// <param name="prelaunchActivated"></param>
         /// <returns></returns>
         public override Task OnSuspendingAsync(object s, SuspendingEventArgs e, bool prelaunchActivated)
-        {
+        {            
             GameClient.PokemonsInventory.CollectionChanged -= PokemonsInventory_CollectionChanged;
             GameClient.CatchablePokemons.CollectionChanged -= CatchablePokemons_CollectionChanged;
-            _displayRequest.RequestRelease();
             if (SettingsService.Instance.LiveTileMode == LiveTileModes.Peek)
             {
                 LiveTileUpdater.EnableNotificationQueue(false);
@@ -164,8 +166,7 @@ namespace PokemonGo_UWP
 #if DEBUG
             // Init logger
             Logger.SetLogger(new ConsoleLogger(LogLevel.Info));
-#endif
-
+#endif            
             // If we have a phone contract, hide the status bar
             if (ApiInformation.IsApiContractPresent("Windows.Phone.PhoneContract", 1, 0))
             {
@@ -175,9 +176,11 @@ namespace PokemonGo_UWP
 
             // Enter into full screen mode
             ApplicationView.GetForCurrentView().TryEnterFullScreenMode();
+            ApplicationView.GetForCurrentView().FullScreenSystemOverlayMode = FullScreenSystemOverlayMode.Standard;            
 
             // Forces the display to stay on while we play
-            _displayRequest.RequestActive();
+            //_displayRequest.RequestActive();
+            WindowWrapper.Current().Window.VisibilityChanged += WindowOnVisibilityChanged;
 
             // Init vibration device
             if (ApiInformation.IsTypePresent("Windows.Phone.Devices.Notification.VibrationDevice"))
@@ -205,24 +208,16 @@ namespace PokemonGo_UWP
         /// <returns></returns>
         public override async Task OnStartAsync(StartKind startKind, IActivatedEventArgs args)
         {
-            AsyncSynchronizationContext.Register();
-            // TODO: this is really ugly!
-            if (!string.IsNullOrEmpty(SettingsService.Instance.AuthToken))
+            AsyncSynchronizationContext.Register();            
+            var currentAccessToken = GameClient.LoadAccessToken();
+            if (currentAccessToken == null)
             {
-                try
-                {
-                    await GameClient.InitializeClient();
-                    // We have a stored token, let's go to game page
-                    NavigationService.Navigate(typeof(GameMapPage), GameMapNavigationModes.AppStart);
-                }
-                catch (Exception e)
-                {
-                    await ExceptionHandler.HandleException(e);
-                }
+                await NavigationService.NavigateAsync(typeof(MainPage));
             }
             else
             {
-                await NavigationService.NavigateAsync(typeof(MainPage));
+                await GameClient.InitializeClient();
+                NavigationService.Navigate(typeof(GameMapPage), GameMapNavigationModes.AppStart);
             }
 
             // Check for updates (ignore resume)
@@ -251,6 +246,14 @@ namespace PokemonGo_UWP
                 }
             }
             await Task.CompletedTask;
+        }
+
+        private void WindowOnVisibilityChanged(object sender, VisibilityChangedEventArgs visibilityChangedEventArgs)
+        {
+            if (!visibilityChangedEventArgs.Visible)
+                _displayRequest.RequestRelease();
+            else
+                _displayRequest.RequestActive();
         }
 
         #endregion
@@ -326,7 +329,8 @@ namespace PokemonGo_UWP
                 catch (Exception ex)
                 {
                     Logger.Write(ex.Message);
-                    HockeyClient.Current.TrackException(ex);
+                    if (!string.IsNullOrEmpty(ApplicationKeys.HockeyAppToken))
+                        HockeyClient.Current.TrackException(ex);
                 }
             });
         }

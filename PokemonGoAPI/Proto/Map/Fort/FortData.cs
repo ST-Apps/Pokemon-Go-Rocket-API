@@ -24,28 +24,29 @@ namespace POGOProtos.Map.Fort {
           string.Concat(
             "CiJQT0dPUHJvdG9zL01hcC9Gb3J0L0ZvcnREYXRhLnByb3RvEhNQT0dPUHJv",
             "dG9zLk1hcC5Gb3J0GiBQT0dPUHJvdG9zL0VudW1zL1Bva2Vtb25JZC5wcm90",
-            "bxogUE9HT1Byb3Rvcy9FbnVtcy9UZWFtQ29sb3IucHJvdG8aIlBPR09Qcm90",
-            "b3MvTWFwL0ZvcnQvRm9ydFR5cGUucHJvdG8aJVBPR09Qcm90b3MvTWFwL0Zv",
-            "cnQvRm9ydFNwb25zb3IucHJvdG8aK1BPR09Qcm90b3MvTWFwL0ZvcnQvRm9y",
-            "dFJlbmRlcmluZ1R5cGUucHJvdG8aJlBPR09Qcm90b3MvTWFwL0ZvcnQvRm9y",
-            "dEx1cmVJbmZvLnByb3RvIrsECghGb3J0RGF0YRIKCgJpZBgBIAEoCRIiChps",
-            "YXN0X21vZGlmaWVkX3RpbWVzdGFtcF9tcxgCIAEoAxIQCghsYXRpdHVkZRgD",
-            "IAEoARIRCglsb25naXR1ZGUYBCABKAESDwoHZW5hYmxlZBgIIAEoCBIrCgR0",
-            "eXBlGAkgASgOMh0uUE9HT1Byb3Rvcy5NYXAuRm9ydC5Gb3J0VHlwZRIyCg1v",
-            "d25lZF9ieV90ZWFtGAUgASgOMhsuUE9HT1Byb3Rvcy5FbnVtcy5UZWFtQ29s",
-            "b3ISNQoQZ3VhcmRfcG9rZW1vbl9pZBgGIAEoDjIbLlBPR09Qcm90b3MuRW51",
-            "bXMuUG9rZW1vbklkEhgKEGd1YXJkX3Bva2Vtb25fY3AYByABKAUSEgoKZ3lt",
-            "X3BvaW50cxgKIAEoAxIUCgxpc19pbl9iYXR0bGUYCyABKAgSJgoeY29vbGRv",
-            "d25fY29tcGxldGVfdGltZXN0YW1wX21zGA4gASgDEjEKB3Nwb25zb3IYDyAB",
-            "KA4yIC5QT0dPUHJvdG9zLk1hcC5Gb3J0LkZvcnRTcG9uc29yEj4KDnJlbmRl",
-            "cmluZ190eXBlGBAgASgOMiYuUE9HT1Byb3Rvcy5NYXAuRm9ydC5Gb3J0UmVu",
-            "ZGVyaW5nVHlwZRIcChRhY3RpdmVfZm9ydF9tb2RpZmllchgMIAEoDBI0Cgls",
-            "dXJlX2luZm8YDSABKAsyIS5QT0dPUHJvdG9zLk1hcC5Gb3J0LkZvcnRMdXJl",
-            "SW5mb2IGcHJvdG8z"));
+            "bxogUE9HT1Byb3Rvcy9FbnVtcy9UZWFtQ29sb3IucHJvdG8aJlBPR09Qcm90",
+            "b3MvSW52ZW50b3J5L0l0ZW0vSXRlbUlkLnByb3RvGiJQT0dPUHJvdG9zL01h",
+            "cC9Gb3J0L0ZvcnRUeXBlLnByb3RvGiVQT0dPUHJvdG9zL01hcC9Gb3J0L0Zv",
+            "cnRTcG9uc29yLnByb3RvGitQT0dPUHJvdG9zL01hcC9Gb3J0L0ZvcnRSZW5k",
+            "ZXJpbmdUeXBlLnByb3RvGiZQT0dPUHJvdG9zL01hcC9Gb3J0L0ZvcnRMdXJl",
+            "SW5mby5wcm90byLeBAoIRm9ydERhdGESCgoCaWQYASABKAkSIgoabGFzdF9t",
+            "b2RpZmllZF90aW1lc3RhbXBfbXMYAiABKAMSEAoIbGF0aXR1ZGUYAyABKAES",
+            "EQoJbG9uZ2l0dWRlGAQgASgBEg8KB2VuYWJsZWQYCCABKAgSKwoEdHlwZRgJ",
+            "IAEoDjIdLlBPR09Qcm90b3MuTWFwLkZvcnQuRm9ydFR5cGUSMgoNb3duZWRf",
+            "YnlfdGVhbRgFIAEoDjIbLlBPR09Qcm90b3MuRW51bXMuVGVhbUNvbG9yEjUK",
+            "EGd1YXJkX3Bva2Vtb25faWQYBiABKA4yGy5QT0dPUHJvdG9zLkVudW1zLlBv",
+            "a2Vtb25JZBIYChBndWFyZF9wb2tlbW9uX2NwGAcgASgFEhIKCmd5bV9wb2lu",
+            "dHMYCiABKAMSFAoMaXNfaW5fYmF0dGxlGAsgASgIEj8KFGFjdGl2ZV9mb3J0",
+            "X21vZGlmaWVyGAwgAygOMiEuUE9HT1Byb3Rvcy5JbnZlbnRvcnkuSXRlbS5J",
+            "dGVtSWQSNAoJbHVyZV9pbmZvGA0gASgLMiEuUE9HT1Byb3Rvcy5NYXAuRm9y",
+            "dC5Gb3J0THVyZUluZm8SJgoeY29vbGRvd25fY29tcGxldGVfdGltZXN0YW1w",
+            "X21zGA4gASgDEjEKB3Nwb25zb3IYDyABKA4yIC5QT0dPUHJvdG9zLk1hcC5G",
+            "b3J0LkZvcnRTcG9uc29yEj4KDnJlbmRlcmluZ190eXBlGBAgASgOMiYuUE9H",
+            "T1Byb3Rvcy5NYXAuRm9ydC5Gb3J0UmVuZGVyaW5nVHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::POGOProtos.Enums.PokemonIdReflection.Descriptor, global::POGOProtos.Enums.TeamColorReflection.Descriptor, global::POGOProtos.Map.Fort.FortTypeReflection.Descriptor, global::POGOProtos.Map.Fort.FortSponsorReflection.Descriptor, global::POGOProtos.Map.Fort.FortRenderingTypeReflection.Descriptor, global::POGOProtos.Map.Fort.FortLureInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::POGOProtos.Enums.PokemonIdReflection.Descriptor, global::POGOProtos.Enums.TeamColorReflection.Descriptor, global::POGOProtos.Inventory.Item.ItemIdReflection.Descriptor, global::POGOProtos.Map.Fort.FortTypeReflection.Descriptor, global::POGOProtos.Map.Fort.FortSponsorReflection.Descriptor, global::POGOProtos.Map.Fort.FortRenderingTypeReflection.Descriptor, global::POGOProtos.Map.Fort.FortLureInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Map.Fort.FortData), global::POGOProtos.Map.Fort.FortData.Parser, new[]{ "Id", "LastModifiedTimestampMs", "Latitude", "Longitude", "Enabled", "Type", "OwnedByTeam", "GuardPokemonId", "GuardPokemonCp", "GymPoints", "IsInBattle", "CooldownCompleteTimestampMs", "Sponsor", "RenderingType", "ActiveFortModifier", "LureInfo" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Map.Fort.FortData), global::POGOProtos.Map.Fort.FortData.Parser, new[]{ "Id", "LastModifiedTimestampMs", "Latitude", "Longitude", "Enabled", "Type", "OwnedByTeam", "GuardPokemonId", "GuardPokemonCp", "GymPoints", "IsInBattle", "ActiveFortModifier", "LureInfo", "CooldownCompleteTimestampMs", "Sponsor", "RenderingType" }, null, null, null)
           }));
     }
     #endregion
@@ -87,11 +88,11 @@ namespace POGOProtos.Map.Fort {
       guardPokemonCp_ = other.guardPokemonCp_;
       gymPoints_ = other.gymPoints_;
       isInBattle_ = other.isInBattle_;
+      activeFortModifier_ = other.activeFortModifier_.Clone();
+      LureInfo = other.lureInfo_ != null ? other.LureInfo.Clone() : null;
       cooldownCompleteTimestampMs_ = other.cooldownCompleteTimestampMs_;
       sponsor_ = other.sponsor_;
       renderingType_ = other.renderingType_;
-      activeFortModifier_ = other.activeFortModifier_;
-      LureInfo = other.lureInfo_ != null ? other.LureInfo.Clone() : null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -233,11 +234,34 @@ namespace POGOProtos.Map.Fort {
       }
     }
 
+    /// <summary>Field number for the "active_fort_modifier" field.</summary>
+    public const int ActiveFortModifierFieldNumber = 12;
+    private static readonly pb::FieldCodec<global::POGOProtos.Inventory.Item.ItemId> _repeated_activeFortModifier_codec
+        = pb::FieldCodec.ForEnum(98, x => (int) x, x => (global::POGOProtos.Inventory.Item.ItemId) x);
+    private readonly pbc::RepeatedField<global::POGOProtos.Inventory.Item.ItemId> activeFortModifier_ = new pbc::RepeatedField<global::POGOProtos.Inventory.Item.ItemId>();
+    /// <summary>
+    /// // Fields related to pokestops only
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::POGOProtos.Inventory.Item.ItemId> ActiveFortModifier {
+      get { return activeFortModifier_; }
+    }
+
+    /// <summary>Field number for the "lure_info" field.</summary>
+    public const int LureInfoFieldNumber = 13;
+    private global::POGOProtos.Map.Fort.FortLureInfo lureInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::POGOProtos.Map.Fort.FortLureInfo LureInfo {
+      get { return lureInfo_; }
+      set {
+        lureInfo_ = value;
+      }
+    }
+
     /// <summary>Field number for the "cooldown_complete_timestamp_ms" field.</summary>
     public const int CooldownCompleteTimestampMsFieldNumber = 14;
     private long cooldownCompleteTimestampMs_;
     /// <summary>
-    /// // Fields related to pokestops only
     ///  Timestamp when the pokestop can be activated again to get items / xp
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -270,31 +294,6 @@ namespace POGOProtos.Map.Fort {
       }
     }
 
-    /// <summary>Field number for the "active_fort_modifier" field.</summary>
-    public const int ActiveFortModifierFieldNumber = 12;
-    private pb::ByteString activeFortModifier_ = pb::ByteString.Empty;
-    /// <summary>
-    ///  Might represent the type of item applied to the pokestop, right now only lures can be applied
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pb::ByteString ActiveFortModifier {
-      get { return activeFortModifier_; }
-      set {
-        activeFortModifier_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "lure_info" field.</summary>
-    public const int LureInfoFieldNumber = 13;
-    private global::POGOProtos.Map.Fort.FortLureInfo lureInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::POGOProtos.Map.Fort.FortLureInfo LureInfo {
-      get { return lureInfo_; }
-      set {
-        lureInfo_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as FortData);
@@ -319,11 +318,11 @@ namespace POGOProtos.Map.Fort {
       if (GuardPokemonCp != other.GuardPokemonCp) return false;
       if (GymPoints != other.GymPoints) return false;
       if (IsInBattle != other.IsInBattle) return false;
+      if(!activeFortModifier_.Equals(other.activeFortModifier_)) return false;
+      if (!object.Equals(LureInfo, other.LureInfo)) return false;
       if (CooldownCompleteTimestampMs != other.CooldownCompleteTimestampMs) return false;
       if (Sponsor != other.Sponsor) return false;
       if (RenderingType != other.RenderingType) return false;
-      if (ActiveFortModifier != other.ActiveFortModifier) return false;
-      if (!object.Equals(LureInfo, other.LureInfo)) return false;
       return true;
     }
 
@@ -341,11 +340,11 @@ namespace POGOProtos.Map.Fort {
       if (GuardPokemonCp != 0) hash ^= GuardPokemonCp.GetHashCode();
       if (GymPoints != 0L) hash ^= GymPoints.GetHashCode();
       if (IsInBattle != false) hash ^= IsInBattle.GetHashCode();
+      hash ^= activeFortModifier_.GetHashCode();
+      if (lureInfo_ != null) hash ^= LureInfo.GetHashCode();
       if (CooldownCompleteTimestampMs != 0L) hash ^= CooldownCompleteTimestampMs.GetHashCode();
       if (Sponsor != 0) hash ^= Sponsor.GetHashCode();
       if (RenderingType != 0) hash ^= RenderingType.GetHashCode();
-      if (ActiveFortModifier.Length != 0) hash ^= ActiveFortModifier.GetHashCode();
-      if (lureInfo_ != null) hash ^= LureInfo.GetHashCode();
       return hash;
     }
 
@@ -400,10 +399,7 @@ namespace POGOProtos.Map.Fort {
         output.WriteRawTag(88);
         output.WriteBool(IsInBattle);
       }
-      if (ActiveFortModifier.Length != 0) {
-        output.WriteRawTag(98);
-        output.WriteBytes(ActiveFortModifier);
-      }
+      activeFortModifier_.WriteTo(output, _repeated_activeFortModifier_codec);
       if (lureInfo_ != null) {
         output.WriteRawTag(106);
         output.WriteMessage(LureInfo);
@@ -458,6 +454,10 @@ namespace POGOProtos.Map.Fort {
       if (IsInBattle != false) {
         size += 1 + 1;
       }
+      size += activeFortModifier_.CalculateSize(_repeated_activeFortModifier_codec);
+      if (lureInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LureInfo);
+      }
       if (CooldownCompleteTimestampMs != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(CooldownCompleteTimestampMs);
       }
@@ -466,12 +466,6 @@ namespace POGOProtos.Map.Fort {
       }
       if (RenderingType != 0) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) RenderingType);
-      }
-      if (ActiveFortModifier.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeBytesSize(ActiveFortModifier);
-      }
-      if (lureInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LureInfo);
       }
       return size;
     }
@@ -514,6 +508,13 @@ namespace POGOProtos.Map.Fort {
       if (other.IsInBattle != false) {
         IsInBattle = other.IsInBattle;
       }
+      activeFortModifier_.Add(other.activeFortModifier_);
+      if (other.lureInfo_ != null) {
+        if (lureInfo_ == null) {
+          lureInfo_ = new global::POGOProtos.Map.Fort.FortLureInfo();
+        }
+        LureInfo.MergeFrom(other.LureInfo);
+      }
       if (other.CooldownCompleteTimestampMs != 0L) {
         CooldownCompleteTimestampMs = other.CooldownCompleteTimestampMs;
       }
@@ -522,15 +523,6 @@ namespace POGOProtos.Map.Fort {
       }
       if (other.RenderingType != 0) {
         RenderingType = other.RenderingType;
-      }
-      if (other.ActiveFortModifier.Length != 0) {
-        ActiveFortModifier = other.ActiveFortModifier;
-      }
-      if (other.lureInfo_ != null) {
-        if (lureInfo_ == null) {
-          lureInfo_ = new global::POGOProtos.Map.Fort.FortLureInfo();
-        }
-        LureInfo.MergeFrom(other.LureInfo);
       }
     }
 
@@ -586,8 +578,9 @@ namespace POGOProtos.Map.Fort {
             IsInBattle = input.ReadBool();
             break;
           }
-          case 98: {
-            ActiveFortModifier = input.ReadBytes();
+          case 98:
+          case 96: {
+            activeFortModifier_.AddEntriesFrom(input, _repeated_activeFortModifier_codec);
             break;
           }
           case 106: {

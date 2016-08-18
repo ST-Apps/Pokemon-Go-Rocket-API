@@ -34,50 +34,11 @@ namespace PokemonGo_UWP.Views
             Loaded += (s, e) =>
             {
                 ShowEvolveStatsModalAnimation.From = EvolveStatsTranslateTransform.Y = ActualHeight;
+
+                PokemonTypeCol.MinWidth = PokemonTypeCol.ActualWidth;
+                PokemonTypeCol.Width = new GridLength(1, GridUnitType.Star);
+                LevelProgressBar.Diameter = (int) this.ActualWidth*3/2 -16;
             };
-        }
-
-        // TODO: move this to App.xaml.cs
-        private int _mapBoxIndex = -1;
-
-        private void SetupMap()
-        {
-            if (ApplicationKeys.MapBoxTokens.Length > 0 && SettingsService.Instance.IsNianticMapEnabled)
-            {
-                if (_mapBoxIndex == -1)
-                    _mapBoxIndex = new Random().Next(0, ApplicationKeys.MapBoxTokens.Length);
-                Logger.Write($"Using MapBox's keyset {_mapBoxIndex}");
-                var mapBoxTileSource =
-                    new HttpMapTileDataSource(
-                        "https://api.mapbox.com/styles/v1/" +
-                        (RequestedTheme == ElementTheme.Light
-                            ? ApplicationKeys.MapBoxStylesLight[_mapBoxIndex]
-                            : ApplicationKeys.MapBoxStylesDark[_mapBoxIndex]) +
-                        "/tiles/256/{zoomlevel}/{x}/{y}?access_token=" +
-                        ApplicationKeys.MapBoxTokens[_mapBoxIndex])
-                    {
-                        AllowCaching = true
-                    };
-
-                DetailMapControl.Style = MapStyle.None;
-                DetailMapControl.TileSources.Clear();
-                DetailMapControl.TileSources.Add(new MapTileSource(mapBoxTileSource)
-                {
-                    AllowOverstretch = true,
-                    IsFadingEnabled = false,
-                    Layer = MapTileLayer.BackgroundReplacement
-                });
-            }
-            else
-            {
-                // Fallback to Bing Maps   
-                // TODO: map color scheme is set but the visual style doesn't update!             
-                DetailMapControl.ColorScheme = ViewModel.CurrentTheme == ElementTheme.Dark
-                    ? MapColorScheme.Dark
-                    : MapColorScheme.Light;
-                DetailMapControl.TileSources.Clear();
-                DetailMapControl.Style = MapStyle.Terrain;
-            }
         }
 
         #region Overrides of Page
@@ -86,7 +47,6 @@ namespace PokemonGo_UWP.Views
         {
             base.OnNavigatedTo(e);
             SubscribeToCaptureEvents();
-            SetupMap();
         }
 
         #region Overrides of Page

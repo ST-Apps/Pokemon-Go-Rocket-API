@@ -23,7 +23,7 @@ namespace POGOProtos.Settings.Master {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjJQT0dPUHJvdG9zL1NldHRpbmdzL01hc3Rlci9HeW1CYXR0bGVTZXR0aW5n",
-            "cy5wcm90bxIaUE9HT1Byb3Rvcy5TZXR0aW5ncy5NYXN0ZXIixgMKEUd5bUJh",
+            "cy5wcm90bxIaUE9HT1Byb3Rvcy5TZXR0aW5ncy5NYXN0ZXIi7gMKEUd5bUJh",
             "dHRsZVNldHRpbmdzEhYKDmVuZXJneV9wZXJfc2VjGAEgASgCEhkKEWRvZGdl",
             "X2VuZXJneV9jb3N0GAIgASgCEhgKEHJldGFyZ2V0X3NlY29uZHMYAyABKAIS",
             "HQoVZW5lbXlfYXR0YWNrX2ludGVydmFsGAQgASgCEh4KFmF0dGFja19zZXJ2",
@@ -33,12 +33,12 @@ namespace POGOProtos.Settings.Master {
             "cGVfYXR0YWNrX2JvbnVzX211bHRpcGxpZXIYCSABKAISFgoObWF4aW11bV9l",
             "bmVyZ3kYCiABKAUSJAocZW5lcmd5X2RlbHRhX3Blcl9oZWFsdGhfbG9zdBgL",
             "IAEoAhIZChFkb2RnZV9kdXJhdGlvbl9tcxgMIAEoBRIcChRtaW5pbXVtX3Bs",
-            "YXllcl9sZXZlbBgNIAEoBRIYChBzd2FwX2R1cmF0aW9uX21zGA4gASgFYgZw",
-            "cm90bzM="));
+            "YXllcl9sZXZlbBgNIAEoBRIYChBzd2FwX2R1cmF0aW9uX21zGA4gASgFEiYK",
+            "HmRvZGdlX2RhbWFnZV9yZWR1Y3Rpb25fcGVyY2VudBgPIAEoAmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Settings.Master.GymBattleSettings), global::POGOProtos.Settings.Master.GymBattleSettings.Parser, new[]{ "EnergyPerSec", "DodgeEnergyCost", "RetargetSeconds", "EnemyAttackInterval", "AttackServerInterval", "RoundDurationSeconds", "BonusTimePerAllySeconds", "MaximumAttackersPerBattle", "SameTypeAttackBonusMultiplier", "MaximumEnergy", "EnergyDeltaPerHealthLost", "DodgeDurationMs", "MinimumPlayerLevel", "SwapDurationMs" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Settings.Master.GymBattleSettings), global::POGOProtos.Settings.Master.GymBattleSettings.Parser, new[]{ "EnergyPerSec", "DodgeEnergyCost", "RetargetSeconds", "EnemyAttackInterval", "AttackServerInterval", "RoundDurationSeconds", "BonusTimePerAllySeconds", "MaximumAttackersPerBattle", "SameTypeAttackBonusMultiplier", "MaximumEnergy", "EnergyDeltaPerHealthLost", "DodgeDurationMs", "MinimumPlayerLevel", "SwapDurationMs", "DodgeDamageReductionPercent" }, null, null, null)
           }));
     }
     #endregion
@@ -83,6 +83,7 @@ namespace POGOProtos.Settings.Master {
       dodgeDurationMs_ = other.dodgeDurationMs_;
       minimumPlayerLevel_ = other.minimumPlayerLevel_;
       swapDurationMs_ = other.swapDurationMs_;
+      dodgeDamageReductionPercent_ = other.dodgeDamageReductionPercent_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -244,6 +245,17 @@ namespace POGOProtos.Settings.Master {
       }
     }
 
+    /// <summary>Field number for the "dodge_damage_reduction_percent" field.</summary>
+    public const int DodgeDamageReductionPercentFieldNumber = 15;
+    private float dodgeDamageReductionPercent_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float DodgeDamageReductionPercent {
+      get { return dodgeDamageReductionPercent_; }
+      set {
+        dodgeDamageReductionPercent_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GymBattleSettings);
@@ -271,6 +283,7 @@ namespace POGOProtos.Settings.Master {
       if (DodgeDurationMs != other.DodgeDurationMs) return false;
       if (MinimumPlayerLevel != other.MinimumPlayerLevel) return false;
       if (SwapDurationMs != other.SwapDurationMs) return false;
+      if (DodgeDamageReductionPercent != other.DodgeDamageReductionPercent) return false;
       return true;
     }
 
@@ -291,6 +304,7 @@ namespace POGOProtos.Settings.Master {
       if (DodgeDurationMs != 0) hash ^= DodgeDurationMs.GetHashCode();
       if (MinimumPlayerLevel != 0) hash ^= MinimumPlayerLevel.GetHashCode();
       if (SwapDurationMs != 0) hash ^= SwapDurationMs.GetHashCode();
+      if (DodgeDamageReductionPercent != 0F) hash ^= DodgeDamageReductionPercent.GetHashCode();
       return hash;
     }
 
@@ -357,6 +371,10 @@ namespace POGOProtos.Settings.Master {
         output.WriteRawTag(112);
         output.WriteInt32(SwapDurationMs);
       }
+      if (DodgeDamageReductionPercent != 0F) {
+        output.WriteRawTag(125);
+        output.WriteFloat(DodgeDamageReductionPercent);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -403,6 +421,9 @@ namespace POGOProtos.Settings.Master {
       }
       if (SwapDurationMs != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(SwapDurationMs);
+      }
+      if (DodgeDamageReductionPercent != 0F) {
+        size += 1 + 4;
       }
       return size;
     }
@@ -453,6 +474,9 @@ namespace POGOProtos.Settings.Master {
       }
       if (other.SwapDurationMs != 0) {
         SwapDurationMs = other.SwapDurationMs;
+      }
+      if (other.DodgeDamageReductionPercent != 0F) {
+        DodgeDamageReductionPercent = other.DodgeDamageReductionPercent;
       }
     }
 
@@ -518,6 +542,10 @@ namespace POGOProtos.Settings.Master {
           }
           case 112: {
             SwapDurationMs = input.ReadInt32();
+            break;
+          }
+          case 125: {
+            DodgeDamageReductionPercent = input.ReadFloat();
             break;
           }
         }

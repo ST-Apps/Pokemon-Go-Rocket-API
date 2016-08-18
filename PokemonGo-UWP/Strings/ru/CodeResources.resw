@@ -99,4 +99,7 @@
   <data name="TransferPokemonWarningText" xml:space="preserve">
     <value>Вы не можете вернуть это после отправки Профессору. Вы правда хотите отправить {0} Профессору?</value>
   </data>
+  <data name="ActivityUnknown" xml:space="preserve">
+    <value>Неизвестно</value>
+  </data>
 </root>

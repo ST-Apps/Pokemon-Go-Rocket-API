@@ -278,4 +278,25 @@ Open page with installation files for manual install?</value>
   <data name="ActivityDefeatGymLeader" xml:space="preserve">
     <value>Defeat Gym Leader</value>
   </data>
+  <data name="Combat" xml:space="preserve">
+    <value>Combat</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Fav" xml:space="preserve">
+    <value>Favorite</value>
+  </data>
+  <data name="Health" xml:space="preserve">
+    <value>Health</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="PokemonInventoryFullText" xml:space="preserve">
+    <value>Your Pokémon inventory is full, transfer some Pokémon before trying to catch {0}.</value>
+  </data>
 </root>

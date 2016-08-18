@@ -1,0 +1,53 @@
+﻿<UserControl
+    x:Class="PokemonGo_UWP.Controls.SemiCircularProgressBar"
+    x:Name="SemiCircularProgressBarControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid x:Name="rootGrid">
+        <Path x:Name="InnerPathRoot" 
+              Stroke="{Binding InnerSegmentColor, ElementName=SemiCircularProgressBarControl}" 
+              StrokeThickness="{Binding StrokeThickness, ElementName=SemiCircularProgressBarControl}">
+            <Path.Data>
+                <PathGeometry>
+                    <PathGeometry.Figures>
+                        <PathFigureCollection>
+                            <PathFigure x:Name="InnerPathFigure">
+                                <PathFigure.Segments>
+                                    <PathSegmentCollection>
+                                        <ArcSegment x:Name="InnerArcSegment" 
+                                                    SweepDirection="Clockwise" />
+                                    </PathSegmentCollection>
+                                </PathFigure.Segments>
+                            </PathFigure>
+                        </PathFigureCollection>
+                    </PathGeometry.Figures>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+        <Path x:Name="PathRoot" 
+              Stroke="{Binding SegmentColor, ElementName=SemiCircularProgressBarControl}" 
+              StrokeThickness="{Binding StrokeThickness, ElementName=SemiCircularProgressBarControl}">
+            <Path.Data>
+                <PathGeometry>
+                    <PathGeometry.Figures>
+                        <PathFigureCollection>
+                            <PathFigure x:Name="PathFigure">
+                                <PathFigure.Segments>
+                                    <PathSegmentCollection>
+                                        <ArcSegment x:Name="ArcSegment" SweepDirection="Clockwise" />
+                                    </PathSegmentCollection>
+                                </PathFigure.Segments>
+                            </PathFigure>
+                        </PathFigureCollection>
+                    </PathGeometry.Figures>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+    </Grid>
+</UserControl>

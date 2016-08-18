@@ -1,14 +1,9 @@
-﻿using System;
-
-namespace PokemonGo_UWP.Utils
+﻿namespace PokemonGo_UWP.Utils
 {
-    public class GoldAttribute : Attribute
+    public class GoldAttribute : AchievementValueAttribute
     {
-        public GoldAttribute(object value)
+        public GoldAttribute(object value) : base(value)
         {
-            Value = value;
         }
-
-        public object Value { get; set; }
     }
 }

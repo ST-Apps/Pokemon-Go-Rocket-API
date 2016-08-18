@@ -12,4 +12,165 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DateFormat" xml:space="preserve">
+    <value>yyyy.MM.dd</value>
+  </data>
+  <data name="DateTimeFormat" xml:space="preserve">
+    <value>yyyy.MM.dd hh:mm tt</value>
+  </data>
+  <data name="PokemonFledText" xml:space="preserve">
+    <value>{0} elmenekült</value>
+  </data>
+  <data name="GettingGpsSignalText" xml:space="preserve">
+    <value>GPS jel keresése...</value>
+  </data>
+  <data name="GettingUserDataText" xml:space="preserve">
+    <value>Felhasználói adatok lekérése...</value>
+  </data>
+  <data name="GoogleErrorText" xml:space="preserve">
+    <value>A Google hibát dobott:</value>
+  </data>
+  <data name="GoogleNotRespondingText" xml:space="preserve">
+    <value>A Google nem válaszol, próbálkozz később.</value>
+  </data>
+  <data name="LoadingEncounterText" xml:space="preserve">
+    <value>Összecsapás betöltése vele: {0}</value>
+  </data>
+  <data name="LoggingInText" xml:space="preserve">
+    <value>Bejelentkezés...</value>
+  </data>
+  <data name="LoginFailedText" xml:space="preserve">
+    <value>Sikertelen bejelentkezés, próbáld újra.</value>
+  </data>
+  <data name="NoText" xml:space="preserve">
+    <value>Nem</value>
+  </data>
+  <data name="NoGpsPermissionsText" xml:space="preserve">
+    <value>A játék futásához engedélyezni kell a GPS-t.  Bekapcsolás után próbáld újra.</value>
+  </data>
+  <data name="PokemonRanAwayText" xml:space="preserve">
+    <value>A Pokémon elfutott.</value>
+  </data>
+  <data name="PtcDownText" xml:space="preserve">
+    <value>A PTC bejelentkezés valószínűleg nem elérhető. Próbálkozz később.</value>
+  </data>
+  <data name="SomethingWentWrongText" xml:space="preserve">
+    <value>Valami hiba történt, amitől az alkalmazás instabil lehet. Szeretnél kijelentkezni és újrapróbálni?</value>
+  </data>
+  <data name="TimeFormat" xml:space="preserve">
+    <value>hh:mm tt</value>
+  </data>
+  <data name="UpdateDownloadingText" xml:space="preserve">
+    <value>Frissítés letöltése: {0}</value>
+  </data>
+  <data name="UpdatedVersionText" xml:space="preserve">
+    <value>Egy frissebb verzió {0} elérhető. Szeretnél frissíteni?
+{1}</value>
+  </data>
+  <data name="UpdateFailedText" xml:space="preserve">
+    <value>Sikertelen frissítés: {0}
+Megnyitja a telepítési fájlokat tartalmazó oldalt, hogy manuálisan tudjon frissíteni?</value>
+  </data>
+  <data name="UpdateInstallingText" xml:space="preserve">
+    <value>Frissítés telepítése, az alkalmazás újraindul...</value>
+  </data>
+  <data name="WrongUsernameText" xml:space="preserve">
+    <value>Helytelen felhasználónév/jelszó vagy a szerver nem elérhető, próbáld újra.</value>
+  </data>
+  <data name="YesText" xml:space="preserve">
+    <value>Igen</value>
+  </data>
+  <data name="InstinctTeamText" xml:space="preserve">
+    <value>Instinct</value>
+  </data>
+  <data name="NoTeamText" xml:space="preserve">
+    <value>Nincs Csapat</value>
+  </data>
+  <data name="ValorTeamText" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="MysticTeamText" xml:space="preserve">
+    <value>Mystic</value>
+  </data>
+  <data name="TransferPokemonSuccessText" xml:space="preserve">
+    <value>Sikeres átvitel! Kaptál {0} Cukorkát a Professzortól.</value>
+  </data>
+  <data name="TransferPokemonWarningText" xml:space="preserve">
+    <value>Nem kaphatod vissza, miután odaadtad a Professzornak. Biztosan odaadod {0}-t a Professzornak?</value>
+  </data>
+  <data name="LoginExpired" xml:space="preserve">
+    <value>Előző bejelentkezés lejárt.</value>
+  </data>
+  <data name="ActivityUnknown" xml:space="preserve">
+    <value>Ismeretlen</value>
+  </data>
+  <data name="ActivityCatchPokemon" xml:space="preserve">
+    <value>Pokémon Elkapva</value>
+  </data>
+  <data name="ActivityCatchLegendPokemon" xml:space="preserve">
+    <value>Legendás Pokémon Elkapása</value>
+  </data>
+  <data name="ActivityFleePokemon" xml:space="preserve">
+    <value>Pokémon Elmenekült</value>
+  </data>
+  <data name="ActivityDefeatFort" xml:space="preserve">
+    <value>Erőd Legyőzése</value>
+  </data>
+  <data name="ActivityEvolvePokemon" xml:space="preserve">
+    <value>Pokémon Fejlesztése</value>
+  </data>
+  <data name="ActivityHatchEgg" xml:space="preserve">
+    <value>Kikelt Tojás!</value>
+  </data>
+  <data name="ActivityWalkKm" xml:space="preserve">
+    <value>Km Séta</value>
+  </data>
+  <data name="ActivityPokedexEntryNew" xml:space="preserve">
+    <value>Új Pokémon</value>
+  </data>
+  <data name="ActivityCatchFirstThrow" xml:space="preserve">
+    <value>Első Dobás</value>
+  </data>
+  <data name="ActivityCatchNiceThrow" xml:space="preserve">
+    <value>Jó Dobás</value>
+  </data>
+  <data name="ActivityCatchGreatThrow" xml:space="preserve">
+    <value>Remek Dobás</value>
+  </data>
+  <data name="ActivityCatchExcellentThrow" xml:space="preserve">
+    <value>Kiváló Dobás</value>
+  </data>
+  <data name="ActivityCatchCurveball" xml:space="preserve">
+    <value>Csavart Labda</value>
+  </data>
+  <data name="ActivityCatchFirstCatchOfDay" xml:space="preserve">
+    <value>A nap első kapása!</value>
+  </data>
+  <data name="ActivityCatchMilestone" xml:space="preserve">
+    <value>Elkapás Mérföldkő</value>
+  </data>
+  <data name="ActivityTrainPokemon" xml:space="preserve">
+    <value>Pokémon Edzése</value>
+  </data>
+  <data name="ActivitySearchFort" xml:space="preserve">
+    <value>Erőd Keresése</value>
+  </data>
+  <data name="ActivityReleasePokemon" xml:space="preserve">
+    <value>Pokémon Elengedése</value>
+  </data>
+  <data name="ActivityHatchEggSmallBonus" xml:space="preserve">
+    <value>Kis Tojáskeltetési Bónusz</value>
+  </data>
+  <data name="ActivityHatchEggMediumBonus" xml:space="preserve">
+    <value>Közepes Tojáskeltetési Bónusz</value>
+  </data>
+  <data name="ActivityHatchEggLargeBonus" xml:space="preserve">
+    <value>Nagy Tojáskeltetési Bónusz</value>
+  </data>
+  <data name="ActivityDefeatGymDefender" xml:space="preserve">
+    <value>Edzőterem Védőjének Legyőzése</value>
+  </data>
+  <data name="ActivityDefeatGymLeader" xml:space="preserve">
+    <value>Edzőterem Vezetőjének legyőzése</value>
+  </data>
 </root>

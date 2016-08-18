@@ -12,4 +12,130 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="D_ItemGreatBall" xml:space="preserve">
+    <value>En innretning for å fange ville Pokémon. Den blir kastet likt som en Pokéball og kan komfortabelt innkapsle et bytte.</value>
+  </data>
+  <data name="D_ItemIncenseCool" xml:space="preserve">
+    <value>Røkelse med en mystisk duft som lokker ville Pokémon til deg i 30 minutter</value>
+  </data>
+  <data name="D_ItemIncenseFloral" xml:space="preserve">
+    <value>Røkelse med en mystisk duft som lokker ville Pokémon til deg i 30 minutter</value>
+  </data>
+  <data name="D_ItemIncenseOrdinary" xml:space="preserve">
+    <value>Røkelse med en mystisk duft som lokker ville Pokémon til deg i 30 minutter</value>
+  </data>
+  <data name="D_ItemIncenseSpicy" xml:space="preserve">
+    <value>Røkelse med en mystisk duft som lokker ville Pokémon til deg i 30 minutter</value>
+  </data>
+  <data name="D_ItemIncubatorBasic" xml:space="preserve">
+    <value>En enhet som ruger egg imens du går til det er klart for å klekkes.</value>
+  </data>
+  <data name="D_ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>En enhet som ruger egg imens du går til det er klart for å klekkes.</value>
+  </data>
+  <data name="D_ItemMasterBall" xml:space="preserve">
+    <value>En innretning for å fange ville Pokémon. Den blir kastet likt som en Pokéball og kan komfortabelt innkapsle et bytte.</value>
+  </data>
+  <data name="D_ItemPokeBall" xml:space="preserve">
+    <value>En innretning for å fange ville Pokémon. Den blir kastet likt som en Pokéball og kan komfortabelt innkapsle et bytte.</value>
+  </data>
+  <data name="D_ItemPotion" xml:space="preserve">
+    <value>En spray-type medisin for behandling av sår. Det gjenoppretter HP av en Pokémon med 20 poeng.</value>
+  </data>
+  <data name="D_ItemRevive" xml:space="preserve">
+    <value>En medisin som kan gjenopplive besvimte Pokémon. Den vil også gjenopprette halvparten av den besvimte Pokémonen sin maksimale HP.</value>
+  </data>
+  <data name="D_ItemUltraBall" xml:space="preserve">
+    <value>En innretning for å fange ville Pokémon. Den blir kastet likt som en Pokéball og kan komfortabelt innkapsle et bytte.</value>
+  </data>
+  <data name="ItemBlukBerry" xml:space="preserve">
+    <value>Bluk Berry</value>
+  </data>
+  <data name="ItemGreatBall" xml:space="preserve">
+    <value>Great Ball</value>
+  </data>
+  <data name="ItemHyperPotion" xml:space="preserve">
+    <value>Hyper Potion</value>
+  </data>
+  <data name="ItemIncenseCool" xml:space="preserve">
+    <value>Incense Cool</value>
+  </data>
+  <data name="ItemIncenseFloral" xml:space="preserve">
+    <value>Incense Floral</value>
+  </data>
+  <data name="ItemIncenseOrdinary" xml:space="preserve">
+    <value>Incense Ordinary</value>
+  </data>
+  <data name="ItemIncenseSpicy" xml:space="preserve">
+    <value>Incense Spicy</value>
+  </data>
+  <data name="ItemIncubatorBasic" xml:space="preserve">
+    <value>Inkubator</value>
+  </data>
+  <data name="ItemIncubatorBasicUnlimited" xml:space="preserve">
+    <value>∞ Inkubator</value>
+  </data>
+  <data name="ItemItemStorageUpgrade" xml:space="preserve">
+    <value>Gjenstand lager oppgradering</value>
+  </data>
+  <data name="ItemLuckyEgg" xml:space="preserve">
+    <value>Lykke Egg</value>
+  </data>
+  <data name="ItemMasterBall" xml:space="preserve">
+    <value>Master Ball</value>
+  </data>
+  <data name="ItemMaxPotion" xml:space="preserve">
+    <value>Max Potion</value>
+  </data>
+  <data name="ItemMaxRevive" xml:space="preserve">
+    <value>Full Gjenopplivning</value>
+  </data>
+  <data name="ItemNanabBerry" xml:space="preserve">
+    <value>Nanab Berry</value>
+  </data>
+  <data name="ItemPinapBerry" xml:space="preserve">
+    <value>Pinap Berry</value>
+  </data>
+  <data name="ItemPokeBall" xml:space="preserve">
+    <value>Poke Ball</value>
+  </data>
+  <data name="ItemPokemonStorageUpgrade" xml:space="preserve">
+    <value> Pokémon lager oppgradering</value>
+  </data>
+  <data name="ItemPotion" xml:space="preserve">
+    <value>Potion</value>
+  </data>
+  <data name="ItemRazzBerry" xml:space="preserve">
+    <value>Razz Berry</value>
+  </data>
+  <data name="ItemRevive" xml:space="preserve">
+    <value>Gjenopplivning</value>
+  </data>
+  <data name="ItemSpecialCamera" xml:space="preserve">
+    <value>Spesial Kamera</value>
+  </data>
+  <data name="ItemSuperPotion" xml:space="preserve">
+    <value>Super Potion</value>
+  </data>
+  <data name="ItemTroyDisk" xml:space="preserve">
+    <value>Troy Plate</value>
+  </data>
+  <data name="ItemUltraBall" xml:space="preserve">
+    <value>Ultra Ball</value>
+  </data>
+  <data name="ItemUnknown" xml:space="preserve">
+    <value>Ukjent</value>
+  </data>
+  <data name="ItemWeparBerry" xml:space="preserve">
+    <value>Wepar Berry</value>
+  </data>
+  <data name="ItemXAttack" xml:space="preserve">
+    <value>X Angrep</value>
+  </data>
+  <data name="ItemXDefense" xml:space="preserve">
+    <value>X Forsvar</value>
+  </data>
+  <data name="ItemXMiracle" xml:space="preserve">
+    <value>X Mirakel</value>
+  </data>
 </root>

@@ -759,20 +759,20 @@
 
     <Style x:Key="ProfilePageText" TargetType="TextBlock">
         <Setter Property="FontSize" Value="20" />
-        <Setter Property="Foreground" Value="Green" />
+        <Setter Property="Foreground" Value="#44696C" />
         <Setter Property="FontFamily" Value="../Assets/Fonts/Lato-Medium.ttf#Lato Medium" />
     </Style>
     
     <Style x:Key="ProfilePageSmallText" TargetType="TextBlock" BasedOn="{StaticResource ProfilePageText}">
-        <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontSize" Value="13" />
     </Style>
     
     <Style x:Key="ProfilePageMediumText" TargetType="TextBlock" BasedOn="{StaticResource ProfilePageText}">
-        <Setter Property="FontSize" Value="24" />
+        <Setter Property="FontSize" Value="20" />
     </Style>
     
     <Style x:Key="ProfilePageLargeText" TargetType="TextBlock" BasedOn="{StaticResource ProfilePageText}">
-        <Setter Property="FontSize" Value="30" />
+        <Setter Property="FontSize" Value="25" />
     </Style>
 
     <Style x:Key="TextMenuItemHorizontal" TargetType="TextBlock">
@@ -1254,10 +1254,20 @@
     <Style TargetType="Image" x:Key="NearbyPokemonImageStyle">
         <Setter Property="Stretch" Value="Uniform"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="Width" Value="36"/>
-        <Setter Property="Height" Value="36"/>
+        <!--<Setter Property="Width" Value="36"/>
+        <Setter Property="Height" Value="36"/>-->
     </Style>
     
+    <Style TargetType="BitmapIcon" x:Key="NearbyPokemonBitmapIconStyle">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <!--<Setter Property="Width" Value="36"/>
+        <Setter Property="Height" Value="36"/>-->
+    </Style>
+
+    <Style TargetType="BitmapIcon" x:Key="NearbyPokemonNotInPokedexBitmapIconStyle" BasedOn="{StaticResource NearbyPokemonBitmapIconStyle}">
+        <Setter Property="Foreground" Value="#FF888F93" />
+    </Style>
+
     <Style TargetType="Pivot">
         <Setter Property="Margin" Value="0"/>
         <Setter Property="Padding" Value="0"/>

@@ -9,5 +9,6 @@ namespace PokemonGo_UWP.Utils
         public static readonly ResourceLoader CodeResources = ResourceLoader.GetForCurrentView("CodeResources");
         public static readonly ResourceLoader Achievements = ResourceLoader.GetForCurrentView("Achievements");
         public static readonly ResourceLoader PokemonMoves = ResourceLoader.GetForCurrentView("PokemonMoves");
+        public static readonly ResourceLoader PokemonTypes = ResourceLoader.GetForCurrentView("PokemonTypes");
     }
 }

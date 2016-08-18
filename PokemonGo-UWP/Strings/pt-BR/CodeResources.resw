@@ -13,7 +13,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="PokemonFledText" xml:space="preserve">
-    <value>{0} fugiu</value>
+    <value>{0} Fugiu</value>
   </data>
   <data name="GettingGpsSignalText" xml:space="preserve">
     <value>Recebendo o sinal do GPS...</value>
@@ -31,7 +31,7 @@
     <value>Carregando encontro com {0}</value>
   </data>
   <data name="LoggingInText" xml:space="preserve">
-    <value>Fazer login...</value>
+    <value>Fazendo login...</value>
   </data>
   <data name="LoginFailedText" xml:space="preserve">
     <value>Falha no login, por favor tente novamente.</value>
@@ -55,7 +55,7 @@
     <value>Baixando atualização {0}</value>
   </data>
   <data name="UpdatedVersionText" xml:space="preserve">
-    <value>Uma versão atualizada {0} está disponível. Você quer atualizar? 
+    <value>A nova versão {0} está disponível. Você quer atualizar? 
 {1}</value>
   </data>
   <data name="UpdateFailedText" xml:space="preserve">
@@ -73,5 +73,8 @@ Abrir a página com os arquivos de instalação para instalação manual?</value
   </data>
   <data name="NoTeamText" xml:space="preserve">
     <value>Sem equipe</value>
+  </data>
+  <data name="ActivityUnknown" xml:space="preserve">
+    <value>Desconhecido</value>
   </data>
 </root>

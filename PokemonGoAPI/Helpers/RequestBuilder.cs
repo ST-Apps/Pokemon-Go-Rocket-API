@@ -19,6 +19,7 @@ namespace PokemonGo.RocketAPI.Helpers
         private readonly double _latitude;
         private readonly double _longitude;
         private readonly Random _random = new Random();
+        private byte[] _sessionHash = null;
 
         public RequestBuilder(string authToken, AuthType authType, double latitude, double longitude, double altitude,
             IDeviceInfo deviceInfo,
@@ -35,9 +36,11 @@ namespace PokemonGo.RocketAPI.Helpers
 
         public RequestEnvelope SetRequestEnvelopeUnknown6(RequestEnvelope requestEnvelope)
         {
-            var rnd32 = new byte[32];
-            var rnd = new Random();
-            rnd.NextBytes(rnd32);
+            if(_sessionHash == null)
+            {
+                _sessionHash = new byte[32];
+                _random.NextBytes(_sessionHash);
+            }
 
             byte[] authSeed = requestEnvelope.AuthTicket != null ?
                 requestEnvelope.AuthTicket.ToByteArray() :
@@ -58,8 +61,8 @@ namespace PokemonGo.RocketAPI.Helpers
                 LocationHash2 =
                     Utils.GenerateLocation2(requestEnvelope.Latitude, requestEnvelope.Longitude,
                         requestEnvelope.Altitude),
-                SessionHash = ByteString.CopyFrom(rnd32),
-                Unknown25 = 0x898654dd2753a481UL,
+                SessionHash = ByteString.CopyFrom(_sessionHash),
+                Unknown25 = -8537042734809897855L,
                 Timestamp = (ulong) DateTime.UtcNow.ToUnixTime(),
                 TimestampSinceStart = timeFromStart,
                 SensorInfo = new Signature.Types.SensorInfo

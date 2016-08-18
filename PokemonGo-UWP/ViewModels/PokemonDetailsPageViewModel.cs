@@ -1,30 +1,51 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Windows.UI.Popups;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Navigation;
-using Google.Common.Geometry;
-using Newtonsoft.Json;
-using PokemonGo_UWP.Entities;
-using PokemonGo_UWP.Utils;
-using PokemonGo_UWP.Views;
-using POGOProtos.Data;
+﻿using POGOProtos.Data;
 using POGOProtos.Enums;
 using POGOProtos.Inventory;
 using POGOProtos.Networking.Responses;
 using POGOProtos.Settings.Master;
+using PokemonGo_UWP.Entities;
+using PokemonGo_UWP.Utils;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Template10.Mvvm;
 using Template10.Services.NavigationService;
-using Universal_Authenticator_v2.Views;
+using Windows.UI.Popups;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Navigation;
+using Newtonsoft.Json;
 
 namespace PokemonGo_UWP.ViewModels
 {
     public class PokemonDetailsPageViewModel : ViewModelBase
     {
+
+        public PokemonDetailsPageViewModel()
+        {
+            if (Windows.ApplicationModel.DesignMode.DesignModeEnabled)
+            {
+                var pokeData = new PokemonData
+                {
+                    PokemonId = PokemonId.Abra,
+                    Cp = 10,
+                    Stamina = 800,
+                    StaminaMax = 1000,
+                    WeightKg = 12,
+                    BattlesAttacked = 5
+                    
+                };
+                CurrentPokemon = new PokemonDataWrapper(pokeData);
+                StardustAmount = 18000;
+                StardustToPowerUp = 1800;
+                CandiesToPowerUp = 100;
+                CurrentCandy = new Candy
+                {
+                    FamilyId = PokemonFamilyId.FamilyAbra,
+                    Candy_ = 10
+                };
+            }
+        }
 
         #region Lifecycle Handlers
 
@@ -154,7 +175,7 @@ namespace PokemonGo_UWP.ViewModels
         /// <summary>
         /// Id for current pokemon's evolution
         /// </summary>
-        public PokemonId EvolvedPokemonId => CurrentPokemon?.PokemonId + 1 ?? 0;
+        public PokemonId EvolvedPokemonId => EvolvePokemonResponse?.EvolvedPokemonData.PokemonId ?? PokemonId.Missingno;
 
         /// <summary>
         /// Data for the current user
@@ -370,7 +391,8 @@ namespace PokemonGo_UWP.ViewModels
 
         public DelegateCommand EvolvePokemonCommand => _evolvePokemonCommand ?? (_evolvePokemonCommand = new DelegateCommand(async () =>
         {
-            EvolvePokemonResponse = await GameClient.EvolvePokemon(CurrentPokemon.WrappedData);
+            EvolvePokemonResponse = await GameClient.EvolvePokemon(CurrentPokemon.WrappedData);   
+            RaisePropertyChanged(() => EvolvedPokemonId);         
             switch (EvolvePokemonResponse.Result)
             {
                 case EvolvePokemonResponse.Types.Result.Unset:
@@ -396,7 +418,8 @@ namespace PokemonGo_UWP.ViewModels
 
         private DelegateCommand _replaceEvolvedPokemonCommand;
 
-        public DelegateCommand ReplaceEvolvedPokemonCommand => _replaceEvolvedPokemonCommand ?? (_replaceEvolvedPokemonCommand = new DelegateCommand(() =>
+        public DelegateCommand ReplaceEvolvedPokemonCommand => _replaceEvolvedPokemonCommand ?? (
+            _replaceEvolvedPokemonCommand = new DelegateCommand(() =>
         {
             CurrentPokemon = new PokemonDataWrapper(EvolvePokemonResponse.EvolvedPokemonData);
             UpdateCurrentData();

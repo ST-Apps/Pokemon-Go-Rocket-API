@@ -24,14 +24,15 @@ namespace POGOProtos.Networking.Requests.Messages {
           string.Concat(
             "CkJQT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVxdWVzdHMvTWVzc2FnZXMvR2V0",
             "R3ltRGV0YWlsc01lc3NhZ2UucHJvdG8SJ1BPR09Qcm90b3MuTmV0d29ya2lu",
-            "Zy5SZXF1ZXN0cy5NZXNzYWdlcyKGAQoUR2V0R3ltRGV0YWlsc01lc3NhZ2US",
+            "Zy5SZXF1ZXN0cy5NZXNzYWdlcyKeAQoUR2V0R3ltRGV0YWlsc01lc3NhZ2US",
             "DgoGZ3ltX2lkGAEgASgJEhcKD3BsYXllcl9sYXRpdHVkZRgCIAEoARIYChBw",
             "bGF5ZXJfbG9uZ2l0dWRlGAMgASgBEhQKDGd5bV9sYXRpdHVkZRgEIAEoARIV",
-            "Cg1neW1fbG9uZ2l0dWRlGAUgASgBYgZwcm90bzM="));
+            "Cg1neW1fbG9uZ2l0dWRlGAUgASgBEhYKDmNsaWVudF92ZXJzaW9uGAYgASgJ",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Requests.Messages.GetGymDetailsMessage), global::POGOProtos.Networking.Requests.Messages.GetGymDetailsMessage.Parser, new[]{ "GymId", "PlayerLatitude", "PlayerLongitude", "GymLatitude", "GymLongitude" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Requests.Messages.GetGymDetailsMessage), global::POGOProtos.Networking.Requests.Messages.GetGymDetailsMessage.Parser, new[]{ "GymId", "PlayerLatitude", "PlayerLongitude", "GymLatitude", "GymLongitude", "ClientVersion" }, null, null, null)
           }));
     }
     #endregion
@@ -67,6 +68,7 @@ namespace POGOProtos.Networking.Requests.Messages {
       playerLongitude_ = other.playerLongitude_;
       gymLatitude_ = other.gymLatitude_;
       gymLongitude_ = other.gymLongitude_;
+      clientVersion_ = other.clientVersion_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -129,6 +131,17 @@ namespace POGOProtos.Networking.Requests.Messages {
       }
     }
 
+    /// <summary>Field number for the "client_version" field.</summary>
+    public const int ClientVersionFieldNumber = 6;
+    private string clientVersion_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ClientVersion {
+      get { return clientVersion_; }
+      set {
+        clientVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetGymDetailsMessage);
@@ -147,6 +160,7 @@ namespace POGOProtos.Networking.Requests.Messages {
       if (PlayerLongitude != other.PlayerLongitude) return false;
       if (GymLatitude != other.GymLatitude) return false;
       if (GymLongitude != other.GymLongitude) return false;
+      if (ClientVersion != other.ClientVersion) return false;
       return true;
     }
 
@@ -158,6 +172,7 @@ namespace POGOProtos.Networking.Requests.Messages {
       if (PlayerLongitude != 0D) hash ^= PlayerLongitude.GetHashCode();
       if (GymLatitude != 0D) hash ^= GymLatitude.GetHashCode();
       if (GymLongitude != 0D) hash ^= GymLongitude.GetHashCode();
+      if (ClientVersion.Length != 0) hash ^= ClientVersion.GetHashCode();
       return hash;
     }
 
@@ -188,6 +203,10 @@ namespace POGOProtos.Networking.Requests.Messages {
         output.WriteRawTag(41);
         output.WriteDouble(GymLongitude);
       }
+      if (ClientVersion.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ClientVersion);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -207,6 +226,9 @@ namespace POGOProtos.Networking.Requests.Messages {
       }
       if (GymLongitude != 0D) {
         size += 1 + 8;
+      }
+      if (ClientVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClientVersion);
       }
       return size;
     }
@@ -230,6 +252,9 @@ namespace POGOProtos.Networking.Requests.Messages {
       }
       if (other.GymLongitude != 0D) {
         GymLongitude = other.GymLongitude;
+      }
+      if (other.ClientVersion.Length != 0) {
+        ClientVersion = other.ClientVersion;
       }
     }
 
@@ -259,6 +284,10 @@ namespace POGOProtos.Networking.Requests.Messages {
           }
           case 41: {
             GymLongitude = input.ReadDouble();
+            break;
+          }
+          case 50: {
+            ClientVersion = input.ReadString();
             break;
           }
         }

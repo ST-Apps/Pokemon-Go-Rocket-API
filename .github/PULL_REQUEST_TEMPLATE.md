@@ -1,13 +1,13 @@
-#Fixes:
+### Fixes:
 
 - Fix 1
 - Fix 2
 
-#Changes:
+### Changes:
 
 - Change 1
 - Change 2
 
-#Change details:
+### Change details:
 
-#Other informations:
+### Other informations:

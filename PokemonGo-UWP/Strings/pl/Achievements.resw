@@ -12,7 +12,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BadgeBattleTrainingWon" xml:space="preserve">
-    <value>Cool Trainer</value>
+  <data name="BadgeBattleAttackWonDescription" xml:space="preserve">
+    <value>Wygranych {0} walk</value>
+  </data>
+  <data name="BadgeBattleTrainingWonDescription" xml:space="preserve">
+    <value>Wygranych {0} treningów</value>
   </data>
 </root>

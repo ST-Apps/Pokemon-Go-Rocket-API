@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using Google.Protobuf;
 using PokemonGo.RocketAPI.Exceptions;
@@ -16,7 +17,7 @@ namespace PokemonGo.RocketAPI.Extensions
 
     public interface IApiFailureStrategy
     {
-        Task<ApiOperation> HandleApiFailure(RequestEnvelope request, ResponseEnvelope response);
+        Task<ApiOperation> HandleApiFailure(string[] url, RequestEnvelope request, ResponseEnvelope response);
         void HandleApiSuccess(RequestEnvelope request, ResponseEnvelope response);
     }
 
@@ -36,12 +37,12 @@ namespace PokemonGo.RocketAPI.Extensions
                     throw new ArgumentException($"ResponseType {i} is not an IMessage");
                 }
             }
-
+            var urlArray = new[] { url };
             ResponseEnvelope response;
-            while ((response = await PostProto<TRequest>(client, url, requestEnvelope)).Returns.Count !=
+            while ((response = await PostProto<TRequest>(client, urlArray[0], requestEnvelope)).Returns.Count !=
                    responseTypes.Length)
             {
-                var operation = await strategy.HandleApiFailure(requestEnvelope, response);
+                var operation = await strategy.HandleApiFailure(urlArray, requestEnvelope, response);
                 if (operation == ApiOperation.Abort)
                 {
                     throw new InvalidResponseException(
@@ -66,19 +67,21 @@ namespace PokemonGo.RocketAPI.Extensions
             where TResponsePayload : IMessage<TResponsePayload>, new()
         {
             Debug.WriteLine($"Requesting {typeof(TResponsePayload).Name}");
+            var urlArray = new[] {url};
             var response = await PostProto<TRequest>(client, url, requestEnvelope);
 
             while (response.Returns.Count == 0)
             {
-                var operation = await strategy.HandleApiFailure(requestEnvelope, response);
+                var operation = await strategy.HandleApiFailure(urlArray, requestEnvelope, response);
                 if (operation == ApiOperation.Abort)
                 {
                     break;
                 }
 
-                response = await PostProto<TRequest>(client, url, requestEnvelope);
+                response = await PostProto<TRequest>(client, urlArray[0], requestEnvelope);
             }
 
+            // TODO: statuscode = 3 probably means ban!
             if (response.Returns.Count == 0)
                 throw new InvalidResponseException();
 

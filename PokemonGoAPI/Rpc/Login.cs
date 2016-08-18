@@ -5,6 +5,7 @@ using PokemonGo.RocketAPI.Enums;
 using PokemonGo.RocketAPI.Exceptions;
 using PokemonGo.RocketAPI.Extensions;
 using PokemonGo.RocketAPI.Login;
+using PokemonGoAPI.Session;
 using POGOProtos.Networking.Requests;
 using POGOProtos.Networking.Requests.Messages;
 
@@ -35,12 +36,11 @@ namespace PokemonGo.RocketAPI.Rpc
             }
         }
 
-        public async Task<string> DoLogin()
+        public async Task DoLogin()
         {
-            if (string.IsNullOrEmpty(Client.AuthToken))
-                Client.AuthToken = await login.GetAccessToken().ConfigureAwait(false);
-            await SetServer().ConfigureAwait(false);
-            return Client.AuthToken;
+            if (Client.AccessToken == null || Client.AccessToken.IsExpired)
+                Client.AccessToken = await login.GetAccessToken().ConfigureAwait(false);            
+            await SetServer().ConfigureAwait(false);                        
         }
 
         private async Task SetServer()
@@ -89,11 +89,11 @@ namespace PokemonGo.RocketAPI.Rpc
 
             if (serverResponse.AuthTicket == null)
             {
-                Client.AuthToken = null;
+                Client.AccessToken = null;
                 throw new AccessTokenExpiredException();
             }
 
-            Client.AuthTicket = serverResponse.AuthTicket;
+            Client.AccessToken.AuthTicket = serverResponse.AuthTicket;
             Client.ApiUrl = serverResponse.ApiUrl;
         }
     }

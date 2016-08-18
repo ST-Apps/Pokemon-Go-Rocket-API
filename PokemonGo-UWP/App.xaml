@@ -14,6 +14,7 @@
             </ResourceDictionary.MergedDictionaries>
 
             <utils:PokemonIdToPokemonSpriteConverter x:Key="PokemonIdToPokemonSpriteConverter" />
+            <utils:PokemonTypeTranslationConverter x:Key="PokemonTypeTranslationConverter" />
             <utils:EmptyConverter x:Key="EmptyConverter" />
             <utils:PlayerTeamToTeamColorBrushConverter x:Key="PlayerTeamToTeamColorBrushConverter" />
             <utils:EncounterBackgroundToBackgroundImageConverter x:Key="EncounterBackgroundToBackgroundImageConverter" />
@@ -32,6 +33,7 @@
             <utils:PokemonSortingModesToSortingModesListConverter
                 x:Key="PokemonSortingModesToSortingModesListConverter" />
             <utils:PokemonSortingModesToIconConverter x:Key="PokemonSortingModesToIconConverter" />
+            <utils:PokemonSortingModesTranslationConverter x:Key="PokemonSortingModesTranslationConverter" />
             <utils:EggDataToEggProgressConverter x:Key="EggDataToEggProgressConverter" />
             <utils:ItemToItemDescriptionConverter x:Key="ItemToItemDescriptionConverter" />
             <utils:IncubatorUsagesCountToUsagesTextConverter x:Key="IncubatorUsagesCountToUsagesTextConverter" />

@@ -36,15 +36,15 @@ namespace POGOProtos.Networking.Envelopes {
             "aWduYXR1cmUuQWN0aXZpdHlTdGF0dXMSFgoObG9jYXRpb25faGFzaDEYCiAB",
             "KAQSFgoObG9jYXRpb25faGFzaDIYFCABKAQSFAoMc2Vzc2lvbl9oYXNoGBYg",
             "ASgMEhEKCXRpbWVzdGFtcBgXIAEoBBIUCgxyZXF1ZXN0X2hhc2gYGCADKAQS",
-            "EQoJdW5rbm93bjI1GBkgASgEGukBCgtMb2NhdGlvbkZpeBIQCghwcm92aWRl",
+            "EQoJdW5rbm93bjI1GBkgASgDGukBCgtMb2NhdGlvbkZpeBIQCghwcm92aWRl",
             "chgBIAEoCRIaChJ0aW1lc3RhbXBfc25hcHNob3QYAiABKAQSEAoIbGF0aXR1",
             "ZGUYDSABKAISEQoJbG9uZ2l0dWRlGA4gASgCEhsKE2hvcml6b250YWxfYWNj",
             "dXJhY3kYFCABKAISEAoIYWx0aXR1ZGUYFSABKAISGQoRdmVydGljYWxfYWNj",
             "dXJhY3kYFiABKAISFwoPcHJvdmlkZXJfc3RhdHVzGBogASgEEg0KBWZsb29y",
             "GBsgASgNEhUKDWxvY2F0aW9uX3R5cGUYHCABKAQarwEKDkFuZHJvaWRHcHNJ",
             "bmZvEhMKC3RpbWVfdG9fZml4GAEgASgEEhYKDnNhdGVsbGl0ZXNfcHJuGAIg",
-            "AygFEgsKA3NuchgDIAMoAhIPCgdhemltdXRoGAQgAygCEhEKCWVsZXZhdGlv",
-            "bhgFIAMoAhITCgtoYXNfYWxtYW5hYxgGIAMoCBIVCg1oYXNfZXBoZW1lcmlz",
+            "AygFEg8KB2F6aW11dGgYAyADKAISEQoJZWxldmF0aW9uGAQgAygCEgsKA3Nu",
+            "chgFIAMoAhITCgtoYXNfYWxtYW5hYxgGIAMoCBIVCg1oYXNfZXBoZW1lcmlz",
             "GAcgAygIEhMKC3VzZWRfaW5fZml4GAggAygIGr4DCgpTZW5zb3JJbmZvEhoK",
             "EnRpbWVzdGFtcF9zbmFwc2hvdBgBIAEoBBIWCg5tYWduZXRvbWV0ZXJfeBgD",
             "IAEoARIWCg5tYWduZXRvbWV0ZXJfeRgEIAEoARIWCg5tYWduZXRvbWV0ZXJf",
@@ -72,7 +72,7 @@ namespace POGOProtos.Networking.Envelopes {
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature), global::POGOProtos.Networking.Envelopes.Signature.Parser, new[]{ "TimestampSinceStart", "LocationFix", "GpsInfo", "SensorInfo", "DeviceInfo", "ActivityStatus", "LocationHash1", "LocationHash2", "SessionHash", "Timestamp", "RequestHash", "Unknown25" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.LocationFix), global::POGOProtos.Networking.Envelopes.Signature.Types.LocationFix.Parser, new[]{ "Provider", "TimestampSnapshot", "Latitude", "Longitude", "HorizontalAccuracy", "Altitude", "VerticalAccuracy", "ProviderStatus", "Floor", "LocationType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo), global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo.Parser, new[]{ "TimeToFix", "SatellitesPrn", "Snr", "Azimuth", "Elevation", "HasAlmanac", "HasEphemeris", "UsedInFix" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo), global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo.Parser, new[]{ "TimeToFix", "SatellitesPrn", "Azimuth", "Elevation", "Snr", "HasAlmanac", "HasEphemeris", "UsedInFix" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.SensorInfo), global::POGOProtos.Networking.Envelopes.Signature.Types.SensorInfo.Parser, new[]{ "TimestampSnapshot", "MagnetometerX", "MagnetometerY", "MagnetometerZ", "AngleNormalizedX", "AngleNormalizedY", "AngleNormalizedZ", "AccelRawX", "AccelRawY", "AccelRawZ", "GyroscopeRawX", "GyroscopeRawY", "GyroscopeRawZ", "AccelNormalizedX", "AccelNormalizedY", "AccelNormalizedZ", "AccelerometerAxes" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.DeviceInfo), global::POGOProtos.Networking.Envelopes.Signature.Types.DeviceInfo.Parser, new[]{ "DeviceId", "AndroidBoardName", "AndroidBootloader", "DeviceBrand", "DeviceModel", "DeviceModelIdentifier", "DeviceModelBoot", "HardwareManufacturer", "HardwareModel", "FirmwareBrand", "FirmwareTags", "FirmwareType", "FirmwareFingerprint" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.ActivityStatus), global::POGOProtos.Networking.Envelopes.Signature.Types.ActivityStatus.Parser, new[]{ "StartTimeMs", "UnknownStatus", "Walking", "Running", "Stationary", "Automotive", "Tilting", "Cycling", "Status" }, null, null, null)})
@@ -264,12 +264,12 @@ namespace POGOProtos.Networking.Envelopes {
 
     /// <summary>Field number for the "unknown25" field.</summary>
     public const int Unknown25FieldNumber = 25;
-    private ulong unknown25_;
+    private long unknown25_;
     /// <summary>
     ///  for 0.33 its static -8537042734809897855 or 0x898654dd2753a481, generated via xxHash64("\"b8fa9757195897aae92c53dbcf8a60fb3d86d745\"".ToByteArray(), 0x88533787)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong Unknown25 {
+    public long Unknown25 {
       get { return unknown25_; }
       set {
         unknown25_ = value;
@@ -318,7 +318,7 @@ namespace POGOProtos.Networking.Envelopes {
       if (SessionHash.Length != 0) hash ^= SessionHash.GetHashCode();
       if (Timestamp != 0UL) hash ^= Timestamp.GetHashCode();
       hash ^= requestHash_.GetHashCode();
-      if (Unknown25 != 0UL) hash ^= Unknown25.GetHashCode();
+      if (Unknown25 != 0L) hash ^= Unknown25.GetHashCode();
       return hash;
     }
 
@@ -367,9 +367,9 @@ namespace POGOProtos.Networking.Envelopes {
         output.WriteUInt64(Timestamp);
       }
       requestHash_.WriteTo(output, _repeated_requestHash_codec);
-      if (Unknown25 != 0UL) {
+      if (Unknown25 != 0L) {
         output.WriteRawTag(200, 1);
-        output.WriteUInt64(Unknown25);
+        output.WriteInt64(Unknown25);
       }
     }
 
@@ -405,8 +405,8 @@ namespace POGOProtos.Networking.Envelopes {
         size += 2 + pb::CodedOutputStream.ComputeUInt64Size(Timestamp);
       }
       size += requestHash_.CalculateSize(_repeated_requestHash_codec);
-      if (Unknown25 != 0UL) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt64Size(Unknown25);
+      if (Unknown25 != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(Unknown25);
       }
       return size;
     }
@@ -457,7 +457,7 @@ namespace POGOProtos.Networking.Envelopes {
         Timestamp = other.Timestamp;
       }
       requestHash_.Add(other.requestHash_);
-      if (other.Unknown25 != 0UL) {
+      if (other.Unknown25 != 0L) {
         Unknown25 = other.Unknown25;
       }
     }
@@ -528,7 +528,7 @@ namespace POGOProtos.Networking.Envelopes {
             break;
           }
           case 200: {
-            Unknown25 = input.ReadUInt64();
+            Unknown25 = input.ReadInt64();
             break;
           }
         }
@@ -960,9 +960,9 @@ namespace POGOProtos.Networking.Envelopes {
         public AndroidGpsInfo(AndroidGpsInfo other) : this() {
           timeToFix_ = other.timeToFix_;
           satellitesPrn_ = other.satellitesPrn_.Clone();
-          snr_ = other.snr_.Clone();
           azimuth_ = other.azimuth_.Clone();
           elevation_ = other.elevation_.Clone();
+          snr_ = other.snr_.Clone();
           hasAlmanac_ = other.hasAlmanac_.Clone();
           hasEphemeris_ = other.hasEphemeris_.Clone();
           usedInFix_ = other.usedInFix_.Clone();
@@ -994,20 +994,10 @@ namespace POGOProtos.Networking.Envelopes {
           get { return satellitesPrn_; }
         }
 
-        /// <summary>Field number for the "snr" field.</summary>
-        public const int SnrFieldNumber = 3;
-        private static readonly pb::FieldCodec<float> _repeated_snr_codec
-            = pb::FieldCodec.ForFloat(26);
-        private readonly pbc::RepeatedField<float> snr_ = new pbc::RepeatedField<float>();
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::RepeatedField<float> Snr {
-          get { return snr_; }
-        }
-
         /// <summary>Field number for the "azimuth" field.</summary>
-        public const int AzimuthFieldNumber = 4;
+        public const int AzimuthFieldNumber = 3;
         private static readonly pb::FieldCodec<float> _repeated_azimuth_codec
-            = pb::FieldCodec.ForFloat(34);
+            = pb::FieldCodec.ForFloat(26);
         private readonly pbc::RepeatedField<float> azimuth_ = new pbc::RepeatedField<float>();
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pbc::RepeatedField<float> Azimuth {
@@ -1015,13 +1005,23 @@ namespace POGOProtos.Networking.Envelopes {
         }
 
         /// <summary>Field number for the "elevation" field.</summary>
-        public const int ElevationFieldNumber = 5;
+        public const int ElevationFieldNumber = 4;
         private static readonly pb::FieldCodec<float> _repeated_elevation_codec
-            = pb::FieldCodec.ForFloat(42);
+            = pb::FieldCodec.ForFloat(34);
         private readonly pbc::RepeatedField<float> elevation_ = new pbc::RepeatedField<float>();
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pbc::RepeatedField<float> Elevation {
           get { return elevation_; }
+        }
+
+        /// <summary>Field number for the "snr" field.</summary>
+        public const int SnrFieldNumber = 5;
+        private static readonly pb::FieldCodec<float> _repeated_snr_codec
+            = pb::FieldCodec.ForFloat(42);
+        private readonly pbc::RepeatedField<float> snr_ = new pbc::RepeatedField<float>();
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<float> Snr {
+          get { return snr_; }
         }
 
         /// <summary>Field number for the "has_almanac" field.</summary>
@@ -1069,9 +1069,9 @@ namespace POGOProtos.Networking.Envelopes {
           }
           if (TimeToFix != other.TimeToFix) return false;
           if(!satellitesPrn_.Equals(other.satellitesPrn_)) return false;
-          if(!snr_.Equals(other.snr_)) return false;
           if(!azimuth_.Equals(other.azimuth_)) return false;
           if(!elevation_.Equals(other.elevation_)) return false;
+          if(!snr_.Equals(other.snr_)) return false;
           if(!hasAlmanac_.Equals(other.hasAlmanac_)) return false;
           if(!hasEphemeris_.Equals(other.hasEphemeris_)) return false;
           if(!usedInFix_.Equals(other.usedInFix_)) return false;
@@ -1083,9 +1083,9 @@ namespace POGOProtos.Networking.Envelopes {
           int hash = 1;
           if (TimeToFix != 0UL) hash ^= TimeToFix.GetHashCode();
           hash ^= satellitesPrn_.GetHashCode();
-          hash ^= snr_.GetHashCode();
           hash ^= azimuth_.GetHashCode();
           hash ^= elevation_.GetHashCode();
+          hash ^= snr_.GetHashCode();
           hash ^= hasAlmanac_.GetHashCode();
           hash ^= hasEphemeris_.GetHashCode();
           hash ^= usedInFix_.GetHashCode();
@@ -1104,9 +1104,9 @@ namespace POGOProtos.Networking.Envelopes {
             output.WriteUInt64(TimeToFix);
           }
           satellitesPrn_.WriteTo(output, _repeated_satellitesPrn_codec);
-          snr_.WriteTo(output, _repeated_snr_codec);
           azimuth_.WriteTo(output, _repeated_azimuth_codec);
           elevation_.WriteTo(output, _repeated_elevation_codec);
+          snr_.WriteTo(output, _repeated_snr_codec);
           hasAlmanac_.WriteTo(output, _repeated_hasAlmanac_codec);
           hasEphemeris_.WriteTo(output, _repeated_hasEphemeris_codec);
           usedInFix_.WriteTo(output, _repeated_usedInFix_codec);
@@ -1119,9 +1119,9 @@ namespace POGOProtos.Networking.Envelopes {
             size += 1 + pb::CodedOutputStream.ComputeUInt64Size(TimeToFix);
           }
           size += satellitesPrn_.CalculateSize(_repeated_satellitesPrn_codec);
-          size += snr_.CalculateSize(_repeated_snr_codec);
           size += azimuth_.CalculateSize(_repeated_azimuth_codec);
           size += elevation_.CalculateSize(_repeated_elevation_codec);
+          size += snr_.CalculateSize(_repeated_snr_codec);
           size += hasAlmanac_.CalculateSize(_repeated_hasAlmanac_codec);
           size += hasEphemeris_.CalculateSize(_repeated_hasEphemeris_codec);
           size += usedInFix_.CalculateSize(_repeated_usedInFix_codec);
@@ -1137,9 +1137,9 @@ namespace POGOProtos.Networking.Envelopes {
             TimeToFix = other.TimeToFix;
           }
           satellitesPrn_.Add(other.satellitesPrn_);
-          snr_.Add(other.snr_);
           azimuth_.Add(other.azimuth_);
           elevation_.Add(other.elevation_);
+          snr_.Add(other.snr_);
           hasAlmanac_.Add(other.hasAlmanac_);
           hasEphemeris_.Add(other.hasEphemeris_);
           usedInFix_.Add(other.usedInFix_);
@@ -1164,17 +1164,17 @@ namespace POGOProtos.Networking.Envelopes {
               }
               case 26:
               case 29: {
-                snr_.AddEntriesFrom(input, _repeated_snr_codec);
+                azimuth_.AddEntriesFrom(input, _repeated_azimuth_codec);
                 break;
               }
               case 34:
               case 37: {
-                azimuth_.AddEntriesFrom(input, _repeated_azimuth_codec);
+                elevation_.AddEntriesFrom(input, _repeated_elevation_codec);
                 break;
               }
               case 42:
               case 45: {
-                elevation_.AddEntriesFrom(input, _repeated_elevation_codec);
+                snr_.AddEntriesFrom(input, _repeated_snr_codec);
                 break;
               }
               case 50:

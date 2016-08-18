@@ -2,57 +2,78 @@
 using System;
 using Windows.Devices.Sensors;
 using Superbest_random;
+using System.Collections.Generic;
 
 namespace PokemonGo_UWP.Utils
 {
-    public class LocationFixFused : ILocationFix
+    public class LocationFix : ILocationFix
     {
-        public static readonly LocationFixFused Instance;
+        private static readonly Random _random = new Random();
 
-        private readonly Random _random = new Random();
-
-        static LocationFixFused()
-        {
-            Instance = Instance ?? new LocationFixFused();
-        }
-
-        private LocationFixFused()
+        private LocationFix()
         {
         }
 
-        public string Provider
+        public static LocationFix CollectData()
         {
-            get
+            if (GameClient.Geoposition.Coordinate == null)
+                return null; //Nothing to collect
+
+            LocationFix loc = new LocationFix();
+            //Collect provider
+            switch (GameClient.Geoposition.Coordinate.PositionSource)
             {
-                switch (GameClient.Geoposition.Coordinate.PositionSource)
-                {
-                    case Windows.Devices.Geolocation.PositionSource.WiFi:
-                    case Windows.Devices.Geolocation.PositionSource.Cellular:
-                        return "network";
-                    case Windows.Devices.Geolocation.PositionSource.Satellite:
-                        return "gps";
-                }
-                return "fused";
+                case Windows.Devices.Geolocation.PositionSource.WiFi:
+                case Windows.Devices.Geolocation.PositionSource.Cellular:
+                    loc.Provider = "network"; break;
+                case Windows.Devices.Geolocation.PositionSource.Satellite:
+                    loc.Provider = "gps"; break;
+                default:
+                    loc.Provider = "fused"; break;
             }
+
+            //1 = no fix, 2 = acquiring/inaccurate, 3 = fix acquired
+            loc.ProviderStatus = 3;
+
+            //Collect coordinates
+
+            loc.Latitude = (float)GameClient.Geoposition.Coordinate.Point.Position.Latitude;
+            loc.Longitude = (float)GameClient.Geoposition.Coordinate.Point.Position.Longitude;
+            loc.Altitude = (float)GameClient.Geoposition.Coordinate.Point.Position.Altitude;
+
+            // TODO: why 3? need more infos.
+            loc.Floor = 3;
+
+            // TODO: why 1? need more infos.
+            loc.LocationType = 1;
+
+            //some requests contains absolute utc time and some relative to app start (bug?)
+            loc.Timestamp = (ulong)GameClient.Geoposition.Coordinate.Timestamp.ToUnixTimeMilliseconds();
+
+            loc.HorizontalAccuracy = (float?)GameClient.Geoposition.Coordinate?.Accuracy ?? (float)_random.NextGaussian(0.0, 0.5);
+
+            loc.VerticalAccuracy = (float?)GameClient.Geoposition.Coordinate?.AltitudeAccuracy ?? (float)_random.NextGaussian(0.0, 0.5);
+
+            return loc;
         }
-        //1 = no fix, 2 = acquiring/inaccurate, 3 = fix acquired
-        public ulong ProviderStatus => 3;
 
-        public float Latitude => (float) GameClient.Geoposition.Coordinate.Point.Position.Latitude;
+        public string Provider { get; private set; }
+        
+        public ulong ProviderStatus { get; private set; }
 
-        public float Longitude => (float) GameClient.Geoposition.Coordinate.Point.Position.Longitude;
+        public float Latitude { get; private set; }
 
-        public float Altitude => (float) GameClient.Geoposition.Coordinate.Point.Position.Altitude;
+        public float Longitude { get; private set; }
 
-        // TODO: why 3? need more infos.
-        public uint Floor => 3;
+        public float Altitude { get; private set; }
 
-        // TODO: why 1? need more infos.
-        public ulong LocationType => 1;
+        public uint Floor { get; private set; }
 
-        public ulong Timestamp => (ulong)GameClient.Geoposition.Coordinate.Timestamp.ToUnixTimeMilliseconds();
-        public float HorizontalAccuracy => (float?)GameClient.Geoposition.Coordinate?.Accuracy ?? (float)_random.NextGaussian(0.0, 0.5);
-        public float VerticalAccuracy => (float?)GameClient.Geoposition.Coordinate?.AltitudeAccuracy ?? (float)_random.NextGaussian(0.0, 0.5);
+        public ulong LocationType { get; private set; }
+
+        public ulong Timestamp { get; private set; }
+        public float HorizontalAccuracy { get; private set; }
+        public float VerticalAccuracy { get; private set; }
 
     }
     /// <summary>
@@ -105,9 +126,32 @@ namespace PokemonGo_UWP.Utils
         #endregion
 
         #region LocationFixes
-        private ILocationFix[] _gpsLocationFixes = { LocationFixFused.Instance };
-        private ILocationFix[] _emptyLocationFixes = { };
-        public ILocationFix[] LocationFixes { get { return GameClient.Geoposition != null ? _gpsLocationFixes : _emptyLocationFixes; } }
+        private List<ILocationFix> _gpsLocationFixes = new List<ILocationFix>();
+        private object _gpsLocationFixesLock = new object();
+        public ILocationFix[] LocationFixes {
+            get {
+                lock(_gpsLocationFixesLock)
+                {
+                    //atomically exchange lists (new is empty)
+                    List<ILocationFix> data = _gpsLocationFixes;
+                    _gpsLocationFixes = new List<ILocationFix>();
+                    return data.ToArray();
+                }
+            }
+        }
+
+        public void CollectLocationData()
+        {
+            LocationFix loc = LocationFix.CollectData();
+
+            if (loc != null)
+            {
+                lock (_gpsLocationFixesLock)
+                {
+                    _gpsLocationFixes.Add(loc);
+                }
+            }
+        }
 
 
         #endregion

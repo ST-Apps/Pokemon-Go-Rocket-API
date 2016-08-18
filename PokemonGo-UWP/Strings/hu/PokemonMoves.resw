@@ -12,4 +12,544 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Bite" xml:space="preserve">
+    <value>Harapás</value>
+  </data>
+  <data name="CrossChop" xml:space="preserve">
+    <value>Keresztcsapás</value>
+  </data>
+  <data name="DarkPulse" xml:space="preserve">
+    <value>Sötét Impulzus</value>
+  </data>
+  <data name="Dig" xml:space="preserve">
+    <value>Ásás</value>
+  </data>
+  <data name="DoubleSlap" xml:space="preserve">
+    <value>Dupla Pofon</value>
+  </data>
+  <data name="Ember" xml:space="preserve">
+    <value>Parázs</value>
+  </data>
+  <data name="Flamethrower" xml:space="preserve">
+    <value>Lángszóró</value>
+  </data>
+  <data name="FlameWheel" xml:space="preserve">
+    <value>Lángkerék</value>
+  </data>
+  <data name="HyperBeam" xml:space="preserve">
+    <value>Hiper Sugár</value>
+  </data>
+  <data name="Lick" xml:space="preserve">
+    <value>Nyalás</value>
+  </data>
+  <data name="LowKick" xml:space="preserve">
+    <value>Alsó Rúgás</value>
+  </data>
+  <data name="Megahorn" xml:space="preserve">
+    <value>Megaszarv</value>
+  </data>
+  <data name="MetalClaw" xml:space="preserve">
+    <value>Fém Karom</value>
+  </data>
+  <data name="MoveUnset" xml:space="preserve">
+    <value>Hatástalanított Mozgás</value>
+  </data>
+  <data name="Pound" xml:space="preserve">
+    <value>Dobbantás</value>
+  </data>
+  <data name="PsychoCut" xml:space="preserve">
+    <value>Pszichovágás</value>
+  </data>
+  <data name="QuickAttack" xml:space="preserve">
+    <value>Gyors Támadás</value>
+  </data>
+  <data name="RazorLeaf" xml:space="preserve">
+    <value>Borotvalevél</value>
+  </data>
+  <data name="Scratch" xml:space="preserve">
+    <value>Karmolás</value>
+  </data>
+  <data name="Sludge" xml:space="preserve">
+    <value>Iszap</value>
+  </data>
+  <data name="Smog" xml:space="preserve">
+    <value>Füstköd</value>
+  </data>
+  <data name="SuckerPunch" xml:space="preserve">
+    <value>Szívó Ütés</value>
+  </data>
+  <data name="Tackle" xml:space="preserve">
+    <value>Megragadás</value>
+  </data>
+  <data name="TakeDown" xml:space="preserve">
+    <value>Lerántás</value>
+  </data>
+  <data name="ThunderShock" xml:space="preserve">
+    <value>Villámsokk</value>
+  </data>
+  <data name="ViceGrip" xml:space="preserve">
+    <value>Satufogás</value>
+  </data>
+  <data name="VineWhip" xml:space="preserve">
+    <value>Indacsapás</value>
+  </data>
+  <data name="WaterGun" xml:space="preserve">
+    <value>Vízágyú</value>
+  </data>
+  <data name="WingAttack" xml:space="preserve">
+    <value>Szárnycsapás</value>
+  </data>
+  <data name="Wrap" xml:space="preserve">
+    <value>Betakarás</value>
+  </data>
+  <data name="Absorb" xml:space="preserve">
+    <value>Elnyelés</value>
+  </data>
+  <data name="Acid" xml:space="preserve">
+    <value>Sav</value>
+  </data>
+  <data name="AcidFast" xml:space="preserve">
+    <value>Gyors sav</value>
+  </data>
+  <data name="AerialAce" xml:space="preserve">
+    <value>Légi Ász</value>
+  </data>
+  <data name="AirCutter" xml:space="preserve">
+    <value>Levegő Vágó</value>
+  </data>
+  <data name="AirSlash" xml:space="preserve">
+    <value>Levegő Hasítás</value>
+  </data>
+  <data name="AncientPower" xml:space="preserve">
+    <value>Ősi Erő</value>
+  </data>
+  <data name="AquaJet" xml:space="preserve">
+    <value>Vízsugár</value>
+  </data>
+  <data name="AquaTail" xml:space="preserve">
+    <value>Vízfarok</value>
+  </data>
+  <data name="BiteFast" xml:space="preserve">
+    <value>Harapás</value>
+  </data>
+  <data name="Blizzard" xml:space="preserve">
+    <value>Jégeső</value>
+  </data>
+  <data name="BodySlam" xml:space="preserve">
+    <value>Test Csapás</value>
+  </data>
+  <data name="BoneClub" xml:space="preserve">
+    <value>Csontbunkó</value>
+  </data>
+  <data name="BrickBreak" xml:space="preserve">
+    <value>Téglatörés</value>
+  </data>
+  <data name="Brine" xml:space="preserve">
+    <value>Sósvíz</value>
+  </data>
+  <data name="BubbleBeam" xml:space="preserve">
+    <value>Buboréksugár</value>
+  </data>
+  <data name="BubbleFast" xml:space="preserve">
+    <value>Gyors Buborék</value>
+  </data>
+  <data name="BugBite" xml:space="preserve">
+    <value>Bogárharapás</value>
+  </data>
+  <data name="BugBiteFast" xml:space="preserve">
+    <value>Gyors Bogárharapás</value>
+  </data>
+  <data name="BugBuzz" xml:space="preserve">
+    <value>Bogár Zümmögés</value>
+  </data>
+  <data name="Bulldoze" xml:space="preserve">
+    <value>Bika támadás</value>
+  </data>
+  <data name="BulletPunch" xml:space="preserve">
+    <value>Golyó ütés</value>
+  </data>
+  <data name="BulletPunchFast" xml:space="preserve">
+    <value>Golyó ütés</value>
+  </data>
+  <data name="ConfusionFast" xml:space="preserve">
+    <value>Összezavarás</value>
+  </data>
+  <data name="CrossPoison" xml:space="preserve">
+    <value>Kereszt Méreg</value>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>Vágás</value>
+  </data>
+  <data name="CutFast" xml:space="preserve">
+    <value>Gyors Vágás</value>
+  </data>
+  <data name="DazzlingGleam" xml:space="preserve">
+    <value>Kápráztató csillogás</value>
+  </data>
+  <data name="DisarmingVoice" xml:space="preserve">
+    <value>Hatástalanító Hang</value>
+  </data>
+  <data name="Discharge" xml:space="preserve">
+    <value>Leszerelés</value>
+  </data>
+  <data name="DragonBreath" xml:space="preserve">
+    <value>Sárkánylehelet</value>
+  </data>
+  <data name="DragonBreathFast" xml:space="preserve">
+    <value>Sárkánylehelet</value>
+  </data>
+  <data name="DragonClaw" xml:space="preserve">
+    <value>Sárkánykarom</value>
+  </data>
+  <data name="DragonPulse" xml:space="preserve">
+    <value>Sárkány Impulzus</value>
+  </data>
+  <data name="DrainingKiss" xml:space="preserve">
+    <value>Kiszipolyozó Csók</value>
+  </data>
+  <data name="DrillPeck" xml:space="preserve">
+    <value>Fúró Csípés</value>
+  </data>
+  <data name="DrillRun" xml:space="preserve">
+    <value>Fúró Futás</value>
+  </data>
+  <data name="Earthquake" xml:space="preserve">
+    <value>Földrengés</value>
+  </data>
+  <data name="EmberFast" xml:space="preserve">
+    <value>Gyors Parázs</value>
+  </data>
+  <data name="FeintAttackFast" xml:space="preserve">
+    <value>Áltámadás</value>
+  </data>
+  <data name="FireBlast" xml:space="preserve">
+    <value>Lángcsóva</value>
+  </data>
+  <data name="FireFangFast" xml:space="preserve">
+    <value>Tűzagyar</value>
+  </data>
+  <data name="FirePunch" xml:space="preserve">
+    <value>Tűzütés</value>
+  </data>
+  <data name="FlameBurst" xml:space="preserve">
+    <value>Lángrobbanás</value>
+  </data>
+  <data name="FlameCharge" xml:space="preserve">
+    <value>Lángroham</value>
+  </data>
+  <data name="FlashCannon" xml:space="preserve">
+    <value>Villámágyú</value>
+  </data>
+  <data name="FrostBreath" xml:space="preserve">
+    <value>Fagyos Lehelet</value>
+  </data>
+  <data name="FrostBreathFast" xml:space="preserve">
+    <value>Fagyos Lehelet</value>
+  </data>
+  <data name="FuryCutter" xml:space="preserve">
+    <value>Dühpenge</value>
+  </data>
+  <data name="FuryCutterFast" xml:space="preserve">
+    <value>Gyors Dühpenge</value>
+  </data>
+  <data name="GigaDrain" xml:space="preserve">
+    <value>Gigaszívás</value>
+  </data>
+  <data name="GunkShot" xml:space="preserve">
+    <value>Piszok Lövés</value>
+  </data>
+  <data name="Headbutt" xml:space="preserve">
+    <value>Fejelés</value>
+  </data>
+  <data name="HeartStamp" xml:space="preserve">
+    <value>Szívbélyeg</value>
+  </data>
+  <data name="HeatWave" xml:space="preserve">
+    <value>Hőhullám</value>
+  </data>
+  <data name="HornAttack" xml:space="preserve">
+    <value>Szarvtámadás</value>
+  </data>
+  <data name="Hurricane" xml:space="preserve">
+    <value>Hurrikán</value>
+  </data>
+  <data name="HydroPump" xml:space="preserve">
+    <value>Hidropumpa</value>
+  </data>
+  <data name="HydroPumpBlastoise" xml:space="preserve">
+    <value>Hidropumpa</value>
+  </data>
+  <data name="HyperFang" xml:space="preserve">
+    <value>Hiperagyar</value>
+  </data>
+  <data name="IceBeam" xml:space="preserve">
+    <value>Jégsugár</value>
+  </data>
+  <data name="IcePunch" xml:space="preserve">
+    <value>Jégütés</value>
+  </data>
+  <data name="IceShard" xml:space="preserve">
+    <value>Jégszilánk</value>
+  </data>
+  <data name="IceShardFast" xml:space="preserve">
+    <value>Jégszilánk</value>
+  </data>
+  <data name="IcyWind" xml:space="preserve">
+    <value>Jeges Szél</value>
+  </data>
+  <data name="IronHead" xml:space="preserve">
+    <value>Vasfej</value>
+  </data>
+  <data name="KarateChop" xml:space="preserve">
+    <value>Karateütés</value>
+  </data>
+  <data name="KarateChopFast" xml:space="preserve">
+    <value>Karateütés</value>
+  </data>
+  <data name="LeafBlade" xml:space="preserve">
+    <value>Pengelevél</value>
+  </data>
+  <data name="LickFast" xml:space="preserve">
+    <value>Gyors Nyalás</value>
+  </data>
+  <data name="LowKickFast" xml:space="preserve">
+    <value>Alsó Rúgás</value>
+  </data>
+  <data name="LowSweep" xml:space="preserve">
+    <value>Alsó Seprés</value>
+  </data>
+  <data name="MagnetBomb" xml:space="preserve">
+    <value>Mágnesbomba</value>
+  </data>
+  <data name="MegaDrain" xml:space="preserve">
+    <value>Megaszívás</value>
+  </data>
+  <data name="MetalClawFast" xml:space="preserve">
+    <value>Fém Karom</value>
+  </data>
+  <data name="Moonblast" xml:space="preserve">
+    <value>Holdrobbanás</value>
+  </data>
+  <data name="MudBomb" xml:space="preserve">
+    <value>Iszapbomba</value>
+  </data>
+  <data name="MudShot" xml:space="preserve">
+    <value>Iszaplövés</value>
+  </data>
+  <data name="MudShotFast" xml:space="preserve">
+    <value>Iszaplövés</value>
+  </data>
+  <data name="MudSlapFast" xml:space="preserve">
+    <value>Sárcsapás</value>
+  </data>
+  <data name="NightSlash" xml:space="preserve">
+    <value>Éjvágás</value>
+  </data>
+  <data name="OminousWind" xml:space="preserve">
+    <value>Baljós Szél</value>
+  </data>
+  <data name="ParabolicCharge" xml:space="preserve">
+    <value>Parabolikus Roham</value>
+  </data>
+  <data name="Peck" xml:space="preserve">
+    <value>Csípés</value>
+  </data>
+  <data name="PeckFast" xml:space="preserve">
+    <value>Csípés</value>
+  </data>
+  <data name="PetalBlizzard" xml:space="preserve">
+    <value>Szirom Hóvihar</value>
+  </data>
+  <data name="PlayRough" xml:space="preserve">
+    <value>Durva Játék</value>
+  </data>
+  <data name="PoisonFang" xml:space="preserve">
+    <value>Mérgezett Agyar</value>
+  </data>
+  <data name="PoisonJab" xml:space="preserve">
+    <value>Méregdöfés</value>
+  </data>
+  <data name="PoisonJabFast" xml:space="preserve">
+    <value>Méregdöfés</value>
+  </data>
+  <data name="PoisonStingFast" xml:space="preserve">
+    <value>Méregfullánk</value>
+  </data>
+  <data name="PoundFast" xml:space="preserve">
+    <value>Gyors Dobbantás</value>
+  </data>
+  <data name="PowerGem" xml:space="preserve">
+    <value>Energiakő</value>
+  </data>
+  <data name="PowerWhip" xml:space="preserve">
+    <value>Energiaostor</value>
+  </data>
+  <data name="Psybeam" xml:space="preserve">
+    <value>Psysugár</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Pszichés</value>
+  </data>
+  <data name="PsychoCutFast" xml:space="preserve">
+    <value>Pszichovágás</value>
+  </data>
+  <data name="Psyshock" xml:space="preserve">
+    <value>Psy sokk</value>
+  </data>
+  <data name="Psystrike" xml:space="preserve">
+    <value>Psy csapás</value>
+  </data>
+  <data name="QuickAttackFast" xml:space="preserve">
+    <value>Gyors Támadás</value>
+  </data>
+  <data name="RazorLeafFast" xml:space="preserve">
+    <value>Borotvalevél</value>
+  </data>
+  <data name="Rest" xml:space="preserve">
+    <value>Pihenés</value>
+  </data>
+  <data name="RockSlide" xml:space="preserve">
+    <value>Sziklacsúszás</value>
+  </data>
+  <data name="RockSmashFast" xml:space="preserve">
+    <value>Sziklazúzás</value>
+  </data>
+  <data name="RockThrow" xml:space="preserve">
+    <value>Sziklahajítás</value>
+  </data>
+  <data name="RockThrowFast" xml:space="preserve">
+    <value>Sziklahajítás</value>
+  </data>
+  <data name="RockTomb" xml:space="preserve">
+    <value>Kőbörtön</value>
+  </data>
+  <data name="Scald" xml:space="preserve">
+    <value>Forrázás</value>
+  </data>
+  <data name="ScaldBlastoise" xml:space="preserve">
+    <value>Forrázás</value>
+  </data>
+  <data name="ScratchFast" xml:space="preserve">
+    <value>Karmolás</value>
+  </data>
+  <data name="SeedBomb" xml:space="preserve">
+    <value>Magbomba</value>
+  </data>
+  <data name="ShadowBall" xml:space="preserve">
+    <value>Árnyéklabda</value>
+  </data>
+  <data name="ShadowClaw" xml:space="preserve">
+    <value>Árnyékkarom</value>
+  </data>
+  <data name="ShadowClawFast" xml:space="preserve">
+    <value>Árnyékkarom</value>
+  </data>
+  <data name="ShadowPunch" xml:space="preserve">
+    <value>Árnyékütés</value>
+  </data>
+  <data name="ShadowSneak" xml:space="preserve">
+    <value>Árnyék settenkedés</value>
+  </data>
+  <data name="SignalBeam" xml:space="preserve">
+    <value>Jelsugár</value>
+  </data>
+  <data name="Slam" xml:space="preserve">
+    <value>Csapás</value>
+  </data>
+  <data name="Slash" xml:space="preserve">
+    <value>Csapás</value>
+  </data>
+  <data name="SludgeBomb" xml:space="preserve">
+    <value>Iszapbomba</value>
+  </data>
+  <data name="SludgeWave" xml:space="preserve">
+    <value>Iszaphullám</value>
+  </data>
+  <data name="SolarBeam" xml:space="preserve">
+    <value>Napsugár</value>
+  </data>
+  <data name="Spark" xml:space="preserve">
+    <value>Szikra</value>
+  </data>
+  <data name="SparkFast" xml:space="preserve">
+    <value>Gyors Szikra</value>
+  </data>
+  <data name="Splash" xml:space="preserve">
+    <value>Fröcskölés</value>
+  </data>
+  <data name="SplashFast" xml:space="preserve">
+    <value>Fröcskölés</value>
+  </data>
+  <data name="SteelWing" xml:space="preserve">
+    <value>Acélszárny</value>
+  </data>
+  <data name="SteelWingFast" xml:space="preserve">
+    <value>Acélszárny</value>
+  </data>
+  <data name="Stomp" xml:space="preserve">
+    <value>Eltiprás</value>
+  </data>
+  <data name="StoneEdge" xml:space="preserve">
+    <value>Kőpenge</value>
+  </data>
+  <data name="Struggle" xml:space="preserve">
+    <value>Erőlködés</value>
+  </data>
+  <data name="Submission" xml:space="preserve">
+    <value>Engedelmesség</value>
+  </data>
+  <data name="SuckerPunchFast" xml:space="preserve">
+    <value>Szívó Ütés</value>
+  </data>
+  <data name="Swift" xml:space="preserve">
+    <value>Fürgeség</value>
+  </data>
+  <data name="TackleFast" xml:space="preserve">
+    <value>Megragadás</value>
+  </data>
+  <data name="Thunder" xml:space="preserve">
+    <value>Villám</value>
+  </data>
+  <data name="Thunderbolt" xml:space="preserve">
+    <value>Villámcsapás</value>
+  </data>
+  <data name="ThunderPunch" xml:space="preserve">
+    <value>Mennykőcsapás</value>
+  </data>
+  <data name="ThunderShockFast" xml:space="preserve">
+    <value>Villámsokk</value>
+  </data>
+  <data name="Twineedle" xml:space="preserve">
+    <value>Twineedle</value>
+  </data>
+  <data name="Twister" xml:space="preserve">
+    <value>Twister</value>
+  </data>
+  <data name="VineWhipFast" xml:space="preserve">
+    <value>Gyors Indacsapás</value>
+  </data>
+  <data name="WaterGunFast" xml:space="preserve">
+    <value>Vízágyú</value>
+  </data>
+  <data name="WaterGunFastBlastoise" xml:space="preserve">
+    <value>Vízágyú</value>
+  </data>
+  <data name="WaterPulse" xml:space="preserve">
+    <value>Aqua Pulzus</value>
+  </data>
+  <data name="WingAttackFast" xml:space="preserve">
+    <value>Szárnycsapás</value>
+  </data>
+  <data name="WrapGreen" xml:space="preserve">
+    <value>Zöld Betakarás</value>
+  </data>
+  <data name="WrapPink" xml:space="preserve">
+    <value>Pink Betakarás</value>
+  </data>
+  <data name="XScissor" xml:space="preserve">
+    <value>XScissor</value>
+  </data>
+  <data name="ZenHeadbuttFast" xml:space="preserve">
+    <value>Zen Fejelés</value>
+  </data>
 </root>

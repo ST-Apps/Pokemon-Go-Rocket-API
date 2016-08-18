@@ -24,12 +24,11 @@ namespace POGOProtos.Networking.Requests.Messages {
           string.Concat(
             "Cj5QT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVxdWVzdHMvTWVzc2FnZXMvR2V0",
             "UGxheWVyTWVzc2FnZS5wcm90bxInUE9HT1Byb3Rvcy5OZXR3b3JraW5nLlJl",
-            "cXVlc3RzLk1lc3NhZ2VzIicKEEdldFBsYXllck1lc3NhZ2USEwoLYXBwX3Zl",
-            "cnNpb24YASABKAliBnByb3RvMw=="));
+            "cXVlc3RzLk1lc3NhZ2VzIhIKEEdldFBsYXllck1lc3NhZ2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Requests.Messages.GetPlayerMessage), global::POGOProtos.Networking.Requests.Messages.GetPlayerMessage.Parser, new[]{ "AppVersion" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Requests.Messages.GetPlayerMessage), global::POGOProtos.Networking.Requests.Messages.GetPlayerMessage.Parser, null, null, null, null)
           }));
     }
     #endregion
@@ -60,26 +59,11 @@ namespace POGOProtos.Networking.Requests.Messages {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetPlayerMessage(GetPlayerMessage other) : this() {
-      appVersion_ = other.appVersion_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetPlayerMessage Clone() {
       return new GetPlayerMessage(this);
-    }
-
-    /// <summary>Field number for the "app_version" field.</summary>
-    public const int AppVersionFieldNumber = 1;
-    private string appVersion_ = "";
-    /// <summary>
-    ///  Human readable app version, e.g. "0.31.1"
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string AppVersion {
-      get { return appVersion_; }
-      set {
-        appVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -95,14 +79,12 @@ namespace POGOProtos.Networking.Requests.Messages {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (AppVersion != other.AppVersion) return false;
       return true;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (AppVersion.Length != 0) hash ^= AppVersion.GetHashCode();
       return hash;
     }
 
@@ -113,18 +95,11 @@ namespace POGOProtos.Networking.Requests.Messages {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (AppVersion.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(AppVersion);
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (AppVersion.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(AppVersion);
-      }
       return size;
     }
 
@@ -132,9 +107,6 @@ namespace POGOProtos.Networking.Requests.Messages {
     public void MergeFrom(GetPlayerMessage other) {
       if (other == null) {
         return;
-      }
-      if (other.AppVersion.Length != 0) {
-        AppVersion = other.AppVersion;
       }
     }
 
@@ -146,10 +118,6 @@ namespace POGOProtos.Networking.Requests.Messages {
           default:
             input.SkipLastField();
             break;
-          case 10: {
-            AppVersion = input.ReadString();
-            break;
-          }
         }
       }
     }

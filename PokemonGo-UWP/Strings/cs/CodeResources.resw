@@ -75,4 +75,7 @@ Chcete otevřít stránku se soubory pro manuální instalaci? </value>
   <data name="NoTeamText" xml:space="preserve">
     <value>Bez týmu</value>
   </data>
+  <data name="ActivityUnknown" xml:space="preserve">
+    <value>Neznámé</value>
+  </data>
 </root>

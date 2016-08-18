@@ -24,20 +24,25 @@ namespace POGOProtos.Networking.Responses {
           string.Concat(
             "Cj1QT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVzcG9uc2VzL0FkZEZvcnRNb2Rp",
             "ZmllclJlc3BvbnNlLnByb3RvEh9QT0dPUHJvdG9zLk5ldHdvcmtpbmcuUmVz",
-            "cG9uc2VzIhkKF0FkZEZvcnRNb2RpZmllclJlc3BvbnNlYgZwcm90bzM="));
+            "cG9uc2VzGjlQT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVzcG9uc2VzL0ZvcnRE",
+            "ZXRhaWxzUmVzcG9uc2UucHJvdG8iqwIKF0FkZEZvcnRNb2RpZmllclJlc3Bv",
+            "bnNlEk8KBnJlc3VsdBgBIAEoDjI/LlBPR09Qcm90b3MuTmV0d29ya2luZy5S",
+            "ZXNwb25zZXMuQWRkRm9ydE1vZGlmaWVyUmVzcG9uc2UuUmVzdWx0EkoKDGZv",
+            "cnRfZGV0YWlscxgCIAEoCzI0LlBPR09Qcm90b3MuTmV0d29ya2luZy5SZXNw",
+            "b25zZXMuRm9ydERldGFpbHNSZXNwb25zZSJzCgZSZXN1bHQSEQoNTk9fUkVT",
+            "VUxUX1NFVBAAEgsKB1NVQ0NFU1MQARIdChlGT1JUX0FMUkVBRFlfSEFTX01P",
+            "RElGSUVSEAISEAoMVE9PX0ZBUl9BV0FZEAMSGAoUTk9fSVRFTV9JTl9JTlZF",
+            "TlRPUlkQBGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::POGOProtos.Networking.Responses.FortDetailsResponseReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Responses.AddFortModifierResponse), global::POGOProtos.Networking.Responses.AddFortModifierResponse.Parser, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Responses.AddFortModifierResponse), global::POGOProtos.Networking.Responses.AddFortModifierResponse.Parser, new[]{ "Result", "FortDetails" }, null, new[]{ typeof(global::POGOProtos.Networking.Responses.AddFortModifierResponse.Types.Result) }, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  /// <summary>
-  ///  Initialized by assist.py
-  /// </summary>
   public sealed partial class AddFortModifierResponse : pb::IMessage<AddFortModifierResponse> {
     private static readonly pb::MessageParser<AddFortModifierResponse> _parser = new pb::MessageParser<AddFortModifierResponse>(() => new AddFortModifierResponse());
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -62,11 +67,35 @@ namespace POGOProtos.Networking.Responses {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AddFortModifierResponse(AddFortModifierResponse other) : this() {
+      result_ = other.result_;
+      FortDetails = other.fortDetails_ != null ? other.FortDetails.Clone() : null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AddFortModifierResponse Clone() {
       return new AddFortModifierResponse(this);
+    }
+
+    /// <summary>Field number for the "result" field.</summary>
+    public const int ResultFieldNumber = 1;
+    private global::POGOProtos.Networking.Responses.AddFortModifierResponse.Types.Result result_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::POGOProtos.Networking.Responses.AddFortModifierResponse.Types.Result Result {
+      get { return result_; }
+      set {
+        result_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "fort_details" field.</summary>
+    public const int FortDetailsFieldNumber = 2;
+    private global::POGOProtos.Networking.Responses.FortDetailsResponse fortDetails_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::POGOProtos.Networking.Responses.FortDetailsResponse FortDetails {
+      get { return fortDetails_; }
+      set {
+        fortDetails_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -82,12 +111,16 @@ namespace POGOProtos.Networking.Responses {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Result != other.Result) return false;
+      if (!object.Equals(FortDetails, other.FortDetails)) return false;
       return true;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (Result != 0) hash ^= Result.GetHashCode();
+      if (fortDetails_ != null) hash ^= FortDetails.GetHashCode();
       return hash;
     }
 
@@ -98,11 +131,25 @@ namespace POGOProtos.Networking.Responses {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+      if (Result != 0) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Result);
+      }
+      if (fortDetails_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(FortDetails);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (Result != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
+      }
+      if (fortDetails_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FortDetails);
+      }
       return size;
     }
 
@@ -110,6 +157,15 @@ namespace POGOProtos.Networking.Responses {
     public void MergeFrom(AddFortModifierResponse other) {
       if (other == null) {
         return;
+      }
+      if (other.Result != 0) {
+        Result = other.Result;
+      }
+      if (other.fortDetails_ != null) {
+        if (fortDetails_ == null) {
+          fortDetails_ = new global::POGOProtos.Networking.Responses.FortDetailsResponse();
+        }
+        FortDetails.MergeFrom(other.FortDetails);
       }
     }
 
@@ -121,9 +177,35 @@ namespace POGOProtos.Networking.Responses {
           default:
             input.SkipLastField();
             break;
+          case 8: {
+            result_ = (global::POGOProtos.Networking.Responses.AddFortModifierResponse.Types.Result) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (fortDetails_ == null) {
+              fortDetails_ = new global::POGOProtos.Networking.Responses.FortDetailsResponse();
+            }
+            input.ReadMessage(fortDetails_);
+            break;
+          }
         }
       }
     }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AddFortModifierResponse message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum Result {
+        [pbr::OriginalName("NO_RESULT_SET")] NoResultSet = 0,
+        [pbr::OriginalName("SUCCESS")] Success = 1,
+        [pbr::OriginalName("FORT_ALREADY_HAS_MODIFIER")] FortAlreadyHasModifier = 2,
+        [pbr::OriginalName("TOO_FAR_AWAY")] TooFarAway = 3,
+        [pbr::OriginalName("NO_ITEM_IN_INVENTORY")] NoItemInInventory = 4,
+      }
+
+    }
+    #endregion
 
   }
 

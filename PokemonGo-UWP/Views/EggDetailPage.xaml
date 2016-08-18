@@ -223,13 +223,14 @@
 
                     <StackPanel Grid.Row="1"
                                 Visibility="{Binding CurrentEgg.EggIncubatorId, Converter={StaticResource VisibleWhenStringEmptyConverter}}">
-                        <TextBlock Text="Use an incubator to incubate the Egg."
+                        <TextBlock x:Uid="EggDetailTextBlock"
+                                   TextWrapping="WrapWholeWords"
                                    HorizontalAlignment="Center" />
 
                         <Button Style="{StaticResource ButtonSubmit}"
                                 Tapped="ToggleIncubatorModel"
                                 Width="180">
-                            <TextBlock Text="START INCUBATION" />
+                            <TextBlock x:Uid="EggDetailButtonTextBlock" />
                         </Button>
                     </StackPanel>
 

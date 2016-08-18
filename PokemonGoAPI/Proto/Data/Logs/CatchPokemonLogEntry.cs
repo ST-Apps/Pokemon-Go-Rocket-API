@@ -24,13 +24,13 @@ namespace POGOProtos.Data.Logs {
           string.Concat(
             "Ci9QT0dPUHJvdG9zL0RhdGEvTG9ncy9DYXRjaFBva2Vtb25Mb2dFbnRyeS5w",
             "cm90bxIUUE9HT1Byb3Rvcy5EYXRhLkxvZ3MaIFBPR09Qcm90b3MvRW51bXMv",
-            "UG9rZW1vbklkLnByb3RvIvcBChRDYXRjaFBva2Vtb25Mb2dFbnRyeRJBCgZy",
+            "UG9rZW1vbklkLnByb3RvIowCChRDYXRjaFBva2Vtb25Mb2dFbnRyeRJBCgZy",
             "ZXN1bHQYASABKA4yMS5QT0dPUHJvdG9zLkRhdGEuTG9ncy5DYXRjaFBva2Vt",
             "b25Mb2dFbnRyeS5SZXN1bHQSLwoKcG9rZW1vbl9pZBgCIAEoDjIbLlBPR09Q",
             "cm90b3MuRW51bXMuUG9rZW1vbklkEhUKDWNvbWJhdF9wb2ludHMYAyABKAUS",
-            "FwoPcG9rZW1vbl9kYXRhX2lkGAQgASgEIjsKBlJlc3VsdBIJCgVVTlNFVBAA",
-            "EhQKEFBPS0VNT05fQ0FQVFVSRUQQARIQCgxQT0tFTU9OX0ZMRUQQAmIGcHJv",
-            "dG8z"));
+            "FwoPcG9rZW1vbl9kYXRhX2lkGAQgASgGIlAKBlJlc3VsdBIJCgVVTlNFVBAA",
+            "EhQKEFBPS0VNT05fQ0FQVFVSRUQQARIQCgxQT0tFTU9OX0ZMRUQQAhITCg9Q",
+            "T0tFTU9OX0hBVENIRUQQA2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Enums.PokemonIdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -170,8 +170,8 @@ namespace POGOProtos.Data.Logs {
         output.WriteInt32(CombatPoints);
       }
       if (PokemonDataId != 0UL) {
-        output.WriteRawTag(32);
-        output.WriteUInt64(PokemonDataId);
+        output.WriteRawTag(33);
+        output.WriteFixed64(PokemonDataId);
       }
     }
 
@@ -188,7 +188,7 @@ namespace POGOProtos.Data.Logs {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(CombatPoints);
       }
       if (PokemonDataId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(PokemonDataId);
+        size += 1 + 8;
       }
       return size;
     }
@@ -232,8 +232,8 @@ namespace POGOProtos.Data.Logs {
             CombatPoints = input.ReadInt32();
             break;
           }
-          case 32: {
-            PokemonDataId = input.ReadUInt64();
+          case 33: {
+            PokemonDataId = input.ReadFixed64();
             break;
           }
         }
@@ -248,6 +248,7 @@ namespace POGOProtos.Data.Logs {
         [pbr::OriginalName("UNSET")] Unset = 0,
         [pbr::OriginalName("POKEMON_CAPTURED")] PokemonCaptured = 1,
         [pbr::OriginalName("POKEMON_FLED")] PokemonFled = 2,
+        [pbr::OriginalName("POKEMON_HATCHED")] PokemonHatched = 3,
       }
 
     }

@@ -27,17 +27,19 @@ namespace POGOProtos.Settings {
             "ZXR0aW5ncy5wcm90bxolUE9HT1Byb3Rvcy9TZXR0aW5ncy9NYXBTZXR0aW5n",
             "cy5wcm90bxonUE9HT1Byb3Rvcy9TZXR0aW5ncy9MZXZlbFNldHRpbmdzLnBy",
             "b3RvGitQT0dPUHJvdG9zL1NldHRpbmdzL0ludmVudG9yeVNldHRpbmdzLnBy",
-            "b3RvIqICCg5HbG9iYWxTZXR0aW5ncxI4Cg1mb3J0X3NldHRpbmdzGAIgASgL",
-            "MiEuUE9HT1Byb3Rvcy5TZXR0aW5ncy5Gb3J0U2V0dGluZ3MSNgoMbWFwX3Nl",
-            "dHRpbmdzGAMgASgLMiAuUE9HT1Byb3Rvcy5TZXR0aW5ncy5NYXBTZXR0aW5n",
-            "cxI6Cg5sZXZlbF9zZXR0aW5ncxgEIAEoCzIiLlBPR09Qcm90b3MuU2V0dGlu",
-            "Z3MuTGV2ZWxTZXR0aW5ncxJCChJpbnZlbnRvcnlfc2V0dGluZ3MYBSABKAsy",
-            "Ji5QT0dPUHJvdG9zLlNldHRpbmdzLkludmVudG9yeVNldHRpbmdzEh4KFm1p",
-            "bmltdW1fY2xpZW50X3ZlcnNpb24YBiABKAliBnByb3RvMw=="));
+            "b3RvGiVQT0dPUHJvdG9zL1NldHRpbmdzL0dwc1NldHRpbmdzLnByb3RvItoC",
+            "Cg5HbG9iYWxTZXR0aW5ncxI4Cg1mb3J0X3NldHRpbmdzGAIgASgLMiEuUE9H",
+            "T1Byb3Rvcy5TZXR0aW5ncy5Gb3J0U2V0dGluZ3MSNgoMbWFwX3NldHRpbmdz",
+            "GAMgASgLMiAuUE9HT1Byb3Rvcy5TZXR0aW5ncy5NYXBTZXR0aW5ncxI6Cg5s",
+            "ZXZlbF9zZXR0aW5ncxgEIAEoCzIiLlBPR09Qcm90b3MuU2V0dGluZ3MuTGV2",
+            "ZWxTZXR0aW5ncxJCChJpbnZlbnRvcnlfc2V0dGluZ3MYBSABKAsyJi5QT0dP",
+            "UHJvdG9zLlNldHRpbmdzLkludmVudG9yeVNldHRpbmdzEh4KFm1pbmltdW1f",
+            "Y2xpZW50X3ZlcnNpb24YBiABKAkSNgoMZ3BzX3NldHRpbmdzGAcgASgLMiAu",
+            "UE9HT1Byb3Rvcy5TZXR0aW5ncy5HcHNTZXR0aW5nc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::POGOProtos.Settings.FortSettingsReflection.Descriptor, global::POGOProtos.Settings.MapSettingsReflection.Descriptor, global::POGOProtos.Settings.LevelSettingsReflection.Descriptor, global::POGOProtos.Settings.InventorySettingsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::POGOProtos.Settings.FortSettingsReflection.Descriptor, global::POGOProtos.Settings.MapSettingsReflection.Descriptor, global::POGOProtos.Settings.LevelSettingsReflection.Descriptor, global::POGOProtos.Settings.InventorySettingsReflection.Descriptor, global::POGOProtos.Settings.GpsSettingsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Settings.GlobalSettings), global::POGOProtos.Settings.GlobalSettings.Parser, new[]{ "FortSettings", "MapSettings", "LevelSettings", "InventorySettings", "MinimumClientVersion" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Settings.GlobalSettings), global::POGOProtos.Settings.GlobalSettings.Parser, new[]{ "FortSettings", "MapSettings", "LevelSettings", "InventorySettings", "MinimumClientVersion", "GpsSettings" }, null, null, null)
           }));
     }
     #endregion
@@ -73,6 +75,7 @@ namespace POGOProtos.Settings {
       LevelSettings = other.levelSettings_ != null ? other.LevelSettings.Clone() : null;
       InventorySettings = other.inventorySettings_ != null ? other.InventorySettings.Clone() : null;
       minimumClientVersion_ = other.minimumClientVersion_;
+      GpsSettings = other.gpsSettings_ != null ? other.GpsSettings.Clone() : null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -135,6 +138,17 @@ namespace POGOProtos.Settings {
       }
     }
 
+    /// <summary>Field number for the "gps_settings" field.</summary>
+    public const int GpsSettingsFieldNumber = 7;
+    private global::POGOProtos.Settings.GpsSettings gpsSettings_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::POGOProtos.Settings.GpsSettings GpsSettings {
+      get { return gpsSettings_; }
+      set {
+        gpsSettings_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GlobalSettings);
@@ -153,6 +167,7 @@ namespace POGOProtos.Settings {
       if (!object.Equals(LevelSettings, other.LevelSettings)) return false;
       if (!object.Equals(InventorySettings, other.InventorySettings)) return false;
       if (MinimumClientVersion != other.MinimumClientVersion) return false;
+      if (!object.Equals(GpsSettings, other.GpsSettings)) return false;
       return true;
     }
 
@@ -164,6 +179,7 @@ namespace POGOProtos.Settings {
       if (levelSettings_ != null) hash ^= LevelSettings.GetHashCode();
       if (inventorySettings_ != null) hash ^= InventorySettings.GetHashCode();
       if (MinimumClientVersion.Length != 0) hash ^= MinimumClientVersion.GetHashCode();
+      if (gpsSettings_ != null) hash ^= GpsSettings.GetHashCode();
       return hash;
     }
 
@@ -194,6 +210,10 @@ namespace POGOProtos.Settings {
         output.WriteRawTag(50);
         output.WriteString(MinimumClientVersion);
       }
+      if (gpsSettings_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(GpsSettings);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -213,6 +233,9 @@ namespace POGOProtos.Settings {
       }
       if (MinimumClientVersion.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MinimumClientVersion);
+      }
+      if (gpsSettings_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GpsSettings);
       }
       return size;
     }
@@ -248,6 +271,12 @@ namespace POGOProtos.Settings {
       }
       if (other.MinimumClientVersion.Length != 0) {
         MinimumClientVersion = other.MinimumClientVersion;
+      }
+      if (other.gpsSettings_ != null) {
+        if (gpsSettings_ == null) {
+          gpsSettings_ = new global::POGOProtos.Settings.GpsSettings();
+        }
+        GpsSettings.MergeFrom(other.GpsSettings);
       }
     }
 
@@ -289,6 +318,13 @@ namespace POGOProtos.Settings {
           }
           case 50: {
             MinimumClientVersion = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (gpsSettings_ == null) {
+              gpsSettings_ = new global::POGOProtos.Settings.GpsSettings();
+            }
+            input.ReadMessage(gpsSettings_);
             break;
           }
         }

@@ -16,6 +16,16 @@ namespace PokemonGo_UWP.Entities
             _nearbyPokemon = nearbyPokemon;
         }
 
+        /// <summary>
+        /// The file name for this Pokemon, located in /Assets/Pokemons
+        /// </summary>
+        public string ImageFileName => $"{(int)PokemonId}.png";
+
+        /// <summary>
+        /// The file name for this Pokemon, located in /Assets/Pokemons
+        /// </summary>
+        public string ImageFilePath => $"ms-appx:///Assets/Pokemons/{(int)PokemonId}.png";
+
         public void Update(NearbyPokemon update)
         {
             _nearbyPokemon = update;

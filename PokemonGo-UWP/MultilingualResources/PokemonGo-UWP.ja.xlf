@@ -455,6 +455,34 @@ Open page with installation files for manual install?</target>
           <source>Defeat Gym Leader</source>
           <target state="new">Defeat Gym Leader</target>
         </trans-unit>
+        <trans-unit id="Combat" translate="yes" xml:space="preserve">
+          <source>Combat</source>
+          <target state="new">Combat</target>
+        </trans-unit>
+        <trans-unit id="Date" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <target state="new">Date</target>
+        </trans-unit>
+        <trans-unit id="Fav" translate="yes" xml:space="preserve">
+          <source>Favorite</source>
+          <target state="new">Favorite</target>
+        </trans-unit>
+        <trans-unit id="Health" translate="yes" xml:space="preserve">
+          <source>Health</source>
+          <target state="new">Health</target>
+        </trans-unit>
+        <trans-unit id="Name" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <target state="new">Name</target>
+        </trans-unit>
+        <trans-unit id="Number" translate="yes" xml:space="preserve">
+          <source>Number</source>
+          <target state="new">Number</target>
+        </trans-unit>
+        <trans-unit id="PokemonInventoryFullText" translate="yes" xml:space="preserve">
+          <source>Your Pokémon inventory is full, transfer some Pokémon before trying to catch {0}.</source>
+          <target state="new">Your Pokémon inventory is full, transfer some Pokémon before trying to catch {0}.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -637,6 +665,14 @@ Open page with installation files for manual install?</target>
         <trans-unit id="SettingsRememberMapZoomTextBlock" translate="yes" xml:space="preserve">
           <source>Remember Map Zoom</source>
           <target state="new">Remember Map Zoom</target>
+        </trans-unit>
+        <trans-unit id="EggDetailButtonTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>START INCUBATION</source>
+          <target state="new">START INCUBATION</target>
+        </trans-unit>
+        <trans-unit id="EggDetailTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Use an incubator to incubate the Egg.</source>
+          <target state="new">Use an incubator to incubate the Egg.</target>
         </trans-unit>
       </group>
     </body>
@@ -2160,6 +2196,87 @@ Open page with installation files for manual install?</target>
         <trans-unit id="ZenHeadbuttFast" translate="yes" xml:space="preserve">
           <source>Zen Headbutt</source>
           <target state="new">Zen Headbutt</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="en-US" target-language="ja" original="POKEMONGO-UWP/STRINGS/EN-US/POKEMONTYPES.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1605.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="POKEMONGO-UWP/STRINGS/EN-US/POKEMONTYPES.RESW" datatype="resx">
+        <trans-unit id="Bug" translate="yes" xml:space="preserve">
+          <source>Bug</source>
+          <target state="new">Bug</target>
+        </trans-unit>
+        <trans-unit id="Dark" translate="yes" xml:space="preserve">
+          <source>Dark</source>
+          <target state="new">Dark</target>
+        </trans-unit>
+        <trans-unit id="Dragon" translate="yes" xml:space="preserve">
+          <source>Dragon</source>
+          <target state="new">Dragon</target>
+        </trans-unit>
+        <trans-unit id="Electric" translate="yes" xml:space="preserve">
+          <source>Electric</source>
+          <target state="new">Electric</target>
+        </trans-unit>
+        <trans-unit id="Fairy" translate="yes" xml:space="preserve">
+          <source>Fairy</source>
+          <target state="new">Fairy</target>
+        </trans-unit>
+        <trans-unit id="Fighting" translate="yes" xml:space="preserve">
+          <source>Fighting</source>
+          <target state="new">Fighting</target>
+        </trans-unit>
+        <trans-unit id="Fire" translate="yes" xml:space="preserve">
+          <source>Fire</source>
+          <target state="new">Fire</target>
+        </trans-unit>
+        <trans-unit id="Flying" translate="yes" xml:space="preserve">
+          <source>Flying</source>
+          <target state="new">Flying</target>
+        </trans-unit>
+        <trans-unit id="Ghost" translate="yes" xml:space="preserve">
+          <source>Ghost</source>
+          <target state="new">Ghost</target>
+        </trans-unit>
+        <trans-unit id="Grass" translate="yes" xml:space="preserve">
+          <source>Grass</source>
+          <target state="new">Grass</target>
+        </trans-unit>
+        <trans-unit id="Ground" translate="yes" xml:space="preserve">
+          <source>Ground</source>
+          <target state="new">Ground</target>
+        </trans-unit>
+        <trans-unit id="Ice" translate="yes" xml:space="preserve">
+          <source>Ice</source>
+          <target state="new">Ice</target>
+        </trans-unit>
+        <trans-unit id="Normal" translate="yes" xml:space="preserve">
+          <source>Normal</source>
+          <target state="new">Normal</target>
+        </trans-unit>
+        <trans-unit id="Poison" translate="yes" xml:space="preserve">
+          <source>Poison</source>
+          <target state="new">Poison</target>
+        </trans-unit>
+        <trans-unit id="Psychic" translate="yes" xml:space="preserve">
+          <source>Psychic</source>
+          <target state="new">Psychic</target>
+        </trans-unit>
+        <trans-unit id="Rock" translate="yes" xml:space="preserve">
+          <source>Rock</source>
+          <target state="new">Rock</target>
+        </trans-unit>
+        <trans-unit id="Steel" translate="yes" xml:space="preserve">
+          <source>Steel</source>
+          <target state="new">Steel</target>
+        </trans-unit>
+        <trans-unit id="Water" translate="yes" xml:space="preserve">
+          <source>Water</source>
+          <target state="new">Water</target>
         </trans-unit>
       </group>
     </body>

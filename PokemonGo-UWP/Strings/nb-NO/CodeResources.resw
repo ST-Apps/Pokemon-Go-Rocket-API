@@ -12,4 +12,91 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DateFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
+  <data name="DateTimeFormat" xml:space="preserve">
+    <value>dd.MM.yyyy hh:mm tt</value>
+  </data>
+  <data name="PokemonFledText" xml:space="preserve">
+    <value>{0} flyktet
+</value>
+  </data>
+  <data name="GettingGpsSignalText" xml:space="preserve">
+    <value>Skaffer GPS signal...</value>
+  </data>
+  <data name="GettingUserDataText" xml:space="preserve">
+    <value>Henter brukerdata...</value>
+  </data>
+  <data name="GoogleErrorText" xml:space="preserve">
+    <value>Google returnerte feil: </value>
+  </data>
+  <data name="GoogleNotRespondingText" xml:space="preserve">
+    <value>Google svarer ikke, vennligst prøv igjen senere.</value>
+  </data>
+  <data name="LoadingEncounterText" xml:space="preserve">
+    <value>Laster møte med {0}</value>
+  </data>
+  <data name="LoggingInText" xml:space="preserve">
+    <value>Logger inn...</value>
+  </data>
+  <data name="LoginFailedText" xml:space="preserve">
+    <value>Pålogging mislykkes, vennligst prøv på nytt.</value>
+  </data>
+  <data name="NoText" xml:space="preserve">
+    <value>Nei</value>
+  </data>
+  <data name="NoGpsPermissionsText" xml:space="preserve">
+    <value>Vi trenger GPS tillatelse for å starte spillet, vennligst aktiver det og prøv på nytt.</value>
+  </data>
+  <data name="PtcDownText" xml:space="preserve">
+    <value>PTC påloggingen er sannsynligvis nede, vennligst prøv på nytt senere.</value>
+  </data>
+  <data name="SomethingWentWrongText" xml:space="preserve">
+    <value>Noe gikk galt og appen kan være ustabil. Vil du å logge ut og prøve på nytt?</value>
+  </data>
+  <data name="TimeFormat" xml:space="preserve">
+    <value>hh:mm tt</value>
+  </data>
+  <data name="UpdateDownloadingText" xml:space="preserve">
+    <value>Laster ned oppdatering {0}</value>
+  </data>
+  <data name="UpdatedVersionText" xml:space="preserve">
+    <value>En oppdatert versjon {0} er tilgjengelig. Vil du oppdatere?
+{1}</value>
+  </data>
+  <data name="UpdateFailedText" xml:space="preserve">
+    <value>Oppdatering mislykkes: {0}
+Vil du åpne installasjonsfilene for manuell installasjon?</value>
+  </data>
+  <data name="UpdateInstallingText" xml:space="preserve">
+    <value>Installerer oppdatering, appen starter på nytt...</value>
+  </data>
+  <data name="WrongUsernameText" xml:space="preserve">
+    <value>Feil brukernavn/passord eller frakoblet server, vennligst prøv igjen.</value>
+  </data>
+  <data name="YesText" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="InstinctTeamText" xml:space="preserve">
+    <value>Instinct</value>
+  </data>
+  <data name="NoTeamText" xml:space="preserve">
+    <value>Ingen lag</value>
+  </data>
+  <data name="ValorTeamText" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="MysticTeamText" xml:space="preserve">
+    <value>Mystic</value>
+  </data>
+  <data name="TransferPokemonSuccessText" xml:space="preserve">
+    <value>Overføring fullført! Du fikk en {0} Candy fra Professoren.</value>
+  </data>
+  <data name="TransferPokemonWarningText" xml:space="preserve">
+    <value>Du kan ikke få den tilbake etter den er overført til Professoren. Vil du virkelig å overføre {0} til Professoren?</value>
+  </data>
+  <data name="ActivityUnknown" xml:space="preserve">
+    <value>Ukjent</value>
+  </data>
 </root>

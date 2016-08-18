@@ -503,7 +503,7 @@
         <Button Style="{ThemeResource ImageButtonStyle}"
                 RelativePanel.AlignLeftWithPanel="True"
                 RelativePanel.AlignTopWithPanel="True"
-                Margin="8"
+                Margin="16"
                 Height="{ThemeResource UiButtonSize}"
                 HorizontalAlignment="Center"
                 Command="{Binding EscapeEncounterCommand}"
@@ -516,7 +516,7 @@
         <Button Style="{ThemeResource ImageButtonStyle}"
                 RelativePanel.AlignRightWithPanel="True"
                 RelativePanel.AlignBottomWithPanel="True"
-                Margin="8"
+                Margin="16"
                 Height="{ThemeResource UiButtonSize}"
                 HorizontalAlignment="Center"
                 x:Name="InventoryButton">

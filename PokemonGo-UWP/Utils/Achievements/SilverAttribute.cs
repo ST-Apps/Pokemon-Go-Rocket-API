@@ -1,14 +1,9 @@
-﻿using System;
-
-namespace PokemonGo_UWP.Utils
+﻿namespace PokemonGo_UWP.Utils
 {
-    public class SilverAttribute : Attribute
+    public class SilverAttribute : AchievementValueAttribute
     {
-        public SilverAttribute(object value)
+        public SilverAttribute(object value) : base(value)
         {
-            Value = value;
         }
-
-        public object Value { get; set; }
     }
 }

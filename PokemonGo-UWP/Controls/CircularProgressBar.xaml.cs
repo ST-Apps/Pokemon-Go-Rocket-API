@@ -19,17 +19,14 @@ namespace PokemonGo_UWP.Controls
 
         private static void OnValueChanged(DependencyObject sender, DependencyPropertyChangedEventArgs args)
         {
-            CircularProgressBar circularProgress = sender as CircularProgressBar;
+            var circularProgress = sender as CircularProgressBar;
             if (circularProgress != null)
             {
-                if (circularProgress.Value != 0)
-                {
-                    circularProgress.Percentage = ((double)circularProgress.Value / circularProgress.Maximum) * 100;
-                    return;
-                }
+                if (circularProgress.Value == 0)
+                    circularProgress.Percentage = 0;
 
-                circularProgress.Percentage = 0;
-
+                var currentValue = Math.Min(circularProgress.Value, circularProgress.Maximum);
+                circularProgress.Percentage = (double)currentValue / circularProgress.Maximum * 100;
             }
         }
 

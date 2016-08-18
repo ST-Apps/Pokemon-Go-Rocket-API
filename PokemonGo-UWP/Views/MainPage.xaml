@@ -43,7 +43,7 @@
                              PlaceholderText="PASSWORD" />
                 <CheckBox x:Name="RememberMeCheckBox"
                           x:Uid="RememberMeCheckBox"
-                          IsChecked="{Binding RememberLoginData}"
+                          IsChecked="{Binding RememberLoginData, Mode=TwoWay}"
                           Margin="15,20,15,0">
                     <TextBlock x:Uid="RememberMeTextBlock" 
                                Text="REMEMBER ME" />

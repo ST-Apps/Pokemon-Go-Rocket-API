@@ -2,7 +2,10 @@
 using System.Threading.Tasks;
 using Windows.System;
 using DankMemes.GPSOAuthSharp;
+using PokemonGo.RocketAPI.Enums;
 using PokemonGo.RocketAPI.Exceptions;
+using PokemonGo.RocketAPI.Extensions;
+using PokemonGoAPI.Session;
 
 namespace PokemonGo.RocketAPI.Login
 {
@@ -15,8 +18,8 @@ namespace PokemonGo.RocketAPI.Login
 
         public const string GoogleLoginApp = "com.nianticlabs.pokemongo";
         public const string GoogleLoginClientSig = "321187995bc7cdc2b5fc91b11a96e2baa8602c62";
-        private readonly string _email;
 
+        private readonly string _email;
         private readonly string _password;
 
         public GoogleLogin(string email, string password)
@@ -26,7 +29,7 @@ namespace PokemonGo.RocketAPI.Login
         }
 
 #pragma warning disable 1998
-        public async Task<string> GetAccessToken()
+        public async Task<AccessToken> GetAccessToken()
 #pragma warning restore 1998
         {
             var client = new GPSOAuthClient(_email, _password);
@@ -55,7 +58,15 @@ namespace PokemonGo.RocketAPI.Login
             if (!oauthResponse.ContainsKey("Auth"))
                 throw new GoogleOfflineException();
 
-            return oauthResponse["Auth"];
+            //return oauthResponse["Auth"];
+
+            return new AccessToken
+            {
+                Username = _email,
+                Token = oauthResponse["Auth"],
+                Expiry = DateTimeExtensions.GetDateTimeFromSeconds(int.Parse(oauthResponse["Expiry"])),
+                AuthType = AuthType.Google
+            };
         }
     }
 }

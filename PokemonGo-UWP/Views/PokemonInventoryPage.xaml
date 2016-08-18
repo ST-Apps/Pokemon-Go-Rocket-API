@@ -8,6 +8,7 @@
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:controls="using:Template10.Controls"
+    xmlns:entities="using:PokemonGo_UWP.Entities"
     mc:Ignorable="d">
 
     <Page.DataContext>
@@ -93,7 +94,7 @@
                              To="350"
                              Duration="0:0:0.2" />
         </Storyboard>
-        
+
     </Page.Resources>
 
     <Grid>
@@ -103,6 +104,7 @@
                 <GradientStop Color="#43bab6" Offset="0.8" />
             </LinearGradientBrush>
         </Grid.Background>
+
         <Grid x:Name="SortMenuPanel" Opacity="0" Canvas.ZIndex="0">
             <Grid.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
@@ -110,6 +112,7 @@
                     <GradientStop Color="#43bab6" Offset="0.8" />
                 </LinearGradientBrush>
             </Grid.Background>
+
             <ListView ItemsSource="{Binding Converter={StaticResource PokemonSortingModesToSortingModesListConverter}}"
                       SelectedItem="{Binding CurrentPokemonSortingMode, Mode=TwoWay}"
                       IsItemClickEnabled="True"
@@ -135,7 +138,7 @@
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <TextBlock Grid.Column="0"
-                                       Text="{Binding}"
+                                       Text="{Binding Converter={StaticResource PokemonSortingModesTranslationConverter}}"
                                        Style="{StaticResource TextSortTitle}" />
                             <Button Grid.Column="1"
                                     IsHitTestVisible="False"
@@ -162,7 +165,7 @@
                 <Image Source="../Assets/Buttons/btn_close_dark.png" />
             </Button>
         </Grid>
-        
+
         <Grid x:Name="IncubatorsContainer"
               Canvas.ZIndex="5">
             <Grid.RowDefinitions>
@@ -211,10 +214,11 @@
                                 <GridView.ItemTemplate>
                                     <DataTemplate>
                                         <StackPanel>
-                                            <Image Source="{Binding ItemId, Converter={StaticResource ItemIdToItemIconConverter}}"
-                                                   Width="75"
-                                                   Height="75"
-                                                   Margin="10,15,10,0" />
+                                            <Image
+                                                Source="{Binding ItemId, Converter={StaticResource ItemIdToItemIconConverter}}"
+                                                Width="75"
+                                                Height="75"
+                                                Margin="10,15,10,0" />
                                             <TextBlock Style="{StaticResource TextGridViewTop}">
                                                 <Run FontWeight="Bold"
                                                      FontSize="15"
@@ -238,9 +242,13 @@
                 </controls:ModalDialog.ModalContent>
             </controls:ModalDialog>
 
-        </Grid> <!-- Da rifare -->
+        </Grid>
+        <!-- Da rifare -->
+
         <Border Margin="12,12,12,0" Background="White" CornerRadius="5,5,0,0">
+
             <Pivot x:Name="MainUIPanel" SelectionChanged="SelectionChanged">
+
                 <PivotItem x:Name="PokemonsPivot">
                     <Grid>
                         <Grid.RowDefinitions>
@@ -249,60 +257,83 @@
                         </Grid.RowDefinitions>
                         <StackPanel Grid.Row="0">
                             <TextBlock x:Name="PokemonsPivotHeader"
-                                   x:Uid="PokemonText"
-                                   Text="POKEMON"
-                                   Style="{StaticResource TextPageTitleDark}" />
+                                       x:Uid="PokemonText"
+                                       Text="POKEMON"
+                                       Style="{StaticResource TextPageTitleDark}" />
                             <Border Background="#000" Width="150" Height="1" />
                             <TextBlock Style="{StaticResource TextSubTitle}"
-                                   HorizontalAlignment="Center"
-                                   Margin="0,8">
-                                <Run Text="{Binding PokemonInventory.Count}"/>
-                                <Run Text=" / "/>
-                                <Run Text="250"/>
+                                       HorizontalAlignment="Center"
+                                       Margin="0,8">
+                                <Run Text="{x:Bind ViewModel.PokemonInventory.Count}" />
+                                <Run Text=" / " />
+                                <Run Text="250" />
                             </TextBlock>
                         </StackPanel>
-                        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden">
-                            <GridView x:Name="PokemonInventoryGridView"
-                                      ItemsSource="{Binding PokemonInventory}"
+                        <GridView x:Name="PokemonInventoryGridView"
+                                      ItemsSource="{x:Bind ViewModel.PokemonInventory, Mode=OneWay}"
+                                      Grid.Row="1"
                                       SelectionMode="None"
                                       Padding="0,0,0,57.5"
+                                      ShowsScrollingPlaceholders="True"                                  
                                       SizeChanged="GridViewPokemonSizeChanged">
-                                
-                                <GridView.ItemTemplate>
-                                    <DataTemplate>
-                                        <StackPanel HorizontalAlignment="Center" 
+
+                            <GridView.ItemTemplate>
+                                <DataTemplate x:DataType="entities:PokemonDataWrapper">
+                                    <StackPanel HorizontalAlignment="Center"
                                                     VerticalAlignment="Top"
                                                     Margin="0,0,0,10">
 
-                                            <interactivity:Interaction.Behaviors>
-                                                <core:EventTriggerBehavior EventName="Tapped">
-                                                    <core:InvokeCommandAction Command="{Binding GotoPokemonDetailsCommand}" />
-                                                </core:EventTriggerBehavior>
-                                            </interactivity:Interaction.Behaviors>
-                                            <TextBlock Style="{StaticResource TextGridViewTop}">
+                                        <interactivity:Interaction.Behaviors>
+                                            <core:EventTriggerBehavior EventName="Tapped">
+                                                <core:InvokeCommandAction
+                                                        Command="{x:Bind GotoPokemonDetailsCommand}" />
+                                            </core:EventTriggerBehavior>
+                                        </interactivity:Interaction.Behaviors>
+
+                                        <TextBlock Style="{StaticResource TextGridViewTop}">
                                                 <Run x:Uid="CpTextBlock"
                                                      Text="CP" />
-                                                <Run FontSize="15" Text="{Binding Cp}" />
-                                            </TextBlock>
-                                            <Image Source="{Binding PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"
-                                                   Width="48"
-                                                   Height="48"
-                                                   Margin="5" />
-                                            <TextBlock Text="{Binding PokemonId, Converter={StaticResource PokemonIdToPokemonNameConverter}}"
-                                                       Style="{StaticResource TextPokemonName}" />
-                                            <ProgressBar
-                                                Value="{Binding Converter={StaticResource PokemonDataToPokemonStaminaConverter}}"
+                                                <Run FontSize="15" Text="{x:Bind Cp}"
+                                                     x:Phase="0" />
+                                        </TextBlock>
+                                        <Image
+                                                Source="{x:Bind PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"
+                                                Width="48"
+                                                Height="48"
+                                                Margin="5"
+                                                x:Phase="2" />
+                                        <TextBlock
+                                                Text="{x:Bind PokemonId, Converter={StaticResource PokemonIdToPokemonNameConverter}}"
+                                                Style="{StaticResource TextPokemonName}"
+                                                x:Phase="0" />
+                                        <ProgressBar
+                                                Value="{x:Bind Stamina}"
+                                                Maximum="{x:Bind StaminaMax}"
                                                 Margin="0,5"
                                                 Foreground="#6ee8b7"
                                                 IsIndeterminate="False"
-                                                HorizontalAlignment="Center" />
-                                        </StackPanel>
-                                    </DataTemplate>
-                                </GridView.ItemTemplate>
-                            </GridView>
-                        </ScrollViewer>
+                                                HorizontalAlignment="Center"
+                                                x:Phase="1" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridView.ItemTemplate>
+                        </GridView>
+                        <Button x:Name="SortingButton"
+                                Grid.Row="1"
+                                Style="{StaticResource ButtonCircleBigInverse}"
+                                Margin="16">
+                            <interactivity:Interaction.Behaviors>
+                                <core:EventTriggerBehavior EventName="Click">
+                                    <core:CallMethodAction MethodName="Begin"
+                                                           TargetObject="{Binding ElementName=ShowSortMenuStoryboard}" />
+                                </core:EventTriggerBehavior>
+                            </interactivity:Interaction.Behaviors>
+                            <Image
+                                Source="{Binding CurrentPokemonSortingMode, Converter={StaticResource PokemonSortingModesToIconConverter}}" />
+                        </Button>
                     </Grid>
                 </PivotItem>
+
                 <PivotItem x:Name="EggsPivot">
                     <Grid>
                         <Grid.RowDefinitions>
@@ -311,95 +342,89 @@
                         </Grid.RowDefinitions>
                         <StackPanel Grid.Row="0">
                             <TextBlock x:Name="EggsPivotHeader"
-                                   x:Uid="EggsTextBlock"
-                                   Text="EGGS"
-                                   Style="{StaticResource TextPageTitleDark}" />
+                                       x:Uid="EggsTextBlock"
+                                       Text="EGGS"
+                                       Style="{StaticResource TextPageTitleDark}" />
                             <Border Background="#000" Width="150" Height="1" />
                             <TextBlock Style="{StaticResource TextSubTitle}"
-                                   HorizontalAlignment="Center"
-                                   Margin="0,8">
-                                <Run Text="{Binding EggsInventory.Count}"/>
-                                <Run Text=" / "/>
-                                <Run Text="9"/>
+                                       HorizontalAlignment="Center"
+                                       Margin="0,8">
+                                <Run Text="{x:Bind ViewModel.EggsInventory.Count}" />
+                                <Run Text=" / " />
+                                <Run Text="9" />
                             </TextBlock>
                         </StackPanel>
-                        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden">
-                            <GridView x:Name="EggsInventoryGridView"
-                                      ItemsSource="{Binding EggsInventory}"
+                        <GridView x:Name="EggsInventoryGridView"
+                                      ItemsSource="{x:Bind ViewModel.EggsInventory}"
                                       SelectionMode="None"
+                                      Grid.Row="1"
                                       Padding="0,0,0,57.5"
                                       SizeChanged="GridViewEggsSizeChanged">
-                                
-                                <GridView.ItemTemplate>
-                                    <DataTemplate>
-                                        <StackPanel HorizontalAlignment="Center" 
+
+                            <GridView.ItemTemplate>
+                                <DataTemplate x:DataType="entities:PokemonDataWrapper">
+                                    <StackPanel HorizontalAlignment="Center"
                                                     VerticalAlignment="Top"
                                                     Margin="0,0,0,10">
 
-                                            <interactivity:Interaction.Behaviors>
-                                                <core:EventTriggerBehavior EventName="Tapped">
-                                                    <core:InvokeCommandAction Command="{Binding GotoEggDetailsCommand}" />
-                                                </core:EventTriggerBehavior>
-                                            </interactivity:Interaction.Behaviors>
+                                        <interactivity:Interaction.Behaviors>
+                                            <core:EventTriggerBehavior EventName="Tapped">
+                                                <core:InvokeCommandAction Command="{x:Bind GotoEggDetailsCommand}" />
+                                            </core:EventTriggerBehavior>
+                                        </interactivity:Interaction.Behaviors>
 
-                                            <Image Source="{Binding Converter={StaticResource EggDataToEggIconConverter}}"
-                                                   Width="48"
-                                                   Height="48"
-                                                   Margin="5" />
+                                        <Image
+                                                Source="{x:Bind Converter={StaticResource EggDataToEggIconConverter}}"
+                                                Width="48"
+                                                Height="48"
+                                                Margin="5"
+                                                x:Phase="2" />
 
-                                            <ProgressBar
-                                                Value="{Binding Converter={StaticResource EggDataToEggProgressConverter}}"
+                                        <ProgressBar
+                                                Value="{x:Bind EggKmWalkedStart}"
+                                                Maximum="{x:Bind EggKmWalkedTarget}"
                                                 Margin="0,5"
                                                 Foreground="#399FFF"
                                                 IsIndeterminate="False"
-                                                HorizontalAlignment="Center" />
+                                                HorizontalAlignment="Center"
+                                                x:Phase="1" />
 
-                                            <TextBlock Style="{StaticResource TextGridViewTop}">
-                                                <Run Text="{Binding EggKmWalkedStart, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0.#\}}" />
+                                        <TextBlock Style="{StaticResource TextGridViewTop}">
+                                                <Run
+                                                    Text="{x:Bind EggKmWalkedStart, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0.#\}}"
+                                                    x:Phase="0" />
                                                 <Run Text="/" />
                                                 <Run FontWeight="Bold"
-                                                     Text="{Binding EggKmWalkedTarget, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0\}}" />
+                                                     Text="{x:Bind EggKmWalkedTarget, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0\}}"
+                                                     x:Phase="0" />
                                                 <Run FontWeight="Bold"
                                                      Text="km" />
-                                            </TextBlock>
+                                        </TextBlock>
 
-                                        </StackPanel>
-                                    </DataTemplate>
-                                </GridView.ItemTemplate>
-                            </GridView>
-                        </ScrollViewer>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridView.ItemTemplate>
+                        </GridView>
+                        
+                        <Button x:Name="IncubatorButton" Grid.Row="1"
+                                Style="{StaticResource ButtonCircleBigInverse}"
+                                Tapped="ToggleIncubatorModel"
+                                Margin="16">
+                            <Image Source="../Assets/Buttons/btn_incubator_dark.png" />
+                        </Button>
+                        
                     </Grid>
                 </PivotItem>
+
             </Pivot>
         </Border>
+
         <Button Command="{Binding ReturnToGameScreen}"
                 Style="{StaticResource ButtonCircle}"
                 VerticalAlignment="Bottom"
                 Margin="0,0,0,17.5">
             <Image Source="../Assets/Buttons/btn_close.png" />
         </Button>
-        <Button x:Name="SortingButton"
-                Style="{StaticResource ButtonCircleBigInverse}"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Bottom"
-                Margin="0,0,25,12.5">
-            <interactivity:Interaction.Behaviors>
-                <core:EventTriggerBehavior EventName="Click">
-                    <core:CallMethodAction MethodName="Begin"
-                                           TargetObject="{Binding ElementName=ShowSortMenuStoryboard}" />
-                </core:EventTriggerBehavior>
-            </interactivity:Interaction.Behaviors>
-            <Image Source="{Binding CurrentPokemonSortingMode, Converter={StaticResource PokemonSortingModesToIconConverter}}" />
-        </Button>
-        <Button x:Name="IncubatorButton"
-                Style="{StaticResource ButtonCircleBigInverse}"
-                Tapped="ToggleIncubatorModel"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Bottom"
-                Margin="0,0,25,12.5">
-            <Image Source="../Assets/Buttons/btn_incubator_dark.png" />
-        </Button>
 
     </Grid>
-
 </Page>

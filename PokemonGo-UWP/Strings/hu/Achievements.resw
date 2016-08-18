@@ -12,4 +12,175 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BadgeBattleAttackWon" xml:space="preserve">
+    <value>Csata Lány</value>
+  </data>
+  <data name="BadgeBattleTrainingWon" xml:space="preserve">
+    <value>Ász edző</value>
+  </data>
+  <data name="BadgeBigMagikarp" xml:space="preserve">
+    <value>Halász</value>
+  </data>
+  <data name="BadgeCaptureTotal" xml:space="preserve">
+    <value>Gyűjtő</value>
+  </data>
+  <data name="BadgeEvolvedTotal" xml:space="preserve">
+    <value>Tudós</value>
+  </data>
+  <data name="BadgeHatchedTotal" xml:space="preserve">
+    <value>Tenyésztő</value>
+  </data>
+  <data name="BadgePikachu" xml:space="preserve">
+    <value>Pikachu</value>
+  </data>
+  <data name="BadgePokedexEntries" xml:space="preserve">
+    <value>Kanto</value>
+  </data>
+  <data name="BadgePokestopsVisited" xml:space="preserve">
+    <value>Hátizsákos</value>
+  </data>
+  <data name="BadgeSmallRattata" xml:space="preserve">
+    <value>Ifjú</value>
+  </data>
+  <data name="BadgeTravelKm" xml:space="preserve">
+    <value>Kocogó</value>
+  </data>
+  <data name="Bug" xml:space="preserve">
+    <value>Bogárfogó</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Sárkányszelidítő
+</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Rocker</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Tündérmese Lány</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Feketeöves</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>Kindler</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Madártartó</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Hex mániákus</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Kertész</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Rom mániákus</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Síelő</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Iskolás</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Punk lány</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Pszichés</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Természetjáró</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Raktáros</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Úszó</value>
+  </data>
+  <data name="BadgeBattleAttackWonDescription" xml:space="preserve">
+    <value>{0} megnyert edzőtermi csata
+</value>
+  </data>
+  <data name="BadgeBattleTrainingWonDescription" xml:space="preserve">
+    <value>{0} megnyert gyakorló csata
+</value>
+  </data>
+  <data name="BadgeBigMagikarpDescription" xml:space="preserve">
+    <value>{0} elkapott Magikarp</value>
+  </data>
+  <data name="BadgeCaptureTotalDescription" xml:space="preserve">
+    <value>{0} elfogott Pokémon</value>
+  </data>
+  <data name="BadgeEvolvedTotalDescription" xml:space="preserve">
+    <value>[X] felfejlesztett Pokémon</value>
+  </data>
+  <data name="BadgeHatchedTotalDescription" xml:space="preserve">
+    <value>{x} kikeltett Pokémon</value>
+  </data>
+  <data name="BadgePikachuDescription" xml:space="preserve">
+    <value>{0} elkapott Pikachu</value>
+  </data>
+  <data name="BadgePokedexEntriesDescription" xml:space="preserve">
+    <value>{0} Pokemon bejegyezve a Pokédexbe</value>
+  </data>
+  <data name="BadgePokestopsVisitedDescription" xml:space="preserve">
+    <value>{0} Pokéstop meglátogatva</value>
+  </data>
+  <data name="BadgeSmallRattataDescription" xml:space="preserve">
+    <value>{0} Rattata elkapva</value>
+  </data>
+  <data name="BadgeTravelKmDescription" xml:space="preserve">
+    <value>{0} km lesétálva</value>
+  </data>
+  <data name="BugDescription" xml:space="preserve">
+    <value>{0} Bogár Pokémon elkapva</value>
+  </data>
+  <data name="DragonDescription" xml:space="preserve">
+    <value>{0} Sárkány Pokémon elkapva</value>
+  </data>
+  <data name="ElectricDescription" xml:space="preserve">
+    <value>{0} Elektromos Pokémon elkapva</value>
+  </data>
+  <data name="FairyDescription" xml:space="preserve">
+    <value>{0} Tündér Pokémon elkapva</value>
+  </data>
+  <data name="FightingDescription" xml:space="preserve">
+    <value>{0} Harcos Pokémon elkapva</value>
+  </data>
+  <data name="FireDescription" xml:space="preserve">
+    <value>{0} Tűz Pokémon elkapva</value>
+  </data>
+  <data name="FlyingDescription" xml:space="preserve">
+    <value>{0} Repülő Pokémon elkapva</value>
+  </data>
+  <data name="GhostDescription" xml:space="preserve">
+    <value>{0} Szellem Pokémon elkapva</value>
+  </data>
+  <data name="GrassDescription" xml:space="preserve">
+    <value>{0} Fű Pokémon elkapva</value>
+  </data>
+  <data name="GroundDescription" xml:space="preserve">
+    <value>{0} Föld Pokémon elkapva</value>
+  </data>
+  <data name="IceDescription" xml:space="preserve">
+    <value>{0} Jég Pokémon elkapva</value>
+  </data>
+  <data name="NormalDescription" xml:space="preserve">
+    <value>{0} Normál Pokémon elkapva</value>
+  </data>
+  <data name="PoisonDescription" xml:space="preserve">
+    <value>{0} Méreg Pokémon elkapva</value>
+  </data>
+  <data name="PsychicDescription" xml:space="preserve">
+    <value>{0} Pszicho Pokémon elkapva</value>
+  </data>
+  <data name="RockDescription" xml:space="preserve">
+    <value>{0} Szikla Pokémon elkapva</value>
+  </data>
+  <data name="SteelDescription" xml:space="preserve">
+    <value>{0} Acél Pokémon elkapva</value>
+  </data>
+  <data name="WaterDescription" xml:space="preserve">
+    <value>{0} Víz Pokémon elkapva</value>
+  </data>
 </root>

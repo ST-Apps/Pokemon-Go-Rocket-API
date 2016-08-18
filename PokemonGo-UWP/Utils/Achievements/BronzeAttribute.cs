@@ -1,14 +1,9 @@
-﻿using System;
-
-namespace PokemonGo_UWP.Utils
+﻿namespace PokemonGo_UWP.Utils
 {
-    public class BronzeAttribute : Attribute
+    public class BronzeAttribute : AchievementValueAttribute
     {
-        public BronzeAttribute(object value)
+        public BronzeAttribute(object value) : base(value)
         {
-            Value = value;
         }
-
-        public object Value { get; set; }
     }
 }

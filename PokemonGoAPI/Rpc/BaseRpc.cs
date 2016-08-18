@@ -30,7 +30,7 @@ namespace PokemonGo.RocketAPI.Rpc
                 new RequestBuilder(Client.AuthToken, Client.AuthType, Client.CurrentLatitude, Client.CurrentLongitude,
                     Client.CurrentAltitude, Client.DeviceInfo, Client.AuthTicket);
 
-        protected string ApiUrl => $"https://{Client.ApiUrl}/rpc";
+        private string ApiUrl => $"https://{Client.ApiUrl}/rpc";
 
         protected async Task<TResponsePayload> PostProtoPayload<TRequest, TResponsePayload>(RequestType type,
             IMessage message) where TRequest : IMessage<TRequest>

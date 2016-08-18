@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
+using Template10.Common;
 
 namespace PokemonGo_UWP.Utils
 {
@@ -24,9 +25,11 @@ namespace PokemonGo_UWP.Utils
         /// <exception cref="System.InvalidOperationException">This method can only be invoked from UI thread.</exception>
         public static async Task<IUICommand> ShowAsyncQueue(this MessageDialog dialog)
         {
-            if (!Window.Current.Dispatcher.HasThreadAccess)
+            if (!WindowWrapper.Current().Dispatcher.HasThreadAccess())
             {
-                throw new InvalidOperationException("This method can only be invoked from UI thread.");
+                return await
+                    WindowWrapper.Current()
+                        .Dispatcher.DispatchAsync(async () => await ShowAsyncQueue(dialog)).Result;                
             }
 
             while (_currentDialogShowRequest != null)

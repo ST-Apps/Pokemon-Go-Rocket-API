@@ -24,18 +24,20 @@ namespace POGOProtos.Networking.Responses {
           string.Concat(
             "CjtQT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVzcG9uc2VzL0NsYWltQ29kZW5h",
             "bWVSZXNwb25zZS5wcm90bxIfUE9HT1Byb3Rvcy5OZXR3b3JraW5nLlJlc3Bv",
-            "bnNlcyKwAgoVQ2xhaW1Db2RlbmFtZVJlc3BvbnNlEhAKCGNvZGVuYW1lGAEg",
-            "ASgJEhQKDHVzZXJfbWVzc2FnZRgCIAEoCRIVCg1pc19hc3NpZ25hYmxlGAMg",
-            "ASgIEk0KBnN0YXR1cxgEIAEoDjI9LlBPR09Qcm90b3MuTmV0d29ya2luZy5S",
-            "ZXNwb25zZXMuQ2xhaW1Db2RlbmFtZVJlc3BvbnNlLlN0YXR1cyKIAQoGU3Rh",
-            "dHVzEgkKBVVOU0VUEAASCwoHU1VDQ0VTUxABEhoKFkNPREVOQU1FX05PVF9B",
-            "VkFJTEFCTEUQAhIWChJDT0RFTkFNRV9OT1RfVkFMSUQQAxIRCg1DVVJSRU5U",
-            "X09XTkVSEAQSHwobQ09ERU5BTUVfQ0hBTkdFX05PVF9BTExPV0VEEAViBnBy",
-            "b3RvMw=="));
+            "bnNlcxogUE9HT1Byb3Rvcy9EYXRhL1BsYXllckRhdGEucHJvdG8i5QIKFUNs",
+            "YWltQ29kZW5hbWVSZXNwb25zZRIQCghjb2RlbmFtZRgBIAEoCRIUCgx1c2Vy",
+            "X21lc3NhZ2UYAiABKAkSFQoNaXNfYXNzaWduYWJsZRgDIAEoCBJNCgZzdGF0",
+            "dXMYBCABKA4yPS5QT0dPUHJvdG9zLk5ldHdvcmtpbmcuUmVzcG9uc2VzLkNs",
+            "YWltQ29kZW5hbWVSZXNwb25zZS5TdGF0dXMSMwoOdXBkYXRlZF9wbGF5ZXIY",
+            "BSABKAsyGy5QT0dPUHJvdG9zLkRhdGEuUGxheWVyRGF0YSKIAQoGU3RhdHVz",
+            "EgkKBVVOU0VUEAASCwoHU1VDQ0VTUxABEhoKFkNPREVOQU1FX05PVF9BVkFJ",
+            "TEFCTEUQAhIWChJDT0RFTkFNRV9OT1RfVkFMSUQQAxIRCg1DVVJSRU5UX09X",
+            "TkVSEAQSHwobQ09ERU5BTUVfQ0hBTkdFX05PVF9BTExPV0VEEAViBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::POGOProtos.Data.PlayerDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Responses.ClaimCodenameResponse), global::POGOProtos.Networking.Responses.ClaimCodenameResponse.Parser, new[]{ "Codename", "UserMessage", "IsAssignable", "Status" }, null, new[]{ typeof(global::POGOProtos.Networking.Responses.ClaimCodenameResponse.Types.Status) }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Responses.ClaimCodenameResponse), global::POGOProtos.Networking.Responses.ClaimCodenameResponse.Parser, new[]{ "Codename", "UserMessage", "IsAssignable", "Status", "UpdatedPlayer" }, null, new[]{ typeof(global::POGOProtos.Networking.Responses.ClaimCodenameResponse.Types.Status) }, null)
           }));
     }
     #endregion
@@ -70,6 +72,7 @@ namespace POGOProtos.Networking.Responses {
       userMessage_ = other.userMessage_;
       isAssignable_ = other.isAssignable_;
       status_ = other.status_;
+      UpdatedPlayer = other.updatedPlayer_ != null ? other.UpdatedPlayer.Clone() : null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -121,6 +124,17 @@ namespace POGOProtos.Networking.Responses {
       }
     }
 
+    /// <summary>Field number for the "updated_player" field.</summary>
+    public const int UpdatedPlayerFieldNumber = 5;
+    private global::POGOProtos.Data.PlayerData updatedPlayer_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::POGOProtos.Data.PlayerData UpdatedPlayer {
+      get { return updatedPlayer_; }
+      set {
+        updatedPlayer_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ClaimCodenameResponse);
@@ -138,6 +152,7 @@ namespace POGOProtos.Networking.Responses {
       if (UserMessage != other.UserMessage) return false;
       if (IsAssignable != other.IsAssignable) return false;
       if (Status != other.Status) return false;
+      if (!object.Equals(UpdatedPlayer, other.UpdatedPlayer)) return false;
       return true;
     }
 
@@ -148,6 +163,7 @@ namespace POGOProtos.Networking.Responses {
       if (UserMessage.Length != 0) hash ^= UserMessage.GetHashCode();
       if (IsAssignable != false) hash ^= IsAssignable.GetHashCode();
       if (Status != 0) hash ^= Status.GetHashCode();
+      if (updatedPlayer_ != null) hash ^= UpdatedPlayer.GetHashCode();
       return hash;
     }
 
@@ -174,6 +190,10 @@ namespace POGOProtos.Networking.Responses {
         output.WriteRawTag(32);
         output.WriteEnum((int) Status);
       }
+      if (updatedPlayer_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(UpdatedPlayer);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -190,6 +210,9 @@ namespace POGOProtos.Networking.Responses {
       }
       if (Status != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      if (updatedPlayer_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdatedPlayer);
       }
       return size;
     }
@@ -210,6 +233,12 @@ namespace POGOProtos.Networking.Responses {
       }
       if (other.Status != 0) {
         Status = other.Status;
+      }
+      if (other.updatedPlayer_ != null) {
+        if (updatedPlayer_ == null) {
+          updatedPlayer_ = new global::POGOProtos.Data.PlayerData();
+        }
+        UpdatedPlayer.MergeFrom(other.UpdatedPlayer);
       }
     }
 
@@ -235,6 +264,13 @@ namespace POGOProtos.Networking.Responses {
           }
           case 32: {
             status_ = (global::POGOProtos.Networking.Responses.ClaimCodenameResponse.Types.Status) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            if (updatedPlayer_ == null) {
+              updatedPlayer_ = new global::POGOProtos.Data.PlayerData();
+            }
+            input.ReadMessage(updatedPlayer_);
             break;
           }
         }

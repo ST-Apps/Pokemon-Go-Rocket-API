@@ -12,4 +12,135 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CooldownTextBlock.Text" xml:space="preserve">
+    <value>Várnod kell egy kis időt</value>
+  </data>
+  <data name="GoogleLoginTextBlock.Text" xml:space="preserve">
+    <value>GOOGLE</value>
+  </data>
+  <data name="InventoryFullTextBlock.Text" xml:space="preserve">
+    <value>Tele van a készleted!</value>
+  </data>
+  <data name="PtcLoginTextBlock.Text" xml:space="preserve">
+    <value>Bejelentkezés PTC Fiókkal</value>
+  </data>
+  <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
+    <value>Bejelentkezéshez írd be a Felhasználóneved/Email címed és a jelszavadat. Ha nem bízol az alkalmazásban, zárd be most. A Niantic kitilthat az alkalmazás használatáért. Használat csak saját felelősségre.</value>
+  </data>
+  <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
+    <value>közelben</value>
+  </data>
+  <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
+    <value>EZ A POKÉSTOP TÚL MESSZE VAN</value>
+  </data>
+  <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
+    <value>Jelszó</value>
+  </data>
+  <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
+    <value>Felhasználónév / Email</value>
+  </data>
+  <data name="ExperienceTextBlock.Text" xml:space="preserve">
+    <value>XP</value>
+  </data>
+  <data name="OkButton.Content" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="CpTextBlock.Text" xml:space="preserve">
+    <value>CP</value>
+  </data>
+  <data name="EggsTextBlock.Text" xml:space="preserve">
+    <value>TOJÁSOK</value>
+  </data>
+  <data name="SettingsMusicTextBlock.Text" xml:space="preserve">
+    <value>Zene</value>
+  </data>
+  <data name="PokemonTextBlock.Text" xml:space="preserve">
+    <value>POKÉMONOK</value>
+  </data>
+  <data name="SettingsHeaderTextBlock.Text" xml:space="preserve">
+    <value>BEÁLLÍTÁSOK</value>
+  </data>
+  <data name="SettingsSignOutTextBlock.Text" xml:space="preserve">
+    <value>Kijelentkezés</value>
+  </data>
+  <data name="SettingsVibrationTextBlock.Text" xml:space="preserve">
+    <value>Rezgés</value>
+  </data>
+  <data name="ItemsTextBlock.Text" xml:space="preserve">
+    <value>TÁRGYAK</value>
+  </data>
+  <data name="PokedexTextBlock.Text" xml:space="preserve">
+    <value>POKÉDEX</value>
+  </data>
+  <data name="LowercaseItemsTextBlock.Text" xml:space="preserve">
+    <value>tárgyak</value>
+  </data>
+  <data name="NumberTextBlock.Text" xml:space="preserve">
+    <value># </value>
+    <comment>Watch out: there is a space after the #</comment>
+  </data>
+  <data name="SlashSpaceCpTextBlock.Text" xml:space="preserve">
+    <value>/ CP</value>
+  </data>
+  <data name="SpaceXpTextBlock.Text" xml:space="preserve">
+    <value> XP</value>
+  </data>
+  <data name="TotalExperienceTextBlock.Text" xml:space="preserve">
+    <value>ÖSSZESEN</value>
+  </data>
+  <data name="LevelUpTextBlock.Text" xml:space="preserve">
+    <value>Szintlépés!</value>
+  </data>
+  <data name="LevelTextBlock.Text" xml:space="preserve">
+    <value>Szint</value>
+  </data>
+  <data name="SettingsMapAutoRotateTextBlock.Text" xml:space="preserve">
+    <value>Térkép Automatikus Elforgatása</value>
+  </data>
+  <data name="StartDateTextBlock.Text" xml:space="preserve">
+    <value>KEZDÉS DÁTUMA</value>
+  </data>
+  <data name="IncubatorsTextBlock.Text" xml:space="preserve">
+    <value>INKUBÁTOROK</value>
+  </data>
+  <data name="SettingsUseNianticMapTextBlock.Text" xml:space="preserve">
+    <value>Niantic Térkép Használata</value>
+  </data>
+  <data name="HpTextBlock.Text" xml:space="preserve">
+    <value>HP </value>
+  </data>
+  <data name="TypeTextBlock.Text" xml:space="preserve">
+    <value>Típus</value>
+  </data>
+  <data name="KgTextBlock.Text" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="WeightTextBlock.Text" xml:space="preserve">
+    <value>Súly</value>
+  </data>
+  <data name="HeightTextBlock.Text" xml:space="preserve">
+    <value>Magasság</value>
+  </data>
+  <data name="MTextBlock.Text" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="StardustTextBlock.Text" xml:space="preserve">
+    <value>CSILLAGPOR</value>
+  </data>
+  <data name="CandyTextBlock.Text" xml:space="preserve">
+    <value> CUKORKA</value>
+    <comment>Watch out: space before the word!</comment>
+  </data>
+  <data name="EvolveButton.Content" xml:space="preserve">
+    <value>FEJLESZTÉS</value>
+  </data>
+  <data name="PowerUpButton.Content" xml:space="preserve">
+    <value>ERŐSÍTÉS</value>
+  </data>
+  <data name="TransferButton.Content" xml:space="preserve">
+    <value>ÁTVITEL</value>
+  </data>
+  <data name="SettingsRememberMapZoomTextBlock" xml:space="preserve">
+    <value>Térkép Közelítésének Megjegyzése</value>
+  </data>
 </root>

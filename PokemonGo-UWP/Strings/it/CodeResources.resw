@@ -92,4 +92,7 @@ Vuoi aprire la pagina con il file di installazione per l'installazione manuale?<
   <data name="MysticTeamText" xml:space="preserve">
     <value>Saggezza</value>
   </data>
+  <data name="ActivityUnknown" xml:space="preserve">
+    <value>Sconosciuto</value>
+  </data>
 </root>

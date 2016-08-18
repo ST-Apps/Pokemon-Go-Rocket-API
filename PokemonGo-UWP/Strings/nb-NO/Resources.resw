@@ -12,4 +12,120 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CooldownTextBlock.Text" xml:space="preserve">
+    <value>Du må vente litt...</value>
+  </data>
+  <data name="GoogleLoginTextBlock.Text" xml:space="preserve">
+    <value>GOOGLE</value>
+  </data>
+  <data name="InventoryFullTextBlock.Text" xml:space="preserve">
+    <value>Ryggsekken er full!</value>
+  </data>
+  <data name="PtcLoginTextBlock.Text" xml:space="preserve">
+    <value>Logg på med PTC bruker</value>
+  </data>
+  <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
+    <value>I nærheten</value>
+  </data>
+  <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
+    <value>Passord</value>
+  </data>
+  <data name="ExperienceTextBlock.Text" xml:space="preserve">
+    <value>XP</value>
+  </data>
+  <data name="OkButton.Content" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="CpTextBlock.Text" xml:space="preserve">
+    <value>CP</value>
+  </data>
+  <data name="EggsTextBlock.Text" xml:space="preserve">
+    <value>EGG</value>
+  </data>
+  <data name="SettingsMusicTextBlock.Text" xml:space="preserve">
+    <value>Musikk</value>
+  </data>
+  <data name="PokemonTextBlock.Text" xml:space="preserve">
+    <value>POKÉMON</value>
+  </data>
+  <data name="SettingsHeaderTextBlock.Text" xml:space="preserve">
+    <value>INSTILLINGER</value>
+  </data>
+  <data name="SettingsSignOutTextBlock.Text" xml:space="preserve">
+    <value>Logg ut</value>
+  </data>
+  <data name="SettingsVibrationTextBlock.Text" xml:space="preserve">
+    <value>Vibrering</value>
+  </data>
+  <data name="ItemsTextBlock.Text" xml:space="preserve">
+    <value>GJENSTANDER</value>
+  </data>
+  <data name="PokedexTextBlock.Text" xml:space="preserve">
+    <value>POKÉDEX</value>
+  </data>
+  <data name="LowercaseItemsTextBlock.Text" xml:space="preserve">
+    <value>Gjenstander</value>
+  </data>
+  <data name="NumberTextBlock.Text" xml:space="preserve">
+    <value># </value>
+    <comment>Watch out: there is a space after the #</comment>
+  </data>
+  <data name="SlashSpaceCpTextBlock.Text" xml:space="preserve">
+    <value>/ CP</value>
+  </data>
+  <data name="SpaceXpTextBlock.Text" xml:space="preserve">
+    <value> XP</value>
+  </data>
+  <data name="TotalExperienceTextBlock.Text" xml:space="preserve">
+    <value>TOTAL</value>
+  </data>
+  <data name="LevelUpTextBlock.Text" xml:space="preserve">
+    <value>Level opp!</value>
+  </data>
+  <data name="LevelTextBlock.Text" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="SettingsMapAutoRotateTextBlock.Text" xml:space="preserve">
+    <value>Roter Kartet Automatisk</value>
+  </data>
+  <data name="StartDateTextBlock.Text" xml:space="preserve">
+    <value>START DATO</value>
+  </data>
+  <data name="IncubatorsTextBlock.Text" xml:space="preserve">
+    <value>INKUBATORER</value>
+  </data>
+  <data name="CandyTextBlock.Text" xml:space="preserve">
+    <value> CANDY</value>
+    <comment>Watch out: space before the word!</comment>
+  </data>
+  <data name="HeightTextBlock.Text" xml:space="preserve">
+    <value>Høyde</value>
+  </data>
+  <data name="HpTextBlock.Text" xml:space="preserve">
+    <value>HP </value>
+  </data>
+  <data name="KgTextBlock.Text" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="MTextBlock.Text" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="StardustTextBlock.Text" xml:space="preserve">
+    <value>STJERNESTØV</value>
+  </data>
+  <data name="TypeTextBlock.Text" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="WeightTextBlock.Text" xml:space="preserve">
+    <value>Vekt</value>
+  </data>
+  <data name="EvolveButton.Content" xml:space="preserve">
+    <value>UTVIKLE</value>
+  </data>
+  <data name="PowerUpButton.Content" xml:space="preserve">
+    <value>ØK KRAFT</value>
+  </data>
+  <data name="TransferButton.Content" xml:space="preserve">
+    <value>OVERFØR</value>
+  </data>
 </root>

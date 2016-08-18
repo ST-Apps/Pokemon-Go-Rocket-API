@@ -12,4 +12,88 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BadgeBattleAttackWon" xml:space="preserve">
+    <value>Utfordrer</value>
+  </data>
+  <data name="BadgeBattleTrainingWon" xml:space="preserve">
+    <value>Erfaren trener</value>
+  </data>
+  <data name="BadgeBigMagikarp" xml:space="preserve">
+    <value>Fisker</value>
+  </data>
+  <data name="BadgeCaptureTotal" xml:space="preserve">
+    <value>Samler</value>
+  </data>
+  <data name="BadgeEvolvedTotal" xml:space="preserve">
+    <value>Forsker</value>
+  </data>
+  <data name="BadgeHatchedTotal" xml:space="preserve">
+    <value>Oppdretter</value>
+  </data>
+  <data name="BadgePikachu" xml:space="preserve">
+    <value>Pikachu Fan</value>
+  </data>
+  <data name="BadgePokedexEntries" xml:space="preserve">
+    <value>Oppdager</value>
+  </data>
+  <data name="BadgePokestopsVisited" xml:space="preserve">
+    <value>Travel Trener</value>
+  </data>
+  <data name="BadgeSmallRattata" xml:space="preserve">
+    <value>Unggutt</value>
+  </data>
+  <data name="BadgeTravelKm" xml:space="preserve">
+    <value>Jogger</value>
+  </data>
+  <data name="Bug" xml:space="preserve">
+    <value>Insektfanger</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Dragetemmer</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Elektriker</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Eventyrtid</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Svart Belte</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>Pyroman</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Fuglepasser</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Spøkelsesjeger</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Gartner</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Under Jorden</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Skiløper</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Skoleelev</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Giftig sammling</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Psykiater</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Turgåer</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Metallarbeider</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Svømmer</value>
+  </data>
 </root>

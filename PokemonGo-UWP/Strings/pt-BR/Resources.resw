@@ -25,16 +25,16 @@
     <value>Para entrar você precisa inserir seu nome de usuário/E-mail e senha neste app. Se não confia nele, por favor, feche-o antes de continuar. Não nos responsabilizamos por nada.</value>
   </data>
   <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
-    <value>nas proximidades</value>
+    <value>Por Perto</value>
   </data>
   <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
-    <value>Você está fora do alcance</value>
+    <value>Esse Pokestop está um pouco longe</value>
   </data>
   <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
     <value>Senha</value>
   </data>
   <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
-    <value>Nome de usuário/e-mail</value>
+    <value>Nome de usuário/E-mail</value>
   </data>
   <data name="EggsTextBlock.Text" xml:space="preserve">
     <value>OVOS</value>
