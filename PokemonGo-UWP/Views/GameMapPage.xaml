@@ -688,7 +688,7 @@
                 </Button>
 
                 <ProgressBar x:Name="ExperienceProgressBar" 
-                             Value="{Binding PlayerStats, Converter={StaticResource PlayerDataToCurrentExperienceConverter}, Mode=TwoWay}"
+                             Value="{Binding PlayerStats, Converter={StaticResource PlayerDataToCurrentExperienceConverter}, Mode=OneWay}"
                              Maximum="{Binding PlayerStats, Converter={StaticResource PlayerDataToTotalLevelExperienceConverter}}"
                              Foreground="{Binding PlayerProfile.Team, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}"
                              Height="5"

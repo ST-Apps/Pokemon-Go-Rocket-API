@@ -390,7 +390,7 @@
                                             BorderBrush="#7EDAB5"
                                             BorderThickness="1">
 
-                                        <ProgressBar Value="{Binding CurrentPokemon.Stamina, Mode=TwoWay}"
+                                        <ProgressBar Value="{Binding CurrentPokemon.Stamina, Mode=OneWay}"
                                                      Width="200"
                                                      Maximum="{Binding CurrentPokemon.StaminaMax}"
                                                      Foreground="#6BEFB6"
