@@ -197,6 +197,11 @@ namespace PokemonGo_UWP.ViewModels
         public static ObservableCollection<MapPokemonWrapper> CatchablePokemons => GameClient.CatchablePokemons;
 
         /// <summary>
+        ///     Collection of lured Pokemon
+        /// </summary>
+        public static ObservableCollection<LuredPokemon> LuredPokemon => GameClient.LuredPokemons;
+
+        /// <summary>
         ///     Collection of Pokemon in 2 steps from current position
         /// </summary>
         public static ObservableCollection<NearbyPokemonWrapper> NearbyPokemons => GameClient.NearbyPokemons;

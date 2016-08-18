@@ -26,7 +26,6 @@ namespace PokemonGo_UWP.Entities
         /// </summary>
         public string ImageFilePath => $"ms-appx:///Assets/Pokemons/{(int)PokemonId}.png";
 
-
         public void Update(NearbyPokemon update)
         {
             _nearbyPokemon = update;

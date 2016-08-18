@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using Windows.Devices.Geolocation;
 using Windows.Foundation;
+using Windows.Storage;
 using Google.Protobuf;
 using PokemonGo.RocketAPI.Extensions;
 using PokemonGo_UWP.Utils;
@@ -13,6 +14,7 @@ using POGOProtos.Map.Fort;
 using Template10.Common;
 using Template10.Mvvm;
 using Google.Protobuf.Collections;
+using POGOProtos.Inventory.Item;
 
 namespace PokemonGo_UWP.Entities
 {
@@ -37,7 +39,7 @@ namespace PokemonGo_UWP.Entities
                 if(CooldownCompleteTimestampMs > DateTime.UtcNow.ToUnixTime())
                     retVal |= FortDataStatus.Cooldown;
 
-                if(_fortData.LureInfo != null && _fortData.LureInfo.LureExpiresTimestampMs > DateTime.UtcNow.ToUnixTime())
+                if(_fortData.ActiveFortModifier != null && _fortData.ActiveFortModifier.Contains(ItemId.ItemTroyDisk))
                     retVal |= FortDataStatus.Lure;
 
                 return retVal;

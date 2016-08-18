@@ -10,7 +10,7 @@ using Template10.Mvvm;
 
 namespace PokemonGo_UWP.Entities
 {
-    public class MapPokemonWrapper : IUpdatable<MapPokemon>, INotifyPropertyChanged
+    public class MapPokemonWrapper : IMapPokemon
     {
         private MapPokemon _mapPokemon;
 
@@ -41,17 +41,14 @@ namespace PokemonGo_UWP.Entities
             }, () => true)
         );
 
-        public void Update(MapPokemon update)
+        public void Update(IMapPokemon update)
         {
-            _mapPokemon = update;
+            _mapPokemon = ((MapPokemonWrapper) update)._mapPokemon;
 
             OnPropertyChanged(nameof(PokemonId));
             OnPropertyChanged(nameof(EncounterId));
-            OnPropertyChanged(nameof(ExpirationTimestampMs));
             OnPropertyChanged(nameof(SpawnpointId));
             OnPropertyChanged(nameof(Geoposition));
-            OnPropertyChanged(nameof(Latitude));
-            OnPropertyChanged(nameof(Longitude));
         }
 
         #region Wrapped Properties
@@ -60,15 +57,9 @@ namespace PokemonGo_UWP.Entities
 
         public ulong EncounterId => _mapPokemon.EncounterId;
 
-        public long ExpirationTimestampMs => _mapPokemon.ExpirationTimestampMs;
-
         public string SpawnpointId => _mapPokemon.SpawnPointId;
 
         public Geopoint Geoposition { get; set; }
-
-        public double Latitude => _mapPokemon.Latitude;
-
-        public double Longitude => _mapPokemon.Longitude;
 
         #endregion
 

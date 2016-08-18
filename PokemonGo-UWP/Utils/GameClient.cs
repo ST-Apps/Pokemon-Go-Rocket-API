@@ -215,12 +215,11 @@ namespace PokemonGo_UWP.Utils
         /// </summary>
         public static ObservableCollection<NearbyPokemonWrapper> NearbyPokemons { get; set; } =
             new ObservableCollection<NearbyPokemonWrapper>();
-            //{
-            //    //To prevent errors from NearbyPokemons[0-2].PokemonId in GameMapPage.xaml
-            //    new NearbyPokemonWrapper(new NearbyPokemon {PokemonId = 0}),
-            //    new NearbyPokemonWrapper(new NearbyPokemon {PokemonId = 0}),
-            //    new NearbyPokemonWrapper(new NearbyPokemon {PokemonId = 0})
-            //};
+
+        /// <summary>
+        ///     Collection of lured Pokemon
+        /// </summary>
+        public static ObservableCollection<LuredPokemon> LuredPokemons { get; set; } = new ObservableCollection<LuredPokemon>();
 
         /// <summary>
         ///     Collection of Pokestops in the current area
@@ -589,9 +588,9 @@ namespace PokemonGo_UWP.Utils
             _lastUpdate = DateTime.Now;
 
             // update catchable pokemons
-            var newCatchablePokemons = mapObjects.Item1.MapCells.SelectMany(x => x.CatchablePokemons).ToArray();
+            var newCatchablePokemons = mapObjects.Item1.MapCells.SelectMany(x => x.CatchablePokemons).Select(item => new MapPokemonWrapper(item)).ToArray();
             Logger.Write($"Found {newCatchablePokemons.Length} catchable pokemons");
-            CatchablePokemons.UpdateWith(newCatchablePokemons, x => new MapPokemonWrapper(x),
+            CatchablePokemons.UpdateWith(newCatchablePokemons, x => x,
                 (x, y) => x.EncounterId == y.EncounterId);
 
             // update nearby pokemons
@@ -604,10 +603,14 @@ namespace PokemonGo_UWP.Utils
             var newPokeStops = mapObjects.Item1.MapCells
                 .SelectMany(x => x.Forts)
                 .Where(x => x.Type == FortType.Checkpoint)
-                .ToArray();
+                .ToArray();            
             Logger.Write($"Found {newPokeStops.Length} nearby PokeStops");
             NearbyPokestops.UpdateWith(newPokeStops, x => new FortDataWrapper(x), (x, y) => x.Id == y.Id);
 
+            // Update LuredPokemon
+            var newLuredPokemon = newPokeStops.Where(item => item.LureInfo != null).Select(item => new LuredPokemon(item.LureInfo, item.Latitude, item.Longitude)).ToArray();
+            Logger.Write($"Found {newLuredPokemon.Length} lured Pokemon");
+            LuredPokemons.UpdateByIndexWith(newLuredPokemon, x => x);
             Logger.Write("Finished updating map objects");
         }
 
@@ -823,6 +826,17 @@ namespace PokemonGo_UWP.Utils
         public static async Task<EncounterResponse> EncounterPokemon(ulong encounterId, string spawnpointId)
         {
             return await _client.Encounter.EncounterPokemon(encounterId, spawnpointId);
+        }
+
+        /// <summary>
+        ///     Encounters the selected lured Pokemon
+        /// </summary>
+        /// <param name="encounterId"></param>
+        /// <param name="spawnpointId"></param>
+        /// <returns></returns>
+        public static async Task<DiskEncounterResponse> EncounterLurePokemon(ulong encounterId, string spawnpointId)
+        {
+            return await _client.Encounter.EncounterLurePokemon(encounterId, spawnpointId);
         }
 
         /// <summary>

@@ -381,7 +381,7 @@
                                                 x:Phase="2" />
 
                                         <ProgressBar
-                                                Value="{x:Bind EggKmWalkedStart}"
+                                                Value="{x:Bind EggKmWalkedStart, Mode=TwoWay}"
                                                 Maximum="{x:Bind EggKmWalkedTarget}"
                                                 Margin="0,5"
                                                 Foreground="#399FFF"

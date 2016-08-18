@@ -661,7 +661,9 @@
       <DependentUpon>CircularProgressBar.xaml</DependentUpon>
     </Compile>
     <Compile Include="Entities\FortDataWrapper.cs" />
+    <Compile Include="Entities\IMapPokemon.cs" />
     <Compile Include="Entities\IUpdatable.cs" />
+    <Compile Include="Entities\LuredPokemon.cs" />
     <Compile Include="Entities\MapPokemonWrapper.cs" />
     <Compile Include="Entities\NearbyPokemonWrapper.cs" />
     <Compile Include="Entities\ObservableCollectionPlus.cs" />
