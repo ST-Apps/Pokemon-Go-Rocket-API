@@ -51,8 +51,9 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
 									<RowDefinition Height="Auto" />
-									<RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0"
@@ -226,7 +227,21 @@
                         Height="1"
                         Margin="0,24,0,15" />
 
-                <Button Grid.Row="10"
+				<TextBlock Grid.Row="10"
+                           Grid.Column="0"
+                           x:Uid="SettingsShowDebugInfoInErrorMessage"
+                           Text="Show details on error message"
+                           Style="{StaticResource TextSettingsTitle}"
+                           VerticalAlignment="Center"
+                           Margin="15,15,15,25" />
+
+				<CheckBox Grid.Row="10"
+                          Grid.Column="1"
+                          IsChecked="{Binding ShowDebugInfoInErrorMessage, Mode=TwoWay}"
+                          Style="{StaticResource SettingsCheckbox}"
+                          Margin="0,0,15,10" />
+							
+				<Button Grid.Row="11"
                         Grid.ColumnSpan="2"
                         Command="{Binding DoPtcLogoutCommand}"
                         Style="{StaticResource ButtonNoStyle}">
@@ -236,9 +251,9 @@
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Right" />
                 </Button>
+				
 
-
-            </Grid>
+			</Grid>
 
         </ScrollViewer>
 
