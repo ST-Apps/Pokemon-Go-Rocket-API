@@ -125,11 +125,16 @@ namespace PokemonGo_UWP.ViewModels
             }
         }
 
-        #endregion
+		public bool ShowDebugInfoInErrorMessage
+		{
+			get { return SettingsService.Instance.ShowDebugInfoInErrorMessage; }
+			set { SettingsService.Instance.ShowDebugInfoInErrorMessage = value; }
+		}
+				#endregion
 
-        #region Constructor
+		#region Constructor
 
-        public SettingsPageViewModel()
+		public SettingsPageViewModel()
         {
             LiveTileSelectionCommand = new DelegateCommand<string>(param =>
             {

@@ -146,5 +146,9 @@ namespace PokemonGo_UWP.Utils
 			set { Set(value); }
 		}
 		#endregion
+
+		#region Dev Stuff
+		public bool ShowDebugInfoInErrorMessage { get { return Get(false); } set { Set(value); } }
+		#endregion
 	}
 }
