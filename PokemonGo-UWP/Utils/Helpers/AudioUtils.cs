@@ -10,7 +10,7 @@ namespace PokemonGo_UWP.Utils
     {
         private static readonly MediaElement NormalSounds = new MediaElement();
         private static readonly MediaElement CaptureSound = new MediaElement();
-        private static bool _isPlaying;
+        public static bool _isPlaying;
 
         public static async Task PlaySound(string asset)
         {
@@ -19,6 +19,11 @@ namespace PokemonGo_UWP.Utils
                 if (asset == "Gameplay.mp3")
                 {
                     NormalSounds.IsLooping = true;
+                    _isPlaying = true;
+                }
+                else
+                {
+                    _isPlaying = false;
                 }
                 var folder =
                     await (await Package.Current.InstalledLocation.GetFolderAsync("Assets")).GetFolderAsync("Audio");
@@ -50,7 +55,7 @@ namespace PokemonGo_UWP.Utils
         public static void StopSounds()
         {
             CaptureSound.Stop();
-            NormalSounds.Stop();            
+            NormalSounds.Play();            
         }
     }
 }
