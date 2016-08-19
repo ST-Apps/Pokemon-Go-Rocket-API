@@ -19,6 +19,11 @@ namespace PokemonGo_UWP.Utils
                 if (asset == "Gameplay.mp3")
                 {
                     NormalSounds.IsLooping = true;
+                    _isPlaying = true;
+                }
+                else
+                {
+                    _isPlaying = false;
                 }
                 var folder =
                     await (await Package.Current.InstalledLocation.GetFolderAsync("Assets")).GetFolderAsync("Audio");
