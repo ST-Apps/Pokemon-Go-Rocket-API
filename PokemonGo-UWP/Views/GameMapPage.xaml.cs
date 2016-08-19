@@ -121,11 +121,14 @@ namespace PokemonGo_UWP.Views
                 if (mode == GameMapNavigationModes.AppStart || mode == GameMapNavigationModes.SettingsUpdate)
                     SetupMap();
             }
+
+            GameClient.InitCompass();
+
             // Set first position if we shomehow missed it
             if (GameClient.Geoposition != null)
                 UpdateMap(GameClient.Geoposition);
             SubscribeToCaptureEvents();
-            SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;            
+            SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
         }
 
         private void OnBackRequested(object sender, BackRequestedEventArgs backRequestedEventArgs)

@@ -368,7 +368,7 @@ namespace PokemonGo_UWP.Utils
                 GooglePassword = SettingsService.Instance.LastLoginService == AuthType.Google ? credentials.Password : null,
             };
 
-            _client = new Client(_clientSettings, null, DeviceInfos.Instance) {AccessToken = LoadAccessToken()};
+            _client = new Client(_clientSettings, null, DeviceInfos.Instance) { AccessToken = LoadAccessToken() };
             var apiFailureStrategy = new ApiFailureStrategy(_client);
             _client.ApiFailure = apiFailureStrategy;
             // Register to AccessTokenChanged
@@ -466,7 +466,7 @@ namespace PokemonGo_UWP.Utils
             if (!SettingsService.Instance.RememberLoginData)
                 SettingsService.Instance.UserCredentials = null;
             _heartbeat?.StopDispatcher();
-            if(_geolocator != null)
+            if (_geolocator != null)
                 _geolocator.PositionChanged -= GeolocatorOnPositionChanged;
             _geolocator = null;
             _lastGeopositionMapObjectsRequest = null;
@@ -499,25 +499,6 @@ namespace PokemonGo_UWP.Utils
         /// </summary>
         public static async Task InitializeDataUpdate()
         {
-            if (SettingsService.Instance.IsCompassEnabled)
-            {
-                _compass = Compass.GetDefault();
-                if (_compass != null)
-                {
-                    _compassTimer = new DispatcherTimer
-                    {
-                        Interval = TimeSpan.FromMilliseconds(Math.Max(_compass.MinimumReportInterval, 50))
-                    };
-                    _compassTimer.Tick += (s, e) =>
-                    {
-                        if (SettingsService.Instance.IsAutoRotateMapEnabled)
-                        {
-                            HeadingUpdated?.Invoke(null, _compass.GetCurrentReading());
-                        }
-                    };
-                    _compassTimer.Start();
-                }
-            }
             _geolocator = new Geolocator
             {
                 DesiredAccuracy = PositionAccuracy.High,
@@ -546,6 +527,34 @@ namespace PokemonGo_UWP.Utils
             await UpdateInventory();
             await UpdateItemTemplates();
             Busy.SetBusy(false);
+        }
+
+        public static async Task InitCompass()
+        {
+            if (SettingsService.Instance.IsCompassEnabled == true)
+            {
+                _compass = _compass ?? Compass.GetDefault();
+                if (_compassTimer == null)
+                {
+                    _compassTimer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(Math.Max(_compass.MinimumReportInterval, 50)) };
+                    _compassTimer.Tick += (s, e) =>
+                    {
+                        if (SettingsService.Instance.IsAutoRotateMapEnabled)
+                        {
+                            HeadingUpdated?.Invoke(null, _compass.GetCurrentReading());
+                        }
+                    };
+                }
+
+                _compassTimer.Start();
+            }
+            else
+            {
+                if (_compassTimer.IsEnabled)
+                {
+                    _compassTimer.Stop();
+                }
+            }
         }
 
         private static async void GeolocatorOnPositionChanged(Geolocator sender, PositionChangedEventArgs args)
@@ -604,7 +613,7 @@ namespace PokemonGo_UWP.Utils
             var newPokeStops = mapObjects.Item1.MapCells
                 .SelectMany(x => x.Forts)
                 .Where(x => x.Type == FortType.Checkpoint)
-                .ToArray();            
+                .ToArray();
             Logger.Write($"Found {newPokeStops.Length} nearby PokeStops");
             NearbyPokestops.UpdateWith(newPokeStops, x => new FortDataWrapper(x), (x, y) => x.Id == y.Id);
 
