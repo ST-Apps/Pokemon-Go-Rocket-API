@@ -112,7 +112,7 @@ namespace PokemonGo_UWP.Utils
 		    set
 		    {
 		        Set(value);
-                AudioUtils.ToggleSounds();
+           
 		    }
 		}
 		public bool IsNianticMapEnabled
