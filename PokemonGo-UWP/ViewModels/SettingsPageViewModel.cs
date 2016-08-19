@@ -25,6 +25,12 @@ namespace PokemonGo_UWP.ViewModels
             set { SettingsService.Instance.IsAutoRotateMapEnabled = value; }
         }
 
+        public bool IsCompassEnabled
+        {
+            get { return SettingsService.Instance.IsCompassEnabled; }
+            set { SettingsService.Instance.IsCompassEnabled = value; }
+        }
+
         /// <summary>
         ///     Whether the player wants music
         /// </summary>
@@ -77,40 +83,50 @@ namespace PokemonGo_UWP.ViewModels
                 App.UpdateLiveTile(GameClient.PokemonsInventory.OrderByDescending(c => c.Cp).ToList());
             }
         }
-        
+
         /// <summary>
         ///     Windows handles the PrimaryLanguageOverride, so we don't need to save the value by ourself.
         /// </summary>
         public Language UserLanguage
         {
-            get {
+            get
+            {
                 if (Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride == "")
                 {
-                    return new Language() {
+                    return new Language()
+                    {
                         Code = "System"
                     };
-                } else {
-                    return new Language() {
+                }
+                else
+                {
+                    return new Language()
+                    {
                         Code = Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride
                     };
                 }
             }
-            set {
+            set
+            {
                 Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = value.Code.Replace("System", "");
             }
         }
 
         public List<Language> languageList
         {
-            get {
+            get
+            {
                 List<Language> list = new List<Language>();
-                list.Add(new Language() {
+                list.Add(new Language()
+                {
                     Code = "System"
                 });
 
                 IReadOnlyList<string> languages = Windows.Globalization.ApplicationLanguages.ManifestLanguages;
-                foreach(string language in languages) {
-                    list.Add(new Language() {
+                foreach (string language in languages)
+                {
+                    list.Add(new Language()
+                    {
                         Code = language
                     });
                 }
@@ -170,7 +186,7 @@ namespace PokemonGo_UWP.ViewModels
             _closeCommand = new DelegateCommand(() =>
             {
                 // Navigate back if we didn't change map settings
-                if (_mapSettingsChangedCounter%2 == 0)
+                if (_mapSettingsChangedCounter % 2 == 0)
                 {
                     NavigationService.GoBack();
                 }
