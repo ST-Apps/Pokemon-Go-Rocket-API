@@ -10,7 +10,7 @@ namespace PokemonGo_UWP.Utils
     {
         private static readonly MediaElement NormalSounds = new MediaElement();
         private static readonly MediaElement CaptureSound = new MediaElement();
-        private static bool _isPlaying;
+        public static bool _isPlaying;
 
         public static async Task PlaySound(string asset)
         {
@@ -50,7 +50,7 @@ namespace PokemonGo_UWP.Utils
         public static void StopSounds()
         {
             CaptureSound.Stop();
-            NormalSounds.Stop();            
+            NormalSounds.Play();            
         }
     }
 }
