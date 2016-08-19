@@ -457,27 +457,27 @@ Vuoi aprire la pagina con il file di installazione per l'installazione manuale?<
         </trans-unit>
         <trans-unit id="Combat" translate="yes" xml:space="preserve">
           <source>Combat</source>
-          <target state="new">Combat</target>
+          <target state="translated">Punti lotta</target>
         </trans-unit>
         <trans-unit id="Date" translate="yes" xml:space="preserve">
           <source>Date</source>
-          <target state="new">Date</target>
+          <target state="translated">Data ritrovamento</target>
         </trans-unit>
         <trans-unit id="Fav" translate="yes" xml:space="preserve">
           <source>Favorite</source>
-          <target state="new">Favorite</target>
+          <target state="translated">Preferito</target>
         </trans-unit>
         <trans-unit id="Health" translate="yes" xml:space="preserve">
           <source>Health</source>
-          <target state="new">Health</target>
+          <target state="translated">Punti Salute</target>
         </trans-unit>
         <trans-unit id="Name" translate="yes" xml:space="preserve">
           <source>Name</source>
-          <target state="new">Name</target>
+          <target state="translated">Nome</target>
         </trans-unit>
         <trans-unit id="Number" translate="yes" xml:space="preserve">
           <source>Number</source>
-          <target state="new">Number</target>
+          <target state="translated">Numero di Pokédex</target>
         </trans-unit>
         <trans-unit id="PokemonInventoryFullText" translate="yes" xml:space="preserve">
           <source>Your Pokémon inventory is full, transfer some Pokémon before trying to catch {0}.</source>
@@ -612,7 +612,7 @@ Vuoi aprire la pagina con il file di installazione per l'installazione manuale?<
         </trans-unit>
         <trans-unit id="IncubatorsTextBlock.Text" translate="yes" xml:space="preserve">
           <source>INCUBATORS</source>
-          <target state="final">INCUBATRICI</target>
+          <target state="translated">INCUBATRICI</target>
         </trans-unit>
         <trans-unit id="SettingsUseNianticMapTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Use Niantic Map</source>
@@ -669,11 +669,11 @@ Vuoi aprire la pagina con il file di installazione per l'installazione manuale?<
         </trans-unit>
         <trans-unit id="EggDetailButtonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>START INCUBATION</source>
-          <target state="new">START INCUBATION</target>
+          <target state="translated">METTI NELL'INCUBATRICE</target>
         </trans-unit>
         <trans-unit id="EggDetailTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Use an incubator to incubate the Egg.</source>
-          <target state="new">Use an incubator to incubate the Egg.</target>
+          <target state="translated">Usa un'incubatrice per far schiudere questo Uovo.</target>
         </trans-unit>
       </group>
     </body>

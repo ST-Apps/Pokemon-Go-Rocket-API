@@ -95,4 +95,22 @@ Vuoi aprire la pagina con il file di installazione per l'installazione manuale?<
   <data name="ActivityUnknown" xml:space="preserve">
     <value>Sconosciuto</value>
   </data>
+  <data name="Combat" xml:space="preserve">
+    <value>Punti lotta</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Data ritrovamento</value>
+  </data>
+  <data name="Fav" xml:space="preserve">
+    <value>Preferito</value>
+  </data>
+  <data name="Health" xml:space="preserve">
+    <value>Punti Salute</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Numero di Pokédex</value>
+  </data>
 </root>

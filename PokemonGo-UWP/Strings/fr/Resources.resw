@@ -97,4 +97,10 @@
   <data name="SettingsRememberMapZoomTextBlock" xml:space="preserve">
     <value>Mémoriser le zoom de la carte</value>
   </data>
+  <data name="EggDetailButtonTextBlock.Text" xml:space="preserve">
+    <value>COMMENCER L'INCUBATION</value>
+  </data>
+  <data name="EggDetailTextBlock.Text" xml:space="preserve">
+    <value>Utilise un incubateur pour incuber un oeuf.</value>
+  </data>
 </root>

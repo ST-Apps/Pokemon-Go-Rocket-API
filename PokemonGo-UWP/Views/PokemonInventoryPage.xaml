@@ -381,22 +381,21 @@
                                                 x:Phase="2" />
 
                                         <ProgressBar
-                                                Value="{x:Bind EggKmWalkedStart}"
-                                                Maximum="{x:Bind EggKmWalkedTarget}"
+                                                Value="{Binding Converter={StaticResource EggDataToEggProgressConverter}}"
                                                 Margin="0,5"
                                                 Foreground="#399FFF"
                                                 IsIndeterminate="False"
                                                 HorizontalAlignment="Center"
-                                                x:Phase="1" />
+                                                 />
 
                                         <TextBlock Style="{StaticResource TextGridViewTop}">
                                                 <Run
-                                                    Text="{x:Bind EggKmWalkedStart, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0.#\}}"
-                                                    x:Phase="0" />
+                                                    Text="{Binding EggKmWalkedStart, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0.#\}}"
+                                                     />
                                                 <Run Text="/" />
                                                 <Run FontWeight="Bold"
-                                                     Text="{x:Bind EggKmWalkedTarget, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0\}}"
-                                                     x:Phase="0" />
+                                                     Text="{Binding EggKmWalkedTarget, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0\}}"
+                                                     />
                                                 <Run FontWeight="Bold"
                                                      Text="km" />
                                         </TextBlock>

@@ -143,4 +143,10 @@
   <data name="SettingsRememberMapZoomTextBlock" xml:space="preserve">
     <value>記住地圖縮放</value>
   </data>
+  <data name="EggDetailButtonTextBlock.Text" xml:space="preserve">
+    <value>開始孵蛋</value>
+  </data>
+  <data name="EggDetailTextBlock.Text" xml:space="preserve">
+    <value>使用孵蛋器開始孵蛋。</value>
+  </data>
 </root>

@@ -12,7 +12,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Bug" xml:space="preserve">
+    <value>Böcek</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Karanlık</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Ejder</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Elektrik</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Peri</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Savaşçı</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>Ateş</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Uçuş</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Hayalet</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Yaprak</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Yer</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Buz</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Zehir</value>
+  </data>
   <data name="Psychic" xml:space="preserve">
     <value>Psişik</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Taş</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Çelik</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Su</value>
   </data>
 </root>

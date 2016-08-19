@@ -242,7 +242,7 @@
   <data name="PowerUpButton.Content" xml:space="preserve">
     <value>POWER UP</value>
   </data>
-  <data name="SettingsRememberMapZoomTextBlock" xml:space="preserve">
+  <data name="SettingsRememberMapZoomTextBlock.Text" xml:space="preserve">
     <value>Remember Map Zoom</value>
   </data>
   <data name="TransferButton.Content" xml:space="preserve">
@@ -253,5 +253,17 @@
   </data>
   <data name="EggDetailTextBlock.Text" xml:space="preserve">
     <value>Use an incubator to incubate the Egg.</value>
+  </data>
+  <data name="SettingsLanguageRestartTextBlock.Text" xml:space="preserve">
+    <value>You must restart the App to take effect.</value>
+  </data>
+  <data name="SettingsLanguageTextBlock.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="SettingsCompassEnabledTextBlock.Text" xml:space="preserve">
+    <value>Use compass</value>
+  </data>
+  <data name="SettingsLiveTileTextBlock.Text" xml:space="preserve">
+    <value>Live Tile Mode</value>
   </data>
 </root>

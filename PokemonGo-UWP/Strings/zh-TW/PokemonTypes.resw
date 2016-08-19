@@ -12,7 +12,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Bug" xml:space="preserve">
+    <value>蟲</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>惡</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>龍</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>電</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>妖精</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>格鬥</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>火</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>飛行</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>幽靈</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>草</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>地面</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>冰</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>一般</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>毒</value>
+  </data>
   <data name="Psychic" xml:space="preserve">
     <value>超能力者</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>岩石</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>鋼</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>水</value>
   </data>
 </root>

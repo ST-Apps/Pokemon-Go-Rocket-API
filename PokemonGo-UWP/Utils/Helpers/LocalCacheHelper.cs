@@ -49,7 +49,7 @@ namespace Q42.WinRT.Data
 
         private static StorageFolder _storageFolder;
 
-        public static async Task Init(StorageFolder folder = null)
+        public static void Init(StorageFolder folder = null)
         {
             if (folder == null)
                 folder = ApplicationData.Current.LocalCacheFolder;
@@ -114,7 +114,7 @@ namespace Q42.WinRT.Data
                     return value.File;
                 //Delete old value
                 //Do not await
-                Delete(key, serializerType);
+                var deleteTask = Delete(key, serializerType);
             }
             catch
             {
@@ -153,9 +153,16 @@ namespace Q42.WinRT.Data
         /// <returns></returns>
         public static Task Delete(string key, StorageSerializer serializerType = StorageSerializer.JSON)
         {
-            IStorageHelper<object> storage = new StorageHelper<object>(_storageFolder, CacheFolder, serializerType);
+            try
+            {
+                IStorageHelper<object> storage = new StorageHelper<object>(_storageFolder, CacheFolder, serializerType);
 
-            return storage.DeleteAsync(key);
+                return storage.DeleteAsync(key);
+            }
+            catch
+            {
+                return Task.CompletedTask;
+            }
         }
 
         /// <summary>

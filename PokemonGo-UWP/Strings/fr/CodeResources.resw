@@ -161,4 +161,19 @@ Ouvrir la page avec les fichiers d'installation pour une installation manuelle ?
   <data name="ActivityDefeatGymLeader" xml:space="preserve">
     <value>Bat le Leader du Gymnase</value>
   </data>
+  <data name="Fav" xml:space="preserve">
+    <value>Favoris</value>
+  </data>
+  <data name="Health" xml:space="preserve">
+    <value>Vie</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="PokemonInventoryFullText" xml:space="preserve">
+    <value>Ton inventaire Pokémon est plein, transfert des Pokémon avant d'essayer d'en capturer {0}.</value>
+  </data>
 </root>

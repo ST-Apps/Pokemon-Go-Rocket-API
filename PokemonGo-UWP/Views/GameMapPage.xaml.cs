@@ -125,8 +125,7 @@ namespace PokemonGo_UWP.Views
             if (GameClient.Geoposition != null)
                 UpdateMap(GameClient.Geoposition);
             SubscribeToCaptureEvents();
-            SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
-            AudioUtils.StopSounds();
+            SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;            
         }
 
         private void OnBackRequested(object sender, BackRequestedEventArgs backRequestedEventArgs)

@@ -136,8 +136,7 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="ActivityCatchLegendPokemon" translate="yes" xml:space="preserve">
           <source>Catch Legendary Pokémon</source>
-          <target state="needs-review-translation">捕捉傳說中的精靈寶可夢</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated">捕捉傳說中的精靈寶可夢</target>
         </trans-unit>
         <trans-unit id="ActivityFleePokemon" translate="yes" xml:space="preserve">
           <source>Pokémon Fled</source>
@@ -227,31 +226,31 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="Combat" translate="yes" xml:space="preserve">
           <source>Combat</source>
-          <target state="new">Combat</target>
+          <target state="translated">戰力</target>
         </trans-unit>
         <trans-unit id="Date" translate="yes" xml:space="preserve">
           <source>Date</source>
-          <target state="new">Date</target>
+          <target state="translated">日期</target>
         </trans-unit>
         <trans-unit id="Fav" translate="yes" xml:space="preserve">
           <source>Favorite</source>
-          <target state="new">Favorite</target>
+          <target state="translated">最愛</target>
         </trans-unit>
         <trans-unit id="Health" translate="yes" xml:space="preserve">
           <source>Health</source>
-          <target state="new">Health</target>
+          <target state="translated">體力</target>
         </trans-unit>
         <trans-unit id="Name" translate="yes" xml:space="preserve">
           <source>Name</source>
-          <target state="new">Name</target>
+          <target state="translated">名稱</target>
         </trans-unit>
         <trans-unit id="Number" translate="yes" xml:space="preserve">
           <source>Number</source>
-          <target state="new">Number</target>
+          <target state="translated">編號</target>
         </trans-unit>
         <trans-unit id="PokemonInventoryFullText" translate="yes" xml:space="preserve">
           <source>Your Pokémon inventory is full, transfer some Pokémon before trying to catch {0}.</source>
-          <target state="new">Your Pokémon inventory is full, transfer some Pokémon before trying to catch {0}.</target>
+          <target state="translated">您的精靈寶可夢空間已經滿了，捕捉 {0} 前請先將一些寶可夢轉換成糖果。</target>
         </trans-unit>
       </group>
     </body>
@@ -438,11 +437,11 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="EggDetailButtonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>START INCUBATION</source>
-          <target state="new">START INCUBATION</target>
+          <target state="translated">開始孵蛋</target>
         </trans-unit>
         <trans-unit id="EggDetailTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Use an incubator to incubate the Egg.</source>
-          <target state="new">Use an incubator to incubate the Egg.</target>
+          <target state="translated">使用孵蛋器開始孵蛋。</target>
         </trans-unit>
       </group>
     </body>
@@ -2211,59 +2210,59 @@ Open page with installation files for manual install?</source>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/POKEMONTYPES.RESW" datatype="resx">
         <trans-unit id="Bug" translate="yes" xml:space="preserve">
           <source>Bug</source>
-          <target state="new">Bug</target>
+          <target state="translated">蟲</target>
         </trans-unit>
         <trans-unit id="Dark" translate="yes" xml:space="preserve">
           <source>Dark</source>
-          <target state="new">Dark</target>
+          <target state="translated">惡</target>
         </trans-unit>
         <trans-unit id="Dragon" translate="yes" xml:space="preserve">
           <source>Dragon</source>
-          <target state="new">Dragon</target>
+          <target state="translated">龍</target>
         </trans-unit>
         <trans-unit id="Electric" translate="yes" xml:space="preserve">
           <source>Electric</source>
-          <target state="new">Electric</target>
+          <target state="translated">電</target>
         </trans-unit>
         <trans-unit id="Fairy" translate="yes" xml:space="preserve">
           <source>Fairy</source>
-          <target state="new">Fairy</target>
+          <target state="translated">妖精</target>
         </trans-unit>
         <trans-unit id="Fighting" translate="yes" xml:space="preserve">
           <source>Fighting</source>
-          <target state="new">Fighting</target>
+          <target state="translated">格鬥</target>
         </trans-unit>
         <trans-unit id="Fire" translate="yes" xml:space="preserve">
           <source>Fire</source>
-          <target state="new">Fire</target>
+          <target state="translated">火</target>
         </trans-unit>
         <trans-unit id="Flying" translate="yes" xml:space="preserve">
           <source>Flying</source>
-          <target state="new">Flying</target>
+          <target state="translated">飛行</target>
         </trans-unit>
         <trans-unit id="Ghost" translate="yes" xml:space="preserve">
           <source>Ghost</source>
-          <target state="new">Ghost</target>
+          <target state="translated">幽靈</target>
         </trans-unit>
         <trans-unit id="Grass" translate="yes" xml:space="preserve">
           <source>Grass</source>
-          <target state="new">Grass</target>
+          <target state="translated">草</target>
         </trans-unit>
         <trans-unit id="Ground" translate="yes" xml:space="preserve">
           <source>Ground</source>
-          <target state="new">Ground</target>
+          <target state="translated">地面</target>
         </trans-unit>
         <trans-unit id="Ice" translate="yes" xml:space="preserve">
           <source>Ice</source>
-          <target state="new">Ice</target>
+          <target state="translated">冰</target>
         </trans-unit>
         <trans-unit id="Normal" translate="yes" xml:space="preserve">
           <source>Normal</source>
-          <target state="new">Normal</target>
+          <target state="translated">一般</target>
         </trans-unit>
         <trans-unit id="Poison" translate="yes" xml:space="preserve">
           <source>Poison</source>
-          <target state="new">Poison</target>
+          <target state="translated">毒</target>
         </trans-unit>
         <trans-unit id="Psychic" translate="yes" xml:space="preserve">
           <source>Psychic</source>
@@ -2271,15 +2270,15 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="Rock" translate="yes" xml:space="preserve">
           <source>Rock</source>
-          <target state="new">Rock</target>
+          <target state="translated">岩石</target>
         </trans-unit>
         <trans-unit id="Steel" translate="yes" xml:space="preserve">
           <source>Steel</source>
-          <target state="new">Steel</target>
+          <target state="translated">鋼</target>
         </trans-unit>
         <trans-unit id="Water" translate="yes" xml:space="preserve">
           <source>Water</source>
-          <target state="new">Water</target>
+          <target state="translated">水</target>
         </trans-unit>
       </group>
     </body>

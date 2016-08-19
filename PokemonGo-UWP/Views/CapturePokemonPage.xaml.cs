@@ -29,7 +29,7 @@ namespace PokemonGo_UWP.Views
                 // HACK - somehow binding doesn't work as expected so we manually disable the item if count is 0
                 LaunchPokeballButton.IsEnabled =
                     LaunchPokeballButton.IsHitTestVisible = ViewModel.SelectedCaptureItem.Count > 0;   
-                 AudioUtils.PlaySoundCapture(@"EncounterPokemon.mp3");
+                 AudioUtils.PlaySound(AudioUtils.ENCOUNTER_POKEMON);
             };
         }
 
@@ -234,9 +234,10 @@ namespace PokemonGo_UWP.Views
         }
 
         private void GameManagerViewModelOnCatchFlee(object sender, EventArgs eventArgs)
-        {
+        {            
             CatchEscape.Completed += (s, e) =>
             {
+                LaunchPokeballButton.IsEnabled = false;
                 CatchFlee.Begin();
             };
             CatchStarted.Stop();
