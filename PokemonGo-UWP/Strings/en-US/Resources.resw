@@ -245,7 +245,7 @@
   <data name="SettingsRememberMapZoomTextBlock" xml:space="preserve">
     <value>Remember Map Zoom</value>
   </data>
-  <data name="TransferButton.Content" xml:space="preserve">
+  <data name="TransferTextBlock.Text" xml:space="preserve">
     <value>TRANSFER</value>
   </data>
   <data name="EggDetailButtonTextBlock.Text" xml:space="preserve">
@@ -253,5 +253,8 @@
   </data>
   <data name="EggDetailTextBlock.Text" xml:space="preserve">
     <value>Use an incubator to incubate the Egg.</value>
+  </data>
+  <data name="FavoriteTextBlock.Text" xml:space="preserve">
+    <value>FAVORITE</value>
   </data>
 </root>

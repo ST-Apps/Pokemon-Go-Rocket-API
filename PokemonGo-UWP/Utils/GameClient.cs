@@ -873,7 +873,7 @@ namespace PokemonGo_UWP.Utils
 
         #endregion
 
-        #region Power Up & Evolving & Transfer
+        #region Power Up & Evolving & Transfer & Favorite
 
         /// <summary>
         ///
@@ -903,6 +903,19 @@ namespace PokemonGo_UWP.Utils
         public static async Task<ReleasePokemonResponse> TransferPokemon(ulong pokemonId)
         {
             return await _client.Inventory.TransferPokemon(pokemonId);
+        }
+
+        /// <summary>
+        /// Favourites/Unfavourites the Pokemon
+        /// </summary>
+        /// <param name="pokemonId"></param>
+        /// <param name="isFavorite"></param>
+        /// <returns></returns>
+        public static async Task<SetFavoritePokemonResponse> SetFavoritePokemon(ulong pokemonId, bool isFavorite)
+        {
+            // Cast ulong to long... because Niantic is a bunch of retarded idiots...
+            long pokeId = (long)pokemonId;
+            return await _client.Inventory.SetFavoritePokemon(pokeId, isFavorite);
         }
 
         #endregion

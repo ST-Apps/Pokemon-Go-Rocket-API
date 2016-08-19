@@ -1241,7 +1241,7 @@ namespace PokemonGo_UWP.Utils
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            var ms = (long)value;
+            var ms = System.Convert.ToUInt64(value);
             var date = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Local);
             date = date.Add(TimeSpan.FromMilliseconds(ms));
             return date.ToString(Resources.CodeResources.GetString("DateFormat"));
