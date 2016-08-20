@@ -6,6 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:media="using:Microsoft.Xaml.Interactions.Media"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     mc:Ignorable="d">
 
@@ -109,8 +110,7 @@
 
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
-                        <core:CallMethodAction MethodName="Begin"
-                                               TargetObject="{Binding ElementName=HideDiscardStoryboard}" />
+                        <media:ControlStoryboardAction Storyboard="{StaticResource HideDiscardStoryboard}" />
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
 
