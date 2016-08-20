@@ -544,6 +544,15 @@ namespace PokemonGo_UWP.Utils
             Geoposition = Geoposition ?? await _geolocator.GetGeopositionAsync();
             GeopositionUpdated?.Invoke(null, Geoposition);
             _geolocator.PositionChanged += GeolocatorOnPositionChanged;
+
+            // Initialise the MS band connection if it's enabled
+            if (SettingsService.Instance.HasBandConnection)
+            {
+                Debug.WriteLine("Connecting to MS Band");
+                Busy.SetBusy(true, "Connecting to Microsoft Band");
+                await BandHelper.Instance.Connect();
+            }
+
             // Before starting we need game settings
             GameSetting =
                 await

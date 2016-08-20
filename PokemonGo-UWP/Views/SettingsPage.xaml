@@ -50,8 +50,9 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
-									<RowDefinition Height="Auto" />
-									<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
@@ -135,7 +136,21 @@
                           Style="{StaticResource SettingsCheckbox}"
                           Margin="0,0,15,10" />
 
-							<StackPanel Grid.Row="6" Grid.Column="0" Orientation="Vertical" Margin="0" >
+                <TextBlock Grid.Row="6"
+                           Grid.Column="0"
+                           x:Uid="SettingsMicrosoftBandTextBlock"
+                           Text="Microsoft Band Integration"
+                           Style="{StaticResource TextSettingsTitle}"
+                           VerticalAlignment="Center"
+                           Margin="15,15,15,25" />
+
+                <CheckBox Grid.Row="6"
+                          Grid.Column="1"
+                          IsChecked="{Binding HasBandConnection, Mode=TwoWay}"
+                          Style="{StaticResource SettingsCheckbox}"
+                          Margin="0,0,15,10" />
+
+                <StackPanel Grid.Row="7" Grid.Column="0" Orientation="Vertical" Margin="0" >
 								<TextBlock
 											 x:Uid="SettingsLanguageTextBlock"
 											 Text="Language"
@@ -150,12 +165,12 @@
 											 Margin="15,0,15,25" FontSize="10" />
 							</StackPanel>
 
-							<ComboBox x:Name="LanguageComboBox" Grid.Row="6"
+							<ComboBox x:Name="LanguageComboBox" Grid.Row="7"
 												Grid.Column="1"
 												 Margin="0,10,15,10" ItemsSource="{Binding languageList, Mode=OneWay}" SelectedItem="{Binding UserLanguage, Mode=TwoWay}" HorizontalAlignment="Right" />
 
 
-							<TextBlock Grid.Row="7"
+							<TextBlock Grid.Row="8"
                            Grid.Column="0"
                            x:Uid="SettingsLiveTileTextBlock"
                            Text="Live Tile Mode"
@@ -163,7 +178,7 @@
                            VerticalAlignment="Center"
                            Margin="15,15,15,25" />
                
-                <VariableSizedWrapGrid Grid.Row="8"
+                <VariableSizedWrapGrid Grid.Row="9"
                                        Grid.ColumnSpan="2"
                                        Orientation="Horizontal"
                                        MaximumRowsOrColumns="5"
@@ -220,13 +235,13 @@
                     </Button>
                 </VariableSizedWrapGrid>
 
-                <Border Grid.Row="9"
+                <Border Grid.Row="10"
                         Grid.ColumnSpan="2"
                         Background="#33ffffff"
                         Height="1"
                         Margin="0,24,0,15" />
 
-                <Button Grid.Row="10"
+                <Button Grid.Row="11"
                         Grid.ColumnSpan="2"
                         Command="{Binding DoPtcLogoutCommand}"
                         Style="{StaticResource ButtonNoStyle}">

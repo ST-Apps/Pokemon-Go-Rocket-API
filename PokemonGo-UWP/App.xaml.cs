@@ -152,6 +152,8 @@ namespace PokemonGo_UWP
             if (e.Action != NotifyCollectionChangedAction.Add) return;
             if (SettingsService.Instance.IsVibrationEnabled)
                 _vibrationDevice?.Vibrate(TimeSpan.FromMilliseconds(500));
+            if (SettingsService.Instance.HasBandConnection)
+                Utils.Helpers.BandHelper.Instance.Vibrate(Microsoft.Band.Notifications.VibrationType.NotificationOneTone);
             AudioUtils.PlaySound(AudioUtils.POKEMON_FOUND_DING);
         }
 

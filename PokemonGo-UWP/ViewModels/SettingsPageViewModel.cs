@@ -72,6 +72,15 @@ namespace PokemonGo_UWP.ViewModels
         }
 
         /// <summary>
+        ///     Whether the player wants band integration (Currently only vibration)
+        /// </summary>
+        public bool HasBandConnection
+        {
+            get { return SettingsService.Instance.HasBandConnection; }
+            set { SettingsService.Instance.HasBandConnection = value; }
+        }
+
+        /// <summary>
         ///     Whether the player wants a Live Tile or a regular one.
         /// </summary>
         public LiveTileModes LiveTileMode
