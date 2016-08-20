@@ -58,7 +58,7 @@ If you already had the app installed, probably a reboot is required.
 
 Q: How can I logout?
 
-A: Press the Pokeball and hit the "LOGOUT" button in the top right corner.
+A: Press the Pokeball and press Settings at the top right hand corner then select Sign Out at the bottom of the list
 
 # Changelog
 
