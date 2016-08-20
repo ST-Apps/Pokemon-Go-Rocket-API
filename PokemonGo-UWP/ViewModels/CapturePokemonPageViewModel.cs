@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
 using Windows.UI.Xaml.Navigation;
+using Google.Protobuf;
 using Newtonsoft.Json;
 using PokemonGo.RocketAPI;
 using PokemonGo_UWP.Entities;
@@ -111,13 +112,13 @@ namespace PokemonGo_UWP.ViewModels
         public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
         {
             if (suspensionState.Any())
-            {
+            {                
                 // Recovering the state
                 CurrentPokemon = JsonConvert.DeserializeObject<IMapPokemon>((string) suspensionState[nameof(CurrentPokemon)]);
-                CurrentEncounter = JsonConvert.DeserializeObject<EncounterResponse>((string) suspensionState[nameof(CurrentEncounter)]);
-                CurrentLureEncounter = JsonConvert.DeserializeObject<DiskEncounterResponse>((string) suspensionState[nameof(CurrentLureEncounter)]);
-                CurrentCaptureAward = JsonConvert.DeserializeObject<CaptureAward>((string) suspensionState[nameof(CurrentCaptureAward)]);
-                SelectedCaptureItem = JsonConvert.DeserializeObject<ItemData>((string) suspensionState[nameof(SelectedCaptureItem)]);
+                CurrentEncounter.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(CurrentEncounter)]).CreateCodedInput());
+                CurrentLureEncounter.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(CurrentLureEncounter)]).CreateCodedInput());
+                CurrentCaptureAward.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(CurrentCaptureAward)]).CreateCodedInput());
+                SelectedCaptureItem.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(SelectedCaptureItem)]).CreateCodedInput());
             }
             else
             {
@@ -139,12 +140,12 @@ namespace PokemonGo_UWP.ViewModels
         public override async Task OnNavigatedFromAsync(IDictionary<string, object> suspensionState, bool suspending)
         {
             if (suspending)
-            {
+            {                
                 suspensionState[nameof(CurrentPokemon)] = JsonConvert.SerializeObject(CurrentPokemon);
-                suspensionState[nameof(CurrentEncounter)] = JsonConvert.SerializeObject(CurrentEncounter);
-                suspensionState[nameof(CurrentLureEncounter)] = JsonConvert.SerializeObject(CurrentLureEncounter);
-                suspensionState[nameof(CurrentCaptureAward)] = JsonConvert.SerializeObject(CurrentCaptureAward);
-                suspensionState[nameof(SelectedCaptureItem)] = JsonConvert.SerializeObject(SelectedCaptureItem);
+                suspensionState[nameof(CurrentEncounter)] = CurrentEncounter.ToByteString().ToBase64();
+                suspensionState[nameof(CurrentLureEncounter)] = CurrentLureEncounter.ToByteString().ToBase64();
+                suspensionState[nameof(CurrentCaptureAward)] = CurrentCaptureAward.ToByteString().ToBase64();
+                suspensionState[nameof(SelectedCaptureItem)] = SelectedCaptureItem.ToByteString().ToBase64();
             }
             await Task.CompletedTask;
         }
