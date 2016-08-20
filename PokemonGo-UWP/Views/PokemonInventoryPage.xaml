@@ -117,13 +117,7 @@
                       SelectedItem="{Binding CurrentPokemonSortingMode, Mode=TwoWay}"
                       IsItemClickEnabled="True"
                       VerticalAlignment="Bottom"
-                      Margin="0,0,0,77.5">
-                <interactivity:Interaction.Behaviors>
-                    <core:EventTriggerBehavior EventName="ItemClick">
-                        <core:CallMethodAction MethodName="Begin"
-                                               TargetObject="{Binding ElementName=HideSortMenuStoryboard}" />
-                    </core:EventTriggerBehavior>
-                </interactivity:Interaction.Behaviors>
+                      Margin="0,0,0,77.5" ItemClick="ListView_ItemClick">
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem">
                         <Setter Property="Margin" Value="0" />
@@ -153,14 +147,7 @@
                     Style="{StaticResource ButtonCircleInverse}"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Bottom"
-                    Margin="0,0,0,17.5">
-
-                <interactivity:Interaction.Behaviors>
-                    <core:EventTriggerBehavior EventName="Click">
-                        <core:CallMethodAction MethodName="Begin"
-                                               TargetObject="{Binding ElementName=HideSortMenuStoryboard}" />
-                    </core:EventTriggerBehavior>
-                </interactivity:Interaction.Behaviors>
+                    Margin="0,0,0,17.5" Click="CloseSortMenuButton_Click">
 
                 <Image Source="../Assets/Buttons/btn_close_dark.png" />
             </Button>
@@ -323,13 +310,7 @@
                         <Button x:Name="SortingButton"
                                 Grid.Row="1"
                                 Style="{StaticResource ButtonCircleBigInverse}"
-                                Margin="16">
-                            <interactivity:Interaction.Behaviors>
-                                <core:EventTriggerBehavior EventName="Click">
-                                    <core:CallMethodAction MethodName="Begin"
-                                                           TargetObject="{Binding ElementName=ShowSortMenuStoryboard}" />
-                                </core:EventTriggerBehavior>
-                            </interactivity:Interaction.Behaviors>
+                                Margin="16" Click="SortingButton_Click">
                             <Image
                                 Source="{Binding CurrentPokemonSortingMode, Converter={StaticResource PokemonSortingModesToIconConverter}}" />
                         </Button>

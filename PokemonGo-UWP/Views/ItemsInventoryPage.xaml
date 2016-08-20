@@ -105,14 +105,7 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Bottom"
                     x:Name="CloseDiscardButton"
-                    Margin="24">
-
-                <interactivity:Interaction.Behaviors>
-                    <core:EventTriggerBehavior EventName="Click">
-                        <core:CallMethodAction MethodName="Begin"
-                                               TargetObject="{Binding ElementName=HideDiscardStoryboard}" />
-                    </core:EventTriggerBehavior>
-                </interactivity:Interaction.Behaviors>
+                    Margin="24" Click="CloseDiscardButton_Click">
 
                 <Image Source="../Assets/Buttons/btn_close_normal_dark.png"
                        Stretch="Uniform"
