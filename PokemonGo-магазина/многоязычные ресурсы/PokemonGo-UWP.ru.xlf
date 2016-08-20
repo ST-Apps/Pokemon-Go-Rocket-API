@@ -135,12 +135,12 @@
           <target state="translated">Захвачен {0} Покемон</target>
         </trans-unit>
         <trans-unit id="BadgeEvolvedTotalDescription" translate="yes" xml:space="preserve">
-          <source>Evolved [x] Pokémon</source>
-          <target state="translated">Развиваются [x] Покемон</target>
+          <source>Evolved {0} Pokémon</source>
+          <target state="translated">Развиваются {0} Покемон</target>
         </trans-unit>
         <trans-unit id="BadgeHatchedTotalDescription" translate="yes" xml:space="preserve">
-          <source>Hatched {x} Pokemon</source>
-          <target state="translated">Вылупившийся {x} Покемон</target>
+          <source>Hatched {0} Pokemon</source>
+          <target state="translated">Вылупившийся {0} Покемон</target>
         </trans-unit>
         <trans-unit id="BadgePikachuDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Pikachu</source>
@@ -2257,7 +2257,7 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="Normal" translate="yes" xml:space="preserve">
           <source>Normal</source>
-          <target state="translated">Нормально</target>
+          <target state="translated">Обычный</target>
         </trans-unit>
         <trans-unit id="Poison" translate="yes" xml:space="preserve">
           <source>Poison</source>
