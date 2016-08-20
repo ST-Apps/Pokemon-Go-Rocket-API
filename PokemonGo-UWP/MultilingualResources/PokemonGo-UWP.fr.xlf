@@ -488,6 +488,10 @@ Ouvrir la page avec les fichiers d'installation pour une installation manuelle ?
           <source>Your Pokémon inventory is full, transfer some Pokémon before trying to catch {0}.</source>
           <target state="translated">Ton inventaire Pokémon est plein, transfert des Pokémon avant d'essayer d'en capturer {0}.</target>
         </trans-unit>
+        <trans-unit id="WaitingForNetworkText" translate="yes" xml:space="preserve">
+          <source>Waiting for network to be back...</source>
+          <target state="new">Waiting for network to be back...</target>
+        </trans-unit>
       </group>
     </body>
   </file>
