@@ -136,11 +136,11 @@
         </trans-unit>
         <trans-unit id="BadgeEvolvedTotalDescription" translate="yes" xml:space="preserve">
           <source>Evolved {0} Pokémon</source>
-          <target state="translated">Развиваются {0} Покемон</target>
+           <target state="new">Evolved {0} Pokémon</target>
         </trans-unit>
         <trans-unit id="BadgeHatchedTotalDescription" translate="yes" xml:space="preserve">
-          <source>Hatched {0} Pokemon</source>
-          <target state="translated">Вылупившийся {0} Покемон</target>
+           <source>Hatched {0} Pokemon</source>
+           <target state="new">Hatched {0} Pokemon</target>
         </trans-unit>
         <trans-unit id="BadgePikachuDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Pikachu</source>
