@@ -266,5 +266,20 @@ namespace PokemonGo_UWP.Views
             var currentZoomLevel = sender.ZoomLevel;
             sender.ZoomLevel = currentZoomLevel < 17 ? 17 : currentZoomLevel;
         }
+
+        private void PokeMenuMainButton_Click(object sender, RoutedEventArgs e)
+        {
+            ShowPokeMenuStoryboard.Begin();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            HidePokeMenuStoryboard.Begin();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            HideLevelUpPanelStoryboard.Begin();
+        }
     }
 }

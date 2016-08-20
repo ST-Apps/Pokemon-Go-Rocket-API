@@ -311,7 +311,7 @@
                                     Foreground="White"
                                     Command="{Binding ReplaceEvolvedPokemonCommand}"
                                     Style="{StaticResource RoundedButton}"
-                                    Margin="8">
+                                    Margin="8" Click="Button_Click">
                                 <Button.Background>
                                     <LinearGradientBrush StartPoint="0,4">
                                         <GradientStop Color="#FFA2DB96" />
@@ -319,13 +319,6 @@
                                                       Offset="1" />
                                     </LinearGradientBrush>
                                 </Button.Background>
-
-                                <interactivity:Interaction.Behaviors>
-                                    <core:EventTriggerBehavior EventName="Tapped">
-                                        <core:CallMethodAction MethodName="Begin"
-                                                               TargetObject="{Binding ElementName=HideEvolveMenuStoryboard}" />
-                                    </core:EventTriggerBehavior>
-                                </interactivity:Interaction.Behaviors>
 
                             </Button>
                         </Grid>
@@ -362,7 +355,7 @@
                 <!--Favorite-->
                 <Grid HorizontalAlignment="Right" 
                       Margin="0"
-                      Padding="17.5,4">
+                      Padding="17.5,4" Tapped="Grid_Tapped">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="Auto" />
@@ -370,13 +363,6 @@
                     <Grid.RenderTransform>
                         <TranslateTransform Y="150" x:Name="ContextMenuFavoriteTranslateTransform"/>
                     </Grid.RenderTransform>
-                    <interactivity:Interaction.Behaviors>
-                        <core:EventTriggerBehavior EventName="Tapped">
-                            <core:CallMethodAction MethodName="Begin"
-                                               TargetObject="{Binding ElementName=HideContextMenuStoryboard}" />
-                            <core:InvokeCommandAction Command="{Binding FavoritePokemonCommand}" />
-                        </core:EventTriggerBehavior>
-                    </interactivity:Interaction.Behaviors>
                     <TextBlock Grid.Column="0"
                                Margin="0,0,15,0"
                                x:Uid="FavoriteTextBlock"
@@ -423,13 +409,7 @@
                     Grid.Row="1"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Top"
-                    Margin="17.5,12.5">
-                <interactivity:Interaction.Behaviors>
-                    <core:EventTriggerBehavior EventName="Tapped">
-                        <core:CallMethodAction MethodName="Begin"
-                                               TargetObject="{Binding ElementName=HideContextMenuStoryboard}" />
-                    </core:EventTriggerBehavior>
-                </interactivity:Interaction.Behaviors>
+                    Margin="17.5,12.5" Click="Button_Click_1">
                 <Image Source="../Assets/Buttons/btn_close.png" />
             </Button>
         </Grid>
@@ -1051,14 +1031,7 @@
                 RelativePanel.AlignRightWithPanel="True"
                 Style="{ThemeResource ImageButtonStyle}"
                 Height="{ThemeResource UiButtonSize}"
-                Margin="16">
-            
-            <interactivity:Interaction.Behaviors>
-                <core:EventTriggerBehavior EventName="Tapped">
-                    <core:CallMethodAction MethodName="Begin"
-                                           TargetObject="{Binding ElementName=ShowContextMenuStoryboard}" />
-                </core:EventTriggerBehavior>
-            </interactivity:Interaction.Behaviors>
+                Margin="16" Click="Button_Click_2">
 
             <Image Source="../Assets/Buttons/btn_menu.png"
                    HorizontalAlignment="Center"

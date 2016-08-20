@@ -343,5 +343,20 @@ namespace PokemonGo_UWP.Views
         }
 
         #endregion
+
+        private void CloseInventoryMenuButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            HideInventoryMenuStoryboard.Begin();
+        }
+
+        private void InventoryButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            ShowInventoryMenuStoryboard.Begin();
+        }
+
+        private void ListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            HideInventoryMenuStoryboard.Begin();
+        }
     }
 }
