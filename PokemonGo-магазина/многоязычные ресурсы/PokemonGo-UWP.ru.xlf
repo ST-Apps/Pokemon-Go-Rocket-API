@@ -659,14 +659,6 @@ Open page with installation files for manual install?</source>
           <source>POWER UP</source>
           <target state="translated">Улучшить</target>
         </trans-unit>
-        <trans-unit id="TransferButton.Content" translate="yes" xml:space="preserve">
-          <source>TRANSFER</source>
-          <target state="translated">Передать</target>
-        </trans-unit>
-        <trans-unit id="SettingsRememberMapZoomTextBlock" translate="yes" xml:space="preserve">
-          <source>Remember Map Zoom</source>
-          <target state="translated">Запоминать маштаб карты</target>
-        </trans-unit>
         <trans-unit id="EggDetailButtonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>START INCUBATION</source>
           <target state="translated">Начать инкубацию</target>
@@ -675,6 +667,34 @@ Open page with installation files for manual install?</source>
           <source>Use an incubator to incubate the Egg.</source>
           <target state="translated">Используйте инкубатор для яиц.</target>
         </trans-unit>
+         <trans-unit id="SettingsRememberMapZoomTextBlock.Text" translate="yes" xml:space="preserve">
+           <source>Remember Map Zoom</source>
+           <target state="translated">Запоминать маштаб какрты/target>
+         </trans-unit>
+         <trans-unit id="TransferTextBlock.Text" translate="yes" xml:space="preserve">
+           <source>TRANSFER</source>
+           <target state="translated">Передать</target>
+         </trans-unit>
+         <trans-unit id="SettingsLanguageRestartTextBlock.Text" translate="yes" xml:space="preserve">
+           <source>You must restart the App to take effect.</source>
+           <target state="translated">Вы должны перезагузить приложение для получения эффекта.</target>
+         </trans-unit>
+         <trans-unit id="SettingsLanguageTextBlock.Text" translate="yes" xml:space="preserve">
+           <source>Language</source>
+           <target state="translated">язык</target>
+         </trans-unit>
+         <trans-unit id="SettingsCompassEnabledTextBlock.Text" translate="yes" xml:space="preserve">
+           <source>Use compass</source>
+           <target state="translated">Использовать компас</target>
+         </trans-unit>
+         <trans-unit id="SettingsLiveTileTextBlock.Text" translate="yes" xml:space="preserve">
+           <source>Live Tile Mode</source>
+           <target state="translated">Живая плитка</target>
+         </trans-unit>
+         <trans-unit id="FavoriteTextBlock.Text" translate="yes" xml:space="preserve">
+           <source>FAVORITE</source>
+           <target state="translated">Избранные</target>
+         </trans-unit>
       </group>
     </body>
   </file>
