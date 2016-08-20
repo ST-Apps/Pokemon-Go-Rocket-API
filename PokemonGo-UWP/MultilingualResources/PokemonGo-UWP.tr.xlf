@@ -483,6 +483,10 @@ Elle yükleme için yükleme dosyaları sayfası açılsın mı?</target>
           <source>Your Pokémon inventory is full, transfer some Pokémon before trying to catch {0}.</source>
           <target state="translated">Pokémon çantanız dolu, {0} yakalamadan önce Pokémon transfer edin.</target>
         </trans-unit>
+        <trans-unit id="WaitingForNetworkText" translate="yes" xml:space="preserve">
+          <source>Waiting for network to be back...</source>
+          <target state="new">Waiting for network to be back...</target>
+        </trans-unit>
       </group>
     </body>
   </file>
