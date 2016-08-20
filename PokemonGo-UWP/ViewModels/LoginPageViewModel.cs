@@ -28,6 +28,9 @@ namespace PokemonGo_UWP.ViewModels
         public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode,
             IDictionary<string, object> suspensionState)
         {
+
+            AudioUtils.PlaySound(AudioUtils.MAINPAGE);
+
             // Prevent from going back to other pages
             NavigationService.ClearHistory();
             if (suspensionState.Any())
