@@ -13,6 +13,7 @@ namespace PokemonGo_UWP.Utils
         #region Audio Files
 
         public const string GAMEPLAY = "Gameplay.mp3";
+        public const string MAINPAGE = "Login.mp3";
         public const string ENCOUNTER_POKEMON = "EncounterPokemon.mp3";
         public const string POKEMON_FOUND_DING = "pokemon_found_ding.wav";
 
@@ -20,6 +21,7 @@ namespace PokemonGo_UWP.Utils
 
         #region Media Elements
         private static readonly MediaElement GameplaySound = new MediaElement();
+        private static readonly MediaElement MainpageSound = new MediaElement();
         private static readonly MediaElement EncounterSound = new MediaElement();
         private static readonly MediaElement PokemonFoundSound = new MediaElement();
         #endregion       
@@ -33,11 +35,15 @@ namespace PokemonGo_UWP.Utils
             // Get folder
             var folder =
                     await (await Package.Current.InstalledLocation.GetFolderAsync("Assets")).GetFolderAsync("Audio");
-            ToggleSounds();
+
             // Get files and create elements   
             var currentFile = await folder.GetFileAsync(GAMEPLAY);
             var currentStream = await currentFile.OpenAsync(FileAccessMode.Read);
             GameplaySound.SetSource(currentStream, currentFile.ContentType);
+
+            currentFile = await folder.GetFileAsync(MAINPAGE);
+            currentStream = await currentFile.OpenAsync(FileAccessMode.Read);
+            MainpageSound.SetSource(currentStream, currentFile.ContentType);
 
             currentFile = await folder.GetFileAsync(ENCOUNTER_POKEMON);
             currentStream = await currentFile.OpenAsync(FileAccessMode.Read);
@@ -48,16 +54,7 @@ namespace PokemonGo_UWP.Utils
             PokemonFoundSound.SetSource(currentStream, currentFile.ContentType);
             // Set mode and volume
             GameplaySound.IsLooping = true;
-        }
-
-        /// <summary>
-        /// Sets volume based on settings
-        /// </summary>
-        public static void ToggleSounds()
-        {
-            // TODO: not working yet for some weird reasons
-            GameplaySound.IsMuted =
-                EncounterSound.IsMuted = PokemonFoundSound.IsMuted = !SettingsService.Instance.IsMusicEnabled;
+            MainpageSound.IsLooping = true;
         }
 
         /// <summary>
@@ -71,8 +68,17 @@ namespace PokemonGo_UWP.Utils
             {
                 case GAMEPLAY:
                     if (GameplaySound.CurrentState != MediaElementState.Playing)
-                        GameplaySound.Play();
+                    GameplaySound.Play();
                     EncounterSound.Stop();
+                    MainpageSound.Stop();
+                    PokemonFoundSound.Stop();
+                    
+                    break;
+                case MAINPAGE:
+                    MainpageSound.Play();
+                    EncounterSound.Stop();
+                    GameplaySound.Stop();
+                    PokemonFoundSound.Stop();
                     break;
                 case ENCOUNTER_POKEMON:
                     GameplaySound.Pause();
@@ -96,6 +102,9 @@ namespace PokemonGo_UWP.Utils
                 case GAMEPLAY:
                     GameplaySound.Stop();
                     break;
+                case MAINPAGE:
+                    MainpageSound.Stop();
+                    break;
                 case ENCOUNTER_POKEMON:
                     EncounterSound.Stop();
                     break;
@@ -111,6 +120,7 @@ namespace PokemonGo_UWP.Utils
         public static void StopSounds()
         {
             GameplaySound.Stop();
+            MainpageSound.Stop();
             EncounterSound.Stop();
             PokemonFoundSound.Stop();
         }
