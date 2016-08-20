@@ -7,6 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:media="using:Microsoft.Xaml.Interactions.Media"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:gif="using:XamlAnimatedGif"
     xmlns:controls="using:PokemonGo_UWP.Controls"
@@ -113,8 +114,7 @@
                             x:Name="CustomizeUICloseButton">
                         <interactivity:Interaction.Behaviors>
                             <core:EventTriggerBehavior EventName="Click">
-                                <core:CallMethodAction MethodName="Begin"
-                                                       TargetObject="{Binding ElementName=HideInventoryStoryboard}" />
+                                <media:ControlStoryboardAction Storyboard="{StaticResource HideInventoryStoryboard}" />
                             </core:EventTriggerBehavior>
                         </interactivity:Interaction.Behaviors>
                         <Image Source="../Assets/Buttons/btn_close_normal_dark.png"
@@ -370,8 +370,7 @@
 
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="Click">
-                            <core:CallMethodAction MethodName="Begin"
-                                                       TargetObject="{Binding ElementName=ShowInventoryStoryboard}" />
+                            <media:ControlStoryboardAction Storyboard="{StaticResource ShowInventoryStoryboard}" />
                         </core:EventTriggerBehavior>
                     </interactivity:Interaction.Behaviors>
 

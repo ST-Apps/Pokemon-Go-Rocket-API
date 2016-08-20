@@ -8,6 +8,7 @@
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:behaviors="using:Template10.Behaviors"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:media="using:Microsoft.Xaml.Interactions.Media"
     xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
     xmlns:entities="using:PokemonGo_UWP.Entities"
     xmlns:controls="using:Template10.Controls"
@@ -504,8 +505,7 @@
 
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
-                        <core:CallMethodAction MethodName="Begin"
-                                               TargetObject="{Binding ElementName=HidePokeMenuStoryboard}" />
+                        <media:ControlStoryboardAction Storyboard="{StaticResource HidePokeMenuStoryboard}" />
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
 
@@ -635,8 +635,7 @@
 
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
-                        <core:CallMethodAction MethodName="Begin"
-                                               TargetObject="{Binding ElementName=HideLevelUpPanelStoryboard}" />
+                        <media:ControlStoryboardAction Storyboard="{StaticResource HideLevelUpPanelStoryboard}" />
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
 
@@ -726,8 +725,7 @@
 
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
-                        <core:CallMethodAction MethodName="Begin"
-                                               TargetObject="{Binding ElementName=ShowPokeMenuStoryboard}" />
+                        <media:ControlStoryboardAction Storyboard="{StaticResource ShowPokeMenuStoryboard}" />
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
 

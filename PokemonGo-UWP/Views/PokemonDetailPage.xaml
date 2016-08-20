@@ -8,6 +8,7 @@
     xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:media="using:Microsoft.Xaml.Interactions.Media"
     xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
     xmlns:controls="using:PokemonGo_UWP.Controls"
     mc:Ignorable="d">
@@ -322,8 +323,7 @@
 
                                 <interactivity:Interaction.Behaviors>
                                     <core:EventTriggerBehavior EventName="Tapped">
-                                        <core:CallMethodAction MethodName="Begin"
-                                                               TargetObject="{Binding ElementName=HideEvolveMenuStoryboard}" />
+                                        <media:ControlStoryboardAction Storyboard="{StaticResource HideEvolveMenuStoryboard}" />
                                     </core:EventTriggerBehavior>
                                 </interactivity:Interaction.Behaviors>
 
@@ -372,8 +372,7 @@
                     </Grid.RenderTransform>
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="Tapped">
-                            <core:CallMethodAction MethodName="Begin"
-                                               TargetObject="{Binding ElementName=HideContextMenuStoryboard}" />
+                            <media:ControlStoryboardAction Storyboard="{StaticResource HideContextMenuStoryboard}" />
                             <core:InvokeCommandAction Command="{Binding FavoritePokemonCommand}" />
                         </core:EventTriggerBehavior>
                     </interactivity:Interaction.Behaviors>
@@ -426,8 +425,7 @@
                     Margin="17.5,12.5">
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Tapped">
-                        <core:CallMethodAction MethodName="Begin"
-                                               TargetObject="{Binding ElementName=HideContextMenuStoryboard}" />
+                        <media:ControlStoryboardAction Storyboard="{StaticResource HideContextMenuStoryboard}" />
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
                 <Image Source="../Assets/Buttons/btn_close.png" />
@@ -1059,8 +1057,7 @@
                 Margin="12.5">
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="Tapped">
-                    <core:CallMethodAction MethodName="Begin"
-                                               TargetObject="{Binding ElementName=ShowContextMenuStoryboard}" />
+                    <media:ControlStoryboardAction Storyboard="{StaticResource ShowContextMenuStoryboard}" />
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
            

@@ -6,6 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:media="using:Microsoft.Xaml.Interactions.Media"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:controls="using:Template10.Controls"
     xmlns:entities="using:PokemonGo_UWP.Entities"
@@ -120,8 +121,7 @@
                       Margin="0,0,0,77.5">
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="ItemClick">
-                        <core:CallMethodAction MethodName="Begin"
-                                               TargetObject="{Binding ElementName=HideSortMenuStoryboard}" />
+                        <media:ControlStoryboardAction Storyboard="{StaticResource HideSortMenuStoryboard}" />
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
                 <ListView.ItemContainerStyle>
@@ -157,8 +157,7 @@
 
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Click">
-                        <core:CallMethodAction MethodName="Begin"
-                                               TargetObject="{Binding ElementName=HideSortMenuStoryboard}" />
+                        <media:ControlStoryboardAction Storyboard="{StaticResource HideSortMenuStoryboard}" />
                     </core:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
 
@@ -323,8 +322,7 @@
                                 Margin="16">
                             <interactivity:Interaction.Behaviors>
                                 <core:EventTriggerBehavior EventName="Click">
-                                    <core:CallMethodAction MethodName="Begin"
-                                                           TargetObject="{Binding ElementName=ShowSortMenuStoryboard}" />
+                                    <media:ControlStoryboardAction Storyboard="{StaticResource ShowSortMenuStoryboard}" />
                                 </core:EventTriggerBehavior>
                             </interactivity:Interaction.Behaviors>
                             <Image
