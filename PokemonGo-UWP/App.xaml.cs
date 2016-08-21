@@ -165,7 +165,7 @@ namespace PokemonGo_UWP
 
                 foreach (MapPokemonWrapper item in newList )
                 {
-                    Utils.Helpers.BandHelper.Instance.ShowDialog("New Pokemon", "A wild " + item.PokemonId.ToString() + " has appeared!");
+                    Utils.Helpers.BandHelper.Instance.SendMessage("New Pokemon", "A wild " + item.PokemonId.ToString() + " has appeared!");
                 }
             }
             AudioUtils.PlaySound(AudioUtils.POKEMON_FOUND_DING);
