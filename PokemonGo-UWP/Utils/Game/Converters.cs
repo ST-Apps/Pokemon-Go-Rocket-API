@@ -25,6 +25,26 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace PokemonGo_UWP.Utils
 {
+
+    public class MapZoomLevelToIconSizeConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var zoomLevel = (double) value;
+            var zoomFactor = int.Parse((string)parameter);
+            return System.Convert.ToInt32(Math.Ceiling(zoomFactor * (5.02857 * zoomLevel - 53.2571)));
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
     public class PokemonIdToPokemonNameConverter : IValueConverter
     {
         #region Implementation of IValueConverter
@@ -391,13 +411,13 @@ namespace PokemonGo_UWP.Utils
             {
                 return new BitmapImage(new Uri("ms-appx:///Assets/Achievements/badge_lv0.png"));
             }
-            if (float.Parse(achievement.Value.ToString()) < float.Parse(silver.Value.ToString()))
-            {
-                level = 1;
-            }
             if (float.Parse(achievement.Value.ToString()) < float.Parse(gold.Value.ToString()))
             {
                 level = 2;
+            }
+            if (float.Parse(achievement.Value.ToString()) < float.Parse(silver.Value.ToString()))
+            {
+                level = 1;
             }
             
             switch (achievement.Key.ToString().ToLower().Replace(" ","")) {
@@ -413,10 +433,8 @@ namespace PokemonGo_UWP.Utils
                 case "scientist":
                 case "youngster":
                     return new BitmapImage(new Uri("ms-appx:///Assets/Achievements/" + achievement.Key.ToString().ToLower().Replace(" ", "") + "_lv" + level.ToString() + ".png"));
-                    break;
                 default:
                     return new BitmapImage(new Uri("ms-appx:///Assets/Achievements/badge_lv" + level.ToString() + ".png"));
-                    break;
             }
         }
 
@@ -941,7 +959,7 @@ namespace PokemonGo_UWP.Utils
                     return new Uri(resourceUriString + "far_lured.png");
                 case FortDataStatus.Opened | FortDataStatus.Cooldown | FortDataStatus.Lure:
                     return new Uri(resourceUriString + "near_inactive_lured.png");
-                case FortDataStatus.Closed | FortDataStatus.Cooldown | FortDataStatus.Lure: 
+                case FortDataStatus.Closed | FortDataStatus.Cooldown | FortDataStatus.Lure:
                     return new Uri(resourceUriString + "far_inactive_lured.png");
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -981,7 +999,7 @@ namespace PokemonGo_UWP.Utils
         public object Convert(object value, Type targetType, object parameter, string language)
         {
             if (value == null) return 0;
-            var pokemon = (PokemonDataWrapper)value;            
+            var pokemon = (PokemonDataWrapper)value;
             return System.Convert.ToDouble(pokemon.Stamina / pokemon.StaminaMax * 100);
         }
 
@@ -1008,7 +1026,7 @@ namespace PokemonGo_UWP.Utils
                     ? "ms-appx:///Assets/Items/Egg.png"
                     : $"ms-appx:///Assets/Items/E_Item_{(int) GameClient.GetIncubatorFromEgg(egg.WrappedData).ItemId}.png";
             }
-            return new BitmapImage(new Uri(uri));            
+            return new BitmapImage(new Uri(uri));
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
@@ -1183,7 +1201,7 @@ namespace PokemonGo_UWP.Utils
         public object Convert(object value, Type targetType, object parameter, string language)
         {
             var playerStats = (PlayerStats) value;
-            //return playerStats?.Experience - playerStats?.PrevLevelXp ?? 0;            
+            //return playerStats?.Experience - playerStats?.PrevLevelXp ?? 0;
             return playerStats == null ? 0 : _xpTable[playerStats.Level] - (playerStats.NextLevelXp - playerStats.Experience);
         }
 
@@ -1243,7 +1261,7 @@ namespace PokemonGo_UWP.Utils
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            var ms = (long)value;
+            var ms = System.Convert.ToUInt64(value);
             var date = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Local);
             date = date.Add(TimeSpan.FromMilliseconds(ms));
             return date.ToString(Resources.CodeResources.GetString("DateFormat"));

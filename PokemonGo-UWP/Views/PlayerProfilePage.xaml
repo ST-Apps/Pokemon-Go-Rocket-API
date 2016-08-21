@@ -203,10 +203,13 @@
 
                                         <ProgressBar Value="{Binding PlayerStats, Converter={StaticResource PlayerDataToCurrentExperienceConverter}}"
                                                      Maximum="{Binding PlayerStats, Converter={StaticResource PlayerDataToTotalLevelExperienceConverter}}"
-                                                     Foreground="#15E8DB"
+                                                     Style="{StaticResource ExperienceProgressbarStyle}"
+                                                     Foreground="{Binding PlayerProfile.Team, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}"
                                                      HorizontalAlignment="Stretch"
-                                                     Height="8"
                                                      Margin="48,0"
+                                                     BorderBrush="{Binding PlayerProfile.Team, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}"
+                                                     BorderThickness="1"
+                                                     Height="7"
                                                      x:Name="ExperienceProgressBar" />
 
                                         <StackPanel Orientation="Horizontal"
@@ -232,7 +235,7 @@
                                         </StackPanel>
 
                                         <Rectangle Fill="LightGray" Margin="0,20" Height="2"/>
-
+                                        
                                         <Grid x:Name="InformationGrid">
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition />
@@ -261,14 +264,14 @@
                                                            Text="{Binding PlayerProfile.Team, Converter={StaticResource PlayerTeamToTeamNameConverter}}" />
                                             </StackPanel>
                                         </Grid>
-                                        
+
                                     </StackPanel>
                                     
                                 </Grid>
                             </RelativePanel>
 
                             <Rectangle Fill="LightGray" Margin="20,2" Height="2"/>
-
+                            
                             <RelativePanel x:Name="InventoryUIPanel"
                                            RelativePanel.AlignTopWithPanel="True"
                                            RelativePanel.AlignLeftWithPanel="True"

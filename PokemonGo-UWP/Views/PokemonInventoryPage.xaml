@@ -293,8 +293,7 @@
                                         <TextBlock Style="{StaticResource TextGridViewTop}">
                                                 <Run x:Uid="CpTextBlock"
                                                      Text="CP" />
-                                                <Run FontSize="15" Text="{x:Bind Cp}"
-                                                     x:Phase="0" />
+                                                <Run FontSize="15" Text="{x:Bind Cp}"/>
                                         </TextBlock>
                                         <Image
                                                 Source="{x:Bind PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"
@@ -309,6 +308,9 @@
                                         <ProgressBar
                                                 Value="{x:Bind Stamina}"
                                                 Maximum="{x:Bind StaminaMax}"
+                                                Style="{StaticResource ExperienceProgressbarStyle}"
+                                                BorderBrush="#6ee8b7"
+                                                BorderThickness="1"
                                                 Margin="0,5"
                                                 Foreground="#6ee8b7"
                                                 IsIndeterminate="False"

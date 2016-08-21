@@ -145,13 +145,13 @@
     <value>Scientist</value>
   </data>
   <data name="BadgeEvolvedTotalDescription" xml:space="preserve">
-    <value>Evolved [x] Pokémon</value>
+    <value>Evolved {0} Pokémon</value>
   </data>
   <data name="BadgeHatchedTotal" xml:space="preserve">
     <value>Breeder</value>
   </data>
   <data name="BadgeHatchedTotalDescription" xml:space="preserve">
-    <value>Hatched {x} Pokemon</value>
+    <value>Hatched {0} Pokemon</value>
   </data>
   <data name="BadgePikachu" xml:space="preserve">
     <value>Pikachu</value>

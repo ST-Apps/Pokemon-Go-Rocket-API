@@ -1,7 +1,12 @@
-﻿using PokemonGo_UWP.Utils;
+﻿using PokemonGo_UWP.Entities;
+using PokemonGo_UWP.Utils;
 using PokemonGo_UWP.Views;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using Template10.Mvvm;
+using Windows.ApplicationModel.Resources.Core;
+using Windows.Storage;
 
 namespace PokemonGo_UWP.ViewModels
 {
@@ -10,20 +15,26 @@ namespace PokemonGo_UWP.ViewModels
         #region Bindable Game Vars
 
         public string CurrentVersion => GameClient.CurrentVersion;
+	
+		/// <summary>
+		///     How the player wants the map to rotate following is heading (None, GPS, Compass)
+		/// </summary>
+		public int MapAutomaticOrientationMode_Index
+		{
+			get { return (int)System.Enum.ToObject(typeof(MapAutomaticOrientationModes), SettingsService.Instance.MapAutomaticOrientationMode); }
+			set
+			{
+				if (value >= 0 && value <= 2)
+				{
+					SettingsService.Instance.MapAutomaticOrientationMode = (MapAutomaticOrientationModes)System.Enum.ToObject(typeof(MapAutomaticOrientationModes), value);
+				}
+			}
+		}
 
-        /// <summary>
-        ///     Whether the player wants the map to rotate following is heading
-        /// </summary>
-        public bool IsAutoRotateMapEnabled
-        {
-            get { return SettingsService.Instance.IsAutoRotateMapEnabled; }
-            set { SettingsService.Instance.IsAutoRotateMapEnabled = value; }
-        }
-
-        /// <summary>
-        ///     Whether the player wants music
-        /// </summary>
-        public bool IsMusicEnabled
+		/// <summary>
+		///     Whether the player wants music
+		/// </summary>
+		public bool IsMusicEnabled
         {
             get { return SettingsService.Instance.IsMusicEnabled; }
             set { SettingsService.Instance.IsMusicEnabled = value; }
@@ -70,6 +81,47 @@ namespace PokemonGo_UWP.ViewModels
             {
                 SettingsService.Instance.LiveTileMode = value;
                 App.UpdateLiveTile(GameClient.PokemonsInventory.OrderByDescending(c => c.Cp).ToList());
+            }
+        }
+        
+        /// <summary>
+        ///     Windows handles the PrimaryLanguageOverride, so we don't need to save the value by ourself.
+        /// </summary>
+        public Language UserLanguage
+        {
+            get {
+                if (Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride == "")
+                {
+                    return new Language() {
+                        Code = "System"
+                    };
+                } else {
+                    return new Language() {
+                        Code = Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride
+                    };
+                }
+            }
+            set {
+                Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = value.Code.Replace("System", "");
+            }
+        }
+
+        public List<Language> languageList
+        {
+            get {
+                List<Language> list = new List<Language>();
+                list.Add(new Language() {
+                    Code = "System"
+                });
+
+                IReadOnlyList<string> languages = Windows.Globalization.ApplicationLanguages.ManifestLanguages;
+                foreach(string language in languages) {
+                    list.Add(new Language() {
+                        Code = language
+                    });
+                }
+
+                return list;
             }
         }
 

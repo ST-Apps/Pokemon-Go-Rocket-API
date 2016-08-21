@@ -135,12 +135,12 @@
           <target state="translated">{0} Pokémon yakalandı</target>
         </trans-unit>
         <trans-unit id="BadgeEvolvedTotalDescription" translate="yes" xml:space="preserve">
-          <source>Evolved [x] Pokémon</source>
-          <target state="translated">[x] Pokémon geliştirildi</target>
+          <source>Evolved {0} Pokémon</source>
+          <target state="translated">{0} Pokémon geliştirildi</target>
         </trans-unit>
         <trans-unit id="BadgeHatchedTotalDescription" translate="yes" xml:space="preserve">
-          <source>Hatched {x} Pokemon</source>
-          <target state="translated">{x} Pokémon yumurtadan çıkarıldı</target>
+          <source>Hatched {0} Pokemon</source>
+          <target state="translated">{0} Pokémon yumurtadan çıkarıldı</target>
         </trans-unit>
         <trans-unit id="BadgePikachuDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Pikachu</source>
@@ -658,14 +658,6 @@ Elle yükleme için yükleme dosyaları sayfası açılsın mı?</target>
           <source>POWER UP</source>
           <target state="translated">GÜÇLENDİR</target>
         </trans-unit>
-        <trans-unit id="TransferButton.Content" translate="yes" xml:space="preserve">
-          <source>TRANSFER</source>
-          <target state="translated">TRANSFER ET</target>
-        </trans-unit>
-        <trans-unit id="SettingsRememberMapZoomTextBlock" translate="yes" xml:space="preserve">
-          <source>Remember Map Zoom</source>
-          <target state="translated">Harita uzaklığını hatırla</target>
-        </trans-unit>
         <trans-unit id="EggDetailButtonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>START INCUBATION</source>
           <target state="translated">KULUÇKAYI BAŞLAT</target>
@@ -673,6 +665,34 @@ Elle yükleme için yükleme dosyaları sayfası açılsın mı?</target>
         <trans-unit id="EggDetailTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Use an incubator to incubate the Egg.</source>
           <target state="translated">Yumurta çatlatmak için kuluçka kullanın.</target>
+        </trans-unit>
+        <trans-unit id="SettingsRememberMapZoomTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Remember Map Zoom</source>
+          <target state="new">Remember Map Zoom</target>
+        </trans-unit>
+        <trans-unit id="TransferTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>TRANSFER</source>
+          <target state="new">TRANSFER</target>
+        </trans-unit>
+        <trans-unit id="SettingsLanguageRestartTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>You must restart the App to take effect.</source>
+          <target state="new">You must restart the App to take effect.</target>
+        </trans-unit>
+        <trans-unit id="SettingsLanguageTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Language</source>
+          <target state="new">Language</target>
+        </trans-unit>
+        <trans-unit id="SettingsCompassEnabledTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Use compass</source>
+          <target state="new">Use compass</target>
+        </trans-unit>
+        <trans-unit id="SettingsLiveTileTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Live Tile Mode</source>
+          <target state="new">Live Tile Mode</target>
+        </trans-unit>
+        <trans-unit id="FavoriteTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>FAVORITE</source>
+          <target state="new">FAVORITE</target>
         </trans-unit>
       </group>
     </body>
@@ -744,28 +764,30 @@ Elle yükleme için yükleme dosyaları sayfası açılsın mı?</target>
           <target state="translated">Hiper İksir</target>
         </trans-unit>
         <trans-unit id="ItemIncenseCool" translate="yes" xml:space="preserve">
-          <source>Incense Cool</source>
+          <source>Cool Incense</source>
           <target state="translated">Serin Tütsü</target>
         </trans-unit>
         <trans-unit id="ItemIncenseFloral" translate="yes" xml:space="preserve">
-          <source>Incense Floral</source>
+          <source>Floral Incense</source>
           <target state="translated">Bitkisel Tütsü</target>
         </trans-unit>
         <trans-unit id="ItemIncenseOrdinary" translate="yes" xml:space="preserve">
-          <source>Incense Ordinary</source>
+          <source>Incense</source>
           <target state="translated">Sıradan Tütsü</target>
         </trans-unit>
         <trans-unit id="ItemIncenseSpicy" translate="yes" xml:space="preserve">
-          <source>Incense Spicy</source>
+          <source>Spicy Incense</source>
           <target state="translated">Acılı Tütsü</target>
         </trans-unit>
         <trans-unit id="ItemIncubatorBasic" translate="yes" xml:space="preserve">
-          <source>Incubator Basic</source>
-          <target state="translated">Basit Kuluçka</target>
+          <source>Incubator</source>
+          <target state="needs-review-translation">Basit Kuluçka</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="ItemIncubatorBasicUnlimited" translate="yes" xml:space="preserve">
-          <source>Incubator Basic Unlimited</source>
-          <target state="translated">Sınırsız Basit Kuluçka</target>
+          <source>∞ Incubator</source>
+          <target state="needs-review-translation">Sınırsız Basit Kuluçka</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="ItemItemStorageUpgrade" translate="yes" xml:space="preserve">
           <source>Item Storage Upgrade</source>
@@ -824,7 +846,7 @@ Elle yükleme için yükleme dosyaları sayfası açılsın mı?</target>
           <target state="translated">Süper İksir</target>
         </trans-unit>
         <trans-unit id="ItemTroyDisk" translate="yes" xml:space="preserve">
-          <source>Troy Disk</source>
+          <source>Lure Module</source>
           <target state="translated">Truva Diski</target>
         </trans-unit>
         <trans-unit id="ItemUltraBall" translate="yes" xml:space="preserve">

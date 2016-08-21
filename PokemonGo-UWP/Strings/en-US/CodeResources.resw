@@ -299,4 +299,7 @@ Open page with installation files for manual install?</value>
   <data name="PokemonInventoryFullText" xml:space="preserve">
     <value>Your Pokémon inventory is full, transfer some Pokémon before trying to catch {0}.</value>
   </data>
+  <data name="WaitingForNetworkText" xml:space="preserve">
+    <value>Waiting for network to be back...</value>
+  </data>
 </root>

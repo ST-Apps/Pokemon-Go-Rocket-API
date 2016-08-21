@@ -40,13 +40,13 @@
     <value>Forscher</value>
   </data>
   <data name="BadgeEvolvedTotalDescription" xml:space="preserve">
-    <value>[x] Pokémon entwicklet</value>
+    <value>{0} Pokémon entwicklet</value>
   </data>
   <data name="BadgeHatchedTotal" xml:space="preserve">
     <value>Züchter</value>
   </data>
   <data name="BadgeHatchedTotalDescription" xml:space="preserve">
-    <value>{x} Pokémon gschlüpft</value>
+    <value>{0} Pokémon gschlüpft</value>
   </data>
   <data name="BadgePikachu" xml:space="preserve">
     <value>Pikachu</value>

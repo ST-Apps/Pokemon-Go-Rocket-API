@@ -51,7 +51,6 @@ namespace Q42.WinRT.Storage
     {
         private ApplicationData _appData = Windows.Storage.ApplicationData.Current;
 
-        [Obsolete]
         private StorageType _storageType;
 
         private string _subFolder;
@@ -118,7 +117,7 @@ namespace Q42.WinRT.Storage
                 StorageFolder folder = await GetFolderAsync().ConfigureAwait(false);
                 var file = await folder.GetFileAsync(fileName);
                 if (file != null)
-                {                    
+                {
                     await file.DeleteAsync(StorageDeleteOption.PermanentDelete);
                 }
             }
@@ -172,7 +171,7 @@ namespace Q42.WinRT.Storage
 
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
             }
@@ -188,12 +187,12 @@ namespace Q42.WinRT.Storage
             fileName = fileName + GetFileExtension();
             try
             {
-                
+
                 StorageFolder folder = await GetFolderAsync().ConfigureAwait(false);
 
                 var file = await folder.CreateFileAsync(fileName, CreationCollisionOption.OpenIfExists);
                 if (file != null)
-                {                    
+                {
 
                     //Deserialize to object with JSON or XML serializer
                     T result = default(T);
@@ -223,7 +222,7 @@ namespace Q42.WinRT.Storage
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //Unable to load contents of file
                 throw;

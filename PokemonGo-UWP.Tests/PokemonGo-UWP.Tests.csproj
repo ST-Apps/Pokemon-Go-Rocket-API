@@ -119,14 +119,22 @@
     <Content Include="TestAssets\SplashScreen.scale-200.png" />
     <Content Include="TestAssets\Square150x150Logo.scale-200.png" />
     <Content Include="TestAssets\Square44x44Logo.scale-200.png" />
-    <Content Include="TestAssets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="TestAssets\Square44x44Logo.png" />
     <Content Include="TestAssets\StoreLogo.png" />
     <Content Include="TestAssets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Google.Protobuf\Google.Protobuf.csproj">
+      <Project>{8a901eed-55b1-4355-b3e4-79bc08d129f6}</Project>
+      <Name>Google.Protobuf</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PokemonGo-UWP\PokemonGo-UWP.csproj">
       <Project>{498AE076-ECDF-4E50-BD1A-171E89D908B5}</Project>
       <Name>PokemonGo-UWP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PokemonGoAPI\PokemonGoAPI.csproj">
+      <Project>{c7fe57c5-a786-4b6e-b2c9-c026f347d461}</Project>
+      <Name>PokemonGoAPI</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -3,54 +3,116 @@ using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.Storage;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media;
 
 namespace PokemonGo_UWP.Utils
 {
     public static class AudioUtils
     {
-        private static readonly MediaElement NormalSounds = new MediaElement();
-        private static readonly MediaElement CaptureSound = new MediaElement();
-        private static bool _isPlaying;
 
-        public static async Task PlaySound(string asset)
+        #region Audio Files
+
+        public const string GAMEPLAY = "Gameplay.mp3";
+        public const string ENCOUNTER_POKEMON = "EncounterPokemon.mp3";
+        public const string POKEMON_FOUND_DING = "pokemon_found_ding.wav";
+
+        #endregion
+
+        #region Media Elements
+        private static readonly MediaElement GameplaySound = new MediaElement();
+        private static readonly MediaElement EncounterSound = new MediaElement();
+        private static readonly MediaElement PokemonFoundSound = new MediaElement();
+        #endregion       
+
+        /// <summary>
+        /// Initializes audio assets by loading them from disk
+        /// </summary>
+        /// <returns></returns>
+        public static async Task Init()
         {
-            if (SettingsService.Instance.IsMusicEnabled && !_isPlaying)
-            {
-                if (asset == "Gameplay.mp3")
-                {
-                    NormalSounds.IsLooping = true;
-                }
-                var folder =
+            // Get folder
+            var folder =
                     await (await Package.Current.InstalledLocation.GetFolderAsync("Assets")).GetFolderAsync("Audio");
-                var file = await folder.GetFileAsync(asset);
-                var stream = await file.OpenAsync(FileAccessMode.Read);
-                NormalSounds.Volume = 1;
-                NormalSounds.SetSource(stream, file.ContentType);
-                _isPlaying = true;
-                NormalSounds.Play();
+            ToggleSounds();
+            // Get files and create elements   
+            var currentFile = await folder.GetFileAsync(GAMEPLAY);
+            var currentStream = await currentFile.OpenAsync(FileAccessMode.Read);
+            GameplaySound.SetSource(currentStream, currentFile.ContentType);
+
+            currentFile = await folder.GetFileAsync(ENCOUNTER_POKEMON);
+            currentStream = await currentFile.OpenAsync(FileAccessMode.Read);
+            EncounterSound.SetSource(currentStream, currentFile.ContentType);
+
+            currentFile = await folder.GetFileAsync(POKEMON_FOUND_DING);
+            currentStream = await currentFile.OpenAsync(FileAccessMode.Read);
+            PokemonFoundSound.SetSource(currentStream, currentFile.ContentType);
+            // Set mode and volume
+            GameplaySound.IsLooping = true;
+        }
+
+        /// <summary>
+        /// Sets volume based on settings
+        /// </summary>
+        public static void ToggleSounds()
+        {
+            // TODO: not working yet for some weird reasons
+            GameplaySound.IsMuted =
+                EncounterSound.IsMuted = PokemonFoundSound.IsMuted = !SettingsService.Instance.IsMusicEnabled;
+        }
+
+        /// <summary>
+        /// Plays the selected asset
+        /// </summary>
+        /// <param name="asset"></param>
+        /// <returns></returns>
+        public static void PlaySound(string asset)
+        {
+            switch (asset)
+            {
+                case GAMEPLAY:
+                    if (GameplaySound.CurrentState != MediaElementState.Playing)
+                        GameplaySound.Play();
+                    EncounterSound.Stop();
+                    break;
+                case ENCOUNTER_POKEMON:
+                    GameplaySound.Pause();
+                    EncounterSound.Play();
+                    break;
+                case POKEMON_FOUND_DING:
+                    PokemonFoundSound.Play();
+                    break;
             }
         }
 
-        public static async Task PlaySoundCapture(string asset)
+        /// <summary>
+        /// Stops the selected asset
+        /// </summary>
+        /// <param name="asset"></param>
+        /// <returns></returns>
+        public static void StopSound(string asset)
         {
-            if (SettingsService.Instance.IsMusicEnabled)
+            switch (asset)
             {
-                NormalSounds.Pause();
-
-                var folder =
-                    await (await Package.Current.InstalledLocation.GetFolderAsync("Assets")).GetFolderAsync("Audio");
-                var file = await folder.GetFileAsync(asset);
-                var stream = await file.OpenAsync(FileAccessMode.Read);
-                CaptureSound.Volume = 1;
-                CaptureSound.SetSource(stream, file.ContentType);
-                CaptureSound.Play();
+                case GAMEPLAY:
+                    GameplaySound.Stop();
+                    break;
+                case ENCOUNTER_POKEMON:
+                    EncounterSound.Stop();
+                    break;
+                case POKEMON_FOUND_DING:
+                    PokemonFoundSound.Stop();
+                    break;
             }
         }
 
+        /// <summary>
+        /// Stops all playing sounds
+        /// </summary>
         public static void StopSounds()
         {
-            CaptureSound.Stop();
-            NormalSounds.Stop();            
+            GameplaySound.Stop();
+            EncounterSound.Stop();
+            PokemonFoundSound.Stop();
         }
     }
 }

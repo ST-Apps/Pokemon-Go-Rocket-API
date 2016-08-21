@@ -109,10 +109,10 @@
     <value>捕捉了 {0} 隻精靈寶可夢</value>
   </data>
   <data name="BadgeEvolvedTotalDescription" xml:space="preserve">
-    <value>進化了 [x] 隻精靈寶可夢</value>
+    <value>進化了 {0} 隻精靈寶可夢</value>
   </data>
   <data name="BadgeHatchedTotalDescription" xml:space="preserve">
-    <value>孵化了 {x} 隻精靈寶可夢</value>
+    <value>孵化了 {0} 隻精靈寶可夢</value>
   </data>
   <data name="BadgePikachuDescription" xml:space="preserve">
     <value>捕捉 {0} 隻皮卡丘</value>

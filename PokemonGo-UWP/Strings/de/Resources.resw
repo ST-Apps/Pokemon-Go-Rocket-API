@@ -137,16 +137,31 @@
   <data name="PowerUpButton.Content" xml:space="preserve">
     <value>POWER-UP</value>
   </data>
-  <data name="TransferButton.Content" xml:space="preserve">
-    <value>VERSCHICKEN</value>
-  </data>
-  <data name="SettingsRememberMapZoomTextBlock" xml:space="preserve">
-    <value>Speichere Karten Zoom</value>
-  </data>
   <data name="EggDetailButtonTextBlock.Text" xml:space="preserve">
     <value>AUSBRÜTEN BEGINNEN</value>
   </data>
   <data name="EggDetailTextBlock.Text" xml:space="preserve">
     <value>Benutze eine Brutmaschine, um dieses Ei auszubrüten.</value>
+  </data>
+  <data name="TransferTextBlock.Text" xml:space="preserve">
+    <value>VERSCHICKEN</value>
+  </data>
+  <data name="FavoriteTextBlock.Text" xml:space="preserve">
+    <value>FAVORIT</value>
+  </data>
+  <data name="SettingsLanguageRestartTextBlock.Text" xml:space="preserve">
+    <value>Die App muss neu gestartet werden.</value>
+  </data>
+  <data name="SettingsLanguageTextBlock.Text" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
+  <data name="SettingsRememberMapZoomTextBlock.Text" xml:space="preserve">
+    <value>Karten Zoom speichern</value>
+  </data>
+  <data name="SettingsCompassEnabledTextBlock.Text" xml:space="preserve">
+    <value>Kompass verwenden</value>
+  </data>
+  <data name="SettingsLiveTileTextBlock.Text" xml:space="preserve">
+    <value>Modus für Kachelaktualisierung</value>
   </data>
 </root>

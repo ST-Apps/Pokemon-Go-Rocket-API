@@ -77,6 +77,12 @@
     </Page.Resources>
 
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#b3ee9a" Offset="0" />
+                <GradientStop Color="#43bab6" Offset="0.8" />
+            </LinearGradientBrush>
+        </Grid.Background>
 
         <RelativePanel x:Name="DiscardPanel"
                        RelativePanel.AlignTopWithPanel="True"
@@ -84,7 +90,8 @@
                        RelativePanel.AlignBottomWithPanel="True"
                        RelativePanel.AlignRightWithPanel="True"
                        Opacity="0"
-                       Canvas.ZIndex="0">
+                       Canvas.ZIndex="0"
+                       Visibility="Collapsed">
 
             <RelativePanel.Background>
                 <ImageBrush ImageSource="../Assets/Backgrounds/ui_bg_green_02.png"
@@ -113,59 +120,58 @@
             </Button>
         </RelativePanel>
 
-        <RelativePanel x:Name="MainUIPanel">
+        <Border Margin="12,12,12,0" Background="White" CornerRadius="5,5,0,0" x:Name="MainUIPanel">
+            <Pivot>
+                <PivotItem>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="0">
+                            <TextBlock x:Name="PokemonsPivotHeader"
+                                       x:Uid="ITEMS"
+                                       Text="ITEMS"
+                                       Style="{StaticResource TextPageTitleDark}" />
+                            <Border Background="#000" Width="150" Height="1" />
+                            <TextBlock Style="{StaticResource TextSubTitle}"
+                                       HorizontalAlignment="Center"
+                                       Margin="0,8">
+                                <Run Text="{Binding ItemsTotalCount}"/><Run Text="/"/><Run Text="{Binding MaxItemStorageFieldNumber}"/>
+                            </TextBlock>
+                        </StackPanel>
 
-            <RelativePanel.Background>
-                <ImageBrush ImageSource="../Assets/UI/panelBG.png"
-                            Stretch="Uniform" />
-            </RelativePanel.Background>
-
-            <Border
-                x:Name="header"
-                RelativePanel.AlignTopWithPanel="True"
-                RelativePanel.AlignLeftWithPanel="True"
-                RelativePanel.AlignRightWithPanel="True">
-                <StackPanel VerticalAlignment="Bottom" Margin="0,20,0,0">
-                    <TextBlock HorizontalAlignment="Center" x:Uid="ITEMS" Text="ITEMS"/>
-                    <TextBlock HorizontalAlignment="Center" FontSize="12">
-                        <Run Text="{Binding ItemsTotalCount}"/><Run Text="/"/><Run Text="{Binding MaxItemStorageFieldNumber}"/>
-                    </TextBlock>
-                </StackPanel>
-            </Border>
-            
-            <ListView
+                        <ListView
                 ItemsSource="{Binding ItemsInventory}"
                 IsItemClickEnabled="False"
                 SelectionMode="None"
                 Margin="8,0"
-                RelativePanel.AlignRightWithPanel="True"
-                RelativePanel.Below="header"
-                RelativePanel.AlignLeftWithPanel="True"
-                RelativePanel.AlignBottomWithPanel="True">
+                Grid.Row="1"
+                Padding="0,0,0,60">
 
-                <ListView.ItemContainerStyle>
-                    <Style TargetType="ListViewItem">
-                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-                    </Style>
-                </ListView.ItemContainerStyle>
-                
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid Margin="0,8">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                                </Style>
+                            </ListView.ItemContainerStyle>
 
-                            <Grid Grid.Column="0"
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Margin="0,8">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Grid Grid.Column="0"
                                       Margin="0,0,8,0">
 
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
-                                </Grid.RowDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
 
-                                <Image
+                                            <Image
                                         Source="{Binding Converter={StaticResource ItemToItemIconConverter}, ConverterParameter=Inventory}"
                                         Stretch="Uniform"
                                         VerticalAlignment="Center"
@@ -173,7 +179,7 @@
                                         Height="84"
                                         Margin="3,0"
                                         Grid.RowSpan="2" />
-                                <Border Grid.Row="1" 
+                                            <Border Grid.Row="1" 
                                             Grid.Column="0"
                                             HorizontalAlignment="Left"
                                             VerticalAlignment="Bottom"
@@ -181,30 +187,30 @@
                                             Background="LightGray" 
                                             CornerRadius="8" 
                                             Padding="3,1">
-                                    <TextBlock Style="{StaticResource BodyTextBlockStyle}"
+                                                <TextBlock Style="{StaticResource BodyTextBlockStyle}"
                                                    TextAlignment="Center">
                                             <Run Text="x" />
                                             <Run FontWeight="Bold" 
                                                  Text="{Binding Count}" />
-                                    </TextBlock>
-                                </Border>
-                            </Grid>
+                                                </TextBlock>
+                                            </Border>
+                                        </Grid>
 
-                            <Grid Grid.Column="1">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="*" />
-                                </Grid.RowDefinitions>
+                                        <Grid Grid.Column="1">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="*" />
+                                            </Grid.RowDefinitions>
 
-                                <TextBlock
-                                        Text="{Binding Converter={StaticResource ItemToItemNameConverter}}"
+                                            <TextBlock        Text="{Binding Converter={StaticResource ItemToItemNameConverter}}"
                                         FontFamily="../Assets/Fonts/Lato-Bold.ttf#Lato"
                                         Foreground="#FF45686A"
                                         Grid.Row="0"
                                         FontSize="22"
-                                        FontWeight="SemiBold" />
+                                        FontWeight="SemiBold" 
+																				TextTrimming="CharacterEllipsis" />
 
-                                <!--<Button IsEnabled="False"
+                                            <!--<Button IsEnabled="False"
                                             Grid.Row="0"
                                             Grid.Column="1"
                                             Padding="0"
@@ -221,35 +227,33 @@
                                         <SymbolIcon Symbol="Delete" />
                                     </Button>-->
 
-                                <TextBlock
-                                        Text="{Binding Converter={StaticResource ItemToItemDescriptionConverter}}"
+                                            <TextBlock        Text="{Binding Converter={StaticResource ItemToItemDescriptionConverter}}"
                                         TextWrapping="WrapWholeWords"
+																				TextTrimming="CharacterEllipsis"
                                         FontFamily="../Assets/Fonts/Lato-Light.ttf#Lato"
                                         Foreground="#FF45686A"
                                         Grid.Row="1"
                                         FontSize="14"
                                         FontWeight="SemiLight" />
-                            </Grid>
+                                        </Grid>
 
-                        </Grid>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </PivotItem>
+            </Pivot>
+        </Border>
 
-            <Button RelativePanel.AlignBottomWithPanel="True"
+        <Button Command="{Binding ReturnToGameScreen}"
+                    RelativePanel.AlignBottomWithPanel="True"
                     RelativePanel.AlignHorizontalCenterWithPanel="True"
-                    Style="{ThemeResource ImageButtonStyle}"
-                    Height="{ThemeResource UiButtonSize}"
+                    Style="{StaticResource ButtonCircle}"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Bottom"
-                    Margin="0,0,0,24"
-                    Command="{Binding ReturnToGameScreen}">
-                <Image Source="../Assets/Buttons/btn_close_normal_dark.png"
-                       Stretch="Uniform"
-                       HorizontalAlignment="Stretch" />
-            </Button>
-        </RelativePanel>
-
+                    Margin="0,0,0,17.5">
+            <Image Source="../Assets/Buttons/btn_close.png" />
+        </Button>
     </Grid>
-
 </Page>

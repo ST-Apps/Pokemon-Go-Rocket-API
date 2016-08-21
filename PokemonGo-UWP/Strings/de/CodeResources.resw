@@ -191,4 +191,7 @@ Seite zu den Dateien für manuelle Installation öffnen?</value>
     <value>Nr.
 </value>
   </data>
+  <data name="PokemonInventoryFullText" xml:space="preserve">
+    <value>Das Pokémon Inventar ist voll, verschicken Sie zunächst einige Pokémon, bevore Sie versuchen, {0} zu fangen.</value>
+  </data>
 </root>

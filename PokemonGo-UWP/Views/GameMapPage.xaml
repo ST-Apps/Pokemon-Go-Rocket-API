@@ -22,6 +22,8 @@
 
     <Page.Resources>
 
+        <utils:MapZoomLevelToIconSizeConverter x:Key="MapZoomLevelToIconSizeConverter"/>
+
         <Storyboard x:Name="ShowPokeMenuStoryboard">
             <DoubleAnimation
                 Storyboard.TargetName="PokeMenuPanel"
@@ -241,8 +243,9 @@
                          RelativePanel.AlignBottomWithPanel="True"
                          RelativePanel.AlignLeftWithPanel="True"
                          RelativePanel.AlignRightWithPanel="True"
+                         ZoomLevelChanged="GameMapControl_OnZoomLevelChanged"
                          RotateInteractionMode="GestureAndControl"
-                         TiltInteractionMode="GestureAndControl"
+                         TiltInteractionMode="GestureAndControl"                         
                          MapServiceToken="{x:Bind ViewModel.MapServiceToken, Mode=OneTime}"
                          Canvas.ZIndex="1"
                          x:Name="GameMapControl">
@@ -264,8 +267,9 @@
                                 maps:MapControl.Location="{Binding Geoposition}"
                                 maps:MapControl.NormalizedAnchorPoint="{Binding Anchor}"
                                 Stretch="Uniform"
-                                Height="48"
-                                Width="48" />
+                                Canvas.ZIndex="5"
+                                Height="{Binding ZoomLevel, ElementName=GameMapControl, Converter={StaticResource MapZoomLevelToIconSizeConverter}, ConverterParameter=1}"
+                                Width="{Binding ZoomLevel, ElementName=GameMapControl, Converter={StaticResource MapZoomLevelToIconSizeConverter}, ConverterParameter=1}" />
                         </Button>
                     </DataTemplate>
                 </maps:MapItemsControl.ItemTemplate>
@@ -281,8 +285,9 @@
                                 maps:MapControl.Location="{Binding Geoposition}"
                                 maps:MapControl.NormalizedAnchorPoint="{Binding Anchor}"
                                 Stretch="Uniform"
-                                Height="48"
-                                Width="48" />
+                                Canvas.ZIndex="4"
+                                Height="{Binding ZoomLevel, ElementName=GameMapControl, Converter={StaticResource MapZoomLevelToIconSizeConverter}, ConverterParameter=1}"
+                                Width="{Binding ZoomLevel, ElementName=GameMapControl, Converter={StaticResource MapZoomLevelToIconSizeConverter}, ConverterParameter=1}" />
                         </Button>
                     </DataTemplate>
                 </maps:MapItemsControl.ItemTemplate>
@@ -298,8 +303,8 @@
                                 maps:MapControl.Location="{Binding Geoposition}"
                                 maps:MapControl.NormalizedAnchorPoint="{Binding Anchor}"
                                 Stretch="Uniform"
-                                Height="64"
-                                Width="64" />
+                                Height="{Binding ZoomLevel, ElementName=GameMapControl, Converter={StaticResource MapZoomLevelToIconSizeConverter}, ConverterParameter=2}"
+                                Width="{Binding ZoomLevel, ElementName=GameMapControl, Converter={StaticResource MapZoomLevelToIconSizeConverter}, ConverterParameter=2}" />
                         </Button>
                     </DataTemplate>
                 </maps:MapItemsControl.ItemTemplate>

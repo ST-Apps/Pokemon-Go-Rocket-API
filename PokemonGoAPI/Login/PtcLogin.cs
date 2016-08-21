@@ -78,7 +78,12 @@ namespace PokemonGo.RocketAPI.Login
             var loginResponseData = JObject.Parse(loginResponseDataRaw);
             var loginResponseErrors = (JArray)loginResponseData["errors"];
 
-            throw new Exception($"Pokemon Trainer Club gave error(s): '{string.Join(",", loginResponseErrors)}'");
+            var errorMessages = string.Join(",", loginResponseErrors);
+            if (errorMessages.Contains("Your username or password is incorrect.") ||
+                errorMessages.Contains("As a security measure, your account has been disabled"))
+                throw new LoginFailedException(loginResponse);
+
+            throw new Exception($"Pokemon Trainer Club gave error(s): '{errorMessages}'");
         }
 
         /// <summary>
@@ -130,7 +135,7 @@ namespace PokemonGo.RocketAPI.Login
                 var ticket = PostLogin(tempHttpClient, _username, _password, loginData);
                 var accessToken = PostLoginOauth(tempHttpClient, ticket);
                 accessToken.Username = _username;
-                await Task.CompletedTask;            
+                await Task.CompletedTask;
                 return accessToken;
             }
         }

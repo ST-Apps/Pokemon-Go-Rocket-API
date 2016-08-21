@@ -110,10 +110,10 @@
     <value>{0} Pokémon capturados</value>
   </data>
   <data name="BadgeEvolvedTotalDescription" xml:space="preserve">
-    <value>[x] Pokémon evolucionados</value>
+    <value>{0} Pokémon evolucionados</value>
   </data>
   <data name="BadgeHatchedTotalDescription" xml:space="preserve">
-    <value>{x} Huevos de Pokémon eclosionados</value>
+    <value>{0} Huevos de Pokémon eclosionados</value>
   </data>
   <data name="BadgePikachuDescription" xml:space="preserve">
     <value>{0} Pikachu atrapados</value>

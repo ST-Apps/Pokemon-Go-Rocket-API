@@ -109,10 +109,10 @@
     <value>{0} Pokémon yakalandı</value>
   </data>
   <data name="BadgeEvolvedTotalDescription" xml:space="preserve">
-    <value>[x] Pokémon geliştirildi</value>
+    <value>{0} Pokémon geliştirildi</value>
   </data>
   <data name="BadgeHatchedTotalDescription" xml:space="preserve">
-    <value>{x} Pokémon yumurtadan çıkarıldı</value>
+    <value>{0} Pokémon yumurtadan çıkarıldı</value>
   </data>
   <data name="BadgePikachuDescription" xml:space="preserve">
     <value>{0} Pikachu yakalandı</value>

@@ -125,8 +125,7 @@ namespace PokemonGo_UWP.Views
             if (GameClient.Geoposition != null)
                 UpdateMap(GameClient.Geoposition);
             SubscribeToCaptureEvents();
-            SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
-            AudioUtils.StopSounds();
+            SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;            
         }
 
         private void OnBackRequested(object sender, BackRequestedEventArgs backRequestedEventArgs)
@@ -177,12 +176,15 @@ namespace PokemonGo_UWP.Views
                     // Set player icon's position
                     MapControl.SetLocation(PlayerImage, position.Coordinate.Point);
 
-                    // Update angle and center only if map is not being manipulated 
-                    if (lastAutoPosition == null)
-                        lastAutoPosition = GameMapControl.Center;
+								// Update angle and center only if map is not being manipulated 
+								if (lastAutoPosition == null)
+								{
+									lastAutoPosition = GameMapControl.Center;
+									GameMapControl.Heading = 0;
+								}
 
-                    //Small Trick: I'm not testing lastAutoPosition == GameMapControl.Center because MapControl is not taking exact location when setting center!!
-                    string currentCoord =
+								//Small Trick: I'm not testing lastAutoPosition == GameMapControl.Center because MapControl is not taking exact location when setting center!!
+								string currentCoord =
                         $"{GameMapControl.Center.Position.Latitude: 000.0000} ; {GameMapControl.Center.Position.Longitude: 000.0000}";
                     string previousCoord =
                         $"{lastAutoPosition.Position.Latitude: 000.0000} ; {lastAutoPosition.Position.Longitude: 000.0000}";
@@ -193,9 +195,9 @@ namespace PokemonGo_UWP.Views
                         GameMapControl.Center = position.Coordinate.Point;
                         lastAutoPosition = GameMapControl.Center;
 
-                        if (SettingsService.Instance.IsAutoRotateMapEnabled == true && position.Coordinate.Heading != null)
-                        {
-                            GameMapControl.Heading = position.Coordinate.Heading.Value;
+									if (SettingsService.Instance.MapAutomaticOrientationMode == MapAutomaticOrientationModes.GPS && position.Coordinate.Heading != null)
+									{
+										GameMapControl.Heading = position.Coordinate.Heading.Value;
                         }
 
                         if (SettingsService.Instance.IsRememberMapZoomEnabled == true)
@@ -215,12 +217,22 @@ namespace PokemonGo_UWP.Views
             ViewModel.LevelUpRewardsAwarded += ViewModelOnLevelUpRewardsAwarded;
         }
 
-        private void HeadingUpdated(object sender, Windows.Devices.Sensors.CompassReading e)
-        {
-            GameMapControl.Heading = e.HeadingTrueNorth ?? e.HeadingMagneticNorth;
-        }
 
-        private void UnsubscribeToCaptureEvents()
+		private TimeSpan tick = new TimeSpan(DateTime.Now.Ticks);
+		private async void HeadingUpdated(object sender, Windows.Devices.Sensors.CompassReading e)
+		{
+			TimeSpan newTick = new TimeSpan(DateTime.Now.Ticks);
+			if (newTick.Subtract(tick).TotalMilliseconds > 10)
+			{
+				await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+				{
+					GameMapControl.Heading = e.HeadingTrueNorth ?? e.HeadingMagneticNorth;
+				});
+				tick = newTick;
+			}
+		}
+
+		private void UnsubscribeToCaptureEvents()
         {
             GameClient.GeopositionUpdated -= GeopositionUpdated;
             GameClient.HeadingUpdated -= HeadingUpdated;
@@ -247,6 +259,12 @@ namespace PokemonGo_UWP.Views
             {
                 ReactivateMapAutoUpdate.Visibility = Visibility.Visible;
             }
+        }
+
+        private void GameMapControl_OnZoomLevelChanged(MapControl sender, object args)
+        {
+            var currentZoomLevel = sender.ZoomLevel;
+            sender.ZoomLevel = currentZoomLevel < 17 ? 17 : currentZoomLevel;
         }
     }
 }

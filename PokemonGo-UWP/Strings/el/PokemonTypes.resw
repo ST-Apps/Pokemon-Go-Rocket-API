@@ -12,7 +12,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Bug" xml:space="preserve">
+    <value>Έντομο</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Σκοτεινό</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Δρακοειδές</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Ηλεκτρικό</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Νεράιδα</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Μαχητικό</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>Φωτίας</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Ιπτάμενο</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Φάντασμα</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Χορταρίου</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Εδάφους</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Πάγου</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Φυσιολογικό</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Δηλητιριώδες</value>
+  </data>
   <data name="Psychic" xml:space="preserve">
-    <value>Ψυχικός</value>
+    <value>Ψυχικού</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Πέτρας</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Ατσαλίου</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Νερού</value>
   </data>
 </root>

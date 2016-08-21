@@ -173,4 +173,25 @@
   <data name="ActivityDefeatGymLeader" xml:space="preserve">
     <value>擊敗道館館主</value>
   </data>
+  <data name="Combat" xml:space="preserve">
+    <value>戰力</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="Fav" xml:space="preserve">
+    <value>最愛</value>
+  </data>
+  <data name="Health" xml:space="preserve">
+    <value>體力</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>名稱</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>編號</value>
+  </data>
+  <data name="PokemonInventoryFullText" xml:space="preserve">
+    <value>您的精靈寶可夢空間已經滿了，捕捉 {0} 前請先將一些寶可夢轉換成糖果。</value>
+  </data>
 </root>

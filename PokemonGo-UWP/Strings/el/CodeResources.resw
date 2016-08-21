@@ -83,7 +83,76 @@
   <data name="MysticTeamText" xml:space="preserve">
     <value>Μύστικ</value>
   </data>
+  <data name="TransferPokemonSuccessText" xml:space="preserve">
+    <value>Η Μεταφορά έγινε επιτυχός! Πήρες {0} Candy απο τον Καθηγητή</value>
+  </data>
+  <data name="TransferPokemonWarningText" xml:space="preserve">
+    <value>Δέν μπορείς να το πάρεις πίσο μετα την μεταφορά στον Καθηγητή. Θέλεις σίγουρα να μεταφέρεις το {0} στον Καθηγητή;</value>
+  </data>
+  <data name="LoginExpired" xml:space="preserve">
+    <value>Η προηγούμενη είσοδος έλιξε</value>
+  </data>
   <data name="ActivityUnknown" xml:space="preserve">
     <value>Άγνωστο</value>
+  </data>
+  <data name="ActivityCatchPokemon" xml:space="preserve">
+    <value>Το Pokémon Παγιδεύτικε</value>
+  </data>
+  <data name="ActivityCatchLegendPokemon" xml:space="preserve">
+    <value>Παγίδευσε Μυθικό Pokémon</value>
+  </data>
+  <data name="ActivityFleePokemon" xml:space="preserve">
+    <value>Το Pokémon Ξέφυγε</value>
+  </data>
+  <data name="ActivityEvolvePokemon" xml:space="preserve">
+    <value>Εξέλιξε ένα Pokémon</value>
+  </data>
+  <data name="ActivityHatchEgg" xml:space="preserve">
+    <value>Το Αυγό Εκκολάφθηκε!</value>
+  </data>
+  <data name="ActivityWalkKm" xml:space="preserve">
+    <value>Περπατήστε χλμ</value>
+  </data>
+  <data name="ActivityPokedexEntryNew" xml:space="preserve">
+    <value>Νέο Pokémon</value>
+  </data>
+  <data name="ActivityTrainPokemon" xml:space="preserve">
+    <value>Εκπαίδευσε το Pokémon</value>
+  </data>
+  <data name="ActivityReleasePokemon" xml:space="preserve">
+    <value>Ελευθέροσε το Pokémon</value>
+  </data>
+  <data name="ActivityHatchEggSmallBonus" xml:space="preserve">
+    <value>Εκκόλαψη Αυγού Μικρό Δώρο</value>
+  </data>
+  <data name="ActivityHatchEggMediumBonus" xml:space="preserve">
+    <value>Εκκόλαψη Αυγού Μεσαίο Δώρο</value>
+  </data>
+  <data name="ActivityHatchEggLargeBonus" xml:space="preserve">
+    <value>Εκκόλαψη Αυγού Μεγάλο Δώρο</value>
+  </data>
+  <data name="ActivityDefeatGymDefender" xml:space="preserve">
+    <value>Νίκισε τόν Υπερασπιστή Γυμναστηρίου</value>
+  </data>
+  <data name="ActivityDefeatGymLeader" xml:space="preserve">
+    <value>Νίκισε τόν Αρχυγό Γυμναστηρίου</value>
+  </data>
+  <data name="Combat" xml:space="preserve">
+    <value>Μάχη</value>
+  </data>
+  <data name="Fav" xml:space="preserve">
+    <value>Αγαπημένα</value>
+  </data>
+  <data name="Health" xml:space="preserve">
+    <value>Ζωή</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Όνομα</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Αριθμός</value>
+  </data>
+  <data name="PokemonInventoryFullText" xml:space="preserve">
+    <value>Ο αποθηκευτικός χώρος Pokémon είναι πλήρης, μεταφέρετε μερικά Pokémon πρίν προσπαθήσετε να παγιδεύσετε το {0}.</value>
   </data>
 </root>

@@ -12,85 +12,88 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BadgeBattleAttackWon" xml:space="preserve">
-    <value>Μπατλ Γκιρλ</value>
+  <data name="BadgeBattleAttackWonDescription" xml:space="preserve">
+    <value>Έχεις Νίκισει {0} μάχες γυμναστηρίου</value>
   </data>
-  <data name="BadgeBattleTrainingWon" xml:space="preserve">
-    <value>Εκπαιδευτής Έις</value>
+  <data name="BadgeBattleTrainingWonDescription" xml:space="preserve">
+    <value>Έχεις Νίκισει {0} μάχες εκπαίδευσης</value>
   </data>
-  <data name="BadgeBigMagikarp" xml:space="preserve">
-    <value>Ψαράς</value>
+  <data name="BadgeBigMagikarpDescription" xml:space="preserve">
+    <value>Παγίδευσες {0} Magikarp</value>
   </data>
-  <data name="BadgeCaptureTotal" xml:space="preserve">
-    <value>Συλλέκτης</value>
+  <data name="BadgeCaptureTotalDescription" xml:space="preserve">
+    <value>Εχμαλότισες {0} Pokémon</value>
   </data>
-  <data name="BadgeEvolvedTotal" xml:space="preserve">
-    <value>Επιστήμονας</value>
+  <data name="BadgeEvolvedTotalDescription" xml:space="preserve">
+    <value>Εξέλιξες {x} Pokémon</value>
   </data>
-  <data name="BadgeHatchedTotal" xml:space="preserve">
-    <value>Εκτροφέας</value>
+  <data name="BadgeHatchedTotalDescription" xml:space="preserve">
+    <value>Εκκόλαψες {0} Pokémon</value>
   </data>
-  <data name="BadgePokedexEntries" xml:space="preserve">
-    <value>Κάντο</value>
+  <data name="BadgePikachuDescription" xml:space="preserve">
+    <value>Παγίδευσες {0} Pikachu</value>
   </data>
-  <data name="BadgePokestopsVisited" xml:space="preserve">
-    <value>Μπάκπάκερ</value>
+  <data name="BadgePokedexEntriesDescription" xml:space="preserve">
+    <value>Καταχωρήθηκαν {0} Pokémon στο Pokedex</value>
   </data>
-  <data name="BadgeSmallRattata" xml:space="preserve">
-    <value>Νεαρός</value>
+  <data name="BadgePokestopsVisitedDescription" xml:space="preserve">
+    <value>Επισκέφτικες {0} Pokestops</value>
   </data>
-  <data name="BadgeTravelKm" xml:space="preserve">
-    <value>Δρομέας</value>
+  <data name="BadgeSmallRattataDescription" xml:space="preserve">
+    <value>Παγίδευσες {0} Rattata</value>
   </data>
-  <data name="Bug" xml:space="preserve">
-    <value>Μπάγκ Κάτσερ</value>
+  <data name="BadgeTravelKmDescription" xml:space="preserve">
+    <value>Περπάτησες {0} χλμ</value>
   </data>
-  <data name="Dragon" xml:space="preserve">
-    <value>Θηριοδαμαστής Δράκων</value>
+  <data name="BugDescription" xml:space="preserve">
+    <value>Παγίδευσες {0} Pokémon Τύπου Έντομο</value>
   </data>
-  <data name="Electric" xml:space="preserve">
-    <value>Ρόκερ</value>
+  <data name="DragonDescription" xml:space="preserve">
+    <value>Παγίδευσες {0} Δρακοειδές Pokémon</value>
   </data>
-  <data name="Fairy" xml:space="preserve">
-    <value>Το Κορίτσι του Παραμυθιού</value>
+  <data name="ElectricDescription" xml:space="preserve">
+    <value>Παγίδευσες {0} Pokémon Ηλεκτρικού Τύπου</value>
   </data>
-  <data name="Fighting" xml:space="preserve">
-    <value>Μαύρη ζώνη</value>
+  <data name="FairyDescription" xml:space="preserve">
+    <value>Παγίδευσες {0} Pokémon Τύπου Νεράιδας</value>
   </data>
-  <data name="Fire" xml:space="preserve">
-    <value>Κίνντλερ</value>
+  <data name="FightingDescription" xml:space="preserve">
+    <value>Παγίδευσες {0} Pokémon Μαχητικού Τύπου</value>
   </data>
-  <data name="Flying" xml:space="preserve">
-    <value>Εκτροφέας πουλιών</value>
+  <data name="FireDescription" xml:space="preserve">
+    <value>Παγίδευσες {0} Pokémon Φωτίας</value>
   </data>
-  <data name="Ghost" xml:space="preserve">
-    <value>Μανιακός Χέξ</value>
+  <data name="FlyingDescription" xml:space="preserve">
+    <value>Παγίδευσες {0} Pokémon Ιπτάμενου Τύπου</value>
   </data>
-  <data name="Grass" xml:space="preserve">
-    <value>Κηπουρός</value>
+  <data name="GhostDescription" xml:space="preserve">
+    <value>Παγίδευσες {0} Pokémon Τύπου Φάντασμα</value>
   </data>
-  <data name="Ground" xml:space="preserve">
-    <value>Μανίακος Ρούιν</value>
+  <data name="GrassDescription" xml:space="preserve">
+    <value>Παγίδευσες {0} Pokémon Χορταρίου</value>
   </data>
-  <data name="Ice" xml:space="preserve">
-    <value>Σκιέρ</value>
+  <data name="GroundDescription" xml:space="preserve">
+    <value>Παγίδευσες {0} Pokémon Εδάφους</value>
   </data>
-  <data name="Normal" xml:space="preserve">
-    <value>Το παιδί του σχολείου</value>
+  <data name="IceDescription" xml:space="preserve">
+    <value>Παγίδευσες {0} Pokémon Πάγου</value>
   </data>
-  <data name="Poison" xml:space="preserve">
-    <value>Κορίτσι πανκ</value>
+  <data name="NormalDescription" xml:space="preserve">
+    <value>Παγίδευσες {0} Φυσιολογικά Pokémon</value>
   </data>
-  <data name="Psychic" xml:space="preserve">
-    <value>Ψυχικός</value>
+  <data name="PoisonDescription" xml:space="preserve">
+    <value>Παγίδευσες {0} Δηλητιριόδες Pokémon</value>
   </data>
-  <data name="Rock" xml:space="preserve">
-    <value>Πεζοπόρος</value>
+  <data name="PsychicDescription" xml:space="preserve">
+    <value>Παγίδευσες {0} Pokémon Ψυχικού Τύπου </value>
   </data>
-  <data name="Steel" xml:space="preserve">
-    <value>Ο πράκτορας του Αμαξοστασίου</value>
+  <data name="RockDescription" xml:space="preserve">
+    <value>Παγίδευσες {0} Pokémon Πέτρας</value>
   </data>
-  <data name="Water" xml:space="preserve">
-    <value>Κολυμβητής</value>
+  <data name="SteelDescription" xml:space="preserve">
+    <value>Παγίδευσες {0} Pokémon Τύπου Ατσάλι</value>
+  </data>
+  <data name="WaterDescription" xml:space="preserve">
+    <value>Παγίδευσες {0} Pokémon Νερού </value>
   </data>
 </root>

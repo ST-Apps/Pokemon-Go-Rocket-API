@@ -112,10 +112,10 @@
     <value>{0} elfogott Pokémon</value>
   </data>
   <data name="BadgeEvolvedTotalDescription" xml:space="preserve">
-    <value>[X] felfejlesztett Pokémon</value>
+    <value>{0} felfejlesztett Pokémon</value>
   </data>
   <data name="BadgeHatchedTotalDescription" xml:space="preserve">
-    <value>{x} kikeltett Pokémon</value>
+    <value>{0} kikeltett Pokémon</value>
   </data>
   <data name="BadgePikachuDescription" xml:space="preserve">
     <value>{0} elkapott Pikachu</value>

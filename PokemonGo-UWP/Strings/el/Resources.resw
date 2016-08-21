@@ -25,19 +25,19 @@
     <value>ΕΙΣΟΔΟΣ με PTC λογαργιασμό</value>
   </data>
   <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
-    <value>Για να συνδεθείτε πρέπει να βάλετε το Όνομα-Χρήστη/Email και τον Κωδικό σας σε αυτήν την εφαρμογή. Αν δεν την εμπιστεύεστε, παρακαλώ κλείστε την πριν συνεχίσετε. Δεν ευθυνόμαστε για τίποτα.</value>
+    <value>Για να συνδεθείτε, βάλτε επάνω το Όνομα-Χρήστη/Email και τον Κωδικό σας. Αν δεν εμπιστεύεστε αυτήν την εφαρμογή, παρακαλώ κλείστε την τώρα. Η Niantic μπορεί να σας μπανάρει για τη χρήση αυτής της εφαρμογής. Κάντε χρήση με δικό σας ρίσκο.</value>
   </data>
   <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
     <value>Κοντά</value>
   </data>
   <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
-    <value>Είσαι εκτός εμβέλειας</value>
+    <value>ΑΥΤΟ ΤΟ POKÉSTOP ΕΙΝΑΙ ΠΟΛΥ ΜΑΚΡΙΑ</value>
   </data>
   <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
     <value>Κωδικός</value>
   </data>
   <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
-    <value>Όνομα-Χρήστη/email</value>
+    <value>Όνομα-Χρήστη / Email</value>
   </data>
   <data name="ExperienceTextBlock.Text" xml:space="preserve">
     <value>XP</value>
@@ -55,7 +55,7 @@
     <value>Μουσική</value>
   </data>
   <data name="PokemonTextBlock.Text" xml:space="preserve">
-    <value>ΠΟΚΕΜΟΝ</value>
+    <value>POKÉMON</value>
   </data>
   <data name="SettingsHeaderTextBlock.Text" xml:space="preserve">
     <value>ΡΥΘΜΙΣΕΙΣ</value>
@@ -70,7 +70,7 @@
     <value>ΑΝΤΙΚΕΙΜΕΝΑ</value>
   </data>
   <data name="PokedexTextBlock.Text" xml:space="preserve">
-    <value>ΠΟΚΕΝΤΕΞ</value>
+    <value>POKÉDEX</value>
   </data>
   <data name="LowercaseItemsTextBlock.Text" xml:space="preserve">
     <value>αντικέιμενα</value>
@@ -102,5 +102,45 @@
   </data>
   <data name="IncubatorsTextBlock.Text" xml:space="preserve">
     <value>ΕΚΟΛΑΠΤΥΡΙΑ</value>
+  </data>
+  <data name="SettingsUseNianticMapTextBlock.Text" xml:space="preserve">
+    <value>Χρήση Χάρτη Niantic</value>
+  </data>
+  <data name="HpTextBlock.Text" xml:space="preserve">
+    <value>HP </value>
+  </data>
+  <data name="TypeTextBlock.Text" xml:space="preserve">
+    <value>Τύπος</value>
+  </data>
+  <data name="KgTextBlock.Text" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="WeightTextBlock.Text" xml:space="preserve">
+    <value>Βάρος</value>
+  </data>
+  <data name="HeightTextBlock.Text" xml:space="preserve">
+    <value>Ύψος</value>
+  </data>
+  <data name="MTextBlock.Text" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="StardustTextBlock.Text" xml:space="preserve">
+    <value>STARDUST</value>
+  </data>
+  <data name="CandyTextBlock.Text" xml:space="preserve">
+    <value> CANDY</value>
+    <comment>Watch out: space before the word!</comment>
+  </data>
+  <data name="EvolveButton.Content" xml:space="preserve">
+    <value>ΕΞΕΛΙΞΕ</value>
+  </data>
+  <data name="PowerUpButton.Content" xml:space="preserve">
+    <value>ΆΥΞΣΗΣΗ ΔΥΝΑΜΗΣ</value>
+  </data>
+  <data name="EggDetailButtonTextBlock.Text" xml:space="preserve">
+    <value>ΈΝΑΡΞΗ ΕΚΚΟΛΑΨΗΣ</value>
+  </data>
+  <data name="EggDetailTextBlock.Text" xml:space="preserve">
+    <value>Χρησιμοποίησε εναν εκκολαυτή για να εκκολάψεις ένα Αυγό.</value>
   </data>
 </root>
