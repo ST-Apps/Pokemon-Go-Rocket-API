@@ -488,10 +488,6 @@ Abrir a página com os arquivos de instalação para instalação manual?</targe
           <source>Waiting for network to be back...</source>
           <target state="new">Waiting for network to be back...</target>
         </trans-unit>
-        <trans-unit id="WaitingForNetworkText" translate="yes" xml:space="preserve">
-          <source>Waiting for network to be back...</source>
-          <target state="new">Waiting for network to be back...</target>
-        </trans-unit>
       </group>
     </body>
   </file>
