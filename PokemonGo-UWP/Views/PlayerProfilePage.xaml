@@ -110,8 +110,13 @@
                             RelativePanel.Above="CustomizeUIStackPanel"
                             Style="{ThemeResource ImageButtonStyle}"
                             Height="{ThemeResource UiButtonSize}"
-                            x:Name="CustomizeUICloseButton" Click="CustomizeUICloseButton_Click">
-
+                            x:Name="CustomizeUICloseButton">
+                        <interactivity:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="Click">
+                                <core:CallMethodAction MethodName="Begin"
+                                                       TargetObject="{Binding ElementName=HideInventoryStoryboard}" />
+                            </core:EventTriggerBehavior>
+                        </interactivity:Interaction.Behaviors>
                         <Image Source="../Assets/Buttons/btn_close_normal_dark.png"
                                Stretch="Uniform"
                                HorizontalAlignment="Stretch" />
@@ -364,7 +369,14 @@
                             Height="{ThemeResource UiButtonSize}"
                             Margin="16"
                             Canvas.ZIndex="9"
-                            x:Name="ShowInventoryButton" Click="ShowInventoryButton_Click">
+                            x:Name="ShowInventoryButton">
+
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Click">
+                            <core:CallMethodAction MethodName="Begin"
+                                                       TargetObject="{Binding ElementName=ShowInventoryStoryboard}" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
 
                     <Image Source="../Assets/Buttons/btn_menu.png"
                                    HorizontalAlignment="Center"

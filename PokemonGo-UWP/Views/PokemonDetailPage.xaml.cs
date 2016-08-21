@@ -89,25 +89,5 @@ namespace PokemonGo_UWP.Views
         }
 
         #endregion
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            HideEvolveMenuStoryboard.Begin();
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            HideContextMenuStoryboard.Begin();
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            ShowContextMenuStoryboard.Begin();
-        }
-
-        private void Grid_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            HideContextMenuStoryboard.Begin();
-        }
     }
 }

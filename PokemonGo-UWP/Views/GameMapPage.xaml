@@ -505,7 +505,14 @@
                     Height="{ThemeResource UiButtonSize}"
                     RelativePanel.AlignBottomWithPanel="True"
                     RelativePanel.AlignHorizontalCenterWithPanel="True"
-                    Margin="0,0,0,24" Click="Button_Click">
+                    Margin="0,0,0,24">
+
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:CallMethodAction MethodName="Begin"
+                                               TargetObject="{Binding ElementName=HidePokeMenuStoryboard}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
 
                 <Image Source="../Assets/Buttons/btn_close_normal.png"
                        Stretch="Uniform"
@@ -629,7 +636,14 @@
                     Height="{ThemeResource UiButtonSize}"
                     RelativePanel.AlignBottomWithPanel="True"
                     RelativePanel.AlignHorizontalCenterWithPanel="True"
-                    Margin="0,0,0,24" Click="Button_Click_1">
+                    Margin="0,0,0,24">
+
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:CallMethodAction MethodName="Begin"
+                                               TargetObject="{Binding ElementName=HideLevelUpPanelStoryboard}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
 
                 <Image Source="../Assets/Buttons/btn_close_normal_dark.png"
                        Stretch="Uniform"
@@ -713,8 +727,15 @@
                     Style="{ThemeResource ImageButtonStyle}"
                     Height="{ThemeResource UiButtonSize}"
                     HorizontalAlignment="Center"
-                    x:Name="PokeMenuMainButton" Click="PokeMenuMainButton_Click">
-                
+                    x:Name="PokeMenuMainButton">
+
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Click">
+                        <core:CallMethodAction MethodName="Begin"
+                                               TargetObject="{Binding ElementName=ShowPokeMenuStoryboard}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+
                 <Image Source="../Assets/Buttons/btn_action_menu.png"
                        Stretch="Uniform"
                        HorizontalAlignment="Stretch" />

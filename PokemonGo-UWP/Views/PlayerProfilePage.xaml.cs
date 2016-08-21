@@ -12,14 +12,5 @@ namespace PokemonGo_UWP.Views
             NavigationCacheMode = NavigationCacheMode.Enabled;
         }
 
-        private void CustomizeUICloseButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
-        {
-            HideInventoryStoryboard.Begin();
-        }
-
-        private void ShowInventoryButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
-        {
-            ShowInventoryStoryboard.Begin();
-        }
     }
 }

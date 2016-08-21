@@ -101,19 +101,5 @@ namespace PokemonGo_UWP.Views
 			}
 		}
 
-        private void CloseSortMenuButton_Click(object sender, RoutedEventArgs e)
-        {
-            HideSortMenuStoryboard.Begin();
-        }
-
-        private void SortingButton_Click(object sender, RoutedEventArgs e)
-        {
-            ShowSortMenuStoryboard.Begin();
-        }
-
-        private void ListView_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            HideSortMenuStoryboard.Begin();
-        }
-    }
+	}
 }

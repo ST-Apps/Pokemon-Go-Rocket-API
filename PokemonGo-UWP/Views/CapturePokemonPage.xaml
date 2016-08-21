@@ -174,13 +174,22 @@
                 <ListView ItemsSource="{Binding ItemsInventory}"
                           SelectedItem="{Binding SelectedCaptureItem, Mode=TwoWay}"
                           IsItemClickEnabled="True"
-                          Grid.Row="1" ItemClick="ListView_ItemClick">
+                          Grid.Row="1">
 
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">
                             <Setter Property="HorizontalContentAlignment" Value="Stretch" />
                         </Style>
                     </ListView.ItemContainerStyle>
+
+
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="ItemClick">
+                            <core:CallMethodAction MethodName="Begin"
+                                                   TargetObject="{Binding ElementName=HideInventoryMenuStoryboard}" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+
 
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -267,7 +276,14 @@
                         Grid.Row="2"
                         HorizontalAlignment="Center"
                         Margin="0,8,0,0"
-                        x:Name="CloseInventoryMenuButton" Click="CloseInventoryMenuButton_Click">
+                        x:Name="CloseInventoryMenuButton">
+
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Tapped">
+                            <core:CallMethodAction MethodName="Begin"
+                                                   TargetObject="{Binding ElementName=HideInventoryMenuStoryboard}" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
 
                     <Image Source="../Assets/Buttons/btn_close_normal_dark.png"
                            Stretch="Uniform"
@@ -503,7 +519,14 @@
                 Margin="16"
                 Height="{ThemeResource UiButtonSize}"
                 HorizontalAlignment="Center"
-                x:Name="InventoryButton" Click="InventoryButton_Click">
+                x:Name="InventoryButton">
+
+            <interactivity:Interaction.Behaviors>
+                <core:EventTriggerBehavior EventName="Tapped">
+                    <core:CallMethodAction MethodName="Begin"
+                                           TargetObject="{Binding ElementName=ShowInventoryMenuStoryboard}" />
+                </core:EventTriggerBehavior>
+            </interactivity:Interaction.Behaviors>
 
             <Image Source="../Assets/Buttons/btn_items_catch.png"
                    Stretch="Uniform"

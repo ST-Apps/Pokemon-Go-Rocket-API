@@ -38,10 +38,5 @@ namespace PokemonGo_UWP.Views
         }
 
         #endregion
-
-        private void CloseDiscardButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
-        {
-            HideDiscardStoryboard.Begin();
-        }
     }
 }
