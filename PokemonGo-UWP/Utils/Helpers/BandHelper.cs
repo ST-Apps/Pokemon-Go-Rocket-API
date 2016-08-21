@@ -23,7 +23,7 @@ namespace PokemonGo_UWP.Utils.Helpers
 
         ~BandHelper()
         {
-            _bandClient?.Dispose();
+            Disconnect();
         }
 
         public async Task<bool> Connect()
@@ -48,7 +48,6 @@ namespace PokemonGo_UWP.Utils.Helpers
 
                         Debug.WriteLine("Connected to MS Band. HW: " + hwVer + ", FW: " + fwVer);
 
-                        SetupTile();
                         // Vibrate the band twice to acknowledge a connection
                         await _bandClient?.NotificationManager.VibrateAsync(Microsoft.Band.Notifications.VibrationType.NotificationTwoTone);
 
@@ -68,16 +67,24 @@ namespace PokemonGo_UWP.Utils.Helpers
             return false;
         }
 
-        public async void SetupTile()
+        public void Disconnect()
+        {
+            _bandClient?.Dispose();
+
+            _bandClient = null;
+            _isConnected = false;
+        }
+
+        public async Task<bool> SetupTile()
         {
             if (_bandClient == null)
-                return;
+                return false;
 
             int tileCapacity = await _bandClient.TileManager.GetRemainingTileCapacityAsync();
             if (tileCapacity == 0)
             {
                 Debug.WriteLine("No space on Band for tile");
-                return;
+                return false;
             }
 
             // Create the tile with the app GUID
@@ -110,6 +117,8 @@ namespace PokemonGo_UWP.Utils.Helpers
                     if (await _bandClient.TileManager.AddTileAsync(bandTile))
                     {
                         // Success!
+                        SendMessage("Connected", "The Pokemon Go! tile has been added successfully.");
+                        return true;
                     }
                 }
                 catch ( BandException ex )
@@ -117,6 +126,8 @@ namespace PokemonGo_UWP.Utils.Helpers
                     Debug.WriteLine("Band Exception: " + ex.Message);
                 }
             }
+
+            return false;
         }
 
         public async void RemoveTile()
@@ -134,6 +145,11 @@ namespace PokemonGo_UWP.Utils.Helpers
             }
         }
 
+        /// <summary>
+        /// Shows a dialog message on the band. This is a popup message that, once dismissed, is gone forever
+        /// </summary>
+        /// <param name="_header">The header to show on the dialog</param>
+        /// <param name="_body">The text within the dialog</param>
         public async void ShowDialog( string _header, string _body)
         {
             if (_bandClient == null)
@@ -142,6 +158,11 @@ namespace PokemonGo_UWP.Utils.Helpers
             await _bandClient.NotificationManager.ShowDialogAsync(_appGuid, _header, _body);
         }
 
+        /// <summary>
+        /// Sends a message to the band which is displayed and stored in the apps tile
+        /// </summary>
+        /// <param name="_header">The header for the message</param>
+        /// <param name="_body">The text within the message</param>
         public async void SendMessage(string _header, string _body)
         {
             if (_bandClient == null)
