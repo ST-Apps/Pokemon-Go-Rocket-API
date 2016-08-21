@@ -668,31 +668,31 @@ Elle yükleme için yükleme dosyaları sayfası açılsın mı?</target>
         </trans-unit>
         <trans-unit id="SettingsRememberMapZoomTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Remember Map Zoom</source>
-          <target state="new">Remember Map Zoom</target>
+          <target state="translated">Harita Uzaklığını Hatırla</target>
         </trans-unit>
         <trans-unit id="TransferTextBlock.Text" translate="yes" xml:space="preserve">
           <source>TRANSFER</source>
-          <target state="new">TRANSFER</target>
+          <target state="translated">TRANSFER ET</target>
         </trans-unit>
         <trans-unit id="SettingsLanguageRestartTextBlock.Text" translate="yes" xml:space="preserve">
           <source>You must restart the App to take effect.</source>
-          <target state="new">You must restart the App to take effect.</target>
+          <target state="translated">Değişiklikler için uygulamayı yeniden başlatmalısınız.</target>
         </trans-unit>
         <trans-unit id="SettingsLanguageTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Language</source>
-          <target state="new">Language</target>
+          <target state="translated">Dil</target>
         </trans-unit>
         <trans-unit id="SettingsCompassEnabledTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Use compass</source>
-          <target state="new">Use compass</target>
+          <target state="translated">Pusula kullan</target>
         </trans-unit>
         <trans-unit id="SettingsLiveTileTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Live Tile Mode</source>
-          <target state="new">Live Tile Mode</target>
+          <target state="translated">Live Tile Modu</target>
         </trans-unit>
         <trans-unit id="FavoriteTextBlock.Text" translate="yes" xml:space="preserve">
           <source>FAVORITE</source>
-          <target state="new">FAVORITE</target>
+          <target state="translated">FAVORİ</target>
         </trans-unit>
       </group>
     </body>
