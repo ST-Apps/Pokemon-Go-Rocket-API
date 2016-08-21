@@ -149,7 +149,7 @@
 											 VerticalAlignment="Center"
 											 Margin="15,15,15,0" />
                     <TextBlock
-											 x:Uid="SettingsLanguageRestartTextBlock"
+											 x:Uid="SettingsMusicRestartTextBlock"
 											 Text="You must restart the App to take effect."
 											 Style="{StaticResource TextSettingsTitle}"
 											 VerticalAlignment="Center"
