@@ -51,7 +51,7 @@ namespace PokemonGo_UWP.Utils.Helpers
                         // Vibrate the band twice to acknowledge a connection
                         await _bandClient?.NotificationManager.VibrateAsync(Microsoft.Band.Notifications.VibrationType.NotificationTwoTone);
 
-                        SendMessage( "Connected", "Pokemon Go! has been connected");
+                        ShowDialog( "Connected", "Pokemon Go! has been connected");
 
                         return true;
                     }
