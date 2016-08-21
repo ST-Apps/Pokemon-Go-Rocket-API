@@ -687,7 +687,7 @@ Chcete otevřít stránku se soubory pro manuální instalaci? </target>
           <source>You must restart the App to take effect.</source>
           <target state="new">You must restart the App to take effect.</target>
         </trans-unit>
-        <trans-unit id="SettingsLanguageRestartTextBlock.Text" translate="yes" xml:space="preserve">
+        <trans-unit id="SettingsMusicRestartTextBlock.Text" translate="yes" xml:space="preserve">
           <source>You must restart the App to take effect.</source>
           <target state="new">You must restart the App to take effect.</target>
         </trans-unit>
