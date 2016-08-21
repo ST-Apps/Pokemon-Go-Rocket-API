@@ -269,4 +269,13 @@
   <data name="FavoriteTextBlock.Text" xml:space="preserve">
     <value>FAVORITE</value>
   </data>
+  <data name="NoButtonText.Content" xml:space="preserve">
+    <value>NO</value>
+  </data>
+  <data name="OkButtonText.Content" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="YesButtonText.Content" xml:space="preserve">
+    <value>YES</value>
+  </data>
 </root>
