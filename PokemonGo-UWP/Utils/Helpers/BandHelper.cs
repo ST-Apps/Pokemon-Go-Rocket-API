@@ -130,19 +130,23 @@ namespace PokemonGo_UWP.Utils.Helpers
             return false;
         }
 
-        public async void RemoveTile()
+        public async Task<bool> RemoveTile()
         {
             if (_bandClient == null)
-                return;
+                return false;
 
             try
             {
                 await _bandClient.TileManager.RemoveTileAsync(_appGuid);
+
+                return true;
             }
             catch ( BandException ex)
             {
                 Debug.WriteLine("Band Exception: " + ex.Message);
             }
+
+            return false;
         }
 
         /// <summary>

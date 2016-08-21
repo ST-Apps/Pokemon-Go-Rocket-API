@@ -243,7 +243,7 @@ namespace PokemonGo_UWP.ViewModels
             else
             {
                 // Remove the tile
-                Utils.Helpers.BandHelper.Instance.RemoveTile();
+                await Utils.Helpers.BandHelper.Instance.RemoveTile();
 
                 // Disconnect from the band
                 Utils.Helpers.BandHelper.Instance.Disconnect();
