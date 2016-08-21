@@ -164,7 +164,7 @@ namespace PokemonGo_UWP
                 case NotifyCollectionChangedAction.Replace:
                     foreach (IncubatedEggDataWrapper incubator in e.OldItems)
                     {
-                        
+                        MessageDialog Message = new MessageDialog("Egg Hatched");
                     }
                     
                     break;
