@@ -1,4 +1,4 @@
-﻿<Page
+<Page
     x:Class="PokemonGo_UWP.Views.SettingsPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -36,7 +36,7 @@
         </StackPanel>
 
         <ScrollViewer Grid.Row="1">
-            <Grid Margin="15,0,15,10">
+            <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
@@ -50,8 +50,8 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
-									<RowDefinition Height="Auto" />
-									<RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
@@ -76,16 +76,16 @@
                            Style="{StaticResource TextSettingsTitle}"
                            VerticalAlignment="Center"
                            Margin="15,15,15,25" />
-				<ComboBox Grid.Column="1"
+                <ComboBox Grid.Column="1"
 									Grid.Row="1" 
 									HorizontalAlignment="Right" VerticalAlignment="Center" 
 									Width="120" 
 									Margin="0,0,15,10"
 									SelectedIndex="{Binding MapAutomaticOrientationMode_Index, Mode=TwoWay}" >
-					<ComboBoxItem Content="None"/>
-					<ComboBoxItem Content="GPS"/>
-					<ComboBoxItem x:Name="CompassBoxItem" Content="Compass"/>
-				</ComboBox>
+                    <ComboBoxItem Content="None"/>
+                    <ComboBoxItem Content="GPS"/>
+                    <ComboBoxItem x:Name="CompassBoxItem" Content="Compass"/>
+                </ComboBox>
 
                 <TextBlock Grid.Row="2"
                            Grid.Column="0"
@@ -114,6 +114,12 @@
                            Style="{StaticResource TextSettingsTitle}"
                            VerticalAlignment="Center"
                            Margin="15,15,15,25" />
+                <TextBlock
+											 x:Uid="SettingsLanguageRestartTextBlock"
+											 Text="You must restart the App to take effect."
+											 Style="{StaticResource TextSettingsTitle}"
+											 VerticalAlignment="Center"
+											 Margin="15,33,15,13" FontSize="10" Grid.Row="4" />
 
                 <CheckBox Grid.Row="4"
                           Grid.Column="1"
@@ -135,34 +141,34 @@
                           Style="{StaticResource SettingsCheckbox}"
                           Margin="0,0,15,10" />
 
-							<StackPanel Grid.Row="6" Grid.Column="0" Orientation="Vertical" Margin="0" >
-								<TextBlock
+                <StackPanel Grid.Row="6" Grid.Column="0" Orientation="Vertical" Margin="0" >
+                    <TextBlock
 											 x:Uid="SettingsLanguageTextBlock"
 											 Text="Language"
 											 Style="{StaticResource TextSettingsTitle}"
 											 VerticalAlignment="Center"
 											 Margin="15,15,15,0" />
-								<TextBlock
+                    <TextBlock
 											 x:Uid="SettingsLanguageRestartTextBlock"
 											 Text="You must restart the App to take effect."
 											 Style="{StaticResource TextSettingsTitle}"
 											 VerticalAlignment="Center"
 											 Margin="15,0,15,25" FontSize="10" />
-							</StackPanel>
+                </StackPanel>
 
-							<ComboBox x:Name="LanguageComboBox" Grid.Row="6"
+                <ComboBox x:Name="LanguageComboBox" Grid.Row="6"
 												Grid.Column="1"
 												 Margin="0,10,15,10" ItemsSource="{Binding languageList, Mode=OneWay}" SelectedItem="{Binding UserLanguage, Mode=TwoWay}" HorizontalAlignment="Right" />
 
 
-							<TextBlock Grid.Row="7"
+                <TextBlock Grid.Row="7"
                            Grid.Column="0"
                            x:Uid="SettingsLiveTileTextBlock"
                            Text="Live Tile Mode"
                            Style="{StaticResource TextSettingsTitle}"
                            VerticalAlignment="Center"
                            Margin="15,15,15,25" />
-               
+
                 <VariableSizedWrapGrid Grid.Row="8"
                                        Grid.ColumnSpan="2"
                                        Orientation="Horizontal"
