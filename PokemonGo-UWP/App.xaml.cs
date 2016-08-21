@@ -153,7 +153,21 @@ namespace PokemonGo_UWP
             if (SettingsService.Instance.IsVibrationEnabled)
                 _vibrationDevice?.Vibrate(TimeSpan.FromMilliseconds(500));
             if (SettingsService.Instance.HasBandConnection)
+            {
                 Utils.Helpers.BandHelper.Instance.Vibrate(Microsoft.Band.Notifications.VibrationType.NotificationOneTone);
+
+                var newList = e.NewItems;
+                
+                foreach (var item in e.OldItems)
+                {
+                    newList.Remove(item);
+                }
+
+                foreach (MapPokemonWrapper item in newList )
+                {
+                    Utils.Helpers.BandHelper.Instance.ShowDialog("New Pokemon", "A wild " + item.PokemonId.ToString() + " has appeared!");
+                }
+            }
             AudioUtils.PlaySound(AudioUtils.POKEMON_FOUND_DING);
         }
 
