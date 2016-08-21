@@ -154,6 +154,24 @@ namespace PokemonGo_UWP
                 _vibrationDevice?.Vibrate(TimeSpan.FromMilliseconds(500));
             AudioUtils.PlaySound(AudioUtils.POKEMON_FOUND_DING);
         }
+        
+        private void Hatch(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            switch (e.Action)
+            {
+                case NotifyCollectionChangedAction.Remove:
+                case NotifyCollectionChangedAction.Move:
+                case NotifyCollectionChangedAction.Replace:
+                    foreach (IncubatedEggDataWrapper incubator in e.OldItems)
+                    {
+                        
+                    }
+                    
+                    break;
+                default:
+                    break;
+            }
+        }
 
         #endregion
 
@@ -221,6 +239,7 @@ namespace PokemonGo_UWP
 
             // Respond to changes in inventory and Pokemon in the immediate viscinity.
             GameClient.PokemonsInventory.CollectionChanged += PokemonsInventory_CollectionChanged;
+            GameClient.UsedIncubatorsInventory.CollectionChanged += Hatch;
             GameClient.CatchablePokemons.CollectionChanged += CatchablePokemons_CollectionChanged;
 
             await AudioUtils.Init();            
