@@ -437,31 +437,31 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="SettingsRememberMapZoomTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Remember Map Zoom</source>
-          <target state="new">Remember Map Zoom</target>
+          <target state="translated">記住地圖縮放</target>
         </trans-unit>
         <trans-unit id="TransferTextBlock.Text" translate="yes" xml:space="preserve">
           <source>TRANSFER</source>
-          <target state="new">TRANSFER</target>
+          <target state="translated">轉換</target>
         </trans-unit>
         <trans-unit id="SettingsLanguageRestartTextBlock.Text" translate="yes" xml:space="preserve">
           <source>You must restart the App to take effect.</source>
-          <target state="new">You must restart the App to take effect.</target>
+          <target state="translated">重新啟動應用程式已生效</target>
         </trans-unit>
         <trans-unit id="SettingsLanguageTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Language</source>
-          <target state="new">Language</target>
+          <target state="translated">語言</target>
         </trans-unit>
         <trans-unit id="SettingsCompassEnabledTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Use compass</source>
-          <target state="new">Use compass</target>
+          <target state="translated">開啟指北針</target>
         </trans-unit>
         <trans-unit id="SettingsLiveTileTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Live Tile Mode</source>
-          <target state="new">Live Tile Mode</target>
+          <target state="translated">開啟動態磚</target>
         </trans-unit>
         <trans-unit id="FavoriteTextBlock.Text" translate="yes" xml:space="preserve">
           <source>FAVORITE</source>
-          <target state="new">FAVORITE</target>
+          <target state="translated">最愛</target>
         </trans-unit>
       </group>
     </body>
@@ -550,13 +550,11 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="ItemIncubatorBasic" translate="yes" xml:space="preserve">
           <source>Incubator</source>
-          <target state="needs-review-translation">次數基礎孵蛋器</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated">次數基礎孵蛋器</target>
         </trans-unit>
         <trans-unit id="ItemIncubatorBasicUnlimited" translate="yes" xml:space="preserve">
           <source>∞ Incubator</source>
-          <target state="needs-review-translation">無限基礎孵蛋器</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated">無限基礎孵蛋器</target>
         </trans-unit>
         <trans-unit id="ItemItemStorageUpgrade" translate="yes" xml:space="preserve">
           <source>Item Storage Upgrade</source>
