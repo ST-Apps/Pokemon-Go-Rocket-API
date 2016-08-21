@@ -377,7 +377,7 @@ Ouvrir la page avec les fichiers d'installation pour une installation manuelle ?
         </trans-unit>
         <trans-unit id="ActivityDefeatFort" translate="yes" xml:space="preserve">
           <source>Defeat Fort</source>
-          <target state="translated">Bas l'arène</target>
+          <target state="translated">Bas l'Arène</target>
           <note from="MultilingualEditor" annotates="source" priority="4">Please verify the translation’s accuracy</note>
         </trans-unit>
         <trans-unit id="ActivityEvolvePokemon" translate="yes" xml:space="preserve">
@@ -458,7 +458,7 @@ Ouvrir la page avec les fichiers d'installation pour une installation manuelle ?
         </trans-unit>
         <trans-unit id="ActivityDefeatGymLeader" translate="yes" xml:space="preserve">
           <source>Defeat Gym Leader</source>
-          <target state="translated">Bat le Leader de l'arène</target>
+          <target state="translated">Bat le Leader de l'Arène</target>
         </trans-unit>
         <trans-unit id="Combat" translate="no" xml:space="preserve">
           <source>Combat</source>
