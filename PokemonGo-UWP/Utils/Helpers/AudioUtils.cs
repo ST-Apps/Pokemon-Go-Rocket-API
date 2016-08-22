@@ -33,7 +33,7 @@ namespace PokemonGo_UWP.Utils
             // Get folder
             var folder =
                     await (await Package.Current.InstalledLocation.GetFolderAsync("Assets")).GetFolderAsync("Audio");
-            ToggleSounds();
+        
             // Get files and create elements   
             var currentFile = await folder.GetFileAsync(GAMEPLAY);
             var currentStream = await currentFile.OpenAsync(FileAccessMode.Read);
@@ -41,25 +41,16 @@ namespace PokemonGo_UWP.Utils
 
             currentFile = await folder.GetFileAsync(ENCOUNTER_POKEMON);
             currentStream = await currentFile.OpenAsync(FileAccessMode.Read);
+            EncounterSound.IsMuted = true;
             EncounterSound.SetSource(currentStream, currentFile.ContentType);
-
+        
             currentFile = await folder.GetFileAsync(POKEMON_FOUND_DING);
             currentStream = await currentFile.OpenAsync(FileAccessMode.Read);
             PokemonFoundSound.SetSource(currentStream, currentFile.ContentType);
             // Set mode and volume
             GameplaySound.IsLooping = true;
         }
-
-        /// <summary>
-        /// Sets volume based on settings
-        /// </summary>
-        public static void ToggleSounds()
-        {
-            // TODO: not working yet for some weird reasons
-            GameplaySound.IsMuted =
-                EncounterSound.IsMuted = PokemonFoundSound.IsMuted = !SettingsService.Instance.IsMusicEnabled;
-        }
-
+     
         /// <summary>
         /// Plays the selected asset
         /// </summary>
