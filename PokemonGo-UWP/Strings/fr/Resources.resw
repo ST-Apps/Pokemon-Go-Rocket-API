@@ -94,10 +94,52 @@
   <data name="SettingsRememberMapZoomTextBlock.Text" xml:space="preserve">
     <value>Mémoriser le zoom de la carte</value>
   </data>
+  <data name="PokedexCaught.Text" xml:space="preserve">
+    <value>Attrapé:</value>
+  </data>
+  <data name="PokedexEvolutions.Text" xml:space="preserve">
+    <value>Évolutions</value>
+  </data>
+  <data name="PokedexPokemonHeight.Text" xml:space="preserve">
+    <value>Taille:</value>
+  </data>
+  <data name="PokedexPokemonWeight.Text" xml:space="preserve">
+    <value>Poids:</value>
+  </data>
+  <data name="PokedexSeen.Text" xml:space="preserve">
+    <value>Vu:</value>
+  </data>
+  <data name="PokedexViewCaught.Text" xml:space="preserve">
+    <value>Attrapé</value>
+  </data>
+  <data name="PokedexViewSeen.Text" xml:space="preserve">
+    <value>Vu</value>
+  </data>
+  <data name="TimesTextBlock.Text" xml:space="preserve">
+    <value>Heures</value>
+  </data>
   <data name="EggDetailButtonTextBlock.Text" xml:space="preserve">
     <value>COMMENCER L'INCUBATION</value>
   </data>
   <data name="EggDetailTextBlock.Text" xml:space="preserve">
     <value>Utilise un incubateur pour incuber un oeuf.</value>
+  </data>
+  <data name="TransferTextBlock.Text" xml:space="preserve">
+    <value>TRANSFERER</value>
+  </data>
+  <data name="SettingsLanguageRestartTextBlock.Text" xml:space="preserve">
+    <value>Vous devez redémarrer l'application pour que les effets soient appliqués</value>
+  </data>
+  <data name="SettingsLanguageTextBlock.Text" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+  <data name="SettingsCompassEnabledTextBlock.Text" xml:space="preserve">
+    <value>Utiliser la boussole</value>
+  </data>
+  <data name="SettingsLiveTileTextBlock.Text" xml:space="preserve">
+    <value>Mode tuile dynamique</value>
+  </data>
+  <data name="FavoriteTextBlock.Text" xml:space="preserve">
+    <value>FAVORIS</value>
   </data>
 </root>

@@ -155,8 +155,8 @@
           <target state="new">Visited {0} Pokestops</target>
         </trans-unit>
         <trans-unit id="BadgeSmallRattataDescription" translate="yes" xml:space="preserve">
-          <source>Caught {0} Rattata</source>
-          <target state="new">Caught {0} Rattata</target>
+          <source>Caught {0} small Rattata</source>
+          <target state="new">Caught {0} small Rattata</target>
         </trans-unit>
         <trans-unit id="BadgeTravelKmDescription" translate="yes" xml:space="preserve">
           <source>Walked {0} km</source>
@@ -488,6 +488,10 @@ Abrir a página com os arquivos de instalação para instalação manual?</targe
           <source>Waiting for network to be back...</source>
           <target state="new">Waiting for network to be back...</target>
         </trans-unit>
+        <trans-unit id="EggHatchMessage" translate="yes" xml:space="preserve">
+          <source>An Egg hatched into a {0}.\nYou also got {1} Stardust, {2} Cany and {3} XP.</source>
+          <target state="new">An Egg hatched into a {0}.\nYou also got {1} Stardust, {2} Cany and {3} XP.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -772,12 +776,14 @@ Abrir a página com os arquivos de instalação para instalação manual?</targe
           <target state="translated">Incenso com uma  misteriosa fragrância que atrai os Pokémon selvagens para a sua localização durante 30 minutos</target>
         </trans-unit>
         <trans-unit id="D_ItemIncubatorBasic" translate="yes" xml:space="preserve">
-          <source>A device that incubates an Egg as you walk until it is ready to hatch.</source>
-          <target state="translated">Dispositivo que incuba um ovo enquanto você caminha, até que esteja pronto para eclodir.</target>
+          <source>A device that incubates an Egg as you walk until it is ready to hatch. Breaks after 3 uses.</source>
+          <target state="needs-review-translation">Dispositivo que incuba um ovo enquanto você caminha, até que esteja pronto para eclodir.</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="D_ItemIncubatorBasicUnlimited" translate="yes" xml:space="preserve">
-          <source>A device that incubates an Egg as you walk until it is ready to hatch.</source>
-          <target state="translated">Dispositivo que incuba um ovo enquanto você caminha, até que esteja pronto para eclodir.</target>
+          <source>A device that incubates an Egg as you walk until it is ready to hatch. Unlimited use!</source>
+          <target state="needs-review-translation">Dispositivo que incuba um ovo enquanto você caminha, até que esteja pronto para eclodir.</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="D_ItemMasterBall" translate="yes" xml:space="preserve">
           <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
@@ -920,6 +926,30 @@ Abrir a página com os arquivos de instalação para instalação manual?</targe
         <trans-unit id="ItemXMiracle" translate="yes" xml:space="preserve">
           <source>X Miracle</source>
           <target state="translated">Milagre X</target>
+        </trans-unit>
+        <trans-unit id="D_ItemLuckyEgg" translate="yes" xml:space="preserve">
+          <source>A Lucky Egg that's filled with happiness! Earns double XP for 30 minutes.</source>
+          <target state="new">A Lucky Egg that's filled with happiness! Earns double XP for 30 minutes.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemRazzBerry" translate="yes" xml:space="preserve">
+          <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
+          <target state="new">Feed this to a Pokémon, and it will be easier to catch on your next throw.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemSpecialCamera" translate="yes" xml:space="preserve">
+          <source>When you encounter Pokémon in the wild, you can use your camera to photograph them.</source>
+          <target state="new">When you encounter Pokémon in the wild, you can use your camera to photograph them.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemSuperPotion" translate="yes" xml:space="preserve">
+          <source>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 50 points.</source>
+          <target state="new">A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 50 points.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemTroyDisk" translate="yes" xml:space="preserve">
+          <source>A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</source>
+          <target state="new">A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemUnknown" translate="yes" xml:space="preserve">
+          <source>This item is unknown and may be added in the future.</source>
+          <target state="new">This item is unknown and may be added in the future.</target>
         </trans-unit>
       </group>
     </body>

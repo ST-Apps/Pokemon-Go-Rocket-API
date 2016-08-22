@@ -191,7 +191,7 @@ namespace PokemonGo_UWP
             Logger.SetLogger(new ConsoleLogger(LogLevel.Info));
 #endif            
             // If we have a phone contract, hide the status bar
-            if (ApiInformation.IsApiContractPresent("Windows.Phone.PhoneContract", 1, 0))
+            if (ApiInformation.IsTypePresent("Windows.UI.ViewManagement.StatusBar"))
             {
                 var statusBar = StatusBar.GetForCurrentView();
                 await statusBar.HideAsync();
@@ -199,6 +199,7 @@ namespace PokemonGo_UWP
 
             // Enter into full screen mode
             ApplicationView.GetForCurrentView().TryEnterFullScreenMode();
+            ApplicationView.GetForCurrentView().SetDesiredBoundsMode(ApplicationViewBoundsMode.UseCoreWindow);
             ApplicationView.GetForCurrentView().FullScreenSystemOverlayMode = FullScreenSystemOverlayMode.Standard;            
 
             // Forces the display to stay on while we play

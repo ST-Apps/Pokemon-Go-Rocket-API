@@ -258,6 +258,23 @@
                    Width="48"
                    x:Name="PlayerImage" />
 
+            <maps:MapItemsControl ItemsSource="{Binding NearbyPokestops}">
+                <maps:MapItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="entities:FortDataWrapper">
+                        <Button Style="{ThemeResource ImageButtonStyle}"
+                                Command="{x:Bind TrySearchPokestop}">
+                            <Image
+                                Source="{Binding FortDataStatus, Converter={StaticResource PokestopToIconConverter}}"
+                                maps:MapControl.Location="{Binding Geoposition}"
+                                maps:MapControl.NormalizedAnchorPoint="{Binding Anchor}"
+                                Stretch="Uniform"
+                                Height="{Binding ZoomLevel, ElementName=GameMapControl, Converter={StaticResource MapZoomLevelToIconSizeConverter}, ConverterParameter=2}"
+                                Width="{Binding ZoomLevel, ElementName=GameMapControl, Converter={StaticResource MapZoomLevelToIconSizeConverter}, ConverterParameter=2}" />
+                        </Button>
+                    </DataTemplate>
+                </maps:MapItemsControl.ItemTemplate>
+            </maps:MapItemsControl>
+
             <maps:MapItemsControl ItemsSource="{Binding CatchablePokemons}">
                 <maps:MapItemsControl.ItemTemplate>
                     <DataTemplate x:DataType="entities:MapPokemonWrapper">
@@ -289,23 +306,6 @@
                                 Canvas.ZIndex="4"
                                 Height="{Binding ZoomLevel, ElementName=GameMapControl, Converter={StaticResource MapZoomLevelToIconSizeConverter}, ConverterParameter=1}"
                                 Width="{Binding ZoomLevel, ElementName=GameMapControl, Converter={StaticResource MapZoomLevelToIconSizeConverter}, ConverterParameter=1}" />
-                        </Button>
-                    </DataTemplate>
-                </maps:MapItemsControl.ItemTemplate>
-            </maps:MapItemsControl>
-
-            <maps:MapItemsControl ItemsSource="{Binding NearbyPokestops}">
-                <maps:MapItemsControl.ItemTemplate>
-                    <DataTemplate x:DataType="entities:FortDataWrapper">
-                        <Button Style="{ThemeResource ImageButtonStyle}"
-                                Command="{x:Bind TrySearchPokestop}">
-                            <Image
-                                Source="{Binding FortDataStatus, Converter={StaticResource PokestopToIconConverter}}"
-                                maps:MapControl.Location="{Binding Geoposition}"
-                                maps:MapControl.NormalizedAnchorPoint="{Binding Anchor}"
-                                Stretch="Uniform"
-                                Height="{Binding ZoomLevel, ElementName=GameMapControl, Converter={StaticResource MapZoomLevelToIconSizeConverter}, ConverterParameter=2}"
-                                Width="{Binding ZoomLevel, ElementName=GameMapControl, Converter={StaticResource MapZoomLevelToIconSizeConverter}, ConverterParameter=2}" />
                         </Button>
                     </DataTemplate>
                 </maps:MapItemsControl.ItemTemplate>
@@ -804,22 +804,5 @@
             </Border>
 
         </Grid>
-
-        <Button
-            x:Name="ReactivateMapAutoUpdate"
-            Canvas.ZIndex="1"
-            Style="{ThemeResource ImageButtonStyle}"
-            Height="{ThemeResource UiButtonSize}"
-            HorizontalAlignment="Right"
-            Tapped="ReactivateMapAutoUpdate_Tapped"
-            FontSize="36" Margin="0,150,34,0"
-            RelativePanel.AlignVerticalCenterWithPanel="True"
-            RelativePanel.AlignRightWithPanel="True">
-            <Image Source="../Assets/Icons/RecenterMapIcon.png"
-                   Stretch="Uniform"
-                   HorizontalAlignment="Stretch"
-                   Height="32" />
-
-        </Button>
     </RelativePanel>
 </Page>

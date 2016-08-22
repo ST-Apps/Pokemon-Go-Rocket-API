@@ -486,6 +486,8 @@ namespace PokemonGo_UWP.Utils
 
 		private static Heartbeat _heartbeat;
 
+        public static event EventHandler<GetHatchedEggsResponse> OnEggHatched;
+
 		/// <summary>
 		///     We fire this event when the current position changes
 		/// </summary>
@@ -627,6 +629,18 @@ namespace PokemonGo_UWP.Utils
             Logger.Write($"Found {newLuredPokemon.Length} lured Pokemon");
             LuredPokemons.UpdateByIndexWith(newLuredPokemon, x => x);
             Logger.Write("Finished updating map objects");
+            
+            // Update Hatched Eggs
+            var hatchedEggResponse = mapObjects.Item2;            
+            if (hatchedEggResponse.Success)
+            {
+                //OnEggHatched?.Invoke(null, hatchedEggResponse);             
+                for (var i = 0; i < hatchedEggResponse.PokemonId.Count; i++)
+                {
+                    Logger.Write("Egg Hatched");
+                    await new MessageDialog(string.Format(Resources.CodeResources.GetString("EggHatchMessage"), hatchedEggResponse.PokemonId[i], hatchedEggResponse.StardustAwarded[i], hatchedEggResponse.CandyAwarded[i], hatchedEggResponse.ExperienceAwarded[i])).ShowAsyncQueue();
+                }
+            }
         }
 
         #endregion
@@ -696,6 +710,7 @@ namespace PokemonGo_UWP.Utils
             {
                 PlayerStats = tmpStats;
                 var levelUpResponse = await GetLevelUpRewards(tmpStats.Level);
+                await UpdateInventory();
                 return levelUpResponse;
             }
             PlayerStats = tmpStats;

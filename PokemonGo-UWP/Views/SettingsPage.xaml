@@ -23,7 +23,6 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="75" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="75" />
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0">
@@ -36,199 +35,167 @@
         </StackPanel>
 
         <ScrollViewer Grid.Row="1">
-            <Grid Margin="15,0,15,10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-									<RowDefinition Height="Auto" />
-									<RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
+            <StackPanel Margin="0,0,0,57.5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="135" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               x:Uid="SettingsUseNianticMapTextBlock"
+                               Text="Use Niantic Map"
+                               Style="{StaticResource TextSettingsTitle}" />
 
-                <TextBlock Grid.Row="0"
-                           Grid.Column="0"
-                           x:Uid="SettingsUseNianticMapTextBlock"
-                           Text="Use Niantic Map"
-                           Style="{StaticResource TextSettingsTitle}"
-                           VerticalAlignment="Center"
-                           Margin="15,15,15,25" />
+                    <CheckBox Grid.Column="1"
+                              IsChecked="{Binding IsNianticMapEnabled, Mode=TwoWay}"
+                              Style="{StaticResource SettingsCheckbox}"
+                              Margin="0,8,15,10" />
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="135" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               x:Uid="SettingsMapRotationModeGPSTextBlock"
+                               Text="Auto-Rotate based on"
+                               Style="{StaticResource TextSettingsTitle}" />
+                    <ComboBox Grid.Column="1"
+                              SelectedIndex="{Binding MapAutomaticOrientationMode_Index, Mode=TwoWay}"
+                              Margin="0,8,15,10">
+                        <ComboBoxItem Content="None"/>
+                        <ComboBoxItem Content="GPS"/>
+                        <ComboBoxItem x:Name="CompassBoxItem" Content="Compass"/>
+                    </ComboBox>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="135" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               x:Uid="SettingsRememberMapZoomTextBlock"
+                               Text="Remember Map Zoom"
+                               Style="{StaticResource TextSettingsTitle}" />
+                    <CheckBox Grid.Column="1"
+                              IsChecked="{Binding IsRememberMapZoomEnabled, Mode=TwoWay}"
+                              Style="{StaticResource SettingsCheckbox}"
+                              Margin="0,8,15,10" />
+                </Grid>
+                <Border Background="#33ffffff" Height="1" Margin="15" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="135" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               x:Uid="SettingsMusicTextBlock"
+                               Text="Music"
+                               Style="{StaticResource TextSettingsTitle}" />
+                    <CheckBox Grid.Column="1"
+                              IsChecked="{Binding IsMusicEnabled, Mode=TwoWay}"
+                              Style="{StaticResource SettingsCheckbox}"
+                              Margin="0,8,15,10" />
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="135" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               x:Uid="SettingsVibrationTextBlock"
+                               Text="Vibration"
+                               Style="{StaticResource TextSettingsTitle}" />
 
-                <CheckBox Grid.Row="0"
-                          Grid.Column="1"
-                          IsChecked="{Binding IsNianticMapEnabled, Mode=TwoWay}"
-                          Style="{StaticResource SettingsCheckbox}"
-                          Margin="0,0,15,10" />
-
-                <TextBlock Grid.Row="1"
-                           Grid.Column="0"
-                           x:Uid="SettingsMapRotationModeGPSTextBlock"
-                           Text="Auto-Rotate based on"
-                           Style="{StaticResource TextSettingsTitle}"
-                           VerticalAlignment="Center"
-                           Margin="15,15,15,25" />
-				<ComboBox Grid.Column="1"
-									Grid.Row="1" 
-									HorizontalAlignment="Right" VerticalAlignment="Center" 
-									Width="120" 
-									Margin="0,0,15,10"
-									SelectedIndex="{Binding MapAutomaticOrientationMode_Index, Mode=TwoWay}" >
-					<ComboBoxItem Content="None"/>
-					<ComboBoxItem Content="GPS"/>
-					<ComboBoxItem x:Name="CompassBoxItem" Content="Compass"/>
-				</ComboBox>
-
-                <TextBlock Grid.Row="2"
-                           Grid.Column="0"
-                           x:Uid="SettingsRememberMapZoomTextBlock"
-                           Text="Remember Map Zoom"
-                           Style="{StaticResource TextSettingsTitle}"
-                           VerticalAlignment="Center"
-                           Margin="15,15,15,25" />
-
-                <CheckBox Grid.Row="2"
-                          Grid.Column="1"
-                          IsChecked="{Binding IsRememberMapZoomEnabled, Mode=TwoWay}"
-                          Style="{StaticResource SettingsCheckbox}"
-                          Margin="0,0,15,10"/>
-
-                <Border Grid.Row="3"
-                        Grid.ColumnSpan="2"
-                        Background="#33ffffff"
-                        Height="1"
-                        Margin="0,8,0,15" />
-
-                <TextBlock Grid.Row="4"
-                           Grid.Column="0"
-                           x:Uid="SettingsMusicTextBlock"
-                           Text="Music"
-                           Style="{StaticResource TextSettingsTitle}"
-                           VerticalAlignment="Center"
-                           Margin="15,15,15,25" />
-
-                <CheckBox Grid.Row="4"
-                          Grid.Column="1"
-                          IsChecked="{Binding IsMusicEnabled, Mode=TwoWay}"
-                          Style="{StaticResource SettingsCheckbox}"
-                          Margin="0,0,15,10" />
-
-                <TextBlock Grid.Row="5"
-                           Grid.Column="0"
-                           x:Uid="SettingsVibrationTextBlock"
-                           Text="Vibration"
-                           Style="{StaticResource TextSettingsTitle}"
-                           VerticalAlignment="Center"
-                           Margin="15,15,15,25" />
-
-                <CheckBox Grid.Row="5"
-                          Grid.Column="1"
-                          IsChecked="{Binding IsVibrationEnabled, Mode=TwoWay}"
-                          Style="{StaticResource SettingsCheckbox}"
-                          Margin="0,0,15,10" />
-
-							<StackPanel Grid.Row="6" Grid.Column="0" Orientation="Vertical" Margin="0" >
-								<TextBlock
-											 x:Uid="SettingsLanguageTextBlock"
-											 Text="Language"
-											 Style="{StaticResource TextSettingsTitle}"
-											 VerticalAlignment="Center"
-											 Margin="15,15,15,0" />
-								<TextBlock
-											 x:Uid="SettingsLanguageRestartTextBlock"
-											 Text="You must restart the App to take effect."
-											 Style="{StaticResource TextSettingsTitle}"
-											 VerticalAlignment="Center"
-											 Margin="15,0,15,25" FontSize="10" />
-							</StackPanel>
-
-							<ComboBox x:Name="LanguageComboBox" Grid.Row="6"
-												Grid.Column="1"
-												 Margin="0,10,15,10" ItemsSource="{Binding languageList, Mode=OneWay}" SelectedItem="{Binding UserLanguage, Mode=TwoWay}" HorizontalAlignment="Right" />
-
-
-							<TextBlock Grid.Row="7"
-                           Grid.Column="0"
-                           x:Uid="SettingsLiveTileTextBlock"
-                           Text="Live Tile Mode"
-                           Style="{StaticResource TextSettingsTitle}"
-                           VerticalAlignment="Center"
-                           Margin="15,15,15,25" />
-               
-                <VariableSizedWrapGrid Grid.Row="8"
-                                       Grid.ColumnSpan="2"
-                                       Orientation="Horizontal"
-                                       MaximumRowsOrColumns="5"
-                                       ItemHeight="140"
-                                       ItemWidth="160"
-                                       VerticalAlignment="Top"
-                                       HorizontalAlignment="Center">
-                    <Button Grid.Row="0"
-                            Grid.Column="0"
-                            HorizontalAlignment="Center"
-                            Margin="10,0"
-                            Command="{Binding LiveTileSelectionCommand}" CommandParameter="0">
-                        <Image Source="/Assets/LiveTiles/Normal/Square150x150Logo.scale-200.png" 
-                               Width="120" 
-                               Height="120" />
-                    </Button>
-                    <Button Grid.Row="0"
-                            Grid.Column="1"
-                            HorizontalAlignment="Center"
-                            Margin="10,0"
-                            Command="{Binding LiveTileSelectionCommand}" CommandParameter="1">
-                        <Image Source="/Assets/LiveTiles/Transparent/Square150x150Logo.scale-200.png" 
-                               Width="120" 
-                               Height="120" />
-                    </Button>
-                    <Button Grid.Row="0"
-                            Grid.Column="1"
-                            HorizontalAlignment="Center"
-                            Margin="10,0"
-                            Command="{Binding LiveTileSelectionCommand}" CommandParameter="2">
-                        <Image Source="../Assets/LiveTiles/Peek.gif" 
-                               Width="120" 
-                               Height="120" />
-                    </Button>
-                    <Button Grid.Row="1"
-                            Grid.Column="0"
-                            HorizontalAlignment="Center"
-                            Margin="10,0"
-                            Command="{Binding LiveTileSelectionCommand}" CommandParameter="3">
-                        <Image Source="../Assets/LiveTiles/People.gif" 
-                               Width="140" 
-                               Height="140"
-                               HorizontalAlignment="Center" 
-                               VerticalAlignment="Center" />
-                    </Button>
-                    <Button Grid.Row="1"
-                            Grid.Column="1"
-                            HorizontalAlignment="Center"
-                            Margin="10,0"
-                            Command="{Binding LiveTileSelectionCommand}" CommandParameter="4">
-                        <Image Source="../Assets/Square150x150Logo.scale-200.png" 
-                               Width="140"
-                               Height="140" />
-                    </Button>
-                </VariableSizedWrapGrid>
-
-                <Border Grid.Row="9"
-                        Grid.ColumnSpan="2"
-                        Background="#33ffffff"
-                        Height="1"
-                        Margin="0,24,0,15" />
-
-                <Button Grid.Row="10"
-                        Grid.ColumnSpan="2"
-                        Command="{Binding DoPtcLogoutCommand}"
+                    <CheckBox Grid.Column="1"
+                              IsChecked="{Binding IsVibrationEnabled, Mode=TwoWay}"
+                              Style="{StaticResource SettingsCheckbox}"
+                              Margin="0,8,15,10" />
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="135" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Grid.ColumnSpan="2">
+                        <TextBlock x:Uid="SettingsLanguageTextBlock"
+                                   Text="Language"
+                                   Style="{StaticResource TextSettingsTitle}"
+                                   Margin="15,15,15,5" />
+                        <TextBlock x:Uid="SettingsLanguageRestartTextBlock"
+                                   Text="You must restart the App to take effect."
+                                   Style="{StaticResource TextSettingsTitle}"
+                                   FontSize="12" Margin="15,0" Foreground="#ddd"/>
+                    </StackPanel>
+                    <ComboBox x:Name="LanguageComboBox"
+                              Grid.Row="1"
+                              Grid.Column="0"
+                              Grid.ColumnSpan="2"
+                              ItemsSource="{Binding languageList, Mode=OneWay}" SelectedItem="{Binding UserLanguage, Mode=TwoWay}" 
+                              Margin="0,8,15,10" />
+                </Grid>
+                <Border Background="#33ffffff" Height="1" Margin="15" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="135" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               x:Uid="SettingsLiveTileTextBlock"
+                               Text="Live Tile Mode"
+                               Style="{StaticResource TextSettingsTitle}" />
+                </Grid>
+                <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Hidden" 
+                              ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                              Margin="15,0,15,15">
+                    <StackPanel Orientation="Horizontal" Height="100">
+                        <Button Command="{Binding LiveTileSelectionCommand}" 
+                                CommandParameter="0"
+                                Style="{StaticResource ButtonNoStyle}"
+                                Margin="0,0,10,0"
+                                Padding="0">
+                            <Image Source="/Assets/LiveTiles/Normal/Square150x150Logo.scale-200.png" />
+                        </Button>
+                        <Button Command="{Binding LiveTileSelectionCommand}" 
+                                CommandParameter="1"
+                                Style="{StaticResource ButtonNoStyle}"
+                                Background="#11000000"
+                                Margin="0,0,10,0"
+                                Padding="0">
+                            <Image Source="/Assets/LiveTiles/Transparent/Square150x150Logo.scale-200.png" />
+                        </Button>
+                        <Button Command="{Binding LiveTileSelectionCommand}" 
+                                CommandParameter="2"
+                                Style="{StaticResource ButtonNoStyle}"
+                                Margin="0,0,10,0"
+                                Padding="0">
+                            <Image Source="../Assets/LiveTiles/Peek.gif" />
+                        </Button>
+                        <Button Command="{Binding LiveTileSelectionCommand}" 
+                                CommandParameter="3"
+                                Style="{StaticResource ButtonNoStyle}"
+                                Margin="0,0,0,0"
+                                Padding="0">
+                            <Image Source="../Assets/LiveTiles/People.gif" />
+                        </Button>
+                        <!-- Image cannot load GIF. Use some NUGET? -->
+                        <!--
+                        <Button Command="{Binding LiveTileSelectionCommand}" 
+                                CommandParameter="4"
+                                Style="{StaticResource ButtonNoStyle}"
+                                Margin="0,0,10,0"
+                                Padding="0">
+                            <Image Source="../Assets/Square150x150Logo.scale-200.png" />
+                        </Button>-->
+                        <!-- End -->
+                    </StackPanel>
+                </ScrollViewer>
+                <Border Background="#33ffffff" Height="1" Margin="15,15,15,0" />
+                <Button Command="{Binding DoPtcLogoutCommand}"
                         Style="{StaticResource ButtonNoStyle}">
                     <TextBlock x:Uid="SettingsSignOutTextBlock"
                                 Text="Sign Out"
@@ -236,16 +203,14 @@
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Right" />
                 </Button>
-
-
-            </Grid>
+            </StackPanel>
 
         </ScrollViewer>
 
-        <Button Grid.Row="2"
+        <Button Grid.Row="1"
                 Command="{Binding CloseCommand}"
                 Style="{StaticResource ButtonCircle}"
-                Margin="0">
+                VerticalAlignment="Bottom">
             <Image Source="../Assets/Buttons/btn_close.png" />
         </Button>
 

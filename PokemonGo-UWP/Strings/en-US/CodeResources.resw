@@ -302,4 +302,7 @@ Open page with installation files for manual install?</value>
   <data name="WaitingForNetworkText" xml:space="preserve">
     <value>Waiting for network to be back...</value>
   </data>
+  <data name="EggHatchMessage" xml:space="preserve">
+    <value>An Egg hatched into a {0}.\nYou also got {1} Stardust, {2} Cany and {3} XP.</value>
+  </data>
 </root>

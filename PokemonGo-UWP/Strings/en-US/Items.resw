@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -133,10 +133,13 @@
     <value>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</value>
   </data>
   <data name="D_ItemIncubatorBasic" xml:space="preserve">
-    <value>A device that incubates an Egg as you walk until it is ready to hatch.</value>
+    <value>A device that incubates an Egg as you walk until it is ready to hatch. Breaks after 3 uses.</value>
   </data>
   <data name="D_ItemIncubatorBasicUnlimited" xml:space="preserve">
-    <value>A device that incubates an Egg as you walk until it is ready to hatch.</value>
+    <value>A device that incubates an Egg as you walk until it is ready to hatch. Unlimited use!</value>
+  </data>
+  <data name="D_ItemLuckyEgg" xml:space="preserve">
+    <value>A Lucky Egg that's filled with happiness! Earns double XP for 30 minutes.</value>
   </data>
   <data name="D_ItemMasterBall" xml:space="preserve">
     <value>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</value>
@@ -147,11 +150,26 @@
   <data name="D_ItemPotion" xml:space="preserve">
     <value>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 20 points.</value>
   </data>
+  <data name="D_ItemRazzBerry" xml:space="preserve">
+    <value>Feed this to a Pokémon, and it will be easier to catch on your next throw.</value>
+  </data>
   <data name="D_ItemRevive" xml:space="preserve">
     <value>A medicine that can revive fainted Pokémon. It also restores half of a fainted Pokémon's maximum HP.</value>
   </data>
+  <data name="D_ItemSpecialCamera" xml:space="preserve">
+    <value>When you encounter Pokémon in the wild, you can use your camera to photograph them.</value>
+  </data>
+  <data name="D_ItemSuperPotion" xml:space="preserve">
+    <value>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 50 points.</value>
+  </data>
+  <data name="D_ItemTroyDisk" xml:space="preserve">
+    <value>A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</value>
+  </data>
   <data name="D_ItemUltraBall" xml:space="preserve">
     <value>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</value>
+  </data>
+  <data name="D_ItemUnknown" xml:space="preserve">
+    <value>This item is unknown and may be added in the future.</value>
   </data>
   <data name="ItemBlukBerry" xml:space="preserve">
     <value>Bluk Berry</value>

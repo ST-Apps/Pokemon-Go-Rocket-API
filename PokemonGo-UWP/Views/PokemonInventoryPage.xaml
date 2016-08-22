@@ -396,10 +396,10 @@
                                              IsIndeterminate="False"
                                              HorizontalAlignment="Center" />
 
-                                        <TextBlock Style="{StaticResource TextGridViewTop}">
+                                        <TextBlock Style="{StaticResource TextGridViewTop}">                                            
                                                 <Run
-                                                    Text="{x:Bind EggKmWalkedStart, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0.#\}}"
-                                                    x:Phase="0" />
+                                                    Text="{Binding EggKmWalkedStart, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0.##\}}"
+                                                    />
                                                 <Run Text="/" />
                                                 <Run FontWeight="Bold"
                                                      Text="{x:Bind EggKmWalkedTarget, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0\}}"

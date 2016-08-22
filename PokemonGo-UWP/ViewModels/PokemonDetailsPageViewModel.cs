@@ -434,7 +434,14 @@ namespace PokemonGo_UWP.ViewModels
                 default:
                     throw new ArgumentOutOfRangeException();
             }
-        }, () => CurrentCandy != null && StardustAmount >= StardustToPowerUp && CurrentCandy.Candy_ >= CandiesToPowerUp));
+        }, CanPowerUp));
+
+        private bool CanPowerUp()
+        {
+            if (CurrentPokemon == null) return false;
+            var pokemonLevel = PokemonInfo.GetLevel(CurrentPokemon.WrappedData);
+            return CurrentCandy != null && StardustAmount >= StardustToPowerUp && CurrentCandy.Candy_ >= CandiesToPowerUp && pokemonLevel < GameClient.PlayerStats.Level + 1.5;
+        }
 
         #endregion
 

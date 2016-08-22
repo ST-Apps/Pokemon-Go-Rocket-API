@@ -510,12 +510,6 @@
   <data name="Thunder" xml:space="preserve">
     <value>Шторм</value>
   </data>
-  <data name="Thunderbolt" xml:space="preserve">
-    <value>Удар молнии</value>
-  </data>
-  <data name="ThunderPunch" xml:space="preserve">
-    <value>Громовой удар</value>
-  </data>
   <data name="ThunderShockFast" xml:space="preserve">
     <value>Электрошок</value>
   </data>
@@ -528,17 +522,17 @@
   <data name="VineWhipFast" xml:space="preserve">
     <value>Удар плетью</value>
   </data>
-  <data name="WaterGunFast" xml:space="preserve">
-    <value>Водяной пистолет</value>
-  </data>
-  <data name="WaterGunFastBlastoise" xml:space="preserve">
-    <value>Водяной пистолет</value>
-  </data>
   <data name="WaterPulse" xml:space="preserve">
     <value>Водный пульс</value>
   </data>
   <data name="WingAttackFast" xml:space="preserve">
     <value>Атака крыльями</value>
+  </data>
+  <data name="WrapGreen" xml:space="preserve">
+    <value>Зеленый Врап</value>
+  </data>
+  <data name="WrapPink" xml:space="preserve">
+    <value>Розовый Врап</value>
   </data>
   <data name="XScissor" xml:space="preserve">
     <value>Ножницы</value>
