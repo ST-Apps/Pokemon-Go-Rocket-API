@@ -106,26 +106,6 @@
                         Background="#33ffffff"
                         Height="1"
                         Margin="0,8,0,15" />
-
-                <!--<TextBlock Grid.Row="4"
-                           Grid.Column="0"
-                           x:Uid="SettingsMusicTextBlock"
-                           Text="Music"
-                           Style="{StaticResource TextSettingsTitle}"
-                           VerticalAlignment="Center"
-                           Margin="15,15,15,25" />
-                <TextBlock
-											 x:Uid="SettingsLanguageRestartTextBlock"
-											 Text="You must restart the App to take effect."
-											 Style="{StaticResource TextSettingsTitle}"
-											 VerticalAlignment="Center"
-											 Margin="15,33,15,13" FontSize="10" Grid.Row="4" />
-
-                <Grid.Row="4"
-                          Grid.Column="1"
-                          IsChecked="{Binding IsMusicEnabled, Mode=TwoWay}"
-                          Style="{StaticResource SettingsCheckbox}"
-                          Margin="0,0,15,10" />-->
                 <StackPanel Grid.Row="4" Grid.Column="0" Orientation="Vertical" Margin="0" >
                     <TextBlock
 											 x:Uid="SettingsMusicTextBlock"
