@@ -137,6 +137,9 @@
   <data name="PowerUpButton.Content" xml:space="preserve">
     <value>ΆΥΞΣΗΣΗ ΔΥΝΑΜΗΣ</value>
   </data>
+  <data name="SettingsRememberMapZoomTextBlock.Text" xml:space="preserve">
+    <value>Απομνημόνευση Zoom του Χάρτη</value>
+  </data>
   <data name="EggDetailButtonTextBlock.Text" xml:space="preserve">
     <value>ΈΝΑΡΞΗ ΕΚΚΟΛΑΨΗΣ</value>
   </data>

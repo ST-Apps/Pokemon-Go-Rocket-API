@@ -1,17 +1,22 @@
-﻿using Windows.UI.Core;
+﻿using System.Collections.ObjectModel;
+using System.Linq;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Navigation;
+using PokemonGo_UWP.Entities;
+using PokemonGo_UWP.Utils;
+using Template10.Services.NavigationService;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace PokemonGo_UWP.Views
 {
-	/// <summary>
-	///     An empty page that can be used on its own or navigated to within a Frame.
-	/// </summary>
-	public sealed partial class PokemonInventoryPage : Page
+    /// <summary>
+    ///     An empty page that can be used on its own or navigated to within a Frame.
+    /// </summary>
+    public sealed partial class PokemonInventoryPage : Page
 	{
 		public PokemonInventoryPage()
 		{
@@ -27,9 +32,16 @@ namespace PokemonGo_UWP.Views
 									HideIncubatorsModalAnimation.To = IncubatorsModal.ActualHeight;
 				HideIncubatorsModalStoryboard.Completed += (ss, ee) => { IncubatorsModal.IsModal = false; };
 			};
+
+		    ViewModel.ResetView +=
+		        () =>
+		        {
+		            if (ViewModel.PokemonInventory != null && ViewModel.PokemonInventory.Count > 0)
+		                PokemonInventoryGridView?.ScrollIntoView(ViewModel.PokemonInventory[ViewModel.LastVisibleIndex]);
+		        };
 		}
 
-		private void ToggleIncubatorModel(object sender, TappedRoutedEventArgs e)
+        private void ToggleIncubatorModel(object sender, TappedRoutedEventArgs e)
 		{
 			if (IncubatorsModal.IsModal)
 			{
@@ -50,22 +62,36 @@ namespace PokemonGo_UWP.Views
 			SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
 		}
 
-		private void OnBackRequested(object sender, BackRequestedEventArgs backRequestedEventArgs)
-		{
-			if (!(SortMenuPanel.Opacity > 0)) return;
-			backRequestedEventArgs.Handled = true;
-			HideSortMenuStoryboard.Begin();
-		}
-
 		protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
 		{
 			base.OnNavigatingFrom(e);
 			SystemNavigationManager.GetForCurrentView().BackRequested -= OnBackRequested;
+
+		    if (NavigationHelper.NavigationState.ContainsKey("LastSelectedID"))
+		    {
+		        var lastSelectedId = (ulong) NavigationHelper.NavigationState["LastSelectedID"];
+
+		        var pokemonList = ViewModel.PokemonInventory;
+		        var pokemon = pokemonList
+		            .FirstOrDefault(i => i.Id == lastSelectedId);
+		        var index = pokemonList
+		            .IndexOf(pokemon);
+		        ViewModel.LastVisibleIndex = index;
+		    }
+		    else
+                ViewModel.LastVisibleIndex = 0;
 		}
 
-		#endregion
+        private void OnBackRequested(object sender, BackRequestedEventArgs backRequestedEventArgs)
+        {
+            if (!(SortMenuPanel.Opacity > 0)) return;
+            backRequestedEventArgs.Handled = true;
+            HideSortMenuStoryboard.Begin();
+        }
 
-		private void SelectionChanged(object sender, SelectionChangedEventArgs e)
+        #endregion
+
+        private void SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
 
 			//SortingButton.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
@@ -100,6 +126,5 @@ namespace PokemonGo_UWP.Views
 				panel_threads.ItemWidth = e.NewSize.Width / 4;
 			}
 		}
-
 	}
 }

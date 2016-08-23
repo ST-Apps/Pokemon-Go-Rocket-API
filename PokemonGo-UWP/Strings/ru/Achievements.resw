@@ -96,4 +96,88 @@
   <data name="Water" xml:space="preserve">
     <value>Пловец</value>
   </data>
+  <data name="BadgeBattleAttackWonDescription" xml:space="preserve">
+    <value>Выиграл {0} в сражении</value>
+  </data>
+  <data name="BadgeBattleTrainingWonDescription" xml:space="preserve">
+    <value>Выиграл {0} в учебном сражении</value>
+  </data>
+  <data name="BadgeBigMagikarpDescription" xml:space="preserve">
+    <value>Пойман {0} Магикарп</value>
+  </data>
+  <data name="BadgeCaptureTotalDescription" xml:space="preserve">
+    <value>Захвачен {0} Покемон</value>
+  </data>
+  <data name="BadgeEvolvedTotalDescription" xml:space="preserve">
+    <value>Развился {0} Pokémon</value>
+  </data>
+  <data name="BadgeHatchedTotalDescription" xml:space="preserve">
+    <value>&gt;Пойман {0} Pokemon</value>
+  </data>
+  <data name="BadgePikachuDescription" xml:space="preserve">
+    <value>Пойман {0} Пикачу</value>
+  </data>
+  <data name="BadgePokedexEntriesDescription" xml:space="preserve">
+    <value>Зарегистрированно {0} Покемон в Покедексе</value>
+  </data>
+  <data name="BadgePokestopsVisitedDescription" xml:space="preserve">
+    <value>Посещен {0} Покестоп</value>
+  </data>
+  <data name="BadgeSmallRattataDescription" xml:space="preserve">
+    <value>Пойман {0} Раттата</value>
+  </data>
+  <data name="BadgeTravelKmDescription" xml:space="preserve">
+    <value>Прошел {0} км</value>
+  </data>
+  <data name="BugDescription" xml:space="preserve">
+    <value>Пойман {0} Bug Pokemon</value>
+  </data>
+  <data name="DragonDescription" xml:space="preserve">
+    <value>Пойман {0} Дракон Покемон</value>
+  </data>
+  <data name="ElectricDescription" xml:space="preserve">
+    <value>Пойман {0} Электрический Покемон</value>
+  </data>
+  <data name="FairyDescription" xml:space="preserve">
+    <value>Пойман {0} Сказочный Покемон</value>
+  </data>
+  <data name="FightingDescription" xml:space="preserve">
+    <value>Пойман {0} Боевой покемон</value>
+  </data>
+  <data name="FireDescription" xml:space="preserve">
+    <value>Пойман {0} Огненный Покемон</value>
+  </data>
+  <data name="FlyingDescription" xml:space="preserve">
+    <value>Пойман {0} Летающий Покемон</value>
+  </data>
+  <data name="GhostDescription" xml:space="preserve">
+    <value>Пойман {0} Призрачный Покемон</value>
+  </data>
+  <data name="GrassDescription" xml:space="preserve">
+    <value>Пойман {0} Травяной Покемон</value>
+  </data>
+  <data name="GroundDescription" xml:space="preserve">
+    <value>Пойман {0} Земляной Покемон</value>
+  </data>
+  <data name="IceDescription" xml:space="preserve">
+    <value>Пойман {0} Ледяной Покемон</value>
+  </data>
+  <data name="NormalDescription" xml:space="preserve">
+    <value>Пойман {0} Обычный Покемон</value>
+  </data>
+  <data name="PoisonDescription" xml:space="preserve">
+    <value>Пойман {0} Ядовитый Покемон</value>
+  </data>
+  <data name="PsychicDescription" xml:space="preserve">
+    <value>Пойман {0} Психический Покемон</value>
+  </data>
+  <data name="RockDescription" xml:space="preserve">
+    <value>Пойман {0} Каменный покемон</value>
+  </data>
+  <data name="SteelDescription" xml:space="preserve">
+    <value>Пойман {0} Стальной Покемон</value>
+  </data>
+  <data name="WaterDescription" xml:space="preserve">
+    <value>Пойман {0} Водяной Покемон</value>
+  </data>
 </root>

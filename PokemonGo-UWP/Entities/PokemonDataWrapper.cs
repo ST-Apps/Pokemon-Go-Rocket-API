@@ -49,6 +49,7 @@ namespace PokemonGo_UWP.Entities
             _gotoPokemonDetailsCommand = new DelegateCommand(() =>
             {
                 NavigationHelper.NavigationState["CurrentPokemon"] = this;
+                NavigationHelper.NavigationState["LastSelectedID"] = Id;
                 BootStrapper.Current.NavigationService.Navigate(typeof(PokemonDetailPage));
             }, () => true));
 

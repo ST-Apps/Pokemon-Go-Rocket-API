@@ -12,7 +12,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Dark" xml:space="preserve">
+    <value>Темный</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Дракон</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Электрик</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Фея</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Борьба</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>Огонь</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Летающий</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Приведение</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Трава</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Земля</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Лед</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Обычный</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Яд</value>
+  </data>
   <data name="Psychic" xml:space="preserve">
     <value>Медиум</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Камень</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Сталь</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Вода</value>
   </data>
 </root>

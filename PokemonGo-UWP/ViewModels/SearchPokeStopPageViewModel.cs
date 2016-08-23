@@ -15,6 +15,7 @@ using POGOProtos.Networking.Responses;
 using Template10.Mvvm;
 using Template10.Services.NavigationService;
 using Universal_Authenticator_v2.Views;
+using Google.Protobuf;
 
 namespace PokemonGo_UWP.ViewModels
 {
@@ -33,10 +34,10 @@ namespace PokemonGo_UWP.ViewModels
         {
             if (suspensionState.Any())
             {
-                // Recovering the state
+                // Recovering the state                
                 CurrentPokestop = JsonConvert.DeserializeObject<FortDataWrapper>((string)suspensionState[nameof(CurrentPokestop)]);
-                CurrentPokestopInfo = JsonConvert.DeserializeObject<FortDetailsResponse>((string)suspensionState[nameof(CurrentPokestopInfo)]);
-                CurrentSearchResponse = JsonConvert.DeserializeObject<FortSearchResponse>((string)suspensionState[nameof(CurrentSearchResponse)]);
+                CurrentPokestopInfo.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(CurrentPokestop)]).CreateCodedInput());
+                CurrentSearchResponse.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(CurrentSearchResponse)]).CreateCodedInput());                
             }
             else
             {
@@ -68,8 +69,8 @@ namespace PokemonGo_UWP.ViewModels
             if (suspending)
             {
                 suspensionState[nameof(CurrentPokestop)] = JsonConvert.SerializeObject(CurrentPokestop);
-                suspensionState[nameof(CurrentPokestopInfo)] = JsonConvert.SerializeObject(CurrentPokestopInfo);
-                suspensionState[nameof(CurrentSearchResponse)] = JsonConvert.SerializeObject(CurrentSearchResponse);
+                suspensionState[nameof(CurrentPokestopInfo)] = CurrentPokestopInfo.ToByteString().ToBase64();
+                suspensionState[nameof(CurrentSearchResponse)] = CurrentSearchResponse.ToByteString().ToBase64();
             }
             await Task.CompletedTask;
         }

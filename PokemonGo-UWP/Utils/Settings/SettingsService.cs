@@ -48,8 +48,13 @@ namespace PokemonGo_UWP.Utils
 			get { return Get(string.Empty); }
 			set { Set(value); }
 		}
+        public string AndroidDeviceID
+        {
+            get { return Get(string.Empty); }
+            set { Set(value); }
+        }
 
-		public AuthType LastLoginService
+        public AuthType LastLoginService
 		{
 			get { return Get(AuthType.Ptc); }
 			set { Set(value); }

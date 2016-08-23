@@ -7,6 +7,9 @@ namespace PokemonGo_UWP.Views
         public SettingsPage()
         {
             InitializeComponent();
+            if (Windows.Devices.Sensors.Compass.GetDefault() == null){
+                CompassBoxItem.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            }
         }
     }
 }

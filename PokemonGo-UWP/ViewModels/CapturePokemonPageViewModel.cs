@@ -19,6 +19,7 @@ using Template10.Mvvm;
 using Template10.Services.NavigationService;
 using Universal_Authenticator_v2.Views;
 using Resources = PokemonGo_UWP.Utils.Resources;
+using POGOProtos.Settings.Master;
 
 namespace PokemonGo_UWP.ViewModels
 {
@@ -98,7 +99,7 @@ namespace PokemonGo_UWP.ViewModels
                         throw new ArgumentOutOfRangeException();
                 }
             }
-
+            PokemonExtraData = GameClient.GetExtraDataForPokemon(CurrentPokemon.PokemonId);
             SelectedCaptureItem = SelectAvailablePokeBall();
             Busy.SetBusy(false);
         }
@@ -159,6 +160,11 @@ namespace PokemonGo_UWP.ViewModels
         #endregion
 
         #region Game Management Vars
+
+        /// <summary>
+        /// Pokedex data for the current Pokemon
+        /// </summary>
+        private PokemonSettings _pokemonExtraData;
 
         /// <summary>
         ///     Pokemon that we're trying to capture
@@ -237,6 +243,15 @@ namespace PokemonGo_UWP.ViewModels
         {
             get { return _currentCaptureAward; }
             set { Set(ref _currentCaptureAward, value); }
+        }
+
+        /// <summary>
+        /// Pokedex data for the current Pokemon
+        /// </summary>
+        public PokemonSettings PokemonExtraData
+        {
+            get { return _pokemonExtraData; }
+            set { Set(ref _pokemonExtraData, value); }
         }
 
         #endregion

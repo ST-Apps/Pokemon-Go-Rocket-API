@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Controls;
 using Newtonsoft.Json;
 using PokemonGo_UWP.Views;
 using Template10.Common;
+using Google.Protobuf;
 
 namespace PokemonGo_UWP.ViewModels
 {
@@ -32,8 +33,8 @@ namespace PokemonGo_UWP.ViewModels
             if (suspensionState.Any())
             {
                 // Recovering the state
-                PlayerProfile = JsonConvert.DeserializeObject<PlayerData>((string)suspensionState[nameof(PlayerProfile)]);
-                PlayerStats = JsonConvert.DeserializeObject<PlayerStats>((string)suspensionState[nameof(PlayerStats)]);
+                PlayerProfile.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(PlayerProfile)]).CreateCodedInput());
+                PlayerStats.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(PlayerStats)]).CreateCodedInput());
             }
             else
             {
@@ -55,8 +56,8 @@ namespace PokemonGo_UWP.ViewModels
         {
             if (suspending)
             {
-                suspensionState[nameof(PlayerProfile)] = JsonConvert.SerializeObject(PlayerProfile);
-                suspensionState[nameof(PlayerStats)] = JsonConvert.SerializeObject(PlayerStats);
+                suspensionState[nameof(PlayerProfile)] = PlayerProfile.ToByteString().ToBase64();
+                suspensionState[nameof(PlayerStats)] = PlayerStats.ToByteString().ToBase64();
             }
             await Task.CompletedTask;
         }

@@ -82,7 +82,7 @@
     <value>Да</value>
   </data>
   <data name="InstinctTeamText" xml:space="preserve">
-    <value>Комнда "Инстинкт"</value>
+    <value>Команда "Инстинкт"</value>
   </data>
   <data name="NoTeamText" xml:space="preserve">
     <value>Без команды</value>
@@ -99,7 +99,82 @@
   <data name="TransferPokemonWarningText" xml:space="preserve">
     <value>Вы не можете вернуть это после отправки Профессору. Вы правда хотите отправить {0} Профессору?</value>
   </data>
+  <data name="LoginExpired" xml:space="preserve">
+    <value>Предыдущая авторизация истекла.</value>
+  </data>
   <data name="ActivityUnknown" xml:space="preserve">
     <value>Неизвестно</value>
+  </data>
+  <data name="ActivityCatchPokemon" xml:space="preserve">
+    <value>Покемон Пойман</value>
+  </data>
+  <data name="ActivityCatchLegendPokemon" xml:space="preserve">
+    <value>Пойман Легендарный Покемон</value>
+  </data>
+  <data name="ActivityFleePokemon" xml:space="preserve">
+    <value>Покемон сбежал</value>
+  </data>
+  <data name="ActivityEvolvePokemon" xml:space="preserve">
+    <value>Покемон эволюционирован</value>
+  </data>
+  <data name="ActivityHatchEgg" xml:space="preserve">
+    <value>Яйцо вылупилось!</value>
+  </data>
+  <data name="ActivityWalkKm" xml:space="preserve">
+    <value>Ходьба Км</value>
+  </data>
+  <data name="ActivityPokedexEntryNew" xml:space="preserve">
+    <value>Новый Покемон</value>
+  </data>
+  <data name="ActivityCatchFirstThrow" xml:space="preserve">
+    <value>Первый бросок</value>
+  </data>
+  <data name="ActivityCatchNiceThrow" xml:space="preserve">
+    <value>Отличный бросок</value>
+  </data>
+  <data name="ActivityCatchGreatThrow" xml:space="preserve">
+    <value>Большой бросок</value>
+  </data>
+  <data name="ActivityCatchExcellentThrow" xml:space="preserve">
+    <value>Замечательный бросок</value>
+  </data>
+  <data name="ActivityCatchCurveball" xml:space="preserve">
+    <value>Крученный</value>
+  </data>
+  <data name="ActivityCatchFirstCatchOfDay" xml:space="preserve">
+    <value>Первый пойманный за день!</value>
+  </data>
+  <data name="ActivityCatchMilestone" xml:space="preserve">
+    <value>Пойман Milestone</value>
+  </data>
+  <data name="ActivityReleasePokemon" xml:space="preserve">
+    <value>Выпущенный покемон</value>
+  </data>
+  <data name="ActivityDefeatGymDefender" xml:space="preserve">
+    <value>Поражение в спортзале Защитника</value>
+  </data>
+  <data name="ActivityDefeatGymLeader" xml:space="preserve">
+    <value>Поражение в спортзале Лидера</value>
+  </data>
+  <data name="Combat" xml:space="preserve">
+    <value>По CP</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>По дате</value>
+  </data>
+  <data name="Fav" xml:space="preserve">
+    <value>По популярности</value>
+  </data>
+  <data name="Health" xml:space="preserve">
+    <value>По здоровью</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>По имени</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>По номеру</value>
+  </data>
+  <data name="PokemonInventoryFullText" xml:space="preserve">
+    <value>Ваш инвентарь полон, нужно передать некоторых покемонов прежде чем ловить снова {0}.</value>
   </data>
 </root>

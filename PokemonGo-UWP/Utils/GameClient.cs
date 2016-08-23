@@ -88,7 +88,7 @@ namespace PokemonGo_UWP.Utils
 
 
                 //Collect location data for signature
-                DeviceInfos.Instance.CollectLocationData();
+                DeviceInfos.Current.CollectLocationData();
 
                 // We have no settings yet so we just update without further checks
                 if (GameSetting == null)
@@ -369,7 +369,7 @@ namespace PokemonGo_UWP.Utils
                 GooglePassword = SettingsService.Instance.LastLoginService == AuthType.Google ? credentials.Password : null,
             };
 
-            _client = new Client(_clientSettings, null, DeviceInfos.Instance) {AccessToken = LoadAccessToken()};
+            _client = new Client(_clientSettings, null, DeviceInfos.Current) {AccessToken = LoadAccessToken()};
             var apiFailureStrategy = new ApiFailureStrategy(_client);
             _client.ApiFailure = apiFailureStrategy;
             // Register to AccessTokenChanged
@@ -406,7 +406,7 @@ namespace PokemonGo_UWP.Utils
                 PtcPassword = password,
                 AuthType = AuthType.Ptc
             };
-            _client = new Client(_clientSettings, null, DeviceInfos.Instance);
+            _client = new Client(_clientSettings, null, DeviceInfos.Current);
             var apiFailureStrategy = new ApiFailureStrategy(_client);
             _client.ApiFailure = apiFailureStrategy;
             // Register to AccessTokenChanged
@@ -439,7 +439,7 @@ namespace PokemonGo_UWP.Utils
                 AuthType = AuthType.Google
             };
 
-            _client = new Client(_clientSettings, null, DeviceInfos.Instance);
+            _client = new Client(_clientSettings, null, DeviceInfos.Current);
             var apiFailureStrategy = new ApiFailureStrategy(_client);
             _client.ApiFailure = apiFailureStrategy;
             // Register to AccessTokenChanged
@@ -485,6 +485,8 @@ namespace PokemonGo_UWP.Utils
 		public static Geoposition Geoposition { get; private set; }
 
 		private static Heartbeat _heartbeat;
+
+        public static event EventHandler<GetHatchedEggsResponse> OnEggHatched;
 
 		/// <summary>
 		///     We fire this event when the current position changes
@@ -636,6 +638,19 @@ namespace PokemonGo_UWP.Utils
             Logger.Write($"Found {newLuredPokemon.Length} lured Pokemon");
             LuredPokemons.UpdateByIndexWith(newLuredPokemon, x => x);
             Logger.Write("Finished updating map objects");
+            
+            // Update Hatched Eggs
+            var hatchedEggResponse = mapObjects.Item2;            
+            if (hatchedEggResponse.Success)
+            {
+                //OnEggHatched?.Invoke(null, hatchedEggResponse);             
+                for (var i = 0; i < hatchedEggResponse.PokemonId.Count; i++)
+                {
+                    Logger.Write("Egg Hatched");
+                    var currentPokemonId = PokemonsInventory.First(item => item.Id == hatchedEggResponse.PokemonId[i]).PokemonId;
+                    await new MessageDialog(string.Format(Resources.CodeResources.GetString("EggHatchMessage"), currentPokemonId, hatchedEggResponse.StardustAwarded[i], hatchedEggResponse.CandyAwarded[i], hatchedEggResponse.ExperienceAwarded[i])).ShowAsyncQueue();
+                }
+            }
         }
 
         #endregion
@@ -705,6 +720,7 @@ namespace PokemonGo_UWP.Utils
             {
                 PlayerStats = tmpStats;
                 var levelUpResponse = await GetLevelUpRewards(tmpStats.Level);
+                await UpdateInventory();
                 return levelUpResponse;
             }
             PlayerStats = tmpStats;

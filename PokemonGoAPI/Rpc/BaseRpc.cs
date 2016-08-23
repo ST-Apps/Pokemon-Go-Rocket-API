@@ -98,7 +98,7 @@ namespace PokemonGo.RocketAPI.Rpc
                     PostProtoPayload<TRequest>(requestEnvelope, typeof(T1), typeof(T2), typeof(T3), typeof(T4),
                         typeof(T5));
             return new Tuple<T1, T2, T3, T4, T5>(responses[0] as T1, responses[1] as T2, responses[2] as T3,
-                responses[3] as T4, responses[3] as T5);
+                responses[3] as T4, responses[4] as T5);
         }
 
         protected async Task<IMessage[]> PostProtoPayload<TRequest>(RequestEnvelope requestEnvelope,

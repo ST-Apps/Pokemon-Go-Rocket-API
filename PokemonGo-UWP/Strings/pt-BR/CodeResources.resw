@@ -13,7 +13,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="PokemonFledText" xml:space="preserve">
-    <value>{0} Fugiu</value>
+    <value>{0} fugiu</value>
   </data>
   <data name="GettingGpsSignalText" xml:space="preserve">
     <value>Recebendo o sinal do GPS...</value>
@@ -74,7 +74,106 @@ Abrir a página com os arquivos de instalação para instalação manual?</value
   <data name="NoTeamText" xml:space="preserve">
     <value>Sem equipe</value>
   </data>
+  <data name="TransferPokemonSuccessText" xml:space="preserve">
+    <value>Transferencia bem sucedida! Você ganhou {0} doce do professor.</value>
+  </data>
+  <data name="TransferPokemonWarningText" xml:space="preserve">
+    <value>Você nao poderá obter seu pokemon novamente depois que ele for transferido para o professor. Você quer realmente transferir {0} para o professor?</value>
+  </data>
+  <data name="LoginExpired" xml:space="preserve">
+    <value>Login Expirou.</value>
+  </data>
   <data name="ActivityUnknown" xml:space="preserve">
     <value>Desconhecido</value>
+  </data>
+  <data name="ActivityCatchPokemon" xml:space="preserve">
+    <value>Pokémon Capturado</value>
+  </data>
+  <data name="ActivityCatchLegendPokemon" xml:space="preserve">
+    <value>Pokémon Legendário Capturado</value>
+  </data>
+  <data name="ActivityFleePokemon" xml:space="preserve">
+    <value>Pokémon Fugiu</value>
+  </data>
+  <data name="ActivityDefeatFort" xml:space="preserve">
+    <value>Derrota Forte</value>
+  </data>
+  <data name="ActivityEvolvePokemon" xml:space="preserve">
+    <value>Evoluir um Pokémon</value>
+  </data>
+  <data name="ActivityHatchEgg" xml:space="preserve">
+    <value>Ovo Chocado!</value>
+  </data>
+  <data name="ActivityWalkKm" xml:space="preserve">
+    <value>Km Caminhados</value>
+  </data>
+  <data name="ActivityPokedexEntryNew" xml:space="preserve">
+    <value>Novo Pokémon</value>
+  </data>
+  <data name="ActivityCatchFirstThrow" xml:space="preserve">
+    <value>Primeiro Lançamento</value>
+  </data>
+  <data name="ActivityCatchNiceThrow" xml:space="preserve">
+    <value>Bom Lançamento</value>
+  </data>
+  <data name="ActivityCatchGreatThrow" xml:space="preserve">
+    <value>Ótimo Lançamento</value>
+  </data>
+  <data name="ActivityCatchExcellentThrow" xml:space="preserve">
+    <value>Excelente Lançamento</value>
+  </data>
+  <data name="ActivityCatchCurveball" xml:space="preserve">
+    <value>Bola Curva!</value>
+  </data>
+  <data name="ActivityCatchFirstCatchOfDay" xml:space="preserve">
+    <value>Primeira Captura do dia!</value>
+  </data>
+  <data name="ActivityCatchMilestone" xml:space="preserve">
+    <value>Marco de Captura</value>
+  </data>
+  <data name="ActivityTrainPokemon" xml:space="preserve">
+    <value>Treinar Pokémon</value>
+  </data>
+  <data name="ActivitySearchFort" xml:space="preserve">
+    <value>Buscar Fortes</value>
+  </data>
+  <data name="ActivityReleasePokemon" xml:space="preserve">
+    <value>Libertar Pokémon</value>
+  </data>
+  <data name="ActivityHatchEggSmallBonus" xml:space="preserve">
+    <value>Ovos chocados Pequeno bonus</value>
+  </data>
+  <data name="ActivityHatchEggMediumBonus" xml:space="preserve">
+    <value>Ovos chocados Bonus Médio</value>
+  </data>
+  <data name="ActivityHatchEggLargeBonus" xml:space="preserve">
+    <value>Ovos chocados Bonus Grande</value>
+  </data>
+  <data name="ActivityDefeatGymDefender" xml:space="preserve">
+    <value>Derroto o Defensor do Ginásio</value>
+  </data>
+  <data name="ActivityDefeatGymLeader" xml:space="preserve">
+    <value>Derrote o Líder do Ginásio</value>
+  </data>
+  <data name="Combat" xml:space="preserve">
+    <value>Combate</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="Fav" xml:space="preserve">
+    <value>Favoritos</value>
+  </data>
+  <data name="Health" xml:space="preserve">
+    <value>Sáude</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="PokemonInventoryFullText" xml:space="preserve">
+    <value>Seu inventário Pokemon está cheio, transfira algun Pokémon antes de pegar {0}.</value>
   </data>
 </root>

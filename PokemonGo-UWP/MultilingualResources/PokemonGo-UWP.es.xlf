@@ -156,8 +156,9 @@
           <target state="translated">{0} Poképaradas visitadas</target>
         </trans-unit>
         <trans-unit id="BadgeSmallRattataDescription" translate="yes" xml:space="preserve">
-          <source>Caught {0} Rattata</source>
-          <target state="translated">{0} Rattata pequeños atrapados</target>
+          <source>Caught {0} small Rattata</source>
+          <target state="needs-review-translation">{0} Rattata pequeños atrapados</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="BadgeTravelKmDescription" translate="yes" xml:space="preserve">
           <source>Walked {0} km</source>
@@ -484,6 +485,16 @@ Open page with installation files for manual install?</source>
           <source>Your Pokémon inventory is full, transfer some Pokémon before trying to catch {0}.</source>
           <target state="translated">Tu inventario de Pokémon está lleno, transfiere algunos Pokémon antes de capturar a {0}.</target>
         </trans-unit>
+        <trans-unit id="WaitingForNetworkText" translate="yes" xml:space="preserve">
+          <source>Waiting for network to be back...</source>
+          <target state="new">Waiting for network to be back...</target>
+        </trans-unit>
+        <trans-unit id="EggHatchMessage" translate="yes" xml:space="preserve">
+          <source>An Egg hatched into a {0}.
+You also got {1} Stardust, {2} Candy and {3} XP.</source>
+          <target state="new">An Egg hatched into a {0}.
+You also got {1} Stardust, {2} Candy and {3} XP.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -659,17 +670,57 @@ Open page with installation files for manual install?</source>
           <source>POWER UP</source>
           <target state="translated">MÁS PODER</target>
         </trans-unit>
+        <trans-unit id="SettingsRememberMapZoomTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Remember Map Zoom</source>
+          <target state="translated">Recordar zoom del mapa</target>
+        </trans-unit>
+        <trans-unit id="PokedexCaught.Text" translate="yes" xml:space="preserve">
+          <source>Caught:</source>
+          <target state="new">Caught:</target>
+        </trans-unit>
+        <trans-unit id="PokedexEvolutions.Text" translate="yes" xml:space="preserve">
+          <source>Evolutions</source>
+          <target state="new">Evolutions</target>
+        </trans-unit>
+        <trans-unit id="PokedexPokemonHeight.Text" translate="yes" xml:space="preserve">
+          <source>Height:</source>
+          <target state="new">Height:</target>
+        </trans-unit>
+        <trans-unit id="PokedexPokemonType.Text" translate="yes" xml:space="preserve">
+          <source>Type:</source>
+          <target state="new">Type:</target>
+        </trans-unit>
+        <trans-unit id="PokedexPokemonWeight.Text" translate="yes" xml:space="preserve">
+          <source>Weight:</source>
+          <target state="new">Weight:</target>
+        </trans-unit>
+        <trans-unit id="PokedexSeen.Text" translate="yes" xml:space="preserve">
+          <source>Seen:</source>
+          <target state="new">Seen:</target>
+        </trans-unit>
+        <trans-unit id="PokedexText.Text" translate="yes" xml:space="preserve">
+          <source>POKÉDEX</source>
+          <target state="new">POKÉDEX</target>
+        </trans-unit>
+        <trans-unit id="PokedexViewCaught.Text" translate="yes" xml:space="preserve">
+          <source>Caught</source>
+          <target state="new">Caught</target>
+        </trans-unit>
+        <trans-unit id="PokedexViewSeen.Text" translate="yes" xml:space="preserve">
+          <source>Seen</source>
+          <target state="new">Seen</target>
+        </trans-unit>
+        <trans-unit id="TimesTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>times</source>
+          <target state="new">times</target>
+        </trans-unit>
         <trans-unit id="EggDetailButtonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>START INCUBATION</source>
-          <target state="translated">EMPEZAR INCUBACIÓN</target>
+          <target state="new">START INCUBATION</target>
         </trans-unit>
         <trans-unit id="EggDetailTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Use an incubator to incubate the Egg.</source>
-          <target state="translated">Usa una incubadora para incubar este Huevo.</target>
-        </trans-unit>
-        <trans-unit id="SettingsRememberMapZoomTextBlock.Text" translate="yes" xml:space="preserve">
-          <source>Remember Map Zoom</source>
-          <target state="new">Remember Map Zoom</target>
+          <target state="new">Use an incubator to incubate the Egg.</target>
         </trans-unit>
         <trans-unit id="TransferTextBlock.Text" translate="yes" xml:space="preserve">
           <source>TRANSFER</source>
@@ -725,12 +776,14 @@ Open page with installation files for manual install?</source>
           <target state="translated">Incienso con una fragancia misteriosa que atrae a los Pokémon salvajes a tu ubicación durante 30 minutos</target>
         </trans-unit>
         <trans-unit id="D_ItemIncubatorBasic" translate="yes" xml:space="preserve">
-          <source>A device that incubates an Egg as you walk until it is ready to hatch.</source>
-          <target state="translated">Un aparato en el que se incuba un Huevo que eclosionará después de una cierta distancia. Se puede usar 3 veces.</target>
+          <source>A device that incubates an Egg as you walk until it is ready to hatch. Breaks after 3 uses.</source>
+          <target state="needs-review-translation">Un aparato en el que se incuba un Huevo que eclosionará después de una cierta distancia. Se puede usar 3 veces.</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="D_ItemIncubatorBasicUnlimited" translate="yes" xml:space="preserve">
-          <source>A device that incubates an Egg as you walk until it is ready to hatch.</source>
-          <target state="translated">Un aparato en el que se incuba un Huevo que eclosionará cuando recorras una cierta distancia. ¡Uso ilimitado!</target>
+          <source>A device that incubates an Egg as you walk until it is ready to hatch. Unlimited use!</source>
+          <target state="needs-review-translation">Un aparato en el que se incuba un Huevo que eclosionará cuando recorras una cierta distancia. ¡Uso ilimitado!</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="D_ItemMasterBall" translate="yes" xml:space="preserve">
           <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
@@ -875,6 +928,30 @@ Open page with installation files for manual install?</source>
         <trans-unit id="ItemXMiracle" translate="yes" xml:space="preserve">
           <source>X Miracle</source>
           <target state="translated">Milagro X</target>
+        </trans-unit>
+        <trans-unit id="D_ItemLuckyEgg" translate="yes" xml:space="preserve">
+          <source>A Lucky Egg that's filled with happiness! Earns double XP for 30 minutes.</source>
+          <target state="new">A Lucky Egg that's filled with happiness! Earns double XP for 30 minutes.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemRazzBerry" translate="yes" xml:space="preserve">
+          <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
+          <target state="new">Feed this to a Pokémon, and it will be easier to catch on your next throw.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemSpecialCamera" translate="yes" xml:space="preserve">
+          <source>When you encounter Pokémon in the wild, you can use your camera to photograph them.</source>
+          <target state="new">When you encounter Pokémon in the wild, you can use your camera to photograph them.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemSuperPotion" translate="yes" xml:space="preserve">
+          <source>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 50 points.</source>
+          <target state="new">A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 50 points.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemTroyDisk" translate="yes" xml:space="preserve">
+          <source>A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</source>
+          <target state="new">A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemUnknown" translate="yes" xml:space="preserve">
+          <source>This item is unknown and may be added in the future.</source>
+          <target state="new">This item is unknown and may be added in the future.</target>
         </trans-unit>
       </group>
     </body>
@@ -2223,6 +2300,619 @@ Open page with installation files for manual install?</source>
         <trans-unit id="ZenHeadbuttFast" translate="yes" xml:space="preserve">
           <source>Zen Headbutt</source>
           <target state="translated">Cabezazo Zen</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="en-US" target-language="es" original="POKEMONGO-UWP/STRINGS/EN-US/POKEDEX.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1605.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="POKEMONGO-UWP/STRINGS/EN-US/POKEDEX.RESW" datatype="resx">
+        <trans-unit id="Bulbasaur.Description" translate="yes" xml:space="preserve">
+          <source>Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun’s rays, the seed grows progressively larger.</source>
+          <target state="final">A Bulbasaur es fácil verle echándose una siesta al sol. La semilla que tiene en el lomo va creciendo cada vez más a medida que absorbe los rayos del sol.</target>
+        </trans-unit>
+        <trans-unit id="Ivysaur.Description" translate="yes" xml:space="preserve">
+          <source>There is a bud on this Pokémon’s back. To support its weight, Ivysaur’s legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it’s a sign that the bud will bloom into a large flower soon.</source>
+          <target state="final">Este Pokémon lleva un bulbo en el lomo y, para poder con su peso, tiene unas patas y un tronco gruesos y fuertes. Si empieza a pasar más tiempo al sol, será porque el bulbo está a punto de hacerse una flor grande.</target>
+        </trans-unit>
+        <trans-unit id="Venusaur.Description" translate="yes" xml:space="preserve">
+          <source>There is a large flower on Venusaur’s back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower’s aroma soothes the emotions of people.</source>
+          <target state="final">Venusaur tiene una flor enorme en el lomo que, según parece, adquiere unos colores muy vivos si está bien nutrido y le da mucho el sol. El aroma delicado de la flor tiene un efecto relajante en el ánimo de las personas.</target>
+        </trans-unit>
+        <trans-unit id="Charmander.Description" translate="yes" xml:space="preserve">
+          <source>The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.</source>
+          <target state="final">La llama que tiene en la punta de la cola arde según sus sentimientos. Llamea levemente cuando está alegre y arde vigorosamente cuando está enfadado.</target>
+        </trans-unit>
+        <trans-unit id="Charmeleon.Description" translate="yes" xml:space="preserve">
+          <source>Charmeleon mercilessly destroys its foes using its sharp claws. If it encounters a strong foe, it turns aggressive. In this excited state, the flame at the tip of its tail flares with a bluish white color.</source>
+          <target state="final">Charmeleon no tiene reparo en acabar con su rival usando las afiladas garras que tiene. Si su enemigo es fuerte, se vuelve agresivo, y la llama que tiene en el extremo de la cola empieza a arder con mayor intensidad tornándose azulada.</target>
+        </trans-unit>
+        <trans-unit id="Charizard.Description" translate="yes" xml:space="preserve">
+          <source>Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.</source>
+          <target state="final">Charizard se dedica a volar por los cielos en busca de oponentes fuertes. Echa fuego por la boca y es capaz de derretir cualquier cosa. No obstante, si su rival es más débil que él, no usará este ataque.</target>
+        </trans-unit>
+        <trans-unit id="Squirtle.Description" translate="yes" xml:space="preserve">
+          <source>Squirtle’s shell is not merely used for protection. The shell’s rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds.</source>
+          <target state="final">El caparazón de Squirtle no le sirve de protección únicamente. Su forma redondeada y las hendiduras que tiene le ayudan a deslizarse en el agua y le permiten nadar a gran velocidad.</target>
+        </trans-unit>
+        <trans-unit id="Wartortle.Description" translate="yes" xml:space="preserve">
+          <source>Its tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Pokémon’s toughness as a battler.</source>
+          <target state="final">Tiene una cola larga y cubierta de un pelo abundante y grueso que se torna más oscuro a medida que crece. Los arañazos que tiene en el caparazón dan fe de lo buen guerrero que es.</target>
+        </trans-unit>
+        <trans-unit id="Blastoise.Description" translate="yes" xml:space="preserve">
+          <source>Blastoise has water spouts that protrude from its shell. The water spouts are very accurate. They can shoot bullets of water with enough accuracy to strike empty cans from a distance of over 160 feet.</source>
+          <target state="final">Blastoise lanza chorros de agua con gran precisión por los tubos que le salen del caparazón que tiene en la espalda. Puede disparar chorros de agua con tanta puntería que no fallaría al tirar contra una lata pequeña a 50 m.</target>
+        </trans-unit>
+        <trans-unit id="Caterpie.Description" translate="yes" xml:space="preserve">
+          <source>Caterpie has a voracious appetite. It can devour leaves bigger than its body right before your eyes. From its antenna, this Pokémon releases a terrifically strong odor.</source>
+          <target state="final">Caterpie tiene un apetito voraz. Es capaz de devorar hojas que superen su tamaño en un abrir y cerrar de ojos. Atención a la antena que tiene: libera un hedor realmente fuerte.</target>
+        </trans-unit>
+        <trans-unit id="Metapod.Description" translate="yes" xml:space="preserve">
+          <source>The shell covering this Pokémon’s body is as hard as an iron slab. Metapod does not move very much. It stays still because it is preparing its soft innards for evolution inside the hard shell.</source>
+          <target state="final">La capa que recubre el cuerpo de este Pokémon es tan dura como una plancha de hierro. Metapod apenas se mueve. Permanece inmóvil para que las vísceras evolucionen dentro de la coraza que le rodea.</target>
+        </trans-unit>
+        <trans-unit id="Butterfree.Description" translate="yes" xml:space="preserve">
+          <source>Butterfree has a superior ability to search for delicious honey from flowers. It can even search out, extract, and carry honey from flowers that are blooming over six miles from its nest.</source>
+          <target state="final">Butterfree tiene una habilidad especial para encontrar delicioso polen en las flores. Puede localizar, extraer y transportar polen de flores que estén floreciendo a 10 km de distancia de su nido.</target>
+        </trans-unit>
+        <trans-unit id="Weedle.Description" translate="yes" xml:space="preserve">
+          <source>Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).</source>
+          <target state="final">Weedle tiene un finísimo sentido del olfato. Es capaz de distinguir las hojas que le gustan de las que no le gustan olisqueando un poco con la gran nariz que tiene.</target>
+        </trans-unit>
+        <trans-unit id="Kakuna.Description" translate="yes" xml:space="preserve">
+          <source>Kakuna remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch.</source>
+          <target state="final">Kakuna permanece prácticamente inmóvil al encaramarse a los árboles, aunque la actividad interna de su organismo tiene un ritmo frenético, pues se prepara para su evolución. Prueba de esto es la alta temperatura de su caparazón.</target>
+        </trans-unit>
+        <trans-unit id="Beedrill.Description" translate="yes" xml:space="preserve">
+          <source>Beedrill is extremely territorial. No one should ever approach its nest—this is for their own safety. If angered, they will attack in a furious swarm.</source>
+          <target state="final">Los Beedrill defienden su territorio a toda costa. No es conveniente acercarse a su colmena, por seguridad. Si se les molesta, todo un enjambre atacará ferozmente.</target>
+        </trans-unit>
+        <trans-unit id="Pidgey.Description" translate="yes" xml:space="preserve">
+          <source>Pidgey has an extremely sharp sense of direction. It is capable of unerringly returning home to its nest, however far it may be removed from its familiar surroundings.</source>
+          <target state="final">Pidgey tiene un sentido de la orientación muy desarrollado. Es capaz de regresar a su nido, por lejos que se encuentre de las zonas que le resultan familiares.</target>
+        </trans-unit>
+        <trans-unit id="Pidgeotto.Description" translate="yes" xml:space="preserve">
+          <source>Pidgeotto claims a large area as its own territory. This Pokémon flies around, patrolling its living space. If its territory is violated, it shows no mercy in thoroughly punishing the foe with its sharp claws.</source>
+          <target state="final">Pidgeotto se apodera de una zona muy vasta como su territorio y la sobrevuela para controlarla. Si alguien invade su espacio vital, no tendrá ningún reparo en castigarlo con sus afiladas garras.</target>
+        </trans-unit>
+        <trans-unit id="Pidgeot.Description" translate="yes" xml:space="preserve">
+          <source>This Pokémon has a dazzling plumage of beautifully glossy feathers. Many Trainers are captivated by the striking beauty of the feathers on its head, compelling them to choose Pidgeot as their Pokémon.</source>
+          <target state="final">El plumaje de este Pokémon es bonito e hipnótico. Muchos Entrenadores se quedan embobados ante la belleza impactante de las plumas que tiene en la cabeza; lo que les lleva a elegir a Pidgeot como su Pokémon.</target>
+        </trans-unit>
+        <trans-unit id="Rattata.Description" translate="yes" xml:space="preserve">
+          <source>Rattata is cautious in the extreme. Even while it is asleep, it constantly listens by moving its ears around. It is not picky about where it lives—it will make its nest anywhere.</source>
+          <target state="final">Rattata es cauto como él solo. Hasta cuando duerme mueve las orejas para oír todos los ruidos. No es nada delicado a la hora de elegir su hábitat. Cualquier sitio es bueno para cavar su madriguera.</target>
+        </trans-unit>
+        <trans-unit id="Raticate.Description" translate="yes" xml:space="preserve">
+          <source>Raticate’s sturdy fangs grow steadily. To keep them ground down, it gnaws on rocks and logs. It may even chew on the walls of houses.</source>
+          <target state="final">A Raticate le crecen los incisivos firmes y fuertes. Para mantenerlos afilados roe troncos y rocas, e incluso las paredes de las casas.</target>
+        </trans-unit>
+        <trans-unit id="Spearow.Description" translate="yes" xml:space="preserve">
+          <source>Spearow has a very loud cry that can be heard over half a mile away. If its high, keening cry is heard echoing all around, it is a sign that they are warning each other of danger.</source>
+          <target state="final">Spearow pía con tanta fuerza que se le puede oír a 1 km de distancia. Si al agudo chillido le sigue una especie de eco, estaremos oyendo la respuesta de otros Spearow que contestan ante el aviso de peligro.</target>
+        </trans-unit>
+        <trans-unit id="Fearow.Description" translate="yes" xml:space="preserve">
+          <source>Fearow is recognized by its long neck and elongated beak. They are conveniently shaped for catching prey in soil or water. It deftly moves its long and skinny beak to pluck prey.</source>
+          <target state="final">A Fearow se le reconoce por tener un pescuezo y un pico largos que le permiten cazar en tierra y agua. Tiene una gran habilidad moviendo el fino pico para atrapar a sus presas.</target>
+        </trans-unit>
+        <trans-unit id="Ekans.Description" translate="yes" xml:space="preserve">
+          <source>Ekans curls itself up in a spiral while it rests. Assuming this position allows it to quickly respond to a threat from any direction with a glare from its upraised head.</source>
+          <target state="final">Ekans se enrosca para descansar. Adoptando esta posición puede responder rápidamente a cualquier amenaza que le aceche desde cualquier lugar, levantando la cabeza con una feroz mirada.</target>
+        </trans-unit>
+        <trans-unit id="Arbok.Description" translate="yes" xml:space="preserve">
+          <source>This Pokémon is terrifically strong in order to constrict things with its body. It can even flatten steel oil drums. Once Arbok wraps its body around its foe, escaping its crunching embrace is impossible.</source>
+          <target state="final">Este Pokémon es tremendamente fuerte, puede oprimir cualquier cosa con su cuerpo y hasta es capaz de estrujar un barril de acero. Una vez que Arbok se enrosca a su víctima, no hay forma de escapar de su asfixiante abrazo.</target>
+        </trans-unit>
+        <trans-unit id="Pikachu.Description" translate="yes" xml:space="preserve">
+          <source>This Pokémon has electricity-storing pouches on its cheeks. These appear to become electrically charged during the night while Pikachu sleeps. It occasionally discharges electricity when it is dozy after waking up.</source>
+          <target state="final">Este Pokémon tiene unas bolsas en las mejillas donde almacena electricidad. Parece ser que se recargan por la noche, mientras Pikachu duerme. A veces, cuando se acaba de despertar y está aún medio dormido, descarga un poco.</target>
+        </trans-unit>
+        <trans-unit id="Raichu.Description" translate="yes" xml:space="preserve">
+          <source>This Pokémon exudes a weak electrical charge from all over its body that makes it take on a slight glow in darkness. Raichu plants its tail in the ground to discharge electricity.</source>
+          <target state="final">Este Pokémon libera una débil carga eléctrica por todo su cuerpo que le hace brillar en la oscuridad. Raichu descarga electricidad plantando la cola en el suelo.</target>
+        </trans-unit>
+        <trans-unit id="Sandshrew.Description" translate="yes" xml:space="preserve">
+          <source>Sandshrew has a very dry hide that is extremely tough. The Pokémon can roll into a ball that repels any attack. At night, it burrows into the desert sand to sleep.</source>
+          <target state="final">Sandshrew tiene una piel muy seca y tremendamente dura. Tiene la habilidad de hacerse una bola y evitar cualquier ataque. Por las noches, escarba en la arena del desierto y se echa a dormir.</target>
+        </trans-unit>
+        <trans-unit id="Sandslash.Description" translate="yes" xml:space="preserve">
+          <source>Sandslash can roll up its body as if it were a ball covered with large spikes. In battle, this Pokémon will try to make the foe flinch by jabbing it with its spines. It then leaps at the stunned foe to tear wildly with its sharp claws.</source>
+          <target state="final">Sandslash puede enroscarse y convertirse en una bola de largas púas. En combate, este Pokémon hace retroceder a sus rivales clavándoselas. Acto seguido, aprovecha para echarse sobre ellos y atacarlos con sus afiladas garras.</target>
+        </trans-unit>
+        <trans-unit id="NidoranFemale.Description" translate="yes" xml:space="preserve">
+          <source>Nidoran♀ has barbs that secrete a powerful poison. They are thought to have developed as protection for this small-bodied Pokémon. When enraged, it releases a horrible toxin from its horn.</source>
+          <target state="final">Nidoran♀ tiene púas que segregan un veneno muy potente. Se piensa que las desarrolló como protección del cuerpo tan pequeño que tiene. Cuando se enfada, libera una horrible sustancia tóxica por el cuerno.</target>
+        </trans-unit>
+        <trans-unit id="Nidorina.Description" translate="yes" xml:space="preserve">
+          <source>When Nidorina are with their friends or family, they keep their barbs tucked away to prevent hurting each other. This Pokémon appears to become nervous if separated from the others.</source>
+          <target state="final">Cuando están en familia o con sus amigos, esconden las púas para evitar accidentes. Según parece, se alteran bastante si se separan del grupo.</target>
+        </trans-unit>
+        <trans-unit id="Nidoqueen.Description" translate="yes" xml:space="preserve">
+          <source>Nidoqueen’s body is encased in extremely hard scales. It is adept at sending foes flying with harsh tackles. This Pokémon is at its strongest when it is defending its young.</source>
+          <target state="final">Nidoqueen tiene el cuerpo totalmente recubierto de escamas durísimas. Suele lanzar por los aires a sus rivales de los violentos golpes que les propina. Cuando se trata de defender a sus crías, alcanza su nivel máximo de fuerza.</target>
+        </trans-unit>
+        <trans-unit id="NidoranMale.Description" translate="yes" xml:space="preserve">
+          <source>Nidoran♂ has developed muscles for moving its ears. Thanks to them, the ears can be freely moved in any direction. Even the slightest sound does not escape this Pokémon’s notice.</source>
+          <target state="final">Nidoran♂ ha desarrollado músculos para mover las orejas y orientarlas en cualquier dirección. De este modo, es capaz de captar hasta el sonido más leve.</target>
+        </trans-unit>
+        <trans-unit id="Nidorino.Description" translate="yes" xml:space="preserve">
+          <source>Nidorino has a horn that is harder than a diamond. If it senses a hostile presence, all the barbs on its back bristle up at once, and it challenges the foe with all its might.</source>
+          <target state="final">Nidorino tiene un cuerno de dureza superior a la del diamante. Si siente una presencia hostil, se le erizan las púas del lomo enseguida y carga contra el enemigo con todas sus fuerzas.</target>
+        </trans-unit>
+        <trans-unit id="Nidoking.Description" translate="yes" xml:space="preserve">
+          <source>Nidoking’s thick tail packs enormously destructive power. With one swing, it can topple a metal transmission tower. Once this Pokémon goes on a rampage, there is no stopping it.</source>
+          <target state="final">La gruesa cola de Nidoking encierra una fuerza realmente destructora. Con una vez que la agite, es capaz de tumbar una torre metálica de transmisión. Una vez que este Pokémon se desboca, no hay quien lo pare.</target>
+        </trans-unit>
+        <trans-unit id="Clefairy.Description" translate="yes" xml:space="preserve">
+          <source>On every night of a full moon, groups of this Pokémon come out to play. When dawn arrives, the tired Clefairy return to their quiet mountain retreats and go to sleep nestled up against each other.</source>
+          <target state="final">Siempre que hay luna llena, salen en grupo para jugar. Al amanecer, los Clefairy, agotados, regresan a sus refugios de montaña para dormir acurrucados unos con otros.</target>
+        </trans-unit>
+        <trans-unit id="Clefable.Description" translate="yes" xml:space="preserve">
+          <source>Clefable moves by skipping lightly as if it were flying using its wings. Its bouncy step lets it even walk on water. It is known to take strolls on lakes on quiet, moonlit nights.</source>
+          <target state="final">Clefable se mueve dando saltitos como si fuera haciendo uso de las alas. Estos pequeños brincos le permiten caminar por el agua. De todos es sabido que le encanta darse paseos por los lagos en tranquilas noches de luna llena.</target>
+        </trans-unit>
+        <trans-unit id="Vulpix.Description" translate="yes" xml:space="preserve">
+          <source>Inside Vulpix’s body burns a flame that never goes out. During the daytime, when the temperatures rise, this Pokémon releases flames from its mouth to prevent its body from growing too hot.</source>
+          <target state="final">En el interior del cuerpo de Vulpix arde una llama que nunca se extingue. Durante el día, cuando suben las temperaturas, este Pokémon libera llamas por la boca para evitar recalentarse.</target>
+        </trans-unit>
+        <trans-unit id="Ninetales.Description" translate="yes" xml:space="preserve">
+          <source>Legend has it that Ninetales came into being when nine wizards possessing sacred powers merged into one. This Pokémon is highly intelligent—it can understand human speech.</source>
+          <target state="final">Cuenta la leyenda que Ninetales nació de la fusión de nueve hechiceros que tenían poderes sagrados. Este Pokémon es realmente inteligente. Entiende el lenguaje humano.</target>
+        </trans-unit>
+        <trans-unit id="Jigglypuff.Description" translate="yes" xml:space="preserve">
+          <source>When this Pokémon sings, it never pauses to breathe. If it is in a battle against an opponent that does not easily fall asleep, Jigglypuff cannot breathe, endangering its life.</source>
+          <target state="final">Cuando este Pokémon canta, no para nunca para respirar. Si en combate el enemigo no se queda dormido con facilidad, Jigglypuff no podrá respirar y su vida correrá peligro.</target>
+        </trans-unit>
+        <trans-unit id="Wigglytuff.Description" translate="yes" xml:space="preserve">
+          <source>Wigglytuff’s body is very flexible. By inhaling deeply, this Pokémon can inflate itself seemingly without end. Once inflated, Wigglytuff bounces along lightly like a balloon.</source>
+          <target state="final">El cuerpo de Wigglytuff es muy flexible. Dicen que, al aspirar aire, puede hincharse sin límites. Y, una vez hinchado, se pone a botar como si fuera una pelota.</target>
+        </trans-unit>
+        <trans-unit id="Zubat.Description" translate="yes" xml:space="preserve">
+          <source>Zubat avoids sunlight because exposure causes it to become unhealthy. During the daytime, it stays in caves or under the eaves of old houses, sleeping while hanging upside down.</source>
+          <target state="final">Zubat evita la luz del día porque le resulta perjudicial para la salud. Durante el día, permanece en cuevas o bajo los aleros de las casas viejas durmiendo colgado de las patas, cabeza abajo.</target>
+        </trans-unit>
+        <trans-unit id="Golbat.Description" translate="yes" xml:space="preserve">
+          <source>Golbat bites down on prey with its four fangs and drinks the victim’s blood. It becomes active on inky dark moonless nights, flying around to attack people and Pokémon.</source>
+          <target state="final">Golbat derriba a sus víctimas mordiéndoles con los cuatro colmillos que tiene y chupándoles la sangre. Solo entra en acción en las noches sin luna. Revolotea en la oscuridad para atacar a Pokémon y personas.</target>
+        </trans-unit>
+        <trans-unit id="Oddish.Description" translate="yes" xml:space="preserve">
+          <source>Oddish searches for fertile, nutrient-rich soil, then plants itself. During the daytime, while it is planted, this Pokémon’s feet are thought to change shape and become similar to the roots of trees.</source>
+          <target state="final">Oddish busca los suelos fértiles y ricos en nutrientes para plantarse en la tierra. Durante el día, se cree que le cambia la forma de los pies y se le empiezan a parecer a las raíces de los árboles.</target>
+        </trans-unit>
+        <trans-unit id="Gloom.Description" translate="yes" xml:space="preserve">
+          <source>From its mouth Gloom drips honey that smells absolutely horrible. Apparently, it loves the horrid stench. It sniffs the noxious fumes and then drools even more of its honey.</source>
+          <target state="final">Gloom babea un néctar que tiene un olor realmente horrible, aunque parece ser que a él le gusta. De hecho, aspira los gases nocivos y libera más néctar aún.</target>
+        </trans-unit>
+        <trans-unit id="Vileplume.Description" translate="yes" xml:space="preserve">
+          <source>Vileplume has the world’s largest petals. They are used to attract prey that are then doused with toxic spores. Once the prey are immobilized, this Pokémon catches and devours them.</source>
+          <target state="final">Vileplume tiene los mayores pétalos del mundo. Los usa para atraer a sus presas y llenarlas de esporas tóxicas. Una vez que ha inmovilizado a las víctimas, las atrapa y las devora.</target>
+        </trans-unit>
+        <trans-unit id="Paras.Description" translate="yes" xml:space="preserve">
+          <source>Paras has parasitic mushrooms growing on its back called tochukaso. They grow large by drawing nutrients from this Bug Pokémon host. They are highly valued as a medicine for extending life.</source>
+          <target state="final">Paras lleva dos setas parásitas a cuestas llamadas tochukaso. Estas crecen alimentándose de los nutrientes de este Pokémon de tipo Bicho y Planta que les sirve de huésped. Las setas se usan como elixir de vida.</target>
+        </trans-unit>
+        <trans-unit id="Parasect.Description" translate="yes" xml:space="preserve">
+          <source>Parasect is known to infest large trees en masse and drain nutrients from the lower trunk and roots. When an infested tree dies, they move onto another tree all at once.</source>
+          <target state="final">Parasect es conocido por destruir en plaga grandes árboles, absorbiendo los nutrientes que tienen en la parte baja del tronco y las raíces. Cuando un árbol azotado por la plaga muere, los Parasect van a por el siguiente al instante.</target>
+        </trans-unit>
+        <trans-unit id="Venonat.Description" translate="yes" xml:space="preserve">
+          <source>Venonat is said to have evolved with a coat of thin, stiff hair that covers its entire body for protection. It possesses large eyes that never fail to spot even minuscule prey.</source>
+          <target state="final">Dicen que durante su evolución Venonat desarrolló una fina capa de espeso pelo alrededor de todo el cuerpo para protegerse. Tiene unos ojos tan grandes que no hay presa que le pase desapercibida.</target>
+        </trans-unit>
+        <trans-unit id="Venomoth.Description" translate="yes" xml:space="preserve">
+          <source>Venomoth is nocturnal—it is a Pokémon that only becomes active at night. Its favorite prey are small insects that gather around streetlights, attracted by the light in the darkness.</source>
+          <target state="final">Venomoth es nocturno, solo actúa en la oscuridad. Su alimento preferido son los pequeños insectos que se concentran cerca de los focos de luz en la oscuridad de la noche.</target>
+        </trans-unit>
+        <trans-unit id="Diglett.Description" translate="yes" xml:space="preserve">
+          <source>Diglett are raised in most farms. The reason is simple— wherever this Pokémon burrows, the soil is left perfectly tilled for planting crops. This soil is made ideal for growing delicious vegetables.</source>
+          <target state="final">En la mayoría de las granjas se suelen criar Diglett por la sencilla razón de que, excaven donde excaven, dejan la tierra perfectamente labrada para sembrar. El terreno queda listo para plantar ricas verduras.</target>
+        </trans-unit>
+        <trans-unit id="Dugtrio.Description" translate="yes" xml:space="preserve">
+          <source>Dugtrio are actually triplets that emerged from one body. As a result, each triplet thinks exactly like the other two triplets. They work cooperatively to burrow endlessly.</source>
+          <target state="final">Los Dugtrio son trillizos que se originaron a partir de un solo cuerpo, por eso piensan de la misma forma. A la hora de excavar, trabajan en equipo y sin descanso.</target>
+        </trans-unit>
+        <trans-unit id="Meowth.Description" translate="yes" xml:space="preserve">
+          <source>Meowth withdraws its sharp claws into its paws to slinkily sneak about without making any incriminating footsteps. For some reason, this Pokémon loves shiny coins that glitter with light.</source>
+          <target state="final">Meowth retrae las afiladas uñas de sus zarpas para caminar a hurtadillas, dando sigilosos pasos para pasar inadvertido. No se sabe muy bien por qué, pero este Pokémon adora las monedas brillantes que resplandecen con la luz.</target>
+        </trans-unit>
+        <trans-unit id="Persian.Description" translate="yes" xml:space="preserve">
+          <source>Persian has six bold whiskers that give it a look of toughness. The whiskers sense air movements to determine what is in the Pokémon’s surrounding vicinity. It becomes docile if grabbed by the whiskers.</source>
+          <target state="final">Persian tiene seis llamativos bigotes que le dan un aspecto feroz. Además, le sirven para detectar el movimiento del aire, delator de la presencia cercana de algún Pokémon. Si se le agarra por los bigotes, se vuelve dócil.</target>
+        </trans-unit>
+        <trans-unit id="Psyduck.Description" translate="yes" xml:space="preserve">
+          <source>If it uses its mysterious power, Psyduck can’t remember having done so. It apparently can’t form a memory of such an event because it goes into an altered state that is much like deep sleep.</source>
+          <target state="final">Psyduck no se acuerda nunca de haber usado su misterioso poder. Parece ser que no puede registrar en la memoria haber usado el ataque porque se queda inmerso en un estado parecido a un sueño profundo.</target>
+        </trans-unit>
+        <trans-unit id="Golduck.Description" translate="yes" xml:space="preserve">
+          <source>Golduck is the fastest swimmer among all Pokémon. It swims effortlessly, even in a rough, stormy sea. It sometimes rescues people from wrecked ships floundering in high seas.</source>
+          <target state="final">Golduck es el nadador más rápido de los Pokémon. Además, nada sin esfuerzo hasta en aguas turbulentas en plena tormenta. En ocasiones, ha rescatado a náufragos en alta mar.</target>
+        </trans-unit>
+        <trans-unit id="Mankey.Description" translate="yes" xml:space="preserve">
+          <source>When Mankey starts shaking and its nasal breathing turns rough, it’s a sure sign that it is becoming angry. However, because it goes into a towering rage almost instantly, it is impossible for anyone to flee its wrath.</source>
+          <target state="final">Cuando Mankey empieza a temblar y a respirar con más intensidad, seguro que va a enfadarse. Aunque prever su enfado no sirve de nada porque alcanza un estado de rabia tan rápido que no hay escapatoria.</target>
+        </trans-unit>
+        <trans-unit id="Primeape.Description" translate="yes" xml:space="preserve">
+          <source>When Primeape becomes furious, its blood circulation is boosted. In turn, its muscles are made even stronger. However, it also becomes much less intelligent at the same time.</source>
+          <target state="final">Cuando Primeape se enfada, se le acelera el ritmo cardíaco y se le fortalecen los músculos. Con todo, pierde en inteligencia.</target>
+        </trans-unit>
+        <trans-unit id="Growlithe.Description" translate="yes" xml:space="preserve">
+          <source>Growlithe has a superb sense of smell. Once it smells anything, this Pokémon won’t forget the scent, no matter what. It uses its advanced olfactory sense to determine the emotions of other living things.</source>
+          <target state="final">Growlithe tiene un sentido del olfato excepcional y una memoria sensitiva tremenda, nunca olvida una esencia. Este Pokémon saca provecho de este don para identificar las sensaciones que tienen otros seres vivos.</target>
+        </trans-unit>
+        <trans-unit id="Arcanine.Description" translate="yes" xml:space="preserve">
+          <source>Arcanine is known for its high speed. It is said to be capable of running over 6,200 miles in a single day and night. The fire that blazes wildly within this Pokémon’s body is its source of power.</source>
+          <target state="final">Arcanine es conocido por lo veloz que es. Dicen que es capaz de correr 10 000 km en 24 horas. El fuego que arde con vigor en el interior de este Pokémon constituye su fuente de energía.</target>
+        </trans-unit>
+        <trans-unit id="Poliwag.Description" translate="yes" xml:space="preserve">
+          <source>Poliwag has a very thin skin. It is possible to see the Pokémon’s spiral innards right through the skin. Despite its thinness, however, the skin is also very flexible. Even sharp fangs bounce right off it.</source>
+          <target state="final">Poliwag tiene una piel muy fina. Tanto que es posible entrever a través de la misma las vísceras en espiral que tiene. La piel, aunque fina, tiene la ventaja de ser flexible y hacer rebotar hasta los colmillos más afilados.</target>
+        </trans-unit>
+        <trans-unit id="Poliwhirl.Description" translate="yes" xml:space="preserve">
+          <source>The surface of Poliwhirl’s body is always wet and slick with a slimy fluid. Because of this slippery covering, it can easily slip and slide out of the clutches of any enemy in battle.</source>
+          <target state="final">La piel de Poliwhirl está siempre húmeda y lubricada con un fluido viscoso. Gracias a esta película resbaladiza, puede escapar de las garras del enemigo, resbalándosele de las zarpas en pleno combate.</target>
+        </trans-unit>
+        <trans-unit id="Poliwrath.Description" translate="yes" xml:space="preserve">
+          <source>Poliwrath’s highly developed, brawny muscles never grow fatigued, however much it exercises. It is so tirelessly strong, this Pokémon can swim back and forth across the ocean without effort.</source>
+          <target state="final">Poliwrath tiene unos músculos fornidos y muy desarrollados, por lo que nunca se agota. Es tan fuerte e incansable que cruzar el océano a nado no le supone ningún esfuerzo.</target>
+        </trans-unit>
+        <trans-unit id="Abra.Description" translate="yes" xml:space="preserve">
+          <source>Abra needs to sleep for eighteen hours a day. If it doesn’t, this Pokémon loses its ability to use telekinetic powers. If it is attacked, Abra escapes using Teleport while it is still sleeping.</source>
+          <target state="final">Abra necesita dormir 18 horas al día. Si no, pierde la habilidad que tiene de usar poderes de telequinesia. Si le atacan, Abra puede escapar usando Teletransporte mientras duerme.</target>
+        </trans-unit>
+        <trans-unit id="Kadabra.Description" translate="yes" xml:space="preserve">
+          <source>Kadabra holds a silver spoon in its hand. The spoon is used to amplify the alpha waves in its brain. Without the spoon, the Pokémon is said to be limited to half the usual amount of its telekinetic powers.</source>
+          <target state="final">Kadabra lleva siempre una cuchara de plata en la mano, que usa para amplificar las ondas alfa de su cerebro. Dicen que, sin la cuchara, sus poderes de telequinesia se reducen a la mitad.</target>
+        </trans-unit>
+        <trans-unit id="Alakazam.Description" translate="yes" xml:space="preserve">
+          <source>Alakazam’s brain continually grows, infinitely multiplying brain cells. This amazing brain gives this Pokémon an astoundingly high IQ of 5,000. It has a thorough memory of everything that has occurred in the world.</source>
+          <target state="final">El cerebro de Alakazam siempre está creciendo y el número de neuronas no deja de aumentar. Este Pokémon tiene un cociente intelectual de 5000. Tiene archivado en su memoria todo lo que ha ocurrido en el mundo.</target>
+        </trans-unit>
+        <trans-unit id="Machop.Description" translate="yes" xml:space="preserve">
+          <source>Machop exercises by hefting around a Graveler as if it were a barbell. There are some Machop that travel the world in a quest to master all kinds of martial arts.</source>
+          <target state="final">Machop se entrena levantando Graveler a modo de pesas. Algunos de estos Pokémon viajan por todo el mundo para aprender distintos tipos de artes marciales.</target>
+        </trans-unit>
+        <trans-unit id="Machoke.Description" translate="yes" xml:space="preserve">
+          <source>Machoke undertakes bodybuilding every day even as it helps people with tough, physically demanding labor. On its days off, this Pokémon heads to the fields and mountains to exercise and train.</source>
+          <target state="final">Machoke realiza sesiones de culturismo todos los días. De entrenamiento le sirven también las veces que ayuda a la gente en tareas de esfuerzo físico. En sus días libres, va al campo o a la montaña para hacer más ejercicio.</target>
+        </trans-unit>
+        <trans-unit id="Machamp.Description" translate="yes" xml:space="preserve">
+          <source>Machamp is known as the Pokémon that has mastered every kind of martial arts. If it grabs hold of the foe with its four arms, the battle is all but over. The hapless foe is thrown far over the horizon.</source>
+          <target state="final">Machamp es conocido como el Pokémon que domina todas las artes marciales. Si agarra a su rival con los cuatro brazos que tiene, su enemigo no tendrá nada que hacer. El pobre contrincante saldrá volando hasta perderse en el horizonte.</target>
+        </trans-unit>
+        <trans-unit id="Bellsprout.Description" translate="yes" xml:space="preserve">
+          <source>Bellsprout’s thin and flexible body lets it bend and sway to avoid any attack, however strong it may be. From its mouth, this Pokémon spits a corrosive fluid that melts even iron.</source>
+          <target state="final">Bellsprout tiene un cuerpo delgado y flexible que le permite inclinarse y balancearse para esquivar los ataques. Este Pokémon escupe por la boca un fluido corrosivo capaz de hacer que se derrita hasta el hierro.</target>
+        </trans-unit>
+        <trans-unit id="Weepinbell.Description" translate="yes" xml:space="preserve">
+          <source>Weepinbell has a large hook on its rear end. At night, the Pokémon hooks on to a tree branch and goes to sleep. If it moves around in its sleep, it may wake up to find itself on the ground.</source>
+          <target state="final">Weepinbell tiene un gancho a modo de extremidad superior trasera, que usa por la noche para colgarse de una rama y echarse a dormir. Si se mueve mientras duerme, puede acabar en el suelo.</target>
+        </trans-unit>
+        <trans-unit id="Victreebel.Description" translate="yes" xml:space="preserve">
+          <source>Victreebel has a long vine that extends from its head. This vine is waved and flicked about as if it were an animal to attract prey. When an unsuspecting prey draws near, this Pokémon swallows it whole.</source>
+          <target state="final">Victreebel tiene una enredadera que le sale de la cabeza y que agita a modo de señuelo para atraer a sus presas y así engullirlas por sorpresa cuando estas se aproximan incautas.</target>
+        </trans-unit>
+        <trans-unit id="Tentacool.Description" translate="yes" xml:space="preserve">
+          <source>Tentacool absorbs sunlight and refracts it using water inside its body to convert it into beam energy. This Pokémon shoots beams from the small round organ above its eyes.</source>
+          <target state="final">Tentacool absorbe luz solar, la refracta a través del agua que tiene en su interior y la convierte en un rayo de energía. Este Pokémon tiene un órgano que parece de cristal sobre los ojos por el cual dispara los rayos.</target>
+        </trans-unit>
+        <trans-unit id="Tentacruel.Description" translate="yes" xml:space="preserve">
+          <source>Tentacruel has tentacles that can be freely elongated and shortened at will. It ensnares prey with its tentacles and weakens the prey by dosing it with a harsh toxin. It can catch up to 80 prey at the same time.</source>
+          <target state="final">Tentacruel tiene unos tentáculos que puede alargar o acortar. Los usa para atrapar a su presa y debilitarla mediante una sustancia muy tóxica. Puede llegar a atrapar hasta a 80 presas a la vez.</target>
+        </trans-unit>
+        <trans-unit id="Geodude.Description" translate="yes" xml:space="preserve">
+          <source>When Geodude sleeps deeply, it buries itself halfway into the ground. It will not awaken even if hikers step on it unwittingly. In the morning, this Pokémon rolls downhill in search of food.</source>
+          <target state="final">Cuando Geodude duerme profundamente, se entierra a medias en el suelo y no se despierta ni aunque lo pisen sin querer. Por la mañana, se dedica a buscar comida rodando ladera abajo.</target>
+        </trans-unit>
+        <trans-unit id="Graveler.Description" translate="yes" xml:space="preserve">
+          <source>Rocks are Graveler’s favorite food. This Pokémon will climb a mountain from the base to the summit, crunchingly feasting on rocks all the while. Upon reaching the peak, it rolls back down to the bottom.</source>
+          <target state="final">Las piedras son la comida preferida de Graveler. Este Pokémon sube a la cima de las montañas devorando todas las rocas que va encontrando a su paso. Una vez que alcanza la cumbre, baja rodando hasta la falda.</target>
+        </trans-unit>
+        <trans-unit id="Golem.Description" translate="yes" xml:space="preserve">
+          <source>Golem is known for rolling down from mountains. To prevent them from rolling into the homes of people downhill, grooves have been dug into the sides of mountains to serve as guideways for diverting this Pokémon’s course.</source>
+          <target state="final">Golem es conocido por su afición a bajar de las montañas rodando. La gente que vive en la falda de las mismas ha cavado surcos para conducirlo en su descenso por las laderas y evitar que se cuele en sus casas.</target>
+        </trans-unit>
+        <trans-unit id="Ponyta.Description" translate="yes" xml:space="preserve">
+          <source>Ponyta is very weak at birth. It can barely stand up. This Pokémon becomes stronger by stumbling and falling to keep up with its parent.</source>
+          <target state="final">Al nacer, Ponyta es muy débil y apenas puede ponerse en pie. Con todo, se va haciendo más fuerte al tropezarse y caerse en su intento por seguir a sus progenitores.</target>
+        </trans-unit>
+        <trans-unit id="Rapidash.Description" translate="yes" xml:space="preserve">
+          <source>Rapidash usually can be seen casually cantering in the fields and plains. However, when this Pokémon turns serious, its fiery manes flare and blaze as it gallops its way up to 150 mph.</source>
+          <target state="final">A Rapidash se le suele ver trotando sin rumbo fijo por los campos y llanos. Cuando tiene que ir a algún sitio en concreto, se le aviva el fuego de las melenas y emprende el galope llameante llegando a los 240 km/h.</target>
+        </trans-unit>
+        <trans-unit id="Slowpoke.Description" translate="yes" xml:space="preserve">
+          <source>Slowpoke uses its tail to catch prey by dipping it in water at the side of a river. However, this Pokémon often forgets what it’s doing and often spends entire days just loafing at water’s edge.</source>
+          <target state="final">Slowpoke usa la cola para atrapar a sus presas metiéndola bajo el agua en las riberas de los ríos. Con todo, es olvidadizo, se le puede pasar lo que estaba haciendo y quedarse días enteros holgazaneando en la orilla.</target>
+        </trans-unit>
+        <trans-unit id="Slowbro.Description" translate="yes" xml:space="preserve">
+          <source>Slowbro’s tail has a Shellder firmly attached with a bite. As a result, the tail can’t be used for fishing anymore. This causes Slowbro to grudgingly swim and catch prey instead.</source>
+          <target state="final">Slowbro lleva en la cola un Shellder enganchado, sujeto por los dientes. Como Slowbro no puede usar la cola para pescar, se mete en el agua de mala gana en busca de sus presas.</target>
+        </trans-unit>
+        <trans-unit id="Magnemite.Description" translate="yes" xml:space="preserve">
+          <source>Magnemite floats in the air by emitting electromagnetic waves from the units at its sides. These waves block gravity. This Pokémon becomes incapable of flight if its internal electrical supply is depleted.</source>
+          <target state="final">Magnemite flota en el aire emitiendo ondas electromagnéticas, a través de las unidades de las extremidades, que bloquean la gravedad. Si se agota su suministro de electricidad interno, es incapaz de mantenerse flotando.</target>
+        </trans-unit>
+        <trans-unit id="Magneton.Description" translate="yes" xml:space="preserve">
+          <source>Magneton emits a powerful magnetic force that is fatal to electronics and precision instruments. Because of this, it is said that some towns warn people to keep this Pokémon inside a Poké Ball.</source>
+          <target state="final">Magneton emite una fuerte energía magnética, fatal para los instrumentos electrónicos y de precisión. Este es el motivo por el que, dicen, mucha gente mantiene a este Pokémon en su Poké Ball.</target>
+        </trans-unit>
+        <trans-unit id="Farfetchd.Description" translate="yes" xml:space="preserve">
+          <source>Farfetch’d is always seen with a stalk from a plant of some sort. Apparently, there are good stalks and bad stalks. This Pokémon has been known to fight with others over stalks.</source>
+          <target state="final">Al parecer, entre los puerros que suelen llevar los Farfetch’d, los hay mejores y peores. A estos Pokémon se les ha visto luchar entre ellos por los mejores puerros.</target>
+        </trans-unit>
+        <trans-unit id="Doduo.Description" translate="yes" xml:space="preserve">
+          <source>Doduo’s two heads contain completely identical brains. A scientific study reported that on rare occasions, there will be examples of this Pokémon possessing different sets of brains.</source>
+          <target state="final">Doduo es un Pokémon bicéfalo de cerebros idénticos. Según un estudio científico, podría darse el extraño caso de que hubiera algún Doduo con cerebros distintos.</target>
+        </trans-unit>
+        <trans-unit id="Dodrio.Description" translate="yes" xml:space="preserve">
+          <source>Apparently, the heads aren’t the only parts of the body that Dodrio has three of. It has three sets of hearts and lungs as well, so it is capable of running long distances without rest.</source>
+          <target state="final">Según parece, las cabezas no son las únicas partes del cuerpo que tiene triplicadas. Dodrio también tiene tres corazones y tres pares de pulmones. Con esta constitución, puede correr largas distancias sin cansarse.</target>
+        </trans-unit>
+        <trans-unit id="Seel.Description" translate="yes" xml:space="preserve">
+          <source>Seel hunts for prey in the frigid sea underneath sheets of ice. When it needs to breathe, it punches a hole through the ice with the sharply protruding section of its head.</source>
+          <target state="final">Seel busca a sus presas en aguas heladas, bajo las capas de hielo. Cuando necesita respirar, abre un agujerito en el hielo con la afilada protuberancia que tiene encima de la cabeza.</target>
+        </trans-unit>
+        <trans-unit id="Dewgong.Description" translate="yes" xml:space="preserve">
+          <source>Dewgong loves to snooze on bitterly cold ice. The sight of this Pokémon sleeping on a glacier was mistakenly thought to be a mermaid by a mariner long ago.</source>
+          <target state="final">A Dewgong le encanta dormitar sobre la frialdad del hielo. Antiguamente, algún que otro marino lo confundió con una sirena al verlo dormido sobre un glaciar.</target>
+        </trans-unit>
+        <trans-unit id="Grimer.Description" translate="yes" xml:space="preserve">
+          <source>Grimer emerged from the sludge that settled on a polluted seabed. This Pokémon loves anything filthy. It constantly leaks a horribly germ-infested fluid from all over its body.</source>
+          <target state="final">Grimer emergió del lodo que se formó en una zona contaminada en el fondo del mar. A este Pokémon le encanta todo lo que sea suciedad. Emana continuamente por todo el cuerpo un horrible fluido contaminado por bacterias.</target>
+        </trans-unit>
+        <trans-unit id="Muk.Description" translate="yes" xml:space="preserve">
+          <source>This Pokémon’s favorite food is anything that is repugnantly filthy. In dirty towns where people think nothing of throwing away litter on the streets, Muk are certain to gather.</source>
+          <target state="final">A este Pokémon le encanta comer cosas repulsivas. En ciudades sucias en las que la gente tira la basura por la calle, los Muk tienen, sin duda, su punto de encuentro.</target>
+        </trans-unit>
+        <trans-unit id="Shellder.Description" translate="yes" xml:space="preserve">
+          <source>At night, this Pokémon uses its broad tongue to burrow a hole in the seafloor sand and then sleep in it. While it is sleeping, Shellder closes its shell, but leaves its tongue hanging out.</source>
+          <target state="final">Por la noche, este Pokémon usa la ancha lengua que tiene para hacer un agujero en el fondo del mar y echarse a dormir. Mientras duerme, Shellder cierra la concha, pero deja la lengua por fuera.</target>
+        </trans-unit>
+        <trans-unit id="Cloyster.Description" translate="yes" xml:space="preserve">
+          <source>Cloyster is capable of swimming in the sea. It does so by swallowing water, then jetting it out toward the rear. This Pokémon shoots spikes from its shell using the same system.</source>
+          <target state="final">Cloyster es capaz de nadar por el mar. Su técnica consiste en tragar agua y expulsarla por el conducto que tiene en la parte trasera. Este mismo sistema es el que usa para lanzar los pinchos que tiene alrededor de la concha.</target>
+        </trans-unit>
+        <trans-unit id="Gastly.Description" translate="yes" xml:space="preserve">
+          <source>Gastly is largely composed of gaseous matter. When exposed to a strong wind, the gaseous body quickly dwindles away. Groups of this Pokémon cluster under the eaves of houses to escape the ravages of wind.</source>
+          <target state="final">Gastly está compuesto en gran medida de materia gaseosa. Cuando hay viento, el aire arrastra parte de esta materia y el Pokémon mengua. Suelen agruparse bajo los aleros de las casas para resguardarse del viento.</target>
+        </trans-unit>
+        <trans-unit id="Haunter.Description" translate="yes" xml:space="preserve">
+          <source>Haunter is a dangerous Pokémon. If one beckons you while floating in darkness, you must never approach it. This Pokémon will try to lick you with its tongue and steal your life away.</source>
+          <target state="final">Haunter es un Pokémon peligroso. Si se ve alguno flotando en la oscuridad y haciendo señas, conviene no acercarse. Este Pokémon intentará robarle la energía a su presa a base de lametazos.</target>
+        </trans-unit>
+        <trans-unit id="Gengar.Description" translate="yes" xml:space="preserve">
+          <source>Sometimes, on a dark night, your shadow thrown by a streetlight will suddenly and startlingly overtake you. It is actually a Gengar running past you, pretending to be your shadow.</source>
+          <target state="final">Si alguien ve que su sombra le adelanta de repente en una noche oscura, es muy probable que lo que esté viendo no sea su sombra, sino a un Gengar haciéndose pasar por la misma.</target>
+        </trans-unit>
+        <trans-unit id="Onix.Description" translate="yes" xml:space="preserve">
+          <source>Onix has a magnet in its brain. It acts as a compass so that this Pokémon does not lose direction while it is tunneling. As it grows older, its body becomes increasingly rounder and smoother.</source>
+          <target state="final">Onix tiene un imán en el cerebro, que actúa como una brújula para no perder la orientación cuando está cavando túneles. A medida que crece, se le redondea y suaviza el cuerpo.</target>
+        </trans-unit>
+        <trans-unit id="Drowzee.Description" translate="yes" xml:space="preserve">
+          <source>If your nose becomes itchy while you are sleeping, it’s a sure sign that one of these Pokémon is standing above your pillow and trying to eat your dream through your nostrils.</source>
+          <target state="final">Si a alguien le pica la nariz mientras duerme, seguro que es porque tiene a uno de estos Pokémon cerca de la almohada intentando sacarle los sueños por la nariz para comérselos.</target>
+        </trans-unit>
+        <trans-unit id="Hypno.Description" translate="yes" xml:space="preserve">
+          <source>Hypno holds a pendulum in its hand. The arcing movement and glitter of the pendulum lull the foe into a deep state of hypnosis. While this Pokémon searches for prey, it polishes the pendulum.</source>
+          <target state="final">Hypno lleva un péndulo en la mano. El balanceo y el brillo que tiene sumen al rival en un estado de hipnosis profundo. Mientras busca a su presa, saca brillo al péndulo.</target>
+        </trans-unit>
+        <trans-unit id="Krabby.Description" translate="yes" xml:space="preserve">
+          <source>Krabby live on beaches, burrowed inside holes dug into the sand. On sandy beaches with little in the way of food, these Pokémon can be seen squabbling with each other over territory.</source>
+          <target state="final">Krabby vive en la playa, enterrado en agujeros en la arena. Cuando en las playas de arena fina escasea la comida, es común ver a estos Pokémon echando un pulso panza contra panza en defensa de su territorio.</target>
+        </trans-unit>
+        <trans-unit id="Kingler.Description" translate="yes" xml:space="preserve">
+          <source>Kingler has an enormous, oversized claw. It waves this huge claw in the air to communicate with others. However, because the claw is so heavy, the Pokémon quickly tires.</source>
+          <target state="final">Kingler tiene una pinza enorme y descomunal que usa agitándola en el aire para comunicarse con otros. Lo malo es que, al pesarle tanto, se cansa enseguida.</target>
+        </trans-unit>
+        <trans-unit id="Voltorb.Description" translate="yes" xml:space="preserve">
+          <source>Voltorb is extremely sensitive—it explodes at the slightest of shocks. It is rumored that it was first created when a Poké Ball was exposed to a powerful pulse of energy.</source>
+          <target state="final">Voltorb es tremendamente sensible y a la más mínima sacudida explota. Cuentan que se creó cuando alguien expuso una Poké Ball a una gran descarga eléctrica.</target>
+        </trans-unit>
+        <trans-unit id="Electrode.Description" translate="yes" xml:space="preserve">
+          <source>One of Electrode’s characteristics is its attraction to electricity. It is a problematical Pokémon that congregates mostly at electrical power plants to feed on electricity that has just been generated.</source>
+          <target state="final">Una de las características de Electrode es la atracción que siente hacia la electricidad. Son Pokémon problemáticos que suelen agruparse cerca de centrales eléctricas para nutrirse de la energía recién generada.</target>
+        </trans-unit>
+        <trans-unit id="Exeggcute.Description" translate="yes" xml:space="preserve">
+          <source>This Pokémon consists of six eggs that form a closely knit cluster. The six eggs attract each other and spin around. When cracks increasingly appear on the eggs, Exeggcute is close to evolution.</source>
+          <target state="final">Este Pokémon está compuesto de seis huevos que forman una tupida piña que va girando. Cuando se empiezan a resquebrajar las cáscaras, no hay duda de que Exeggcute está a punto de evolucionar.</target>
+        </trans-unit>
+        <trans-unit id="Exeggutor.Description" translate="yes" xml:space="preserve">
+          <source>Exeggutor originally came from the tropics. Its heads steadily grow larger from exposure to strong sunlight. It is said that when the heads fall off, they group together to form Exeggcute.</source>
+          <target state="final">Exeggutor es originario del trópico. Cuando se expone a un sol intenso, le empiezan a crecer las cabezas. Hay quien dice que, cuando las cabezas caen al suelo, se unen para formar un Exeggcute.</target>
+        </trans-unit>
+        <trans-unit id="Cubone.Description" translate="yes" xml:space="preserve">
+          <source>Cubone pines for the mother it will never see again. Seeing a likeness of its mother in the full moon, it cries. The stains on the skull the Pokémon wears are made by the tears it sheds.</source>
+          <target state="final">A Cubone le ahoga la pena porque no volverá a ver jamás a su madre. La luna le recuerda a veces a ella, y se pone a llorar. Los churretes que tiene en el cráneo que lleva puesto son debidos a las lágrimas que derrama.</target>
+        </trans-unit>
+        <trans-unit id="Marowak.Description" translate="yes" xml:space="preserve">
+          <source>Marowak is the evolved form of a Cubone that has overcome its sadness at the loss of its mother and grown tough. This Pokémon’s tempered and hardened spirit is not easily broken.</source>
+          <target state="final">Marowak es la forma evolucionada de Cubone. Es más fuerte porque ha superado la pena por la pérdida de su madre. El ánimo de este Pokémon, ya curtido y fortalecido, no es muy fácil de alterar.</target>
+        </trans-unit>
+        <trans-unit id="Hitmonlee.Description" translate="yes" xml:space="preserve">
+          <source>Hitmonlee’s legs freely contract and stretch. Using these springlike legs, it bowls over foes with devastating kicks. After battle, it rubs down its legs and loosens the muscles to overcome fatigue.</source>
+          <target state="final">Hitmonlee tiene la facilidad de encoger y estirar las patas. Con extremidades tan flexibles, propina unas patadas demoledoras. Tras la lucha, se masajea las piernas y relaja los músculos para descansar.</target>
+        </trans-unit>
+        <trans-unit id="Hitmonchan.Description" translate="yes" xml:space="preserve">
+          <source>Hitmonchan is said to possess the spirit of a boxer who had been working toward a world championship. This Pokémon has an indomitable spirit and will never give up in the face of adversity.</source>
+          <target state="final">Dicen que Hitmonchan tiene el mismo ímpetu que un boxeador entrenándose para un campeonato mundial. Este Pokémon tiene un espíritu indomable que nunca se doblega ante la adversidad.</target>
+        </trans-unit>
+        <trans-unit id="Lickitung.Description" translate="yes" xml:space="preserve">
+          <source>Whenever Lickitung comes across something new, it will unfailingly give it a lick. It does so because it memorizes things by texture and by taste. It is somewhat put off by sour things.</source>
+          <target state="final">Cada vez que Lickitung se encuentra con algo que no conoce, le da un lametazo. Es la forma que tiene de memorizar las cosas, por la textura y el sabor. No soporta los sabores ácidos.</target>
+        </trans-unit>
+        <trans-unit id="Koffing.Description" translate="yes" xml:space="preserve">
+          <source>Koffing embodies toxic substances. It mixes the toxins with raw garbage to set off a chemical reaction that results in a terribly powerful poison gas. The higher the temperature, the more gas is concocted by this Pokémon.</source>
+          <target state="final">Koffing contiene sustancias tóxicas que mezcla con desperdicios para provocar una reacción química que libera un gas tremendamente venenoso. A mayor temperatura, mayor será la cantidad de gas que cree este Pokémon.</target>
+        </trans-unit>
+        <trans-unit id="Weezing.Description" translate="yes" xml:space="preserve">
+          <source>Weezing alternately shrinks and inflates its twin bodies to mix together toxic gases inside. The more the gases are mixed, the more powerful the toxins become. The Pokémon also becomes more putrid.</source>
+          <target state="final">Weezing reduce y agranda el doble cuerpo que tiene para mezclar los gases tóxicos que contiene. Cuantos más gases mezcle, mayor será la toxicidad y el nivel de putrefacción del Pokémon.</target>
+        </trans-unit>
+        <trans-unit id="Rhyhorn.Description" translate="yes" xml:space="preserve">
+          <source>Rhyhorn’s brain is very small. It is so dense, while on a run it forgets why it started running in the first place. It apparently remembers sometimes if it demolishes something.</source>
+          <target state="final">Rhyhorn tiene un cerebro muy pequeño. Si se pone a correr, por ejemplo, se le olvida qué le llevó a hacerlo. Lo que sí parece recordar, a veces, es si ha destrozado alguna cosa.</target>
+        </trans-unit>
+        <trans-unit id="Rhydon.Description" translate="yes" xml:space="preserve">
+          <source>Rhydon has a horn that serves as a drill. It is used for destroying rocks and boulders. This Pokémon occasionally rams into streams of magma, but the armor-like hide prevents it from feeling the heat.</source>
+          <target state="final">Rhydon tiene un cuerno anillado que le sirve de taladro. Le resulta muy útil para horadar rocas y piedras. A veces, se queda atrapado en corrientes de magma, pero la tosca piel que tiene impide que sienta el calor.</target>
+        </trans-unit>
+        <trans-unit id="Chansey.Description" translate="yes" xml:space="preserve">
+          <source>Chansey lays nutritionally excellent eggs on an everyday basis. The eggs are so delicious, they are easily and eagerly devoured by even those people who have lost their appetite.</source>
+          <target state="final">Chansey pone a diario huevos con un valor nutritivo altísimo. Están tan ricos que hasta quien no tenga hambre se los comerá en un abrir y cerrar de ojos.</target>
+        </trans-unit>
+        <trans-unit id="Tangela.Description" translate="yes" xml:space="preserve">
+          <source>Tangela’s vines snap off easily if they are grabbed. This happens without pain, allowing it to make a quick getaway. The lost vines are replaced by newly grown vines the very next day.</source>
+          <target state="final">A Tangela se le desprenden los tentáculos con facilidad en cuanto se los agarras. Y no solo no le duele, sino que le resulta muy útil para escapar rápido. Además, al día siguiente le crecen otros.</target>
+        </trans-unit>
+        <trans-unit id="Kangaskhan.Description" translate="yes" xml:space="preserve">
+          <source>If you come across a young Kangaskhan playing by itself, you must never disturb it or attempt to catch it. The baby Pokémon’s parent is sure to be in the area, and it will become violently enraged at you.</source>
+          <target state="final">No es recomendable molestar ni intentar atrapar a crías de Kangaskhan mientras estén jugando, ya que seguro que su madre anda cerca y reaccionará con enfado y violencia.</target>
+        </trans-unit>
+        <trans-unit id="Horsea.Description" translate="yes" xml:space="preserve">
+          <source>If Horsea senses danger, it will reflexively spray a dense black ink from its mouth and try to escape. This Pokémon swims by cleverly flapping the fin on its back.</source>
+          <target state="final">Si Horsea siente peligro, echará por la boca una densa tinta negra inconscientemente e intentará huir. Este Pokémon nada muy bien batiendo la aleta que tiene en el lomo.</target>
+        </trans-unit>
+        <trans-unit id="Seadra.Description" translate="yes" xml:space="preserve">
+          <source>Seadra generates whirlpools by spinning its body. The whirlpools are strong enough to swallow even fishing boats. This Pokémon weakens prey with these currents, then swallows it whole.</source>
+          <target state="final">Seadra gira sobre sí mismo y crea unos remolinos lo suficientemente fuertes como para engullir barcos de pesca. Este Pokémon aprovecha las corrientes que crea para debilitar a su presa y tragársela de una vez.</target>
+        </trans-unit>
+        <trans-unit id="Goldeen.Description" translate="yes" xml:space="preserve">
+          <source>Goldeen loves swimming wild and free in rivers and ponds. If one of these Pokémon is placed in an aquarium, it will shatter even the thickest glass with one ram of its horn and make its escape.</source>
+          <target state="final">A Goldeen le encanta nadar libremente y a su aire en ríos y estanques. Si pones a uno de estos Pokémon en un acuario, usará el cuerno que tiene para romper las paredes, independientemente del grosor del cristal, y escapar.</target>
+        </trans-unit>
+        <trans-unit id="Seaking.Description" translate="yes" xml:space="preserve">
+          <source>Seaking is very protective of its eggs. The male and female will take turns patrolling around their nest and eggs. The guarding of eggs by these Pokémon goes on for over a month.</source>
+          <target state="final">Seaking protege sus huevos con uñas y dientes. Macho y hembra se turnan para vigilar el nido y los huevos. Este período de protección dura más de un mes en el caso de estos Pokémon.</target>
+        </trans-unit>
+        <trans-unit id="Staryu.Description" translate="yes" xml:space="preserve">
+          <source>Staryu apparently communicates with the stars in the night sky by flashing the red core at the center of its body. If parts of its body are torn, this Pokémon simply regenerates the missing pieces and limbs.</source>
+          <target state="final">Staryu parece comunicarse por la noche con las estrellas haciendo brillar el núcleo rojo de su cuerpo. Si este Pokémon sufre algún daño en alguna zona de su cuerpo, la regenerará sin problema.</target>
+        </trans-unit>
+        <trans-unit id="Starmie.Description" translate="yes" xml:space="preserve">
+          <source>Starmie swims through water by spinning its star-shaped body as if it were a propeller on a ship. The core at the center of this Pokémon’s body glows in seven colors.</source>
+          <target state="final">Starmie nada por el agua haciendo girar su cuerpo estrellado a modo de hélice. El núcleo de este Pokémon brilla y llega a tornarse de siete colores.</target>
+        </trans-unit>
+        <trans-unit id="MrMime.Description" translate="yes" xml:space="preserve">
+          <source>Mr. Mime is a master of pantomime. Its gestures and motions convince watchers that something unseeable actually exists. Once the watchers are convinced, the unseeable thing exists as if it were real.</source>
+          <target state="final">Mr. Mime es un experto en pantomima. Con sus gestos y movimientos es capaz de convencer a sus espectadores de que algo existe, cuando en realidad no es así. Pero, cuando el público se lo cree, las ilusiones se hacen realidad.</target>
+        </trans-unit>
+        <trans-unit id="Scyther.Description" translate="yes" xml:space="preserve">
+          <source>Scyther is blindingly fast. Its blazing speed enhances the effectiveness of the twin scythes on its forearms. This Pokémon’s scythes are so effective, they can slice through thick logs in one wicked stroke.</source>
+          <target state="final">Es espectacular ver lo rápido que es Scyther. Su increíble velocidad refuerza el efecto del par de guadañas que tiene en los brazos, que ya son de por sí contundentes; rebanan gruesos troncos de un tajo.</target>
+        </trans-unit>
+        <trans-unit id="Jynx.Description" translate="yes" xml:space="preserve">
+          <source>Jynx walks rhythmically, swaying and shaking its hips as if it were dancing. Its motions are so bouncingly alluring, people seeing it are compelled to shake their hips without giving any thought to what they are doing.</source>
+          <target state="final">Jynx camina con ritmo, balanceándose y moviendo las caderas como si estuviera bailando. Realiza unos movimientos tan vistosos y atractivos que no hay quien pueda resistirse a mover las caderas.</target>
+        </trans-unit>
+        <trans-unit id="Electabuzz.Description" translate="yes" xml:space="preserve">
+          <source>When a storm arrives, gangs of this Pokémon compete with each other to scale heights that are likely to be stricken by lightning bolts. Some towns use Electabuzz in place of lightning rods.</source>
+          <target state="final">Al desatarse una tormenta, bandadas de estos Pokémon se enfrentan entre sí para ver quién alcanza antes sitios altos en los que suelan caer rayos. Hay ciudades que usan Electabuzz en lugar de pararrayos.</target>
+        </trans-unit>
+        <trans-unit id="Magmar.Description" translate="yes" xml:space="preserve">
+          <source>In battle, Magmar blows out intensely hot flames from all over its body to intimidate its opponent. This Pokémon’s fiery bursts create heat waves that ignite grass and trees in its surroundings.</source>
+          <target state="final">Al luchar, Magmar expulsa violentas llamas por todo el cuerpo para intimidar a su rival. Estos estallidos de fuego crean ondas de calor que abrasan la hierba y los árboles que haya en las proximidades.</target>
+        </trans-unit>
+        <trans-unit id="Pinsir.Description" translate="yes" xml:space="preserve">
+          <source>Pinsir has a pair of massive horns. Protruding from the surface of these horns are thorns. These thorns are driven deeply into the foe’s body when the pincer closes, making it tough for the foe to escape.</source>
+          <target state="final">Pinsir tiene un par de cuernos imponentes recubiertos de pinchos, que se clavan en el cuerpo del rival. Una vez que los ha clavado, no hay quien escape de su abrazo.</target>
+        </trans-unit>
+        <trans-unit id="Tauros.Description" translate="yes" xml:space="preserve">
+          <source>This Pokémon is not satisfied unless it is rampaging at all times. If there is no opponent for Tauros to battle, it will charge at thick trees and knock them down to calm itself.</source>
+          <target state="final">Este Pokémon no está contento a menos que esté continuamente de aquí para allá. Si no hay rival que luche contra Tauros, se estampa contra árboles grandes para calmarse y los embiste para echarlos abajo.</target>
+        </trans-unit>
+        <trans-unit id="Magikarp.Description" translate="yes" xml:space="preserve">
+          <source>Magikarp is virtually useless in battle as it can only splash around. As a result, it is considered to be weak. However, it is actually a very hardy Pokémon that can survive in any body of water no matter how polluted it is.</source>
+          <target state="final">Magikarp es prácticamente inútil en combate; solo sirve para salpicar, y se le considera muy débil. Con todo, en realidad es un Pokémon muy resistente. Sobrevive en cualquier medio acuático, aunque esté contaminado.</target>
+        </trans-unit>
+        <trans-unit id="Gyarados.Description" translate="yes" xml:space="preserve">
+          <source>Once Gyarados goes on a rampage, its ferociously violent blood doesn’t calm until it has burned everything down. There are records of this Pokémon’s rampages lasting a whole month.</source>
+          <target state="final">Una vez que Gyarados se desmanda, la presión incontrolable y enrabiada de la sangre no se le calmará hasta que no haya quemado todo lo que le rodea. Según parece, a este Pokémon le duran los arranques de cólera hasta un mes.</target>
+        </trans-unit>
+        <trans-unit id="Lapras.Description" translate="yes" xml:space="preserve">
+          <source>People have driven Lapras almost to the point of extinction. In the evenings, this Pokémon is said to sing plaintively as it seeks what few others of its kind still remain.</source>
+          <target state="final">Por culpa de la gente, Lapras está casi en extinción. Dicen que, al anochecer, se pone a cantar quejicoso mientras busca a los miembros de su especie que puedan quedar.</target>
+        </trans-unit>
+        <trans-unit id="Ditto.Description" translate="yes" xml:space="preserve">
+          <source>Ditto rearranges its cell structure to transform itself into other shapes. However, if it tries to transform itself into something by relying on its memory, this Pokémon manages to get details wrong.</source>
+          <target state="final">Ditto reorganiza la estructura de sus células para adoptar otras formas. Pero, como intente transformarse en algo guiándose por los datos que tenga almacenados en la memoria, habrá detalles que se le escapen.</target>
+        </trans-unit>
+        <trans-unit id="Eevee.Description" translate="yes" xml:space="preserve">
+          <source>Eevee has an unstable genetic makeup that suddenly mutates due to the environment in which it lives. Radiation from various stones causes this Pokémon to evolve.</source>
+          <target state="final">La configuración genética de Eevee le permite mutar y adaptarse enseguida a cualquier medio en el que viva. La evolución de este Pokémon suele ser posible gracias a las radiaciones emitidas por varias piedras.</target>
+        </trans-unit>
+        <trans-unit id="Vaporeon.Description" translate="yes" xml:space="preserve">
+          <source>Vaporeon underwent a spontaneous mutation and grew fins and gills that allow it to live underwater. This Pokémon has the ability to freely control water.</source>
+          <target state="final">Vaporeon sufrió una mutación repentina y desarrolló aletas y branquias que le permiten vivir bajo el agua. Asimismo, este Pokémon tiene la habilidad de controlar las aguas.</target>
+        </trans-unit>
+        <trans-unit id="Jolteon.Description" translate="yes" xml:space="preserve">
+          <source>Jolteon’s cells generate a low level of electricity. This power is amplified by the static electricity of its fur, enabling the Pokémon to drop thunderbolts. The bristling fur is made of electrically charged needles.</source>
+          <target state="final">Las células de Jolteon generan un nivel bajo de electricidad, cuya intensidad aumenta con la electricidad estática que acumula en un pelaje formado por agujas cargadas de electricidad. Esta característica le permite lanzar rayos.</target>
+        </trans-unit>
+        <trans-unit id="Flareon.Description" translate="yes" xml:space="preserve">
+          <source>Flareon’s fluffy fur has a functional purpose—it releases heat into the air so that its body does not get excessively hot. This Pokémon’s body temperature can rise to a maximum of 1,650 degrees Fahrenheit.</source>
+          <target state="final">La suavidad del pelaje de Flareon tiene una función clara: libera calor para que el Pokémon no se asfixie. La temperatura corporal de este Pokémon puede alcanzar los 900 °C.</target>
+        </trans-unit>
+        <trans-unit id="Porygon.Description" translate="yes" xml:space="preserve">
+          <source>Porygon is capable of reverting itself entirely back to program data and entering cyberspace. This Pokémon is copy protected so it cannot be duplicated by copying.</source>
+          <target state="final">Porygon es capaz de convertirse otra vez en datos informáticos y de entrar en el ciberespacio. Tiene protección anticopia, así que es imposible duplicarlo.</target>
+        </trans-unit>
+        <trans-unit id="Omanyte.Description" translate="yes" xml:space="preserve">
+          <source>Omanyte is one of the ancient and long-since-extinct Pokémon that have been regenerated from fossils by people. If attacked by an enemy, it withdraws itself inside its hard shell.</source>
+          <target state="final">Omanyte es uno de esos Pokémon ancestrales que se extinguieron hace muchísimo tiempo y que la gente ha recuperado a partir de fósiles. Si un enemigo le ataca, se esconderá dentro de la dura concha que tiene.</target>
+        </trans-unit>
+        <trans-unit id="Omastar.Description" translate="yes" xml:space="preserve">
+          <source>Omastar uses its tentacles to capture its prey. It is believed to have become extinct because its shell grew too large and heavy, causing its movements to become too slow and ponderous.</source>
+          <target state="final">Omastar usa los tentáculos para atrapar a su presa. Se cree que el motivo de su extinción fue el tamaño y el peso que llegó a alcanzar la concha que lleva a cuestas, lo que le entorpeció y ralentizó los movimientos.</target>
+        </trans-unit>
+        <trans-unit id="Kabuto.Description" translate="yes" xml:space="preserve">
+          <source>Kabuto is a Pokémon that has been regenerated from a fossil. However, in extremely rare cases, living examples have been discovered. The Pokémon has not changed at all for 300 million years.</source>
+          <target state="final">Kabuto es un Pokémon regenerado a partir de un fósil, aunque, en raras ocasiones, se han encontrado casos de ejemplares vivos en estado salvaje. En 300 millones de años, este Pokémon no ha cambiado en nada.</target>
+        </trans-unit>
+        <trans-unit id="Kabutops.Description" translate="yes" xml:space="preserve">
+          <source>Kabutops swam underwater to hunt for its prey in ancient times. The Pokémon was apparently evolving from being a water dweller to living on land as evident from the beginnings of change in its gills and legs.</source>
+          <target state="final">Hace mucho tiempo, Kabutops buceaba para atrapar a sus presas. Parece ser que en algún momento cambió de hábitat y se adaptó a vivir en tierra firme. La transformación que se aprecia en las patas y branquias así lo confirma.</target>
+        </trans-unit>
+        <trans-unit id="Aerodactyl.Description" translate="yes" xml:space="preserve">
+          <source>Aerodactyl is a Pokémon from the age of dinosaurs. It was regenerated from genetic material extracted from amber. It is imagined to have been the king of the skies in ancient times.</source>
+          <target state="final">Los orígenes de Aerodactyl datan de la era de los dinosaurios. Se regeneró a partir de material genético contenido en ámbar. Se supone que fue el amo de los cielos en épocas pasadas.</target>
+        </trans-unit>
+        <trans-unit id="Snorlax.Description" translate="yes" xml:space="preserve">
+          <source>Snorlax’s typical day consists of nothing more than eating and sleeping. It is such a docile Pokémon that there are children who use its expansive belly as a place to play.</source>
+          <target state="final">Un día cualquiera en la vida de Snorlax consiste en comer y dormir. Es un Pokémon tan dócil que es fácil ver niños usando la gran panza que tiene como lugar de juegos.</target>
+        </trans-unit>
+        <trans-unit id="Articuno.Description" translate="yes" xml:space="preserve">
+          <source>Articuno is a legendary bird Pokémon that can control ice. The flapping of its wings chills the air. As a result, it is said that when this Pokémon flies, snow will fall.</source>
+          <target state="final">Articuno es un Pokémon pájaro legendario que puede controlar el hielo. El batir de sus alas congela el aire. Dicen que consigue hacer que nieve cuando vuela.</target>
+        </trans-unit>
+        <trans-unit id="Zapdos.Description" translate="yes" xml:space="preserve">
+          <source>Zapdos is a legendary bird Pokémon that has the ability to control electricity. It usually lives in thunderclouds. The Pokémon gains power if it is stricken by lightning bolts.</source>
+          <target state="final">Zapdos es un Pokémon pájaro legendario que tiene la habilidad de controlar la electricidad. Suele vivir en nubarrones. Este Pokémon gana mucha fuerza si le alcanzan los rayos.</target>
+        </trans-unit>
+        <trans-unit id="Moltres.Description" translate="yes" xml:space="preserve">
+          <source>Moltres is a legendary bird Pokémon that has the ability to control fire. If this Pokémon is injured, it is said to dip its body in the molten magma of a volcano to burn and heal itself.</source>
+          <target state="final">Moltres es un Pokémon pájaro legendario que tiene la habilidad de controlar el fuego. Dicen que, si resulta herido, se sumerge en el líquido magma de un volcán para arder y curarse.</target>
+        </trans-unit>
+        <trans-unit id="Dratini.Description" translate="yes" xml:space="preserve">
+          <source>Dratini continually molts and sloughs off its old skin. It does so because the life energy within its body steadily builds to reach uncontrollable levels.</source>
+          <target state="final">Dratini muda y se despoja de la vieja piel continuamente. Es algo que necesita hacer porque la energía que tiene en su interior no para de alcanzar niveles incontrolables.</target>
+        </trans-unit>
+        <trans-unit id="Dragonair.Description" translate="yes" xml:space="preserve">
+          <source>Dragonair stores an enormous amount of energy inside its body. It is said to alter weather conditions in its vicinity by discharging energy from the crystals on its neck and tail.</source>
+          <target state="final">Dragonair acumula grandes cantidades de energía dentro de sí. Dicen que altera el clima de la zona en la que está descargando energía a través de las esferas de cristal que tiene en el cuello y en la cola.</target>
+        </trans-unit>
+        <trans-unit id="Dragonite.Description" translate="yes" xml:space="preserve">
+          <source>Dragonite is capable of circling the globe in just 16 hours. It is a kindhearted Pokémon that leads lost and foundering ships in a storm to the safety of land.</source>
+          <target state="final">Dragonite es capaz de dar la vuelta al mundo en solo 16 horas. Es un Pokémon de buen corazón que guía hasta tierra a los barcos que se encuentran perdidos en plena tormenta y a punto de zozobrar.</target>
+        </trans-unit>
+        <trans-unit id="Mewtwo.Description" translate="yes" xml:space="preserve">
+          <source>Mewtwo is a Pokémon that was created by genetic manipulation. However, even though the scientific power of humans created this Pokémon’s body, they failed to endow Mewtwo with a compassionate heart.</source>
+          <target state="final">Mewtwo fue creado por manipulación genética. Pero, a pesar de que el hombre creó su cuerpo, dotar a Mewtwo de un corazón compasivo quedó en el olvido.</target>
+        </trans-unit>
+        <trans-unit id="Mew.Description" translate="yes" xml:space="preserve">
+          <source>Mew is said to possess the genetic composition of all Pokémon. It is capable of making itself invisible at will, so it entirely avoids notice even if it approaches people.</source>
+          <target state="final">Dicen que Mew posee el mapa genético de todos los Pokémon. Puede hacerse invisible cuando quiere, así que pasa desapercibido cada vez que se le acerca alguien.</target>
         </trans-unit>
       </group>
     </body>

@@ -254,6 +254,36 @@
   <data name="EggDetailTextBlock.Text" xml:space="preserve">
     <value>Use an incubator to incubate the Egg.</value>
   </data>
+  <data name="PokedexCaught.Text" xml:space="preserve">
+    <value>Caught:</value>
+  </data>
+  <data name="PokedexEvolutions.Text" xml:space="preserve">
+    <value>Evolutions</value>
+  </data>
+  <data name="PokedexPokemonHeight.Text" xml:space="preserve">
+    <value>Height:</value>
+  </data>
+  <data name="PokedexPokemonType.Text" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="PokedexPokemonWeight.Text" xml:space="preserve">
+    <value>Weight:</value>
+  </data>
+  <data name="PokedexSeen.Text" xml:space="preserve">
+    <value>Seen:</value>
+  </data>
+  <data name="PokedexText.Text" xml:space="preserve">
+    <value>POKÉDEX</value>
+  </data>
+  <data name="PokedexViewCaught.Text" xml:space="preserve">
+    <value>Caught</value>
+  </data>
+  <data name="PokedexViewSeen.Text" xml:space="preserve">
+    <value>Seen</value>
+  </data>
+  <data name="TimesTextBlock.Text" xml:space="preserve">
+    <value>times</value>
+  </data>
   <data name="SettingsLanguageRestartTextBlock.Text" xml:space="preserve">
     <value>You must restart the App to take effect.</value>
   </data>

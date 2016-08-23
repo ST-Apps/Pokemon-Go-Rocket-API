@@ -137,6 +137,9 @@
   <data name="PowerUpButton.Content" xml:space="preserve">
     <value>強化</value>
   </data>
+  <data name="SettingsRememberMapZoomTextBlock.Text" xml:space="preserve">
+    <value>記住地圖縮放</value>
+  </data>
   <data name="EggDetailButtonTextBlock.Text" xml:space="preserve">
     <value>開始孵蛋</value>
   </data>

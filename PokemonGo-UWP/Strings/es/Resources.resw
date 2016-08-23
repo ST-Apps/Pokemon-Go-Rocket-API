@@ -137,10 +137,7 @@
   <data name="PowerUpButton.Content" xml:space="preserve">
     <value>MÁS PODER</value>
   </data>
-  <data name="EggDetailButtonTextBlock.Text" xml:space="preserve">
-    <value>EMPEZAR INCUBACIÓN</value>
-  </data>
-  <data name="EggDetailTextBlock.Text" xml:space="preserve">
-    <value>Usa una incubadora para incubar este Huevo.</value>
+  <data name="SettingsRememberMapZoomTextBlock.Text" xml:space="preserve">
+    <value>Recordar zoom del mapa</value>
   </data>
 </root>

@@ -15,9 +15,6 @@
   <data name="CooldownTextBlock.Text" xml:space="preserve">
     <value>Вы должны немного подождать</value>
   </data>
-  <data name="GoogleLoginTextBlock.Text" xml:space="preserve">
-    <value>GOOGLE</value>
-  </data>
   <data name="InventoryFullTextBlock.Text" xml:space="preserve">
     <value>Ваш инвентарь полон!</value>
   </data>
@@ -25,13 +22,13 @@
     <value>ВОЙТИ через аккаунт PTC</value>
   </data>
   <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
-    <value>Для входа вам нужно ввести свой Логин/Почту и Пароль в это приложение. Если вы ему не доверяете, пожалуйста, закройте его. Мы не отвечаем за всё, что может случиться.</value>
+    <value>Чтобы войти, введите логин / пароль Email и выше. Если вы не доверяете этому приложению, пожалуйста, закройте его сейчас. Niantic может заблокировать вам аккаунт. Вы играете на свой риск.</value>
   </data>
   <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
     <value>рядом</value>
   </data>
   <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
-    <value>Вы находитесь вне зоны действия.</value>
+    <value>Этот покестоп слишком далеко</value>
   </data>
   <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
     <value>Пароль</value>
@@ -80,7 +77,7 @@
     <comment>Watch out: there is a space after the #</comment>
   </data>
   <data name="SlashSpaceCpTextBlock.Text" xml:space="preserve">
-    <value>/ Мощь</value>
+    <value>/ CP</value>
   </data>
   <data name="SpaceXpTextBlock.Text" xml:space="preserve">
     <value> ХП</value>
@@ -103,6 +100,9 @@
   <data name="IncubatorsTextBlock.Text" xml:space="preserve">
     <value>ИНКУБАТОРЫ</value>
   </data>
+  <data name="SettingsUseNianticMapTextBlock.Text" xml:space="preserve">
+    <value>Использовать карта Niantic Inc.</value>
+  </data>
   <data name="CandyTextBlock.Text" xml:space="preserve">
     <value>Конфета</value>
     <comment>Watch out: space before the word!</comment>
@@ -120,7 +120,7 @@
     <value>м</value>
   </data>
   <data name="StardustTextBlock.Text" xml:space="preserve">
-    <value>STARDUST</value>
+    <value>Звездная пыль</value>
   </data>
   <data name="TypeTextBlock.Text" xml:space="preserve">
     <value>Тип</value>
@@ -133,5 +133,32 @@
   </data>
   <data name="PowerUpButton.Content" xml:space="preserve">
     <value>Улучшить</value>
+  </data>
+  <data name="EggDetailButtonTextBlock.Text" xml:space="preserve">
+    <value>Начать инкубацию</value>
+  </data>
+  <data name="EggDetailTextBlock.Text" xml:space="preserve">
+    <value>Используйте инкубатор для яиц.</value>
+  </data>
+  <data name="SettingsRememberMapZoomTextBlock.Text" xml:space="preserve">
+    <value>Запоминать маштаб карты</value>
+  </data>
+  <data name="TransferTextBlock.Text" xml:space="preserve">
+    <value>Передать</value>
+  </data>
+  <data name="SettingsLanguageRestartTextBlock.Text" xml:space="preserve">
+    <value>Вы должны перезагузить приложение для получения эффекта.</value>
+  </data>
+  <data name="SettingsLanguageTextBlock.Text" xml:space="preserve">
+    <value>язык</value>
+  </data>
+  <data name="SettingsCompassEnabledTextBlock.Text" xml:space="preserve">
+    <value>Использовать компас</value>
+  </data>
+  <data name="SettingsLiveTileTextBlock.Text" xml:space="preserve">
+    <value>Живая плитка</value>
+  </data>
+  <data name="FavoriteTextBlock.Text" xml:space="preserve">
+    <value>Избранные</value>
   </data>
 </root>

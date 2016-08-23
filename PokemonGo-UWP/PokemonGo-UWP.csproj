@@ -11,8 +11,8 @@
     <AssemblyName>PokemonGo-UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
     <FileAlignment>512</FileAlignment>
@@ -214,9 +214,11 @@
     <Content Include="Assets\Icons\Footprint_Mid.png" />
     <Content Include="Assets\Icons\Footprint_Near.png" />
     <Content Include="Assets\Icons\FrontPortraitRing.png" />
+    <Content Include="Assets\Icons\ic_candy_light.png" />
     <Content Include="Assets\Icons\ic_combat.png" />
     <Content Include="Assets\Icons\ic_date.png" />
     <Content Include="Assets\Icons\ic_fav.png" />
+    <Content Include="Assets\Icons\ic_fav_light.png" />
     <Content Include="Assets\Icons\ic_health.png" />
     <Content Include="Assets\Icons\ic_name.png" />
     <Content Include="Assets\Icons\ic_number.png" />
@@ -539,6 +541,27 @@
     <PRIResource Include="Strings\zh-HK\PokemonTypes.resw" />
     <PRIResource Include="Strings\zh-CN\PokemonTypes.resw" />
     <PRIResource Include="Strings\en-US\PokemonTypes.resw" />
+    <PRIResource Include="Strings\tr\Pokedex.resw" />
+    <PRIResource Include="Strings\es\Pokedex.resw" />
+    <PRIResource Include="Strings\sk\Pokedex.resw" />
+    <PRIResource Include="Strings\ru\Pokedex.resw" />
+    <PRIResource Include="Strings\pt-PT\Pokedex.resw" />
+    <PRIResource Include="Strings\pt-BR\Pokedex.resw" />
+    <PRIResource Include="Strings\pl\Pokedex.resw" />
+    <PRIResource Include="Strings\ja\Pokedex.resw" />
+    <PRIResource Include="Strings\it\Pokedex.resw" />
+    <PRIResource Include="Strings\id\Pokedex.resw" />
+    <PRIResource Include="Strings\hu\Pokedex.resw" />
+    <PRIResource Include="Strings\el\Pokedex.resw" />
+    <PRIResource Include="Strings\de\Pokedex.resw" />
+    <PRIResource Include="Strings\fr\Pokedex.resw" />
+    <PRIResource Include="Strings\fi\Pokedex.resw" />
+    <PRIResource Include="Strings\nl\Pokedex.resw" />
+    <PRIResource Include="Strings\cs\Pokedex.resw" />
+    <PRIResource Include="Strings\zh-TW\Pokedex.resw" />
+    <PRIResource Include="Strings\zh-HK\Pokedex.resw" />
+    <PRIResource Include="Strings\zh-CN\Pokedex.resw" />
+    <PRIResource Include="Strings\en-US\Pokedex.resw" />
     <PRIResource Include="Strings\fi\Resources.resw" />
     <PRIResource Include="Strings\fi\PokemonMoves.resw" />
     <PRIResource Include="Strings\fi\Pokemon.resw" />
@@ -585,7 +608,9 @@
     <PRIResource Include="Strings\en-US\Achievements.resw" />
     <PRIResource Include="Strings\en-US\PokemonMoves.resw" />
     <PRIResource Include="Strings\en-US\Items.resw" />
-    <PRIResource Include="Strings\en-US\Resources.resw" />
+    <PRIResource Include="Strings\en-US\Resources.resw">
+      <SubType>Designer</SubType>
+    </PRIResource>
     <PRIResource Include="Strings\en-US\Pokemon.resw" />
     <PRIResource Include="Strings\es\Achievements.resw" />
     <PRIResource Include="Strings\es\CodeResources.resw" />
@@ -694,6 +719,7 @@
     <Compile Include="Utils\Achievements\GoldAttribute.cs" />
     <Compile Include="Utils\Achievements\AchievementType.cs" />
     <Compile Include="Utils\ApplicationKeys.cs" />
+    <Compile Include="Utils\Game\DataTemplateSelectors.cs" />
     <Compile Include="Utils\Game\FortDataStatus.cs" />
     <Compile Include="Utils\Helpers\AsyncSynchronisationContext.cs" />
     <Compile Include="Utils\Helpers\AudioUtils.cs" />
@@ -720,6 +746,9 @@
     <Compile Include="Utils\Settings\Settings.cs" />
     <Compile Include="Utils\Settings\SettingsService.cs" />
     <Compile Include="Utils\Game\SortingModes.cs" />
+    <Compile Include="Utils\Signature\DeviceInfosAndroid.cs" />
+    <Compile Include="Utils\Signature\DeviceInfosIOS.cs" />
+    <Compile Include="Utils\Signature\IDeviceInfoExtended.cs" />
     <Compile Include="Utils\Signature\UdidGenerator.cs" />
     <Compile Include="Utils\Game\UpdateManager.cs" />
     <Compile Include="Utils\Signature\Utilities.cs" />
@@ -728,6 +757,7 @@
     <Compile Include="ViewModels\GameMapPageViewModel.cs" />
     <Compile Include="ViewModels\AchievementDetailPageViewModel.cs" />
     <Compile Include="ViewModels\PlayerProfileViewModel.cs" />
+    <Compile Include="ViewModels\PokedexPageViewModel.cs" />
     <Compile Include="ViewModels\PokemonDetailsPageViewModel.cs" />
     <Compile Include="ViewModels\ItemsInventoryPageViewModel.cs" />
     <Compile Include="ViewModels\PokemonInventoryPageViewModel.cs" />
@@ -742,6 +772,9 @@
     </Compile>
     <Compile Include="Views\PlayerProfilePage.xaml.cs">
       <DependentUpon>PlayerProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PokedexPage.xaml.cs">
+      <DependentUpon>PokedexPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PokemonDetailPage.xaml.cs">
       <DependentUpon>PokemonDetailPage.xaml</DependentUpon>
@@ -829,6 +862,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\PokedexPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\PokemonDetailPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -881,11 +918,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <SDKReference Include="WindowsMobile, Version=10.0.10586.0">
-      <Name>Windows Mobile Extensions for the UWP</Name>
-    </SDKReference>
-  </ItemGroup>
-  <ItemGroup>
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.cs.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.de-CH.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.de.xlf" />
@@ -912,7 +944,11 @@
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.zh-HK.xlf" />
     <XliffResource Include="MultilingualResources\PokemonGo-UWP.zh-TW.xlf" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <SDKReference Include="WindowsMobile, Version=10.0.14393.0">
+      <Name>Windows Mobile Extensions for the UWP</Name>
+    </SDKReference>
+  </ItemGroup>
   <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

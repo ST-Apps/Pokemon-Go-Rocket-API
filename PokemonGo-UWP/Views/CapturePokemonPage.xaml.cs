@@ -114,6 +114,7 @@ namespace PokemonGo_UWP.Views
                                 }
                             }
                             CatchStarted.Begin();
+                            LaunchPokeballButton.IsEnabled = false;
                         }
                         else
                         {

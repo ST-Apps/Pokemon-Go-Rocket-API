@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:media="using:Microsoft.Xaml.Interactions.Media"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
     x:Name="Page"
@@ -185,8 +186,7 @@
 
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="ItemClick">
-                            <core:CallMethodAction MethodName="Begin"
-                                                   TargetObject="{Binding ElementName=HideInventoryMenuStoryboard}" />
+                            <media:ControlStoryboardAction Storyboard="{StaticResource HideInventoryMenuStoryboard}" />
                         </core:EventTriggerBehavior>
                     </interactivity:Interaction.Behaviors>
 
@@ -280,8 +280,7 @@
 
                     <interactivity:Interaction.Behaviors>
                         <core:EventTriggerBehavior EventName="Tapped">
-                            <core:CallMethodAction MethodName="Begin"
-                                                   TargetObject="{Binding ElementName=HideInventoryMenuStoryboard}" />
+                            <media:ControlStoryboardAction Storyboard="{StaticResource HideInventoryMenuStoryboard}" />
                         </core:EventTriggerBehavior>
                     </interactivity:Interaction.Behaviors>
 
@@ -348,9 +347,10 @@
                             <StackPanel Grid.Column="1"
                                         Orientation="Horizontal"
                                         HorizontalAlignment="Right">
-                                <Image Source="../Assets/UI/candy.png"
-                                       Stretch="Uniform"
-                                       Width="48" />
+                                <Image Margin="2,0"
+                                       HorizontalAlignment="Left"
+                                       Height="25"
+                                       Source="{Binding PokemonExtraData.Type, Converter={StaticResource PokemonFamilyToCandyImageConverter}}" />
                                 <TextBlock Text="{Binding CurrentCaptureAward.Candy[0]}"
                                            Margin="8,0,0,0"
                                            VerticalAlignment="Center" />
@@ -523,8 +523,7 @@
 
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="Tapped">
-                    <core:CallMethodAction MethodName="Begin"
-                                           TargetObject="{Binding ElementName=ShowInventoryMenuStoryboard}" />
+                    <media:ControlStoryboardAction Storyboard="{StaticResource ShowInventoryMenuStoryboard}" />
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
 

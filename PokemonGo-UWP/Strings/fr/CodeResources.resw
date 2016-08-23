@@ -176,4 +176,7 @@ Ouvrir la page avec les fichiers d'installation pour une installation manuelle ?
   <data name="PokemonInventoryFullText" xml:space="preserve">
     <value>Ton inventaire Pokémon est plein, transfert des Pokémon avant d'essayer d'en capturer {0}.</value>
   </data>
+  <data name="WaitingForNetworkText" xml:space="preserve">
+    <value>En attente du retour du réseau...</value>
+  </data>
 </root>

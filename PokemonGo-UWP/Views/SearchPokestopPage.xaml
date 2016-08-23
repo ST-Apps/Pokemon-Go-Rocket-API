@@ -217,8 +217,8 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Image Grid.Column="0" Source="../Assets/Items/Egg.png" Height="50" />
-                <TextBlock Grid.Column="1" Text="{Binding CurrentSearchResponse.PokemonDataEgg.PokemonId}"
-                           Style="{StaticResource TextNormal}" FontWeight="Bold" HorizontalAlignment="Right" />
+                <!--<TextBlock Grid.Column="1" Text="{Binding CurrentSearchResponse.PokemonDataEgg.PokemonId}"
+                           Style="{StaticResource TextNormal}" FontWeight="Bold" HorizontalAlignment="Right" />-->
             </Grid>
             <Button Grid.Row="3"
                     x:Name="loginButton"

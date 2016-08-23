@@ -13,6 +13,9 @@
                 <ResourceDictionary Source="Styles\Custom.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
+            <utils:PokemonTypeToBackgroundImageConverter x:Key="PokemonTypeToBackgroundConverter"/>
+            <utils:PokemonIdToPokedexDescription x:Key="PokemonIdToPokedexDescription"/>
+            <utils:PokemonIdToNumericId x:Key="PokemonIdToNumericId" />
             <utils:PokemonIdToPokemonSpriteConverter x:Key="PokemonIdToPokemonSpriteConverter" />
             <utils:PokemonTypeTranslationConverter x:Key="PokemonTypeTranslationConverter" />
             <utils:EmptyConverter x:Key="EmptyConverter" />
@@ -66,7 +69,8 @@
             <utils:InverseVisibleWhenTypeIsNotNoneConverter x:Key="InverseVisibleWhenTypeIsNotNoneConverter"/>
             <utils:PokemonDataToCapturedGepositionConverter x:Key="PokemonDataToCapturedGepositionConverter"/>
             <utils:AchievementDescriptionTranslationConverter x:Key="AchievementDescriptionTranslationConverter"/>
-            
+            <utils:PokemonPivotHeaderToVisibleConverter x:Key="PokemonPivotHeaderToVisibleConverter" />
+            <utils:WidthConverter x:Key="WidthConverter" />
 
             <converters:ValueWhenConverter x:Key="EnabledWhenHasElementsConverter">
                 <converters:ValueWhenConverter.When>

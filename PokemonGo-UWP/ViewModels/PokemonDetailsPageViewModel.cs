@@ -15,6 +15,7 @@ using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Navigation;
 using Newtonsoft.Json;
+using Google.Protobuf;
 
 namespace PokemonGo_UWP.ViewModels
 {
@@ -64,7 +65,7 @@ namespace PokemonGo_UWP.ViewModels
                 // Recovering the state
               
                 CurrentPokemon = JsonConvert.DeserializeObject<PokemonDataWrapper>((string)suspensionState[nameof(CurrentPokemon)]);
-                PlayerProfile = JsonConvert.DeserializeObject<PlayerData>((string)suspensionState[nameof(PlayerProfile)]);
+                PlayerProfile.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(PlayerProfile)]).CreateCodedInput());
             }
             else
             {
@@ -86,7 +87,7 @@ namespace PokemonGo_UWP.ViewModels
             if (suspending)
             {
                 suspensionState[nameof(CurrentPokemon)] = JsonConvert.SerializeObject(CurrentPokemon);
-                suspensionState[nameof(PlayerProfile)] = JsonConvert.SerializeObject(PlayerProfile);
+                suspensionState[nameof(PlayerProfile)] = PlayerProfile.ToByteString().ToBase64();
             }
             await Task.CompletedTask;
         }
@@ -433,7 +434,14 @@ namespace PokemonGo_UWP.ViewModels
                 default:
                     throw new ArgumentOutOfRangeException();
             }
-        }, () => CurrentCandy != null && StardustAmount >= StardustToPowerUp && CurrentCandy.Candy_ >= CandiesToPowerUp));
+        }, CanPowerUp));
+
+        private bool CanPowerUp()
+        {
+            if (CurrentPokemon == null) return false;
+            var pokemonLevel = PokemonInfo.GetLevel(CurrentPokemon.WrappedData);
+            return CurrentCandy != null && StardustAmount >= StardustToPowerUp && CurrentCandy.Candy_ >= CandiesToPowerUp && pokemonLevel < GameClient.PlayerStats.Level + 1.5;
+        }
 
         #endregion
 

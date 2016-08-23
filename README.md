@@ -3,7 +3,7 @@ You can find the installation file for PoGo in [Releases](https://github.com/ST-
 
 # PoGo for Windows 10
 
-Check [Wiki](https://github.com/ST-Apps/PoGo-UWP/wiki) for information about the project, installing instructions and more.
+Check [Wiki](https://github.com/ST-Apps/PoGo-UWP/wiki) for information about the project, installing instructions and more in different language.
 
 # Social
 
