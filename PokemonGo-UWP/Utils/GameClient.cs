@@ -222,6 +222,11 @@ namespace PokemonGo_UWP.Utils
         /// </summary>
         public static ObservableCollection<LuredPokemon> LuredPokemons { get; set; } = new ObservableCollection<LuredPokemon>();
 
+	/// <summary> 
+        ///     Collection of Gyms in the current area 
+        /// </summary> 
+        public static ObservableCollection<FortDataWrapper> NearbyGyms { get; set; } = new ObservableCollection<FortDataWrapper>();
+
         /// <summary>
         ///     Collection of Pokestops in the current area
         /// </summary>
@@ -474,6 +479,7 @@ namespace PokemonGo_UWP.Utils
             CatchablePokemons?.Clear();
             NearbyPokemons?.Clear();
             NearbyPokestops?.Clear();
+            NearbyGyms?.Clear();
         }
 
 		#endregion
@@ -616,13 +622,17 @@ namespace PokemonGo_UWP.Utils
             // for this collection the ordering is important, so we follow a slightly different update mechanism
             NearbyPokemons.UpdateByIndexWith(newNearByPokemons, x => new NearbyPokemonWrapper(x));
 
-            // update poke stops on map (gyms are ignored for now)
+            // update poke stops on map 
             var newPokeStops = mapObjects.Item1.MapCells
                 .SelectMany(x => x.Forts)
                 .Where(x => x.Type == FortType.Checkpoint)
                 .ToArray();            
             Logger.Write($"Found {newPokeStops.Length} nearby PokeStops");
             NearbyPokestops.UpdateWith(newPokeStops, x => new FortDataWrapper(x), (x, y) => x.Id == y.Id);
+            
+            // update gyms on map 
+            var newGyms = mapObjects.Item1.MapCells.SelectMany(x => x.Forts).Where(x => x.Type == FortType.Gym).ToArray();
+            Logger.Write($"Found {newGyms.Length} nearby Gyms"); NearbyGyms.UpdateWith(newGyms, x => new FortDataWrapper(x), (x, y) => x.Id == y.Id);
 
             // Update LuredPokemon
             var newLuredPokemon = newPokeStops.Where(item => item.LureInfo != null).Select(item => new LuredPokemon(item.LureInfo, item.Latitude, item.Longitude)).ToArray();
@@ -977,6 +987,65 @@ namespace PokemonGo_UWP.Utils
             return await _client.Fort.SearchFort(pokestopId, latitude, longitude);
         }
 
+        #endregion
+
+	#region Gym Handling 
+        /// <summary> 
+        ///     Gets the details for the given Gym 
+        /// </summary> 
+        /// <param name="gymid"></param> 
+        /// <param name="latitude"></param> 
+        /// <param name="longitude"></param> 
+        /// <returns></returns> 
+        public static async Task<GetGymDetailsResponse> GetGymDetails(string gymid, double latitude, double longitude)
+        { 
+            return await _client.Fort.GetGymDetails(gymid, latitude, longitude); 
+        } 
+        /// <summary> 
+        ///     Attacks a Gym 
+        /// </summary> 
+        /// <param name="fortId"></param> 
+        /// <param name="battleId"></param> 
+        /// <param name="battleActions"></param> 
+        /// <param name="lastRetrievedAction"></param> 
+        /// <returns></returns> 
+        public static async Task<AttackGymResponse> AttackGym(string fortId, string battleId, List<BattleAction> battleActions, BattleAction lastRetrievedAction)
+        { 
+            return await _client.Fort.AttackGym(fortId, battleId, battleActions, lastRetrievedAction); 
+        } 
+ 
+        /// <summary> 
+        ///     Deploy a Pokemon to a Gym 
+        /// </summary> 
+        /// <param name="fortId"></param> 
+        /// <param name="pokemonId"></param> 
+        /// <returns></returns> 
+        public static async Task<FortDeployPokemonResponse> FortDeployPokemon(string fortId, ulong pokemonId)
+        { 
+            return await _client.Fort.FortDeployPokemon(fortId, pokemonId); 
+        } 
+ 
+        /// <summary> 
+        ///     Recall a Pokemon from a Gym 
+        /// </summary> 
+        /// <param name="fortId"></param> 
+        /// <param name="pokemonId"></param> 
+        /// <returns></returns> 
+        public static async Task<FortRecallPokemonResponse> FortRecallPokemon(string fortId, ulong pokemonId)
+        { 
+            return await _client.Fort.FortRecallPokemon(fortId, pokemonId); 
+        } 
+        /// <summary> 
+        ///     Start a Gym battle 
+        /// </summary> 
+        /// <param name="gymId"></param> 
+        /// <param name="defendingPokemonId"></param> 
+        /// <param name="attackingPokemonIds"></param> 
+        /// <returns></returns> 
+        public static async Task<StartGymBattleResponse> StartGymBattle(string gymId, ulong defendingPokemonId, IEnumerable<ulong> attackingPokemonIds)
+        { 
+            return await _client.Fort.StartGymBattle(gymId, defendingPokemonId, attackingPokemonIds); 
+        } 
         #endregion
 
         #region Eggs Handling
