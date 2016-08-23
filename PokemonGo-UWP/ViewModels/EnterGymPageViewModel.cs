@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -15,6 +15,7 @@ using Template10.Mvvm;
 using Template10.Services.NavigationService;
 using Universal_Authenticator_v2.Views;
 using Newtonsoft.Json;
+using Google.Protobuf;
 
 namespace PokemonGo_UWP.ViewModels
 {
@@ -35,8 +36,8 @@ namespace PokemonGo_UWP.ViewModels
             {
                 // Recovering the state
                 CurrentGym = JsonConvert.DeserializeObject<FortDataWrapper>((string)suspensionState[nameof(CurrentGym)]);
-                CurrentGymInfo = JsonConvert.DeserializeObject<GetGymDetailsResponse>((string)suspensionState[nameof(CurrentGymInfo)]);
-                CurrentEnterResponse = JsonConvert.DeserializeObject<GetGymDetailsResponse>((string)suspensionState[nameof(CurrentEnterResponse)]);
+                CurrentGymInfo.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(CurrentGymInfo)]));
+                CurrentEnterResponse.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(_currentEnterResponse)]));
             }
             else
             {
@@ -62,8 +63,8 @@ namespace PokemonGo_UWP.ViewModels
             if (suspending)
             {
                 suspensionState[nameof(CurrentGym)] = JsonConvert.SerializeObject(CurrentGym);
-                suspensionState[nameof(CurrentGymInfo)] = JsonConvert.SerializeObject(CurrentGymInfo);
-                suspensionState[nameof(CurrentEnterResponse)] = JsonConvert.SerializeObject(CurrentEnterResponse);
+                suspensionState[nameof(CurrentGymInfo)] = CurrentGymInfo.ToByteString().ToBase64();
+                suspensionState[nameof(CurrentEnterResponse)] = CurrentEnterResponse.ToByteString().ToBase64();
             }
             await Task.CompletedTask;
         }
