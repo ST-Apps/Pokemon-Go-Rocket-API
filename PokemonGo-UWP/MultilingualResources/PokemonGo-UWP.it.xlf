@@ -305,7 +305,7 @@
         </trans-unit>
         <trans-unit id="UpdateDownloadingText" translate="yes" xml:space="preserve">
           <source>Downloading update {0}</source>
-          <target state="final">Scarimaneto Aggiornamento {0}</target>
+          <target state="final">Scaricamento Aggiornamento {0}</target>
         </trans-unit>
         <trans-unit id="UpdatedVersionText" translate="yes" xml:space="preserve">
           <source>An updated version {0} is available. Do you want to update?
@@ -2615,7 +2615,7 @@ Vuoi aprire la pagina con il file di installazione per l'installazione manuale?<
         </trans-unit>
         <trans-unit id="Slowpoke.Description" translate="yes" xml:space="preserve">
           <source>Slowpoke uses its tail to catch prey by dipping it in water at the side of a river. However, this Pokémon often forgets what it’s doing and often spends entire days just loafing at water’s edge.</source>
-          <target state="final">Slowpoke usa la coda per pescare la preda, immergendola in acqua dalle rive dei fiumi. Tuttavia, spesso dimentica cosa stava facendo e trascorre giorni interi a ciondolare vicino ai corsi d’acqua.</target>
+          <target state="translated">Slowpoke usa la coda per pescare la preda, immergendola in acqua dalle rive dei fiumi. Tuttavia, spesso dimentica cosa stava facendo e trascorre giorni interi a ciondolare vicino ai corsi d’acqua.</target>
         </trans-unit>
         <trans-unit id="Slowbro.Description" translate="yes" xml:space="preserve">
           <source>Slowbro’s tail has a Shellder firmly attached with a bite. As a result, the tail can’t be used for fishing anymore. This causes Slowbro to grudgingly swim and catch prey instead.</source>
