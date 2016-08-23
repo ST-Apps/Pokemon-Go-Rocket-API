@@ -40,6 +40,14 @@ namespace PokemonGo_UWP.Utils
         }
 
         #endregion
+        #region C#
+        
+        public static string Convert(object value)
+        {
+            return Resources.Pokemon.GetString(value.ToString());
+        }
+        
+        #endregion
     }
 
     public class PokemonIdToPokemonSpriteConverter : IValueConverter
