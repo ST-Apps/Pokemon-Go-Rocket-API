@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -18,7 +18,7 @@ namespace PokemonGo_UWP.Views
             Loaded += (s, e) =>
             {
                 // Of course binding doesn't work so we need to manually setup height for animations
-                // TODO: Set up height for animations
+                // TO-DO: Set up height for animations
             };
         }
 
@@ -46,7 +46,7 @@ namespace PokemonGo_UWP.Views
             ViewModel.EnterOutOfRange += GameManagerViewModelOnEnterOutOfRange;
             ViewModel.EnterSuccess += GameManagerViewModelOnEnterSuccess;
 
-            // TODO: What after the enter succeeded
+            // TO-DO: What after the enter succeeded
         }
 
         private void UnsubscribeToEnterEvents()
