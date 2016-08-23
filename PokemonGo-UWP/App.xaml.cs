@@ -156,16 +156,18 @@ namespace PokemonGo_UWP
             {
                 Utils.Helpers.BandHelper.Instance.Vibrate(Microsoft.Band.Notifications.VibrationType.NotificationOneTone);
 
-                var newList = e.NewItems;
-                
-                foreach (var item in e.OldItems)
+                try
                 {
-                    newList.Remove(item);
-                }
+                    var newList = e.NewItems.Cast<MapPokemonWrapper>().ToList();
 
-                foreach (MapPokemonWrapper item in newList )
+                    foreach (MapPokemonWrapper item in newList)
+                    {
+                        Utils.Helpers.BandHelper.Instance.SendMessage("New Pokemon", "A wild " + item.PokemonId.ToString() + " has appeared!");
+                    }
+                }
+                catch 
                 {
-                    Utils.Helpers.BandHelper.Instance.SendMessage("New Pokemon", "A wild " + item.PokemonId.ToString() + " has appeared!");
+                    
                 }
             }
             AudioUtils.PlaySound(AudioUtils.POKEMON_FOUND_DING);
