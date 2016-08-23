@@ -162,7 +162,7 @@ namespace PokemonGo_UWP.ViewModels
 
         #region Gym Events
 
-        /// TODO: Events fired 
+        /// TO-DO: Events fired 
         /// <summary>
         ///     Event fired if the user was able to enter the Gym
         /// </summary>
@@ -202,7 +202,7 @@ namespace PokemonGo_UWP.ViewModels
                         // Success, we play the animation and update inventory
                         Logger.Write("Entering Gym success");
 
-                        // TODO: What to do when we are in the Gym?
+                        // TO-DO: What to do when we are in the Gym?
                         EnterSuccess?.Invoke(this, null);
                         await GameClient.UpdateInventory();
                         break;
