@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System;
 using System.Linq;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
@@ -17,70 +18,73 @@ namespace PokemonGo_UWP.Views
     ///     An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class PokemonInventoryPage : Page
-	{
-		public PokemonInventoryPage()
-		{
-			InitializeComponent();
+    {
+        public PokemonInventoryPage()
+        {
+            InitializeComponent();
 
-			NavigationCacheMode = NavigationCacheMode.Enabled;
+            NavigationCacheMode = NavigationCacheMode.Enabled;
 
-			// TODO: fix header
-			// Setup incubators translation
-			Loaded += (s, e) =>
-			{
-				ShowIncubatorsModalAnimation.From =
-									HideIncubatorsModalAnimation.To = IncubatorsModal.ActualHeight;
-				HideIncubatorsModalStoryboard.Completed += (ss, ee) => { IncubatorsModal.IsModal = false; };
-			};
+            // TODO: fix header
+            // Setup incubators translation
+            Loaded += (s, e) =>
+            {
+                ShowIncubatorsModalAnimation.From =
+                                    HideIncubatorsModalAnimation.To = IncubatorsModal.ActualHeight;
+                HideIncubatorsModalStoryboard.Completed += (ss, ee) => { IncubatorsModal.IsModal = false; };
+            };
 
-		    ViewModel.ResetView +=
-		        () =>
-		        {
-		            if (ViewModel.PokemonInventory != null && ViewModel.PokemonInventory.Count > 0)
-		                PokemonInventoryGridView?.ScrollIntoView(ViewModel.PokemonInventory[ViewModel.LastVisibleIndex]);
-		        };
-		}
+            ViewModel.ResetView +=
+                () =>
+                {
+                    if (ViewModel.PokemonInventory != null && ViewModel.PokemonInventory.Count > 0)
+                    {
+                        var index = Math.Min(ViewModel.LastVisibleIndex, ViewModel.PokemonInventory.Count - 1);
+                        PokemonInventoryGridView?.ScrollIntoView(ViewModel.PokemonInventory[index]);
+                    }
+                };
+        }
 
         private void ToggleIncubatorModel(object sender, TappedRoutedEventArgs e)
-		{
-			if (IncubatorsModal.IsModal)
-			{
-				HideIncubatorsModalStoryboard.Begin();
-			}
-			else
-			{
-				IncubatorsModal.IsModal = true;
-				ShowIncubatorsModalStoryboard.Begin();
-			}
-		}
+        {
+            if (IncubatorsModal.IsModal)
+            {
+                HideIncubatorsModalStoryboard.Begin();
+            }
+            else
+            {
+                IncubatorsModal.IsModal = true;
+                ShowIncubatorsModalStoryboard.Begin();
+            }
+        }
 
-		#region Overrides of Page
+        #region Overrides of Page
 
-		protected override void OnNavigatedTo(NavigationEventArgs e)
-		{
-			base.OnNavigatedTo(e);
-			SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
-		}
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
+        }
 
-		protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
-		{
-			base.OnNavigatingFrom(e);
-			SystemNavigationManager.GetForCurrentView().BackRequested -= OnBackRequested;
+        protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
+        {
+            base.OnNavigatingFrom(e);
+            SystemNavigationManager.GetForCurrentView().BackRequested -= OnBackRequested;
 
-		    if (NavigationHelper.NavigationState.ContainsKey("LastSelectedID"))
-		    {
-		        var lastSelectedId = (ulong) NavigationHelper.NavigationState["LastSelectedID"];
+            if (NavigationHelper.NavigationState.ContainsKey("LastSelectedID"))
+            {
+                var lastSelectedId = (ulong)NavigationHelper.NavigationState["LastSelectedID"];
 
-		        var pokemonList = ViewModel.PokemonInventory;
-		        var pokemon = pokemonList
-		            .FirstOrDefault(i => i.Id == lastSelectedId);
-		        var index = pokemonList
-		            .IndexOf(pokemon);
-		        ViewModel.LastVisibleIndex = index;
-		    }
-		    else
+                var pokemonList = ViewModel.PokemonInventory;
+                var pokemon = pokemonList
+                    .FirstOrDefault(i => i.Id == lastSelectedId);
+                var index = pokemonList
+                    .IndexOf(pokemon);
+                ViewModel.LastVisibleIndex = index;
+            }
+            else
                 ViewModel.LastVisibleIndex = 0;
-		}
+        }
 
         private void OnBackRequested(object sender, BackRequestedEventArgs backRequestedEventArgs)
         {
@@ -92,25 +96,25 @@ namespace PokemonGo_UWP.Views
         #endregion
 
         private void SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
+        {
 
-			//SortingButton.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-			//IncubatorButton.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            //SortingButton.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            //IncubatorButton.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
 
-			//switch (((Pivot)sender).SelectedIndex)
-			//{
-			//	case 0:
-			//		SortingButton.Visibility = Windows.UI.Xaml.Visibility.Visible;
-			//		break;
+            //switch (((Pivot)sender).SelectedIndex)
+            //{
+            //	case 0:
+            //		SortingButton.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            //		break;
 
-			//	case 1:
-			//		IncubatorButton.Visibility = Windows.UI.Xaml.Visibility.Visible;
-			//		break;
-			//}
-		}
+            //	case 1:
+            //		IncubatorButton.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            //		break;
+            //}
+        }
 
-		private void GridViewPokemonSizeChanged(object sender, SizeChangedEventArgs e)
-		{
+        private void GridViewPokemonSizeChanged(object sender, SizeChangedEventArgs e)
+        {
             if (e.PreviousSize != e.NewSize)
             {
                 var panel_threads = (ItemsWrapGrid)PokemonInventoryGridView.ItemsPanelRoot;
@@ -118,13 +122,13 @@ namespace PokemonGo_UWP.Views
             }
         }
 
-		private void GridViewEggsSizeChanged(object sender, SizeChangedEventArgs e)
-		{
-			if (e.PreviousSize != e.NewSize)
-			{
-				var panel_threads = (ItemsWrapGrid)EggsInventoryGridView.ItemsPanelRoot;
-				panel_threads.ItemWidth = e.NewSize.Width / 4;
-			}
-		}
-	}
+        private void GridViewEggsSizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (e.PreviousSize != e.NewSize)
+            {
+                var panel_threads = (ItemsWrapGrid)EggsInventoryGridView.ItemsPanelRoot;
+                panel_threads.ItemWidth = e.NewSize.Width / 4;
+            }
+        }
+    }
 }
