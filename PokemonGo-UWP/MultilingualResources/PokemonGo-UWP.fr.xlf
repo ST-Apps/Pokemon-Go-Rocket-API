@@ -493,8 +493,10 @@ Ouvrir la page avec les fichiers d'installation pour une installation manuelle ?
           <target state="translated">En attente du retour du réseau...</target>
         </trans-unit>
         <trans-unit id="EggHatchMessage" translate="yes" xml:space="preserve">
-          <source>An Egg hatched into a {0}.\nYou also got {1} Stardust, {2} Cany and {3} XP.</source>
-          <target state="translated">Un oeuf à éclos en {0}.\nTu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
+          <source>An Egg hatched into a {0}.
+You also got {1} Stardust, {2} Candy and {3} XP.</source>
+          <target state="translated">Un oeuf à éclos en {0}.
+Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
       </group>
     </body>
