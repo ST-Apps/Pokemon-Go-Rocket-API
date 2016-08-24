@@ -35,5 +35,7 @@
     <rescap:Capability Name="packageQuery" />
     <wincap:Capability Name="packageManagement" />
     <DeviceCapability Name="location" />
+    <DeviceCapability Name="bluetooth" />
+    <DeviceCapability Name="proximity" />
   </Capabilities>
 </Package>

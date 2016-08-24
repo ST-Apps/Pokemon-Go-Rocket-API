@@ -7,6 +7,7 @@ using System.Linq;
 using Template10.Mvvm;
 using Windows.ApplicationModel.Resources.Core;
 using Windows.Storage;
+using Windows.UI.Popups;
 
 namespace PokemonGo_UWP.ViewModels
 {
@@ -69,6 +70,19 @@ namespace PokemonGo_UWP.ViewModels
         {
             get { return SettingsService.Instance.IsVibrationEnabled; }
             set { SettingsService.Instance.IsVibrationEnabled = value; }
+        }
+
+        /// <summary>
+        ///     Whether the player wants band integration (Currently only vibration)
+        /// </summary>
+        public bool HasBandConnection
+        {
+            get { return SettingsService.Instance.HasBandConnection; }
+            set
+            {
+                SettingsService.Instance.HasBandConnection = value;
+                HandleBandConnectionChange(value);
+            }
         }
 
         /// <summary>
@@ -186,6 +200,55 @@ namespace PokemonGo_UWP.ViewModels
                 }
             }));
 
+        #endregion
+
+        #region Band
+        private async void HandleBandConnectionChange(bool val)
+        {
+            if (val)
+            {
+                if ( await Utils.Helpers.BandHelper.Instance.GetPairedBandsCount() == 0 )
+                {
+                    var dlg = new MessageDialog("Unable to find any paired Microsoft Bands. Please pair your device and try again.");
+                    await dlg.ShowAsyncQueue();
+
+                    HasBandConnection = false;
+                    return;
+                }
+                // Connect to the band, showing a busy window while it waits
+                Universal_Authenticator_v2.Views.Busy.SetBusy(true, "Connecting to band...");
+                await Utils.Helpers.BandHelper.Instance.Connect();
+                Universal_Authenticator_v2.Views.Busy.SetBusy(false);
+
+               var dialog = new MessageDialog("Would you like to receive notifications on your band? (Requires a free tile slot)");
+                dialog.Commands.Add(new UICommand(Resources.CodeResources.GetString("YesText")) { Id = 0 });
+                dialog.Commands.Add(new UICommand(Resources.CodeResources.GetString("NoText")) { Id = 1 });
+                dialog.DefaultCommandIndex = 0;
+                dialog.CancelCommandIndex = 1;
+                var result = await dialog.ShowAsyncQueue();
+                if ((int)result.Id == 0)
+                {
+                    if ( await Utils.Helpers.BandHelper.Instance.SetupTile() )
+                    {
+                        // Success
+                    }
+                    else
+                    {
+                        // Failed to add tile
+                        var dlg = new MessageDialog("Failed to add tile to band. Please check that you have a free tile slot and try again.");
+                        await dlg.ShowAsyncQueue();
+                    }
+                }
+            }
+            else
+            {
+                // Remove the tile
+                await Utils.Helpers.BandHelper.Instance.RemoveTile();
+
+                // Disconnect from the band
+                Utils.Helpers.BandHelper.Instance.Disconnect();
+            }
+        }
         #endregion
 
         #endregion

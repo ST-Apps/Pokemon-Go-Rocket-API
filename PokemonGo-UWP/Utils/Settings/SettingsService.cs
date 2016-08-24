@@ -135,6 +135,11 @@ namespace PokemonGo_UWP.Utils
 			get { return Get(false); }
 			set { Set(value); }
 		}
+        public bool HasBandConnection
+        {
+            get { return Get(false); }
+            set { Set(value); }
+        }
 		public LiveTileModes LiveTileMode
 		{
 			get { return Get(LiveTileModes.Off); }

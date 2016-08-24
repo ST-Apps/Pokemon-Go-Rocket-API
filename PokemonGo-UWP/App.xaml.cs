@@ -154,6 +154,24 @@ namespace PokemonGo_UWP
             if (e.Action != NotifyCollectionChangedAction.Add) return;
             if (SettingsService.Instance.IsVibrationEnabled)
                 _vibrationDevice?.Vibrate(TimeSpan.FromMilliseconds(500));
+            if (SettingsService.Instance.HasBandConnection)
+            {
+                Utils.Helpers.BandHelper.Instance.Vibrate(Microsoft.Band.Notifications.VibrationType.NotificationOneTone);
+
+                try
+                {
+                    var newList = e.NewItems.Cast<MapPokemonWrapper>().ToList();
+
+                    foreach (MapPokemonWrapper item in newList)
+                    {
+                        Utils.Helpers.BandHelper.Instance.SendMessage("New Pokemon", "A wild " + item.PokemonId.ToString() + " has appeared!");
+                    }
+                }
+                catch 
+                {
+                    
+                }
+            }
             AudioUtils.PlaySound(AudioUtils.POKEMON_FOUND_DING);
         }
 
