@@ -156,7 +156,7 @@
         </trans-unit>
         <trans-unit id="BadgeSmallRattataDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} small Rattata</source>
-          <target state="new">Caught {0} small Rattata</target>
+          <target state="new">{0} piccoli Rattata catturati</target>
         </trans-unit>
         <trans-unit id="BadgeTravelKmDescription" translate="yes" xml:space="preserve">
           <source>Walked {0} km</source>
@@ -164,7 +164,7 @@
         </trans-unit>
         <trans-unit id="BugDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Bug Pokemon</source>
-          <target state="new">{0} Pokémon tipo insetto catturati</target>
+          <target state="new">{0} Pokémon tipo coleottero catturati</target>
         </trans-unit>
         <trans-unit id="DragonDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Dragon Pokemon</source>
@@ -176,7 +176,7 @@
         </trans-unit>
         <trans-unit id="FairyDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Fairy Pokemon</source>
-          <target state="new">{0} Pokémon tipo fata catturati</target>
+          <target state="new">{0} Pokémon tipo folletto catturati</target>
         </trans-unit>
         <trans-unit id="FightingDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Fighting Pokemon</source>
@@ -353,7 +353,7 @@ Vuoi aprire la pagina con il file di installazione per l'installazione manuale?<
         </trans-unit>
         <trans-unit id="TransferPokemonWarningText" translate="yes" xml:space="preserve">
           <source>You can't take it back after it's transferred to the Professor.</source>
-          <target state="new">You can't take it back after it's transferred to the Professor.</target>
+          <target state="new">Una volta trasferito al Professore non potrai riaverlo indietro.</target>
         </trans-unit>
         <trans-unit id="LoginExpired" translate="yes" xml:space="preserve">
           <source>Previous login expired.</source>
@@ -490,20 +490,20 @@ Vuoi aprire la pagina con il file di installazione per l'installazione manuale?<
         <trans-unit id="EggHatchMessage" translate="yes" xml:space="preserve">
           <source>An Egg hatched into a {0}.
 You also got {1} Stardust, {2} Candy and {3} XP.</source>
-          <target state="new">An Egg hatched into a {0}.
-You also got {1} Stardust, {2} Candy and {3} XP.</target>
+          <target state="new">Un uovo si è schiuso in {0}.
+Hai anche ricevuto {1} Polvere di stella, {2} Caramelle e {3} PE.</target>
         </trans-unit>
         <trans-unit id="EvolvePokemonWarningText" translate="yes" xml:space="preserve">
           <source>Do you want to evolve {0}?</source>
-          <target state="new">Do you want to evolve {0}?</target>
+          <target state="new">Vuoi far evolvere {0}?</target>
         </trans-unit>
         <trans-unit id="PowerUpPokemonWarningText" translate="yes" xml:space="preserve">
           <source>Do you want to use a power up for {0}?</source>
-          <target state="new">Do you want to use a power up for {0}?</target>
+          <target state="new">Vuoi potenziare {0}?</target>
         </trans-unit>
         <trans-unit id="TransferPokemonWarningTitle" translate="yes" xml:space="preserve">
           <source>Do you really want to transfer {0} to the Professor?</source>
-          <target state="new">Do you really want to transfer {0} to the Professor?</target>
+          <target state="new">Vuoi veramente trasferire {0} al Professore?</target>
         </trans-unit>
       </group>
     </body>
@@ -768,7 +768,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/ITEMS.RESW" datatype="resx">
         <trans-unit id="D_ItemGreatBall" translate="yes" xml:space="preserve">
           <source>A good, high-performance Poké Ball that provides a higher catch rate than a standard Poké Ball.</source>
-          <target state="needs-review-translation">Strumento dotato di capsula usato per catturare Pokémon selvatici. Si lancia contro il bersaglio come una palla.</target>
+          <target state="needs-review-translation">Poké Ball dalle ottime prestazioni: fornisce maggiori probabilità di cattura rispetto alla normale PokéBall.</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="D_ItemIncenseCool" translate="yes" xml:space="preserve">
@@ -799,7 +799,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="D_ItemMasterBall" translate="yes" xml:space="preserve">
           <source>The best Poké Ball with the ultimate level of performance. With it you will catch any Pokémon without fail.</source>
-          <target state="needs-review-translation">Strumento dotato di capsula usato per catturare Pokémon selvatici. Si lancia contro il bersaglio come una palla.</target>
+          <target state="needs-review-translation">La Pokéball migliore, con le più alte performance. Puoi catturare ogni Pokémon senza fallire.</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="D_ItemPokeBall" translate="yes" xml:space="preserve">
@@ -816,7 +816,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="D_ItemUltraBall" translate="yes" xml:space="preserve">
           <source>An ultra-high performance Poké Ball that provides a higher success rate for catching Pokémon than a Great.</source>
-          <target state="needs-review-translation">Strumento dotato di capsula usato per catturare Pokémon selvatici. Si lancia contro il bersaglio come una palla.</target>
+          <target state="needs-review-translation">Poké Ball dalle prestazioni eccellenti: fornisce maggiori probabilità di cattura rispetto alla MegaBall.</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="ItemBlukBerry" translate="yes" xml:space="preserve">
@@ -945,43 +945,43 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="D_ItemLuckyEgg" translate="yes" xml:space="preserve">
           <source>A Lucky Egg that's filled with happiness! Earns double XP for 30 minutes.</source>
-          <target state="new">A Lucky Egg that's filled with happiness! Earns double XP for 30 minutes.</target>
+          <target state="new">Uovo pieno di felicità. Fa guadagnare al giocatore il doppio dei PE per 30 minuti.</target>
         </trans-unit>
         <trans-unit id="D_ItemRazzBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
-          <target state="new">Feed this to a Pokémon, and it will be easier to catch on your next throw.</target>
+          <target state="new">Dalla a un Pokémon e sarà più facile catturarlo al prossimo tentativo.</target>
         </trans-unit>
         <trans-unit id="D_ItemSpecialCamera" translate="yes" xml:space="preserve">
           <source>When you encounter Pokémon in the wild, you can use your camera to photograph them.</source>
-          <target state="new">When you encounter Pokémon in the wild, you can use your camera to photograph them.</target>
+          <target state="new">Quando incontri un Pokémon selvatico, puoi usare la tua fotocamera per scattargli una foto.</target>
         </trans-unit>
         <trans-unit id="D_ItemSuperPotion" translate="yes" xml:space="preserve">
           <source>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 50 points.</source>
-          <target state="new">A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 50 points.</target>
+          <target state="new">Rimedio spray per le ferite. Restituisce 50 PS a un Pokémon. </target>
         </trans-unit>
         <trans-unit id="D_ItemTroyDisk" translate="yes" xml:space="preserve">
           <source>A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</source>
-          <target state="new">A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</target>
+          <target state="new">Attira i Pokémon per 30 minuti verso un Pokéstop. Chiunque si trovi nei dintorni ne trarrà lo stesso beneficio.</target>
         </trans-unit>
         <trans-unit id="D_ItemUnknown" translate="yes" xml:space="preserve">
           <source>This item is unknown and may be added in the future.</source>
-          <target state="new">This item is unknown and may be added in the future.</target>
+          <target state="new">Questo strumento è sconosciuto potrebbe essere aggiunto a breve.</target>
         </trans-unit>
         <trans-unit id="D_ItemBlukBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
-          <target state="new">Feed this to a Pokémon, and it will be easier to catch on your next throw.</target>
+          <target state="new">Dalla a un Pokémon e sarà più facile catturarlo al prossimo tentativo.</target>
         </trans-unit>
         <trans-unit id="D_ItemNanabBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
-          <target state="new">Feed this to a Pokémon, and it will be easier to catch on your next throw.</target>
+          <target state="new">Dalla a un Pokémon e sarà più facile catturarlo al prossimo tentativo.</target>
         </trans-unit>
         <trans-unit id="D_ItemPinapBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
-          <target state="new">Feed this to a Pokémon, and it will be easier to catch on your next throw.</target>
+          <target state="new">Dalla a un Pokémon e sarà più facile catturarlo al prossimo tentativo.</target>
         </trans-unit>
         <trans-unit id="D_ItemWeparBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
-          <target state="new">Feed this to a Pokémon, and it will be easier to catch on your next throw.</target>
+          <target state="new">Dalla a un Pokémon e sarà più facile catturarlo al prossimo tentativo.</target>
         </trans-unit>
       </group>
     </body>
@@ -2953,75 +2953,75 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/POKEMONTYPES.RESW" datatype="resx">
         <trans-unit id="Bug" translate="yes" xml:space="preserve">
           <source>Bug</source>
-          <target state="new">Bug</target>
+          <target state="new">Coleottero</target>
         </trans-unit>
         <trans-unit id="Dark" translate="yes" xml:space="preserve">
           <source>Dark</source>
-          <target state="new">Dark</target>
+          <target state="new">Buio</target>
         </trans-unit>
         <trans-unit id="Dragon" translate="yes" xml:space="preserve">
           <source>Dragon</source>
-          <target state="new">Dragon</target>
+          <target state="new">Drago</target>
         </trans-unit>
         <trans-unit id="Electric" translate="yes" xml:space="preserve">
           <source>Electric</source>
-          <target state="new">Electric</target>
+          <target state="new">Elettro</target>
         </trans-unit>
         <trans-unit id="Fairy" translate="yes" xml:space="preserve">
           <source>Fairy</source>
-          <target state="new">Fairy</target>
+          <target state="new">Folletto</target>
         </trans-unit>
         <trans-unit id="Fighting" translate="yes" xml:space="preserve">
           <source>Fighting</source>
-          <target state="new">Fighting</target>
+          <target state="new">Lotta</target>
         </trans-unit>
         <trans-unit id="Fire" translate="yes" xml:space="preserve">
           <source>Fire</source>
-          <target state="new">Fire</target>
+          <target state="new">Fuoco</target>
         </trans-unit>
         <trans-unit id="Flying" translate="yes" xml:space="preserve">
           <source>Flying</source>
-          <target state="new">Flying</target>
+          <target state="new">Volante</target>
         </trans-unit>
         <trans-unit id="Ghost" translate="yes" xml:space="preserve">
           <source>Ghost</source>
-          <target state="new">Ghost</target>
+          <target state="new">Spettro</target>
         </trans-unit>
         <trans-unit id="Grass" translate="yes" xml:space="preserve">
           <source>Grass</source>
-          <target state="new">Grass</target>
+          <target state="new">Erba</target>
         </trans-unit>
         <trans-unit id="Ground" translate="yes" xml:space="preserve">
           <source>Ground</source>
-          <target state="new">Ground</target>
+          <target state="new">Terra</target>
         </trans-unit>
         <trans-unit id="Ice" translate="yes" xml:space="preserve">
           <source>Ice</source>
-          <target state="new">Ice</target>
+          <target state="new">Ghiaccio</target>
         </trans-unit>
         <trans-unit id="Normal" translate="yes" xml:space="preserve">
           <source>Normal</source>
-          <target state="new">Normal</target>
+          <target state="new">Normale</target>
         </trans-unit>
         <trans-unit id="Poison" translate="yes" xml:space="preserve">
           <source>Poison</source>
-          <target state="new">Poison</target>
+          <target state="new">Veleno</target>
         </trans-unit>
         <trans-unit id="Psychic" translate="yes" xml:space="preserve">
           <source>Psychic</source>
-          <target state="final">Sensitivo</target>
+          <target state="final">Psico</target>
         </trans-unit>
         <trans-unit id="Rock" translate="yes" xml:space="preserve">
           <source>Rock</source>
-          <target state="new">Rock</target>
+          <target state="new">Roccia</target>
         </trans-unit>
         <trans-unit id="Steel" translate="yes" xml:space="preserve">
           <source>Steel</source>
-          <target state="new">Steel</target>
+          <target state="new">Acciaio</target>
         </trans-unit>
         <trans-unit id="Water" translate="yes" xml:space="preserve">
           <source>Water</source>
-          <target state="new">Water</target>
+          <target state="new">Acqua</target>
         </trans-unit>
       </group>
     </body>
