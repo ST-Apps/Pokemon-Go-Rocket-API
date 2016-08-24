@@ -200,7 +200,7 @@
         </trans-unit>
         <trans-unit id="GroundDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Ground Pokemon</source>
-          <target state="translated">{0} Pokémon de type Sol capturés</target>
+          <target state="translated">{0} Pokémon de type Terre capturés</target>
         </trans-unit>
         <trans-unit id="IceDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Ice Pokemon</source>
@@ -257,7 +257,7 @@
         </trans-unit>
         <trans-unit id="GettingUserDataText" translate="yes" xml:space="preserve">
           <source>Getting user data...</source>
-          <target state="translated">Acquisition des données du compte utilisateur...</target>
+          <target state="translated">Acquisition des données utilisateur...</target>
         </trans-unit>
         <trans-unit id="GoogleErrorText" translate="yes" xml:space="preserve">
           <source>Google returned error: </source>
@@ -285,7 +285,7 @@
         </trans-unit>
         <trans-unit id="NoGpsPermissionsText" translate="yes" xml:space="preserve">
           <source>We need GPS permissions to run the game, please enable it and try again.</source>
-          <target state="translated">Nous avons besoin de l'autorisation d'accès au GPS pour faire fonctionner le jeu, active-le et réessaye.</target>
+          <target state="translated">Nous avons besoin de l'autorisation d'accès au GPS pour faire fonctionner le jeu, active le et réessaye.</target>
         </trans-unit>
         <trans-unit id="PokemonRanAwayText" translate="yes" xml:space="preserve">
           <source>Pokémon ran away, sorry :(</source>
@@ -293,7 +293,7 @@
         </trans-unit>
         <trans-unit id="PtcDownText" translate="yes" xml:space="preserve">
           <source>PTC login is probably down, please retry later.</source>
-          <target state="translated">La connexion au PTC est probablement hors service, réessaye plus tard.</target>
+          <target state="translated">La connexion à PTC est probablement hors service, réessaye plus tard.</target>
         </trans-unit>
         <trans-unit id="SomethingWentWrongText" translate="yes" xml:space="preserve">
           <source>Something went wrong and app may be unstable now. Do you want to logout and try again?</source>
@@ -351,10 +351,6 @@ Ouvrir la page avec les fichiers d'installation pour une installation manuelle ?
           <source>Transfer succeeded! Got a {0} Candy from the Professor.</source>
           <target state="translated">Transfert effectué ! Tu as reçu 1 bonbon {0} du Professeur.</target>
         </trans-unit>
-        <trans-unit id="TransferPokemonWarningText" translate="yes" xml:space="preserve">
-          <source>You can't take it back after it's transferred to the Professor. Do you really want to transfer {0} to the Professor?</source>
-          <target state="translated">Tu ne pourras pas le reprendre après cette opération. Veux-tu vraiment le transférer {0} au Professeur ?</target>
-        </trans-unit>
         <trans-unit id="LoginExpired" translate="yes" xml:space="preserve">
           <source>Previous login expired.</source>
           <target state="translated">Connexion expirée.</target>
@@ -369,7 +365,7 @@ Ouvrir la page avec les fichiers d'installation pour une installation manuelle ?
         </trans-unit>
         <trans-unit id="ActivityCatchLegendPokemon" translate="yes" xml:space="preserve">
           <source>Catch Legendary Pokémon</source>
-          <target state="translated">Capture un Pokémon légendaire</target>
+          <target state="translated">Capture un pokémon légendaire</target>
         </trans-unit>
         <trans-unit id="ActivityFleePokemon" translate="yes" xml:space="preserve">
           <source>Pokémon Fled</source>
@@ -377,7 +373,7 @@ Ouvrir la page avec les fichiers d'installation pour une installation manuelle ?
         </trans-unit>
         <trans-unit id="ActivityDefeatFort" translate="yes" xml:space="preserve">
           <source>Defeat Fort</source>
-          <target state="translated">Bas l'Arène</target>
+          <target state="translated">Bas l'arène</target>
           <note from="MultilingualEditor" annotates="source" priority="4">Please verify the translation’s accuracy</note>
         </trans-unit>
         <trans-unit id="ActivityEvolvePokemon" translate="yes" xml:space="preserve">
@@ -449,16 +445,16 @@ Ouvrir la page avec les fichiers d'installation pour une installation manuelle ?
         </trans-unit>
         <trans-unit id="ActivityHatchEggLargeBonus" translate="yes" xml:space="preserve">
           <source>Hatch Egg Large Bonus</source>
-          <target state="needs-review-translation">Eclos un Oeuf Grand Bonus</target>
+          <target state="translated">Eclos un Oeuf Grand Bonus</target>
           <note from="MultilingualEditor" annotates="source" priority="4">Please verify the translation’s accuracy</note>
         </trans-unit>
         <trans-unit id="ActivityDefeatGymDefender" translate="yes" xml:space="preserve">
           <source>Defeat Gym Defender</source>
-          <target state="translated">Bat le Défenseur de l'Arène</target>
+          <target state="translated">Bat le Défendeur du Gymnase</target>
         </trans-unit>
         <trans-unit id="ActivityDefeatGymLeader" translate="yes" xml:space="preserve">
           <source>Defeat Gym Leader</source>
-          <target state="translated">Bat le Leader de l'Arène</target>
+          <target state="translated">Bat le Leader du Gymnase</target>
         </trans-unit>
         <trans-unit id="Combat" translate="no" xml:space="preserve">
           <source>Combat</source>
@@ -486,17 +482,33 @@ Ouvrir la page avec les fichiers d'installation pour une installation manuelle ?
         </trans-unit>
         <trans-unit id="PokemonInventoryFullText" translate="yes" xml:space="preserve">
           <source>Your Pokémon inventory is full, transfer some Pokémon before trying to catch {0}.</source>
-          <target state="translated">Ton inventaire Pokémon est plein, transfère des Pokémon avant d'essayer d'en capturer {0}.</target>
+          <target state="translated">Ton inventaire Pokémon est plein, transfert des Pokémon avant d'essayer d'en capturer {0}.</target>
         </trans-unit>
         <trans-unit id="WaitingForNetworkText" translate="yes" xml:space="preserve">
           <source>Waiting for network to be back...</source>
-          <target state="translated">En attente du serveur...</target>
+          <target state="translated">En attente du retour du réseau...</target>
         </trans-unit>
         <trans-unit id="EggHatchMessage" translate="yes" xml:space="preserve">
           <source>An Egg hatched into a {0}.
 You also got {1} Stardust, {2} Candy and {3} XP.</source>
           <target state="translated">Un oeuf à éclos en {0}.
 Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
+        </trans-unit>
+        <trans-unit id="EvolvePokemonWarningText" translate="yes" xml:space="preserve">
+          <source>Do you want to evolve {0}?</source>
+          <target state="translated">Veux-tu évoluer {0}?</target>
+        </trans-unit>
+        <trans-unit id="PowerUpPokemonWarningText" translate="yes" xml:space="preserve">
+          <source>Do you want to use a power up for {0}?</source>
+          <target state="translated">Veux-tu utiliser un renfort pour {0}?</target>
+        </trans-unit>
+        <trans-unit id="TransferPokemonWarningTitle" translate="yes" xml:space="preserve">
+          <source>Do you really want to transfer {0} to the Professor?</source>
+          <target state="translated">Veux-tu vraiment transféré {0} au Professeur?</target>
+        </trans-unit>
+        <trans-unit id="TransferPokemonWarningText" translate="yes" xml:space="preserve">
+          <source>You can't take it back after it's transferred to the Professor.</source>
+          <target state="translated">Tu ne pourras pas le reprendre après l'avoir transféré au Professeur.</target>
         </trans-unit>
       </group>
     </body>
@@ -525,11 +537,11 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="LoginDisclaimerTextBox.Text" translate="yes" xml:space="preserve">
           <source>To login, enter your Username/Email and Password above. If you don't trust this app, please close it now. Niantic may ban you for using this app. Use at your own risk.</source>
-          <target state="translated">Pour te connecter tu dois insérer ton Nom d'ulitisateur/Email et ton mot de passe au dessus. Si tu n'as pas confiance en cette application, ferme là maintenant. Niantic peut te bannir pour l'utilisation de cette application. À utiliser à tes risques et périls.</target>
+          <target state="translated">Pour te connecter tu dois insérer ton Nom d'ulitisaeur/Email et ton mot de passe au dessus. Si tu n'as pas confiance en cette application, ferme là maintenant. Niantic peut te bannir pour l'utilisation de cette application. À utiliser à tes risques et périls.</target>
         </trans-unit>
         <trans-unit id="NearbyPokemonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>nearby</source>
-          <target state="translated">proche</target>
+          <target state="translated">Pokémon aperçus</target>
         </trans-unit>
         <trans-unit id="OutOfRangeTextBlock.Text" translate="yes" xml:space="preserve">
           <source>THIS POKÉSTOP IS TOO FAR AWAY</source>
@@ -679,7 +691,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="PokedexCaught.Text" translate="yes" xml:space="preserve">
           <source>Caught:</source>
-          <target state="translated">Capturés :</target>
+          <target state="translated">Attrapé:</target>
         </trans-unit>
         <trans-unit id="PokedexEvolutions.Text" translate="yes" xml:space="preserve">
           <source>Evolutions</source>
@@ -687,7 +699,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="PokedexPokemonHeight.Text" translate="yes" xml:space="preserve">
           <source>Height:</source>
-          <target state="translated">Taille :</target>
+          <target state="translated">Taille:</target>
         </trans-unit>
         <trans-unit id="PokedexPokemonType.Text" translate="no" xml:space="preserve">
           <source>Type:</source>
@@ -695,11 +707,11 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="PokedexPokemonWeight.Text" translate="yes" xml:space="preserve">
           <source>Weight:</source>
-          <target state="translated">Poids :</target>
+          <target state="translated">Poids:</target>
         </trans-unit>
         <trans-unit id="PokedexSeen.Text" translate="yes" xml:space="preserve">
           <source>Seen:</source>
-          <target state="translated">Vus :</target>
+          <target state="translated">Vu:</target>
         </trans-unit>
         <trans-unit id="PokedexText.Text" translate="no" xml:space="preserve">
           <source>POKÉDEX</source>
@@ -715,7 +727,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="TimesTextBlock.Text" translate="yes" xml:space="preserve">
           <source>times</source>
-          <target state="translated">Temps</target>
+          <target state="translated">Heures</target>
         </trans-unit>
         <trans-unit id="EggDetailButtonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>START INCUBATION</source>
@@ -723,7 +735,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="EggDetailTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Use an incubator to incubate the Egg.</source>
-          <target state="translated">Utilise un incubateur pour couver un oeuf.</target>
+          <target state="translated">Utilise un incubateur pour incuber un oeuf.</target>
         </trans-unit>
         <trans-unit id="TransferTextBlock.Text" translate="yes" xml:space="preserve">
           <source>TRANSFER</source>
@@ -731,7 +743,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="SettingsLanguageRestartTextBlock.Text" translate="yes" xml:space="preserve">
           <source>You must restart the App to take effect.</source>
-          <target state="translated">Tu dois relancer l'application pour que cela fonctionne.</target>
+          <target state="translated">Vous devez redémarrer l'application pour que les effets soient appliqués</target>
         </trans-unit>
         <trans-unit id="SettingsLanguageTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Language</source>
@@ -747,7 +759,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="FavoriteTextBlock.Text" translate="yes" xml:space="preserve">
           <source>FAVORITE</source>
-          <target state="translated">FAVORI</target>
+          <target state="translated">FAVORIS</target>
         </trans-unit>
       </group>
     </body>
@@ -759,8 +771,8 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
     <body>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/ITEMS.RESW" datatype="resx">
         <trans-unit id="D_ItemGreatBall" translate="yes" xml:space="preserve">
-          <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
-          <target state="translated">Dispositif pour capturer des Pokémon sauvages. Il est jeté comme une balle à un Pokémon sauvage, encapsulant confortablement sa cible.</target>
+          <source>A good, high-performance Poké Ball that provides a higher catch rate than a standard Poké Ball.</source>
+          <target state="translated">Un bonne Pokéball, avec de haute performance qui offre un taux de capture supérieur à une Pokéball standard.</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseCool" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
@@ -787,8 +799,8 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
           <target state="translated">Un dispositif qui couve un oeuf pendant que vous marchez jusqu'à ce qu'il soit prêt à éclore. Utilisage Illimité !</target>
         </trans-unit>
         <trans-unit id="D_ItemMasterBall" translate="yes" xml:space="preserve">
-          <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
-          <target state="translated">Dispositif pour capturer des Pokémon sauvages. Il est jeté comme une balle à un Pokémon sauvage, encapsulant confortablement sa cible.</target>
+          <source>The best Poké Ball with the ultimate level of performance. With it you will catch any Pokémon without fail.</source>
+          <target state="translated">La meilleure Pokéball, avec le niveau ultime de la performance. Avec elle, vous attraperez tout Pokémon à coup sûr.</target>
         </trans-unit>
         <trans-unit id="D_ItemPokeBall" translate="yes" xml:space="preserve">
           <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
@@ -803,8 +815,8 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
           <target state="translated">Un médicament qui peut réanimer un Pokémon évanoui. Il restaure également la moitié des PV maximum du Pokémon évanoui.</target>
         </trans-unit>
         <trans-unit id="D_ItemUltraBall" translate="yes" xml:space="preserve">
-          <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
-          <target state="translated">Dispositif pour capturer des Pokémon sauvages. Il est jeté comme une balle à un Pokémon sauvage, encapsulant confortablement sa cible.</target>
+          <source>An ultra-high performance Poké Ball that provides a higher success rate for catching Pokémon than a Great.</source>
+          <target state="translated">Une Pokéball ultra-haute performance qui offre un taux de réussite plus élevé que la Super Ball pour attraper les Pokémon.</target>
         </trans-unit>
         <trans-unit id="ItemBlukBerry" translate="yes" xml:space="preserve">
           <source>Bluk Berry</source>
@@ -900,7 +912,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="ItemTroyDisk" translate="yes" xml:space="preserve">
           <source>Lure Module</source>
-          <target state="translated">Leurre</target>
+          <target state="translated">Disque de Troie</target>
         </trans-unit>
         <trans-unit id="ItemUltraBall" translate="no" xml:space="preserve">
           <source>Ultra Ball</source>
@@ -912,7 +924,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="ItemWeparBerry" translate="yes" xml:space="preserve">
           <source>Wepar Berry</source>
-          <target state="translated">Baie Framby</target>
+          <target state="translated">Baies Framby</target>
         </trans-unit>
         <trans-unit id="ItemXAttack" translate="yes" xml:space="preserve">
           <source>X Attack</source>
@@ -949,6 +961,22 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         <trans-unit id="D_ItemUnknown" translate="yes" xml:space="preserve">
           <source>This item is unknown and may be added in the future.</source>
           <target state="translated">Cet objet est inconnu et va peut être ajouté dans le futur.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemBlukBerry" translate="yes" xml:space="preserve">
+          <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
+          <target state="translated">Nourri un Pokémon avec, et il sera plus facile à attrapper au prochain lancer.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemNanabBerry" translate="yes" xml:space="preserve">
+          <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
+          <target state="translated">Nourri un Pokémon avec, et il sera plus facile à attrapper au prochain lancer.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemPinapBerry" translate="yes" xml:space="preserve">
+          <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
+          <target state="translated">Nourri un Pokémon avec, et il sera plus facile à attrapper au prochain lancer.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemWeparBerry" translate="yes" xml:space="preserve">
+          <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
+          <target state="translated">Nourri un Pokémon avec, et il sera plus facile à attrapper au prochain lancer.</target>
         </trans-unit>
       </group>
     </body>
@@ -1261,7 +1289,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="Magnemite" translate="yes" xml:space="preserve">
           <source>Magnemite</source>
-          <target state="translated">Magnéti</target>
+          <target state="translated">Magnéti </target>
         </trans-unit>
         <trans-unit id="Magneton" translate="yes" xml:space="preserve">
           <source>Magneton</source>
@@ -1273,7 +1301,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="Marowak" translate="yes" xml:space="preserve">
           <source>Marowak</source>
-          <target state="translated">Ossatueur</target>
+          <target state="translated">Ossatueur </target>
         </trans-unit>
         <trans-unit id="Meowth" translate="yes" xml:space="preserve">
           <source>Meowth</source>
@@ -1337,11 +1365,11 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="Oddish" translate="yes" xml:space="preserve">
           <source>Oddish</source>
-          <target state="translated">Mystherbe</target>
+          <target state="translated">Mystherbe </target>
         </trans-unit>
         <trans-unit id="Omanyte" translate="yes" xml:space="preserve">
           <source>Omanyte</source>
-          <target state="translated">Amonita</target>
+          <target state="translated">Amonita </target>
         </trans-unit>
         <trans-unit id="Omastar" translate="yes" xml:space="preserve">
           <source>Omastar</source>
@@ -1389,11 +1417,11 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="Poliwhirl" translate="yes" xml:space="preserve">
           <source>Poliwhirl</source>
-          <target state="translated">Têtarte</target>
+          <target state="translated">Têtarte </target>
         </trans-unit>
         <trans-unit id="Poliwrath" translate="yes" xml:space="preserve">
           <source>Poliwrath</source>
-          <target state="translated">Tartard</target>
+          <target state="translated">Tartard </target>
         </trans-unit>
         <trans-unit id="Ponyta" translate="no" xml:space="preserve">
           <source>Ponyta</source>
@@ -1517,7 +1545,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="Venonat" translate="yes" xml:space="preserve">
           <source>Venonat</source>
-          <target state="translated">Mimitoss</target>
+          <target state="translated">Mimitoss </target>
         </trans-unit>
         <trans-unit id="Venusaur" translate="yes" xml:space="preserve">
           <source>Venusaur</source>
@@ -1553,7 +1581,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="Weezing" translate="yes" xml:space="preserve">
           <source>Weezing</source>
-          <target state="translated">Smogogo</target>
+          <target state="translated">Smogogo </target>
         </trans-unit>
         <trans-unit id="Wigglytuff" translate="yes" xml:space="preserve">
           <source>Wigglytuff</source>
@@ -1630,7 +1658,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="MoveUnset" translate="yes" xml:space="preserve">
           <source>Move Unset</source>
-          <target state="translated">Mouvement non défini</target>
+          <target state="translated">Mouvement non définit</target>
         </trans-unit>
         <trans-unit id="Pound" translate="yes" xml:space="preserve">
           <source>Pound</source>
@@ -1642,7 +1670,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="QuickAttack" translate="yes" xml:space="preserve">
           <source>Quick Attack</source>
-          <target state="translated">Vive-Attaque</target>
+          <target state="translated">Vive-Attaque </target>
         </trans-unit>
         <trans-unit id="RazorLeaf" translate="yes" xml:space="preserve">
           <source>Razor Leaf</source>
@@ -1762,7 +1790,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="BubbleFast" translate="yes" xml:space="preserve">
           <source>Bubble Fast</source>
-          <target state="needs-review-translation">Bulles d'O</target>
+          <target state="translated">Bulles d'O</target>
           <note from="MultilingualEditor" annotates="source" priority="4">Please verify the translation’s accuracy</note>
         </trans-unit>
         <trans-unit id="BugBite" translate="yes" xml:space="preserve">
@@ -1891,7 +1919,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="FuryCutter" translate="yes" xml:space="preserve">
           <source>Fury Cutter</source>
-          <target state="translated">Taillade</target>
+          <target state="translated">Taillade </target>
         </trans-unit>
         <trans-unit id="FuryCutterFast" translate="yes" xml:space="preserve">
           <source>Fury Cutter</source>
@@ -2231,7 +2259,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="Swift" translate="yes" xml:space="preserve">
           <source>Swift</source>
-          <target state="translated">Météores</target>
+          <target state="translated">Météores </target>
         </trans-unit>
         <trans-unit id="TackleFast" translate="yes" xml:space="preserve">
           <source>Tackle</source>
@@ -2949,7 +2977,8 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="Fire" translate="yes" xml:space="preserve">
           <source>Fire</source>
-          <target state="translated">Feu</target>
+          <target state="translated">Feu
+</target>
         </trans-unit>
         <trans-unit id="Flying" translate="yes" xml:space="preserve">
           <source>Flying</source>
