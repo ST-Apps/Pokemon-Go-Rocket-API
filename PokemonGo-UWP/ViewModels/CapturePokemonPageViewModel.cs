@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -268,7 +268,14 @@ namespace PokemonGo_UWP.ViewModels
         /// <summary>
         ///     Going back to map page
         /// </summary>
-        public DelegateCommand ReturnToGameScreen => _returnToGameScreen ?? (_returnToGameScreen = new DelegateCommand(() => { NavigationService.Navigate(typeof(GameMapPage), GameMapNavigationModes.PokemonUpdate); }, () => true));
+        public DelegateCommand ReturnToGameScreen => _returnToGameScreen ?? (_returnToGameScreen = new DelegateCommand(() => {
+            NavigationService.Navigate(typeof(PokemonInventoryPage), GameMapNavigationModes.PokemonUpdate);
+            //Don't know how to provide correct values to these:
+            //NavigationHelper.NavigationState["CurrentPokemon"] = this;
+            //NavigationHelper.NavigationState["LastSelectedID"] = Id;
+            //BootStrapper.Current.NavigationService.Navigate(typeof(PokemonDetailPage));
+            BootStrapper.Current.NavigationService.Navigate(typeof(PokemonDetailPage));
+        }, () => true));
 
         private DelegateCommand _escapeEncounterCommand;
 
