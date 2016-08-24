@@ -156,7 +156,7 @@
         </trans-unit>
         <trans-unit id="BadgeSmallRattataDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} small Rattata</source>
-          <target state="translated">{0} Rattata capturés</target>
+          <target state="translated">{0} petit Rattata capturés</target>
         </trans-unit>
         <trans-unit id="BadgeTravelKmDescription" translate="yes" xml:space="preserve">
           <source>Walked {0} km</source>
@@ -496,7 +496,7 @@ Ouvrir la page avec les fichiers d'installation pour une installation manuelle ?
           <source>An Egg hatched into a {0}.
 You also got {1} Stardust, {2} Candy and {3} XP.</source>
           <target state="translated">Un oeuf à éclos en {0}.
-Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP</target>
+Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
       </group>
     </body>
@@ -780,11 +780,11 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP</target>
         </trans-unit>
         <trans-unit id="D_ItemIncubatorBasic" translate="yes" xml:space="preserve">
           <source>A device that incubates an Egg as you walk until it is ready to hatch. Breaks after 3 uses.</source>
-          <target state="translated">Un dispositif qui couve un oeuf pendant que vous marchez jusqu'à ce qu'il soit prêt à éclore.</target>
+          <target state="translated">Un dispositif qui couve un oeuf pendant que vous marchez jusqu'à ce qu'il soit prêt à éclore. Se casse après 3 utilisations.</target>
         </trans-unit>
         <trans-unit id="D_ItemIncubatorBasicUnlimited" translate="yes" xml:space="preserve">
           <source>A device that incubates an Egg as you walk until it is ready to hatch. Unlimited use!</source>
-          <target state="translated">Un dispositif qui couve un oeuf pendant que vous marchez jusqu'à ce qu'il soit prêt à éclore.</target>
+          <target state="translated">Un dispositif qui couve un oeuf pendant que vous marchez jusqu'à ce qu'il soit prêt à éclore. Utilisage Illimité !</target>
         </trans-unit>
         <trans-unit id="D_ItemMasterBall" translate="yes" xml:space="preserve">
           <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
@@ -944,11 +944,11 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP</target>
         </trans-unit>
         <trans-unit id="D_ItemTroyDisk" translate="yes" xml:space="preserve">
           <source>A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</source>
-          <target state="translated">Un module qui attire les Pokémon autour d'un Pokéstop pendant 30 min. L'effet bénéficie d'autres personnes à proximité</target>
+          <target state="translated">Un module qui attire les Pokémon autour d'un Pokéstop pendant 30 min. L'effet bénéficie aux autres personnes à proximité</target>
         </trans-unit>
         <trans-unit id="D_ItemUnknown" translate="yes" xml:space="preserve">
           <source>This item is unknown and may be added in the future.</source>
-          <target state="translated">Cet objet est inconnu et va peut être ajouté dans le futur</target>
+          <target state="translated">Cet objet est inconnu et va peut être ajouté dans le futur.</target>
         </trans-unit>
       </group>
     </body>
