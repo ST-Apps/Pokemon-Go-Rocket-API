@@ -25,6 +25,7 @@ namespace PokemonGo_UWP.Entities
         private FortData _fortData;
 
         private DelegateCommand _trySearchPokestop;
+        private DelegateCommand _tryEnterGym;
 
         /// <summary>
         /// HACK - this should help updating pokestop icon on the map by binding to this

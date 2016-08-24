@@ -220,6 +220,11 @@ namespace PokemonGo_UWP.ViewModels
         /// </summary>
         public static ObservableCollection<FortDataWrapper> NearbyPokestops => GameClient.NearbyPokestops;
 
+        /// <summary> 
+        ///     Collection of Gyms in the current area 
+        /// </summary> 
+        public static ObservableCollection<FortDataWrapper> NearbyGyms => GameClient.NearbyGyms;
+
         #endregion
 
         #region Game Logic
