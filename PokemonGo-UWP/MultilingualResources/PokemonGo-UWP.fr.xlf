@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
   <file datatype="xml" source-language="en-US" target-language="fr" original="POKEMONGO-UWP/STRINGS/EN-US/ACHIEVEMENTS.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
@@ -156,8 +156,7 @@
         </trans-unit>
         <trans-unit id="BadgeSmallRattataDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} small Rattata</source>
-          <target state="needs-review-translation">{0} Rattata capturés</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated">{0} petit Rattata capturés</target>
         </trans-unit>
         <trans-unit id="BadgeTravelKmDescription" translate="yes" xml:space="preserve">
           <source>Walked {0} km</source>
@@ -496,8 +495,8 @@ Ouvrir la page avec les fichiers d'installation pour une installation manuelle ?
         <trans-unit id="EggHatchMessage" translate="yes" xml:space="preserve">
           <source>An Egg hatched into a {0}.
 You also got {1} Stardust, {2} Candy and {3} XP.</source>
-          <target state="new">An Egg hatched into a {0}.
-You also got {1} Stardust, {2} Candy and {3} XP.</target>
+          <target state="translated">Un oeuf à éclos en {0}.
+Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
       </group>
     </body>
@@ -781,13 +780,11 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="D_ItemIncubatorBasic" translate="yes" xml:space="preserve">
           <source>A device that incubates an Egg as you walk until it is ready to hatch. Breaks after 3 uses.</source>
-          <target state="needs-review-translation">Un dispositif qui couve un oeuf pendant que vous marchez jusqu'à ce qu'il soit prêt à éclore.</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated">Un dispositif qui couve un oeuf pendant que vous marchez jusqu'à ce qu'il soit prêt à éclore. Se casse après 3 utilisations.</target>
         </trans-unit>
         <trans-unit id="D_ItemIncubatorBasicUnlimited" translate="yes" xml:space="preserve">
           <source>A device that incubates an Egg as you walk until it is ready to hatch. Unlimited use!</source>
-          <target state="needs-review-translation">Un dispositif qui couve un oeuf pendant que vous marchez jusqu'à ce qu'il soit prêt à éclore.</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated">Un dispositif qui couve un oeuf pendant que vous marchez jusqu'à ce qu'il soit prêt à éclore. Utilisage Illimité !</target>
         </trans-unit>
         <trans-unit id="D_ItemMasterBall" translate="yes" xml:space="preserve">
           <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
@@ -931,27 +928,27 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="D_ItemLuckyEgg" translate="yes" xml:space="preserve">
           <source>A Lucky Egg that's filled with happiness! Earns double XP for 30 minutes.</source>
-          <target state="new">A Lucky Egg that's filled with happiness! Earns double XP for 30 minutes.</target>
+          <target state="translated">Un Oeuf Chance est rempli avec de la joie! Gagne le double d'XP pendant 30 minutes.</target>
         </trans-unit>
         <trans-unit id="D_ItemRazzBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
-          <target state="new">Feed this to a Pokémon, and it will be easier to catch on your next throw.</target>
+          <target state="translated">Nourri un Pokémon avec, et il sera plus facile à attrapper au prochain lancer.</target>
         </trans-unit>
         <trans-unit id="D_ItemSpecialCamera" translate="yes" xml:space="preserve">
           <source>When you encounter Pokémon in the wild, you can use your camera to photograph them.</source>
-          <target state="new">When you encounter Pokémon in the wild, you can use your camera to photograph them.</target>
+          <target state="translated">Quand tu rencontres un Pokémon sauvage, tu peux utiliser ton appareil photo pour le photographier.</target>
         </trans-unit>
         <trans-unit id="D_ItemSuperPotion" translate="yes" xml:space="preserve">
           <source>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 50 points.</source>
-          <target state="new">A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 50 points.</target>
+          <target state="translated">Un médicament en spray pour le traitement des plaies. Il restaure les PV d'un Pokémon de 50 points.</target>
         </trans-unit>
         <trans-unit id="D_ItemTroyDisk" translate="yes" xml:space="preserve">
           <source>A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</source>
-          <target state="new">A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</target>
+          <target state="translated">Un module qui attire les Pokémon autour d'un Pokéstop pendant 30 min. L'effet bénéficie aux autres personnes à proximité</target>
         </trans-unit>
         <trans-unit id="D_ItemUnknown" translate="yes" xml:space="preserve">
           <source>This item is unknown and may be added in the future.</source>
-          <target state="new">This item is unknown and may be added in the future.</target>
+          <target state="translated">Cet objet est inconnu et va peut être ajouté dans le futur.</target>
         </trans-unit>
       </group>
     </body>
