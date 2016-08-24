@@ -1,5 +1,5 @@
 # Important information
-You can find the installation file for PoGo in [Releases](https://github.com/ST-Apps/PoGo-UWP/releases/tag/v1.1.0-rc1). **Please read the whole release information before installing.**
+**Please do not use this app if you are not a dev!** see #1239 for infos
 
 # PoGo for Windows 10
 
