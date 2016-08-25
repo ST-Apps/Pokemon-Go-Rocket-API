@@ -48,9 +48,11 @@
                 <CheckBox x:Name="RememberMeCheckBox"
                           x:Uid="RememberMeCheckBox"
                           IsChecked="{Binding RememberLoginData, Mode=TwoWay}"
-                          Margin="15,20,15,0">
+                          Margin="15,20,15,0"
+                          VerticalAlignment="Center"
+                          HorizontalAlignment="Center">
                     <TextBlock x:Uid="RememberMeTextBlock" 
-                               Text="REMEMBER ME" />
+                               Text="REMEMBER ME"/>
                 </CheckBox>
                 <Button x:Name="PtcLoginButton"
                         Style="{StaticResource ButtonSubmit}"
