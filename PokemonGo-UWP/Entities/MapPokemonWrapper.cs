@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel;
 using Windows.Devices.Geolocation;
 using Windows.Foundation;
+using Newtonsoft.Json;
 using PokemonGo_UWP.Utils;
+using PokemonGo_UWP.Utils.Helpers;
 using PokemonGo_UWP.Views;
 using POGOProtos.Enums;
 using POGOProtos.Map.Pokemon;
@@ -12,6 +14,7 @@ namespace PokemonGo_UWP.Entities
 {
     public class MapPokemonWrapper : IMapPokemon
     {
+        [JsonProperty, JsonConverter(typeof(ProtobufJsonNetConverter))]
         private MapPokemon _mapPokemon;
 
         private DelegateCommand _tryCatchPokemon;

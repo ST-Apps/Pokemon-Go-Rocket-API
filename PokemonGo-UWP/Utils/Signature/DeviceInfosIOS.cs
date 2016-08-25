@@ -27,26 +27,35 @@ namespace PokemonGo_UWP.Utils
         {
             get
             {
-                if (string.IsNullOrEmpty(SettingsService.Instance.Udid))
+                if (string.IsNullOrEmpty(SettingsService.Instance.Udid) || SettingsService.Instance.Udid.Length != 32)
                 {
                     try
                     {
-                        SettingsService.Instance.Udid = UdidGenerator.GenerateUdid();
+                        SettingsService.Instance.Udid = UdidGenerator.GenerateUdid().Substring(0,32).ToLower();
                     }
                     catch (Exception)
                     {
                         //Fallback solution with random hex
-                        SettingsService.Instance.Udid = Utilities.RandomHex(40);
+                        SettingsService.Instance.Udid = Utilities.RandomHex(32).ToLower();
                     }
                 }
-                return SettingsService.Instance.Udid;
+                return SettingsService.Instance.Udid.ToLower();
             }
         }
 
-        // TODO: check for iPhone
+        public string AndroidBoardName => "";
+        public string AndroidBootloader => "";
+        public string DeviceBrand => "Apple";
+        public string DeviceModel => "iPhone";
+        public string DeviceModelIdentifier => "";
+        public string DeviceModelBoot => "iPhone6,1";
+        public string HardwareManufacturer => "Apple";
+        public string HardwareModel => "N51AP";
+        public string FirmwareTags => "";
+        public string FirmwareFingerprint => "";
+
         public string FirmwareBrand => "iPhone OS";
 
-        // TODO: check for iPhone
         public string FirmwareType => "9.3.3";
 
         #endregion
@@ -84,61 +93,83 @@ namespace PokemonGo_UWP.Utils
 
         #endregion
 
-        #region Sensors
-
-        private readonly Random _random = new Random();
-
-        private readonly Accelerometer _accelerometer = Accelerometer.GetDefault();
-
-        private readonly Magnetometer _magnetometer = Magnetometer.GetDefault();
-
-        private readonly Gyrometer _gyrometer = Gyrometer.GetDefault();
-
-        private readonly Inclinometer _inclinometer = Inclinometer.GetDefault();
-
-        private static readonly DateTimeOffset _startTime = DateTime.UtcNow;
-
-
-        public TimeSpan TimeSnapshot { get { return DateTime.UtcNow - _startTime; } }
-
-        //public ulong TimestampSnapshot = 0; //(ulong)(ElapsedMilliseconds - 230L) = TimestampSinceStart - 30L
-
-        public double MagnetometerX => _magnetometer?.GetCurrentReading()?.MagneticFieldX ?? _random.NextGaussian(0.0, 0.1);
-
-        public double MagnetometerY => _magnetometer?.GetCurrentReading()?.MagneticFieldY ?? _random.NextGaussian(0.0, 0.1);
-
-        public double MagnetometerZ => _magnetometer?.GetCurrentReading()?.MagneticFieldZ ?? _random.NextGaussian(0.0, 0.1);
-
-        public double GyroscopeRawX => _gyrometer?.GetCurrentReading()?.AngularVelocityX ?? _random.NextGaussian(0.0, 0.1);
-
-        public double GyroscopeRawY => _gyrometer?.GetCurrentReading()?.AngularVelocityY ?? _random.NextGaussian(0.0, 0.1);
-
-        public double GyroscopeRawZ => _gyrometer?.GetCurrentReading()?.AngularVelocityZ ?? _random.NextGaussian(0.0, 0.1);
-
-        public double AngleNormalizedX => _inclinometer?.GetCurrentReading()?.PitchDegrees ?? _random.NextGaussian(0.0, 5.0);
-        public double AngleNormalizedY => _inclinometer?.GetCurrentReading()?.YawDegrees ?? _random.NextGaussian(0.0, 5.0);
-        public double AngleNormalizedZ => _inclinometer?.GetCurrentReading()?.RollDegrees ?? _random.NextGaussian(0.0, 5.0);
-
-        public double AccelRawX => _accelerometer?.GetCurrentReading()?.AccelerationX ?? _random.NextGaussian(0.0, 0.3);
-
-        public double AccelRawY => _accelerometer?.GetCurrentReading()?.AccelerationY ?? _random.NextGaussian(0.0, 0.3);
-
-        public double AccelRawZ => _accelerometer?.GetCurrentReading()?.AccelerationZ ?? _random.NextGaussian(0.0, 0.3);
-
-
-        public ulong AccelerometerAxes => 3;
 
         public string Platform => "IOS";
 
         public int Version => 3300;
+
+        public long TimeSnapshot => DeviceInfos.RelativeTimeFromStart;
 
 
         //IOS doe not use sattelites info
         private IGpsSattelitesInfo[] _gpsSattelitesInfo = new IGpsSattelitesInfo[0];
         public IGpsSattelitesInfo[] GpsSattelitesInfo => _gpsSattelitesInfo;
 
-        #endregion
+        private ActivityStatusIOS _activityStatus = new ActivityStatusIOS();
+        public IActivityStatus ActivityStatus => _activityStatus;
 
+        private class ActivityStatusIOS : IActivityStatus
+        {
+            public bool Stationary => true;
+            public bool Tilting => GameClient.Geoposition?.Coordinate?.Speed < 3 ? true : false;
+            public bool Walking => GameClient.Geoposition?.Coordinate?.Speed > 3 && GameClient.Geoposition.Coordinate?.Speed > 7 ? true : false;
+            public bool Automotive => GameClient.Geoposition?.Coordinate?.Speed > 20 ? true : false;
+
+            public bool Cycling => false;
+
+            public bool Running => false;
+
+
+        }
+
+
+        private SensorInfoIOS _sensors = new SensorInfoIOS();
+        public ISensorInfo Sensors => _sensors;
+
+        private class SensorInfoIOS : ISensorInfo
+        {
+            private readonly Random _random = new Random();
+
+            private readonly Accelerometer _accelerometer = Accelerometer.GetDefault();
+
+            private readonly Magnetometer _magnetometer = Magnetometer.GetDefault();
+
+            private readonly Gyrometer _gyrometer = Gyrometer.GetDefault();
+
+            private readonly Inclinometer _inclinometer = Inclinometer.GetDefault();
+
+
+            public long TimeSnapshot => DeviceInfos.RelativeTimeFromStart;
+
+            //public ulong TimestampSnapshot = 0; //(ulong)(ElapsedMilliseconds - 230L) = TimestampSinceStart - 30L
+
+            public double MagnetometerX => _magnetometer?.GetCurrentReading()?.MagneticFieldX ?? _random.NextGaussian(0.0, 0.1);
+
+            public double MagnetometerY => _magnetometer?.GetCurrentReading()?.MagneticFieldY ?? _random.NextGaussian(0.0, 0.1);
+
+            public double MagnetometerZ => _magnetometer?.GetCurrentReading()?.MagneticFieldZ ?? _random.NextGaussian(0.0, 0.1);
+
+            public double GyroscopeRawX => _gyrometer?.GetCurrentReading()?.AngularVelocityX ?? _random.NextGaussian(0.0, 0.1);
+
+            public double GyroscopeRawY => _gyrometer?.GetCurrentReading()?.AngularVelocityY ?? _random.NextGaussian(0.0, 0.1);
+
+            public double GyroscopeRawZ => _gyrometer?.GetCurrentReading()?.AngularVelocityZ ?? _random.NextGaussian(0.0, 0.1);
+
+            public double AngleNormalizedX => _inclinometer?.GetCurrentReading()?.PitchDegrees ?? _random.NextGaussian(0.0, 5.0);
+            public double AngleNormalizedY => _inclinometer?.GetCurrentReading()?.YawDegrees ?? _random.NextGaussian(0.0, 5.0);
+            public double AngleNormalizedZ => _inclinometer?.GetCurrentReading()?.RollDegrees ?? _random.NextGaussian(0.0, 5.0);
+
+            public double AccelRawX => _accelerometer?.GetCurrentReading()?.AccelerationX ?? _random.NextGaussian(0.0, 0.3);
+
+            public double AccelRawY => _accelerometer?.GetCurrentReading()?.AccelerationY ?? _random.NextGaussian(0.0, 0.3);
+
+            public double AccelRawZ => _accelerometer?.GetCurrentReading()?.AccelerationZ ?? _random.NextGaussian(0.0, 0.3);
+
+
+            public ulong AccelerometerAxes => 3;
+
+
+        }
 
         #region Locationfix
 
@@ -162,8 +193,6 @@ namespace PokemonGo_UWP.Utils
                     case Windows.Devices.Geolocation.PositionSource.WiFi:
                     case Windows.Devices.Geolocation.PositionSource.Cellular:
                         loc.Provider = "network"; break;
-                    case Windows.Devices.Geolocation.PositionSource.Satellite:
-                        loc.Provider = "gps"; break;
                     default:
                         loc.Provider = "fused"; break;
                 }
@@ -177,18 +206,19 @@ namespace PokemonGo_UWP.Utils
                 loc.Longitude = (float)GameClient.Geoposition.Coordinate.Point.Position.Longitude;
                 loc.Altitude = (float)GameClient.Geoposition.Coordinate.Point.Position.Altitude;
 
-                // TODO: why 3? need more infos.
-                loc.Floor = 3;
+                //Not filled on iOS
+                //loc.Floor = 3;
 
                 // TODO: why 1? need more infos.
                 loc.LocationType = 1;
 
-                //some requests contains absolute utc time and some relative to app start (bug?)
-                loc.Timestamp = (ulong)GameClient.Geoposition.Coordinate.Timestamp.ToUnixTimeMilliseconds();
+                loc.TimeSnapshot = DeviceInfos.RelativeTimeFromStart;
 
-                loc.HorizontalAccuracy = (float?)GameClient.Geoposition.Coordinate?.Accuracy ?? (float)_random.NextGaussian(0.0, 0.5);
+                loc.HorizontalAccuracy = (float?)GameClient.Geoposition.Coordinate?.Accuracy ?? (float)_random.NextDouble(5.0, 50.0);
 
-                loc.VerticalAccuracy = (float?)GameClient.Geoposition.Coordinate?.AltitudeAccuracy ?? (float)_random.NextGaussian(0.0, 0.5);
+                loc.VerticalAccuracy = (float?)GameClient.Geoposition.Coordinate?.AltitudeAccuracy ?? (float)_random.NextDouble(10.0, 30.0);
+
+                loc.Unknown20 = -1.0f;
 
                 return loc;
             }
@@ -207,10 +237,10 @@ namespace PokemonGo_UWP.Utils
 
             public ulong LocationType { get; private set; }
 
-            public ulong Timestamp { get; private set; }
+            public long TimeSnapshot { get; private set; }
             public float HorizontalAccuracy { get; private set; }
             public float VerticalAccuracy { get; private set; }
-            public float RadialAccuracy { get; private set; }
+            public float Unknown20 { get; private set; }
 
         }
 

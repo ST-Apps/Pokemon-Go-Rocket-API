@@ -143,6 +143,33 @@
   <data name="EggDetailTextBlock.Text" xml:space="preserve">
     <value>Benutze eine Brutmaschine, um dieses Ei auszubrüten.</value>
   </data>
+  <data name="PokedexCaught.Text" xml:space="preserve">
+    <value>Gefangen:</value>
+  </data>
+  <data name="PokedexEvolutions.Text" xml:space="preserve">
+    <value>Entwicklung</value>
+  </data>
+  <data name="PokedexPokemonHeight.Text" xml:space="preserve">
+    <value>Größe:</value>
+  </data>
+  <data name="PokedexPokemonType.Text" xml:space="preserve">
+    <value>Typ:</value>
+  </data>
+  <data name="PokedexPokemonWeight.Text" xml:space="preserve">
+    <value>Gewicht:</value>
+  </data>
+  <data name="PokedexSeen.Text" xml:space="preserve">
+    <value>Gesehen:</value>
+  </data>
+  <data name="PokedexText.Text" xml:space="preserve">
+    <value>POKÉDEX</value>
+  </data>
+  <data name="PokedexViewCaught.Text" xml:space="preserve">
+    <value>Gefangen</value>
+  </data>
+  <data name="PokedexViewSeen.Text" xml:space="preserve">
+    <value>Gesehen</value>
+  </data>
   <data name="TransferTextBlock.Text" xml:space="preserve">
     <value>VERSCHICKEN</value>
   </data>

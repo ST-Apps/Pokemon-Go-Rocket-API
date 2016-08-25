@@ -6,7 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Devices.Geolocation;
 using Windows.Foundation;
+using Newtonsoft.Json;
 using PokemonGo_UWP.Utils;
+using PokemonGo_UWP.Utils.Helpers;
 using PokemonGo_UWP.Views;
 using POGOProtos.Enums;
 using POGOProtos.Map.Fort;
@@ -21,6 +23,7 @@ namespace PokemonGo_UWP.Entities
         /// <summary>
         /// Infos on the current lured Pokemon
         /// </summary>
+        [JsonProperty, JsonConverter(typeof(ProtobufJsonNetConverter))]
         private FortLureInfo _lureInfo;
 
 

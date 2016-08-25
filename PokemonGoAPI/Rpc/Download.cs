@@ -9,18 +9,24 @@ namespace PokemonGo.RocketAPI.Rpc
 {
     public class Download : BaseRpc
     {
+        public string DownloadSettingsHash { get; set; }
         public Download(Client client) : base(client)
         {
+            DownloadSettingsHash = "";
         }
 
         public async Task<DownloadSettingsResponse> GetSettings()
         {
             var message = new DownloadSettingsMessage
             {
-                Hash = "05daf51635c82611d1aac95c0b051d3ec088a930"
+                Hash = DownloadSettingsHash
             };
 
-            return await PostProtoPayload<Request, DownloadSettingsResponse>(RequestType.DownloadSettings, message);
+            var response = await PostProtoPayload<Request, DownloadSettingsResponse>(RequestType.DownloadSettings, message);
+            DownloadSettingsHash = response?.Hash ?? "";
+
+
+            return response;
         }
 
         public async Task<DownloadItemTemplatesResponse> GetItemTemplates()

@@ -96,7 +96,7 @@ Elle yükleme için yükleme dosyaları sayfası açılsın mı?</value>
     <value>Transfer başarılı! Profesör'den bir {0} Şekeri aldın.</value>
   </data>
   <data name="TransferPokemonWarningText" xml:space="preserve">
-    <value>Transfer ettikten sonra Pokémon'u geri alamazsın. {0} gerçekten Profesör'e aktarılsın mı?</value>
+    <value>Pokemon Profesör'e transfer edildikten sonra geri alamazsın.</value>
   </data>
   <data name="LoginExpired" xml:space="preserve">
     <value>Önceki giriş zamanı doldu.</value>
@@ -193,5 +193,21 @@ Elle yükleme için yükleme dosyaları sayfası açılsın mı?</value>
   </data>
   <data name="PokemonInventoryFullText" xml:space="preserve">
     <value>Pokémon çantanız dolu, {0} yakalamadan önce Pokémon transfer edin.</value>
+  </data>
+  <data name="WaitingForNetworkText" xml:space="preserve">
+    <value>Bağlantının geri gelmesi bekleniyor...</value>
+  </data>
+  <data name="EggHatchMessage" xml:space="preserve">
+    <value>Yumurta çatladı ve içinden {0} çıktı.
+Aynı zamanda {1} Stardust, {2} Şeker ve {3} XP kazandın.</value>
+  </data>
+  <data name="EvolvePokemonWarningText" xml:space="preserve">
+    <value>{0} geliştirilsin mi?</value>
+  </data>
+  <data name="PowerUpPokemonWarningText" xml:space="preserve">
+    <value>{0} için güçlendirme kullanmak istiyor musunuz?</value>
+  </data>
+  <data name="TransferPokemonWarningTitle" xml:space="preserve">
+    <value>{0} gerçekten Profesör'e transfer edilsin mi?</value>
   </data>
 </root>

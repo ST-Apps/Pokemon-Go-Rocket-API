@@ -12,7 +12,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Bug" xml:space="preserve">
+    <value>Insekt-type</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Mørk-type</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Drage-type</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Elektrisk-type</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Fe-type</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Sloss-type</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>Brann-type</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Fly-type</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Spøkelse-type</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Gress-type</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Jord-type</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Is-type</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Normal-type</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Gift-type</value>
+  </data>
   <data name="Psychic" xml:space="preserve">
-    <value>Psykiater</value>
+    <value>Psykisk-type</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Stein-type</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Metall-type</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Vann-type</value>
   </data>
 </root>

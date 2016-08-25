@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DateFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
+  <data name="DateTimeFormat" xml:space="preserve">
+    <value>dd.MM.yyyy hh:mm tt</value>
+  </data>
+  <data name="PokemonFledText" xml:space="preserve">
+    <value>{0} נמלטו</value>
+  </data>
+  <data name="GettingGpsSignalText" xml:space="preserve">
+    <value>מקבל קליטת GPS...</value>
+  </data>
+  <data name="GettingUserDataText" xml:space="preserve">
+    <value>מקבל נתוני משתמש...</value>
+  </data>
+  <data name="GoogleErrorText" xml:space="preserve">
+    <value>Google החזיר שגיאה:</value>
+  </data>
+  <data name="GoogleNotRespondingText" xml:space="preserve">
+    <value>גוגל אינו מגיב, אנא נסה שוב מאוחר יותר.</value>
+  </data>
+  <data name="LoginExpired" xml:space="preserve">
+    <value>כניסה הקודמת פגה.</value>
+  </data>
+  <data name="LoadingEncounterText" xml:space="preserve">
+    <value>טעינת המפגש עם {0}</value>
+  </data>
+  <data name="LoggingInText" xml:space="preserve">
+    <value>כניסה...</value>
+  </data>
+  <data name="LoginFailedText" xml:space="preserve">
+    <value>הכניסה נכשלה, נא לנסות שוב.</value>
+  </data>
+  <data name="NoText" xml:space="preserve">
+    <value>לא</value>
+  </data>
+  <data name="NoGpsPermissionsText" xml:space="preserve">
+    <value>אנחנו צריכים הרשאות ה-GPS כדי להפעיל את המשחק, בבקשה לאפשר אותו ולנסות שוב.</value>
+  </data>
+  <data name="PokemonRanAwayText" xml:space="preserve">
+    <value>פוקימון ברח, מצטער :(</value>
+  </data>
+  <data name="PtcDownText" xml:space="preserve">
+    <value>כניסה PTC למטה, אנא נסה שוב מאוחר יותר.</value>
+  </data>
+  <data name="SomethingWentWrongText" xml:space="preserve">
+    <value>משהו השתבש, app עשוי להיות לא יציב עכשיו. האם אתה רוצה להתנתק ולנסות שוב?</value>
+  </data>
+  <data name="TimeFormat" xml:space="preserve">
+    <value>hh:mm tt</value>
+  </data>
+  <data name="UpdateDownloadingText" xml:space="preserve">
+    <value>הורדת עדכון {0}</value>
+  </data>
+  <data name="UpdatedVersionText" xml:space="preserve">
+    <value>{0} גירסה מעודכנת זמינה. האם ברצונך לעדכן?
+{1}</value>
+  </data>
+  <data name="UpdateFailedText" xml:space="preserve">
+    <value>העדכון נכשל: {0}
+פתח את דף עם קבצי התקנה להתקנה ידנית?</value>
+  </data>
+  <data name="UpdateInstallingText" xml:space="preserve">
+    <value>התקנת עדכון, מופעל מחדש יישום </value>
+  </data>
+  <data name="WrongUsernameText" xml:space="preserve">
+    <value>הלא נכון שם משתמש/סיסמה או שרת מנותק, אנא נסה שנית.</value>
+  </data>
+  <data name="YesText" xml:space="preserve">
+    <value>כן</value>
+  </data>
+  <data name="InstinctTeamText" xml:space="preserve">
+    <value>אינסטינקט</value>
+  </data>
+  <data name="NoTeamText" xml:space="preserve">
+    <value>אין צוות</value>
+  </data>
+  <data name="ValorTeamText" xml:space="preserve">
+    <value>גבורה</value>
+  </data>
+  <data name="MysticTeamText" xml:space="preserve">
+    <value>מיסטיק</value>
+  </data>
+  <data name="TransferPokemonSuccessText" xml:space="preserve">
+    <value>העברת הצליח! יש {0} ממתקים הפרופסור.</value>
+  </data>
+  <data name="TransferPokemonWarningText" xml:space="preserve">
+    <value>לא לקחת את זה בחזרה אחרי זה הועבר הפרופסור. ? אתה באמת רוצה להעביר {0} הפרופסור</value>
+  </data>
+  <data name="ActivityUnknown" xml:space="preserve">
+    <value>ידוע</value>
+  </data>
+  <data name="ActivityCatchPokemon" xml:space="preserve">
+    <value>פוקימון נתפס</value>
+  </data>
+  <data name="ActivityCatchLegendPokemon" xml:space="preserve">
+    <value>לתפוס פוקימון האגדי</value>
+  </data>
+  <data name="ActivityFleePokemon" xml:space="preserve">
+    <value>פוקימון נמלטו</value>
+  </data>
+  <data name="ActivityDefeatFort" xml:space="preserve">
+    <value>התבוסה פורט</value>
+  </data>
+  <data name="ActivityEvolvePokemon" xml:space="preserve">
+    <value>להתפתח פוקימון</value>
+  </data>
+  <data name="ActivityHatchEgg" xml:space="preserve">
+    <value>ביצה בקעו!</value>
+  </data>
+  <data name="ActivityWalkKm" xml:space="preserve">
+    <value>ק מ הליכה</value>
+  </data>
+  <data name="ActivityPokedexEntryNew" xml:space="preserve">
+    <value>פוקימון חדש</value>
+  </data>
+  <data name="ActivityCatchFirstThrow" xml:space="preserve">
+    <value>הזריקה הראשונה</value>
+  </data>
+  <data name="ActivityCatchNiceThrow" xml:space="preserve">
+    <value>. זריקה טובה</value>
+  </data>
+  <data name="ActivityCatchGreatThrow" xml:space="preserve">
+    <value>זריקה נהדרת</value>
+  </data>
+  <data name="ActivityCatchExcellentThrow" xml:space="preserve">
+    <value>זריקה מעולה</value>
+  </data>
+  <data name="ActivityCatchCurveball" xml:space="preserve">
+    <value>מסובב</value>
+  </data>
+  <data name="ActivityCatchFirstCatchOfDay" xml:space="preserve">
+    <value>התפיסה הראשונה היום!</value>
+  </data>
+  <data name="ActivityCatchMilestone" xml:space="preserve">
+    <value>לתפוס אבן דרך</value>
+  </data>
+  <data name="ActivityTrainPokemon" xml:space="preserve">
+    <value>הרכבת פוקימון</value>
+  </data>
+  <data name="ActivitySearchFort" xml:space="preserve">
+    <value>חיפוש פורט</value>
+  </data>
+  <data name="ActivityReleasePokemon" xml:space="preserve">
+    <value>לשחרר פוקימון</value>
+  </data>
+  <data name="ActivityHatchEggSmallBonus" xml:space="preserve">
+    <value>הפתח ביצה בונוס קטן</value>
+  </data>
+  <data name="ActivityHatchEggMediumBonus" xml:space="preserve">
+    <value>הפתח ביצה בינונית בונוס</value>
+  </data>
+  <data name="ActivityHatchEggLargeBonus" xml:space="preserve">
+    <value>הפתח ביצה בונוס גדול</value>
+  </data>
+  <data name="ActivityDefeatGymDefender" xml:space="preserve">
+    <value>להביס את המגן כושר</value>
+  </data>
+  <data name="ActivityDefeatGymLeader" xml:space="preserve">
+    <value>מנהיגת מכון תבוסה</value>
+  </data>
+  <data name="Combat" xml:space="preserve">
+    <value>קרב</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>תאריך</value>
+  </data>
+  <data name="Fav" xml:space="preserve">
+    <value>מועדף</value>
+  </data>
+  <data name="Health" xml:space="preserve">
+    <value>בריאות</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>שם</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>מספר</value>
+  </data>
+  <data name="PokemonInventoryFullText" xml:space="preserve">
+    <value>המלאי פוקימון שלך הוא מלא, להעביר איזה פוקימון לפני מנסה לתפוס {0}.</value>
+  </data>
+  <data name="WaitingForNetworkText" xml:space="preserve">
+    <value>מחכה הרשת לחזור</value>
+  </data>
+</root>

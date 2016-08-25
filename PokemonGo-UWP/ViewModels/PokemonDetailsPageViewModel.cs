@@ -16,6 +16,8 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Navigation;
 using Newtonsoft.Json;
 using Google.Protobuf;
+using PokemonGo_UWP.Controls;
+using PokemonGo_UWP.Views;
 
 namespace PokemonGo_UWP.ViewModels
 {
@@ -63,7 +65,7 @@ namespace PokemonGo_UWP.ViewModels
             if (suspensionState.Any())
             {
                 // Recovering the state
-              
+                PlayerProfile = new PlayerData();                
                 CurrentPokemon = JsonConvert.DeserializeObject<PokemonDataWrapper>((string)suspensionState[nameof(CurrentPokemon)]);
                 PlayerProfile.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(PlayerProfile)]).CreateCodedInput());
             }
@@ -308,7 +310,11 @@ namespace PokemonGo_UWP.ViewModels
         public DelegateCommand ReturnToPokemonInventoryScreen => _returnToPokemonInventoryScreen ?? (
             _returnToPokemonInventoryScreen = new DelegateCommand(() =>
             {
-                NavigationService.GoBack();
+                // HACK - if we're coming fro the inventory we may go back, otherwise we go to map page
+                if (NavigationService.Frame.BackStack.Last().SourcePageType == typeof(PokemonInventoryPage))
+                    NavigationService.GoBack();
+                else
+                    NavigationService.Navigate(typeof(GameMapPage), GameMapNavigationModes.PokemonUpdate);
             }, () => true)
             );
 
@@ -319,44 +325,56 @@ namespace PokemonGo_UWP.ViewModels
         private DelegateCommand _transferPokemonCommand;
 
         public DelegateCommand TransferPokemonCommand => _transferPokemonCommand ?? (
-          _transferPokemonCommand = new DelegateCommand(async () =>
+          _transferPokemonCommand = new DelegateCommand(() =>
           {
               // Ask for confirmation before moving the Pokemon
-              var dialog =
-                  new MessageDialog(string.Format(Resources.CodeResources.GetString("TransferPokemonWarningText"),
-                      Resources.Pokemon.GetString(CurrentPokemon.PokemonId.ToString())));
-              dialog.Commands.Add(new UICommand(Resources.CodeResources.GetString("YesText")) { Id = 0 });
-              dialog.Commands.Add(new UICommand(Resources.CodeResources.GetString("NoText")) { Id = 1 });
-              dialog.DefaultCommandIndex = 0;
-              dialog.CancelCommandIndex = 1;
-              // User canceled transfer
-              if ((int)(await dialog.ShowAsyncQueue()).Id == 1) return;
-              // User confirmed transfer
-              var pokemonTransferResponse = await GameClient.TransferPokemon(CurrentPokemon.Id);
-              switch (pokemonTransferResponse.Result)
+              var dialog = new PoGoMessageDialog(string.Format(Resources.CodeResources.GetString("TransferPokemonWarningTitle"), Resources.Pokemon.GetString(CurrentPokemon.PokemonId.ToString())), 
+                  Resources.CodeResources.GetString("TransferPokemonWarningText"));
+              dialog.AcceptText = Resources.CodeResources.GetString("YesText");
+              dialog.CancelText = Resources.CodeResources.GetString("NoText");
+              dialog.CoverBackground = true;
+              dialog.AnimationType = PoGoMessageDialogAnimation.Bottom;
+              dialog.AcceptInvoked += async (sender, e) =>
               {
-                  case ReleasePokemonResponse.Types.Result.Unset:
-                      break;
-                  case ReleasePokemonResponse.Types.Result.Success:
-                      await
-                          new MessageDialog(
-                              string.Format(Resources.CodeResources.GetString("TransferPokemonSuccessText"),
-                                  Resources.Pokemon.GetString(CurrentCandy.FamilyId.ToString().Replace("Family", "")))).ShowAsyncQueue();
-                      await GameClient.UpdateInventory();
-                      await GameClient.UpdatePlayerStats();
-                      NavigationService.GoBack();
-                      break;
-                
-                  case ReleasePokemonResponse.Types.Result.PokemonDeployed:
-                      break;
-                  case ReleasePokemonResponse.Types.Result.Failed:
-                      break;
-                  case ReleasePokemonResponse.Types.Result.ErrorPokemonIsEgg:
-                      break;
-                  default:
-                      throw new ArgumentOutOfRangeException();
-              }
+                  // User confirmed transfer
+                  var pokemonTransferResponse = await GameClient.TransferPokemon(CurrentPokemon.Id);
+                  switch (pokemonTransferResponse.Result)
+                  {
+                      case ReleasePokemonResponse.Types.Result.Unset:
+                          break;
+                      case ReleasePokemonResponse.Types.Result.Success:
+                          // This isn't a MessageDialog in the original. Need to implement the additional UI
+                          await
+                              new MessageDialog(
+                                  string.Format(Resources.CodeResources.GetString("TransferPokemonSuccessText"),
+                                      Resources.Pokemon.GetString(CurrentCandy.FamilyId.ToString().Replace("Family", "")))).ShowAsyncQueue();
+                          await GameClient.UpdateInventory();
+                          await GameClient.UpdatePlayerStats();
+                          // HACK - if we're coming fro the inventory we may go back, otherwise we go to map page
+                          if (NavigationService.Frame.BackStack.Last().SourcePageType == typeof(PokemonInventoryPage))
+                              NavigationService.GoBack();
+                          else
+                              NavigationService.Navigate(typeof(GameMapPage), GameMapNavigationModes.PokemonUpdate);
+                          break;
+
+                      case ReleasePokemonResponse.Types.Result.PokemonDeployed:
+                          break;
+                      case ReleasePokemonResponse.Types.Result.Failed:
+                          break;
+                      case ReleasePokemonResponse.Types.Result.ErrorPokemonIsEgg:
+                          break;
+                      default:
+                          throw new ArgumentOutOfRangeException();
+                  }
+              };
+
+              dialog.Show();
           }, () => true));
+
+        private void Dialog_CancelInvoked(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
 
         #endregion
 
@@ -407,33 +425,44 @@ namespace PokemonGo_UWP.ViewModels
 
         private DelegateCommand _powerUpPokemonCommand;
 
-        public DelegateCommand PowerUpPokemonCommand => _powerUpPokemonCommand ?? (_powerUpPokemonCommand = new DelegateCommand(async () =>
+        public DelegateCommand PowerUpPokemonCommand => _powerUpPokemonCommand ?? (_powerUpPokemonCommand = new DelegateCommand(() =>
         {
-            // Send power up request
-            var res = await GameClient.PowerUpPokemon(CurrentPokemon.WrappedData);
-            switch (res.Result)
+            // Ask for confirmation before powering up the Pokemon
+            var dialog = new PoGoMessageDialog("", string.Format(Resources.CodeResources.GetString("PowerUpPokemonWarningText"),Resources.Pokemon.GetString(CurrentPokemon.PokemonId.ToString())));
+            dialog.AcceptText = Resources.CodeResources.GetString("YesText");
+            dialog.CancelText = Resources.CodeResources.GetString("NoText");
+            dialog.CoverBackground = true;
+            dialog.AnimationType = PoGoMessageDialogAnimation.Bottom;
+            dialog.AcceptInvoked += async (sender, e) =>
             {
-                case UpgradePokemonResponse.Types.Result.Unset:
-                    break;
-                case UpgradePokemonResponse.Types.Result.Success:
-                    // Reload updated data
-                    CurrentPokemon = new PokemonDataWrapper(res.UpgradedPokemon);
-                    await GameClient.UpdateInventory();
-                    await GameClient.UpdateProfile();
-                    UpdateCurrentData();
-                    break;
-                
-                case UpgradePokemonResponse.Types.Result.ErrorPokemonNotFound:
-                    break;
-                case UpgradePokemonResponse.Types.Result.ErrorInsufficientResources:
-                    break;
-                case UpgradePokemonResponse.Types.Result.ErrorUpgradeNotAvailable:
-                    break;
-                case UpgradePokemonResponse.Types.Result.ErrorPokemonIsDeployed:
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
+                // Send power up request
+                var res = await GameClient.PowerUpPokemon(CurrentPokemon.WrappedData);
+                switch (res.Result)
+                {
+                    case UpgradePokemonResponse.Types.Result.Unset:
+                        break;
+                    case UpgradePokemonResponse.Types.Result.Success:
+                        // Reload updated data
+                        CurrentPokemon = new PokemonDataWrapper(res.UpgradedPokemon);
+                        await GameClient.UpdateInventory();
+                        await GameClient.UpdateProfile();
+                        UpdateCurrentData();
+                        break;
+
+                    case UpgradePokemonResponse.Types.Result.ErrorPokemonNotFound:
+                        break;
+                    case UpgradePokemonResponse.Types.Result.ErrorInsufficientResources:
+                        break;
+                    case UpgradePokemonResponse.Types.Result.ErrorUpgradeNotAvailable:
+                        break;
+                    case UpgradePokemonResponse.Types.Result.ErrorPokemonIsDeployed:
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+            };
+
+            dialog.Show();
         }, CanPowerUp));
 
         private bool CanPowerUp()
@@ -455,31 +484,43 @@ namespace PokemonGo_UWP.ViewModels
 
         private DelegateCommand _evolvePokemonCommand;
 
-        public DelegateCommand EvolvePokemonCommand => _evolvePokemonCommand ?? (_evolvePokemonCommand = new DelegateCommand(async () =>
+        public DelegateCommand EvolvePokemonCommand => _evolvePokemonCommand ?? (_evolvePokemonCommand = new DelegateCommand(() =>
         {
-            EvolvePokemonResponse = await GameClient.EvolvePokemon(CurrentPokemon.WrappedData);   
-            RaisePropertyChanged(() => EvolvedPokemonId);         
-            switch (EvolvePokemonResponse.Result)
+            // Ask for confirmation before evolving the Pokemon
+            var dialog = new PoGoMessageDialog("", string.Format(Resources.CodeResources.GetString("EvolvePokemonWarningText"),
+                Resources.Pokemon.GetString(CurrentPokemon.PokemonId.ToString())));
+            dialog.AcceptText = Resources.CodeResources.GetString("YesText");
+            dialog.CancelText = Resources.CodeResources.GetString("NoText");
+            dialog.CoverBackground = true;
+            dialog.AnimationType = PoGoMessageDialogAnimation.Bottom;
+            dialog.AcceptInvoked += async (sender, e) =>
             {
-                case EvolvePokemonResponse.Types.Result.Unset:
-                    break;
-                case EvolvePokemonResponse.Types.Result.Success:
-                    PokemonEvolved?.Invoke(this, null);
-                    await GameClient.UpdateInventory();
-                    await GameClient.UpdateProfile();
-                    break;
-               
-                case EvolvePokemonResponse.Types.Result.FailedPokemonMissing:
-                    break;
-                case EvolvePokemonResponse.Types.Result.FailedInsufficientResources:
-                    break;
-                case EvolvePokemonResponse.Types.Result.FailedPokemonCannotEvolve:
-                    break;
-                case EvolvePokemonResponse.Types.Result.FailedPokemonIsDeployed:
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
+                EvolvePokemonResponse = await GameClient.EvolvePokemon(CurrentPokemon.WrappedData);
+                RaisePropertyChanged(() => EvolvedPokemonId);
+                switch (EvolvePokemonResponse.Result)
+                {
+                    case EvolvePokemonResponse.Types.Result.Unset:
+                        break;
+                    case EvolvePokemonResponse.Types.Result.Success:
+                        PokemonEvolved?.Invoke(this, null);
+                        await GameClient.UpdateInventory();
+                        await GameClient.UpdateProfile();
+                        break;
+
+                    case EvolvePokemonResponse.Types.Result.FailedPokemonMissing:
+                        break;
+                    case EvolvePokemonResponse.Types.Result.FailedInsufficientResources:
+                        break;
+                    case EvolvePokemonResponse.Types.Result.FailedPokemonCannotEvolve:
+                        break;
+                    case EvolvePokemonResponse.Types.Result.FailedPokemonIsDeployed:
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+            };
+
+            dialog.Show();
         }, () => CurrentCandy != null && CurrentCandy.Candy_ >= PokemonExtraData.CandyToEvolve));
 
         private DelegateCommand _replaceEvolvedPokemonCommand;

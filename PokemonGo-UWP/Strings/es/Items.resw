@@ -140,4 +140,7 @@
   <data name="ItemXMiracle" xml:space="preserve">
     <value>Milagro X</value>
   </data>
+  <data name="D_ItemUnknown" xml:space="preserve">
+    <value>Este elemento es desconocido, podría añadirse en el futuro.</value>
+  </data>
 </root>

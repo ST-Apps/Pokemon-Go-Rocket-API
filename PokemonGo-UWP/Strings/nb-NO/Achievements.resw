@@ -15,85 +15,169 @@
   <data name="BadgeBattleAttackWon" xml:space="preserve">
     <value>Utfordrer</value>
   </data>
+  <data name="BadgeBattleAttackWonDescription" xml:space="preserve">
+    <value>{0} Pokégym Kamper Vunnet</value>
+  </data>
   <data name="BadgeBattleTrainingWon" xml:space="preserve">
     <value>Erfaren trener</value>
+  </data>
+  <data name="BadgeBattleTrainingWonDescription" xml:space="preserve">
+    <value>{0} Treningskamper Vunnet</value>
   </data>
   <data name="BadgeBigMagikarp" xml:space="preserve">
     <value>Fisker</value>
   </data>
+  <data name="BadgeBigMagikarpDescription" xml:space="preserve">
+    <value>{0} Magikarp fanget</value>
+  </data>
   <data name="BadgeCaptureTotal" xml:space="preserve">
     <value>Samler</value>
+  </data>
+  <data name="BadgeCaptureTotalDescription" xml:space="preserve">
+    <value>{0} Pokémon fanget</value>
   </data>
   <data name="BadgeEvolvedTotal" xml:space="preserve">
     <value>Forsker</value>
   </data>
+  <data name="BadgeEvolvedTotalDescription" xml:space="preserve">
+    <value>{0} Pokémon utviklet</value>
+  </data>
   <data name="BadgeHatchedTotal" xml:space="preserve">
     <value>Oppdretter</value>
+  </data>
+  <data name="BadgeHatchedTotalDescription" xml:space="preserve">
+    <value>{0} Pokémon klekket</value>
   </data>
   <data name="BadgePikachu" xml:space="preserve">
     <value>Pikachu Fan</value>
   </data>
+  <data name="BadgePikachuDescription" xml:space="preserve">
+    <value>{0} Pikachu fanget</value>
+  </data>
   <data name="BadgePokedexEntries" xml:space="preserve">
     <value>Oppdager</value>
   </data>
+  <data name="BadgePokedexEntriesDescription" xml:space="preserve">
+    <value>{0} Pokémon registrert i Pokédexen</value>
+  </data>
   <data name="BadgePokestopsVisited" xml:space="preserve">
-    <value>Travel Trener</value>
+    <value>Dårlig Tid?</value>
+  </data>
+  <data name="BadgePokestopsVisitedDescription" xml:space="preserve">
+    <value>{0} Pokéstop Besøkt</value>
   </data>
   <data name="BadgeSmallRattata" xml:space="preserve">
     <value>Unggutt</value>
   </data>
+  <data name="BadgeSmallRattataDescription" xml:space="preserve">
+    <value>{0} Små Rattata fanget</value>
+  </data>
   <data name="BadgeTravelKm" xml:space="preserve">
     <value>Jogger</value>
+  </data>
+  <data name="BadgeTravelKmDescription" xml:space="preserve">
+    <value>{0} km gått</value>
   </data>
   <data name="Bug" xml:space="preserve">
     <value>Insektfanger</value>
   </data>
+  <data name="BugDescription" xml:space="preserve">
+    <value>{0} Insekt-type Pokémon fanget</value>
+  </data>
   <data name="Dragon" xml:space="preserve">
     <value>Dragetemmer</value>
+  </data>
+  <data name="DragonDescription" xml:space="preserve">
+    <value>{0} Drage-type Pokémon fanget</value>
   </data>
   <data name="Electric" xml:space="preserve">
     <value>Elektriker</value>
   </data>
+  <data name="ElectricDescription" xml:space="preserve">
+    <value>{0} Elektrisk-type Pokémon fanget</value>
+  </data>
   <data name="Fairy" xml:space="preserve">
     <value>Eventyrtid</value>
+  </data>
+  <data name="FairyDescription" xml:space="preserve">
+    <value>{0} Fe-type Pokémon fanget</value>
   </data>
   <data name="Fighting" xml:space="preserve">
     <value>Svart Belte</value>
   </data>
+  <data name="FightingDescription" xml:space="preserve">
+    <value>{0} Sloss-type Pokémon fanget</value>
+  </data>
   <data name="Fire" xml:space="preserve">
     <value>Pyroman</value>
+  </data>
+  <data name="FireDescription" xml:space="preserve">
+    <value>{0} Brann-type Pokémon fanget</value>
   </data>
   <data name="Flying" xml:space="preserve">
     <value>Fuglepasser</value>
   </data>
+  <data name="FlyingDescription" xml:space="preserve">
+    <value>{0} Fly-type Pokémon fanget</value>
+  </data>
   <data name="Ghost" xml:space="preserve">
     <value>Spøkelsesjeger</value>
+  </data>
+  <data name="GhostDescription" xml:space="preserve">
+    <value>{0} Spøkelse-type Pokémon fanget</value>
   </data>
   <data name="Grass" xml:space="preserve">
     <value>Gartner</value>
   </data>
+  <data name="GrassDescription" xml:space="preserve">
+    <value>{0} Gress-type Pokémon fanget</value>
+  </data>
   <data name="Ground" xml:space="preserve">
     <value>Under Jorden</value>
+  </data>
+  <data name="GroundDescription" xml:space="preserve">
+    <value>{0} Jord-type Pokémon fanget</value>
   </data>
   <data name="Ice" xml:space="preserve">
     <value>Skiløper</value>
   </data>
+  <data name="IceDescription" xml:space="preserve">
+    <value>{0} Is-type Pokémon fanget</value>
+  </data>
   <data name="Normal" xml:space="preserve">
     <value>Skoleelev</value>
   </data>
+  <data name="NormalDescription" xml:space="preserve">
+    <value>{0} Normal-type Pokémon fanget</value>
+  </data>
   <data name="Poison" xml:space="preserve">
-    <value>Giftig sammling</value>
+    <value>Giftig Samling</value>
+  </data>
+  <data name="PoisonDescription" xml:space="preserve">
+    <value>{0} Gift-type Pokémon fanget</value>
   </data>
   <data name="Psychic" xml:space="preserve">
     <value>Psykiater</value>
   </data>
+  <data name="PsychicDescription" xml:space="preserve">
+    <value>{0} Psykisk-type Pokémon fanget</value>
+  </data>
   <data name="Rock" xml:space="preserve">
     <value>Turgåer</value>
+  </data>
+  <data name="RockDescription" xml:space="preserve">
+    <value>{0} Stein-type Pokémon fanget</value>
   </data>
   <data name="Steel" xml:space="preserve">
     <value>Metallarbeider</value>
   </data>
+  <data name="SteelDescription" xml:space="preserve">
+    <value>{0} Metall-type Pokémon fanget</value>
+  </data>
   <data name="Water" xml:space="preserve">
     <value>Svømmer</value>
+  </data>
+  <data name="WaterDescription" xml:space="preserve">
+    <value>{0} Vann-type Pokémon fanget</value>
   </data>
 </root>

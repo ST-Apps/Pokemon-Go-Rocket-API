@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel;
+using Newtonsoft.Json;
+using PokemonGo_UWP.Utils.Helpers;
 using POGOProtos.Enums;
 using POGOProtos.Map.Pokemon;
 
@@ -9,6 +11,7 @@ namespace PokemonGo_UWP.Entities
     /// </summary>
     public class NearbyPokemonWrapper : IUpdatable<NearbyPokemon>, INotifyPropertyChanged
     {
+        [JsonProperty, JsonConverter(typeof(ProtobufJsonNetConverter))]
         private NearbyPokemon _nearbyPokemon;
 
         public NearbyPokemonWrapper(NearbyPokemon nearbyPokemon)

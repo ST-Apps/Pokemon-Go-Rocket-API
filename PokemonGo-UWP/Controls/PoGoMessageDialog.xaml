@@ -1,0 +1,169 @@
+﻿<UserControl
+    x:Class="PokemonGo_UWP.Controls.PoGoMessageDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PokemonGo_UWP.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:utils="using:PokemonGo_UWP.Utils"    
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <UserControl.Resources>
+
+        <utils:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        <utils:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
+
+        <!--ANIMATIONS-->
+
+        <!--Fade-->
+        <Storyboard x:Name="ShowMDFadeStoryboard">
+            <DoubleAnimation
+                Storyboard.TargetName="CoverGrid"
+                Storyboard.TargetProperty="Opacity"
+                From="0"
+                To="1"
+                BeginTime="0:0:0.05"
+                Duration="0:0:0.1" />
+            <DoubleAnimation
+                Storyboard.TargetName="BackgroundRect"
+                Storyboard.TargetProperty="Opacity"
+                From="0"
+                To="0.6"
+                Duration="0:0:0.15" />
+        </Storyboard>
+
+        <Storyboard x:Name="HideMDFadeStoryboard">
+            <DoubleAnimation
+                Storyboard.TargetName="CoverGrid"
+                Storyboard.TargetProperty="Opacity"
+                From="1"
+                To="0"
+                BeginTime="0:0:0.05"
+                Duration="0:0:0.1" />
+            <DoubleAnimation
+                Storyboard.TargetName="BackgroundRect"
+                Storyboard.TargetProperty="Opacity"
+                From="0.6"
+                To="0"
+                Duration="0:0:0.15" />
+        </Storyboard>
+        
+        <!--Bottom-->
+        <Storyboard x:Name="ShowMDBottomStoryboard">
+            <DoubleAnimation
+                Storyboard.TargetName="CoverGrid"
+                Storyboard.TargetProperty="Opacity"
+                From="0"
+                To="1"
+                Duration="0:0:0.1" />
+            <DoubleAnimation
+                Storyboard.TargetName="BackgroundRect"
+                Storyboard.TargetProperty="Opacity"
+                From="0"
+                To="0.6"
+                Duration="0:0:0.15" />
+            <DoubleAnimation Storyboard.TargetName="DownwardsTranslation"
+                             Storyboard.TargetProperty="Y"
+                             From="{x:Bind DownwardsTranslationRange, Mode=OneWay}"
+                             To="0"
+                             BeginTime="0:0:0.1"
+                             Duration="0:0:0.3">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Storyboard x:Name="HideMDBottomStoryboard">
+            <DoubleAnimation
+                Storyboard.TargetName="CoverGrid"
+                Storyboard.TargetProperty="Opacity"
+                From="1"
+                To="0"
+                Duration="0:0:0.05"
+                BeginTime="0:0:0.25"/>
+            <DoubleAnimation
+                Storyboard.TargetName="BackgroundRect"
+                Storyboard.TargetProperty="Opacity"
+                From="0.6"
+                To="0"
+                Duration="0:0:0.15"
+                BeginTime="0:0:0.15"/>
+            <DoubleAnimation Storyboard.TargetName="DownwardsTranslation"
+                             Storyboard.TargetProperty="Y"
+                             From="0"
+                             To="{x:Bind DownwardsTranslationRange, Mode=OneWay}"
+                             Duration="0:0:0.3">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseIn" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+    </UserControl.Resources>
+
+    <Grid x:Name="CoverGrid" 
+          VerticalAlignment="Stretch" 
+          HorizontalAlignment="Stretch" 
+          Background="Transparent"
+          Opacity="1">
+        <Rectangle x:Name="BackgroundRect" 
+                   Fill="{StaticResource PageBackgroundGradient}"
+                   Opacity="0"
+                   Visibility="{x:Bind CoverBackground, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+        <Grid x:Name="ContentGrid" 
+              Style="{StaticResource GridContainer}" 
+              HorizontalAlignment="Center" 
+              VerticalAlignment="Center" 
+              MaxWidth="800" 
+              MinWidth="250"
+              Margin="25" 
+              Padding="25,25,25,15">
+            <Grid.RenderTransform>
+                <TranslateTransform Y="0" x:Name="DownwardsTranslation"/>
+            </Grid.RenderTransform>
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" 
+                                     EndPoint="0.8,1">
+                    <GradientStop Color="#fff" Offset="0" />
+                    <GradientStop Color="#eeffee" Offset="1" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <StackPanel Orientation="Vertical">
+                <TextBlock Foreground="{StaticResource TitleTextColor}" 
+                           Margin="0,0,0,15" 
+                           Visibility="{x:Bind Title, Converter={StaticResource StringToVisibilityConverter}}"
+                           Text="{x:Bind Title, Mode=OneWay}"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"
+                           FontSize="17"
+                           FontFamily="{StaticResource LatoBoldFont}"/>
+                <TextBlock Foreground="{StaticResource TitleTextColor}"
+                           Visibility="{x:Bind Text, Converter={StaticResource StringToVisibilityConverter}}"
+                           Text="{x:Bind Text, Mode=OneWay}"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"
+                           FontSize="15"
+                           FontFamily="{StaticResource LatoRegularFont}"/>
+                <ContentPresenter FontSize="15" 
+                                  TextWrapping="Wrap" 
+                                  Foreground="{StaticResource TitleTextColor}" 
+                                  FontFamily="{StaticResource LatoRegularFont}" />
+                <Button x:Name="AcceptButton" 
+                        Style="{StaticResource ButtonSubmit}"
+                        HorizontalAlignment="Stretch"
+                        Content="{x:Bind AcceptText, Mode=OneWay, FallbackValue='O. K.'}"
+                        MinWidth="125"
+                        Margin="0,25,0,0" />
+                <Button x:Name="CancelButton" 
+                        Style="{StaticResource ButtonCancel}" 
+                        Content="{x:Bind CancelText, Mode=OneWay, FallbackValue='CANCEL'}"
+                        Margin="0,15,0,0"
+                        Visibility="{x:Bind ShowCancelButton, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            </StackPanel>
+
+            
+        </Grid>
+
+    </Grid>
+</UserControl>

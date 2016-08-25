@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using Windows.Devices.Geolocation;
+using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Navigation;
@@ -21,6 +22,7 @@ using Resources = PokemonGo_UWP.Utils.Resources;
 using POGOProtos.Enums;
 using POGOProtos.Map.Pokemon;
 using Google.Protobuf;
+using PokemonGo_UWP.Controls;
 
 namespace PokemonGo_UWP.ViewModels
 {
@@ -77,10 +79,14 @@ namespace PokemonGo_UWP.ViewModels
             if (suspensionState.Any())
             {
                 // Recovering the state
+                PlayerProfile = new PlayerData();
+                PlayerStats = new PlayerStats();
                 PlayerProfile.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(PlayerProfile)]).CreateCodedInput());
                 PlayerStats.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(PlayerStats)]).CreateCodedInput());
                 // Restarting update service
+                await GameClient.InitializeClient();
                 await StartGpsDataService();
+                GameClient.ToggleUpdateTimer();
                 return;
             }
 
@@ -250,7 +256,7 @@ namespace PokemonGo_UWP.ViewModels
                         BootStrapper.Current.Exit();
                         break;
                 }
-            });
+            }, 0, CoreDispatcherPriority.High);
         }
 
 

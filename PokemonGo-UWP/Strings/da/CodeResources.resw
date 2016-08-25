@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DateFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
+  <data name="DateTimeFormat" xml:space="preserve">
+    <value>dd.MM.yyyy hh:mm tt</value>
+  </data>
+  <data name="PokemonFledText" xml:space="preserve">
+    <value>{0} flyktet
+</value>
+  </data>
+  <data name="GettingGpsSignalText" xml:space="preserve">
+    <value>Skaffer GPS signal...</value>
+  </data>
+  <data name="GettingUserDataText" xml:space="preserve">
+    <value>Henter brukerdata...</value>
+  </data>
+  <data name="GoogleErrorText" xml:space="preserve">
+    <value>Google returnerte fejl: </value>
+  </data>
+  <data name="GoogleNotRespondingText" xml:space="preserve">
+    <value>Google svarer ikke, vennligst prøv igjen senere.</value>
+  </data>
+  <data name="LoginExpired" xml:space="preserve">
+    <value>Forrige logon er udløbet.</value>
+  </data>
+  <data name="LoadingEncounterText" xml:space="preserve">
+    <value>Henter møde med {0}</value>
+  </data>
+  <data name="LoggingInText" xml:space="preserve">
+    <value>Logger ind...</value>
+  </data>
+  <data name="LoginFailedText" xml:space="preserve">
+    <value>Login mislykkes, vennligst prøv på nytt.</value>
+  </data>
+  <data name="NoText" xml:space="preserve">
+    <value>Nej</value>
+  </data>
+  <data name="NoGpsPermissionsText" xml:space="preserve">
+    <value>Vi behøverGPS tillatelse for at starte spillet, vennligst aktiver det og prøv på ny.</value>
+  </data>
+  <data name="PokemonRanAwayText" xml:space="preserve">
+    <value>Pokémon løb væk, undskyld :(</value>
+  </data>
+  <data name="PtcDownText" xml:space="preserve">
+    <value>PTC Login er sannsynligvis nede, vennligst prøv atter senere.</value>
+  </data>
+  <data name="SomethingWentWrongText" xml:space="preserve">
+    <value>Noget gik galt og appen kan være ustabil. Vil du logge ud og prøve på igen?</value>
+  </data>
+  <data name="TimeFormat" xml:space="preserve">
+    <value>hh:mm tt</value>
+  </data>
+  <data name="UpdateDownloadingText" xml:space="preserve">
+    <value>Henter oppdatering {0}</value>
+  </data>
+  <data name="UpdatedVersionText" xml:space="preserve">
+    <value>En oppdatert version {0} er tilgjengelig. Vil du oppdatere?
+{1}</value>
+  </data>
+  <data name="UpdateFailedText" xml:space="preserve">
+    <value>Opdatering mislykkedes: {0}
+åbne siden med installationsfilerne for manuel installation?</value>
+  </data>
+  <data name="UpdateInstallingText" xml:space="preserve">
+    <value>Installerer oppdatering, appen genstarter...</value>
+  </data>
+  <data name="WrongUsernameText" xml:space="preserve">
+    <value>Forkert brugernavn/adgangskode eller serveren er ikkke tilgængelig, prøv venligst igjen.</value>
+  </data>
+  <data name="YesText" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="InstinctTeamText" xml:space="preserve">
+    <value>Instinct</value>
+  </data>
+  <data name="NoTeamText" xml:space="preserve">
+    <value>Ingen hold</value>
+  </data>
+  <data name="ValorTeamText" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="MysticTeamText" xml:space="preserve">
+    <value>Mystic</value>
+  </data>
+  <data name="TransferPokemonSuccessText" xml:space="preserve">
+    <value>Overførsel fuldført! Du fik  {0} Slik fra Professoren.</value>
+  </data>
+  <data name="ActivityUnknown" xml:space="preserve">
+    <value>Ukjent</value>
+  </data>
+  <data name="ActivityCatchPokemon" xml:space="preserve">
+    <value>Fanget Pokémon</value>
+  </data>
+  <data name="ActivityCatchLegendPokemon" xml:space="preserve">
+    <value>Fanget  Legendarisk Pokémon</value>
+  </data>
+  <data name="ActivityFleePokemon" xml:space="preserve">
+    <value>Pokémon flygtede</value>
+  </data>
+  <data name="ActivityDefeatFort" xml:space="preserve">
+    <value>Besejre Fort</value>
+  </data>
+  <data name="ActivityEvolvePokemon" xml:space="preserve">
+    <value>Udvikl en Pokémon</value>
+  </data>
+  <data name="ActivityHatchEgg" xml:space="preserve">
+    <value>Æg udklækket!</value>
+  </data>
+  <data name="ActivityWalkKm" xml:space="preserve">
+    <value>Gå Km</value>
+  </data>
+  <data name="ActivityPokedexEntryNew" xml:space="preserve">
+    <value>Ny Pokémon</value>
+  </data>
+  <data name="ActivityCatchFirstThrow" xml:space="preserve">
+    <value>Første kast</value>
+  </data>
+  <data name="ActivityCatchNiceThrow" xml:space="preserve">
+    <value>Flot kast</value>
+  </data>
+  <data name="ActivityCatchGreatThrow" xml:space="preserve">
+    <value>Fantastisk Kast</value>
+  </data>
+  <data name="ActivityCatchExcellentThrow" xml:space="preserve">
+    <value>Fremragende kast</value>
+  </data>
+  <data name="ActivityCatchCurveball" xml:space="preserve">
+    <value>Skrueboldt</value>
+  </data>
+  <data name="ActivityCatchFirstCatchOfDay" xml:space="preserve">
+    <value>Første fangst i dag!</value>
+  </data>
+  <data name="ActivityCatchMilestone" xml:space="preserve">
+    <value>Milepæls fangst</value>
+  </data>
+  <data name="ActivityTrainPokemon" xml:space="preserve">
+    <value>Træn Pokémon</value>
+  </data>
+  <data name="ActivitySearchFort" xml:space="preserve">
+    <value>Søg Fort</value>
+  </data>
+  <data name="ActivityReleasePokemon" xml:space="preserve">
+    <value>Frigiv Pokémon</value>
+  </data>
+  <data name="ActivityHatchEggSmallBonus" xml:space="preserve">
+    <value>Udklæg Æg lille Bonus</value>
+  </data>
+  <data name="ActivityHatchEggMediumBonus" xml:space="preserve">
+    <value>Udklæg Æg Mellemstor Bonus</value>
+  </data>
+  <data name="ActivityHatchEggLargeBonus" xml:space="preserve">
+    <value>Udklæg Æg Stor Bonus</value>
+  </data>
+  <data name="ActivityDefeatGymDefender" xml:space="preserve">
+    <value>Nedkæmp Fitnes Forsvarer</value>
+  </data>
+  <data name="ActivityDefeatGymLeader" xml:space="preserve">
+    <value>Besejer Fitnes Leder</value>
+  </data>
+  <data name="Combat" xml:space="preserve">
+    <value>Kamp</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Dato</value>
+  </data>
+  <data name="Fav" xml:space="preserve">
+    <value>Favorit</value>
+  </data>
+  <data name="Health" xml:space="preserve">
+    <value>Helbred</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Navn</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Nummer</value>
+  </data>
+  <data name="PokemonInventoryFullText" xml:space="preserve">
+    <value>Dit Pokémon lager er fyldt, overfør nogle Pokémon før du forsøger at fange {0}.</value>
+  </data>
+  <data name="WaitingForNetworkText" xml:space="preserve">
+    <value>Afventer Netværk...</value>
+  </data>
+</root>

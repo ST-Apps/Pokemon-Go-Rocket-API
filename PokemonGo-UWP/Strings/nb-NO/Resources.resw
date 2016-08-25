@@ -24,11 +24,20 @@
   <data name="PtcLoginTextBlock.Text" xml:space="preserve">
     <value>Logg på med PTC bruker</value>
   </data>
+  <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
+    <value>For å logge inn, må du oppgi Brukernavn/E-post og Passord ovenfor. Hvis du ikke stoler på appen, vennligst lukk den nå. Niantic kan utestenge deg om du bruker appen. Bruk på eget ansvar.</value>
+  </data>
   <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
     <value>I nærheten</value>
   </data>
+  <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
+    <value>DETTE POKÉSTOPET ER FOR LANGT UNNA</value>
+  </data>
   <data name="LoginPasswordPasswordBox.PlaceholderText" xml:space="preserve">
     <value>Passord</value>
+  </data>
+  <data name="LoginUsernameTextBox.PlaceholderText" xml:space="preserve">
+    <value>Brukernavn / E-post</value>
   </data>
   <data name="ExperienceTextBlock.Text" xml:space="preserve">
     <value>XP</value>
@@ -80,7 +89,7 @@
     <value>TOTAL</value>
   </data>
   <data name="LevelUpTextBlock.Text" xml:space="preserve">
-    <value>Level opp!</value>
+    <value>Nytt level!</value>
   </data>
   <data name="LevelTextBlock.Text" xml:space="preserve">
     <value>Level</value>
@@ -93,6 +102,9 @@
   </data>
   <data name="IncubatorsTextBlock.Text" xml:space="preserve">
     <value>INKUBATORER</value>
+  </data>
+  <data name="SettingsUseNianticMapTextBlock.Text" xml:space="preserve">
+    <value>Bruk Niantic Sitt Kart</value>
   </data>
   <data name="CandyTextBlock.Text" xml:space="preserve">
     <value> CANDY</value>
@@ -123,6 +135,63 @@
     <value>UTVIKLE</value>
   </data>
   <data name="PowerUpButton.Content" xml:space="preserve">
-    <value>ØK KRAFT</value>
+    <value>GJØR STERKERE</value>
+  </data>
+  <data name="EggDetailButtonTextBlock.Text" xml:space="preserve">
+    <value>START KLEKKING</value>
+  </data>
+  <data name="EggDetailTextBlock.Text" xml:space="preserve">
+    <value>Bruk en inkubator for å klekke Egget.</value>
+  </data>
+  <data name="PokedexCaught.Text" xml:space="preserve">
+    <value>Fanget:</value>
+  </data>
+  <data name="PokedexEvolutions.Text" xml:space="preserve">
+    <value>Utviklinger</value>
+  </data>
+  <data name="PokedexPokemonHeight.Text" xml:space="preserve">
+    <value>Høyde:</value>
+  </data>
+  <data name="PokedexPokemonType.Text" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="PokedexPokemonWeight.Text" xml:space="preserve">
+    <value>Vekt:</value>
+  </data>
+  <data name="PokedexSeen.Text" xml:space="preserve">
+    <value>Sett:</value>
+  </data>
+  <data name="PokedexText.Text" xml:space="preserve">
+    <value>POKÉDEX</value>
+  </data>
+  <data name="PokedexViewCaught.Text" xml:space="preserve">
+    <value>Fanget</value>
+  </data>
+  <data name="PokedexViewSeen.Text" xml:space="preserve">
+    <value>Sett</value>
+  </data>
+  <data name="TimesTextBlock.Text" xml:space="preserve">
+    <value>ganger</value>
+  </data>
+  <data name="SettingsRememberMapZoomTextBlock.Text" xml:space="preserve">
+    <value>Husk Kart Zoom</value>
+  </data>
+  <data name="TransferTextBlock.Text" xml:space="preserve">
+    <value>OVERFØR</value>
+  </data>
+  <data name="SettingsLanguageRestartTextBlock.Text" xml:space="preserve">
+    <value>Du må restarte appen for at endringene skal bli tatt i bruk.</value>
+  </data>
+  <data name="SettingsLanguageTextBlock.Text" xml:space="preserve">
+    <value>Sprøk</value>
+  </data>
+  <data name="SettingsCompassEnabledTextBlock.Text" xml:space="preserve">
+    <value>Bruk kompass</value>
+  </data>
+  <data name="SettingsLiveTileTextBlock.Text" xml:space="preserve">
+    <value>Live Flis Modus</value>
+  </data>
+  <data name="FavoriteTextBlock.Text" xml:space="preserve">
+    <value>FAVORITT</value>
   </data>
 </root>

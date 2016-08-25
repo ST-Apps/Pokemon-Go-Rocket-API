@@ -12,7 +12,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Bug" xml:space="preserve">
+    <value>Coleottero</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Buio</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Drago</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Elettro</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Folletto</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Lotta</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>Fuoco</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Volante</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Spettro</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Erba</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Terra</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Ghiaccio</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Normale</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Veleno</value>
+  </data>
   <data name="Psychic" xml:space="preserve">
-    <value>Sensitivo</value>
+    <value>Psico</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Roccia</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Acciaio</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Acqua</value>
   </data>
 </root>

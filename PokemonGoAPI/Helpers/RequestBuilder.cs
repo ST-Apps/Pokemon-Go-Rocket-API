@@ -19,7 +19,7 @@ namespace PokemonGo.RocketAPI.Helpers
         private readonly double _latitude;
         private readonly double _longitude;
         private readonly Random _random = new Random();
-        private byte[] _sessionHash = null;
+        private static byte[] _sessionHash = null;
 
         public RequestBuilder(string authToken, AuthType authType, double latitude, double longitude, double altitude,
             IDeviceInfo deviceInfo,
@@ -47,11 +47,8 @@ namespace PokemonGo.RocketAPI.Helpers
                 requestEnvelope.AuthInfo.ToByteArray();
 
 
-            var normAccel = new Vector(_deviceInfo.AccelRawX, _deviceInfo.AccelRawY, _deviceInfo.AccelRawZ);
-            normAccel.NormalizeVector(9.81);
-            normAccel.Round(2);
-
-            ulong timeFromStart = (ulong)_deviceInfo.TimeSnapshot.TotalMilliseconds;
+            var normAccel = new Vector(_deviceInfo.Sensors.AccelRawX, _deviceInfo.Sensors.AccelRawY, _deviceInfo.Sensors.AccelRawZ);
+            normAccel.NormalizeVector(1.0f);//1.0f on iOS, 9.81 on Android?
 
             var sig = new Signature
             {
@@ -62,48 +59,56 @@ namespace PokemonGo.RocketAPI.Helpers
                     Utils.GenerateLocation2(requestEnvelope.Latitude, requestEnvelope.Longitude,
                         requestEnvelope.Altitude),
                 SessionHash = ByteString.CopyFrom(_sessionHash),
-                Unknown25 = -8537042734809897855L,
-                Timestamp = (ulong) DateTime.UtcNow.ToUnixTime(),
-                TimestampSinceStart = timeFromStart,
+                Unknown25 = 7363665268261373700L,
+                Timestamp = (ulong)DateTime.UtcNow.ToUnixTime(),
+                TimestampSinceStart = (ulong)_deviceInfo.TimeSnapshot,
                 SensorInfo = new Signature.Types.SensorInfo
                 {
                     AccelNormalizedX = normAccel.X,
                     AccelNormalizedY = normAccel.Y,
                     AccelNormalizedZ = normAccel.Z,
-                    AccelRawX = -_deviceInfo.AccelRawX,
-                    AccelRawY = -_deviceInfo.AccelRawY,
-                    AccelRawZ = -_deviceInfo.AccelRawZ,
-                    MagnetometerX = _deviceInfo.MagnetometerX,
-                    MagnetometerY = _deviceInfo.MagnetometerY,
-                    MagnetometerZ = _deviceInfo.MagnetometerZ,
-                    GyroscopeRawX = _deviceInfo.GyroscopeRawX,
-                    GyroscopeRawY = _deviceInfo.GyroscopeRawY,
-                    GyroscopeRawZ = _deviceInfo.GyroscopeRawZ,
-                    AngleNormalizedX = _deviceInfo.AngleNormalizedX,
-                    AngleNormalizedY = _deviceInfo.AngleNormalizedY,
-                    AngleNormalizedZ = _deviceInfo.AngleNormalizedZ,
-                    AccelerometerAxes = _deviceInfo.AccelerometerAxes,
-                    TimestampSnapshot = timeFromStart - (ulong) _random.Next(150, 260)
+                    AccelRawX = -_deviceInfo.Sensors.AccelRawX,
+                    AccelRawY = -_deviceInfo.Sensors.AccelRawY,
+                    AccelRawZ = -_deviceInfo.Sensors.AccelRawZ,
+                    MagnetometerX = _deviceInfo.Sensors.MagnetometerX,
+                    MagnetometerY = _deviceInfo.Sensors.MagnetometerY,
+                    MagnetometerZ = _deviceInfo.Sensors.MagnetometerZ,
+                    GyroscopeRawX = _deviceInfo.Sensors.GyroscopeRawX,
+                    GyroscopeRawY = _deviceInfo.Sensors.GyroscopeRawY,
+                    GyroscopeRawZ = _deviceInfo.Sensors.GyroscopeRawZ,
+                    AngleNormalizedX = _deviceInfo.Sensors.AngleNormalizedX,
+                    AngleNormalizedY = _deviceInfo.Sensors.AngleNormalizedY,
+                    AngleNormalizedZ = _deviceInfo.Sensors.AngleNormalizedZ,
+                    AccelerometerAxes = _deviceInfo.Sensors.AccelerometerAxes,
+                    TimestampSnapshot = (ulong)(_deviceInfo.Sensors.TimeSnapshot - _random.Next(150, 260))
                 },
                 DeviceInfo = new Signature.Types.DeviceInfo
                 {
                     DeviceId = _deviceInfo.DeviceID,
+                    AndroidBoardName = _deviceInfo.AndroidBoardName,
+                    AndroidBootloader = _deviceInfo.AndroidBootloader,
+                    DeviceBrand = _deviceInfo.DeviceBrand,
+                    DeviceModel = _deviceInfo.DeviceModel,
+                    DeviceModelBoot = _deviceInfo.DeviceModelBoot,
+                    DeviceModelIdentifier = _deviceInfo.DeviceModelIdentifier,
+                    FirmwareFingerprint = _deviceInfo.FirmwareFingerprint,
+                    FirmwareTags = _deviceInfo.FirmwareTags,
+                    HardwareManufacturer = _deviceInfo.HardwareManufacturer,
+                    HardwareModel = _deviceInfo.HardwareModel,
                     FirmwareBrand = _deviceInfo.FirmwareBrand,
                     FirmwareType = _deviceInfo.FirmwareType
-                }
+                },
 
-                /*ActivityStatus = new Signature.Types.ActivityStatus()
+                ActivityStatus = _deviceInfo.ActivityStatus != null ? new Signature.Types.ActivityStatus()
                 {
-                    StartTimeMs = timeFromStart - (ulong)_random.Next(150, 350),
-                    Walking = false,
-                    Automotive = false,
-                    Cycling = false,
-                    Running = false,
-                    Stationary = true,
-                    Tilting = false,
-                    UnknownStatus = false,
-                    Status = ByteString.Empty //Have no idea what is there
-                }*/
+                    Walking = _deviceInfo.ActivityStatus.Walking,
+                    Automotive = _deviceInfo.ActivityStatus.Automotive,
+                    Cycling = _deviceInfo.ActivityStatus.Cycling,
+                    Running = _deviceInfo.ActivityStatus.Running,
+                    Stationary = _deviceInfo.ActivityStatus.Stationary,
+                    Tilting = _deviceInfo.ActivityStatus.Tilting,
+                }
+                : null
             };
 
 
@@ -135,8 +140,8 @@ namespace PokemonGo.RocketAPI.Helpers
                 ProviderStatus = loc.ProviderStatus,
                 HorizontalAccuracy = loc.HorizontalAccuracy,
                 VerticalAccuracy = loc.VerticalAccuracy,
-                RadialAccuracy = loc.RadialAccuracy,
-                TimestampSnapshot = loc.Timestamp
+                Unknown20 = loc.Unknown20,
+                TimestampSnapshot = loc.TimeSnapshot
 
             }));
 

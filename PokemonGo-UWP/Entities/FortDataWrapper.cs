@@ -14,12 +14,14 @@ using POGOProtos.Map.Fort;
 using Template10.Common;
 using Template10.Mvvm;
 using Google.Protobuf.Collections;
+using Newtonsoft.Json;
 using POGOProtos.Inventory.Item;
 
 namespace PokemonGo_UWP.Entities
-{
+{    
     public class FortDataWrapper : IUpdatable<FortData>, INotifyPropertyChanged
     {
+        [JsonProperty, JsonConverter(typeof(ProtobufJsonNetConverter))]
         private FortData _fortData;
 
         private DelegateCommand _trySearchPokestop;

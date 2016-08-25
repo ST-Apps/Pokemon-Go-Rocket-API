@@ -11,8 +11,10 @@ namespace PokemonGo.RocketAPI.Rpc
 {
     public class Map : BaseRpc
     {
+        Client _client;
         public Map(Client client) : base(client)
         {
+            _client = client;
         }
 
         public async
@@ -39,7 +41,7 @@ namespace PokemonGo.RocketAPI.Rpc
             var checkAwardedBadgesMessage = new CheckAwardedBadgesMessage();
             var downloadSettingsMessage = new DownloadSettingsMessage
             {
-                Hash = "05daf51635c82611d1aac95c0b051d3ec088a930"
+                Hash = _client.Download.DownloadSettingsHash
             };
 
             #endregion
@@ -67,11 +69,13 @@ namespace PokemonGo.RocketAPI.Rpc
                     RequestType = RequestType.DownloadSettings,
                     RequestMessage = downloadSettingsMessage.ToByteString()
                 });
-            return
-                await
-                    PostProtoPayload
+            var response = await PostProtoPayload
                         <Request, GetMapObjectsResponse, GetHatchedEggsResponse, GetInventoryResponse,
                             CheckAwardedBadgesResponse, DownloadSettingsResponse>(request);
+
+            _client.Download.DownloadSettingsHash = response?.Item5?.Hash ?? "";
+
+            return response;
         }
 
         public async Task<GetIncensePokemonResponse> GetIncensePokemons()

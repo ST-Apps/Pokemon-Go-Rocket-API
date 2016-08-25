@@ -98,7 +98,7 @@ Seite zu den Dateien für manuelle Installation öffnen?</value>
     <value>Erfolgreich verschickt! {0}-Bonbon vom Professor erhalten!</value>
   </data>
   <data name="TransferPokemonWarningText" xml:space="preserve">
-    <value>Nachdem du es an den Professor geschickt hast, kannst du es nicht zurückholen. Möchtest du {0} wirklich an den Professor schicken?</value>
+    <value>Nachdem du es an den Professor geschickt hast, kannst du es nicht zurückholen.</value>
   </data>
   <data name="LoginExpired" xml:space="preserve">
     <value>Letzter Login abgelaufen.</value>
@@ -141,6 +141,9 @@ Seite zu den Dateien für manuelle Installation öffnen?</value>
   </data>
   <data name="ActivityCatchExcellentThrow" xml:space="preserve">
     <value>Exzellenter Wurf</value>
+  </data>
+  <data name="ActivityCatchCurveball" xml:space="preserve">
+    <value>Curveball</value>
   </data>
   <data name="ActivityCatchFirstCatchOfDay" xml:space="preserve">
     <value>Erster Fang des Tages!</value>
@@ -193,5 +196,21 @@ Seite zu den Dateien für manuelle Installation öffnen?</value>
   </data>
   <data name="PokemonInventoryFullText" xml:space="preserve">
     <value>Das Pokémon Inventar ist voll, verschicken Sie zunächst einige Pokémon, bevore Sie versuchen, {0} zu fangen.</value>
+  </data>
+  <data name="WaitingForNetworkText" xml:space="preserve">
+    <value>Warte auf die Netzverbindung...</value>
+  </data>
+  <data name="EggHatchMessage" xml:space="preserve">
+    <value>Ein {0} schlüpfte aus einem Ei.
+Du hast auch {1} Sternenstaub, {2} Bonbon und {3} EP erhalten.</value>
+  </data>
+  <data name="EvolvePokemonWarningText" xml:space="preserve">
+    <value>Möchtest du {0} entwickeln?</value>
+  </data>
+  <data name="PowerUpPokemonWarningText" xml:space="preserve">
+    <value>Möchtest du bei {0} ein Power-up verwenden?</value>
+  </data>
+  <data name="TransferPokemonWarningTitle" xml:space="preserve">
+    <value>Möchtest du {0} wirklich an den Professor schicken?</value>
   </data>
 </root>

@@ -138,4 +138,22 @@
   <data name="ItemXMiracle" xml:space="preserve">
     <value>Miracolo X</value>
   </data>
+  <data name="D_ItemLuckyEgg" xml:space="preserve">
+    <value>Uovo pieno di felicità. Fa guadagnare al giocatore il doppio dei PE per 30 minuti. </value>
+  </data>
+  <data name="D_ItemRazzBerry" xml:space="preserve">
+    <value>Dalla a un Pokémon e sarà più facile catturarlo al prossimo tentativo.</value>
+  </data>
+  <data name="D_ItemSpecialCamera" xml:space="preserve">
+    <value>Quando incontri un Pokémon selvatico, puoi usare la tua fotocamera per scattargli una foto.</value>
+  </data>
+  <data name="D_ItemSuperPotion" xml:space="preserve">
+    <value>Rimedio spray per le ferite. Restituisce 50 dei PS a un Pokémon.</value>
+  </data>
+  <data name="D_ItemTroyDisk" xml:space="preserve">
+    <value>Attira i Pokémon per 30 minuti verso un Pokéstop. Chiunque si trovi nei dintorni ne trarrà lo stesso beneficio. </value>
+  </data>
+  <data name="D_ItemUnknown" xml:space="preserve">
+    <value>Questo oggetto è sconosciuto e potrebbe essere aggiunto in futuro</value>
+  </data>
 </root>

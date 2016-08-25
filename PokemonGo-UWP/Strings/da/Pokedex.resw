@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bulbasaur.Description" xml:space="preserve">
+    <value>Bulbasaur kan ses tage en lur i det stærkt sollys. Der er en frø på ryggen. Ved at absorbere solens stråler, vokser frøet gradvist større.</value>
+  </data>
+  <data name="Ivysaur.Description" xml:space="preserve">
+    <value>Der er et kn oppå denne Pokémon's ryg. For at understøtte sin vægt, vokser Ivysaurs ben og torso tyk og stærk. Hvis det begynder at tilbringe mere tid liggende i sollys, er det et tegn på at knoppen vil blomstre til en stor blomst snart.</value>
+  </data>
+  <data name="Venusaur.Description" xml:space="preserve">
+    <value>Der er en stor blomst på Venusaurs ryg. Blomsten siges at få levende farver, hvis det får masser af ernæring og sollys. Blomstens aroma lindrer følelser på mennesker.</value>
+  </data>
+  <data name="Charmander.Description" xml:space="preserve">
+    <value>Den flamme, der brænder på spidsen af halen er en indikation af dens følelser. Flammen skælver når Charmander nyder sig selv. Hvis Pokémon bliver rasende, brænder flammen voldsomt.</value>
+  </data>
+</root>

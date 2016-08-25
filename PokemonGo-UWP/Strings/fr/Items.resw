@@ -13,7 +13,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="D_ItemGreatBall" xml:space="preserve">
-    <value>Dispositif pour capturer des Pokémon sauvages. Il est jeté comme une balle à un Pokémon sauvage, encapsulant confortablement sa cible.</value>
+    <value>Une bonne Pokéball, avec de haute performance qui offre un taux de capture supérieur à une Pokéball standard.</value>
   </data>
   <data name="D_ItemIncenseCool" xml:space="preserve">
     <value>Encens avec un mystérieux parfum qui attire les Pokémon sauvages à votre emplacement pendant 30 minutes</value>
@@ -28,13 +28,13 @@
     <value>Encens avec un mystérieux parfum qui attire les Pokémon sauvages à votre emplacement pendant 30 minutes</value>
   </data>
   <data name="D_ItemIncubatorBasic" xml:space="preserve">
-    <value>Un dispositif qui couve un oeuf pendant que vous marchez jusqu'à ce qu'il soit prêt à éclore.</value>
+    <value>Un dispositif qui couve un oeuf pendant que vous marchez jusqu'à ce qu'il soit prêt à éclore. Se casse après 3 utilisations.</value>
   </data>
   <data name="D_ItemIncubatorBasicUnlimited" xml:space="preserve">
-    <value>Un dispositif qui couve un oeuf pendant que vous marchez jusqu'à ce qu'il soit prêt à éclore.</value>
+    <value>Un dispositif qui couve un oeuf pendant que vous marchez jusqu'à ce qu'il soit prêt à éclore. Utilisation illimité !</value>
   </data>
   <data name="D_ItemMasterBall" xml:space="preserve">
-    <value>Dispositif pour capturer des Pokémon sauvages. Il est jeté comme une balle à un Pokémon sauvage, encapsulant confortablement sa cible.</value>
+    <value>La meilleure Pokéball, avec le niveau ultime de la performance. Avec elle, vous attraperez tout Pokémon à coup sûr.</value>
   </data>
   <data name="D_ItemPokeBall" xml:space="preserve">
     <value>Dispositif pour capturer des Pokémon sauvages. Il est jeté comme une balle à un Pokémon sauvage, encapsulant confortablement sa cible.</value>
@@ -46,7 +46,7 @@
     <value>Un médicament qui peut réanimer un Pokémon évanoui. Il restaure également la moitié des PV maximum du Pokémon évanoui.</value>
   </data>
   <data name="D_ItemUltraBall" xml:space="preserve">
-    <value>Dispositif pour capturer des Pokémon sauvages. Il est jeté comme une balle à un Pokémon sauvage, encapsulant confortablement sa cible.</value>
+    <value>ne Pokéball ultra-haute performance qui offre un taux de réussite plus élevé que la Super Ball pour attraper les Pokémon.</value>
   </data>
   <data name="ItemBlukBerry" xml:space="preserve">
     <value>Baie Remu</value>
@@ -106,18 +106,48 @@
     <value>Caméra spéciale</value>
   </data>
   <data name="ItemTroyDisk" xml:space="preserve">
-    <value>Disque de Troie</value>
+    <value>Leurre</value>
   </data>
   <data name="ItemUnknown" xml:space="preserve">
     <value>Inconnu</value>
   </data>
   <data name="ItemWeparBerry" xml:space="preserve">
-    <value>Baies Framby</value>
+    <value>Baie Framby</value>
   </data>
   <data name="ItemXAttack" xml:space="preserve">
     <value>X Attaque</value>
   </data>
   <data name="ItemXDefense" xml:space="preserve">
     <value>X Défense</value>
+  </data>
+  <data name="D_ItemLuckyEgg" xml:space="preserve">
+    <value>Un Oeuf Chance est rempli de joie! Gagne le double d'XP pendant 30 minutes.</value>
+  </data>
+  <data name="D_ItemRazzBerry" xml:space="preserve">
+    <value>Nourri un Pokémon avec, et il sera plus facile à attrapper au prochain lancer.</value>
+  </data>
+  <data name="D_ItemSpecialCamera" xml:space="preserve">
+    <value>Quand tu rencontres un Pokémon dans la nature, tu peux utiliser ton appreil photo pour les photographier.</value>
+  </data>
+  <data name="D_ItemSuperPotion" xml:space="preserve">
+    <value>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 50 points.</value>
+  </data>
+  <data name="D_ItemTroyDisk" xml:space="preserve">
+    <value>Un module qui attire les Pokémons autour d'un Pokéstop pendant 30min. Cet effet bénéfici à toutes les personnes proches.</value>
+  </data>
+  <data name="D_ItemUnknown" xml:space="preserve">
+    <value>Cet objet est inconnu est peut être ajouter dans le futur.</value>
+  </data>
+  <data name="D_ItemBlukBerry" xml:space="preserve">
+    <value>Nourri un Pokémon avec, et il sera plus facile à attrapper au prochain lancer.</value>
+  </data>
+  <data name="D_ItemNanabBerry" xml:space="preserve">
+    <value>Nourri un Pokémon avec, et il sera plus facile à attrapper au prochain lancer.</value>
+  </data>
+  <data name="D_ItemPinapBerry" xml:space="preserve">
+    <value>Nourri un Pokémon avec, et il sera plus facile à attrapper au prochain lancer.</value>
+  </data>
+  <data name="D_ItemWeparBerry" xml:space="preserve">
+    <value>Nourri un Pokémon avec, et il sera plus facile à attrapper au prochain lancer.</value>
   </data>
 </root>

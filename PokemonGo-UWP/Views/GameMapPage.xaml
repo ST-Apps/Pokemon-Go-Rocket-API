@@ -204,6 +204,22 @@
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Name="ShowBatterySaver">
+            <DoubleAnimation
+                Storyboard.TargetName="GamePanel"
+                Storyboard.TargetProperty="Opacity"
+                From="1"
+                To="0"
+                Duration="0:0:0.2" />
+        </Storyboard>
+        <Storyboard x:Name="HideBatterySaver">
+            <DoubleAnimation
+                Storyboard.TargetName="GamePanel"
+                Storyboard.TargetProperty="Opacity"
+                From="0"
+                To="1"
+                Duration="0:0:0.2" />
+        </Storyboard>
 
         <Storyboard x:Name="ShowNearbyModalStoryboard">
             <DoubleAnimation x:Name="ShowNearbyModalAnimation"
@@ -229,9 +245,12 @@
 
     </Page.Resources>
 
-    <RelativePanel>
-
-        <maps:MapControl BusinessLandmarksVisible="False"
+    <Grid>
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Black">
+            <Image Source="../Assets/UI/logoDark.png" MaxWidth="180" MaxHeight="180" Opacity=".2" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </StackPanel>
+        <RelativePanel Name="GamePanel" Grid.Row="0">
+            <maps:MapControl BusinessLandmarksVisible="False"
                          TargetCameraChanged="GameMapControl_TargetCameraChanged"
                          LandmarksVisible="False"
                          ColorScheme="{ThemeResource MapColorScheme}"
@@ -805,4 +824,5 @@
 
         </Grid>
     </RelativePanel>
+    </Grid>
 </Page>

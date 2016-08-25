@@ -13,7 +13,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="D_ItemGreatBall" xml:space="preserve">
-    <value>Vahşi Pokémon yakalamak için bir cihaz. Bir top gibi vahşi Pokémon'a atılır ve rahatça içine hapseder.</value>
+    <value>Sıradan bir Poke Top'undan daha etkili, daha iyi bir yakalama ihtimali sunan yüksek performans bir top.</value>
   </data>
   <data name="D_ItemIncenseCool" xml:space="preserve">
     <value>Yarım saat boyunca Pokémonları etrafınıza çeken gizemli kokan bir tütsü</value>
@@ -28,13 +28,13 @@
     <value>Yarım saat boyunca Pokémonları etrafınıza çeken gizemli kokan bir tütsü</value>
   </data>
   <data name="D_ItemIncubatorBasic" xml:space="preserve">
-    <value>Yürüdüğünüz esnada çatlayana kadar Yumurtalarınızı kuluçkaya yatıran bir cihaz.</value>
+    <value>Yürüdüğünüz esnada çatlayana kadar Yumurtalarınızı kuluçkaya yatıran bir cihaz. 3 kullanımdan sonra kırılır.</value>
   </data>
   <data name="D_ItemIncubatorBasicUnlimited" xml:space="preserve">
-    <value>Yürüdüğünüz esnada çatlayana kadar Yumurtalarınızı kuluçkaya yatıran bir cihaz.</value>
+    <value>Yürüdüğünüz esnada çatlayana kadar Yumurtalarınızı kuluçkaya yatıran bir cihaz. Sınırsız kullanım!</value>
   </data>
   <data name="D_ItemMasterBall" xml:space="preserve">
-    <value>Vahşi Pokémon yakalamak için bir cihaz. Bir top gibi vahşi Pokémon'a atılır ve rahatça içine hapseder.</value>
+    <value>Mükemmel performanslı, en iyi Poke Top'u. Bununla her Pokémon tek seferde yakalanır.</value>
   </data>
   <data name="D_ItemPokeBall" xml:space="preserve">
     <value>Vahşi Pokémon yakalamak için bir cihaz. Bir top gibi vahşi Pokémon'a atılır ve rahatça içine hapseder.</value>
@@ -46,7 +46,7 @@
     <value>Bayılmış Pokémonlarınızı canlandıran bir ilaç. Aynı zamanda bayılmış Pokémon'unuzun HP'sini yarıya kadar doldurur.</value>
   </data>
   <data name="D_ItemUltraBall" xml:space="preserve">
-    <value>Vahşi Pokémon yakalamak için bir cihaz. Bir top gibi vahşi Pokémon'a atılır ve rahatça içine hapseder.</value>
+    <value>Süper Top'tan daha iyi yakalama ihtimali olan, ultra yüksek performanslı Poke Top'u.</value>
   </data>
   <data name="ItemBlukBerry" xml:space="preserve">
     <value>Bluk Böğürtleni</value>
@@ -70,10 +70,10 @@
     <value>Acılı Tütsü</value>
   </data>
   <data name="ItemIncubatorBasic" xml:space="preserve">
-    <value>Basit Kuluçka</value>
+    <value>Kuluçka</value>
   </data>
   <data name="ItemIncubatorBasicUnlimited" xml:space="preserve">
-    <value>Sınırsız Basit Kuluçka</value>
+    <value>∞ Kuluçka</value>
   </data>
   <data name="ItemItemStorageUpgrade" xml:space="preserve">
     <value>Eşya Limiti Geliştirmesi</value>
@@ -137,5 +137,35 @@
   </data>
   <data name="ItemXMiracle" xml:space="preserve">
     <value>X Mucize</value>
+  </data>
+  <data name="D_ItemLuckyEgg" xml:space="preserve">
+    <value>Mutluluk ile dolu bir Şanslı Yumurta! 30 dakika için iki katı XP kazandırır.</value>
+  </data>
+  <data name="D_ItemRazzBerry" xml:space="preserve">
+    <value>Bunu Pokémon'a yedirin ve bir sonraki atışınızda onu yakalaması daha kolay olacak.</value>
+  </data>
+  <data name="D_ItemSpecialCamera" xml:space="preserve">
+    <value>Yabani bir Pokémon ile karşılaştığınızda, kameranızı kullanarak fotoğrafını çekebilirsiniz.</value>
+  </data>
+  <data name="D_ItemSuperPotion" xml:space="preserve">
+    <value>Yaralarla ilgilenmek için sprey tarzı bir ilaç. Bir Pokémon'unuzun HP'sini 50 puan arttırır.</value>
+  </data>
+  <data name="D_ItemTroyDisk" xml:space="preserve">
+    <value>30 dakika boyunca bir Pokéstop'a Pokémon çeken bir cihaz. Etkisini başkaları da görebilir.</value>
+  </data>
+  <data name="D_ItemUnknown" xml:space="preserve">
+    <value>Bu eşya bilinmiyor ve belki ileride eklenebilir.</value>
+  </data>
+  <data name="D_ItemBlukBerry" xml:space="preserve">
+    <value>Bunu Pokémon'a yedirin ve bir sonraki atışınızda onu yakalaması daha kolay olacak.</value>
+  </data>
+  <data name="D_ItemNanabBerry" xml:space="preserve">
+    <value>Bunu Pokémon'a yedirin ve bir sonraki atışınızda onu yakalaması daha kolay olacak.</value>
+  </data>
+  <data name="D_ItemPinapBerry" xml:space="preserve">
+    <value>Bunu Pokémon'a yedirin ve bir sonraki atışınızda onu yakalaması daha kolay olacak.</value>
+  </data>
+  <data name="D_ItemWeparBerry" xml:space="preserve">
+    <value>Bunu Pokémon'a yedirin ve bir sonraki atışınızda onu yakalaması daha kolay olacak.</value>
   </data>
 </root>

@@ -12,4 +12,457 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Bulbasaur.Description" xml:space="preserve">
+    <value>Bulbasaur parlak güneş ışığında uyurken görülebilir. Sırtında bir tohum vardır. Güneş ışınlarını emerek zamanla büyür.</value>
+  </data>
+  <data name="Ivysaur.Description" xml:space="preserve">
+    <value>Bu Pokémon'un sırtında bir tomurcuk vardır. Ivysaur'un bacakları ve vücudu, ağırlığını desteklemek için kalın ve güçlüdür. Eğer güneş ışığında yatarak daha çok vakit geçirirse, yakında sırtındaki tomurcuk büyük bir çiçek açacak demektir.</value>
+  </data>
+  <data name="Venusaur.Description" xml:space="preserve">
+    <value>Venusaur'un sırtında büyük bir çiçek vardır. Eğer yeterli besin ve gneş ışığı alırsa bu çiçek parlak renklere bürünür. Çiçeğin kokusu insanları rahatlatır.</value>
+  </data>
+  <data name="Charmander.Description" xml:space="preserve">
+    <value>Kuyruğunun ucunda yanan ateş hissettiklerinin bir işaretidir. Charmander eğlenirken ateş titreşir. Eğer Pokémon kızarsa ateş çok güçlü bir şekilde yanar.</value>
+  </data>
+  <data name="Charmeleon.Description" xml:space="preserve">
+    <value>Charmeleon rakiplerini keskin pençeleriyle acımadan yok eder. Eğer güçlü bir rakibe denk gelirse agresifleşir. Bu heyecanlı durumda kuyruğunun ucundaki ateş beyaz bir alevle yanar.</value>
+  </data>
+  <data name="Charizard.Description" xml:space="preserve">
+    <value>Charizard göklerde uçarak güçlü rakipler arar. Öyle sıcak bir alev saçar ki her şeyi eritebilir. Ancak ne olursa olsun ateşini asla kendinden güçsüz bir rakibe püskürtmez.</value>
+  </data>
+  <data name="Squirtle.Description" xml:space="preserve">
+    <value>Squirtle'ın kabuğu sadece koruma amaçlı değildir. Yuvarlak şekli ve üzerindeki olukları su içinde sürtünmeyi minimuma indirir ve Pokémon'un yüksek hızlarda yüzmesini sağlar.</value>
+  </data>
+  <data name="Wartortle.Description" xml:space="preserve">
+    <value>Kuyruğu büyüktür ve zengin, kalın bir kürk ile kaplıdır. Wartortle yaşlandıkça kuyruğun rengi derinleşir. Kabuğundaki çizikler bir savaşçı olarak sertliğinin kanıtıdır.</value>
+  </data>
+  <data name="Blastoise.Description" xml:space="preserve">
+    <value>Blastoise kabuğundan çıkan Su Toplarına sahiptir. Bu Su Topları son derece isabetlidir. Bu toplardan suyu mermi gibi, öyle bir isabetle fışkırtabilir ki, 50 metreden bir şişeyi vurabilir.</value>
+  </data>
+  <data name="Caterpie.Description" xml:space="preserve">
+    <value>Caterpie inanılmaz bir iştaha sahiptir.Vücudundan büyük yaprakları gözlerinizin önünde yiyip bitirebilir. Bu Pokémon antenlerinden güçlü ve korkunç bir koku yayar.</value>
+  </data>
+  <data name="Metapod.Description" xml:space="preserve">
+    <value>Bu Pokémon'un vücudunu saran kabuk demir kadar serttir. Metapod çok hareket etmez. Hareketsiz kalmasının sebebi kabuğun içinde gelişime hazırlanmaktadır.</value>
+  </data>
+  <data name="Butterfree.Description" xml:space="preserve">
+    <value>Butterfree çiçeklerden lezzetli bal arama yeteneğine sahiptir. Yuvasından 10km uzaktaki çiçekleri arayabilir, bal çıkartabilir ve yuvasına kadar taşıyabilir.</value>
+  </data>
+  <data name="Weedle.Description" xml:space="preserve">
+    <value>Weedle son derece keskin bir koku alma duyusu vardır. Sevdiği yaprakları sevmediklerinden büyük kırmızı burnu ile koklayarak ayırabilir.</value>
+  </data>
+  <data name="Kakuna.Description" xml:space="preserve">
+    <value>Kakuna bir ağaca tutunurken resmen hareketsiz kalır. Ancak içeride gelişimi için hazırlanırken son derece meşguldür. Bunu kabuğuna dokunduğunuzda hissettiğiniz sıcaktan anlayabilirsiniz.</value>
+  </data>
+  <data name="Beedrill.Description" xml:space="preserve">
+    <value>Beedrill son derece bölgecidir. Kimse yuvasına yaklaşmamalıdır, bu güvenliğiniz içindir. Tahrik edilirlerse sürü halinde saldırıya geçerler.</value>
+  </data>
+  <data name="Pidgey.Description" xml:space="preserve">
+    <value>Pidgey inanılmaz keskin bir yön duyusuna sahiptir. Bildiği bölgelerden ne kadaruzakta olursa olsun yuvasına dönmeyi başarabilir.</value>
+  </data>
+  <data name="Pidgeotto.Description" xml:space="preserve">
+    <value>Pidgeotto büyük bir alanı kendi bölgesi olarak seçer. Bu Pokémon ortalıkta uçar ve bölgesini devriye gezer. Eğer birisi bölgesine girerse sivri pençeleriyle hiç acımadan cezalandırır.</value>
+  </data>
+  <data name="Pidgeot.Description" xml:space="preserve">
+    <value>Bu Pokémon inanılmaz güzel ve parlak tüylere sahiptir. Çoğu eğitmen kafasındaki tüylerin harikalığına tutulur ve Pidgeot'u kendi Pokémon'ları olarak seçmeye yönlendirir.</value>
+  </data>
+  <data name="Rattata.Description" xml:space="preserve">
+    <value>Rattata son derece dikkatlidir. Uyurken bile sürekli kulaklarını oynatarak çevresini dinler. Yaşadığı yer konusunda seçici değildir, her yere yuva yapabilir.</value>
+  </data>
+  <data name="Raticate.Description" xml:space="preserve">
+    <value>Raticate'in dayanıklı dişleri zamanla büyür. Onları uygun boyutta tutmak için taşları ve kütükleri dişler. Ev duvarlarını bile ısırabilir.</value>
+  </data>
+  <data name="Spearow.Description" xml:space="preserve">
+    <value>Spearow'un bir kilometre öteden bile duyulabilen bir bağırışı vardır. Eğer yüksek çığlığı etrafta yankılanıyorsa, bu birbirlerini tehlikeye karşı uyardıklarının bir işaretidir.</value>
+  </data>
+  <data name="Fearow.Description" xml:space="preserve">
+    <value>Fearow uzun boynu ve gagası ile tanınır. Toprakta ve suda avlanabilmesi için uygun şekildedir. Uzun ve sıska gagasını avlanabilmek için ustalıkla hareket ettirir.</value>
+  </data>
+  <data name="Ekans.Description" xml:space="preserve">
+    <value>Ekans dinlenirken bir spiral şeklinde kıvrılır. Kafasını yukarıda tutarak bu pozisyondan rahatça, her taraftan gelen tehditlere karşı çabukça hamle yapabilir.</value>
+  </data>
+  <data name="Arbok.Description" xml:space="preserve">
+    <value>Bu Pokémon vücuduyla korkunç bir şekilde başkalarını sıkabilir, çeliği bile düzleştirebilir. Arbok düşmanını vücuduyla sardığında kaçmak neredeyse imkansızdır.</value>
+  </data>
+  <data name="Pikachu.Description" xml:space="preserve">
+    <value>Bu Pokémon yanaklarında elektrik depolamak için keseler vardır. Bunlar Pikachu geceleri uyurken şarj olmaktadır. Uyandıktan sonra hala uykuluysa bazen bu elektriği deşarj edebilir.</value>
+  </data>
+  <data name="Raichu.Description" xml:space="preserve">
+    <value>Bu Pokémon vücudunun gece karanlıkta biraz parlamasını sağlayan zayıf bir elektrik akımı yayar. Raichu deşarj olabilmek için kuyruğunu toprağa gömer.</value>
+  </data>
+  <data name="Sandshrew.Description" xml:space="preserve">
+    <value>Sandshrew çok dayanıklı olan çok kuru bir deriye sahiptir. Bu Pokémon saldırılara karşı bir top gibi sarılır. Geceleri uyumak için kuma gömülür.</value>
+  </data>
+  <data name="Sandslash.Description" xml:space="preserve">
+    <value>Sandslash büyük iğnelerle kaplı bir top gibi vücudnu yuvarlayabilir. Bu Pokémon savaşta rakibini sersemletmek için onu dikenleriyle iğneler. Sonrasında hareketsiz kalan rakibinin üzerine sivri pençeleriyle saldırır.</value>
+  </data>
+  <data name="NidoranFemale.Description" xml:space="preserve">
+    <value>Nidoran♀ güçlü bir zehir yayan dikenleri vardır. Bunlar bu küçük vücutlu Pokémon'un korunması için geliştiği düşünülüyor. Kızdığında boynuzundan zehirli bir toksin yayar.</value>
+  </data>
+  <data name="Nidorina.Description" xml:space="preserve">
+    <value>Nidorina arkadaşları veya aileleriyleyken birbirlerine zarar vermemek için dikenlerini saklarlar. Bu Pokémon diğerlerinden ayrılırsa gergin bir hale gelir.</value>
+  </data>
+  <data name="Nidoqueen.Description" xml:space="preserve">
+    <value>Nidoqueen'in vücudu çok sert kabuklarla kaplıdır. Rakiplerini vücut darbeleriyle uzaklara uçurmakta ustadır. Bu Pokémon kendisinden gençleri korurken en güçlü halini gösterir.</value>
+  </data>
+  <data name="NidoranMale.Description" xml:space="preserve">
+    <value>Nidoran♂ kulaklarını oynatmak için özel kaslar geliştirmiştir. Bunlar sayesinde kulakları her yöne oynayabilir. En ufak bir ses bile bu Pokémon'un kulaklarından kaçmaz.</value>
+  </data>
+  <data name="Nidorino.Description" xml:space="preserve">
+    <value>Nidorino elmastan daha sert bir boynuza sahiptir. Eğer bir düşman sezerse sırtındaki dikenler kalkar ve düşmanına bütün gücüyle meydan okur.</value>
+  </data>
+  <data name="Nidoking.Description" xml:space="preserve">
+    <value>Nidoking'in kalın kuyruğu yok edici bir güce sahiptir. Tek bir vuruşla metal ulaşım kulesini yere indirebilir. Bu Pokémon kızdırılırsa geri dönüşü yoktur.</value>
+  </data>
+  <data name="Clefairy.Description" xml:space="preserve">
+    <value>Her gece dolunayda bu Pokémon gruplar halinde oynamak için ortaya çıkar. Şafakta yorgun Clefairy'ler sakin dağlarına çekilir ve birbirlerine yuvalanmış şekilde uyurlar.</value>
+  </data>
+  <data name="Clefable.Description" xml:space="preserve">
+    <value>Clefable kanatlarını kullanarak uçuyormuş gibi yere hafifçe dokunarak hareket eder. Bu sayede su üstünde bile yürüyebilir. Sakin, gece ışığıyla aydınlatılmış gecelerde göllerde yürüyüşe çıktığı bilinir.</value>
+  </data>
+  <data name="Vulpix.Description" xml:space="preserve">
+    <value>Vulpix'in vücudunun içinde sönmeyen bir ateş yanar. Gün içinde bu Pokémon vücudunun çok ısınmasını engellemek için ağzından ateş salar.</value>
+  </data>
+  <data name="Ninetales.Description" xml:space="preserve">
+    <value>Efsaneye göre Ninetales, 9 büyücünün kutsal güçlerinin birleştirilmesi sonuçu ortaya çıkmıştır. Bu Pokémon son derece akıllıdır, insan konuşmasını bile anlayabilir.</value>
+  </data>
+  <data name="Jigglypuff.Description" xml:space="preserve">
+    <value>Bu Pokémon şarkı söylerken asla nefes almak için durmaz. Eğer kolayca uyumayan bir rakip ile karşı karşıyaysa Jigglypuff nefes alamaz ve hayatını tehlikeye atar.</value>
+  </data>
+  <data name="Wigglytuff.Description" xml:space="preserve">
+    <value>Wigglytuff'ın vücudu çok esnektir. Derince nefes alarak bu Pokémon kendisini bitmek bilmez bir şekilde şişirebilir. Wigglytuff şiştiğinde bir balon gibi hafifçe zıplayarak hareket eder.</value>
+  </data>
+  <data name="Zubat.Description" xml:space="preserve">
+    <value>Zubat güneş ışığından kaçar çünkü bu onun için zararlıdır. Gün içerisinde mağaralarda veya eski evlerin bodrum katında kalır ve baş aşağı asılı bir şekilde uyur.</value>
+  </data>
+  <data name="Golbat.Description" xml:space="preserve">
+    <value>Golbat dört sivri dişi ile avını ısırır ve kurbanın kanını emer. Ay ışığı olmayan gecelerde aktif olur, etrafta uçarak insanlara ve Pokémonlara saldırır.</value>
+  </data>
+  <data name="Oddish.Description" xml:space="preserve">
+    <value>Oddish besin olarak verimli topraklar arar ve kendisini eker. Gün içinde ekilmişken bu Pokémon'un ayaklarının şekil değiştirip ağaç kökü gibi bir şekil aldığı düşünülür.</value>
+  </data>
+  <data name="Gloom.Description" xml:space="preserve">
+    <value>Gloom'un ağızından tam anlamıyla rezalet kokan bir bal damlar. Anlaşıldığı kadarıyla iğrenç kokuyu çok sever. Zararlı dumanları kokladıkça ağzından akan bal daha da artar.</value>
+  </data>
+  <data name="Vileplume.Description" xml:space="preserve">
+    <value>Vileplume dünyanın en büyük taçyapraklarına sahiptir. Bunları avlarını çekmek için kullanır ve sonra onları zehirli sporlarına maruz bırakır. Hareketsiz kaldıklarında onları yakalar ve yer.</value>
+  </data>
+  <data name="Paras.Description" xml:space="preserve">
+    <value>Paras'ın sırtında adı tochukaso olan parazit mantarlar büyümektedir. Bu Böcek Pokémon'dan besin alarak büyümelerine devam ederler. Yaşamı uzatmak için son derece değerlidirler.</value>
+  </data>
+  <data name="Parasect.Description" xml:space="preserve">
+    <value>Parasect grup halinde büyük ağaçlardan ve köklerinden besin emmesiyle bilinir. Sömürdükleri ağaç öldüğünde hep beraber, aynı anda başka bir ağaca geçerler.</value>
+  </data>
+  <data name="Venonat.Description" xml:space="preserve">
+    <value>Venonat korunma için vücudunu kaplayan ince, sert bir tüy dokusuna sahip olacak şekilde evrim geçirdiği söylenir. En ufak avı bile kaçırmayan kocaman gözlere sahiptir.</value>
+  </data>
+  <data name="Venomoth.Description" xml:space="preserve">
+    <value>Venomoth sadece geceleri aktif olan bir Pokémon'dur. En sevdiği avlar, gecenin karanlığında sokak lambalarının ışığına çekilen ufak böceklerdir.</value>
+  </data>
+  <data name="Diglett.Description" xml:space="preserve">
+    <value>Diglett çoğu çiftlikte yetiştirilir. Sebebi basittir. Bu Pokémon nereyi kazarsa, toprak mamül ekmek için tamamen uygun hale gelir. Bu toprak lezzetli sebzeler yetiştirmek için idealdir.</value>
+  </data>
+  <data name="Dugtrio.Description" xml:space="preserve">
+    <value>Dugtriolar aslında tek bir vücuttan çıkan üçüzlerdir. Sonuç olarak üçüzlerden her biri diğer ikisi gibi düşünür. Sonu olmayan bir kazı yolunda beraber çalışırlar.</value>
+  </data>
+  <data name="Meowth.Description" xml:space="preserve">
+    <value>Meowth sivri pençelerini patilerine geri çeker ve avına tehdit hissettirmeden gizlice yaklaşmaya çalışır. Nedendir bilinmez, bu Pokémon ışıkta parlayan madeni paraları çok sever.</value>
+  </data>
+  <data name="Persian.Description" xml:space="preserve">
+    <value>Persian ona sert görüntüsünü veren altı kalın bıyığa sahiptir. Bunlar sayesinde hava hareketlerini sezer ve çevresinde neler bulunduğunu anlar. Bıyıklarından tutulduğu durumda uysallaşır.</value>
+  </data>
+  <data name="Psyduck.Description" xml:space="preserve">
+    <value>Psyduck eğer gizli gücünü kullanırsa bunu yaptığını hatırlayamaz. Bu tarz bir anıya sahip olamaz, çünkü bunu yaparken derin uyku gibi farklı bir duruma geçer.</value>
+  </data>
+  <data name="Golduck.Description" xml:space="preserve">
+    <value>Golduck bütün Pokémonlar arasındaen hızlı yüzücüdür. En sert, fırtınalı denizde bile rahatça yüzebilir. Bazen açık denizlerde parçalanmış gemilerden insanları kurtarır.</value>
+  </data>
+  <data name="Mankey.Description" xml:space="preserve">
+    <value>Mankey titremeye başladığında burnundan aldığı nefes sertleşir, bu onun sinirlendiğinin şaşılmaz bir işaretidir. Ancak bu Pokémon o kadar hızlı sinirlenir ki onun sinirinden kaçmak kimse için mümkün değildir.</value>
+  </data>
+  <data name="Primeape.Description" xml:space="preserve">
+    <value>Primeape sinirlendiğinde kan akışı hızlanır. Bu da onun kaslarını daha da kuvvetlendirir. Ancak aynı zamanda da aklını daha az kullanır hale gelir.</value>
+  </data>
+  <data name="Growlithe.Description" xml:space="preserve">
+    <value>Growlithe harika bir koku alma duyusuna sahiptir. Bir şey kokladığında asla unutmaz, ne olursa olsun. Bu gelişmiş koku duyusunu diğer canlıların duygularını anlamak için kullanır.</value>
+  </data>
+  <data name="Arcanine.Description" xml:space="preserve">
+    <value>Arcanine yüksek hızı ile bilinir. Söylenilenlere göre bir gün ve gecede 10.000 kilometreden daha fazla koşabilir. Bu Pokémon'un içinde yanan ateş onun güç kaynağıdır.</value>
+  </data>
+  <data name="Poliwag.Description" xml:space="preserve">
+    <value>Poliwag çok ince bir deriye sahiptir. Pokémon'un spiral iç organlarını derisinden görmek mümkündür. Ancak inceliğine rağmen son derece de esnektir. Sivri dişler bile üstünden geri seker.</value>
+  </data>
+  <data name="Poliwhirl.Description" xml:space="preserve">
+    <value>Poliwhirl'ün vücudu her zaman sümüksü bir sıvı ile ıslak ve kaygandır. Bu kaygan kaplama sayesinde savaşta her rakibin ellerinden kolayca kayıp kaçabilir.</value>
+  </data>
+  <data name="Poliwrath.Description" xml:space="preserve">
+    <value>Poliwrath'in son derece gelişmiş yumruk kasları ne kadar çalışırsa çalışsın yorulmazlar. O kadar yorulmaz ve güçlülerdir ki bu Pokémon bütün bir okyanusu yorulmadan aşıp, geri de dönebilir.</value>
+  </data>
+  <data name="Abra.Description" xml:space="preserve">
+    <value>Abra günde on sekiz saat uykuya ihtiyaç duyar. Eğer yapmazsa bu Pokémon telekinetik güçlerini kullanma yetisini kaybeder. Eğer saldırılırsa Abra uyurken bile Teleport yeteneğini kullanır ve kaçar.</value>
+  </data>
+  <data name="Kadabra.Description" xml:space="preserve">
+    <value>Kadabra elinde gümüş bir kaşık tutar. Bu kaşık beynindeki alfa dalgalarını arttırmasını sağlar. Söylenilenlere göre bu Pokémon, kaşıksız olduğu zamanlarda telekinetik gücünün sadece yarısına kadar ulaşabilir.</value>
+  </data>
+  <data name="Alakazam.Description" xml:space="preserve">
+    <value>Alakazam’ın beyni sonsuz çoğalan beyin hücreleri ile sürekli gelişir. Bu inanılmaz beyin bu Pokémon'un inanılmaz yüksek, 5.000 IQ'ya ulaşmasını sağlar. Bu dünyada olmuş herşeyi saklayabilen, derin bir hafızası vardır.</value>
+  </data>
+  <data name="Machop.Description" xml:space="preserve">
+    <value>Machop, bir Graveler'ı haltermişçesine kaldırarak antrenman yapar. Bazı Machop'lar bütün dövüş sanatlarında ustalaşmak amacıyla dünyayı dolaşırlar.</value>
+  </data>
+  <data name="Machoke.Description" xml:space="preserve">
+    <value>Machoke insanlara ağır ve zor işlerde yardım etse de her gün vücut geliştirme antrenmanlarına da devam eder. Boş günlerinde tarlalara ve dağlara çıkar ve antrenman yapar.</value>
+  </data>
+  <data name="Machamp.Description" xml:space="preserve">
+    <value>Machamp her türlü dövüş sanatında ustalaşmış Pokémon olarak bilinir. Eğer rakibini dört koluyla birden yakalamışsa, savaş bitmiş demektir. Çaresiz rakip ufuklara doğru uçuşa geçer.</value>
+  </data>
+  <data name="Bellsprout.Description" xml:space="preserve">
+    <value>Bellsprout’un ince ve esnek vücudu, rahatça bükülüp sallanarak, rakip ne kadar güçlü olursa olsun, saldırılardan kaçmasını sağlar. Bu Pokémon ağzından demiri bile eriten bir sıvı tükürür.</value>
+  </data>
+  <data name="Weepinbell.Description" xml:space="preserve">
+    <value>Weepinbell arka tarafında bulunan büyük bir kancaya sahiptir. Geceleri, bu Pokémon kendisini ağaç dallarına asar ve uyur. Eğer uykusunda hareket ederse uyandığında kendini yerde bulabilir.</value>
+  </data>
+  <data name="Victreebel.Description" xml:space="preserve">
+    <value>Victreebel kafasından uzayan uzun bir asma dalına sahiptir. Bu asma av çekmek için sallanır ve titreşir. Kuşkulanmayan av yaklaştığında ise bu Pokémon onu tek parçada yutar.</value>
+  </data>
+  <data name="Tentacool.Description" xml:space="preserve">
+    <value>Tentacool güneş ışığını emer ve vücudunun içindeki suda kırarak ışın enerjisine çevirir. Bu Pokémon gözlerinin üzerindeki ufak yuvarlak organdan ışınlar ateşler.</value>
+  </data>
+  <data name="Tentacruel.Description" xml:space="preserve">
+    <value>Tentacruel özgürce uzayan ve kısalan dokunaçlara sahiptir. Dokunaçlarıyla avını kavrar ve sert zehirlerle onu zayıflatır. Aynı anda 80'e kadar av yakalayabilir.</value>
+  </data>
+  <data name="Geodude.Description" xml:space="preserve">
+    <value>Geodude derin bir şekilde uyurken kendisini yarıya kadar yere gömer. Dağ tırmanıcıları üzerine bassa bile uyanmaz. Bu Pokémon sabahları yiyecek aramak için dağlardan aşağı yuvarlanır.</value>
+  </data>
+  <data name="Graveler.Description" xml:space="preserve">
+    <value>Taşlar Graveler'ın en sevdiği yiyecektir. Bu Pokémon, yoldaki bütün taşları yiyerek, dağın eteklerinden zirvesine kadar tırmanır. En teğeye ulaştığında ise tekrar aşağıya yuvarlanır.</value>
+  </data>
+  <data name="Golem.Description" xml:space="preserve">
+    <value>Golem dağlardan aşağı yuvarlanmasıyla bilinir. İnsanların evlerine yuvarlanmasını engellemek için dağlara, Pokémon'u yönlendirme amaçlı oyuklar kazılmıştır.</value>
+  </data>
+  <data name="Ponyta.Description" xml:space="preserve">
+    <value>Ponyta doğumunda çok zayıftır. Zar zor ayağa kalkar. Bu Pokémon ebeveynlerine yetişmek için düşe kalka güçlenir.</value>
+  </data>
+  <data name="Rapidash.Description" xml:space="preserve">
+    <value>Rapidash genelde ovalarda ve tarlalarda dört nala koşarken görülür. Ancak bu Pokémon ciddileşirse, 250 km/s ile dört nala koşarken alevli yelesi ateş ile parlar.</value>
+  </data>
+  <data name="Slowpoke.Description" xml:space="preserve">
+    <value>Slowpoke kuyruğunu nehir kenarında suya batırarak av bekler. Ancak bu Pokémon genelde ne yaptığını unutur ve sıklıkla günlerini boş boş su kenarında hiçbir şey yapmadan geçirir.</value>
+  </data>
+  <data name="Slowbro.Description" xml:space="preserve">
+    <value>Slowbro’nun kuyruğuna bir ısırıklıkla sabitlenmiş bir Shellder bulunur. Sonuç olarak kuyruğunu artık avlanmak için kullanamaz. Bu sebeple Slowbro avlanmak için yüzmeye ve avlarını yakalamaya başlar.</value>
+  </data>
+  <data name="Magnemite.Description" xml:space="preserve">
+    <value>Magnemite yanındaki ünitelerden yayılan elektromanyetik dalgalar sayesinde havada süzülür. Bu dalgalar yer çekimini engeller. Eğer içindeki elektrik kaynağı boşalırsa bu Pokémon artık uçamaz.</value>
+  </data>
+  <data name="Magneton.Description" xml:space="preserve">
+    <value>Magneton elektronik aletler için ölümcül olabilen çok güçlü bir manyetik alan yayar. Bu sebeple bazı kasabaların insanları Magneton'larını Poké Toplarında tutmaları konusunda uyardığı söylenmektedir.</value>
+  </data>
+  <data name="Farfetchd.Description" xml:space="preserve">
+    <value>Farfetch’d her zaman elinde tuttuğu bir bitki dalı ile görülür. Görünüşe göre, iyi ve kötü dallar mevcuttur. Bu Pokémon başkalarıyla dallar için savaşır.</value>
+  </data>
+  <data name="Doduo.Description" xml:space="preserve">
+    <value>Doduo'nun iki kafası tamamen aynı iki beyne sahiptir. Bilimsel bir araştırmaya göre nadir durumlarda iki kafanın, iki farklı beyne sahip olduğu örnekler görülmüştür.</value>
+  </data>
+  <data name="Dodrio.Description" xml:space="preserve">
+    <value>Görüldüğü kadarıyla Dodrio'nun üç taneye sahip olduğu tek şey kafaları değil. Aynı zamanda üç kalbe ve üç çift ciğere sahiptir ve bu sayede uzun mesafeleri dinlenme ihtiyacı duymadan koşabilir.</value>
+  </data>
+  <data name="Seel.Description" xml:space="preserve">
+    <value>Seel buz gibi denizde, buz katmanlarının altında avlanır. Nefes alması gerektiğinde, kafasındaki boynuzda buz katmanlarında bir delik açar.</value>
+  </data>
+  <data name="Dewgong.Description" xml:space="preserve">
+    <value>Dewgong acı verecek derecede soğuk buzların üstünde şekerleme yapmayı sever. Uzun zaman önce bu Pokémon'un buz üstünde uyurkenki görüntüsü bir denizci tarafından, bir deniz kızı ile karıştırılmıştır.</value>
+  </data>
+  <data name="Grimer.Description" xml:space="preserve">
+    <value>Grimer kirlenmiş deniz yatağındaki çamurdan çıkmıştır. Bu Pokémon kirli olan herşeyi sever. Vücudundan sürekli mikrop dolu sıvılar akıtır.</value>
+  </data>
+  <data name="Muk.Description" xml:space="preserve">
+    <value>Bu Pokémon'un en sevdiği yemek, iğrenç derecede kirli olan her şeydir. İnsanların çöplerini sokaklara atmakta bir sakınca görmediği kirli kasabalarda, Muk grupları toplanır.</value>
+  </data>
+  <data name="Shellder.Description" xml:space="preserve">
+    <value>Bu Pokémon geceleri geniş dilini kullanarak deniz yatağında bir delik açar ve onun içinde uyur. Uyuduğu sırada kabuğunu kapatır, ancak dilini dışarıda bırakır.</value>
+  </data>
+  <data name="Cloyster.Description" xml:space="preserve">
+    <value>Cloyster denizde yüzme yeteneğine sahiptir. Bunu suyu yutup, arkasından jet gibi çıkartarak yapar. Bu Pokémon aynı sistemle vücudundan dikenler ateşler.</value>
+  </data>
+  <data name="Gastly.Description" xml:space="preserve">
+    <value>Gastly çoğunlukla gazımsı maddelerden oluşur. Güçlü rüzgarlarda bu gaz vücudu kolaylıkla dağılır. Bu Pokémon, gruplar halinde rüzgarlardan kaçmak için evlerin saçaklarında toplanırlar.</value>
+  </data>
+  <data name="Haunter.Description" xml:space="preserve">
+    <value>Haunter tehlikeli bir Pokémon'dur. Eğer karanlıkta süzülen bir tane görülürse, asla yaklaşılmamalıdır. Bu Pokémon sizi dili ile yalamaya ve hayatınızı çalmaya çalışır.</value>
+  </data>
+  <data name="Gengar.Description" xml:space="preserve">
+    <value>Bazen, karanlık bir gecede, bir sokak lambasının yarattığı gölgeniz aniden ve korkutucu bir şekilde üstünüze gelmeye başlayabilir. Bu aslında gölgeniz olarak gizlenen ve yanınızdan koşarak geçmekte olan bir Gengar'dır.</value>
+  </data>
+  <data name="Onix.Description" xml:space="preserve">
+    <value>Onix beyninde bir magnete sahiptir. Bu magnet, Pokémon tüneller kazarken yolunu kaybetmemesi için bir pusula olarak çalışır. Yaşlandıkça vücudu yuvarlaklaşır ve hatları yumuşar.</value>
+  </data>
+  <data name="Drowzee.Description" xml:space="preserve">
+    <value>Eğer uyurken burnunuz kaşınmaya başlarsa, bu Pokémon'lardan birinin yastığınızın üstünde durduğunun ve burnunuzdan rüyalarınızı yemeye çelıştığının bir işaretidir.</value>
+  </data>
+  <data name="Hypno.Description" xml:space="preserve">
+    <value>Hypno elinde bir sarkaç tutar. Bu sarkacın sağa-sola hareketi ve parlaklığı rakibini derin bir hipnoza sürükler. Bu Pokémon av ararken, sarkacını parlatır.</value>
+  </data>
+  <data name="Krabby.Description" xml:space="preserve">
+    <value>Krabby sahillerde, kuma kazılmış deliklerde yaşar. Az yiyecekli kumlu sahillerde bu Pokémon, başkalarıyla bölge mücadelesine girerken görülebilir.</value>
+  </data>
+  <data name="Kingler.Description" xml:space="preserve">
+    <value>Kingler çok büyük bir kıskaca sahiptir. Bu dev kıskacı havada sallayarak diğerleri ile iletişim kurar. Ancak kıskaç fazla büyük olduğu için Pokémon kolayca yorulur.</value>
+  </data>
+  <data name="Voltorb.Description" xml:space="preserve">
+    <value>Voltorb son derece hassastır, en ufak bir şok patlamasına sebep olur. Dedikodulara göre bir Poké Topu güçlü bir enerji dalgasına mağruz kaldığında yaratılmıştır.</value>
+  </data>
+  <data name="Electrode.Description" xml:space="preserve">
+    <value>Electrode'un karakteristiklerinden biri, elektriğe olan çekimidir. Çoğunlukla elektrik santrallerinde bulunan ve yeni üretilmiş enerjiden beslenen, sorun yaratan bir Pokémon'dur.</value>
+  </data>
+  <data name="Exeggcute.Description" xml:space="preserve">
+    <value>Bu Pokémon birbirine bağlı altı yumurtadan oluşur. Bu altı yumurta birbirine çekilir ve etraflarında dönerler. Yumurtalarda çatlama sesleri duyulmaya başlandığında Exeggcute gelişmek üzere demektir.</value>
+  </data>
+  <data name="Exeggutor.Description" xml:space="preserve">
+    <value>Exeggutor aslen tropikal bölgelerden gelmiştir. Kafaları güneş ışınlarına maruz kaldıkça büyürler. Kafalar düştüğünde, tekrar bir araya gelip bir Exeggcute oluşturdukları söylenir.</value>
+  </data>
+  <data name="Cubone.Description" xml:space="preserve">
+    <value>Cubone, bir daha asla göremeyeceği annesini özler. Annesine benzer bulduğu dolunayda ağlar. Pokémon'un kask olarak giydiği kafa tasındaki lekeler, döktüğü göz yaşlarının lekeleridir.</value>
+  </data>
+  <data name="Marowak.Description" xml:space="preserve">
+    <value>Marowak, annesinin kaybının yaşattığı üzüntüyü aşmış ve güçlenmiş olan bir Cubone'un gelişmiş halidir. Bu Pokémon'un dengeli ve güçlü motivasyonu kolay kolay kırılmaz.</value>
+  </data>
+  <data name="Hitmonlee.Description" xml:space="preserve">
+    <value>Hitmonlee’nin bacakları rahatça kısalır ve uzar. Bu yayımsı bacaklarını kullanarak rakiplerine yıkıcı darbeler indirir. Savaştan sonra bacaklarını ovar ve yorgunluğu geçirmek için kaslarını gevşetir.</value>
+  </data>
+  <data name="Hitmonchan.Description" xml:space="preserve">
+    <value>Hitmonchan'in dünya şampiyonası için çalışan bir boksçunun ruhuna sahip olduğu söylenir. Bu Pokémon kırılmaz bir motivasyona sahiptir ve asla rakibine boyun eğmez.</value>
+  </data>
+  <data name="Lickitung.Description" xml:space="preserve">
+    <value>Lickitung yeni gördüğü bir şeye denk geldiğinde, onu şaşılmaz bir şekilde yalar. Bunu yapmasının sebebi, cisimleri tat ve yüzeylerinden hatırlamasıdır. Ekşi şeyleri sevmez.</value>
+  </data>
+  <data name="Koffing.Description" xml:space="preserve">
+    <value>Koffing zehirli maddelerle çevriliolmayı sever. Kendi zehirlerini, başkalarının çöpleriyle de karıştırarak yarattığı kimyasal reaksiyonla çok güçlü zehre sahip gazlar üretir. Hava ne kadar sıcaksa, o kadar zehirli gaz üretir.</value>
+  </data>
+  <data name="Weezing.Description" xml:space="preserve">
+    <value>Weezing ikiz vücutlarını şirip indirerek çeşitli zehirli gazları karıştırır. Ne kadar gaz karıştırılırsa, sonuç da o kadar güçlü bir zehir olur. Bu Pokémon aynı zamanda daha da kötü kokar.</value>
+  </data>
+  <data name="Rhyhorn.Description" xml:space="preserve">
+    <value>Rhyhorn’un beyni çok küçüktür. O kadar küçüktür ki, koşarken neden koşmaya başladığını bile unutur. Bazen birşeyleri yıktıktan sonra hatırlayabilir.</value>
+  </data>
+  <data name="Rhydon.Description" xml:space="preserve">
+    <value>Rhydon bir matkap olarak kullandığı bir boynuza sahiptir. Taşları ve kayaları parçalamak için kullanılır. Bu Pokémon zaman zaman magma akımlarına denk gelir ama zırf gibi olan derisi, sıcaklığı hissetmesini engeller.</value>
+  </data>
+  <data name="Chansey.Description" xml:space="preserve">
+    <value>Chansey günlük besin olarak harika olan yumurtalar bırakır. Bu yumurtalar o kadar lezzetlidir ki, iştahını kaybetmiş olan kişiler bile kolayca tüketilebilir.</value>
+  </data>
+  <data name="Tangela.Description" xml:space="preserve">
+    <value>Tangela’nın asmaları, yakalandığı durumda kolayca kırılır. Bu acısızca olur ve kolay bir kaçış imkanı sağlar. Kaybedilen asmalar bir sonraki güne kadar yeniden çıkarlar.</value>
+  </data>
+  <data name="Kangaskhan.Description" xml:space="preserve">
+    <value>Eğer kendi kendine oynayan genç bir Kangaskhan'a denk gelirseniz, asla onu rahatsız etmemelisiniz veya yakalamaya çalışmamalısınız. Bebek Pokémon'un annesi kesinlikle yakınlardadır ve size inanılmaz bir şekilde sinirlenebilir.</value>
+  </data>
+  <data name="Horsea.Description" xml:space="preserve">
+    <value>Horsea tehlike sezdiğinde, kaçmaya çalışırken ağzından siyah bir mürekkep salar. Bu Pokémon sırtındaki yüzgeci akıllıca kullanarak yüzer.</value>
+  </data>
+  <data name="Seadra.Description" xml:space="preserve">
+    <value>Seadra vücudunu çevirerek girdaplar oluşturur. Bu girdaplar balıkçı teknelerini denizin dibine çekecek kadar güçlüdür. Bu Pokémon bu akıntılarla avını zayıflatır ve tek parça halinde yutar.</value>
+  </data>
+  <data name="Goldeen.Description" xml:space="preserve">
+    <value>Goldeen nehir ve göllerde özgürce yüzmeye bayılır. Bu Pokémon'lardan biri eğer bir akvaryuma konulursa, en kalın camı bile boynuzunun bir darbesiyle parçalar ve kaçar.</value>
+  </data>
+  <data name="Seaking.Description" xml:space="preserve">
+    <value>Seaking yumurtaları konusunda son derece korumacıdır. Erkek ve dişi sırayla yumurta ve yuvaları çevresinde devriye gezerler. Yumurtalarını korumaları bir aydan uzun sürer.</value>
+  </data>
+  <data name="Staryu.Description" xml:space="preserve">
+    <value>Staryu belli ki vücudunun ortasındaki kırmızı çekirdeğini parlatarak geceleri gökyüzündeki yıldızlar ile konuşur. Eğer vücudunun bir parçası koparsa, bu Pokémon eksik parça ve uzuvları tekrar çıkarır.</value>
+  </data>
+  <data name="Starmie.Description" xml:space="preserve">
+    <value>Starmie tıpkı bir geminin pervanesi gibi, yıldız biçimindeki vücudunu çevirerek suda yüzer. bu Pokémon'un merkezindeki çekirdek yedi farklı renkte parlar.</value>
+  </data>
+  <data name="MrMime.Description" xml:space="preserve">
+    <value>Mr. Mime bir pandomim ustasıdır. Hareketleri ve işaretleri izleyenleri gerçekten göremedikleri bir şey olduğuna ikna eder. İzleyen ikna olduğunda, görülmeyen şey, sanki gerçekmiş gibi var olur.</value>
+  </data>
+  <data name="Scyther.Description" xml:space="preserve">
+    <value>Scyther inanılmaz hızlıdır. Bu hızı, kollarındaki bıçakların etkinliğini de arttırır. Bu Pokémon'un bıçakları o kadar etkilidir ki, kalın kütükleri tek vuruşta kesebilirler.</value>
+  </data>
+  <data name="Jynx.Description" xml:space="preserve">
+    <value>Jynx dans eder gibi, kalçasını sağa sola, ritmik bir şekilde sallayarak yürür. Hareketleri o kadar çekicidir ki, onu izleyen insanlar da ne yaptıklarını fark etmeden bellerini sallamaya başlarlar.</value>
+  </data>
+  <data name="Electabuzz.Description" xml:space="preserve">
+    <value>Bir fırtına olduğunda, bu Pokémon çeteleri yıldırım çarpma şansı yüksek olan yüksek yerler için birbirleriyle mücadele ederler. Bazı kasabalar paratoner yerine Electabuzz'ları kullanırlar.</value>
+  </data>
+  <data name="Magmar.Description" xml:space="preserve">
+    <value>Savaş esnasında, Magmar rakibini korkutmak için vücudunun her tarafından alevler saçar. Bu Pokémon'un alev saçışları, çevredeki çimen ve ağaçların tutuşmasına sebep olan bir sıcak dalgası yayar.</value>
+  </data>
+  <data name="Pinsir.Description" xml:space="preserve">
+    <value>Pinsir bir çift devasa boynuza sahiptir. Bu boynuzların yüzeyi dikenlerle doludur. Kıskaç kapandığında bu dikenler rakibin vücuduna saplanır ve rakibin kaçmasını zorlaştırır.</value>
+  </data>
+  <data name="Tauros.Description" xml:space="preserve">
+    <value>Bu Pokémon sürekli tantana çıkartmazsa tatmin olmaz. Eğer Tauros için savaşacak rakip kalmamışsa, ağaçlara vurarak ve devirerek sakinleşmeye çalışır.</value>
+  </data>
+  <data name="Magikarp.Description" xml:space="preserve">
+    <value>Magikarp savaşlarda tam anlamıyla işe yaramazdır. Bildiği tek şey çırpınmak olduğu için güçsüz olarak kabul edilir. Ancak aslında son derece dayanıklı bir Pokémon'dur ve her türlü suda yaşamını sürdürebilir, ne kadar kirli olursa olsun.</value>
+  </data>
+  <data name="Gyarados.Description" xml:space="preserve">
+    <value>Gyarados öfke krizine girdi mi, hızla akan kanı, çevresindeki herşeyi yakıp yıkana kadar sakinleşmez. Kayıtlarda bu Pokémon'un bütün bir ay süren öfke krizleri mevcuttur.</value>
+  </data>
+  <data name="Lapras.Description" xml:space="preserve">
+    <value>İnsanlar Lapras'ları nesillerini tükenme noktasına kadar getirmiştir. Akşam üstü saatlerinde bu Pokémon'un başka hayatta kalan Lapras'ları bulmak için şarkılar söylediği söylenir.</value>
+  </data>
+  <data name="Ditto.Description" xml:space="preserve">
+    <value>Ditto başka şekillere bürünmek için hücre yapısını değiştirir. Ancak hafızasına dayanarak şekil değiştirmeye çalışırsa, bu Pokémon genelde detayları yanlış yapar.</value>
+  </data>
+  <data name="Eevee.Description" xml:space="preserve">
+    <value>Eevee bulunduğu ortama göre aniden değişen, dengesiz bir genetik yapıya sahiptir. Farklı taşlardan yayılan radyasyon bu Pokémon'un gelişmesine sebep olur.</value>
+  </data>
+  <data name="Vaporeon.Description" xml:space="preserve">
+    <value>Vaporeon, yüzgeçlerinin ve su altında yaşamasını sağlayan solungaçlarının olmasına sebep olan bir mutasyon geçirdi. Bu Pokémon suyu rahatça kontrol etme yeteneğine sahiptir.</value>
+  </data>
+  <data name="Jolteon.Description" xml:space="preserve">
+    <value>Jolteon’un hücreleri düşük seviyede elektrik üretir. Bu güç, kürkünün statik elektriği ile de katlanır ve Pokémon'un yıldırımlar düşürmesini sağlar. Kürkü, elektrikle yüklü iğnelerden oluşur.</value>
+  </data>
+  <data name="Flareon.Description" xml:space="preserve">
+    <value>Flareon’un kabarık kürkünün fonksiyonel bir sebebi vardır. Sıcaklığı havaya salar ki vücudu çok ısınmasın. Bu Pokémon'un vücut ısısı 900 derece Celcius'a kadar çıkabilir.</value>
+  </data>
+  <data name="Porygon.Description" xml:space="preserve">
+    <value>Porygon kendisini program datasına geri çevirip, siber uzaya girme yeteneğine sahiptir. Bu Pokémon kopyalamaya karşı korumalıdır ve dijital ortamda bir eşi yaratılamaz.</value>
+  </data>
+  <data name="Omanyte.Description" xml:space="preserve">
+    <value>Omanyte uzun zamandır nesilleri tükenmiş, antik Pokémon'lardan biridir ve insanlar tarafından fosillerinden tekrar canlandırılmıştır. Eğer bir düşman tarafından saldırılırsa sert kabuğunun içine çekilir.</value>
+  </data>
+  <data name="Omastar.Description" xml:space="preserve">
+    <value>Omastar avını yakalamak için dokungaçlarını kullanır. Neslinin tükenmesinin sebebinin, kabuğunun çok büyük ve ağır hale gelip hareketlerini yavaşlatması olduğu düşünülüyor.</value>
+  </data>
+  <data name="Kabuto.Description" xml:space="preserve">
+    <value>Kabuto fosillerinden tekrar canlandırılmış bir Pokémon'dur. Ancak çok nadir durumlarda, yaşayan örnekleri de bulunmuştur. Bu Pokémon 300 milyon yıldır en ufak bir değişiklik geçirmemiştir.</value>
+  </data>
+  <data name="Kabutops.Description" xml:space="preserve">
+    <value>Kabutops antik zamanlarda avlanmak için su altında yüzerdi. Bu Pokémon bir su sakini Pokémon'dan bir karasal Pokémon olma yönünde evrim geçirmekte olduğu solungaç ve bacaklarındaki değişim başlangıçlarından görülmektedir.</value>
+  </data>
+  <data name="Aerodactyl.Description" xml:space="preserve">
+    <value>Aerodactyl dinozorların çağından kalma bir Pokémon'dur. Bir kehribardan çıkartılan genetik materyal sayesinde hayata döndürülmüştür. Antik zamanlarda göklerin kralı olduğu düşünülmektedir.</value>
+  </data>
+  <data name="Snorlax.Description" xml:space="preserve">
+    <value>Snorlax’ın tipik bir günü yemek ve uyumaktan ibarettir. O kadar uysal bir Pokémon'dur ki bazı çocuklar onun büyük karnını oyun alanı olarak kullanırlar.</value>
+  </data>
+  <data name="Articuno.Description" xml:space="preserve">
+    <value>Articuno buzları kontrol edebilen bir efsanevi kuş Pokémon'udur. Kanatlarını çırpması havayı soğutur. Sonuç olarak bu Pokémon uçtuğunda kar yağdığı söylenir.</value>
+  </data>
+  <data name="Zapdos.Description" xml:space="preserve">
+    <value>Zapdos elektriği kontrol edebilen bir efsanevi kuş Pokémon'udur. Genelde şimşek bulutları arasında yaşar. Yıldırım ve şimşekler tarafından çarpılarak güç kazanır.</value>
+  </data>
+  <data name="Moltres.Description" xml:space="preserve">
+    <value>Moltres ateşi kontrol edebilen bir efsanevi kuş Pokémon'udur. Eğer bu Pokémon yaralanırsa, erimiş magmaya batırılıp yanmanın onu iyileştirdiği söylenir.</value>
+  </data>
+  <data name="Dratini.Description" xml:space="preserve">
+    <value>Dratini sürekli deri değiştirir ve eski derisinden kurtulur. Bunu yapmasının sebebi, vücudundaki hayat enerjisinin kontrol edilemez seviyelere ulaşmasıdır.</value>
+  </data>
+  <data name="Dragonair.Description" xml:space="preserve">
+    <value>Dragonair vücudunda inanılmaz miktarda enerji depolar. Boynundaki ve kuyruğundaki kristalden yaydığı enerji ile hava koşullarını değiştirebildiği söylenir.</value>
+  </data>
+  <data name="Dragonite.Description" xml:space="preserve">
+    <value>Dragonite sadece 16 saatte dünyanın çevresini dönme yeteneğine sahiptir. Kayıplara yol gösteren, fırtınadaki gemilere kıyıya rota çizen, iyi kalpli bir Pokémon olarak bilinir.</value>
+  </data>
+  <data name="Mewtwo.Description" xml:space="preserve">
+    <value>Mewtwo genetik olarak oynanarak yaratılmış bir Pokémon'dur. Ancak insanların bilimsel dehası, bu Pokémon'un vücudunu yaratmış olsa da, Mewtwo'ya merhametli bir kalp vermeyi başaramamıştır.</value>
+  </data>
+  <data name="Mew.Description" xml:space="preserve">
+    <value>Mew'un, bütün Pokémon'ların genetik özelliklerini barındırdığı söylenir. İstediği anda kendisini görünmez yapma yeteneğine sahiptir, bu sebeple insanlara yaklaşsa bile dikkat çekmez.</value>
+  </data>
 </root>

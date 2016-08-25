@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="D_ItemGreatBall" xml:space="preserve">
-    <value>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</value>
+    <value>A good, high-performance Poké Ball that provides a higher catch rate than a standard Poké Ball.</value>
   </data>
   <data name="D_ItemIncenseCool" xml:space="preserve">
     <value>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</value>
@@ -142,7 +142,7 @@
     <value>A Lucky Egg that's filled with happiness! Earns double XP for 30 minutes.</value>
   </data>
   <data name="D_ItemMasterBall" xml:space="preserve">
-    <value>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</value>
+    <value>The best Poké Ball with the ultimate level of performance. With it you will catch any Pokémon without fail.</value>
   </data>
   <data name="D_ItemPokeBall" xml:space="preserve">
     <value>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</value>
@@ -151,6 +151,18 @@
     <value>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 20 points.</value>
   </data>
   <data name="D_ItemRazzBerry" xml:space="preserve">
+    <value>Feed this to a Pokémon, and it will be easier to catch on your next throw.</value>
+  </data>
+    <data name="D_ItemBlukBerry" xml:space="preserve">
+    <value>Feed this to a Pokémon, and it will be easier to catch on your next throw.</value>
+  </data>
+    <data name="D_ItemNanabBerry" xml:space="preserve">
+    <value>Feed this to a Pokémon, and it will be easier to catch on your next throw.</value>
+  </data>
+    <data name="D_ItemPinapBerry" xml:space="preserve">
+    <value>Feed this to a Pokémon, and it will be easier to catch on your next throw.</value>
+  </data>
+    <data name="D_ItemWeparBerry" xml:space="preserve">
     <value>Feed this to a Pokémon, and it will be easier to catch on your next throw.</value>
   </data>
   <data name="D_ItemRevive" xml:space="preserve">
@@ -166,7 +178,7 @@
     <value>A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</value>
   </data>
   <data name="D_ItemUltraBall" xml:space="preserve">
-    <value>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</value>
+    <value>An ultra-high performance Poké Ball that provides a higher success rate for catching Pokémon than a Great.</value>
   </data>
   <data name="D_ItemUnknown" xml:space="preserve">
     <value>This item is unknown and may be added in the future.</value>

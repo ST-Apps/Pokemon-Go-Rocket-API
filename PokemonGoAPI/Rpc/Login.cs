@@ -8,6 +8,7 @@ using PokemonGo.RocketAPI.Login;
 using PokemonGoAPI.Session;
 using POGOProtos.Networking.Requests;
 using POGOProtos.Networking.Requests.Messages;
+using PokemonGoAPI.Enums;
 
 namespace PokemonGo.RocketAPI.Rpc
 {
@@ -48,16 +49,6 @@ namespace PokemonGo.RocketAPI.Rpc
             #region Standard intial request messages in right Order
 
             var getPlayerMessage = new GetPlayerMessage();
-            var getHatchedEggsMessage = new GetHatchedEggsMessage();
-            var getInventoryMessage = new GetInventoryMessage
-            {
-                LastTimestampMs = DateTime.UtcNow.ToUnixTime()
-            };
-            var checkAwardedBadgesMessage = new CheckAwardedBadgesMessage();
-            var downloadSettingsMessage = new DownloadSettingsMessage
-            {
-                Hash = "05daf51635c82611d1aac95c0b051d3ec088a930"
-            };
 
             #endregion
 
@@ -66,26 +57,16 @@ namespace PokemonGo.RocketAPI.Rpc
                 {
                     RequestType = RequestType.GetPlayer,
                     RequestMessage = getPlayerMessage.ToByteString()
-                }, new Request
-                {
-                    RequestType = RequestType.GetHatchedEggs,
-                    RequestMessage = getHatchedEggsMessage.ToByteString()
-                }, new Request
-                {
-                    RequestType = RequestType.GetInventory,
-                    RequestMessage = getInventoryMessage.ToByteString()
-                }, new Request
-                {
-                    RequestType = RequestType.CheckAwardedBadges,
-                    RequestMessage = checkAwardedBadgesMessage.ToByteString()
-                }, new Request
-                {
-                    RequestType = RequestType.DownloadSettings,
-                    RequestMessage = downloadSettingsMessage.ToByteString()
-                });
+                }
+            );
 
 
             var serverResponse = await PostProto<Request>(Resources.RpcUrl, serverRequest);
+
+            if(serverRequest.StatusCode == (int) StatusCode.AccessDenied)
+            {
+                throw new AccountLockedException();
+            }
 
             if (serverResponse.AuthTicket == null)
             {
@@ -94,7 +75,11 @@ namespace PokemonGo.RocketAPI.Rpc
             }
 
             Client.AccessToken.AuthTicket = serverResponse.AuthTicket;
-            Client.ApiUrl = serverResponse.ApiUrl;
+
+            if (serverResponse.StatusCode == (int)StatusCode.Redirect)
+            {
+                Client.ApiUrl = serverResponse.ApiUrl;
+            }
         }
     }
 }

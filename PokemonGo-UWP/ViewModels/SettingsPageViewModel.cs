@@ -72,6 +72,15 @@ namespace PokemonGo_UWP.ViewModels
         }
 
         /// <summary>
+        ///     Whether the player wants vibration (when a Pokémon is nearby)
+        /// </summary>
+        public bool IsBatterySaverEnabled
+        {
+            get { return SettingsService.Instance.IsBatterySaverEnabled; }
+            set { SettingsService.Instance.IsBatterySaverEnabled = value; }
+        }
+
+        /// <summary>
         ///     Whether the player wants a Live Tile or a regular one.
         /// </summary>
         public LiveTileModes LiveTileMode

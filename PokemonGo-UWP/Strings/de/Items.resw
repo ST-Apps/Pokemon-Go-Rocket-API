@@ -138,4 +138,34 @@
   <data name="ItemXMiracle" xml:space="preserve">
     <value>X-Wunder</value>
   </data>
+  <data name="D_ItemLuckyEgg" xml:space="preserve">
+    <value>Ein Ei, das mit Glück gefüllt ist. Der Spieler erhält 30 Minuten lang doppelt so viele EP.</value>
+  </data>
+  <data name="D_ItemRazzBerry" xml:space="preserve">
+    <value>Wenn du sie einem Pokémon zum Essen gibst, lässt es sich leichter fangen.</value>
+  </data>
+  <data name="D_ItemSpecialCamera" xml:space="preserve">
+    <value>Wenn du einem wilden Pokémon begegnest, kannst du es mit deiner Kamera fotografieren.</value>
+  </data>
+  <data name="D_ItemSuperPotion" xml:space="preserve">
+    <value>Eine sprayförmige Medizin um Wunden zu behandeln. Es regeneriert die KP eines Pokémon um 50 Punkte.</value>
+  </data>
+  <data name="D_ItemTroyDisk" xml:space="preserve">
+    <value>Es lockt 30 Minuten lang Pokémon zu einem PokéStop. Spieler in der Nähe profitieren auch.</value>
+  </data>
+  <data name="D_ItemUnknown" xml:space="preserve">
+    <value>Dieses Item ist unbekannt und wird möglicherweise zukünftig hinzugefügt.</value>
+  </data>
+  <data name="D_ItemBlukBerry" xml:space="preserve">
+    <value>Wenn du sie einem Pokémon zum Essen gibst, lässt es sich leichter fangen.</value>
+  </data>
+  <data name="D_ItemNanabBerry" xml:space="preserve">
+    <value>Wenn du sie einem Pokémon zum Essen gibst, lässt es sich leichter fangen.</value>
+  </data>
+  <data name="D_ItemPinapBerry" xml:space="preserve">
+    <value>Wenn du sie einem Pokémon zum Essen gibst, lässt es sich leichter fangen.</value>
+  </data>
+  <data name="D_ItemWeparBerry" xml:space="preserve">
+    <value>Wenn du sie einem Pokémon zum Essen gibst, lässt es sich leichter fangen.</value>
+  </data>
 </root>

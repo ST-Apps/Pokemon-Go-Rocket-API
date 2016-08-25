@@ -23,7 +23,7 @@ namespace POGOProtos.Networking.Envelopes {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci9QT0dPUHJvdG9zL05ldHdvcmtpbmcvRW52ZWxvcGVzL1NpZ25hdHVyZS5w",
-            "cm90bxIfUE9HT1Byb3Rvcy5OZXR3b3JraW5nLkVudmVsb3BlcyK0DwoJU2ln",
+            "cm90bxIfUE9HT1Byb3Rvcy5OZXR3b3JraW5nLkVudmVsb3BlcyKzEAoJU2ln",
             "bmF0dXJlEh0KFXRpbWVzdGFtcF9zaW5jZV9zdGFydBgCIAEoBBJMCgxsb2Nh",
             "dGlvbl9maXgYBCADKAsyNi5QT0dPUHJvdG9zLk5ldHdvcmtpbmcuRW52ZWxv",
             "cGVzLlNpZ25hdHVyZS5Mb2NhdGlvbkZpeBJLCghncHNfaW5mbxgFIAEoCzI5",
@@ -36,42 +36,45 @@ namespace POGOProtos.Networking.Envelopes {
             "aWduYXR1cmUuQWN0aXZpdHlTdGF0dXMSFgoObG9jYXRpb25faGFzaDEYCiAB",
             "KAQSFgoObG9jYXRpb25faGFzaDIYFCABKAQSFAoMc2Vzc2lvbl9oYXNoGBYg",
             "ASgMEhEKCXRpbWVzdGFtcBgXIAEoBBIUCgxyZXF1ZXN0X2hhc2gYGCADKAQS",
-            "EQoJdW5rbm93bjI1GBkgASgDGvABCgtMb2NhdGlvbkZpeBIQCghwcm92aWRl",
-            "chgBIAEoCRIaChJ0aW1lc3RhbXBfc25hcHNob3QYAiABKAQSEAoIbGF0aXR1",
-            "ZGUYDSABKAISEQoJbG9uZ2l0dWRlGA4gASgCEhsKE2hvcml6b250YWxfYWNj",
-            "dXJhY3kYFCABKAISFwoPcmFkaWFsX2FjY3VyYWN5GBUgASgCEhkKEXZlcnRp",
-            "Y2FsX2FjY3VyYWN5GBYgASgCEhcKD3Byb3ZpZGVyX3N0YXR1cxgaIAEoBBIN",
-            "CgVmbG9vchgbIAEoDRIVCg1sb2NhdGlvbl90eXBlGBwgASgEGq8BCg5BbmRy",
-            "b2lkR3BzSW5mbxITCgt0aW1lX3RvX2ZpeBgBIAEoBBIWCg5zYXRlbGxpdGVz",
-            "X3BybhgCIAMoBRIPCgdhemltdXRoGAMgAygCEhEKCWVsZXZhdGlvbhgEIAMo",
-            "AhILCgNzbnIYBSADKAISEwoLaGFzX2FsbWFuYWMYBiADKAgSFQoNaGFzX2Vw",
-            "aGVtZXJpcxgHIAMoCBITCgt1c2VkX2luX2ZpeBgIIAMoCBq+AwoKU2Vuc29y",
-            "SW5mbxIaChJ0aW1lc3RhbXBfc25hcHNob3QYASABKAQSFgoObWFnbmV0b21l",
-            "dGVyX3gYAyABKAESFgoObWFnbmV0b21ldGVyX3kYBCABKAESFgoObWFnbmV0",
-            "b21ldGVyX3oYBSABKAESGgoSYW5nbGVfbm9ybWFsaXplZF94GAYgASgBEhoK",
-            "EmFuZ2xlX25vcm1hbGl6ZWRfeRgHIAEoARIaChJhbmdsZV9ub3JtYWxpemVk",
-            "X3oYCCABKAESEwoLYWNjZWxfcmF3X3gYCiABKAESEwoLYWNjZWxfcmF3X3kY",
-            "CyABKAESEwoLYWNjZWxfcmF3X3oYDCABKAESFwoPZ3lyb3Njb3BlX3Jhd194",
-            "GA0gASgBEhcKD2d5cm9zY29wZV9yYXdfeRgOIAEoARIXCg9neXJvc2NvcGVf",
-            "cmF3X3oYDyABKAESGgoSYWNjZWxfbm9ybWFsaXplZF94GBAgASgBEhoKEmFj",
-            "Y2VsX25vcm1hbGl6ZWRfeRgRIAEoARIaChJhY2NlbF9ub3JtYWxpemVkX3oY",
-            "EiABKAESGgoSYWNjZWxlcm9tZXRlcl9heGVzGBMgASgEGtoCCgpEZXZpY2VJ",
-            "bmZvEhEKCWRldmljZV9pZBgBIAEoCRIaChJhbmRyb2lkX2JvYXJkX25hbWUY",
-            "AiABKAkSGgoSYW5kcm9pZF9ib290bG9hZGVyGAMgASgJEhQKDGRldmljZV9i",
-            "cmFuZBgEIAEoCRIUCgxkZXZpY2VfbW9kZWwYBSABKAkSHwoXZGV2aWNlX21v",
-            "ZGVsX2lkZW50aWZpZXIYBiABKAkSGQoRZGV2aWNlX21vZGVsX2Jvb3QYByAB",
-            "KAkSHQoVaGFyZHdhcmVfbWFudWZhY3R1cmVyGAggASgJEhYKDmhhcmR3YXJl",
-            "X21vZGVsGAkgASgJEhYKDmZpcm13YXJlX2JyYW5kGAogASgJEhUKDWZpcm13",
-            "YXJlX3RhZ3MYDCABKAkSFQoNZmlybXdhcmVfdHlwZRgNIAEoCRIcChRmaXJt",
-            "d2FyZV9maW5nZXJwcmludBgOIAEoCRq7AQoOQWN0aXZpdHlTdGF0dXMSFQoN",
-            "c3RhcnRfdGltZV9tcxgBIAEoBBIWCg51bmtub3duX3N0YXR1cxgCIAEoCBIP",
-            "Cgd3YWxraW5nGAMgASgIEg8KB3J1bm5pbmcYBCABKAgSEgoKc3RhdGlvbmFy",
-            "eRgFIAEoCBISCgphdXRvbW90aXZlGAYgASgIEg8KB3RpbHRpbmcYByABKAgS",
-            "DwoHY3ljbGluZxgIIAEoCBIOCgZzdGF0dXMYCSABKAxiBnByb3RvMw=="));
+            "EQoJdW5rbm93bjI1GBkgASgDGu8CCgtMb2NhdGlvbkZpeBIQCghwcm92aWRl",
+            "chgBIAEoCRIaChJ0aW1lc3RhbXBfc25hcHNob3QYAiABKAMSEAoIbGF0aXR1",
+            "ZGUYDSABKAISEQoJbG9uZ2l0dWRlGA4gASgCEhEKCXVua25vd24xMRgLIAEo",
+            "AhIRCgl1bmtub3duMTIYDCABKAISEQoJdW5rbm93bjE1GA8gASgCEhEKCXVu",
+            "a25vd24xNhgQIAEoAhIRCgl1bmtub3duMTcYESABKAISEQoJdW5rbm93bjE4",
+            "GBIgASgCEhEKCXVua25vd24xORgTIAEoAhIRCgl1bmtub3duMjAYFCABKAIS",
+            "GwoTaG9yaXpvbnRhbF9hY2N1cmFjeRgVIAEoAhIZChF2ZXJ0aWNhbF9hY2N1",
+            "cmFjeRgWIAEoAhIXCg9wcm92aWRlcl9zdGF0dXMYGiABKAQSDQoFZmxvb3IY",
+            "GyABKA0SFQoNbG9jYXRpb25fdHlwZRgcIAEoBBqvAQoOQW5kcm9pZEdwc0lu",
+            "Zm8SEwoLdGltZV90b19maXgYASABKAQSFgoOc2F0ZWxsaXRlc19wcm4YAiAD",
+            "KAUSDwoHYXppbXV0aBgDIAMoAhIRCgllbGV2YXRpb24YBCADKAISCwoDc25y",
+            "GAUgAygCEhMKC2hhc19hbG1hbmFjGAYgAygIEhUKDWhhc19lcGhlbWVyaXMY",
+            "ByADKAgSEwoLdXNlZF9pbl9maXgYCCADKAgavgMKClNlbnNvckluZm8SGgoS",
+            "dGltZXN0YW1wX3NuYXBzaG90GAEgASgEEhYKDm1hZ25ldG9tZXRlcl94GAMg",
+            "ASgBEhYKDm1hZ25ldG9tZXRlcl95GAQgASgBEhYKDm1hZ25ldG9tZXRlcl96",
+            "GAUgASgBEhoKEmFuZ2xlX25vcm1hbGl6ZWRfeBgGIAEoARIaChJhbmdsZV9u",
+            "b3JtYWxpemVkX3kYByABKAESGgoSYW5nbGVfbm9ybWFsaXplZF96GAggASgB",
+            "EhMKC2FjY2VsX3Jhd194GAogASgBEhMKC2FjY2VsX3Jhd195GAsgASgBEhMK",
+            "C2FjY2VsX3Jhd196GAwgASgBEhcKD2d5cm9zY29wZV9yYXdfeBgNIAEoARIX",
+            "Cg9neXJvc2NvcGVfcmF3X3kYDiABKAESFwoPZ3lyb3Njb3BlX3Jhd196GA8g",
+            "ASgBEhoKEmFjY2VsX25vcm1hbGl6ZWRfeBgQIAEoARIaChJhY2NlbF9ub3Jt",
+            "YWxpemVkX3kYESABKAESGgoSYWNjZWxfbm9ybWFsaXplZF96GBIgASgBEhoK",
+            "EmFjY2VsZXJvbWV0ZXJfYXhlcxgTIAEoBBraAgoKRGV2aWNlSW5mbxIRCglk",
+            "ZXZpY2VfaWQYASABKAkSGgoSYW5kcm9pZF9ib2FyZF9uYW1lGAIgASgJEhoK",
+            "EmFuZHJvaWRfYm9vdGxvYWRlchgDIAEoCRIUCgxkZXZpY2VfYnJhbmQYBCAB",
+            "KAkSFAoMZGV2aWNlX21vZGVsGAUgASgJEh8KF2RldmljZV9tb2RlbF9pZGVu",
+            "dGlmaWVyGAYgASgJEhkKEWRldmljZV9tb2RlbF9ib290GAcgASgJEh0KFWhh",
+            "cmR3YXJlX21hbnVmYWN0dXJlchgIIAEoCRIWCg5oYXJkd2FyZV9tb2RlbBgJ",
+            "IAEoCRIWCg5maXJtd2FyZV9icmFuZBgKIAEoCRIVCg1maXJtd2FyZV90YWdz",
+            "GAwgASgJEhUKDWZpcm13YXJlX3R5cGUYDSABKAkSHAoUZmlybXdhcmVfZmlu",
+            "Z2VycHJpbnQYDiABKAkauwEKDkFjdGl2aXR5U3RhdHVzEhUKDXN0YXJ0X3Rp",
+            "bWVfbXMYASABKAQSFgoOdW5rbm93bl9zdGF0dXMYAiABKAgSDwoHd2Fsa2lu",
+            "ZxgDIAEoCBIPCgdydW5uaW5nGAQgASgIEhIKCnN0YXRpb25hcnkYBSABKAgS",
+            "EgoKYXV0b21vdGl2ZRgGIAEoCBIPCgd0aWx0aW5nGAcgASgIEg8KB2N5Y2xp",
+            "bmcYCCABKAgSDgoGc3RhdHVzGAkgASgMYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature), global::POGOProtos.Networking.Envelopes.Signature.Parser, new[]{ "TimestampSinceStart", "LocationFix", "GpsInfo", "SensorInfo", "DeviceInfo", "ActivityStatus", "LocationHash1", "LocationHash2", "SessionHash", "Timestamp", "RequestHash", "Unknown25" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.LocationFix), global::POGOProtos.Networking.Envelopes.Signature.Types.LocationFix.Parser, new[]{ "Provider", "TimestampSnapshot", "Latitude", "Longitude", "HorizontalAccuracy", "RadialAccuracy", "VerticalAccuracy", "ProviderStatus", "Floor", "LocationType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature), global::POGOProtos.Networking.Envelopes.Signature.Parser, new[]{ "TimestampSinceStart", "LocationFix", "GpsInfo", "SensorInfo", "DeviceInfo", "ActivityStatus", "LocationHash1", "LocationHash2", "SessionHash", "Timestamp", "RequestHash", "Unknown25" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.LocationFix), global::POGOProtos.Networking.Envelopes.Signature.Types.LocationFix.Parser, new[]{ "Provider", "TimestampSnapshot", "Latitude", "Longitude", "Unknown11", "Unknown12", "Unknown15", "Unknown16", "Unknown17", "Unknown18", "Unknown19", "Unknown20", "HorizontalAccuracy", "VerticalAccuracy", "ProviderStatus", "Floor", "LocationType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo), global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo.Parser, new[]{ "TimeToFix", "SatellitesPrn", "Azimuth", "Elevation", "Snr", "HasAlmanac", "HasEphemeris", "UsedInFix" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.SensorInfo), global::POGOProtos.Networking.Envelopes.Signature.Types.SensorInfo.Parser, new[]{ "TimestampSnapshot", "MagnetometerX", "MagnetometerY", "MagnetometerZ", "AngleNormalizedX", "AngleNormalizedY", "AngleNormalizedZ", "AccelRawX", "AccelRawY", "AccelRawZ", "GyroscopeRawX", "GyroscopeRawY", "GyroscopeRawZ", "AccelNormalizedX", "AccelNormalizedY", "AccelNormalizedZ", "AccelerometerAxes" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.DeviceInfo), global::POGOProtos.Networking.Envelopes.Signature.Types.DeviceInfo.Parser, new[]{ "DeviceId", "AndroidBoardName", "AndroidBootloader", "DeviceBrand", "DeviceModel", "DeviceModelIdentifier", "DeviceModelBoot", "HardwareManufacturer", "HardwareModel", "FirmwareBrand", "FirmwareTags", "FirmwareType", "FirmwareFingerprint" }, null, null, null),
@@ -567,8 +570,15 @@ namespace POGOProtos.Networking.Envelopes {
           timestampSnapshot_ = other.timestampSnapshot_;
           latitude_ = other.latitude_;
           longitude_ = other.longitude_;
+          unknown11_ = other.unknown11_;
+          unknown12_ = other.unknown12_;
+          unknown15_ = other.unknown15_;
+          unknown16_ = other.unknown16_;
+          unknown17_ = other.unknown17_;
+          unknown18_ = other.unknown18_;
+          unknown19_ = other.unknown19_;
+          unknown20_ = other.unknown20_;
           horizontalAccuracy_ = other.horizontalAccuracy_;
-          radialAccuracy_ = other.radialAccuracy_;
           verticalAccuracy_ = other.verticalAccuracy_;
           providerStatus_ = other.providerStatus_;
           floor_ = other.floor_;
@@ -596,12 +606,12 @@ namespace POGOProtos.Networking.Envelopes {
 
         /// <summary>Field number for the "timestamp_snapshot" field.</summary>
         public const int TimestampSnapshotFieldNumber = 2;
-        private ulong timestampSnapshot_;
+        private long timestampSnapshot_;
         /// <summary>
-        ///  in ms since start
+        ///  in ms since start, can be negative in case values before app started
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public ulong TimestampSnapshot {
+        public long TimestampSnapshot {
           get { return timestampSnapshot_; }
           set {
             timestampSnapshot_ = value;
@@ -630,40 +640,110 @@ namespace POGOProtos.Networking.Envelopes {
           }
         }
 
-        /// <summary>Field number for the "horizontal_accuracy" field.</summary>
-        public const int HorizontalAccuracyFieldNumber = 20;
-        private float horizontalAccuracy_;
+        /// <summary>Field number for the "unknown11" field.</summary>
+        public const int Unknown11FieldNumber = 11;
+        private float unknown11_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public float Unknown11 {
+          get { return unknown11_; }
+          set {
+            unknown11_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "unknown12" field.</summary>
+        public const int Unknown12FieldNumber = 12;
+        private float unknown12_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public float Unknown12 {
+          get { return unknown12_; }
+          set {
+            unknown12_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "unknown15" field.</summary>
+        public const int Unknown15FieldNumber = 15;
+        private float unknown15_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public float Unknown15 {
+          get { return unknown15_; }
+          set {
+            unknown15_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "unknown16" field.</summary>
+        public const int Unknown16FieldNumber = 16;
+        private float unknown16_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public float Unknown16 {
+          get { return unknown16_; }
+          set {
+            unknown16_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "unknown17" field.</summary>
+        public const int Unknown17FieldNumber = 17;
+        private float unknown17_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public float Unknown17 {
+          get { return unknown17_; }
+          set {
+            unknown17_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "unknown18" field.</summary>
+        public const int Unknown18FieldNumber = 18;
+        private float unknown18_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public float Unknown18 {
+          get { return unknown18_; }
+          set {
+            unknown18_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "unknown19" field.</summary>
+        public const int Unknown19FieldNumber = 19;
+        private float unknown19_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public float Unknown19 {
+          get { return unknown19_; }
+          set {
+            unknown19_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "unknown20" field.</summary>
+        public const int Unknown20FieldNumber = 20;
+        private float unknown20_;
         /// <summary>
-        ///  uint32 unknown11 = 11;
-        ///  uint32 unknown12 = 12;
-        ///  uint32 unknown15 = 15;
-        ///  uint32 unknown16 = 16;
-        ///  uint32 unknown17 = 17;
-        ///  uint32 unknown18 = 18;
-        ///  uint32 unknown19 = 19;
         ///  ??? shows up in struct, dunno where these go
         ///  float device_speed;
         ///  float device_course;
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public float Unknown20 {
+          get { return unknown20_; }
+          set {
+            unknown20_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "horizontal_accuracy" field.</summary>
+        public const int HorizontalAccuracyFieldNumber = 21;
+        private float horizontalAccuracy_;
+        /// <summary>
+        ///  in meters, both on Android and iOS
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public float HorizontalAccuracy {
           get { return horizontalAccuracy_; }
           set {
             horizontalAccuracy_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "radial_accuracy" field.</summary>
-        public const int RadialAccuracyFieldNumber = 21;
-        private float radialAccuracy_;
-        /// <summary>
-        ///  in meters, android only?
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public float RadialAccuracy {
-          get { return radialAccuracy_; }
-          set {
-            radialAccuracy_ = value;
           }
         }
 
@@ -740,8 +820,15 @@ namespace POGOProtos.Networking.Envelopes {
           if (TimestampSnapshot != other.TimestampSnapshot) return false;
           if (Latitude != other.Latitude) return false;
           if (Longitude != other.Longitude) return false;
+          if (Unknown11 != other.Unknown11) return false;
+          if (Unknown12 != other.Unknown12) return false;
+          if (Unknown15 != other.Unknown15) return false;
+          if (Unknown16 != other.Unknown16) return false;
+          if (Unknown17 != other.Unknown17) return false;
+          if (Unknown18 != other.Unknown18) return false;
+          if (Unknown19 != other.Unknown19) return false;
+          if (Unknown20 != other.Unknown20) return false;
           if (HorizontalAccuracy != other.HorizontalAccuracy) return false;
-          if (RadialAccuracy != other.RadialAccuracy) return false;
           if (VerticalAccuracy != other.VerticalAccuracy) return false;
           if (ProviderStatus != other.ProviderStatus) return false;
           if (Floor != other.Floor) return false;
@@ -753,11 +840,18 @@ namespace POGOProtos.Networking.Envelopes {
         public override int GetHashCode() {
           int hash = 1;
           if (Provider.Length != 0) hash ^= Provider.GetHashCode();
-          if (TimestampSnapshot != 0UL) hash ^= TimestampSnapshot.GetHashCode();
+          if (TimestampSnapshot != 0L) hash ^= TimestampSnapshot.GetHashCode();
           if (Latitude != 0F) hash ^= Latitude.GetHashCode();
           if (Longitude != 0F) hash ^= Longitude.GetHashCode();
+          if (Unknown11 != 0F) hash ^= Unknown11.GetHashCode();
+          if (Unknown12 != 0F) hash ^= Unknown12.GetHashCode();
+          if (Unknown15 != 0F) hash ^= Unknown15.GetHashCode();
+          if (Unknown16 != 0F) hash ^= Unknown16.GetHashCode();
+          if (Unknown17 != 0F) hash ^= Unknown17.GetHashCode();
+          if (Unknown18 != 0F) hash ^= Unknown18.GetHashCode();
+          if (Unknown19 != 0F) hash ^= Unknown19.GetHashCode();
+          if (Unknown20 != 0F) hash ^= Unknown20.GetHashCode();
           if (HorizontalAccuracy != 0F) hash ^= HorizontalAccuracy.GetHashCode();
-          if (RadialAccuracy != 0F) hash ^= RadialAccuracy.GetHashCode();
           if (VerticalAccuracy != 0F) hash ^= VerticalAccuracy.GetHashCode();
           if (ProviderStatus != 0UL) hash ^= ProviderStatus.GetHashCode();
           if (Floor != 0) hash ^= Floor.GetHashCode();
@@ -776,9 +870,17 @@ namespace POGOProtos.Networking.Envelopes {
             output.WriteRawTag(10);
             output.WriteString(Provider);
           }
-          if (TimestampSnapshot != 0UL) {
+          if (TimestampSnapshot != 0L) {
             output.WriteRawTag(16);
-            output.WriteUInt64(TimestampSnapshot);
+            output.WriteInt64(TimestampSnapshot);
+          }
+          if (Unknown11 != 0F) {
+            output.WriteRawTag(93);
+            output.WriteFloat(Unknown11);
+          }
+          if (Unknown12 != 0F) {
+            output.WriteRawTag(101);
+            output.WriteFloat(Unknown12);
           }
           if (Latitude != 0F) {
             output.WriteRawTag(109);
@@ -788,13 +890,33 @@ namespace POGOProtos.Networking.Envelopes {
             output.WriteRawTag(117);
             output.WriteFloat(Longitude);
           }
-          if (HorizontalAccuracy != 0F) {
-            output.WriteRawTag(165, 1);
-            output.WriteFloat(HorizontalAccuracy);
+          if (Unknown15 != 0F) {
+            output.WriteRawTag(125);
+            output.WriteFloat(Unknown15);
           }
-          if (RadialAccuracy != 0F) {
+          if (Unknown16 != 0F) {
+            output.WriteRawTag(133, 1);
+            output.WriteFloat(Unknown16);
+          }
+          if (Unknown17 != 0F) {
+            output.WriteRawTag(141, 1);
+            output.WriteFloat(Unknown17);
+          }
+          if (Unknown18 != 0F) {
+            output.WriteRawTag(149, 1);
+            output.WriteFloat(Unknown18);
+          }
+          if (Unknown19 != 0F) {
+            output.WriteRawTag(157, 1);
+            output.WriteFloat(Unknown19);
+          }
+          if (Unknown20 != 0F) {
+            output.WriteRawTag(165, 1);
+            output.WriteFloat(Unknown20);
+          }
+          if (HorizontalAccuracy != 0F) {
             output.WriteRawTag(173, 1);
-            output.WriteFloat(RadialAccuracy);
+            output.WriteFloat(HorizontalAccuracy);
           }
           if (VerticalAccuracy != 0F) {
             output.WriteRawTag(181, 1);
@@ -820,8 +942,8 @@ namespace POGOProtos.Networking.Envelopes {
           if (Provider.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Provider);
           }
-          if (TimestampSnapshot != 0UL) {
-            size += 1 + pb::CodedOutputStream.ComputeUInt64Size(TimestampSnapshot);
+          if (TimestampSnapshot != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(TimestampSnapshot);
           }
           if (Latitude != 0F) {
             size += 1 + 4;
@@ -829,10 +951,31 @@ namespace POGOProtos.Networking.Envelopes {
           if (Longitude != 0F) {
             size += 1 + 4;
           }
-          if (HorizontalAccuracy != 0F) {
+          if (Unknown11 != 0F) {
+            size += 1 + 4;
+          }
+          if (Unknown12 != 0F) {
+            size += 1 + 4;
+          }
+          if (Unknown15 != 0F) {
+            size += 1 + 4;
+          }
+          if (Unknown16 != 0F) {
             size += 2 + 4;
           }
-          if (RadialAccuracy != 0F) {
+          if (Unknown17 != 0F) {
+            size += 2 + 4;
+          }
+          if (Unknown18 != 0F) {
+            size += 2 + 4;
+          }
+          if (Unknown19 != 0F) {
+            size += 2 + 4;
+          }
+          if (Unknown20 != 0F) {
+            size += 2 + 4;
+          }
+          if (HorizontalAccuracy != 0F) {
             size += 2 + 4;
           }
           if (VerticalAccuracy != 0F) {
@@ -858,7 +1001,7 @@ namespace POGOProtos.Networking.Envelopes {
           if (other.Provider.Length != 0) {
             Provider = other.Provider;
           }
-          if (other.TimestampSnapshot != 0UL) {
+          if (other.TimestampSnapshot != 0L) {
             TimestampSnapshot = other.TimestampSnapshot;
           }
           if (other.Latitude != 0F) {
@@ -867,11 +1010,32 @@ namespace POGOProtos.Networking.Envelopes {
           if (other.Longitude != 0F) {
             Longitude = other.Longitude;
           }
+          if (other.Unknown11 != 0F) {
+            Unknown11 = other.Unknown11;
+          }
+          if (other.Unknown12 != 0F) {
+            Unknown12 = other.Unknown12;
+          }
+          if (other.Unknown15 != 0F) {
+            Unknown15 = other.Unknown15;
+          }
+          if (other.Unknown16 != 0F) {
+            Unknown16 = other.Unknown16;
+          }
+          if (other.Unknown17 != 0F) {
+            Unknown17 = other.Unknown17;
+          }
+          if (other.Unknown18 != 0F) {
+            Unknown18 = other.Unknown18;
+          }
+          if (other.Unknown19 != 0F) {
+            Unknown19 = other.Unknown19;
+          }
+          if (other.Unknown20 != 0F) {
+            Unknown20 = other.Unknown20;
+          }
           if (other.HorizontalAccuracy != 0F) {
             HorizontalAccuracy = other.HorizontalAccuracy;
-          }
-          if (other.RadialAccuracy != 0F) {
-            RadialAccuracy = other.RadialAccuracy;
           }
           if (other.VerticalAccuracy != 0F) {
             VerticalAccuracy = other.VerticalAccuracy;
@@ -900,7 +1064,15 @@ namespace POGOProtos.Networking.Envelopes {
                 break;
               }
               case 16: {
-                TimestampSnapshot = input.ReadUInt64();
+                TimestampSnapshot = input.ReadInt64();
+                break;
+              }
+              case 93: {
+                Unknown11 = input.ReadFloat();
+                break;
+              }
+              case 101: {
+                Unknown12 = input.ReadFloat();
                 break;
               }
               case 109: {
@@ -911,12 +1083,32 @@ namespace POGOProtos.Networking.Envelopes {
                 Longitude = input.ReadFloat();
                 break;
               }
+              case 125: {
+                Unknown15 = input.ReadFloat();
+                break;
+              }
+              case 133: {
+                Unknown16 = input.ReadFloat();
+                break;
+              }
+              case 141: {
+                Unknown17 = input.ReadFloat();
+                break;
+              }
+              case 149: {
+                Unknown18 = input.ReadFloat();
+                break;
+              }
+              case 157: {
+                Unknown19 = input.ReadFloat();
+                break;
+              }
               case 165: {
-                HorizontalAccuracy = input.ReadFloat();
+                Unknown20 = input.ReadFloat();
                 break;
               }
               case 173: {
-                RadialAccuracy = input.ReadFloat();
+                HorizontalAccuracy = input.ReadFloat();
                 break;
               }
               case 181: {

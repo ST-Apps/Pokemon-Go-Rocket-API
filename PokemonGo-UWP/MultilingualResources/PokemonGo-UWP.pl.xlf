@@ -352,8 +352,8 @@ Czy otworzyć stronę z plikami instalacyjnymi w celu instalacji manualnej?</tar
           <target state="new">Transfer succeeded! Got a {0} Candy from the Professor.</target>
         </trans-unit>
         <trans-unit id="TransferPokemonWarningText" translate="yes" xml:space="preserve">
-          <source>You can't take it back after it's transferred to the Professor. Do you really want to transfer {0} to the Professor?</source>
-          <target state="new">You can't take it back after it's transferred to the Professor. Do you really want to transfer {0} to the Professor?</target>
+          <source>You can't take it back after it's transferred to the Professor.</source>
+          <target state="new">You can't take it back after it's transferred to the Professor.</target>
         </trans-unit>
         <trans-unit id="LoginExpired" translate="yes" xml:space="preserve">
           <source>Previous login expired.</source>
@@ -488,8 +488,22 @@ Czy otworzyć stronę z plikami instalacyjnymi w celu instalacji manualnej?</tar
           <target state="new">Waiting for network to be back...</target>
         </trans-unit>
         <trans-unit id="EggHatchMessage" translate="yes" xml:space="preserve">
-          <source>An Egg hatched into a {0}.\nYou also got {1} Stardust, {2} Cany and {3} XP.</source>
-          <target state="new">An Egg hatched into a {0}.\nYou also got {1} Stardust, {2} Cany and {3} XP.</target>
+          <source>An Egg hatched into a {0}.
+You also got {1} Stardust, {2} Candy and {3} XP.</source>
+          <target state="new">An Egg hatched into a {0}.
+You also got {1} Stardust, {2} Candy and {3} XP.</target>
+        </trans-unit>
+        <trans-unit id="EvolvePokemonWarningText" translate="yes" xml:space="preserve">
+          <source>Do you want to evolve {0}?</source>
+          <target state="new">Do you want to evolve {0}?</target>
+        </trans-unit>
+        <trans-unit id="PowerUpPokemonWarningText" translate="yes" xml:space="preserve">
+          <source>Do you want to use a power up for {0}?</source>
+          <target state="new">Do you want to use a power up for {0}?</target>
+        </trans-unit>
+        <trans-unit id="TransferPokemonWarningTitle" translate="yes" xml:space="preserve">
+          <source>Do you really want to transfer {0} to the Professor?</source>
+          <target state="new">Do you really want to transfer {0} to the Professor?</target>
         </trans-unit>
       </group>
     </body>
@@ -755,8 +769,9 @@ Czy otworzyć stronę z plikami instalacyjnymi w celu instalacji manualnej?</tar
     <body>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/ITEMS.RESW" datatype="resx">
         <trans-unit id="D_ItemGreatBall" translate="yes" xml:space="preserve">
-          <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
-          <target state="translated">Urządzenie do łapania dzikich Pokémonów. Rzuca się jak piłką w dzikie Pokémony, ujmójąc cel.</target>
+          <source>A good, high-performance Poké Ball that provides a higher catch rate than a standard Poké Ball.</source>
+          <target state="needs-review-translation">Urządzenie do łapania dzikich Pokémonów. Rzuca się jak piłką w dzikie Pokémony, ujmójąc cel.</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="D_ItemIncenseCool" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
@@ -785,8 +800,9 @@ Czy otworzyć stronę z plikami instalacyjnymi w celu instalacji manualnej?</tar
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="D_ItemMasterBall" translate="yes" xml:space="preserve">
-          <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
-          <target state="translated">Urządzenie do łapania dzikich Pokémonów. Rzuca się jak piłką w dzikie Pokémony, ujmójąc cel.</target>
+          <source>The best Poké Ball with the ultimate level of performance. With it you will catch any Pokémon without fail.</source>
+          <target state="needs-review-translation">Urządzenie do łapania dzikich Pokémonów. Rzuca się jak piłką w dzikie Pokémony, ujmójąc cel.</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="D_ItemPokeBall" translate="yes" xml:space="preserve">
           <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
@@ -801,8 +817,9 @@ Czy otworzyć stronę z plikami instalacyjnymi w celu instalacji manualnej?</tar
           <target state="translated">Lek, który może ożywić nieprzytomnego Pokémona. Zwraca również połowę maksymalnego HP nieprzytomnego Pokémona.</target>
         </trans-unit>
         <trans-unit id="D_ItemUltraBall" translate="yes" xml:space="preserve">
-          <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
-          <target state="translated">Urządzenie do łapania dzikich Pokémonów. Rzuca się jak piłką w dzikie Pokémony, ujmójąc cel.</target>
+          <source>An ultra-high performance Poké Ball that provides a higher success rate for catching Pokémon than a Great.</source>
+          <target state="needs-review-translation">Urządzenie do łapania dzikich Pokémonów. Rzuca się jak piłką w dzikie Pokémony, ujmójąc cel.</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="ItemBlukBerry" translate="yes" xml:space="preserve">
           <source>Bluk Berry</source>
@@ -949,6 +966,22 @@ Czy otworzyć stronę z plikami instalacyjnymi w celu instalacji manualnej?</tar
         <trans-unit id="D_ItemUnknown" translate="yes" xml:space="preserve">
           <source>This item is unknown and may be added in the future.</source>
           <target state="new">This item is unknown and may be added in the future.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemBlukBerry" translate="yes" xml:space="preserve">
+          <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
+          <target state="new">Feed this to a Pokémon, and it will be easier to catch on your next throw.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemNanabBerry" translate="yes" xml:space="preserve">
+          <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
+          <target state="new">Feed this to a Pokémon, and it will be easier to catch on your next throw.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemPinapBerry" translate="yes" xml:space="preserve">
+          <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
+          <target state="new">Feed this to a Pokémon, and it will be easier to catch on your next throw.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemWeparBerry" translate="yes" xml:space="preserve">
+          <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
+          <target state="new">Feed this to a Pokémon, and it will be easier to catch on your next throw.</target>
         </trans-unit>
       </group>
     </body>

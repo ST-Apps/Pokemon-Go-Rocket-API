@@ -66,14 +66,8 @@
 
         </Storyboard>
     </Page.Resources>
-    
-    <Grid>
-        <Grid.Background>
-            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#b3ee9a" Offset="0" />
-                <GradientStop Color="#43bab6" Offset="0.8" />
-            </LinearGradientBrush>
-        </Grid.Background>
+
+    <Grid Background="{StaticResource PageBackgroundGradient}">
         <Border Margin="12,12,12,0"
                 Background="White"
                 CornerRadius="5,5,0,0">

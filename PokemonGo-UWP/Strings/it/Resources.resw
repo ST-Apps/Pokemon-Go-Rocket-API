@@ -69,6 +69,9 @@
   <data name="ItemsTextBlock.Text" xml:space="preserve">
     <value>STRUMENTI</value>
   </data>
+  <data name="PokedexTextBlock.Text" xml:space="preserve">
+    <value>POKÉDEX</value>
+  </data>
   <data name="LowercaseItemsTextBlock.Text" xml:space="preserve">
     <value>Strumenti</value>
   </data>
@@ -100,6 +103,43 @@
   <data name="IncubatorsTextBlock.Text" xml:space="preserve">
     <value>INCUBATRICI</value>
   </data>
+  <data name="SettingsUseNianticMapTextBlock.Text" xml:space="preserve">
+    <value>Usa la Mappa Niantic</value>
+  </data>
+  <data name="HpTextBlock.Text" xml:space="preserve">
+    <value>PS </value>
+  </data>
+  <data name="TypeTextBlock.Text" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="KgTextBlock.Text" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="WeightTextBlock.Text" xml:space="preserve">
+    <value>Peso</value>
+  </data>
+  <data name="HeightTextBlock.Text" xml:space="preserve">
+    <value>Altezza</value>
+  </data>
+  <data name="MTextBlock.Text" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="StardustTextBlock.Text" xml:space="preserve">
+    <value>POLVERE DI STELLA</value>
+  </data>
+  <data name="CandyTextBlock.Text" xml:space="preserve">
+    <value> CARAMELLE</value>
+    <comment>Watch out: space before the word!</comment>
+  </data>
+  <data name="EvolveButton.Content" xml:space="preserve">
+    <value>FAI EVOLVERE</value>
+  </data>
+  <data name="PowerUpButton.Content" xml:space="preserve">
+    <value>POTENZIA</value>
+  </data>
+  <data name="SettingsRememberMapZoomTextBlock.Text" xml:space="preserve">
+    <value>Ricorda l'ingrandimento della mappa</value>
+  </data>
   <data name="PokedexCaught.Text" xml:space="preserve">
     <value>Catturati:</value>
   </data>
@@ -118,10 +158,40 @@
   <data name="PokedexSeen.Text" xml:space="preserve">
     <value>Visti:</value>
   </data>
+  <data name="PokedexText.Text" xml:space="preserve">
+    <value>POKÉDEX</value>
+  </data>
+  <data name="PokedexViewCaught.Text" xml:space="preserve">
+    <value>Catturati</value>
+  </data>
+  <data name="PokedexViewSeen.Text" xml:space="preserve">
+    <value>Visti</value>
+  </data>
+  <data name="TimesTextBlock.Text" xml:space="preserve">
+    <value>volte</value>
+  </data>
   <data name="EggDetailButtonTextBlock.Text" xml:space="preserve">
     <value>METTI NELL'INCUBATRICE</value>
   </data>
   <data name="EggDetailTextBlock.Text" xml:space="preserve">
     <value>Usa un'incubatrice per far schiudere questo Uovo.</value>
+  </data>
+  <data name="TransferTextBlock.Text" xml:space="preserve">
+    <value>TRASFERISCI</value>
+  </data>
+  <data name="SettingsLanguageRestartTextBlock.Text" xml:space="preserve">
+    <value>Devi riavviare l'App per rendere i cambiamenti effettivi.</value>
+  </data>
+  <data name="SettingsLanguageTextBlock.Text" xml:space="preserve">
+    <value>Lingua</value>
+  </data>
+  <data name="SettingsCompassEnabledTextBlock.Text" xml:space="preserve">
+    <value>Usa la bussola</value>
+  </data>
+  <data name="SettingsLiveTileTextBlock.Text" xml:space="preserve">
+    <value>Modalità Live Tile</value>
+  </data>
+  <data name="FavoriteTextBlock.Text" xml:space="preserve">
+    <value>PREFERITI</value>
   </data>
 </root>

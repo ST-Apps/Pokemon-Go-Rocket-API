@@ -17,7 +17,6 @@ using POGOProtos.Map.Pokemon;
 using POGOProtos.Networking.Responses;
 using Template10.Mvvm;
 using Template10.Services.NavigationService;
-using Universal_Authenticator_v2.Views;
 using Resources = PokemonGo_UWP.Utils.Resources;
 using POGOProtos.Settings.Master;
 
@@ -113,8 +112,12 @@ namespace PokemonGo_UWP.ViewModels
         public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
         {
             if (suspensionState.Any())
-            {                
+            {
                 // Recovering the state
+                CurrentEncounter = new EncounterResponse();
+                CurrentLureEncounter = new DiskEncounterResponse();
+                CurrentCaptureAward = new CaptureAward();
+                SelectedCaptureItem = new ItemData();
                 CurrentPokemon = JsonConvert.DeserializeObject<IMapPokemon>((string) suspensionState[nameof(CurrentPokemon)]);
                 CurrentEncounter.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(CurrentEncounter)]).CreateCodedInput());
                 CurrentLureEncounter.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(CurrentLureEncounter)]).CreateCodedInput());
@@ -265,7 +268,12 @@ namespace PokemonGo_UWP.ViewModels
         /// <summary>
         ///     Going back to map page
         /// </summary>
-        public DelegateCommand ReturnToGameScreen => _returnToGameScreen ?? (_returnToGameScreen = new DelegateCommand(() => { NavigationService.Navigate(typeof(GameMapPage), GameMapNavigationModes.PokemonUpdate); }, () => true));
+        public DelegateCommand ReturnToGameScreen => _returnToGameScreen ?? (_returnToGameScreen = new DelegateCommand(
+                                                         () =>
+                                                         {
+                                                             NavigationHelper.NavigationState["CurrentPokemon"] = new PokemonDataWrapper(GameClient.PokemonsInventory.First(item => item.Id == _capturedPokemonId));
+                                                             NavigationService.Navigate(typeof(PokemonDetailPage));
+                                                         }, () => true));
 
         private DelegateCommand _escapeEncounterCommand;
 
@@ -376,6 +384,8 @@ namespace PokemonGo_UWP.ViewModels
             LastItemUsed = null;
         }, hitPokemon => true));
 
+        private ulong _capturedPokemonId;
+
         /// <summary>
         ///     Launches the PokeBall for the current encounter, handling the different catch responses
         /// </summary>
@@ -402,6 +412,7 @@ namespace PokemonGo_UWP.ViewModels
                     Logger.Write($"We caught {CurrentPokemon.PokemonId}");
                     CurrentCaptureAward = caughtPokemonResponse.CaptureAward;
                     CatchSuccess?.Invoke(this, null);
+                    _capturedPokemonId = caughtPokemonResponse.CapturedPokemonId;
                     if (CurrentPokemon is MapPokemonWrapper)
                         GameClient.CatchablePokemons.Remove((MapPokemonWrapper) CurrentPokemon);
                     else

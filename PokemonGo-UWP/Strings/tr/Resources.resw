@@ -140,10 +140,58 @@
   <data name="SettingsRememberMapZoomTextBlock.Text" xml:space="preserve">
     <value>Harita uzaklığını hatırla</value>
   </data>
+  <data name="PokedexCaught.Text" xml:space="preserve">
+    <value>Yakalandı:</value>
+  </data>
+  <data name="PokedexEvolutions.Text" xml:space="preserve">
+    <value>Geliştirmeler</value>
+  </data>
+  <data name="PokedexPokemonHeight.Text" xml:space="preserve">
+    <value>Boy:</value>
+  </data>
+  <data name="PokedexPokemonType.Text" xml:space="preserve">
+    <value>Tip:</value>
+  </data>
+  <data name="PokedexPokemonWeight.Text" xml:space="preserve">
+    <value>Ağırlık:</value>
+  </data>
+  <data name="PokedexSeen.Text" xml:space="preserve">
+    <value>Görüldü:</value>
+  </data>
+  <data name="PokedexText.Text" xml:space="preserve">
+    <value>POKÉDEX</value>
+  </data>
+  <data name="PokedexViewCaught.Text" xml:space="preserve">
+    <value>Yakalandı</value>
+  </data>
+  <data name="PokedexViewSeen.Text" xml:space="preserve">
+    <value>Görüldü</value>
+  </data>
+  <data name="TimesTextBlock.Text" xml:space="preserve">
+    <value>kere</value>
+  </data>
   <data name="EggDetailButtonTextBlock.Text" xml:space="preserve">
     <value>KULUÇKAYI BAŞLAT</value>
   </data>
   <data name="EggDetailTextBlock.Text" xml:space="preserve">
     <value>Yumurta çatlatmak için kuluçka kullanın.</value>
+  </data>
+  <data name="TransferTextBlock.Text" xml:space="preserve">
+    <value>TRANSFER ET</value>
+  </data>
+  <data name="SettingsLanguageRestartTextBlock.Text" xml:space="preserve">
+    <value>Değişiklikler için uygulamayı baştan başlatmalısınız.</value>
+  </data>
+  <data name="SettingsLanguageTextBlock.Text" xml:space="preserve">
+    <value>Dil</value>
+  </data>
+  <data name="SettingsCompassEnabledTextBlock.Text" xml:space="preserve">
+    <value>Pusula kullan</value>
+  </data>
+  <data name="SettingsLiveTileTextBlock.Text" xml:space="preserve">
+    <value>Live Tile Modu</value>
+  </data>
+  <data name="FavoriteTextBlock.Text" xml:space="preserve">
+    <value>FAVORİ</value>
   </data>
 </root>

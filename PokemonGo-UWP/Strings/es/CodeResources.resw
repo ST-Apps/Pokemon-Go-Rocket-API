@@ -194,4 +194,7 @@
   <data name="PokemonInventoryFullText" xml:space="preserve">
     <value>Tu inventario de Pokémon está lleno, transfiere algunos Pokémon antes de capturar a {0}.</value>
   </data>
+  <data name="WaitingForNetworkText" xml:space="preserve">
+    <value>Esperando a la red...</value>
+  </data>
 </root>

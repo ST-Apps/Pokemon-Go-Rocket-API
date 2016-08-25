@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BadgeBattleAttackWon" xml:space="preserve">
+    <value>Utfordrer</value>
+  </data>
+  <data name="BadgeBattleAttackWonDescription" xml:space="preserve">
+    <value>Vundet {0} fitnescenter kampe</value>
+  </data>
+  <data name="BadgeBattleTrainingWon" xml:space="preserve">
+    <value>Træner Es</value>
+  </data>
+  <data name="BadgeBattleTrainingWonDescription" xml:space="preserve">
+    <value>Vundet {0} uddannelses kampe</value>
+  </data>
+  <data name="BadgeBigMagikarp" xml:space="preserve">
+    <value>Fisker</value>
+  </data>
+  <data name="BadgeBigMagikarpDescription" xml:space="preserve">
+    <value>Fanget {0} Magikarp</value>
+  </data>
+  <data name="BadgeCaptureTotal" xml:space="preserve">
+    <value>Samler</value>
+  </data>
+  <data name="BadgeCaptureTotalDescription" xml:space="preserve">
+    <value>Fanget {0} Pokemon</value>
+  </data>
+  <data name="BadgeEvolvedTotal" xml:space="preserve">
+    <value>Forsker</value>
+  </data>
+  <data name="BadgeEvolvedTotalDescription" xml:space="preserve">
+    <value>Udviklet {0} Pokémon</value>
+  </data>
+  <data name="BadgeHatchedTotal" xml:space="preserve">
+    <value>Oppdretter</value>
+  </data>
+  <data name="BadgeHatchedTotalDescription" xml:space="preserve">
+    <value>Klækket {0} Pokemon</value>
+  </data>
+  <data name="BadgePikachu" xml:space="preserve">
+    <value>Pikachu Fan</value>
+  </data>
+  <data name="BadgePikachuDescription" xml:space="preserve">
+    <value>Fanget {0} Pikachu</value>
+  </data>
+  <data name="BadgePokedexEntries" xml:space="preserve">
+    <value>Oppdager</value>
+  </data>
+  <data name="BadgePokedexEntriesDescription" xml:space="preserve">
+    <value>Der er Registret {0} Pokemon i dit Pokedex</value>
+  </data>
+  <data name="BadgePokestopsVisited" xml:space="preserve">
+    <value>Rygsækrejsende</value>
+  </data>
+  <data name="BadgePokestopsVisitedDescription" xml:space="preserve">
+    <value>Besøgt {0} Pokestops</value>
+  </data>
+  <data name="BadgeSmallRattata" xml:space="preserve">
+    <value>Ung</value>
+  </data>
+  <data name="BadgeSmallRattataDescription" xml:space="preserve">
+    <value>Fanget {0} en lille Rattata</value>
+  </data>
+  <data name="BadgeTravelKm" xml:space="preserve">
+    <value>kondiløber</value>
+  </data>
+  <data name="BadgeTravelKmDescription" xml:space="preserve">
+    <value>Gået {0} km</value>
+  </data>
+  <data name="Bug" xml:space="preserve">
+    <value>Insektfanger</value>
+  </data>
+  <data name="BugDescription" xml:space="preserve">
+    <value>Fanget {0} Insekt Pokemon</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Dragetæmmer</value>
+  </data>
+  <data name="DragonDescription" xml:space="preserve">
+    <value>Fanget {0} Drage Pokemon</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Elektriker</value>
+  </data>
+  <data name="ElectricDescription" xml:space="preserve">
+    <value>Fanget {0} elektriske Pokemon</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Eventyrtid</value>
+  </data>
+  <data name="FairyDescription" xml:space="preserve">
+    <value>Fanget {0} fe Pokemon</value>
+  </data>
+  <data name="Fighting" xml:space="preserve">
+    <value>Svart Belte</value>
+  </data>
+  <data name="FightingDescription" xml:space="preserve">
+    <value>Fanget {0} Kamp Pokemon</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>Pyroman</value>
+  </data>
+  <data name="FireDescription" xml:space="preserve">
+    <value>Fanget {0} Ild Pokemon</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Fuglepasser</value>
+  </data>
+  <data name="FlyingDescription" xml:space="preserve">
+    <value>Fanget {0} Flyvende Pokemon</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Heksejager</value>
+  </data>
+  <data name="GhostDescription" xml:space="preserve">
+    <value>Fanget {0} Spøgelses Pokemon</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Gartner</value>
+  </data>
+  <data name="GrassDescription" xml:space="preserve">
+    <value>Fanget {0} græs Pokemon</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Under Jorden</value>
+  </data>
+  <data name="GroundDescription" xml:space="preserve">
+    <value>Fanget {0} jord Pokemon</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Skiløper</value>
+  </data>
+  <data name="IceDescription" xml:space="preserve">
+    <value>Fanget {0} is Pokemon</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Skoleelev</value>
+  </data>
+  <data name="NormalDescription" xml:space="preserve">
+    <value>Fanget {0} normale Pokemon</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Giftig sammling</value>
+  </data>
+  <data name="PoisonDescription" xml:space="preserve">
+    <value>Fanget {0} Giftige Pokemon</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Synsk</value>
+  </data>
+  <data name="PsychicDescription" xml:space="preserve">
+    <value>Fanget {0} Synske Pokemon</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Vandrer</value>
+  </data>
+  <data name="RockDescription" xml:space="preserve">
+    <value>Fanget {0} Sten Pokemon</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Lager arbejder</value>
+  </data>
+  <data name="SteelDescription" xml:space="preserve">
+    <value>Fanget {0} Stål Pokemon</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Svømmer</value>
+  </data>
+  <data name="WaterDescription" xml:space="preserve">
+    <value>Fanget {0} vand Pokemon</value>
+  </data>
+</root>

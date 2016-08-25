@@ -1,4 +1,6 @@
-﻿using PokemonGo_UWP.Utils;
+﻿using Newtonsoft.Json;
+using PokemonGo_UWP.Utils;
+using PokemonGo_UWP.Utils.Helpers;
 using PokemonGo_UWP.Views;
 using POGOProtos.Inventory.Item;
 using Template10.Common;
@@ -15,6 +17,7 @@ namespace PokemonGo_UWP.Entities
             WrappedData = itemData;
         }
 
+        [JsonProperty, JsonConverter(typeof(ProtobufJsonNetConverter))]
         public ItemData WrappedData { get; }
 
         /// <summary>

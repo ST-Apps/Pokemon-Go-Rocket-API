@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bug" xml:space="preserve">
+    <value>Insekt</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Sort</value>
+  </data>
+  <data name="Dragon" xml:space="preserve">
+    <value>Drage</value>
+  </data>
+  <data name="Electric" xml:space="preserve">
+    <value>Elektrisk</value>
+  </data>
+  <data name="Fairy" xml:space="preserve">
+    <value>Fe</value>
+  </data>
+  <data name="Fire" xml:space="preserve">
+    <value>Ild</value>
+  </data>
+  <data name="Flying" xml:space="preserve">
+    <value>Flyvende</value>
+  </data>
+  <data name="Ghost" xml:space="preserve">
+    <value>Spøgelse</value>
+  </data>
+  <data name="Grass" xml:space="preserve">
+    <value>Græs</value>
+  </data>
+  <data name="Ground" xml:space="preserve">
+    <value>Jord</value>
+  </data>
+  <data name="Ice" xml:space="preserve">
+    <value>Is</value>
+  </data>
+  <data name="Poison" xml:space="preserve">
+    <value>Eleksir</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Psykiater</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Sten</value>
+  </data>
+  <data name="Steel" xml:space="preserve">
+    <value>Stål</value>
+  </data>
+  <data name="Water" xml:space="preserve">
+    <value>Vand</value>
+  </data>
+</root>

@@ -13,6 +13,23 @@
         <GradientStop Color="#ffffff" Offset="0" />
         <GradientStop Color="#b6ffa7" Offset="0.8" />
     </LinearGradientBrush>
+    
+    <LinearGradientBrush x:Key="PageBackgroundGradient" 
+                         StartPoint="0,0" 
+                         EndPoint="1,1">
+        <GradientStop Color="#b3ee9a" Offset="0" />
+        <GradientStop Color="#43bab6" Offset="0.8" />
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="TitleTextColor" Color="#44696c" />
+
+    <!-- STYLE - FONTS -->
+
+    <FontFamily x:Key="LatoRegularFont">ms-appx:///Assets/Fonts/Lato-Regular.ttf#Lato</FontFamily>
+    <FontFamily x:Key="LatoItalicFont">ms-appx:///Assets/Fonts/Lato-Italic.ttf#Lato</FontFamily>
+    <FontFamily x:Key="LatoLightFont">ms-appx:///Assets/Fonts/Lato-Light.ttf#Lato</FontFamily>
+    <FontFamily x:Key="LatoMediumFont">ms-appx:///Assets/Fonts/Lato-Medium.ttf#Lato</FontFamily>
+    <FontFamily x:Key="LatoBoldFont">ms-appx:///Assets/Fonts/Lato-Bold.ttf#Lato</FontFamily>
 
     <!-- STYLE - BUTTONS -->
 
@@ -20,21 +37,23 @@
         <Setter Property="Background">
             <Setter.Value>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#a8e090" Offset="0" />
-                    <GradientStop Color="#35908f" Offset="0.8" />
+                    <GradientStop Color="#a2db95" Offset="0" />
+                    <GradientStop Color="#24ccaa" Offset="1" />
                 </LinearGradientBrush>
             </Setter.Value>
         </Setter>
         <Setter Property="BorderBrush" Value="Transparent" />
         <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="Height" Value="50" />
+        <Setter Property="Height" Value="40" />
         <Setter Property="HorizontalAlignment" Value="Stretch" />
         <Setter Property="VerticalAlignment" Value="Stretch" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         <Setter Property="Margin" Value="15" />
-        <Setter Property="Foreground" Value="White" />
-        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Padding" Value="15,0" />
+        <Setter Property="Foreground" Value="#BBFFFFFF" />
         <Setter Property="FontSize" Value="15" />
+        <Setter Property="CharacterSpacing" Value="40" />
+        <Setter Property="FontFamily" Value="{StaticResource LatoMediumFont}" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="Template">
             <Setter.Value>
@@ -98,7 +117,7 @@
                         </VisualStateManager.VisualStateGroups>
                         <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
-                                Background="{TemplateBinding Background}" Margin="0" CornerRadius="25">
+                                Background="{TemplateBinding Background}" Margin="0" CornerRadius="20">
                             <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw"
                                               ContentTemplate="{TemplateBinding ContentTemplate}"
                                               Content="{TemplateBinding Content}"
@@ -117,14 +136,16 @@
         <Setter Property="Background" Value="#cc0000" />
         <Setter Property="BorderBrush" Value="Transparent" />
         <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="Height" Value="50" />
+        <Setter Property="Height" Value="40" />
         <Setter Property="HorizontalAlignment" Value="Stretch" />
         <Setter Property="VerticalAlignment" Value="Stretch" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         <Setter Property="Margin" Value="15" />
+        <Setter Property="Padding" Value="15,0" />
         <Setter Property="Foreground" Value="White" />
-        <Setter Property="FontWeight" Value="Bold" />
         <Setter Property="FontSize" Value="15" />
+        <Setter Property="CharacterSpacing" Value="40" />
+        <Setter Property="FontFamily" Value="{StaticResource LatoMediumFont}" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="Template">
             <Setter.Value>
@@ -181,7 +202,7 @@
                         </VisualStateManager.VisualStateGroups>
                         <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
-                                Background="{TemplateBinding Background}" Margin="0" CornerRadius="25">
+                                Background="{TemplateBinding Background}" Margin="0" CornerRadius="20">
                             <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw"
                                               ContentTemplate="{TemplateBinding ContentTemplate}"
                                               Content="{TemplateBinding Content}"
@@ -205,9 +226,10 @@
         <Setter Property="VerticalAlignment" Value="Stretch" />
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         <Setter Property="Margin" Value="15" />
+        <Setter Property="Padding" Value="15,0" />
         <Setter Property="Foreground" Value="Black" />
-        <Setter Property="FontWeight" Value="Bold" />
         <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontFamily" Value="{StaticResource LatoMediumFont}" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="Template">
             <Setter.Value>
@@ -266,6 +288,72 @@
                                               Margin="{TemplateBinding Padding}"
                                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                         </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ButtonCancel" TargetType="Button">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Height" Value="40" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="Margin" Value="15" />
+        <Setter Property="Padding" Value="15,0" />
+        <Setter Property="Foreground" Value="#48c597" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontFamily" Value="{StaticResource LatoBoldFont}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid x:Name="Grid" Background="Transparent">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition From="PointerOver" To="Pressed">
+                                        <Storyboard />
+                                    </VisualTransition>
+                                    <VisualTransition From="Pressed" To="PointerOver">
+                                        <Storyboard />
+                                    </VisualTransition>
+                                    <VisualTransition From="PointerOver" To="Normal">
+                                        <Storyboard />
+                                    </VisualTransition>
+                                    <VisualTransition From="Pressed" To="Normal">
+                                        <Storyboard />
+                                    </VisualTransition>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="PointerOver" />
+                                <VisualState x:Name="Pressed">
+                                    <!--a4030a-->
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground"
+                                                                       Storyboard.TargetName="ContentPresenter">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#a4030a" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="FontSize"
+                                                                       Storyboard.TargetName="ContentPresenter">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="17" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled" />
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          Content="{TemplateBinding Content}"
+                                          Foreground="{TemplateBinding Foreground}" FontWeight="Normal"
+                                          FontSize="{TemplateBinding FontSize}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          Margin="{TemplateBinding Padding}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
@@ -695,14 +783,21 @@
                                 <VisualState x:Name="Unfocused" />
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
-                        <Path x:Name="Star" Stretch="Fill" Fill="Transparent" Stroke="White" StrokeThickness="1.5" Data="F1 M 145.637,174.227L 127.619,110.39L 180.809,70.7577L 114.528,68.1664L 93.2725,5.33333L 70.3262,67.569L 4,68.3681L 56.0988,109.423L 36.3629,172.75L 91.508,135.888L 145.637,174.227 Z"/>
-                        <Path x:Name="StarFill" Visibility="Collapsed"  Stretch="Fill" Fill="Gold" Stroke="Gold" StrokeThickness="1.5" Data="F1 M 145.637,174.227L 127.619,110.39L 180.809,70.7577L 114.528,68.1664L 93.2725,5.33333L 70.3262,67.569L 4,68.3681L 56.0988,109.423L 36.3629,172.75L 91.508,135.888L 145.637,174.227 Z"/>
+                        <Path x:Name="Star" Stretch="Fill" Fill="Transparent" Stroke="White" StrokeThickness="1.8" Data="M 320.000 339.000 L 343.511 352.361 L 338.070 325.871 L 358.042 307.639 L 331.168 304.629 L 320.000 280.000 L 308.832 304.629 L 281.958 307.639 L 301.930 325.871 L 296.489 352.361 L 320.000 339.000Z"/>
+                        <Path x:Name="StarFill" Visibility="Collapsed"  Stretch="Fill" Stroke="#ffd711" StrokeThickness="1.5" Data="M 320.000 339.000 L 343.511 352.361 L 338.070 325.871 L 358.042 307.639 L 331.168 304.629 L 320.000 280.000 L 308.832 304.629 L 281.958 307.639 L 301.930 325.871 L 296.489 352.361 L 320.000 339.000">
+                            <Path.Fill>
+                                <LinearGradientBrush StartPoint="0,0" 
+                                                     EndPoint="1,1">
+                                    <GradientStop Color="#fed10f" Offset="0" />
+                                    <GradientStop Color="#efb100" Offset="0.8" />
+                                </LinearGradientBrush>
+                            </Path.Fill>
+                        </Path>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-
 
 
     <!-- STYLE - END -->
@@ -781,7 +876,7 @@
         <Setter Property="TextWrapping" Value="Wrap" />
         <Setter Property="Foreground" Value="#ffffff" />
         <Setter Property="FontSize" Value="15" />
-        <Setter Property="FontFamily" Value="../Assets/Fonts/Lato-Medium.ttf#Lato Medium" />
+        <Setter Property="FontFamily" Value="{StaticResource LatoMediumFont}" />
         <Setter Property="Margin" Value="15" />
     </Style>
 
@@ -814,7 +909,7 @@
     <Style x:Key="ProfilePageText" TargetType="TextBlock">
         <Setter Property="FontSize" Value="20" />
         <Setter Property="Foreground" Value="#44696C" />
-        <Setter Property="FontFamily" Value="../Assets/Fonts/Lato-Medium.ttf#Lato Medium" />
+        <Setter Property="FontFamily" Value="{StaticResource LatoMediumFont}" />
     </Style>
     
     <Style x:Key="ProfilePageSmallText" TargetType="TextBlock" BasedOn="{StaticResource ProfilePageText}">
@@ -833,7 +928,7 @@
         <Setter Property="TextWrapping" Value="Wrap" />
         <Setter Property="Foreground" Value="#459F87" />
         <Setter Property="FontSize" Value="15" />
-        <Setter Property="FontFamily" Value="../Assets/Fonts/Lato-Medium.ttf#Lato Medium" />
+        <Setter Property="FontFamily" Value="{StaticResource LatoMediumFont}" />
         <Setter Property="Margin" Value="15" />
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
@@ -842,7 +937,7 @@
         <Setter Property="TextWrapping" Value="Wrap" />
         <Setter Property="Foreground" Value="#459F87" />
         <Setter Property="FontSize" Value="15" />
-        <Setter Property="FontFamily" Value="../Assets/Fonts/Lato-Medium.ttf#Lato Medium" />
+        <Setter Property="FontFamily" Value="{StaticResource LatoMediumFont}" />
         <Setter Property="Margin" Value="15" />
     </Style>
 

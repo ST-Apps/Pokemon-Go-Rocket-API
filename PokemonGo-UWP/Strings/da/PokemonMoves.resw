@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Absorb" xml:space="preserve">
+    <value>Absorber</value>
+  </data>
+  <data name="Acid" xml:space="preserve">
+    <value>Syre</value>
+  </data>
+  <data name="AcidFast" xml:space="preserve">
+    <value>Hurtig Syre</value>
+  </data>
+  <data name="AerialAce" xml:space="preserve">
+    <value>Luft Es</value>
+  </data>
+  <data name="AirCutter" xml:space="preserve">
+    <value>Luft Kniv</value>
+  </data>
+  <data name="AirSlash" xml:space="preserve">
+    <value>Luft Slag</value>
+  </data>
+  <data name="AncientPower" xml:space="preserve">
+    <value>GammelKraft</value>
+  </data>
+  <data name="AquaJet" xml:space="preserve">
+    <value>Vand Jet</value>
+  </data>
+  <data name="AquaTail" xml:space="preserve">
+    <value>Vand Hale</value>
+  </data>
+  <data name="Bite" xml:space="preserve">
+    <value>Bid</value>
+  </data>
+  <data name="BiteFast" xml:space="preserve">
+    <value>Bid</value>
+  </data>
+  <data name="Blizzard" xml:space="preserve">
+    <value>Storm</value>
+  </data>
+  <data name="BodySlam" xml:space="preserve">
+    <value>Krops klasker</value>
+  </data>
+  <data name="BoneClub" xml:space="preserve">
+    <value>Ben Kølle</value>
+  </data>
+  <data name="BrickBreak" xml:space="preserve">
+    <value>Murstens forsvar</value>
+  </data>
+  <data name="Brine" xml:space="preserve">
+    <value>Saltlage</value>
+  </data>
+  <data name="BubbleBeam" xml:space="preserve">
+    <value>Bobel Stråle</value>
+  </data>
+  <data name="BubbleFast" xml:space="preserve">
+    <value>Hurtig Bobbel</value>
+  </data>
+  <data name="BugBite" xml:space="preserve">
+    <value>Insekt Bid</value>
+  </data>
+  <data name="BugBiteFast" xml:space="preserve">
+    <value>Insekt Bid</value>
+  </data>
+  <data name="BugBuzz" xml:space="preserve">
+    <value>Insekt Brummer</value>
+  </data>
+  <data name="Bulldoze" xml:space="preserve">
+    <value>Tyre dosis</value>
+  </data>
+  <data name="BulletPunch" xml:space="preserve">
+    <value>Kugle Skub</value>
+  </data>
+  <data name="BulletPunchFast" xml:space="preserve">
+    <value>Kugle Skub</value>
+  </data>
+  <data name="ConfusionFast" xml:space="preserve">
+    <value>Forvirring</value>
+  </data>
+  <data name="CrossChop" xml:space="preserve">
+    <value>Kors Hug</value>
+  </data>
+  <data name="CrossPoison" xml:space="preserve">
+    <value>Giftig Kors</value>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>Skære</value>
+  </data>
+  <data name="CutFast" xml:space="preserve">
+    <value>Skære</value>
+  </data>
+  <data name="DarkPulse" xml:space="preserve">
+    <value>Sort  Puls</value>
+  </data>
+  <data name="DazzlingGleam" xml:space="preserve">
+    <value>Blændende skær</value>
+  </data>
+  <data name="Dig" xml:space="preserve">
+    <value>Grav</value>
+  </data>
+  <data name="DisarmingVoice" xml:space="preserve">
+    <value>Afvæbnende stemme</value>
+  </data>
+  <data name="Discharge" xml:space="preserve">
+    <value>Afsked</value>
+  </data>
+  <data name="DoubleSlap" xml:space="preserve">
+    <value>Dobbelt lussing</value>
+  </data>
+  <data name="DragonBreath" xml:space="preserve">
+    <value>Drage ånde</value>
+  </data>
+  <data name="DragonBreathFast" xml:space="preserve">
+    <value>Drage ånde</value>
+  </data>
+  <data name="DragonClaw" xml:space="preserve">
+    <value>Drage klo</value>
+  </data>
+  <data name="DragonPulse" xml:space="preserve">
+    <value>Drage puls</value>
+  </data>
+  <data name="DrainingKiss" xml:space="preserve">
+    <value>Drænende kys</value>
+  </data>
+  <data name="DrillPeck" xml:space="preserve">
+    <value>Borespids</value>
+  </data>
+  <data name="DrillRun" xml:space="preserve">
+    <value>Øvelse Løb</value>
+  </data>
+  <data name="Earthquake" xml:space="preserve">
+    <value>Jordskælv</value>
+  </data>
+  <data name="Ember" xml:space="preserve">
+    <value>Glød</value>
+  </data>
+  <data name="EmberFast" xml:space="preserve">
+    <value>Hurtig Glød</value>
+  </data>
+  <data name="FeintAttackFast" xml:space="preserve">
+    <value>Svagt Angreb</value>
+  </data>
+  <data name="FireBlast" xml:space="preserve">
+    <value>Ild sprængning</value>
+  </data>
+  <data name="FireFangFast" xml:space="preserve">
+    <value>Ildfang</value>
+  </data>
+  <data name="FirePunch" xml:space="preserve">
+    <value>Ild Skub</value>
+  </data>
+  <data name="FlameBurst" xml:space="preserve">
+    <value>Flamme Stråle</value>
+  </data>
+  <data name="FlameCharge" xml:space="preserve">
+    <value>Flamme udfald</value>
+  </data>
+  <data name="Flamethrower" xml:space="preserve">
+    <value>Flammekaster</value>
+  </data>
+  <data name="FlameWheel" xml:space="preserve">
+    <value>Flame hjul</value>
+  </data>
+  <data name="FlashCannon" xml:space="preserve">
+    <value>Flash kanon</value>
+  </data>
+  <data name="FrostBreath" xml:space="preserve">
+    <value>Frost Ånde</value>
+  </data>
+  <data name="FrostBreathFast" xml:space="preserve">
+    <value>Frost Ånde</value>
+  </data>
+  <data name="FuryCutter" xml:space="preserve">
+    <value>Raseri Skærer</value>
+  </data>
+  <data name="FuryCutterFast" xml:space="preserve">
+    <value>Raseri Skærer</value>
+  </data>
+  <data name="GigaDrain" xml:space="preserve">
+    <value>Giga Dræn</value>
+  </data>
+  <data name="GunkShot" xml:space="preserve">
+    <value>Gunk Skud</value>
+  </data>
+  <data name="Headbutt" xml:space="preserve">
+    <value>Skalle</value>
+  </data>
+  <data name="HeartStamp" xml:space="preserve">
+    <value>Hjerte frimærke</value>
+  </data>
+  <data name="HeatWave" xml:space="preserve">
+    <value>Hedebølge</value>
+  </data>
+  <data name="HornAttack" xml:space="preserve">
+    <value>Horn angreb</value>
+  </data>
+  <data name="Hurricane" xml:space="preserve">
+    <value>Orkan</value>
+  </data>
+  <data name="HydroPump" xml:space="preserve">
+    <value>Vand Pumpe</value>
+  </data>
+  <data name="HydroPumpBlastoise" xml:space="preserve">
+    <value>Vand Pumpe</value>
+  </data>
+  <data name="HyperBeam" xml:space="preserve">
+    <value>Hyper Stråle</value>
+  </data>
+  <data name="HyperFang" xml:space="preserve">
+    <value>Hyper Gifttand</value>
+  </data>
+  <data name="IceBeam" xml:space="preserve">
+    <value>Is stråle</value>
+  </data>
+  <data name="IcePunch" xml:space="preserve">
+    <value>Is Slag</value>
+  </data>
+  <data name="IceShard" xml:space="preserve">
+    <value>Is skår</value>
+  </data>
+  <data name="IceShardFast" xml:space="preserve">
+    <value>Is skår</value>
+  </data>
+  <data name="IcyWind" xml:space="preserve">
+    <value>Isnende vind</value>
+  </data>
+  <data name="IronHead" xml:space="preserve">
+    <value>Jern hoved</value>
+  </data>
+  <data name="KarateChop" xml:space="preserve">
+    <value>Karate Hug</value>
+  </data>
+  <data name="KarateChopFast" xml:space="preserve">
+    <value>Karate Hug</value>
+  </data>
+  <data name="LeafBlade" xml:space="preserve">
+    <value>Løv Kniv</value>
+  </data>
+  <data name="Lick" xml:space="preserve">
+    <value>Slikke</value>
+  </data>
+  <data name="LickFast" xml:space="preserve">
+    <value>Slikke hurtigt</value>
+  </data>
+  <data name="LowKick" xml:space="preserve">
+    <value>Lavt Spark</value>
+  </data>
+  <data name="LowKickFast" xml:space="preserve">
+    <value>Lavt Spark</value>
+  </data>
+  <data name="LowSweep" xml:space="preserve">
+    <value>Feje Lavt</value>
+  </data>
+  <data name="MagnetBomb" xml:space="preserve">
+    <value>Magnet bombe</value>
+  </data>
+  <data name="MegaDrain" xml:space="preserve">
+    <value>Mega afløb</value>
+  </data>
+  <data name="Megahorn" xml:space="preserve">
+    <value>Megahorn</value>
+  </data>
+  <data name="MetalClaw" xml:space="preserve">
+    <value>Metal klo</value>
+  </data>
+  <data name="MetalClawFast" xml:space="preserve">
+    <value>Metal klo</value>
+  </data>
+  <data name="Moonblast" xml:space="preserve">
+    <value>Månesprængning</value>
+  </data>
+  <data name="MoveUnset" xml:space="preserve">
+    <value>Træk Frakoblet</value>
+  </data>
+  <data name="MudBomb" xml:space="preserve">
+    <value>Mudder bombe</value>
+  </data>
+  <data name="MudShot" xml:space="preserve">
+    <value>Mudder skud</value>
+  </data>
+  <data name="MudShotFast" xml:space="preserve">
+    <value>Mudder skud</value>
+  </data>
+  <data name="MudSlapFast" xml:space="preserve">
+    <value>Mudder slag</value>
+  </data>
+  <data name="NightSlash" xml:space="preserve">
+    <value>Nat slidse</value>
+  </data>
+  <data name="OminousWind" xml:space="preserve">
+    <value>Ildevarslende vind</value>
+  </data>
+  <data name="ParabolicCharge" xml:space="preserve">
+    <value>Parabolsk Angreb</value>
+  </data>
+  <data name="Peck" xml:space="preserve">
+    <value>Hakke</value>
+  </data>
+  <data name="PeckFast" xml:space="preserve">
+    <value>Hakke</value>
+  </data>
+  <data name="PetalBlizzard" xml:space="preserve">
+    <value>Kronblads Storm</value>
+  </data>
+  <data name="PlayRough" xml:space="preserve">
+    <value>Spil Rå</value>
+  </data>
+  <data name="PoisonFang" xml:space="preserve">
+    <value>Giftig Hugtand</value>
+  </data>
+  <data name="PoisonJab" xml:space="preserve">
+    <value>Giftig Sting</value>
+  </data>
+  <data name="PoisonJabFast" xml:space="preserve">
+    <value>Giftig puf</value>
+  </data>
+  <data name="PoisonStingFast" xml:space="preserve">
+    <value>Giftig Stik</value>
+  </data>
+  <data name="Pound" xml:space="preserve">
+    <value>Slå</value>
+  </data>
+  <data name="PoundFast" xml:space="preserve">
+    <value>Slå Hurtigt</value>
+  </data>
+  <data name="PowerGem" xml:space="preserve">
+    <value>Kraft Ædelsten</value>
+  </data>
+  <data name="PowerWhip" xml:space="preserve">
+    <value>Kraft Pisk</value>
+  </data>
+  <data name="Psybeam" xml:space="preserve">
+    <value>Psybeam</value>
+  </data>
+  <data name="Psychic" xml:space="preserve">
+    <value>Psychic</value>
+  </data>
+  <data name="PsychoCut" xml:space="preserve">
+    <value>Psycho Cut</value>
+  </data>
+  <data name="PsychoCutFast" xml:space="preserve">
+    <value>Psycho Cut</value>
+  </data>
+  <data name="Psyshock" xml:space="preserve">
+    <value>Psyshock</value>
+  </data>
+  <data name="Psystrike" xml:space="preserve">
+    <value>Psystrike</value>
+  </data>
+  <data name="QuickAttack" xml:space="preserve">
+    <value>Hurtig angreb</value>
+  </data>
+  <data name="QuickAttackFast" xml:space="preserve">
+    <value>Hurtig angreb</value>
+  </data>
+  <data name="RazorLeaf" xml:space="preserve">
+    <value>Barbermaskine blad</value>
+  </data>
+  <data name="RazorLeafFast" xml:space="preserve">
+    <value>Barbermaskine blad</value>
+  </data>
+  <data name="Rest" xml:space="preserve">
+    <value>Hvile</value>
+  </data>
+  <data name="RockSlide" xml:space="preserve">
+    <value>Sten Skred</value>
+  </data>
+  <data name="RockSmashFast" xml:space="preserve">
+    <value>Sten Slag</value>
+  </data>
+  <data name="RockThrow" xml:space="preserve">
+    <value>Sten Kast</value>
+  </data>
+  <data name="RockThrowFast" xml:space="preserve">
+    <value>Sten Kast</value>
+  </data>
+  <data name="RockTomb" xml:space="preserve">
+    <value>Sten Grav</value>
+  </data>
+  <data name="Scald" xml:space="preserve">
+    <value>Skolde</value>
+  </data>
+  <data name="ScaldBlastoise" xml:space="preserve">
+    <value>Skolde</value>
+  </data>
+  <data name="Scratch" xml:space="preserve">
+    <value>ridse</value>
+  </data>
+  <data name="ScratchFast" xml:space="preserve">
+    <value>Ridse</value>
+  </data>
+  <data name="SeedBomb" xml:space="preserve">
+    <value>Frø Bombe</value>
+  </data>
+  <data name="ShadowBall" xml:space="preserve">
+    <value>Skygge bold</value>
+  </data>
+  <data name="ShadowClaw" xml:space="preserve">
+    <value>Skygge klo</value>
+  </data>
+  <data name="ShadowClawFast" xml:space="preserve">
+    <value>Skygge klo</value>
+  </data>
+  <data name="ShadowPunch" xml:space="preserve">
+    <value>Skygge Slag</value>
+  </data>
+  <data name="ShadowSneak" xml:space="preserve">
+    <value>Snige i Skyggen</value>
+  </data>
+  <data name="SignalBeam" xml:space="preserve">
+    <value>Signal stråle</value>
+  </data>
+  <data name="Slam" xml:space="preserve">
+    <value>Smække</value>
+  </data>
+  <data name="Slash" xml:space="preserve">
+    <value>Slå</value>
+  </data>
+  <data name="Sludge" xml:space="preserve">
+    <value>Slam</value>
+  </data>
+  <data name="SludgeBomb" xml:space="preserve">
+    <value>Slam bombe</value>
+  </data>
+  <data name="SludgeWave" xml:space="preserve">
+    <value>Slam bølge</value>
+  </data>
+  <data name="Smog" xml:space="preserve">
+    <value>Smog</value>
+  </data>
+  <data name="SolarBeam" xml:space="preserve">
+    <value>Sol stråle</value>
+  </data>
+  <data name="Spark" xml:space="preserve">
+    <value>Gnist</value>
+  </data>
+  <data name="SparkFast" xml:space="preserve">
+    <value>Hurtig Gnist</value>
+  </data>
+  <data name="Splash" xml:space="preserve">
+    <value>Stænk</value>
+  </data>
+  <data name="SplashFast" xml:space="preserve">
+    <value>Stænk</value>
+  </data>
+  <data name="SteelWing" xml:space="preserve">
+    <value>Stål fløj</value>
+  </data>
+  <data name="SteelWingFast" xml:space="preserve">
+    <value>Stål fløj</value>
+  </data>
+  <data name="Stomp" xml:space="preserve">
+    <value>Tramp</value>
+  </data>
+  <data name="StoneEdge" xml:space="preserve">
+    <value>Sten kant</value>
+  </data>
+  <data name="Struggle" xml:space="preserve">
+    <value>Kæmpe</value>
+  </data>
+  <data name="Submission" xml:space="preserve">
+    <value>Underkastelse</value>
+  </data>
+  <data name="SuckerPunch" xml:space="preserve">
+    <value>Sucker Punch</value>
+  </data>
+  <data name="SuckerPunchFast" xml:space="preserve">
+    <value>Sucker Punch</value>
+  </data>
+  <data name="Swift" xml:space="preserve">
+    <value>Hurtig</value>
+  </data>
+  <data name="Tackle" xml:space="preserve">
+    <value>Takle</value>
+  </data>
+  <data name="TackleFast" xml:space="preserve">
+    <value>Takle</value>
+  </data>
+  <data name="TakeDown" xml:space="preserve">
+    <value>Bekæmpe</value>
+  </data>
+  <data name="Thunder" xml:space="preserve">
+    <value>Torden</value>
+  </data>
+  <data name="Thunderbolt" xml:space="preserve">
+    <value>Lyn</value>
+  </data>
+  <data name="ThunderPunch" xml:space="preserve">
+    <value>Torden Slag</value>
+  </data>
+  <data name="ThunderShock" xml:space="preserve">
+    <value>Torden chok</value>
+  </data>
+  <data name="ThunderShockFast" xml:space="preserve">
+    <value>Torden chok</value>
+  </data>
+  <data name="Twineedle" xml:space="preserve">
+    <value>Twineedle</value>
+  </data>
+  <data name="Twister" xml:space="preserve">
+    <value>Hvirvelvind</value>
+  </data>
+  <data name="ViceGrip" xml:space="preserve">
+    <value>Politi Greb</value>
+  </data>
+  <data name="VineWhip" xml:space="preserve">
+    <value>Vin Pisk</value>
+  </data>
+  <data name="VineWhipFast" xml:space="preserve">
+    <value>Vin Pisk</value>
+  </data>
+  <data name="WaterGun" xml:space="preserve">
+    <value>Vandpistol</value>
+  </data>
+  <data name="WaterGunFast" xml:space="preserve">
+    <value>Vandpistol</value>
+  </data>
+  <data name="WaterGunFastBlastoise" xml:space="preserve">
+    <value>Vandpistol</value>
+  </data>
+  <data name="WaterPulse" xml:space="preserve">
+    <value>Vand Stråle</value>
+  </data>
+  <data name="WingAttack" xml:space="preserve">
+    <value>Fløj angreb</value>
+  </data>
+  <data name="WingAttackFast" xml:space="preserve">
+    <value>Fløj angreb</value>
+  </data>
+  <data name="Wrap" xml:space="preserve">
+    <value>Indpak</value>
+  </data>
+  <data name="WrapGreen" xml:space="preserve">
+    <value>Indpak Grøn</value>
+  </data>
+  <data name="WrapPink" xml:space="preserve">
+    <value>Indpak Pink</value>
+  </data>
+  <data name="XScissor" xml:space="preserve">
+    <value>XSaks</value>
+  </data>
+  <data name="ZenHeadbuttFast" xml:space="preserve">
+    <value>Zen skalle</value>
+  </data>
+</root>

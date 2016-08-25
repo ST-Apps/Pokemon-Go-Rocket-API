@@ -13,12 +13,21 @@ namespace PokemonGo_UWP.Utils
     {
 
         public static readonly IDeviceInfoExtended Current;
+        private static readonly DateTimeOffset _startTime = DateTimeOffset.UtcNow;
 
 
         static DeviceInfos()
         {
             //Current = Current ?? new DeviceInfosAndroid();
             Current = Current ?? new DeviceInfosIOS();
+        }
+
+        public static long RelativeTimeFromStart
+        {
+            get
+            {
+                return DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() - _startTime.ToUnixTimeMilliseconds();
+            }
         }
 
     }

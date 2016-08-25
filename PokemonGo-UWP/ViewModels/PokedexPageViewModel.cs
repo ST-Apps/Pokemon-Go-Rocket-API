@@ -34,33 +34,52 @@ namespace PokemonGo_UWP.ViewModels
             }
             else
             {
-                var list = Enum.GetValues(typeof(PokemonId)).Cast<PokemonId>();
                 var pokedexItems = GameClient.PokedexInventory;
-                foreach (var item in list)
+                var lastPokemonIdSeen = pokedexItems == null || pokedexItems.Count == 0 ? 0 : pokedexItems.Max(x => (int)x.PokemonId);
+                if (lastPokemonIdSeen > 0)
                 {
-                    switch (item)
+                    var listAllPokemon = Enum.GetValues(typeof(PokemonId)).Cast<PokemonId>();
+                    foreach (var item in listAllPokemon)
                     {
-                        case PokemonId.Missingno:
+                        if ((int)item > lastPokemonIdSeen)
                             break;
-                        default:
-                            var pokedexEntry = pokedexItems.Where(x => x.PokemonId == item);
-                            if(pokedexEntry.Count()==1)
-                                PokemonFoundAndSeen.Add(new KeyValuePair<PokemonId, PokedexEntry>(item, pokedexEntry.ElementAt(0)));
-                            else
-                                PokemonFoundAndSeen.Add(new KeyValuePair<PokemonId, PokedexEntry>(item, null));
-                            break;
+                        switch (item)
+                        {
+                            case PokemonId.Missingno:
+                                break;
+                            default:
+                                var pokedexEntry = pokedexItems.Where(x => x.PokemonId == item);
+                                if (pokedexEntry.Count() == 1)
+                                    PokemonFoundAndSeen.Add(new KeyValuePair<PokemonId, PokedexEntry>(item, pokedexEntry.ElementAt(0)));
+                                else
+                                    PokemonFoundAndSeen.Add(new KeyValuePair<PokemonId, PokedexEntry>(item, null));
+                                break;
+                        }
                     }
+                    CapturedPokemons = pokedexItems.Where(x => x.TimesCaptured > 0).Count();
+                    SeenPokemons = pokedexItems.Count;
                 }
-                CapturedPokemons = pokedexItems.Where(x => x.TimesCaptured > 0).Count();
-                SeenPokemons = pokedexItems.Count;
+                else
+                {
+                    CapturedPokemons = 0;
+                    SeenPokemons = 0;
+                }
             }
-            if(parameter!=null && parameter is PokemonId)
+            if(parameter!=null && parameter is PokemonId)  //utilized to open a pokedex page, passing pokemon id
             {
                 SelectedPokedexEntry = new KeyValuePair<PokemonId, PokedexEntry>((PokemonId)parameter, GetPokedexEntry((PokemonId)parameter));
                 IsPokemonDetailsOpen = true;
             }
+            NavigationService.FrameFacade.BackRequested += FrameFacade_BackRequested;
             return Task.CompletedTask;
         }
+
+        private void FrameFacade_BackRequested(object sender, Template10.Common.HandledEventArgs e)
+        {
+            e.Handled = true;
+            CloseCommand.Execute();
+        }
+
         public override Task OnNavigatedFromAsync(IDictionary<string, object> pageState, bool suspending)
         {
             if (suspending)
@@ -82,6 +101,7 @@ namespace PokemonGo_UWP.ViewModels
                 EeveeEvolutions?.Clear();
                 PokemonEvolutions?.Clear();
             }
+            NavigationService.FrameFacade.BackRequested -= FrameFacade_BackRequested;
             return Task.CompletedTask;
         }
         #endregion
@@ -182,7 +202,10 @@ namespace PokemonGo_UWP.ViewModels
         }
         private PokedexEntry GetPokedexEntry(PokemonId pokemon)
         {
-            return PokemonFoundAndSeen.Where(x => x.Key == pokemon).ElementAt(0).Value;
+            var found = PokemonFoundAndSeen.Where(x => x.Key == pokemon);
+            if (found != null && found.Count() > 0)
+                return found.ElementAt(0).Value;
+            return null;
         }
     }
 }

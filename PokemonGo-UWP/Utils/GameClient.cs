@@ -30,7 +30,6 @@ using POGOProtos.Settings.Master;
 using Q42.WinRT.Data;
 using Template10.Common;
 using Template10.Utils;
-using Universal_Authenticator_v2.Views;
 using Windows.Devices.Sensors;
 using Newtonsoft.Json;
 using PokemonGo.RocketAPI.Rpc;
@@ -39,6 +38,7 @@ using PokemonGo_UWP.Utils.Helpers;
 using System.Collections.Specialized;
 using Windows.UI.Popups;
 using System.ComponentModel;
+using PokemonGo_UWP.Views;
 
 namespace PokemonGo_UWP.Utils
 {
@@ -638,7 +638,8 @@ namespace PokemonGo_UWP.Utils
                 for (var i = 0; i < hatchedEggResponse.PokemonId.Count; i++)
                 {
                     Logger.Write("Egg Hatched");
-                    await new MessageDialog(string.Format(Resources.CodeResources.GetString("EggHatchMessage"), hatchedEggResponse.PokemonId[i], hatchedEggResponse.StardustAwarded[i], hatchedEggResponse.CandyAwarded[i], hatchedEggResponse.ExperienceAwarded[i])).ShowAsyncQueue();
+                    var currentPokemonId = PokemonsInventory.First(item => item.Id == hatchedEggResponse.PokemonId[i]).PokemonId;
+                    await new MessageDialog(string.Format(Resources.CodeResources.GetString("EggHatchMessage"), currentPokemonId, hatchedEggResponse.StardustAwarded[i], hatchedEggResponse.CandyAwarded[i], hatchedEggResponse.ExperienceAwarded[i])).ShowAsyncQueue();
                 }
             }
         }

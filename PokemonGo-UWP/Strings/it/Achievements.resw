@@ -96,4 +96,88 @@
   <data name="Water" xml:space="preserve">
     <value>Nuotatore</value>
   </data>
+  <data name="BadgeBattleAttackWonDescription" xml:space="preserve">
+    <value>{0} battaglie vinte in palestra</value>
+  </data>
+  <data name="BadgeBattleTrainingWonDescription" xml:space="preserve">
+    <value>{0} battaglie d'allenamento vinte</value>
+  </data>
+  <data name="BadgeBigMagikarpDescription" xml:space="preserve">
+    <value>{0} Magikarp catturati</value>
+  </data>
+  <data name="BadgeCaptureTotalDescription" xml:space="preserve">
+    <value>{0} Pokémon catturati</value>
+  </data>
+  <data name="BadgeEvolvedTotalDescription" xml:space="preserve">
+    <value>{0} Pokémon fatti evolvere</value>
+  </data>
+  <data name="BadgeHatchedTotalDescription" xml:space="preserve">
+    <value>{0} Uova Pokémon fatte schiudere</value>
+  </data>
+  <data name="BadgePikachuDescription" xml:space="preserve">
+    <value>{0} Pikachu catturati</value>
+  </data>
+  <data name="BadgePokedexEntriesDescription" xml:space="preserve">
+    <value>{0} Pokémon registrati nel Pokédex</value>
+  </data>
+  <data name="BadgePokestopsVisitedDescription" xml:space="preserve">
+    <value>{0} Pokéstop visitati</value>
+  </data>
+  <data name="BadgeSmallRattataDescription" xml:space="preserve">
+    <value>{0} Rattata piccoli catturati</value>
+  </data>
+  <data name="BadgeTravelKmDescription" xml:space="preserve">
+    <value>Hai camminato per {0} km</value>
+  </data>
+  <data name="BugDescription" xml:space="preserve">
+    <value>{0} Pokémon tipo Coleottero catturati</value>
+  </data>
+  <data name="DragonDescription" xml:space="preserve">
+    <value>{0} Pokémon tipo Drago catturati</value>
+  </data>
+  <data name="ElectricDescription" xml:space="preserve">
+    <value>{0} Pokémon tipo Elettro catturati</value>
+  </data>
+  <data name="FairyDescription" xml:space="preserve">
+    <value>{0} Pokémon tipo Folletto catturati</value>
+  </data>
+  <data name="FightingDescription" xml:space="preserve">
+    <value>{0} Pokémon tipo Lotta catturati</value>
+  </data>
+  <data name="FireDescription" xml:space="preserve">
+    <value>{0} Pokémon tipo Fuoco catturati</value>
+  </data>
+  <data name="FlyingDescription" xml:space="preserve">
+    <value>{0} Pokémon tipo Volante catturati</value>
+  </data>
+  <data name="GhostDescription" xml:space="preserve">
+    <value>{0} Pokémon tipo Spettro catturati</value>
+  </data>
+  <data name="GrassDescription" xml:space="preserve">
+    <value>{0} Pokémon tipo Erba catturati</value>
+  </data>
+  <data name="GroundDescription" xml:space="preserve">
+    <value>{0} Pokémon tipo Terra catturati</value>
+  </data>
+  <data name="IceDescription" xml:space="preserve">
+    <value>{0} Pokémon tipo Ghiaccio catturati</value>
+  </data>
+  <data name="NormalDescription" xml:space="preserve">
+    <value>{0} Pokémon tipo Normale catturati</value>
+  </data>
+  <data name="PoisonDescription" xml:space="preserve">
+    <value>{0} Pokémon tipo Veleno catturati</value>
+  </data>
+  <data name="PsychicDescription" xml:space="preserve">
+    <value>{0} Pokémon tipo Psico catturati</value>
+  </data>
+  <data name="RockDescription" xml:space="preserve">
+    <value>{0} Pokémon tipo Roccia catturati</value>
+  </data>
+  <data name="SteelDescription" xml:space="preserve">
+    <value>{0} Pokémon tipo Acciaio catturati</value>
+  </data>
+  <data name="WaterDescription" xml:space="preserve">
+    <value>{0} Pokémon tipo Acqua catturati</value>
+  </data>
 </root>

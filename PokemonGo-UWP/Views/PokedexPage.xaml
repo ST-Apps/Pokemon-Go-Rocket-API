@@ -55,8 +55,9 @@
         </converters:ValueWhenConverter>
 
         <x:Int32 x:Key="MinItemsForRow">3</x:Int32>
-
-        <DataTemplate x:Key="PokemonSeen">
+        <x:Int32 x:Key="GridWidth">1</x:Int32>
+        <!--Pokemon captured-->
+        <DataTemplate x:Key="PokemonCaptured">
             <Grid Margin="8,4,8,4" MinWidth="64" MinHeight="64" MaxWidth="92" MaxHeight="92">
                 <Grid.Width>
                     <Binding Converter="{StaticResource WidthConverter}" Source="{StaticResource MinItemsForRow}" ConverterParameter="20,24"/>
@@ -87,7 +88,37 @@
                            TextWrapping="NoWrap"/>
             </Grid>
         </DataTemplate>
-        
+        <!-- Pokemon seen/not captured -->
+        <DataTemplate x:Key="PokemonSeen">
+            <Grid Margin="8,4,8,4" MinWidth="64" MinHeight="64" MaxWidth="92" MaxHeight="92">
+                <Grid.Width>
+                    <Binding Converter="{StaticResource WidthConverter}" Source="{StaticResource MinItemsForRow}" ConverterParameter="20,24"/>
+                </Grid.Width>
+                <Grid.Height>
+                    <Binding Converter="{StaticResource WidthConverter}" Source="{StaticResource MinItemsForRow}" ConverterParameter="20,24"/>
+                </Grid.Height>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Tapped">
+                        <core:InvokeCommandAction Command="{Binding DataContext.OpenPokedexEntry, ElementName=page}" CommandParameter="{Binding}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+                <BitmapIcon UriSource="{Binding Key, Converter={StaticResource PokemonIdToPokemonSpriteConverter}, ConverterParameter=uri}"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Foreground="Black"
+                            Margin="4" />
+                <TextBlock Text="{Binding Key, Converter={StaticResource PokemonIdToPokemonNameConverter}}"
+                           Style="{StaticResource TextPokemonName}"
+                           Grid.Row="1"
+                           TextTrimming="CharacterEllipsis"
+                           TextWrapping="NoWrap"/>
+            </Grid>
+        </DataTemplate>
+        <!--Pokemon unseen-->
         <DataTemplate x:Key="PokemonUnseen">
             <Grid CornerRadius="5" 
                   Background="#CCC7FD"
@@ -115,7 +146,8 @@
                 </TextBlock>
             </Grid>
         </DataTemplate>
-        <DataTemplate x:Key="PokedexSeen">
+        <!-- Pokemon evolution / Pokemon captured -->
+        <DataTemplate x:Key="PokedexCaptured">
             <Grid Margin="8,4,8,4" MinWidth="64" MinHeight="64" MaxWidth="92" MaxHeight="92">
                 <Grid.Width>
                     <Binding Converter="{StaticResource WidthConverter}" Source="{StaticResource MinItemsForRow}" ConverterParameter="20,28"/>
@@ -147,6 +179,7 @@
                            TextWrapping="NoWrap"/>
             </Grid>
         </DataTemplate>
+        <!-- Used to see evolutions / pokemon unseen -->
         <DataTemplate x:Key="PokedexUnseen">
             <Grid Margin="8,4,8,4" MinWidth="64" MinHeight="64" MaxWidth="92" MaxHeight="92">
                 <Grid.Width>
@@ -177,13 +210,7 @@
         </DataTemplate>
     </Page.Resources>
 
-    <Grid>
-        <Grid.Background>
-            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#b3ee9a" Offset="0" />
-                <GradientStop Color="#43bab6" Offset="0.8" />
-            </LinearGradientBrush>
-        </Grid.Background>
+    <Grid Background="{StaticResource PageBackgroundGradient}">
         <Border Margin="12,12,12,0" Background="White" CornerRadius="5,5,0,0" Canvas.ZIndex="0">
             <Grid>
                 <Grid.RowDefinitions>
@@ -205,25 +232,38 @@
                         <Run Text="{Binding SeenPokemons}" Typography.Capitals="AllSmallCaps"/>
                     </TextBlock>
                 </StackPanel>
-                <GridView ItemsSource="{Binding PokemonFoundAndSeen}" 
-                          Grid.Row="1"
-                          Canvas.ZIndex="0"
-                          ScrollViewer.VerticalScrollMode="Auto"
-                          ScrollViewer.VerticalScrollBarVisibility="Hidden">
-                    <GridView.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <WrapGrid Orientation="Horizontal"
-                              HorizontalAlignment="Center"
-                              VerticalChildrenAlignment="Top"
-                              MaximumRowsOrColumns="5" />
-                        </ItemsPanelTemplate>
-                    </GridView.ItemsPanel>
-                    <GridView.ItemTemplateSelector>
-                        <utils:PokedexEntryDataTemplateSelector 
-                            PokemonSeen="{StaticResource PokemonSeen}"
-                            PokemonUnseen="{StaticResource PokemonUnseen}"/>
-                    </GridView.ItemTemplateSelector>
-                </GridView>
+                <ScrollViewer Grid.Row="1" 
+                              VerticalScrollBarVisibility="Hidden" 
+                              HorizontalScrollMode="Disabled">
+                    <StackPanel SizeChanged="OnSizeChanged">
+                        <GridView x:Name="pokeindex"
+                                  ItemsSource="{Binding PokemonFoundAndSeen}" 
+                                  Canvas.ZIndex="0"
+                                  HorizontalAlignment="Stretch"
+                                  ScrollViewer.VerticalScrollMode="Auto"
+                                  ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                            <GridView.Width>
+                                <Binding Converter="{StaticResource WidthConverter}" Source="{StaticResource GridWidth}" ConverterParameter="0,28"/>
+                            </GridView.Width>
+                            <GridView.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapGrid Orientation="Horizontal"
+                                              HorizontalAlignment="Center"
+                                              VerticalChildrenAlignment="Top"
+                                              MaximumRowsOrColumns="5"/>
+                                </ItemsPanelTemplate>
+                            </GridView.ItemsPanel>
+                            <GridView.ItemTemplateSelector>
+                                <utils:PokedexEntryDataTemplateSelector 
+                                        PokemonCaptured="{StaticResource PokemonCaptured}"
+                                        PokemonSeen="{StaticResource PokemonSeen}"
+                                        PokemonUnseen="{StaticResource PokemonUnseen}"/>
+                            </GridView.ItemTemplateSelector>
+                        </GridView>
+
+                        <StackPanel Margin="0,0,0,88"/>
+                    </StackPanel>
+                </ScrollViewer>
             </Grid>
         </Border>
 
@@ -310,14 +350,14 @@
                                         Margin="4,0,4,0" 
                                         VerticalAlignment="Center" 
                                         Foreground="#577074"
-                                        FontFamily="ms-appx:/Assets/Fonts/Lato-Medium.ttf#Lato Medium"/>
+                                        FontFamily="{StaticResource LatoMediumFont}"/>
                                 <TextBlock
                                         Text="{Binding SelectedPokedexEntry.Key, Converter={StaticResource PokemonIdToPokemonNameConverter}}"
                                         VerticalAlignment="Bottom"
                                         CharacterSpacing="30"
                                         HorizontalAlignment="Left"
                                         Foreground="#577074"
-                                        FontFamily="ms-appx:/Assets/Fonts/Lato-Medium.ttf#Lato Medium"
+                                        FontFamily="{StaticResource LatoMediumFont}"
                                         FontSize="28"
                                         Grid.Column="2"
                                         Margin="4,0,0,0" />
@@ -338,6 +378,7 @@
 
                                     <Grid VerticalAlignment="Center"
                                           HorizontalAlignment="Stretch"
+                                          Visibility="{Binding SelectedPokedexEntry.Value.TimesCaptured, Converter={StaticResource IntVisibility}}"
                                           BorderBrush="Gray"
                                           Margin="0,0,0,8"
                                           BorderThickness="0,0,0.5,0">
@@ -351,16 +392,16 @@
                                                    FontSize="19"
                                                    Visibility="{Binding PokemonDetails.Type2, Converter={StaticResource VisibleWhenTypeIsNotNoneConverter}}"
                                                    Foreground="#577074">
-                                            <Run Text="{Binding PokemonDetails.Type}" />
+                                            <Run Text="{Binding PokemonDetails.Type, Converter={StaticResource PokemonTypeTranslationConverter}}" />
                                             <Run Text="/" />
-                                            <Run Text="{Binding PokemonDetails.Type2}" />
+                                            <Run Text="{Binding PokemonDetails.Type2, Converter={StaticResource PokemonTypeTranslationConverter}}" />
                                         </TextBlock>
 
                                         <TextBlock HorizontalAlignment="Center"
                                                    Margin="32,0"
                                                    FontSize="19"
                                                    Grid.Row="0"
-                                                   Text="{Binding PokemonDetails.Type}"
+                                                   Text="{Binding PokemonDetails.Type, Converter={StaticResource PokemonTypeTranslationConverter}}"
                                                    Visibility="{Binding PokemonDetails.Type2, Converter={StaticResource InverseVisibleWhenTypeIsNotNoneConverter}}"
                                                    Foreground="#577074" />
 
@@ -376,6 +417,7 @@
                                           Grid.Column="1"
                                           Margin="0,0,0,8"
                                           HorizontalAlignment="Stretch"
+                                          Visibility="{Binding SelectedPokedexEntry.Value.TimesCaptured, Converter={StaticResource IntVisibility}}"
                                           BorderBrush="Gray"
                                           BorderThickness="0,0,0.5,0">
                                         <Grid.RowDefinitions>
@@ -401,6 +443,7 @@
                                     <Grid VerticalAlignment="Center"
                                           Grid.Column="2"
                                           Margin="0,0,0,8"
+                                          Visibility="{Binding SelectedPokedexEntry.Value.TimesCaptured, Converter={StaticResource IntVisibility}}"
                                           HorizontalAlignment="Stretch">
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto" />
@@ -469,12 +512,26 @@
                                     </Grid>
                                 </Grid>
 
-                                <TextBlock Margin="16,8" TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="#577074">
+                                <TextBlock 
+                                    Margin="16,8" 
+                                    TextWrapping="Wrap" 
+                                    HorizontalAlignment="Left" 
+                                    Foreground="#577074"
+                                    Visibility="{Binding SelectedPokedexEntry.Value.TimesCaptured, Converter={StaticResource IntVisibility}}">
                                     <Run Text="{Binding SelectedPokedexEntry.Key, Converter={StaticResource PokemonIdToPokedexDescription}}"/>
                                 </TextBlock>
 
-                                <StackPanel Margin="0,4,0,88" HorizontalAlignment="Center">
-                                    <TextBlock x:Uid="PokedexEvolutions" Text="Evolutions" Typography.Capitals="AllSmallCaps" Margin="16,8" FontSize="28" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#577074"/>
+                                <StackPanel Visibility="{Binding SelectedPokedexEntry.Value.TimesCaptured, Converter={StaticResource IntVisibility}}"
+                                            Margin="0,4,0,88" 
+                                            HorizontalAlignment="Center">
+                                    <TextBlock x:Uid="PokedexEvolutions" 
+                                               Text="Evolutions" 
+                                               Typography.Capitals="AllSmallCaps" 
+                                               Margin="16,8" 
+                                               FontSize="28" 
+                                               HorizontalAlignment="Center" 
+                                               FontWeight="Bold" 
+                                               Foreground="#577074"/>
 
                                     <Grid>
                                         <Grid.ColumnDefinitions>
@@ -495,8 +552,9 @@
                                             </GridView.ItemsPanel>
                                             <GridView.ItemTemplateSelector>
                                                 <utils:PokedexEntryDataTemplateSelector 
-                                                PokemonSeen="{StaticResource PokedexSeen}"
-                                                PokemonUnseen="{StaticResource PokedexUnseen}"/>
+                                                    PokemonCaptured="{StaticResource PokedexCaptured}"
+                                                    PokemonSeen="{StaticResource PokemonSeen}"
+                                                    PokemonUnseen="{StaticResource PokedexUnseen}"/>
                                             </GridView.ItemTemplateSelector>
                                         </GridView>
 
@@ -513,8 +571,9 @@
                                             </GridView.ItemsPanel>
                                             <GridView.ItemTemplateSelector>
                                                 <utils:PokedexEntryDataTemplateSelector 
-                                                PokemonSeen="{StaticResource PokedexSeen}"
-                                                PokemonUnseen="{StaticResource PokedexUnseen}"/>
+                                                    PokemonCaptured="{StaticResource PokedexCaptured}"
+                                                    PokemonSeen="{StaticResource PokemonSeen}"
+                                                    PokemonUnseen="{StaticResource PokedexUnseen}"/>
                                             </GridView.ItemTemplateSelector>
                                         </GridView>
                                     </Grid>

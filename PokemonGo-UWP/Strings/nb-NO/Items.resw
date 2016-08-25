@@ -13,7 +13,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="D_ItemGreatBall" xml:space="preserve">
-    <value>En innretning for å fange ville Pokémon. Den blir kastet likt som en Pokéball og kan komfortabelt innkapsle et bytte.</value>
+    <value>En Poké Ball med høy ytelse som gir større sjanse for å fange Pokémon enn en standard Poké Ball.</value>
   </data>
   <data name="D_ItemIncenseCool" xml:space="preserve">
     <value>Røkelse med en mystisk duft som lokker ville Pokémon til deg i 30 minutter</value>
@@ -34,10 +34,10 @@
     <value>En enhet som ruger egg imens du går til det er klart for å klekkes.</value>
   </data>
   <data name="D_ItemMasterBall" xml:space="preserve">
-    <value>En innretning for å fange ville Pokémon. Den blir kastet likt som en Pokéball og kan komfortabelt innkapsle et bytte.</value>
+    <value>Den beste Poké Ballen du kan få. Med denne Poké Ballen kan du fange hvilken som helst Pokémon uten å mislykkes.</value>
   </data>
   <data name="D_ItemPokeBall" xml:space="preserve">
-    <value>En innretning for å fange ville Pokémon. Den blir kastet likt som en Pokéball og kan komfortabelt innkapsle et bytte.</value>
+    <value>En innretning for å fange ville Pokémon.</value>
   </data>
   <data name="D_ItemPotion" xml:space="preserve">
     <value>En spray-type medisin for behandling av sår. Det gjenoppretter HP av en Pokémon med 20 poeng.</value>
@@ -46,7 +46,7 @@
     <value>En medisin som kan gjenopplive besvimte Pokémon. Den vil også gjenopprette halvparten av den besvimte Pokémonen sin maksimale HP.</value>
   </data>
   <data name="D_ItemUltraBall" xml:space="preserve">
-    <value>En innretning for å fange ville Pokémon. Den blir kastet likt som en Pokéball og kan komfortabelt innkapsle et bytte.</value>
+    <value>En Poké Ball av super kvalitet som gir deg stor skjanse for å fange en Pokémon. Den er enda bedre enn en Great Ball.</value>
   </data>
   <data name="ItemBlukBerry" xml:space="preserve">
     <value>Bluk Berry</value>
@@ -79,7 +79,7 @@
     <value>Gjenstand lager oppgradering</value>
   </data>
   <data name="ItemLuckyEgg" xml:space="preserve">
-    <value>Lykke Egg</value>
+    <value>Lykkeegg</value>
   </data>
   <data name="ItemMasterBall" xml:space="preserve">
     <value>Master Ball</value>
@@ -88,7 +88,7 @@
     <value>Max Potion</value>
   </data>
   <data name="ItemMaxRevive" xml:space="preserve">
-    <value>Full Gjenopplivning</value>
+    <value>Max Revive</value>
   </data>
   <data name="ItemNanabBerry" xml:space="preserve">
     <value>Nanab Berry</value>
@@ -100,7 +100,7 @@
     <value>Poke Ball</value>
   </data>
   <data name="ItemPokemonStorageUpgrade" xml:space="preserve">
-    <value> Pokémon lager oppgradering</value>
+    <value>Pokémon lager oppgradering</value>
   </data>
   <data name="ItemPotion" xml:space="preserve">
     <value>Potion</value>
@@ -109,7 +109,7 @@
     <value>Razz Berry</value>
   </data>
   <data name="ItemRevive" xml:space="preserve">
-    <value>Gjenopplivning</value>
+    <value>Revive</value>
   </data>
   <data name="ItemSpecialCamera" xml:space="preserve">
     <value>Spesial Kamera</value>
@@ -118,7 +118,7 @@
     <value>Super Potion</value>
   </data>
   <data name="ItemTroyDisk" xml:space="preserve">
-    <value>Troy Plate</value>
+    <value>Lure Module</value>
   </data>
   <data name="ItemUltraBall" xml:space="preserve">
     <value>Ultra Ball</value>
@@ -130,12 +130,42 @@
     <value>Wepar Berry</value>
   </data>
   <data name="ItemXAttack" xml:space="preserve">
-    <value>X Angrep</value>
+    <value>X Attack</value>
   </data>
   <data name="ItemXDefense" xml:space="preserve">
-    <value>X Forsvar</value>
+    <value>X Defense</value>
   </data>
   <data name="ItemXMiracle" xml:space="preserve">
-    <value>X Mirakel</value>
+    <value>X Miracle</value>
+  </data>
+  <data name="D_ItemLuckyEgg" xml:space="preserve">
+    <value>Et Egg som er fylt med lykke! Du får dobbel XP i 30 minutter.</value>
+  </data>
+  <data name="D_ItemRazzBerry" xml:space="preserve">
+    <value>Om du gir dette til en Pokémon vil den være lettere å fange på ditt neste kast.</value>
+  </data>
+  <data name="D_ItemSpecialCamera" xml:space="preserve">
+    <value>Når du støter Pokémon i naturen kan du bruke kameraet til å fotografere dem.</value>
+  </data>
+  <data name="D_ItemSuperPotion" xml:space="preserve">
+    <value>En spray-type medisin for behandling av sår. Pokémonen sin HP gjenopprettes med 50 poeng.</value>
+  </data>
+  <data name="D_ItemTroyDisk" xml:space="preserve">
+    <value>En modul som tiltrekker Pokémon til et Pokéstop i 30 minutter. Andre spillere kan også ta nytte av effekten.</value>
+  </data>
+  <data name="D_ItemUnknown" xml:space="preserve">
+    <value>Denne gjenstanden er ukjent og vil kanskje legges til i fremtiden.</value>
+  </data>
+  <data name="D_ItemBlukBerry" xml:space="preserve">
+    <value>Om du gir dette til en Pokémon vil den være lettere å fange på ditt neste kast.</value>
+  </data>
+  <data name="D_ItemNanabBerry" xml:space="preserve">
+    <value>Om du gir dette til en Pokémon vil den være lettere å fange på ditt neste kast.</value>
+  </data>
+  <data name="D_ItemPinapBerry" xml:space="preserve">
+    <value>Om du gir dette til en Pokémon vil den være lettere å fange på ditt neste kast.</value>
+  </data>
+  <data name="D_ItemWeparBerry" xml:space="preserve">
+    <value>Om du gir dette til en Pokémon vil den være lettere å fange på ditt neste kast.</value>
   </data>
 </root>

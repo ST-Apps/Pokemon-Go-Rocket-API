@@ -11,7 +11,7 @@ using Windows.System;
 using Windows.UI.Popups;
 using Windows.Web.Http;
 using Octokit;
-using Universal_Authenticator_v2.Views;
+using PokemonGo_UWP.Views;
 
 namespace PokemonGo_UWP.Utils
 {

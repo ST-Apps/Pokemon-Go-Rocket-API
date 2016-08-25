@@ -113,6 +113,21 @@
                               Margin="0,8,15,10" />
                 </Grid>
                 <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="135" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               x:Uid="SettingsBatterySaverTextBlock"
+                               Text="Battery Saver"
+                               Style="{StaticResource TextSettingsTitle}" />
+
+                    <CheckBox Grid.Column="1"
+                              IsChecked="{Binding IsBatterySaverEnabled, Mode=TwoWay}"
+                              Style="{StaticResource SettingsCheckbox}"
+                              Margin="0,8,15,10" />
+                </Grid>
+                <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />

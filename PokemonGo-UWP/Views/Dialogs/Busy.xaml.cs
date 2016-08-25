@@ -3,7 +3,7 @@ using Windows.UI.Xaml.Controls;
 using Template10.Common;
 using Template10.Controls;
 
-namespace Universal_Authenticator_v2.Views
+namespace PokemonGo_UWP.Views
 {
     public sealed partial class Busy : UserControl
     {

@@ -14,7 +14,6 @@ using POGOProtos.Inventory.Item;
 using POGOProtos.Networking.Responses;
 using Template10.Mvvm;
 using Template10.Services.NavigationService;
-using Universal_Authenticator_v2.Views;
 using Google.Protobuf;
 
 namespace PokemonGo_UWP.ViewModels
@@ -34,7 +33,9 @@ namespace PokemonGo_UWP.ViewModels
         {
             if (suspensionState.Any())
             {
-                // Recovering the state                
+                // Recovering the state     
+                CurrentPokestopInfo = new FortDetailsResponse();           
+                CurrentSearchResponse = new FortSearchResponse();
                 CurrentPokestop = JsonConvert.DeserializeObject<FortDataWrapper>((string)suspensionState[nameof(CurrentPokestop)]);
                 CurrentPokestopInfo.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(CurrentPokestop)]).CreateCodedInput());
                 CurrentSearchResponse.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(CurrentSearchResponse)]).CreateCodedInput());                
@@ -98,7 +99,7 @@ namespace PokemonGo_UWP.ViewModels
         /// <summary>
         ///     Results of the current Pokestop search
         /// </summary>
-        private FortSearchResponse _currentSearchResponse;
+        private FortSearchResponse _currentSearchResponse = new FortSearchResponse();
 
         #endregion
 

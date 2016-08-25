@@ -11,10 +11,10 @@ namespace PokemonGo.RocketAPI.Helpers
         uint Floor { get; }
         ulong LocationType { get; }
         ulong ProviderStatus { get; }
-        ulong Timestamp { get; }
+        long TimeSnapshot { get; }
         float HorizontalAccuracy { get; }
         float VerticalAccuracy { get; }
-        float RadialAccuracy { get; }
+        float Unknown20 { get; }
     }
 
     public interface IGpsSattelitesInfo
@@ -27,12 +27,11 @@ namespace PokemonGo.RocketAPI.Helpers
         bool Emphasis { get; }
         bool UsedInFix { get; }
     }
-
-
-    public interface IDeviceInfo
+    public interface ISensorInfo
     {
-        TimeSpan TimeSnapshot { get; }
-        ulong AccelerometerAxes { get;}
+
+        long TimeSnapshot { get; }
+        ulong AccelerometerAxes { get; }
         double AccelRawX { get; }
         double AccelRawY { get; }
         double AccelRawZ { get; }
@@ -45,10 +44,37 @@ namespace PokemonGo.RocketAPI.Helpers
         double GyroscopeRawX { get; }
         double GyroscopeRawY { get; }
         double GyroscopeRawZ { get; }
+    }
+
+    public interface IActivityStatus
+    {
+        bool Walking { get; }
+        bool Automotive { get; }
+        bool Cycling { get; }
+        bool Running { get; }
+        bool Stationary  { get; }
+        bool Tilting  { get; }
+}
+
+    public interface IDeviceInfo
+    {
         string DeviceID { get; }
+		string AndroidBoardName { get; }
+        string AndroidBootloader { get; }
+        string DeviceBrand { get; }
+        string DeviceModel { get; }
+        string DeviceModelIdentifier { get; }
+        string DeviceModelBoot { get; }
+        string HardwareManufacturer { get; }
+        string HardwareModel { get; }
         string FirmwareBrand { get; }
+        string FirmwareTags { get; }
         string FirmwareType { get; }
+        string FirmwareFingerprint { get; }
+        long TimeSnapshot { get; }
         ILocationFix[] LocationFixes { get; }
         IGpsSattelitesInfo[] GpsSattelitesInfo { get; }
+        ISensorInfo Sensors { get; }
+        IActivityStatus ActivityStatus { get; }
     }
 }

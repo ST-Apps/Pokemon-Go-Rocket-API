@@ -1,4 +1,6 @@
-﻿using PokemonGo_UWP.Utils;
+﻿using Newtonsoft.Json;
+using PokemonGo_UWP.Utils;
+using PokemonGo_UWP.Utils.Helpers;
 using PokemonGo_UWP.Views;
 using POGOProtos.Data;
 using POGOProtos.Data.Player;
@@ -15,12 +17,16 @@ namespace PokemonGo_UWP.Entities
         private DelegateCommand _gotoEggDetailsCommand;
         private DelegateCommand _gotoPokemonDetailsCommand;
 
+        [JsonProperty, JsonConverter(typeof(ProtobufJsonNetConverter))]
+        private PokemonData _wrappedData;
+
         public PokemonDataWrapper(PokemonData pokemonData)
         {
-            WrappedData = pokemonData;
+            _wrappedData = pokemonData;
         }
 
-        public PokemonData WrappedData { get; }
+
+        public PokemonData WrappedData => _wrappedData;
 
         /// <summary>
         /// The file name for this Pokemon, located in /Assets/Pokemons

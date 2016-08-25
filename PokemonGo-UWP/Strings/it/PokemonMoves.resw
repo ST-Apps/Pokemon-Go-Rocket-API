@@ -15,8 +15,17 @@
   <data name="Bite" xml:space="preserve">
     <value>Morso</value>
   </data>
+  <data name="CrossChop" xml:space="preserve">
+    <value>Incrocolpo</value>
+  </data>
+  <data name="DarkPulse" xml:space="preserve">
+    <value>Neropulsar</value>
+  </data>
   <data name="Dig" xml:space="preserve">
     <value>Fossa</value>
+  </data>
+  <data name="DoubleSlap" xml:space="preserve">
+    <value>Doppiasberla</value>
   </data>
   <data name="Ember" xml:space="preserve">
     <value>Braciere</value>
@@ -24,14 +33,38 @@
   <data name="Flamethrower" xml:space="preserve">
     <value>Lanciafiamme</value>
   </data>
+  <data name="FlameWheel" xml:space="preserve">
+    <value>Ruotafuoco</value>
+  </data>
+  <data name="HyperBeam" xml:space="preserve">
+    <value>Iper raggio</value>
+  </data>
   <data name="Lick" xml:space="preserve">
     <value>Leccata</value>
+  </data>
+  <data name="LowKick" xml:space="preserve">
+    <value>Colpo basso</value>
   </data>
   <data name="Megahorn" xml:space="preserve">
     <value>Megacorno</value>
   </data>
+  <data name="MetalClaw" xml:space="preserve">
+    <value>Ferrartigli</value>
+  </data>
+  <data name="MoveUnset" xml:space="preserve">
+    <value>Mossa non impostata</value>
+  </data>
   <data name="Pound" xml:space="preserve">
     <value>Botta</value>
+  </data>
+  <data name="PsychoCut" xml:space="preserve">
+    <value>Psicotaglio</value>
+  </data>
+  <data name="QuickAttack" xml:space="preserve">
+    <value>Attacco rapido</value>
+  </data>
+  <data name="RazorLeaf" xml:space="preserve">
+    <value>Foglielama</value>
   </data>
   <data name="Scratch" xml:space="preserve">
     <value>Graffio</value>
@@ -42,8 +75,29 @@
   <data name="Smog" xml:space="preserve">
     <value>Smog</value>
   </data>
+  <data name="SuckerPunch" xml:space="preserve">
+    <value>Sbigoattacco</value>
+  </data>
   <data name="Tackle" xml:space="preserve">
     <value>Azione</value>
+  </data>
+  <data name="TakeDown" xml:space="preserve">
+    <value>Riduttore</value>
+  </data>
+  <data name="ThunderShock" xml:space="preserve">
+    <value>Tuonoshock</value>
+  </data>
+  <data name="ViceGrip" xml:space="preserve">
+    <value>Presa</value>
+  </data>
+  <data name="VineWhip" xml:space="preserve">
+    <value>Frustata</value>
+  </data>
+  <data name="WaterGun" xml:space="preserve">
+    <value>Pistolacqua</value>
+  </data>
+  <data name="WingAttack" xml:space="preserve">
+    <value>Attacco d'ala</value>
   </data>
   <data name="Wrap" xml:space="preserve">
     <value>Avvolgibotta</value>
@@ -54,14 +108,74 @@
   <data name="Acid" xml:space="preserve">
     <value>Acido</value>
   </data>
+  <data name="AcidFast" xml:space="preserve">
+    <value>Acido</value>
+  </data>
+  <data name="AerialAce" xml:space="preserve">
+    <value>Aerassalto</value>
+  </data>
+  <data name="AirCutter" xml:space="preserve">
+    <value>Aerasoio</value>
+  </data>
+  <data name="AirSlash" xml:space="preserve">
+    <value>Eterelama</value>
+  </data>
+  <data name="AncientPower" xml:space="preserve">
+    <value>Forza antica</value>
+  </data>
+  <data name="AquaJet" xml:space="preserve">
+    <value>Aquagetto</value>
+  </data>
+  <data name="AquaTail" xml:space="preserve">
+    <value>Idrondata</value>
+  </data>
   <data name="BiteFast" xml:space="preserve">
     <value>Morso</value>
   </data>
   <data name="Blizzard" xml:space="preserve">
     <value>Bora</value>
   </data>
+  <data name="BodySlam" xml:space="preserve">
+    <value>Corposcontro</value>
+  </data>
+  <data name="BoneClub" xml:space="preserve">
+    <value>Ossoclava</value>
+  </data>
+  <data name="BrickBreak" xml:space="preserve">
+    <value>Breccia</value>
+  </data>
   <data name="Brine" xml:space="preserve">
     <value>Acquadisale</value>
+  </data>
+  <data name="BubbleBeam" xml:space="preserve">
+    <value>Bollaraggio</value>
+  </data>
+  <data name="BubbleFast" xml:space="preserve">
+    <value>Bollaraggio</value>
+  </data>
+  <data name="BugBite" xml:space="preserve">
+    <value>Coleomorso</value>
+  </data>
+  <data name="BugBiteFast" xml:space="preserve">
+    <value>Coleomorso</value>
+  </data>
+  <data name="BugBuzz" xml:space="preserve">
+    <value>Ronzio</value>
+  </data>
+  <data name="Bulldoze" xml:space="preserve">
+    <value>Battiterra</value>
+  </data>
+  <data name="BulletPunch" xml:space="preserve">
+    <value>Pugnoscarica</value>
+  </data>
+  <data name="BulletPunchFast" xml:space="preserve">
+    <value>Pugnoscarica</value>
+  </data>
+  <data name="ConfusionFast" xml:space="preserve">
+    <value>Confusione</value>
+  </data>
+  <data name="CrossPoison" xml:space="preserve">
+    <value>Velenocroce</value>
   </data>
   <data name="Cut" xml:space="preserve">
     <value>Taglio</value>
@@ -69,20 +183,173 @@
   <data name="CutFast" xml:space="preserve">
     <value>Taglio</value>
   </data>
+  <data name="DazzlingGleam" xml:space="preserve">
+    <value>Magibrillio</value>
+  </data>
+  <data name="DisarmingVoice" xml:space="preserve">
+    <value>Incantavoce</value>
+  </data>
   <data name="Discharge" xml:space="preserve">
     <value>Scarica</value>
+  </data>
+  <data name="DragonBreath" xml:space="preserve">
+    <value>Dragospiro</value>
+  </data>
+  <data name="DragonBreathFast" xml:space="preserve">
+    <value>Dragospiro</value>
+  </data>
+  <data name="DragonClaw" xml:space="preserve">
+    <value>Dragartigli</value>
+  </data>
+  <data name="DragonPulse" xml:space="preserve">
+    <value>Dragopulsar</value>
+  </data>
+  <data name="DrainingKiss" xml:space="preserve">
+    <value>Assorbibacio</value>
+  </data>
+  <data name="DrillPeck" xml:space="preserve">
+    <value>Perforbecco</value>
+  </data>
+  <data name="DrillRun" xml:space="preserve">
+    <value>Giravvita</value>
   </data>
   <data name="Earthquake" xml:space="preserve">
     <value>Terremoto</value>
   </data>
+  <data name="EmberFast" xml:space="preserve">
+    <value>Braciere</value>
+  </data>
+  <data name="FeintAttackFast" xml:space="preserve">
+    <value>Finta</value>
+  </data>
+  <data name="FireBlast" xml:space="preserve">
+    <value>Fuocobomba</value>
+  </data>
+  <data name="FireFangFast" xml:space="preserve">
+    <value>Rogodenti</value>
+  </data>
+  <data name="FirePunch" xml:space="preserve">
+    <value>Fuocopugno</value>
+  </data>
+  <data name="FlameBurst" xml:space="preserve">
+    <value>Pirolancio</value>
+  </data>
+  <data name="FlameCharge" xml:space="preserve">
+    <value>Nitrocarica</value>
+  </data>
+  <data name="FlashCannon" xml:space="preserve">
+    <value>Cannonflash</value>
+  </data>
+  <data name="FrostBreath" xml:space="preserve">
+    <value>Alitogelido</value>
+  </data>
+  <data name="FrostBreathFast" xml:space="preserve">
+    <value>Alitogelido</value>
+  </data>
+  <data name="FuryCutter" xml:space="preserve">
+    <value>Tagliofuria</value>
+  </data>
+  <data name="FuryCutterFast" xml:space="preserve">
+    <value>Tagliofuria</value>
+  </data>
+  <data name="GigaDrain" xml:space="preserve">
+    <value>Gigassorbimento</value>
+  </data>
+  <data name="GunkShot" xml:space="preserve">
+    <value>Sporcolancio</value>
+  </data>
   <data name="Headbutt" xml:space="preserve">
     <value>Bottintesta</value>
+  </data>
+  <data name="HeartStamp" xml:space="preserve">
+    <value>Cuorestampo</value>
+  </data>
+  <data name="HeatWave" xml:space="preserve">
+    <value>Ondata di calore</value>
+  </data>
+  <data name="HornAttack" xml:space="preserve">
+    <value>Incornata</value>
   </data>
   <data name="Hurricane" xml:space="preserve">
     <value>Tifone</value>
   </data>
+  <data name="HydroPump" xml:space="preserve">
+    <value>Idropompa</value>
+  </data>
+  <data name="HydroPumpBlastoise" xml:space="preserve">
+    <value>Idropompa</value>
+  </data>
+  <data name="HyperFang" xml:space="preserve">
+    <value>Iperzanna</value>
+  </data>
+  <data name="IceBeam" xml:space="preserve">
+    <value>Geloraggio</value>
+  </data>
+  <data name="IcePunch" xml:space="preserve">
+    <value>Gelopugno</value>
+  </data>
+  <data name="IceShard" xml:space="preserve">
+    <value>Geloscheggia</value>
+  </data>
+  <data name="IceShardFast" xml:space="preserve">
+    <value>Geloscheggia</value>
+  </data>
+  <data name="IcyWind" xml:space="preserve">
+    <value>Ventogelido</value>
+  </data>
+  <data name="IronHead" xml:space="preserve">
+    <value>Metaltestata</value>
+  </data>
+  <data name="KarateChop" xml:space="preserve">
+    <value>Colpo Karate</value>
+  </data>
+  <data name="KarateChopFast" xml:space="preserve">
+    <value>Colpo Karate</value>
+  </data>
+  <data name="LeafBlade" xml:space="preserve">
+    <value>Fendifoglia</value>
+  </data>
+  <data name="LickFast" xml:space="preserve">
+    <value>Leccata</value>
+  </data>
+  <data name="LowKickFast" xml:space="preserve">
+    <value>Colpo basso</value>
+  </data>
+  <data name="LowSweep" xml:space="preserve">
+    <value>Calciobasso</value>
+  </data>
+  <data name="MagnetBomb" xml:space="preserve">
+    <value>Bombagnete</value>
+  </data>
+  <data name="MegaDrain" xml:space="preserve">
+    <value>Megassorbimento</value>
+  </data>
+  <data name="MetalClawFast" xml:space="preserve">
+    <value>Ferrartigli</value>
+  </data>
   <data name="Moonblast" xml:space="preserve">
     <value>Forza Lunare</value>
+  </data>
+  <data name="MudBomb" xml:space="preserve">
+    <value>Fangobomba</value>
+  </data>
+  <data name="MudShot" xml:space="preserve">
+    <value>Colpodifango</value>
+  </data>
+  <data name="MudShotFast" xml:space="preserve">
+    <value>Colpodifango</value>
+  </data>
+  <data name="MudSlapFast" xml:space="preserve">
+    <value>Fangosberla</value>
+  </data>
+  <data name="NightSlash" xml:space="preserve">
+    <value>Nottesferza</value>
+  </data>
+  <data name="OminousWind" xml:space="preserve">
+    <value>Funestovento</value>
+  </data>
+  <data name="ParabolicCharge" xml:space="preserve">
+    <value>Caricaparabola</value>
   </data>
   <data name="Peck" xml:space="preserve">
     <value>Beccata</value>
@@ -90,11 +357,41 @@
   <data name="PeckFast" xml:space="preserve">
     <value>Beccata</value>
   </data>
+  <data name="PetalBlizzard" xml:space="preserve">
+    <value>Fiortempesta</value>
+  </data>
+  <data name="PlayRough" xml:space="preserve">
+    <value>Carineria</value>
+  </data>
+  <data name="PoisonFang" xml:space="preserve">
+    <value>Velenodenti</value>
+  </data>
+  <data name="PoisonJab" xml:space="preserve">
+    <value>Velenopuntura</value>
+  </data>
+  <data name="PoisonJabFast" xml:space="preserve">
+    <value>Velenopuntura</value>
+  </data>
+  <data name="PoisonStingFast" xml:space="preserve">
+    <value>Velenospina</value>
+  </data>
+  <data name="PoundFast" xml:space="preserve">
+    <value>Velenospina</value>
+  </data>
+  <data name="PowerGem" xml:space="preserve">
+    <value>Power Gem</value>
+  </data>
+  <data name="PowerWhip" xml:space="preserve">
+    <value>Gemmoforza</value>
+  </data>
   <data name="Psybeam" xml:space="preserve">
     <value>Psicoraggio</value>
   </data>
   <data name="Psychic" xml:space="preserve">
     <value>Psichico</value>
+  </data>
+  <data name="PsychoCutFast" xml:space="preserve">
+    <value>Psicotaglio</value>
   </data>
   <data name="Psyshock" xml:space="preserve">
     <value>Psicoshock</value>
@@ -102,8 +399,29 @@
   <data name="Psystrike" xml:space="preserve">
     <value>Psicobotta</value>
   </data>
+  <data name="QuickAttackFast" xml:space="preserve">
+    <value>Attacco rapido</value>
+  </data>
+  <data name="RazorLeafFast" xml:space="preserve">
+    <value>Foglielama</value>
+  </data>
   <data name="Rest" xml:space="preserve">
     <value>Riposo</value>
+  </data>
+  <data name="RockSlide" xml:space="preserve">
+    <value>Frana</value>
+  </data>
+  <data name="RockSmashFast" xml:space="preserve">
+    <value>Spaccaroccia</value>
+  </data>
+  <data name="RockThrow" xml:space="preserve">
+    <value>Sassata</value>
+  </data>
+  <data name="RockThrowFast" xml:space="preserve">
+    <value>Sassata</value>
+  </data>
+  <data name="RockTomb" xml:space="preserve">
+    <value>Rocciotomba</value>
   </data>
   <data name="Scald" xml:space="preserve">
     <value>Idrovampata</value>
@@ -114,13 +432,46 @@
   <data name="ScratchFast" xml:space="preserve">
     <value>Graffio</value>
   </data>
+  <data name="SeedBomb" xml:space="preserve">
+    <value>Semebomba</value>
+  </data>
+  <data name="ShadowBall" xml:space="preserve">
+    <value>Palla ombra</value>
+  </data>
+  <data name="ShadowClaw" xml:space="preserve">
+    <value>Ombrartigli</value>
+  </data>
+  <data name="ShadowClawFast" xml:space="preserve">
+    <value>Ombrartigli</value>
+  </data>
+  <data name="ShadowPunch" xml:space="preserve">
+    <value>Pugnodombra</value>
+  </data>
+  <data name="ShadowSneak" xml:space="preserve">
+    <value>Furtivombra</value>
+  </data>
+  <data name="SignalBeam" xml:space="preserve">
+    <value>Segnoraggio</value>
+  </data>
   <data name="Slam" xml:space="preserve">
     <value>Schianto</value>
   </data>
   <data name="Slash" xml:space="preserve">
     <value>Lacerazione</value>
   </data>
+  <data name="SludgeBomb" xml:space="preserve">
+    <value>Fangobomba</value>
+  </data>
+  <data name="SludgeWave" xml:space="preserve">
+    <value>Fangonda</value>
+  </data>
+  <data name="SolarBeam" xml:space="preserve">
+    <value>Solarraggio</value>
+  </data>
   <data name="Spark" xml:space="preserve">
+    <value>Scintilla</value>
+  </data>
+  <data name="SparkFast" xml:space="preserve">
     <value>Scintilla</value>
   </data>
   <data name="Splash" xml:space="preserve">
@@ -129,14 +480,26 @@
   <data name="SplashFast" xml:space="preserve">
     <value>Splash</value>
   </data>
+  <data name="SteelWing" xml:space="preserve">
+    <value>Alacciaio</value>
+  </data>
+  <data name="SteelWingFast" xml:space="preserve">
+    <value>Alacciaio</value>
+  </data>
   <data name="Stomp" xml:space="preserve">
     <value>Pestone</value>
+  </data>
+  <data name="StoneEdge" xml:space="preserve">
+    <value>Pietrataglio</value>
   </data>
   <data name="Struggle" xml:space="preserve">
     <value>Scontro</value>
   </data>
   <data name="Submission" xml:space="preserve">
     <value>Sottomissione</value>
+  </data>
+  <data name="SuckerPunchFast" xml:space="preserve">
+    <value>Sbigoattacco</value>
   </data>
   <data name="Swift" xml:space="preserve">
     <value>Comete</value>
@@ -150,13 +513,43 @@
   <data name="Thunderbolt" xml:space="preserve">
     <value>Fulmine</value>
   </data>
+  <data name="ThunderPunch" xml:space="preserve">
+    <value>Tuonopugno</value>
+  </data>
+  <data name="ThunderShockFast" xml:space="preserve">
+    <value>Tuonoshock</value>
+  </data>
   <data name="Twineedle" xml:space="preserve">
-    <value>Doppio ago</value>
+    <value>Doppio Ago</value>
   </data>
   <data name="Twister" xml:space="preserve">
     <value>Tornado</value>
   </data>
+  <data name="VineWhipFast" xml:space="preserve">
+    <value>Frustata</value>
+  </data>
+  <data name="WaterGunFast" xml:space="preserve">
+    <value>Pistolacqua</value>
+  </data>
+  <data name="WaterGunFastBlastoise" xml:space="preserve">
+    <value>Pistolacqua</value>
+  </data>
+  <data name="WaterPulse" xml:space="preserve">
+    <value>Idropulsar</value>
+  </data>
+  <data name="WingAttackFast" xml:space="preserve">
+    <value>Attacco d'Ala</value>
+  </data>
+  <data name="WrapGreen" xml:space="preserve">
+    <value>Avvolgibotta</value>
+  </data>
+  <data name="WrapPink" xml:space="preserve">
+    <value>Avvolgibotta</value>
+  </data>
   <data name="XScissor" xml:space="preserve">
     <value>Forbice X</value>
+  </data>
+  <data name="ZenHeadbuttFast" xml:space="preserve">
+    <value>Cozzata Zen</value>
   </data>
 </root>

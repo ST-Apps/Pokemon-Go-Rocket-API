@@ -28,15 +28,27 @@ namespace PokemonGo_UWP.Utils
             {
                 if (string.IsNullOrEmpty(SettingsService.Instance.AndroidDeviceID))
                 {
-                    SettingsService.Instance.AndroidDeviceID = Utilities.RandomHex(8);
+                    SettingsService.Instance.AndroidDeviceID = Utilities.RandomHex(16);
                 }
                 return SettingsService.Instance.AndroidDeviceID;
             }
         }
+        public string AndroidBoardName => "shamu";
+        public string AndroidBootloader => "moto-apq8084-71.15";
+        public string DeviceBrand => "google";
+        public string DeviceModel => "shamu";
+        public string DeviceModelIdentifier => "MRA58R";
+        public string DeviceModelBoot => "shamu";
+        public string HardwareManufacturer => "motorola";
+        public string HardwareModel => "Nexus 6";
+        public string FirmwareTags => "release-keys";
+        public string FirmwareFingerprint => "google/shamu/shamu:6.0/MRA58R/2308909:user/release-keys";
 
-        public string FirmwareBrand => "rk3066";
+        public string FirmwareBrand => "shamu";
 
-        public string FirmwareType => "eng";
+        public string FirmwareType => "user";
+
+        public long TimeSnapshot => DeviceInfos.RelativeTimeFromStart;
 
         #endregion
 
@@ -73,49 +85,8 @@ namespace PokemonGo_UWP.Utils
 
         #endregion
 
-        #region Sensors
-
-        private readonly Random _random = new Random();
-
-        private readonly Accelerometer _accelerometer = Accelerometer.GetDefault();
-
-        private readonly Magnetometer _magnetometer = Magnetometer.GetDefault();
-
-        private readonly Gyrometer _gyrometer = Gyrometer.GetDefault();
-
-        private readonly Inclinometer _inclinometer = Inclinometer.GetDefault();
-
-        private static readonly DateTimeOffset _startTime = DateTime.UtcNow;
 
 
-        public TimeSpan TimeSnapshot { get { return DateTime.UtcNow - _startTime; } }
-
-        //public ulong TimestampSnapshot = 0; //(ulong)(ElapsedMilliseconds - 230L) = TimestampSinceStart - 30L
-
-        public double MagnetometerX => _magnetometer?.GetCurrentReading()?.MagneticFieldX ?? _random.NextGaussian(0.0, 0.1);
-
-        public double MagnetometerY => _magnetometer?.GetCurrentReading()?.MagneticFieldY ?? _random.NextGaussian(0.0, 0.1);
-
-        public double MagnetometerZ => _magnetometer?.GetCurrentReading()?.MagneticFieldZ ?? _random.NextGaussian(0.0, 0.1);
-
-        public double GyroscopeRawX => _gyrometer?.GetCurrentReading()?.AngularVelocityX ?? _random.NextGaussian(0.0, 0.1);
-
-        public double GyroscopeRawY => _gyrometer?.GetCurrentReading()?.AngularVelocityY ?? _random.NextGaussian(0.0, 0.1);
-
-        public double GyroscopeRawZ => _gyrometer?.GetCurrentReading()?.AngularVelocityZ ?? _random.NextGaussian(0.0, 0.1);
-
-        public double AngleNormalizedX => _inclinometer?.GetCurrentReading()?.PitchDegrees ?? _random.NextGaussian(0.0, 5.0);
-        public double AngleNormalizedY => _inclinometer?.GetCurrentReading()?.YawDegrees ?? _random.NextGaussian(0.0, 5.0);
-        public double AngleNormalizedZ => _inclinometer?.GetCurrentReading()?.RollDegrees ?? _random.NextGaussian(0.0, 5.0);
-
-        public double AccelRawX => _accelerometer?.GetCurrentReading()?.AccelerationX ?? _random.NextGaussian(0.0, 0.3);
-
-        public double AccelRawY => _accelerometer?.GetCurrentReading()?.AccelerationY ?? _random.NextGaussian(0.0, 0.3);
-
-        public double AccelRawZ => _accelerometer?.GetCurrentReading()?.AccelerationZ ?? _random.NextGaussian(0.0, 0.3);
-
-
-        public ulong AccelerometerAxes => 3;
 
         public string Platform => "ANDROID";
 
@@ -135,7 +106,7 @@ namespace PokemonGo_UWP.Utils
                     if(GameClient.Geoposition?.Coordinate?.SatelliteData != null)
                     {
                         //cant find API for this in UWP
-                        //so mwhere to get that data?
+                        //so mwhere to get that data? emulate? is there some service or algorithm for get GPS sattelites info?
                     }
 
                     return _gpsSattelitesInfo.ToArray();
@@ -143,8 +114,54 @@ namespace PokemonGo_UWP.Utils
             }
         }
 
-        #endregion
+        private SensorInfoAndroid _sensors = new SensorInfoAndroid();
+        public ISensorInfo Sensors => _sensors;
 
+        //not filled on android
+        public IActivityStatus ActivityStatus => null;
+
+        private class SensorInfoAndroid : ISensorInfo
+        {
+            private readonly Random _random = new Random();
+
+            private readonly Accelerometer _accelerometer = Accelerometer.GetDefault();
+
+            private readonly Magnetometer _magnetometer = Magnetometer.GetDefault();
+
+            private readonly Gyrometer _gyrometer = Gyrometer.GetDefault();
+
+            private readonly Inclinometer _inclinometer = Inclinometer.GetDefault();
+
+            public long TimeSnapshot => DeviceInfos.RelativeTimeFromStart;
+
+            //public ulong TimestampSnapshot = 0; //(ulong)(ElapsedMilliseconds - 230L) = TimestampSinceStart - 30L
+
+            public double MagnetometerX => _magnetometer?.GetCurrentReading()?.MagneticFieldX ?? _random.NextGaussian(0.0, 0.1);
+
+            public double MagnetometerY => _magnetometer?.GetCurrentReading()?.MagneticFieldY ?? _random.NextGaussian(0.0, 0.1);
+
+            public double MagnetometerZ => _magnetometer?.GetCurrentReading()?.MagneticFieldZ ?? _random.NextGaussian(0.0, 0.1);
+
+            public double GyroscopeRawX => _gyrometer?.GetCurrentReading()?.AngularVelocityX ?? _random.NextGaussian(0.0, 0.1);
+
+            public double GyroscopeRawY => _gyrometer?.GetCurrentReading()?.AngularVelocityY ?? _random.NextGaussian(0.0, 0.1);
+
+            public double GyroscopeRawZ => _gyrometer?.GetCurrentReading()?.AngularVelocityZ ?? _random.NextGaussian(0.0, 0.1);
+
+            public double AngleNormalizedX => _inclinometer?.GetCurrentReading()?.PitchDegrees ?? _random.NextGaussian(0.0, 5.0);
+            public double AngleNormalizedY => _inclinometer?.GetCurrentReading()?.YawDegrees ?? _random.NextGaussian(0.0, 5.0);
+            public double AngleNormalizedZ => _inclinometer?.GetCurrentReading()?.RollDegrees ?? _random.NextGaussian(0.0, 5.0);
+
+            public double AccelRawX => _accelerometer?.GetCurrentReading()?.AccelerationX ?? _random.NextGaussian(0.0, 0.3);
+
+            public double AccelRawY => _accelerometer?.GetCurrentReading()?.AccelerationY ?? _random.NextGaussian(0.0, 0.3);
+
+            public double AccelRawZ => _accelerometer?.GetCurrentReading()?.AccelerationZ ?? _random.NextGaussian(0.0, 0.3);
+
+
+            public ulong AccelerometerAxes => 3;
+
+        }
 
         #region LocationFix
 
@@ -189,10 +206,9 @@ namespace PokemonGo_UWP.Utils
                 // TODO: why 1? need more infos.
                 loc.LocationType = 1;
 
-                //some requests contains absolute utc time and some relative to app start (bug?)
-                loc.Timestamp = (ulong)GameClient.Geoposition.Coordinate.Timestamp.ToUnixTimeMilliseconds();
+                loc.TimeSnapshot = DeviceInfos.RelativeTimeFromStart;
 
-                loc.RadialAccuracy = (float?)GameClient.Geoposition.Coordinate?.Accuracy ?? (float)Math.Floor((float)_random.NextGaussian(1.0, 1.0)); //better would be exp distribution
+                loc.HorizontalAccuracy = (float?)GameClient.Geoposition.Coordinate?.Accuracy ?? (float)Math.Floor((float)_random.NextGaussian(1.0, 1.0)); //better would be exp distribution
 
                 return loc;
             }
@@ -211,10 +227,10 @@ namespace PokemonGo_UWP.Utils
 
             public ulong LocationType { get; private set; }
 
-            public ulong Timestamp { get; private set; }
+            public long TimeSnapshot { get; private set; }
             public float HorizontalAccuracy { get; private set; }
             public float VerticalAccuracy { get; private set; }
-            public float RadialAccuracy { get; private set; }
+            public float Unknown20 { get; private set; }
 
         }
 

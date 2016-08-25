@@ -1,0 +1,573 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bulbasaur.Description" xml:space="preserve">
+    <value>ניתן לראות Bulbasaur של נאפפינג באור השמש. יש זרע על גבו. מאת לספוג את קרני השמש, הזרע גדל בהדרגה.</value>
+  </data>
+  <data name="Ivysaur.Description" xml:space="preserve">
+    <value>יש ניצן על הגב של פוקימון הזה. כדי לתמוך את משקלו, של Ivysaur את הרגליים ואת תא המטען גדל עבה וחזק. אם זה מתחיל לבלות יותר משקר באור השמש, זה סימן כי הניצן. תפרח לתוך פרח גדול בקרוב.</value>
+  </data>
+  <data name="Venusaur.Description" xml:space="preserve">
+    <value>יש פרח גדול על הגב של Venusaur. הפרח הוא אמר לקחת על צבעים חיים. אם זה נעשה שפע של תזונה, אור השמש. הארומה של הפרח מרגיעה את הרגשות של אנשים.</value>
+  </data>
+  <data name="Charmander.Description" xml:space="preserve">
+    <value>הלהבה הבוערת בקצה זנבו הוא מעיד על הרגשות שלו. הלהבה מהבהב ופעם כאשר Charmander נהנה עצמה. אם פוקימון הופך זועמים, הלהבה שורפת באכזריות</value>
+  </data>
+  <data name="Charmeleon.Description" xml:space="preserve">
+    <value>Charmeleon הורס ללא רחמים את האויבים באמצעות טפריו חדה. אם הוא ייתקל אויב חזק, זה הופך אגרסיבי. במצב זה נרגש, הלהבה בקצה זנבו, להבות בצבע לבן כחלחל.</value>
+  </data>
+  <data name="Charizard.Description" xml:space="preserve">
+    <value>Charizard זבובים סביב השמים בחיפוש אחר יריבים חזקים. של איזה חום גדול כי הן ממיסות משהו לכולנו. עם זאת, זה לא מדליק נשימתו הלוהט מול כל יריב חלשה יותר עצמה.</value>
+  </data>
+  <data name="Squirtle.Description" xml:space="preserve">
+    <value>המעטפת של Squirtle אינה משמשת רק להגנה. מעוגלות צורה של המעטפת החריצים על פני השטח שלו לסייע למזער את עמידות במים, המאפשר את פוקימון לשחות במהירויות גבוהות.</value>
+  </data>
+  <data name="Wartortle.Description" xml:space="preserve">
+    <value>Its tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Pokémon’s toughness as a battler.</value>
+  </data>
+  <data name="Blastoise.Description" xml:space="preserve">
+    <value>Blastoise יש בזרבוביות מים נאות החורגות מהשריון שלו. בזרבוביות מים נאות הם מאוד מדויקים. הם יכולים לירות כדורים של מים עם מספיק דיוק להכות פחיות ריקות ממרחק של יותר מ 160 מטר</value>
+  </data>
+  <data name="Caterpie.Description" xml:space="preserve">
+    <value>Caterpie יש תיאבון רעבתנית. זה יכול לטרוף עלים גדול יותר את הגוף שלו לנגד עיניך. מ שלה אנטנה, פוקימון זה משחרר ריח חזק באופן מחריד.</value>
+  </data>
+  <data name="Metapod.Description" xml:space="preserve">
+    <value>המעטפת כיסוי הגוף של פוקימון זה אינו חזק כמו לוח ברזל. Metapod לא זז הרבה מאוד. . זה נשאר עדיין כי זה בקרביים שלה רך נערכת אבולוציה בתוך הקליפה הקשה.</value>
+  </data>
+  <data name="Butterfree.Description" xml:space="preserve">
+    <value>Butterfree יש יכולת מעולה כדי לחפש דבש טעים פרחים. היא יכולה אפילו לחפש, לחלץ, והיא נושאת דבש פרחים פורחים מעל שישה ק מ מהקן שלו.</value>
+  </data>
+  <data name="Weedle.Description" xml:space="preserve">
+    <value>Weedle יש חוש ריח חד מאוד. הוא מסוגל הבחנה סוגי העלים האהוב שלה מאלה שזה לא אוהב רק על ידי רחרוח עם חוטם האדום הגדול שלה (האף).</value>
+  </data>
+  <data name="Kakuna.Description" xml:space="preserve">
+    <value>Kakuna נשאר משותק כמעט כמו זה דבק עץ. מבפנים, זאת, עמוסים מאוד כמו זה מכין את האבולוציה הקרובה שלה. זו ניכרת מן המעטפת הופכת כמה חם למגע.</value>
+  </data>
+  <data name="Beedrill.Description" xml:space="preserve">
+    <value>Beedrill הוא מאוד טריטוריאלית. אף אחד לא פעם תתקרב מהקן שלו — זה למען ביטחונם. אם בכעס, הם יתקפו בתוך נחיל זועם</value>
+  </data>
+  <data name="Pidgey.Description" xml:space="preserve">
+    <value>Pidgey יש חוש כיוון מושחזות. הוא מסוגל נולד החזרה הביתה לקן שלה, אולם זה יכול להיות הרחק מן סביבתו מוכר.</value>
+  </data>
+  <data name="Pidgeotto.Description" xml:space="preserve">
+    <value>Pidgeotto טוען אזור גדול כמו משלו. פוקימון זה טס מסביב, המסיירים את מרחב המחיה שלו. אם שטחה מופר, זה מראה ללא רחמים ביסודיות מעניש את האויב עם טפריה חדה.</value>
+  </data>
+  <data name="Pidgeot.Description" xml:space="preserve">
+    <value>פוקימון זה יש נוצות מסנוור של נוצות מבריק להפליא. מאמנים רבים הם מוקסמים היופי הבולט של הנוצות על ראשו, עליהם לבחור Pidgeot כמו פוקימון</value>
+  </data>
+  <data name="Rattata.Description" xml:space="preserve">
+    <value>Rattata הוא זהיר בצורה קיצונית. אפילו כשהוא ישן, הוא כל הזמן מאזין על-ידי הזזת האוזניים שלו. . זה לא בררן לגבי שבו הוא חי – זה יגרום מהקן שלו בכל מקום.</value>
+  </data>
+  <data name="Raticate.Description" xml:space="preserve">
+    <value>ניבים חסון של Raticate לגדול בהתמדה. כדי לשמור אותם לקרקע, זה מכרסם על אבנים ובולי. זה אפילו יכול ללעוס קירות בתים.</value>
+  </data>
+  <data name="Spearow.Description" xml:space="preserve">
+    <value>Spearow יש בכי רועש מאוד יכול להישמע יותר מקילומטר אחד משם. אם הבכי שלה גבוהה, מנסה להגן שמע מהדהדים מסביב, זה סימן כי הם מזהירים השני של סכנה.</value>
+  </data>
+  <data name="Fearow.Description" xml:space="preserve">
+    <value>Fearow מזוהה על ידי צוואר ארוך והמקור מוארך. הם עוצבו בנוחות לתפיסת טרף אדמה או מים. זה מעביר שסתמו ביונה ארוך ורזה למרוט את הטרף.</value>
+  </data>
+  <data name="Ekans.Description" xml:space="preserve">
+    <value>Ekans דופק עצמו במערבולת. בעוד היא נחה. בהנחה עמדה זו מאפשרת לו להגיב במהירות איום מכל כיוון עם הבוהק מן ראשו המורמת.</value>
+  </data>
+  <data name="Arbok.Description" xml:space="preserve">
+    <value>וקימון זה חזקה באופן מחריד על מנת מתכווצים דברים עם הגוף שלו. זה יכול אפילו לשטח חביות שמן פלדה. ברגע Arbok עוטפת את הגוף שלו סביב לאויב שלה, בריחה החיבוק עבודה עם שלה הוא בלתי אפשרי.</value>
+  </data>
+  <data name="Pikachu.Description" xml:space="preserve">
+    <value>פוקימון זה יש כיסי אחסון חשמל על הלחיים שלה. אלה מופיעים כדי להיות טעון חשמלית במהלך הלילה בזמן Pikachu ישן. זה מדי פעם. פריקה חשמל כאשר זה דוזי. אחרי שהתעוררתי</value>
+  </data>
+  <data name="Raichu.Description" xml:space="preserve">
+    <value>פוקימון זה מקרין מטען חשמלי חלש מ על כל הגוף שלה שעושה את זה לקחת על קלה זוהר בחושך. Raichu צמחים זנבו באדמה כדי פריקה חשמל.</value>
+  </data>
+  <data name="Sandshrew.Description" xml:space="preserve">
+    <value>Sandshrew יש להסתיר יבש מאוד זה מאוד קשה. פוקימון יכול לגלגל לכדור שדוחה את כל התקפה. בלילה, זה מאורות לתוך חול המדבר לישון.</value>
+  </data>
+  <data name="Sandslash.Description" xml:space="preserve">
+    <value>Sandslash יכול לגלגל את הגופה שלה כאילו זה כדור מכוסה קוצים גדולים. בקרב, פוקימון זה ינסה להפוך את האויב להירתע מאת ודקרה אותו עם קוצים שלה. זה ואז קופץ האויב שבו המום לקרוע בפראות עם טפריה חדה.</value>
+  </data>
+  <data name="NidoranFemale.Description" xml:space="preserve">
+    <value>Nidoran♀ יש ווים להפריש רעל חזק. הם חשבו פיתחו הגנה עבור זה פוקימון גוף קטן. כאשר זועמים, זה משחרר רעלן נורא מן הקרן שלו.</value>
+  </data>
+  <data name="Nidorina.Description" xml:space="preserve">
+    <value>כאשר Nidorina עם המשפחה או החברים שלהם, הם שומרים את הדוקרנים חבוי כדי למנוע פוגעים אחד בשני. פוקימון זה מופיע להיות עצבני, אם מופרדים מן האחרים.</value>
+  </data>
+  <data name="Nidoqueen.Description" xml:space="preserve">
+    <value>הגוף של Nidoqueen הוא עטוף קשקשים קשה מאוד. . זה מיומן על שליחת האויבים עף עם תיקולים קשים. פוקימון זה היא-כאשר החזק שלה הוא בהגנה על צאצאיו.</value>
+  </data>
+  <data name="NidoranMale.Description" xml:space="preserve">
+    <value>Nidoran♂ פיתחה שרירי הזזת האוזניים שלו. והודות להם, האוזניים ניתן להעביר באופן חופשי בכל כיוון. אפילו שמץ הצליל לא חמק מעיני של פוקימון הזה.</value>
+  </data>
+  <data name="Nidorino.Description" xml:space="preserve">
+    <value>Nidorino יש קרן זה הוא יותר קשה מאשר יהלום. אם הוא חש נוכחות עויינת, כל הכיפה על גבו לסמור בבת אחת, זה מאתגר את האויב בכל כוחו.</value>
+  </data>
+  <data name="Nidoking.Description" xml:space="preserve">
+    <value>הזנב עבה של Nidoking חבילות כוח הרסני מאוד. בחבטה אחת, זה יכול להפיל את מגדל השידור מתכת. ברגע זה פוקימון הולך על השתוללות, יש לעצור את זה.</value>
+  </data>
+  <data name="Clefairy.Description" xml:space="preserve">
+    <value>על כל לילה של ירח מלא, קבוצות של פוקימון הזה לצאת החוצה לשחק. כאשר מגיע השחר, Clefairy עייף לחזור שלהם ההר שקט נסוג וללכת לישון כל אחד נגד השני.</value>
+  </data>
+  <data name="Clefable.Description" xml:space="preserve">
+    <value>Clefable עובר על-ידי דילוג בקלילות, כאילו זה היה עף בעזרת כנפיו. שלב קופצני שלו מאפשר זה אפילו ללכת על המים. זה ידוע לקחת מטייל על אגמים בלילות שקטים, לאור ירח.</value>
+  </data>
+  <data name="Vulpix.Description" xml:space="preserve">
+    <value>בתוך הגוף של Vulpix שורפת הלהבה אף פעם לא יוצא. במהלך היום, כאשר החום עולה, פוקימון זה משחרר להבות מהפה שלה כדי למנוע את הגוף שלה גדל יותר מדי חם.</value>
+  </data>
+  <data name="Ninetales.Description" xml:space="preserve">
+    <value>האגדה הזו באה Ninetales כאשר אשפים תשעה בעלי כוחות הקדושה התמזגו לאחד. פוקימון זה מה שתצטרך — זה יכול להבין דיבור אנושי.</value>
+  </data>
+  <data name="Jigglypuff.Description" xml:space="preserve">
+    <value>כאשר זה פוקימון שר, זה אף פעם לא השהיית לנשום. אם זהו קרב נגד יריב בקלות להירדם, Jigglypuff לא יכול לנשום, מסכן את חייו שלו.</value>
+  </data>
+  <data name="Wigglytuff.Description" xml:space="preserve">
+    <value>Wigglytuff’s body is very flexible. By inhaling deeply, this Pokémon can inflate itself seemingly without end. Once inflated, Wigglytuff bounces along lightly like a balloon.</value>
+  </data>
+  <data name="Zubat.Description" xml:space="preserve">
+    <value>Zubat מונע אור השמש כי חשיפה גורם לה להיות לא בריא. במהלך היום, זה נשאר במערות או מתחת לשולי הגג הישן בתים, שינה בעת תלוי הפוך.</value>
+  </data>
+  <data name="Golbat.Description" xml:space="preserve">
+    <value>Golbat נושך למטה על הטרף עם ארבעת הניבים שלו ושותה הדם של הקרבן. הוא הופך פעיל בלילות כדיו כהה ללא ירח, מתעופפים לתקוף אנשים ואת פוקימון.</value>
+  </data>
+  <data name="Oddish.Description" xml:space="preserve">
+    <value>Oddish ב מחפש קרקע פורייה, עשירות, ולאחר מכן צמחים עצמה. במהלך היום, בזמן זה נטוע, הרגליים של פוקימון זה נחשבים לשנות צורה ולהפוך דומה לשורשים של עצים.</value>
+  </data>
+  <data name="Gloom.Description" xml:space="preserve">
+    <value>מלועו Gloom נוטפת דבש זה מריח נורא לחלוטין. ככל הנראה, זה אוהב את הסירחון הנורא. הוא מרחרח את האדים יתמודד ולאחר מכן מזיל יותר של דבש שלו</value>
+  </data>
+  <data name="Vileplume.Description" xml:space="preserve">
+    <value>Vileplume בעל עלי כותרת הגדול ביותר בעולם. הם משמשים כדי למשוך טרף ואז ספוגים עם נבגים רעילים. ברגע הטרף. אתה מרותק למיטה, פוקימון זה תופס וזלל אותם.</value>
+  </data>
+  <data name="Paras.Description" xml:space="preserve">
+    <value>Paaras יש פטריות טפיליות גוברת על גבו נקרא tochukaso. הם גדלים גדול על ידי ציור חומרים מזינים מהמארח פוקימון החרק הזה. הם מוערכים כמו תרופה להארכת החיים.</value>
+  </data>
+  <data name="Parasect.Description" xml:space="preserve">
+    <value>Parasect ידוע שורצים עצים גדולים בהמוניהם ומסננים חומרים מזינים המטען התחתון ואת השורשים. מתי עץ שורץ מת, הם זזים אל עץ אחר בבת אחת.</value>
+  </data>
+  <data name="Venonat.Description" xml:space="preserve">
+    <value>Venonat הוא אמר התפתחו עם מעיל של שיער דק, נוקשה המכסה את כל הגוף להגנה. זה בעל עיניים גדולות לא להיכשל לאתר טרף אפילו זעיר.</value>
+  </data>
+  <data name="Venomoth.Description" xml:space="preserve">
+    <value>Venomoth הוא ליליים — זה פוקימון זה רק הופך להיות פעיל בלילה. את הטרף האהוב שלה הן חרקים קטנים זה להתאסף סביב פנסי, נמשך אל האור בחשיכה</value>
+  </data>
+  <data name="Diglett.Description" xml:space="preserve">
+    <value>Diglett מגודלים בחוות רוב. הסיבה היא פשוטה-איפה זה פוקימון בורוז, הקרקע שנשאר חרשו בצורה מושלמת עבור שתילת יבולים. האדמה הזו נעשית אידיאלי לגידול ירקות טעים.</value>
+  </data>
+  <data name="Dugtrio.Description" xml:space="preserve">
+    <value>Dugtrio הם למעשה שלישייה שנערכה גוף אחד. כתוצאה מכך, כל שלישיה חושב בדיוק כמו השלישייה שני אחרים. הם פועלים בשיתוף פעולה זה שנתנו ללא סוף</value>
+  </data>
+  <data name="Meowth.Description" xml:space="preserve">
+    <value>Meowth נסוג טפריו חדה לתוך כפותיו slinkily להגניב על ללא ביצוע כל הצעדים מפלילות. מסיבה כלשהי, זה פוקימון אוהב מטבעות נוצצים נצנצים עם אור.</value>
+  </data>
+  <data name="Persian.Description" xml:space="preserve">
+    <value>Persian יש 6 שפם מודגש זה לתת לו מראה של קשיחות. . שפם הגיוני אוויר התנועות לקבוע מהי בסביבה שמסביב של פוקימון. הוא הופך להיות צייתן, אם תפס את שפם.</value>
+  </data>
+  <data name="Psyduck.Description" xml:space="preserve">
+    <value>אם היא משתמשת בכוחה מסתורי, Psyduck לא זוכר שעשה כן. הוא כנראה לא יכול ליצור זיכרון של אירוע כזה כי זה הולך לתוך מצב זה דומה לשינה עמוקה.</value>
+  </data>
+  <data name="Golduck.Description" xml:space="preserve">
+    <value>Golduck הוא השחיין המהיר ביותר בין כל פוקימון. זה. שוחה ללא מאמץ, אפילו במחוספס, הים הסוער. זה לפעמים מציל אנשים בשברי אניות מפרפר בים הפתוח.</value>
+  </data>
+  <data name="Mankey.Description" xml:space="preserve">
+    <value>כאשר Mankey מתחיל לרעוד, הנשימה באף שלה הופך מחוספס, זה סימן בטוח כי זה הופך כועס. עם זאת, כי זה הולך קריזה המתנשאים באופן כמעט מיידי, זה בלתי אפשרי שמישהו. לברוח שזעמו.</value>
+  </data>
+  <data name="Primeape.Description" xml:space="preserve">
+    <value>Primeape הופך זועם, מחזור הדם שלה היא שיפרה. בתורו, שריריה נעשים עוד יותר. עם זאת, היא גם הופכת להיות הרבה פחות חכם באותו זמן.</value>
+  </data>
+  <data name="Growlithe.Description" xml:space="preserve">
+    <value>Growlithe יש חוש ריח מעולה. ברגע זה מריח משהו, פוקימון הזה לא אשכח את הריח, לא משנה מה. הוא משתמש חוש הריח מתקדם שלה כדי לקבוע את הרגשות של היצורים החיים האחרים.</value>
+  </data>
+  <data name="Arcanine.Description" xml:space="preserve">
+    <value>Arcanine ידועה בשל מהירותו גבוהה. הוא אמר כדי להיות מסוגל לרוץ יותר מ מ-6200 מייל יחיד יום ולילה. האש השם בפראות בתוך הגוף של פוקימון הזה הוא מקור הכוח שלו.</value>
+  </data>
+  <data name="Poliwag.Description" xml:space="preserve">
+    <value>Poliwag יש עור דק מאוד. זה אפשרי לראות את ההתלהבות שלך ספירלה של פוקימון ישר דרך העור. למרות הרזון שלה, אולם, העור הוא גם מאוד גמיש. ניבים חדים אפילו לקפוץ ישר אותה.</value>
+  </data>
+  <data name="Poliwhirl.Description" xml:space="preserve">
+    <value>פני השטח של הגוף של Poliwhirl הוא תמיד רטוב חלקלק עם נוזל מגעיל. בגלל קרוי חלקלק, זה יכול בקלות להחליק והחלק מתוך מציפורני כל אויב בקרב.</value>
+  </data>
+  <data name="Poliwrath.Description" xml:space="preserve">
+    <value>של Poliwrath מפותחות מאוד, שרירים חזקים, לעולם לא יצמח עייף, אולם כמה תרגילים. זה כל כך חזק ללא לאות, פוקימון זה לשחות אחורה וקדימה מעבר לאוקיינוס, ללא מאמץ.</value>
+  </data>
+  <data name="Abra.Description" xml:space="preserve">
+    <value>Abra צריך לישון במשך 18 שעות ביום. אם לא, פוקימון זה מאבד את היכולת להשתמש בכוחות טלקינטית. אם יותקף, Abra בורח באמצעות Teleport, בעוד הוא עדיין ישן.</value>
+  </data>
+  <data name="Kadabra.Description" xml:space="preserve">
+    <value>Kadabra מחזיקה כפית של כסף ביד שלה. הכפית משמש כדי להגביר את גלי אלפא במוח שלה. בלי הכפית, נאמר על פוקימון יוגבל ל חצי הכמות הרגילה של כוחותיה טלקינטית.</value>
+  </data>
+  <data name="Alakazam.Description" xml:space="preserve">
+    <value>המוח של Alakazam גדל ללא הרף, עד אין קץ הכפלת תאי המוח. המוח מדהים הזה נותן פוקימון זה איי. קיו גבוה להדהים של 5000. יש זיכרון יסודית של כל מה שהתרחשה בעולם.</value>
+  </data>
+  <data name="Machop.Description" xml:space="preserve">
+    <value>תרגילי Machop על ידי hefting סביב Graveler כאילו היה משקולת. ישנם כמה Machop זה לטייל בעולם בחיפוש כדי לשלוט בסוגים שונים של אומנויות לחימה</value>
+  </data>
+  <data name="Machoke.Description" xml:space="preserve">
+    <value>Machoke מתחייב פיתוח גוף כל יום גם היא מסייעת לאנשים עם קשה, תובענית מבחינה פיזית עבודה. על הימים שבהם ראשים, זה פוקימון אל השדות ואל הרים כדי להתאמן ולהתאמן.</value>
+  </data>
+  <data name="Machamp.Description" xml:space="preserve">
+    <value>Machamp מכונה של פוקימון מי ששלט בכל סוג של אמנויות לחימה. אם זה תופס האויב עם ארבע זרועות שלה, הקרב נגמר הכל מלבד. האויב האומלל נזרק הרחק מעבר לאופק.</value>
+  </data>
+  <data name="Bellsprout.Description" xml:space="preserve">
+    <value>גוף גמיש ודק של Bellsprout מאפשר זה עיקול ו סוויי כדי למנוע כל התקפה, עם זאת חזקה. זה יכול להיות. מלועו, זה פוקימון יורקת נוזל מאכל שממיסה אפילו ברזל.</value>
+  </data>
+  <data name="Weepinbell.Description" xml:space="preserve">
+    <value>Weepinbell יש קרס גדול על החלק האחורי שלה. בלילה, פוקימון ווים על ענף של עץ והולך לישון. אם זה זז בשינה שלה, זה עשוי להתעורר ולגלות עצמו על הקרקע.</value>
+  </data>
+  <data name="Victreebel.Description" xml:space="preserve">
+    <value>Victreebel יש גפן ארוך המשתרע מן הראש שלה. את הצמח הוא נופף, הפילה על כאילו היה חיים כדי למשוך טרף. כאשר הטרף תמימים מתקרב, פוקימון זה בולע כל.</value>
+  </data>
+  <data name="Tentacool.Description" xml:space="preserve">
+    <value>Tentacool סופג אור השמש, שובר אותו באמצעות מים בתוך הגופה כדי להמירו לאנרגיה קרן. פוקימון זה יורה קרני מן האיבר עגול קטן מעל העיניים שלה.</value>
+  </data>
+  <data name="Tentacruel.Description" xml:space="preserve">
+    <value>Tentacruel יש זרועות שניתן בחופשיות מוארכת או מקוצר כרצונם. הוא לוכד את הטרף עם זרועות שלו, מחליש את הטרף על ידי מינון זה עם רעלן קשים. זה יכול לתפוס טרף עד 80 באותו זמן.</value>
+  </data>
+  <data name="Geodude.Description" xml:space="preserve">
+    <value>כאשר Geodude ישן עמוק, זה קוברת עצמה באמצע הדרך לתוך הקרקע. זה לא חלום, אפילו אם מטיילים נעלה עליו מבלי משים. בבוקר, פוקימון זה מתגלגל במורד בחיפוש אחר מזון.</value>
+  </data>
+  <data name="Graveler.Description" xml:space="preserve">
+    <value>אבנים הן האוכל האהוב של Graveler. פוקימון זה לטפס על הר מהבסיס אל פסגת ההר crunchingly ובמסעות על סלעים כל הזמן. כשמגיעים הפסגה, הוא מתגלגל בחזרה לתחתית.</value>
+  </data>
+  <data name="Golem.Description" xml:space="preserve">
+    <value>Golem ידוע מתגלגל במורד מההרים. כדי למנוע מהם לתוך הבתים של אנשים במורד ההר, חריצים נחפרו לדפנות של ההרים כדי לשמש מדריך דרכים שהסחת. את הקורס של פוקימון הזה.</value>
+  </data>
+  <data name="Ponyta.Description" xml:space="preserve">
+    <value>Ponyta חלש מאוד בלידה. זה בקושי מסוגל לעמוד. פוקימון זה מתחזקת על ידי למטה כדי לשמור על קשר עם האב שלו</value>
+  </data>
+  <data name="Rapidash.Description" xml:space="preserve">
+    <value>Rapidash בדרך כלל ניתן לראות cantering כבדרך אגב, שדות ומישורים. עם זאת, כאשר זה פוקימון הופך רציני, מאנס הלוהט שלה נורים ומתלקחים כפי שזה הנושא את דרכו עד 150 קמ ש.</value>
+  </data>
+  <data name="Slowpoke.Description" xml:space="preserve">
+    <value>Slowpoke משתמש זנבו לתפוס טרף על ידי טבילת האזוב במים לצד הנהר. עם זאת, פוקימון זה לעיתים קרובות שוכח מה זה עושה, לעיתים קרובות מבלה ימים כולו רק בטלנות על שפת המים.</value>
+  </data>
+  <data name="Slowbro.Description" xml:space="preserve">
+    <value>הזנב של Slowbro יש Shellder מחובר היטב עם ביס. כתוצאה מכך, הזנב אינם יכולים לשמש עבור לדוג יותר. זה גורם Slowbro לשחות ובחוסר לתפוס טרף במקום.</value>
+  </data>
+  <data name="Magnemite.Description" xml:space="preserve">
+    <value>Magnemite צף באוויר על ידי פליטת גלים אלקטרומגנטיים מיחידות אצל הצדדים שלה. הגלים האלה לחסום את כוח המשיכה. פוקימון זה הופך להיות מסוגל טיסה, אם אספקת חשמל פנימית שלו תיגמר.</value>
+  </data>
+  <data name="Magneton.Description" xml:space="preserve">
+    <value>Magneton פולט כוח מגנטי רב עוצמה, אשר היא קטלנית מכשירי אלקטרוניקה ודיוק. מסיבה זו, הוא אמר כי כמה עיירות להזהיר אנשים לשמור זה פוקימון בתוך כדור Poké.</value>
+  </data>
+  <data name="Farfetchd.Description" xml:space="preserve">
+    <value>Farfetch'd נתפסת תמיד עם גבעול של צמח כלשהו. ככל הנראה, ישנם גבעולי טוב, גבעולי רע. פוקימון זה כבר ידוע להילחם עם אחרים על הגבעול.</value>
+  </data>
+  <data name="Doduo.Description" xml:space="preserve">
+    <value>שני ראשים של Doduo מכילים המוח זהים לחלוטין. מחקר מדעי דיווחו כי במקרים נדירים, יהיו דוגמאות זה פוקימון הפו סטים שונים של המוח.</value>
+  </data>
+  <data name="Dodrio.Description" xml:space="preserve">
+    <value>ככל הנראה, ראשי אינם החלקים היחידה של הגוף, כי Dodrio יש שלושה. יש שלוש קבוצות של הלב והריאות, אז זה מסוגל לרוץ מרחקים ארוכים ללא מנוחה.</value>
+  </data>
+  <data name="Seel.Description" xml:space="preserve">
+    <value>Seel צד אחר טרף בים הקפוא מתחת הסדינים של קרח. כאשר הוא צריך לנשום, זה מכה חור דרך הקרח עם המקטע בחדות הבולטות של הראש.</value>
+  </data>
+  <data name="Dewgong.Description" xml:space="preserve">
+    <value>Dewgong אוהב מנמנמת על הקרח קר. המראה של זה פוקימון ישן על קרחון בטעות נחשב בתולת ים על ידי מלח לפני זמן רב.</value>
+  </data>
+  <data name="Grimer.Description" xml:space="preserve">
+    <value>Grimer הגיח כל הטינופת הסתדר על קרקעית הים מזוהם. פוקימון זה אוהבת כל דבר מלוכלך. זה כל הזמן דליפות נוזל להחריד בחיידקים מן בכל הגוף שלו.</value>
+  </data>
+  <data name="Muk.Description" xml:space="preserve">
+    <value>המאכל האהוב של פוקימון הזה הוא כל דבר מלוכלך. בעיירות מלוכלך שבו אנשים חושבים על לזרוק אשפה ברחובות, Muk בטוחים לאסוף.</value>
+  </data>
+  <data name="Shellder.Description" xml:space="preserve">
+    <value>בלילה, פוקימון זה משתמש לשונה רחבה כדי לחפור חור בחול קרקע, ואז לישון ביום זה. בעוד הוא ישן, Shellder סוגר את השריון שלו, אך משאירה את הלשון שלו מבלים.</value>
+  </data>
+  <data name="Cloyster.Description" xml:space="preserve">
+    <value>Cloyster הוא מסוגל לשחות בים. היא עושה זאת על ידי בליעת מים, ואז לטוס זה לכיוון החלק האחורי. פוקימון זה יורה קוצים מהשריון שלו באמצעות אותה שיטה.</value>
+  </data>
+  <data name="Gastly.Description" xml:space="preserve">
+    <value>Gastly מורכב ברובו חומר גזי. כאשר נחשף רוח חזקה, גוף גזי במהירות והרצינות משם. קבוצות של אשכול פוקימון מתחת לשולי הגג של בתים כדי להימלט שאיכנע רוח.</value>
+  </data>
+  <data name="Haunter.Description" xml:space="preserve">
+    <value>Haunter הוא פוקימון מסוכן. אם אחד מאותת לך כשהיא צפה בחשיכה, אתה לא חייב להתקרב לזה פוקימון זה ינסה ללקק אותך עם הלשון שלה. ולגנוב את החיים שלך.</value>
+  </data>
+  <data name="Gengar.Description" xml:space="preserve">
+    <value>לפעמים, בלילה אפל, הצל שלך נזרק על ידי פנסי הרחוב לפתע, ומדהים שהולכי. אותך. זה למעשה Gengar פועל מעבר לך, מתיימר להיות הצל שלך</value>
+  </data>
+  <data name="Onix.Description" xml:space="preserve">
+    <value>Onix יש מגנט במוח שלה. היא פועלת כמו מצפן כך פוקימון זה אינו מאבד כיוון בזמן זה חופר. ככל שהוא גדל בוגרים, הגוף שלה הופך יותר ויותר יותר עגול וחלק.</value>
+  </data>
+  <data name="Drowzee.Description" xml:space="preserve">
+    <value>אם האף שלך הופך למגרד, בזמן שאתה ישן, זה סימן בטוח כי אחד של פוקימון אלה הוא עומד מעל הכרית שלך ואני מנסה לאכול את החלום שלך דרך הנחיריים שלך.</value>
+  </data>
+  <data name="Hypno.Description" xml:space="preserve">
+    <value>Hypno מחזיקה במטוטלת ביד שלה. התנועה מאבן־גיר ונצנצים המטוטלת להרדים את האויב למצב עמוק של היפנוזה. בזמן זה פוקימון מחפשת טרף, הוא מצחצח את המטוטלת.</value>
+  </data>
+  <data name="Krabby.Description" xml:space="preserve">
+    <value>Krabby חיה על החופים, המתיישבת בתוך חורים חפורים לתוך החול. בחופים חוליים עם מעט מזון, פוקימון אלה ניתן לראות מתווכחים אחד עם השני על הטריטוריה.</value>
+  </data>
+  <data name="Kingler.Description" xml:space="preserve">
+    <value>Kingler יש של טופר עצום, מנופחים. זה גלים זה טופר ענק באוויר כדי לתקשר עם אחרים. עם זאת, כי הצבת כל כך כבדה, פוקימון במהירות צמיגים.</value>
+  </data>
+  <data name="Voltorb.Description" xml:space="preserve">
+    <value>Voltorb הוא רגיש מאוד — זה מתפוצץ על כלל של זעזועים. השמועה אומרת כי תחילה נוצר כאשר כדור לתקוע נחשף דופק חזק של אנרגיה.</value>
+  </data>
+  <data name="Electrode.Description" xml:space="preserve">
+    <value>אחד המאפיינים של Electrode היא המשיכה לחשמל. זה פוקימון בעיתיות המופיע בעיקר על תחנות כוח חשמל ניזונים חשמל רק נוצרה.</value>
+  </data>
+  <data name="Exeggcute.Description" xml:space="preserve">
+    <value>פוקימון זה מורכב שש ביצים בצורת אשכול לסרוג מקרוב. שש ביצים מושכים אחד את השני ו ספין סביב. כאשר סדקים מופיעים יותר ויותר על הביצים, Exeggcute קרובה האבולוציה.</value>
+  </data>
+  <data name="Exeggutor.Description" xml:space="preserve">
+    <value>Exeggutor הגיעה במקור הטרופיים. הראשים שלו לגדול בהתמדה גדולה יותר מחשיפה לשמש חזקה. הוא אמר כי כאשר ראשי ליפול, הם לקבץ יחד כדי ליצור Exeggcute.</value>
+  </data>
+  <data name="Cubone.Description" xml:space="preserve">
+    <value>Cubone פינס של האמא זה לעולם לא תראה שוב. רואים דמיון של אימו בירח המלא, הוא בוכה. כתמי הדם על הגולגולת שפוקימון לובש מבוצעים על ידי הוא מזיל הדמעות.</value>
+  </data>
+  <data name="Marowak.Description" xml:space="preserve">
+    <value>Marowak הוא צורה מפותחת של Cubone יש להתגבר על עגמומיותה על אובדן אמו, גדל קשה. של פוקימון זה מחוסמת, רוח מוקשח אינו נשבר בקלות.</value>
+  </data>
+  <data name="Hitmonlee.Description" xml:space="preserve">
+    <value>הרגליים של Hitmonlee בחופשיות חוזה ולמתוח. באמצעות הרגליים אביבי האלה, זה קערות על אויבים עם הרסנית בעיטות. לאחר הקרב, הוא מעסה את הרגליים שלה, משחרר את השרירים כדי להתגבר על העייפות.</value>
+  </data>
+  <data name="Hitmonchan.Description" xml:space="preserve">
+    <value>Hitmonchan הוא אמר להחזיק את הרוח של מתאגרף מי היה לעבוד לקראת אליפות העולם. פוקימון זה לא יוותר ההתאחדות בשעת מצוקה, ויש של חת.</value>
+  </data>
+  <data name="Lickitung.Description" xml:space="preserve">
+    <value>בכל פעם Lickitung נתקל משהו חדש, זה ובהרצאותיו נותן זה לק. היא עושה זאת כי זה הצפיה דברים לפי מרקם ולפי הטעם. זה במידה מסוימת שם הדברים חמוץ</value>
+  </data>
+  <data name="Koffing.Description" xml:space="preserve">
+    <value>Koffing מגלם חומרים רעילים. זה מערבב את הרעלים עם הזבל raw לדרך תגובה כימית שתוצאתו לגז רעיל מאוד חזק. גבוה יותר הטמפרטורה, הגז יותר הוא שהומצא על ידי זה פוקימון.</value>
+  </data>
+  <data name="Weezing.Description" xml:space="preserve">
+    <value>Weezing לסירוגין מכווץ, מנפח את הגופות התאום שלה כדי מערבבים יחד גזים רעילים בתוך. יותר הגזים מעורבבים, הופכים הרעלים יותר חזק. פוקימון הופך גם יותר הרקוב.</value>
+  </data>
+  <data name="Rhyhorn.Description" xml:space="preserve">
+    <value>המוח של Rhyhorn הוא קטן מאוד. זה כה צפוף, ואילו בריצה זה שוכח למה זה התחיל לרוץ במקום הראשון. זה כנראה זוכר לפעמים אם זה הרס את משהו.</value>
+  </data>
+  <data name="Rhydon.Description" xml:space="preserve">
+    <value>Rhydon יש קרן זה משמש תרגיל. הוא משמש עבור השמדת וסלעים. פוקימון זה לעתים rams לתוך זרמי מגמה, אך הסתר שיריון דמוי המונעת ממנו הוא מרגיש את החום.</value>
+  </data>
+  <data name="Chansey.Description" xml:space="preserve">
+    <value>Chansey מטילה ביצים תזונתית מעולה על בסיס יומיומי. הביצים כל כך טעים, שהם הם בקלות, בהתלהבות טרפו על ידי אנשים שאיבדו את התיאבון שלהם.</value>
+  </data>
+  <data name="Tangela.Description" xml:space="preserve">
+    <value>גפנים של Tangela להינתק בקלות אם הם חטפו. פעולה זו מתבצעת ללא כאב, ומאפשרת למנוסה מהירה. הגפנים לאיבוד מוחלפים גפנים שזה עתה בוגר ביום למחרת.</value>
+  </data>
+  <data name="Kangaskhan.Description" xml:space="preserve">
+    <value>אם נתקלת עם Kangaskhan הצעיר משחק בפני עצמו, עליך מעולם לא תפריעו לו או לנסות לתפוס אותו. האב של פוקימון התינוק בטוח יהיה באזור, היא תהפוך באלימות זועם על עצמך.</value>
+  </data>
+  <data name="Horsea.Description" xml:space="preserve">
+    <value>אם Horsea חש בסכנה, הוא ניגודיים ריסוס דיו שחור עבות מלועו, לנסות לברוח. פוקימון זה שוחה על ידי בחוכמה מפרפר את הנוסח על גבו.</value>
+  </data>
+  <data name="Seadra.Description" xml:space="preserve">
+    <value>Seadra מייצר מערבולות על ידי סחרור הגוף שלו. מערבולות הם חזקים מספיק כדי לבלוע אפילו סירות הדיג. פוקימון זה מחליש את הטרף השלשלאות האלה, ואז בולע כל.</value>
+  </data>
+  <data name="Goldeen.Description" xml:space="preserve">
+    <value>Goldeen אוהבת לשחות פראיים וחופשיים, אגמים ונהרות. אם אחד של פוקימון אלה מניחים באקווריום, היא לנפץ אפילו העבה ביותר הזכוכית עם אייל אחד של הקרן שלו, להפוך את בריחתו.</value>
+  </data>
+  <data name="Seaking.Description" xml:space="preserve">
+    <value>Seaking הוא מאוד מגונן על הביצים שלה. יהיה כי הזכר והנקבה בתורו המסיירים סביב הקן שלהם וביצים. שומר לעצור ביצים על ידי אלה פוקימון נמשך יותר מחודש.</value>
+  </data>
+  <data name="Staryu.Description" xml:space="preserve">
+    <value>Staryu כנראה מתקשר עם הכוכבים בשמי הלילה על-ידי הבהוב הליבה אדום במרכזו של הגוף שלו. אם חלקי גוף שלה נקרע, פוקימון זה פשוט מחדש את החלקים החסרים ולאחר הגפיים.</value>
+  </data>
+  <data name="Starmie.Description" xml:space="preserve">
+    <value>Starmie שוחה במים על ידי סחרור הגוף בצורת כוכב שלה כאילו היה פרופלור על ספינה. הליבה במרכז הגוף של פוקימון זה זוהר 7 צבעים.</value>
+  </data>
+  <data name="MrMime.Description" xml:space="preserve">
+    <value>Mr. Mime is a master of pantomime. Its gestures and motions convince watchers that something not visible actually exists. Once the watchers are convinced, the not visible thing exists as if it were real.</value>
+  </data>
+  <data name="Scyther.Description" xml:space="preserve">
+    <value>Scyther הוא מהיר מסנוור. מהירותו הקופחת משפר את היעילות של ברייד התאום על הזרועות שלה. מכסחי דשא של פוקימון הזה הם כל כך יעיל, שהם יכולים לחתוך דרך עבה ביומני הרשעים במכה אחת.</value>
+  </data>
+  <data name="Jynx.Description" xml:space="preserve">
+    <value>Jaynx הולך בקצב אחיד, מתנודדת וניער את הירכיים שלה כאילו זה רקדו. התנועות שלה הם כל כך bouncingly מושך, אנשים רואים אותו נאלצים ללחוץ את הירכיים שלהם מבלי לתת כל מחשבה על מה שהם עושים.</value>
+  </data>
+  <data name="Electabuzz.Description" xml:space="preserve">
+    <value>כאשר סערה מגיעה, כנופיות של פוקימון זה מתחרים אחד עם השני כדי לטפס לגבהים כי צפויים להיות מוכה ברקים. כמה עיירות להשתמש Electabuzz במקום כליאי ברק.</value>
+  </data>
+  <data name="Magmar.Description" xml:space="preserve">
+    <value>בקרב, Magmar מכבה חם מאוד מהר מן הגוף שלו כדי להפחיד את היריב שלו. התפרצויות לוהט של פוקימון זה ליצור גלי חום שמציתים דשא ועצים וסביבתה.</value>
+  </data>
+  <data name="Pinsir.Description" xml:space="preserve">
+    <value>Pinsir יש זוג קרניים מסיבית. בולט מפני השטח של הקרניים האלה הם קוצים. לקוצים האלה מונעים עמוק לתוך הגוף האויב מלקחיים סוגר, מקשה על החיפוש עבור האויב להימלט.</value>
+  </data>
+  <data name="Tauros.Description" xml:space="preserve">
+    <value>פוקימון זה לא יהיה מרוצה. אלא אם כן זה הוא המשתוללים בכל עת. אם אין היריב Tauros קרב, היא לחייב על עצים עבותים, לדפוק אותם אל השלווה עצמה.</value>
+  </data>
+  <data name="Magikarp.Description" xml:space="preserve">
+    <value>Magikarp הוא למעשה חסר תועלת בקרב זה רק יכולים להשתכשך. כתוצאה מכך, הוא נחשב לחלש. עם זאת, זה למעשה פוקימון קשוחים מאוד שיכולים לשרוד בגוף כלשהו של מים לא משנה איך זיהום זה.</value>
+  </data>
+  <data name="Gyarados.Description" xml:space="preserve">
+    <value>ברגע Gyarados הולך על השתוללות, דמו בפראות אלים לא תירגע עד זה יש שרפו הכל. ישנן רשומות של מביזתם של פוקימון זה שנמשך חודש שלם.</value>
+  </data>
+  <data name="Lapras.Description" xml:space="preserve">
+    <value>אנשים הניעו Lapras כמעט עד כדי הכחדה. בערבים, פוקימון זה הוא אמר שרים בעצב זה מבקש מה וכמה אחרים מסוגו נותרו עדיין.</value>
+  </data>
+  <data name="Ditto.Description" xml:space="preserve">
+    <value>Ditto מסדר מחדש את המבנה התא שלו. כדי לשנות את עצמה לתוך צורות אחרות. עם זאת, אם תנסה לשנות את עצמה לתוך משהו תוך הסתמכות על הזיכרון שלו, פוקימון זה מצליח לקבל פרטים הלא נכון.</value>
+  </data>
+  <data name="Eevee.Description" xml:space="preserve">
+    <value>Eevee כולל המבנה הגנטי לא יציב, זה פתאום עובר מוטציה בשל הסביבה שבה הוא חי. קרינה מאבנים שונים גורם זה פוקימון להתפתח.</value>
+  </data>
+  <data name="Vaporeon.Description" xml:space="preserve">
+    <value>Vaporeon עברה מוטציה ספונטנית, גדל סנפירים זימים המאפשרים לה לחיות מתחת למים. פוקימון זה יש את היכולת לשלוט בחופשיות מים.</value>
+  </data>
+  <data name="Jolteon.Description" xml:space="preserve">
+    <value>התאים של Jolteon ליצור רמה נמוכה של חשמל. הכוח הזה הוא מוגבר על ידי חשמל סטטי הפרווה שלה, המאפשר את פוקימון לרדת חזיזים. הפרווה bristling עשויה מחטים הטעונים חשמלית.</value>
+  </data>
+  <data name="Flareon.Description" xml:space="preserve">
+    <value>פרווה רכות של Flareon יש מטרה תפקודית – זה משחרר חום לאוויר, כך הגוף שלו לא יתחממו יתר על המידה. טמפרטורת הגוף של פוקימון זה יכול לעלות מקסימום של 1,650 מעלות צלזיוס.</value>
+  </data>
+  <data name="Porygon.Description" xml:space="preserve">
+    <value>Porygon הוא מסוגל החזרה עצמו לגמרי חזרה אל תוכנית נתונים, הזנת הסייברספייס. פוקימון זה הוא העתקה מוגנת אז לא ניתן לשכפל על-ידי העתקת.</value>
+  </data>
+  <data name="Omanyte.Description" xml:space="preserve">
+    <value>Omanyte הוא אחד פוקימון העתיקה, זמן רב-מאז-נכחד זה כבר חידש מ מאובנים על-ידי אנשים. אם הותקף על ידי אויב, הוא נסוג עצמה בתוך קליפתו קשה.</value>
+  </data>
+  <data name="Omastar.Description" xml:space="preserve">
+    <value>Omastar משתמש זרועות שלו כדי ללכוד את טרפו. הוא האמין נכחדו בגלל קונכייתו גדל גם גדול וכבד, גורם את תנועותיה להפוך גם איטי ומשעמם.</value>
+  </data>
+  <data name="Kabuto.Description" xml:space="preserve">
+    <value>Kabuto הוא פוקימון זה חידש מן מאובן. עם זאת, במקרים נדירים ביותר, החיים דוגמאות התגלו. פוקימון לא השתנה בכלל עבור 300 מיליון שנה.</value>
+  </data>
+  <data name="Kabutops.Description" xml:space="preserve">
+    <value>Kabutops שחה מתחת למים כדי לצוד את טרפו בזמנים קדומים. פוקימון התחילה להתפתח ככל הנראה מלהיות תושב מים לחיות ביבשה כפי שניתן לראות מן תחילתו של שינוי הזימים שלו וברגליים.</value>
+  </data>
+  <data name="Aerodactyl.Description" xml:space="preserve">
+    <value>Aerodactyl הוא פוקימון מתקופת הדינוזאורים. זה היה מחדש של החומר הגנטי המופק אמבר. זה היא דמיינה להיות מלך השמיים בזמנים קדומים.</value>
+  </data>
+  <data name="Snorlax.Description" xml:space="preserve">
+    <value>יום טיפוסי של Snorlax מורכב אין יותר מקומות לינה ומסעדות. זה פוקימון כזה צייתן שכבר יש ילדים המשתמשים את הכרס ולקיבולת כמקום לשחק.</value>
+  </data>
+  <data name="Articuno.Description" xml:space="preserve">
+    <value>Articuno הוא ציפור האגדי פוקימון יכול לשלוט קרח. נפנוף כנפיו מקפיא את האוויר. כתוצאה מכך, נאמר כי כאשר זה פוקימון זבובים, שלג יפלו.</value>
+  </data>
+  <data name="Zapdos.Description" xml:space="preserve">
+    <value>Zapdos הוא ציפור האגדי פוקימון בעל יכולת שליטה בחשמל. זה בדרך כלל חי ענני גשם. פוקימון רווחי כוח, אם זה הוצאה על ידי ברקים.</value>
+  </data>
+  <data name="Moltres.Description" xml:space="preserve">
+    <value>Moltres הוא ציפור האגדי פוקימון זה יש את היכולת לשלוט באש. אם זה פוקימון הוא נפגע, הוא אמר כדי לטבול את הגוף שלו תוך המגמה מותכת של הר געש כדי לצרוב, לרפא את עצמו.</value>
+  </data>
+  <data name="Dratini.Description" xml:space="preserve">
+    <value>Dratini ללא הרף משיל את עורו ישנים. היא עושה זאת כי אנרגית החיים בתוך הגוף שלו בונה בהתמדה להגיע לרמות בלתי נשלט.</value>
+  </data>
+  <data name="Dragonair.Description" xml:space="preserve">
+    <value>Dragonair חנויות כמות עצומה של אנרגיה בגוף שלה. הוא אמר כדי לשנות תנאי מזג האוויר בסביבה שלה על ידי פריקת האנרגיה של הגבישים על הצוואר ועל הזנב.</value>
+  </data>
+  <data name="Dragonite.Description" xml:space="preserve">
+    <value>Dragonite הוא מסוגל מסתובב בעולם. רק 16 שעות. זה פוקימון וטובת לב המוביל לאיבוד ספינות בסערה לבטיחות של קרקע.</value>
+  </data>
+  <data name="Mewtwo.Description" xml:space="preserve">
+    <value>Mewtwo הוא פוקימון שנוצר על-ידי מניפולציה גנטית. עם זאת, למרות הכוח מדעי של בני האדם יצר הגוף של פוקימון הזה, הם נכשלו להעניק Mewtwo עם לב רחום.</value>
+  </data>
+  <data name="Mew.Description" xml:space="preserve">
+    <value>Mew הוא אמר להחזיק את ההרכב הגנטי של כל פוקימון. . זה מסוגל לעשות את עצמו לבלתי נראה, בשעה, אז זה מונע לחלוטין הודעה גם אם זה נגש אנשים.</value>
+  </data>
+</root>

@@ -22,10 +22,10 @@
     <value>Connexion avec un compte PTC</value>
   </data>
   <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
-    <value>Pour te connecter tu dois insérer ton Nom d'ulitisaeur/Email et ton mot de passe au dessus. Si tu n'as pas confiance en cette application, ferme là maintenant. Niantic peut te bannir pour l'utilisation de cette application. À utiliser à tes risques et périls.</value>
+    <value>Pour te connecter tu dois insérer ton Nom d'ulitisateur/Email et ton mot de passe au dessus. Si tu n'as pas confiance en cette application, ferme là maintenant. Niantic peut te bannir pour l'utilisation de cette application. À utiliser à tes risques et périls.</value>
   </data>
   <data name="NearbyPokemonTextBlock.Text" xml:space="preserve">
-    <value>Pokémon aperçus</value>
+    <value>proche</value>
   </data>
   <data name="OutOfRangeTextBlock.Text" xml:space="preserve">
     <value>CE POKÉSTOP EST TROP LOIN.</value>
@@ -73,10 +73,10 @@
     <value>Utiliser la carte Niantic</value>
   </data>
   <data name="WeightTextBlock.Text" xml:space="preserve">
-    <value>Poids</value>
+    <value>Poids :</value>
   </data>
   <data name="HeightTextBlock.Text" xml:space="preserve">
-    <value>Taille</value>
+    <value>Taille :</value>
   </data>
   <data name="StardustTextBlock.Text" xml:space="preserve">
     <value>POUSSIÈRE D'ÉTOILES</value>
@@ -95,7 +95,7 @@
     <value>Mémoriser le zoom de la carte</value>
   </data>
   <data name="PokedexCaught.Text" xml:space="preserve">
-    <value>Attrapé:</value>
+    <value>Capturés :</value>
   </data>
   <data name="PokedexEvolutions.Text" xml:space="preserve">
     <value>Évolutions</value>
@@ -107,7 +107,7 @@
     <value>Poids:</value>
   </data>
   <data name="PokedexSeen.Text" xml:space="preserve">
-    <value>Vu:</value>
+    <value>Vus :</value>
   </data>
   <data name="PokedexViewCaught.Text" xml:space="preserve">
     <value>Attrapé</value>
@@ -116,19 +116,19 @@
     <value>Vu</value>
   </data>
   <data name="TimesTextBlock.Text" xml:space="preserve">
-    <value>Heures</value>
+    <value>Temps</value>
   </data>
   <data name="EggDetailButtonTextBlock.Text" xml:space="preserve">
     <value>COMMENCER L'INCUBATION</value>
   </data>
   <data name="EggDetailTextBlock.Text" xml:space="preserve">
-    <value>Utilise un incubateur pour incuber un oeuf.</value>
+    <value>Utilise un incubateur pour couver un oeuf.</value>
   </data>
   <data name="TransferTextBlock.Text" xml:space="preserve">
     <value>TRANSFERER</value>
   </data>
   <data name="SettingsLanguageRestartTextBlock.Text" xml:space="preserve">
-    <value>Vous devez redémarrer l'application pour que les effets soient appliqués</value>
+    <value>Tu dois relancer l'application pour que cela fonctionne.</value>
   </data>
   <data name="SettingsLanguageTextBlock.Text" xml:space="preserve">
     <value>Langue</value>
@@ -140,6 +140,6 @@
     <value>Mode tuile dynamique</value>
   </data>
   <data name="FavoriteTextBlock.Text" xml:space="preserve">
-    <value>FAVORIS</value>
+    <value>FAVORI</value>
   </data>
 </root>

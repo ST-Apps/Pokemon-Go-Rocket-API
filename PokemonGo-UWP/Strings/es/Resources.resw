@@ -140,4 +140,45 @@
   <data name="SettingsRememberMapZoomTextBlock.Text" xml:space="preserve">
     <value>Recordar zoom del mapa</value>
   </data>
+  <data name="PokedexCaught.Text" xml:space="preserve">
+    <value>Capturado:</value>
+  </data>
+  <data name="PokedexEvolutions.Text" xml:space="preserve">
+    <value>Evoluciones</value>
+  </data>
+  <data name="PokedexPokemonHeight.Text" xml:space="preserve">
+    <value>Altura:</value>
+  </data>
+  <data name="PokedexPokemonType.Text" xml:space="preserve">
+    <value>Tipo:</value>
+  </data>
+  <data name="PokedexPokemonWeight.Text" xml:space="preserve">
+    <value>Peso:
+</value>
+  </data>
+  <data name="PokedexText.Text" xml:space="preserve">
+    <value>POKÉDEX
+</value>
+  </data>
+  <data name="PokedexViewCaught.Text" xml:space="preserve">
+    <value>Capturado</value>
+  </data>
+  <data name="EggDetailButtonTextBlock.Text" xml:space="preserve">
+    <value>COMENZAR INCUBACIÓN</value>
+  </data>
+  <data name="EggDetailTextBlock.Text" xml:space="preserve">
+    <value>Usa una incubadora para incubar el Huevo.</value>
+  </data>
+  <data name="TransferTextBlock.Text" xml:space="preserve">
+    <value>TRANSFERIR</value>
+  </data>
+  <data name="SettingsLanguageRestartTextBlock.Text" xml:space="preserve">
+    <value>Debes reiniciar la App para tenga efecto.</value>
+  </data>
+  <data name="SettingsLanguageTextBlock.Text" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="FavoriteTextBlock.Text" xml:space="preserve">
+    <value>FAVORITO</value>
+  </data>
 </root>

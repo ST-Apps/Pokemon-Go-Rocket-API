@@ -204,7 +204,7 @@ Open page with installation files for manual install?</value>
     <value>Transfer succeeded! Got a {0} Candy from the Professor.</value>
   </data>
   <data name="TransferPokemonWarningText" xml:space="preserve">
-    <value>You can't take it back after it's transferred to the Professor. Do you really want to transfer {0} to the Professor?</value>
+    <value>You can't take it back after it's transferred to the Professor.</value>
   </data>
   <data name="ActivityUnknown" xml:space="preserve">
     <value>Unknown</value>
@@ -303,6 +303,16 @@ Open page with installation files for manual install?</value>
     <value>Waiting for network to be back...</value>
   </data>
   <data name="EggHatchMessage" xml:space="preserve">
-    <value>An Egg hatched into a {0}.\nYou also got {1} Stardust, {2} Cany and {3} XP.</value>
+    <value>An Egg hatched into a {0}.
+You also got {1} Stardust, {2} Candy and {3} XP.</value>
+  </data>
+  <data name="EvolvePokemonWarningText" xml:space="preserve">
+    <value>Do you want to evolve {0}?</value>
+  </data>
+  <data name="PowerUpPokemonWarningText" xml:space="preserve">
+    <value>Do you want to use a power up for {0}?</value>
+  </data>
+  <data name="TransferPokemonWarningTitle" xml:space="preserve">
+    <value>Do you really want to transfer {0} to the Professor?</value>
   </data>
 </root>

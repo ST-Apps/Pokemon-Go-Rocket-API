@@ -30,6 +30,11 @@ namespace Superbest_random
             return randNormal;
         }
 
+        public static double NextDouble(this Random r, double minimum, double maximum)
+        {
+            return r.NextDouble() * (maximum - minimum) + minimum;
+        }
+
         /// <summary>
         ///     Generates values from a triangular distribution.
         /// </summary>
