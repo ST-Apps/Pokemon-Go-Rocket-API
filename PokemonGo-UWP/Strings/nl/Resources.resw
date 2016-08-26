@@ -21,8 +21,14 @@
   <data name="InventoryFullTextBlock.Text" xml:space="preserve">
     <value>Je voorraad is vol!</value>
   </data>
+  <data name="RememberMeTextBlock.Text" xml:space="preserve">
+    <value>Herinner mij</value>
+  </data>
   <data name="PtcLoginTextBlock.Text" xml:space="preserve">
     <value>Login met PTC Account</value>
+  </data>
+  <data name="PtcSignUpHyperlink.Content" xml:space="preserve">
+    <value>Maak PTC account aan.</value>
   </data>
   <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
     <value>Je moet je gebruikersnaam/e-mail en wachtwoord invoeren om je aan te melden. Als je dit niet vertrouwt, sluit de app dan. Gebruik deze app op eigen risico.</value>
