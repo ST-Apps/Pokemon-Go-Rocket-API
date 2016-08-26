@@ -175,7 +175,19 @@
     <value>keer</value>
   </data>
   <data name="SettingsRememberMapZoomTextBlock.Text" xml:space="preserve">
-    <value>Onthou kaart zoom</value>
+    <value>Onthoud kaart zoom</value>
+  </data>
+  <data name="SettingsMapRotationModeGPSTextBlock.Text" xml:space="preserve">
+    <value>Roteer automatisch gebaseerd op</value>
+  </data>
+  <data name="NoneBoxItem.Content" xml:space="preserve">
+    <value>Geen</value>
+  </data>
+  <data name="GPSBoxItem.Content" xml:space="preserve">
+    <value>GPS</value>
+  </data>
+  <data name="CompassBoxItem.Content" xml:space="preserve">
+    <value>Kompas</value>
   </data>
   <data name="TransferTextBlock.Text" xml:space="preserve">
     <value>OVERBRENGEN</value>
