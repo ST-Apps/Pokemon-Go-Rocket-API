@@ -62,6 +62,7 @@
                                Margin="10,0,0,0"
                                Text="LOGIN WITH GOOGLE ACCOUNT" />
                 </Button>
+                <HyperlinkButton x:Uid="PtcSignUpHyperlink" NavigateUri="https://club.pokemon.com/us/pokemon-trainer-club/sign-up/" Content="Create PTC Account"></HyperlinkButton>
                 <TextBlock x:Uid="LoginDisclaimerTextBox"
                            Style="{StaticResource TextNormal}"
                            Margin="15,0,15,20"
