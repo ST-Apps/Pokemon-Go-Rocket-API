@@ -281,8 +281,7 @@
         </trans-unit>
         <trans-unit id="NoText" translate="yes" xml:space="preserve">
           <source>NO</source>
-          <target state="needs-review-translation">Hayır</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated">HAYIR</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
         </trans-unit>
         <trans-unit id="NoGpsPermissionsText" translate="yes" xml:space="preserve">
@@ -331,8 +330,7 @@ Elle yükleme için yükleme dosyaları sayfası açılsın mı?</target>
         </trans-unit>
         <trans-unit id="YesText" translate="yes" xml:space="preserve">
           <source>YES</source>
-          <target state="needs-review-translation">Evet</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated">EVET</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
         </trans-unit>
         <trans-unit id="InstinctTeamText" translate="yes" xml:space="preserve">
@@ -511,16 +509,16 @@ Aynı zamanda {1} Stardust, {2} Şeker ve {3} XP kazandın.</target>
         </trans-unit>
         <trans-unit id="CancelText" translate="yes" xml:space="preserve">
           <source>CANCEL</source>
-          <target state="new">CANCEL</target>
+          <target state="translated">İPTAL</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
         </trans-unit>
         <trans-unit id="ItemDiscardWarningText" translate="yes" xml:space="preserve">
           <source>Discard {0}?</source>
-          <target state="new">Discard {0}?</target>
+          <target state="translated">Çöpe {0} at?</target>
         </trans-unit>
         <trans-unit id="SetNickName" translate="yes" xml:space="preserve">
           <source>Set Nickname</source>
-          <target state="new">Set Nickname</target>
+          <target state="translated">İsim Ver</target>
         </trans-unit>
         <trans-unit id="OkText" translate="yes" xml:space="preserve">
           <source>O. K.</source>
@@ -704,7 +702,7 @@ Aynı zamanda {1} Stardust, {2} Şeker ve {3} XP kazandın.</target>
         </trans-unit>
         <trans-unit id="CandyTextBlock.Text" translate="yes" xml:space="preserve">
           <source> CANDY</source>
-          <target state="translated"> ŞEKER</target>
+          <target state="translated"> ŞEKERİ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Watch out: space before the word!</note>
         </trans-unit>
         <trans-unit id="EvolveButton.Content" translate="yes" xml:space="preserve">
