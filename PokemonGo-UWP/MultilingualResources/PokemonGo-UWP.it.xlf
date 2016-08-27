@@ -332,6 +332,7 @@ Vuoi aprire la pagina con il file di installazione per l'installazione manuale?<
         <trans-unit id="YesText" translate="yes" xml:space="preserve">
           <source>YES</source>
           <target state="final" state-qualifier="tm-suggestion">SI</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note> 
         </trans-unit>
         <trans-unit id="InstinctTeamText" translate="yes" xml:space="preserve">
           <source>Instinct</source>
