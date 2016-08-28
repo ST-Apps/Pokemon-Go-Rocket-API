@@ -14,6 +14,7 @@ using PokemonGo.RocketAPI;
 using PokemonGo_UWP.Utils;
 using Template10.Common;
 using Windows.Graphics.Display;
+using PokemonGo_UWP.Utils.Helpers;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -306,7 +307,8 @@ namespace PokemonGo_UWP.Views
 
         private void GameMapControl_TargetCameraChanged(MapControl sender, MapTargetCameraChangedEventArgs args)
         {
-            if (args.ChangeReason == MapCameraChangeReason.UserInteraction && lastAutoPosition != null)
+            var distance = GeoHelper.Distance(lastAutoPosition, args.Camera.Location);
+            if (args.ChangeReason == MapCameraChangeReason.UserInteraction && lastAutoPosition != null && distance > 0)
             {
                 ReactivateMapAutoUpdateButton.Visibility = Visibility.Visible;
             }
