@@ -616,7 +616,7 @@ Hai ottenuto anche {1} Polvere di stella, {2} Caramelle e {3} PE.</target>
         </trans-unit>
         <trans-unit id="NumberTextBlock.Text" translate="yes" xml:space="preserve">
           <source># </source>
-          <target state="final"># </target>
+          <target state="final">+ </target>
           <note from="MultilingualBuild" annotates="source" priority="2">Watch out: there is a space after the #</note>
         </trans-unit>
         <trans-unit id="SlashSpaceCpTextBlock.Text" translate="yes" xml:space="preserve">
@@ -824,7 +824,7 @@ Hai ottenuto anche {1} Polvere di stella, {2} Caramelle e {3} PE.</target>
         </trans-unit>
         <trans-unit id="D_ItemRevive" translate="yes" xml:space="preserve">
           <source>A medicine that can revive fainted Pokémon. It also restores half of a fainted Pokémon's maximum HP.</source>
-          <target state="final">Medicina che può revitalizzare un Pokémon esausto. Restituisce anche metà dei PS massimi di un Pokémon esausto.</target>
+          <target state="final">Medicina che può revitalizzare un Pokémon esausto. Restituisce metà dei PS massimi di un Pokémon.</target>
         </trans-unit>
         <trans-unit id="D_ItemUltraBall" translate="yes" xml:space="preserve">
           <source>An ultra-high performance Poké Ball that provides a higher success rate for catching Pokémon than a Great.</source>
