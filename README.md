@@ -1,7 +1,8 @@
 # Pokèmon Go Client for Windows 10
 
 # Important information
-You can find the installation file for PoGo in [Releases](https://github.com/ST-Apps/PoGo-UWP/releases/).</br> **Please read the whole release information before installing.**
+You can find the installation file for PoGo in [Releases](https://github.com/ST-Apps/PoGo-UWP/releases/).
+**Please read the whole release information before installing.**
 
 # More information
 
