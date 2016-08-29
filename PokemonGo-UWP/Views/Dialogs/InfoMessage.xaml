@@ -24,7 +24,7 @@
                      HorizontalAlignment="Stretch"
                      IsIndeterminate="{x:Bind IsBusy, Mode=OneWay}"
                      Grid.Row="1"
-                     Foreground="White" />
+                     Foreground="{StaticResource ExtendedSplashForegroundColorBrush}" />
     </Grid>
 
 </UserControl>
