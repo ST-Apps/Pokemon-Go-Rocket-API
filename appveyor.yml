@@ -7,16 +7,10 @@ before_build:
     dotnet restore
 build:
   verbosity: minimal
-  - cmd: >-
-    node --version
-    npm --version
-    npm install -g cordova
-    npm install
-build_script:
-- cmd: >-
-    cordova platforms add windows
-    cordova build windows --arch=arm --debug
-    cordova build windows --arch=x64 --debug
-    cordova build windows --arch=x86 --debug
-artifacts:
-- path: platforms\windows\**\*.appx
+  artifacts:
+  - path: platforms\windows\**\*.appx
+    name: PoGo
+  
+  - path: platforms\windows\**\*.appx
+    name: PoGo
+    type: appx
