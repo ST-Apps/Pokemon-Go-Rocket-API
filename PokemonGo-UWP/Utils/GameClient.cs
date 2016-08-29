@@ -547,7 +547,7 @@ namespace PokemonGo_UWP.Utils
                 MovementThreshold = 5
             };
 
-            Busy.SetBusy(true, Resources.CodeResources.GetString("GettingGpsSignalText"));
+            InfoMessage.SetBusy(true, Resources.CodeResources.GetString("GettingGpsSignalText"));
             Geoposition = Geoposition ?? await _geolocator.GetGeopositionAsync();
             GeopositionUpdated?.Invoke(null, Geoposition);
             _geolocator.PositionChanged += GeolocatorOnPositionChanged;
@@ -562,11 +562,11 @@ namespace PokemonGo_UWP.Utils
                 _heartbeat = new Heartbeat();
             await _heartbeat.StartDispatcher();
             // Update before starting timer
-            Busy.SetBusy(true, Resources.CodeResources.GetString("GettingUserDataText"));
+            InfoMessage.SetBusy(true, Resources.CodeResources.GetString("GettingUserDataText"));
             //await UpdateMapObjects();
             await UpdateInventory();
             await UpdateItemTemplates();
-            Busy.SetBusy(false);
+            InfoMessage.SetBusy(false);
         }
 
         private static async void GeolocatorOnPositionChanged(Geolocator sender, PositionChangedEventArgs args)

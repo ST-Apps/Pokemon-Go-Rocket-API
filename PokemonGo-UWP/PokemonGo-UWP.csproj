@@ -808,6 +808,9 @@
     <Compile Include="ViewModels\SettingsPageViewModel.cs" />
     <Compile Include="ViewModels\LoginPageViewModel.cs" />
     <Compile Include="ViewModels\SearchPokeStopPageViewModel.cs" />
+    <Compile Include="Views\Dialogs\InfoMessage.xaml.cs">
+      <DependentUpon>InfoMessage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\EggDetailPage.xaml.cs">
       <DependentUpon>EggDetailPage.xaml</DependentUpon>
     </Compile>
@@ -904,6 +907,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Views\Dialogs\InfoMessage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\EggDetailPage.xaml">
       <SubType>Designer</SubType>
