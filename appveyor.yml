@@ -7,6 +7,6 @@ before_build:
     dotnet restore
 build:
   verbosity: minimal
+
    artifacts:
   - path: platforms\windows\**\*.appx
- 
