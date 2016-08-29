@@ -7,6 +7,16 @@ before_build:
     dotnet restore
 build:
   verbosity: minimal
-
-   artifacts:
-  - path: platforms\windows\**\*.appx
+  - cmd: >-
+    node --version
+    npm --version
+    npm install -g cordova
+    npm install
+build_script:
+- cmd: >-
+    cordova platforms add windows
+    cordova build windows --arch=arm --debug
+    cordova build windows --arch=x64 --debug
+    cordova build windows --arch=x86 --debug
+artifacts:
+- path: platforms\windows\**\*.appx
