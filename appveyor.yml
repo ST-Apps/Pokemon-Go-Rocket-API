@@ -8,4 +8,4 @@ before_build:
 build:
   verbosity: minimal
 artifacts:
-- path: /PokemonGo-UWP/Utils/ApplicationKeys.cs
+- path: /PokemonGo-UWP/BundleArtifacts/
