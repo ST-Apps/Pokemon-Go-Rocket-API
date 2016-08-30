@@ -525,6 +525,11 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
           <source>Set Nickname</source>
           <target state="translated">Définir un Pseudo</target>
         </trans-unit>
+         <trans-unit id="OkText" translate="yes" xml:space="preserve">
+          <source>O. K.</source>
+        <target state="new">O. K.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Space between . and K</note>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -775,6 +780,11 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         <trans-unit id="FavoriteTextBlock.Text" translate="yes" xml:space="preserve">
           <source>FAVORITE</source>
           <target state="translated">FAVORI</target>
+        </trans-unit>
+        <trans-unit id="AppraiseTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>APPRAISE</source>
+          <target state="new">ÉVALUER</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
         </trans-unit>
       </group>
     </body>
