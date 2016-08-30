@@ -3,6 +3,7 @@ platform: ARM
 before_build:
 - ps: >-
     Invoke-WebRequest -Uri https://gist.githubusercontent.com/jakubsuchybio/cf3f94f185ca57243b0e2e515ffcdced/raw/ab8f9ee30b09efd2d8233eb35ee817a7eba6a872/ApplicationKeys.cs -OutFile ./PokemonGo-UWP/Utils/ApplicationKeys.cs
+
     dotnet restore
 build:
   verbosity: minimal
