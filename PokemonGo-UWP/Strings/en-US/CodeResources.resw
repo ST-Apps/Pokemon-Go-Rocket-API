@@ -327,4 +327,11 @@ You also got {1} Stardust, {2} Candy and {3} XP.</value>
   <data name="SetNickName" xml:space="preserve">
     <value>Set Nickname</value>
   </data>
+  <data name="LadingMessage" xml:space="preserve">
+    <value>LOADING...</value>
+  </data>
+  <data name="WarningMessage1" xml:space="preserve">
+    <value>Remember to be alert at all times.
+Stay aware of your surroundings.</value>
+  </data>
 </root>

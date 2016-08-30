@@ -9,6 +9,8 @@ namespace PokemonGo_UWP.Views
         public Splash(SplashScreen splashScreen)
         {
             InitializeComponent();
+            LoadingScreen.SetBusy(true, Utils.Resources.CodeResources.GetString("LoadingMessage"));
+            this.Visibility = Visibility.Collapsed;
             Window.Current.SizeChanged += (s, e) => Resize(splashScreen);
             Resize(splashScreen);
         }

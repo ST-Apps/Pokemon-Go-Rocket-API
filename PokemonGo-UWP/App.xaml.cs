@@ -67,7 +67,7 @@ namespace PokemonGo_UWP
         public App()
         {
             InitializeComponent();
-            SplashFactory = e => new Splash(e);
+            SplashFactory = e => new LoadingScreen(e);
 
             // ensure unobserved task exceptions (unawaited async methods returning Task or Task<T>) are handled
             TaskScheduler.UnobservedTaskException += TaskScheduler_UnobservedTaskException;

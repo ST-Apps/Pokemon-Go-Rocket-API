@@ -808,6 +808,9 @@
     <Compile Include="ViewModels\SettingsPageViewModel.cs" />
     <Compile Include="ViewModels\LoginPageViewModel.cs" />
     <Compile Include="ViewModels\SearchPokeStopPageViewModel.cs" />
+    <Compile Include="Views\Dialogs\LoadingScreen.xaml.cs">
+      <DependentUpon>LoadingScreen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Dialogs\InfoMessage.xaml.cs">
       <DependentUpon>InfoMessage.xaml</DependentUpon>
     </Compile>
@@ -874,6 +877,7 @@
     <Content Include="Assets\UI\pokestopBG.png" />
     <Content Include="Assets\UI\poksetop.png" />
     <Content Include="Assets\UI\stardust.png" />
+    <Content Include="Assets\Warnings\1.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -907,6 +911,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Views\Dialogs\LoadingScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Dialogs\InfoMessage.xaml">
       <Generator>MSBuild:Compile</Generator>

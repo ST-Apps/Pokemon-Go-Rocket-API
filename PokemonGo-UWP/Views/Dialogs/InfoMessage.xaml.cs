@@ -10,11 +10,11 @@ namespace PokemonGo_UWP.Views
     public sealed partial class InfoMessage : UserControl
     {
         public static readonly DependencyProperty BusyTextProperty =
-            DependencyProperty.Register(nameof(BusyText), typeof(string), typeof(Busy),
+            DependencyProperty.Register(nameof(BusyText), typeof(string), typeof(InfoMessage),
                 new PropertyMetadata("Please wait..."));
 
         public static readonly DependencyProperty IsBusyProperty =
-            DependencyProperty.Register(nameof(IsBusy), typeof(bool), typeof(Busy), new PropertyMetadata(false));
+            DependencyProperty.Register(nameof(IsBusy), typeof(bool), typeof(InfoMessage), new PropertyMetadata(false));
 
         public InfoMessage()
         {
