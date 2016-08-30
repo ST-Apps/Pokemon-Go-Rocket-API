@@ -1,14 +1,18 @@
-version: 1.0.{build}
+version: 0.1.{build}
+os: Visual Studio 2015
+configuration: Debug
 platform: ARM
-before_build:
-- ps: >-
-    Invoke-WebRequest -Uri https://gist.githubusercontent.com/jakubsuchybio/cf3f94f185ca57243b0e2e515ffcdced/raw/ab8f9ee30b09efd2d8233eb35ee817a7eba6a872/ApplicationKeys.cs -OutFile ./PokemonGo-UWP/Utils/ApplicationKeys.cs
-
-    dotnet restore
-  artifacts:
-  - path: platforms\windows\**\*.appx
-    name: PoGo
-  
-  - path: platforms\windows\**\*.appx
-    name: PoGo
-    type: appx
+install:
+- cmd: >-
+    node --version
+    npm --version
+    npm install -g cordova
+    npm install
+build_script:
+- cmd: >-
+    cordova platforms add windows
+    cordova build windows --arch=arm --debug
+    cordova build windows --arch=x64 --debug
+    cordova build windows --arch=x86 --debug
+artifacts:
+- path: platforms\windows\**\*.appx
