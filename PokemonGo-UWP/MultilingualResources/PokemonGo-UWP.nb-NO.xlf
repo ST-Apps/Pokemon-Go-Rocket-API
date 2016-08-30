@@ -125,7 +125,7 @@
         </trans-unit>
         <trans-unit id="D_ItemPotion" translate="yes" xml:space="preserve">
           <source>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 20 points.</source>
-          <target state="final">En spray-type medisin for behandling av sår. Det gjenoppretter HP av en Pokémon med 20 poeng.</target>
+          <target state="final">En spray-type medisin for behandling av sår. Pokémonen sin HP gjenopprettes med 20 poeng.</target>
         </trans-unit>
         <trans-unit id="D_ItemRevive" translate="yes" xml:space="preserve">
           <source>A medicine that can revive fainted Pokémon. It also restores half of a fainted Pokémon's maximum HP.</source>
@@ -318,11 +318,11 @@
         </trans-unit>
         <trans-unit id="PtcLoginTextBlock.Text" translate="yes" xml:space="preserve">
           <source>LOGIN with PTC Account</source>
-          <target state="final">Logg på med PTC bruker</target>
+          <target state="final">Logg inn med PTC bruker</target>
         </trans-unit>
         <trans-unit id="LoginDisclaimerTextBox.Text" translate="yes" xml:space="preserve">
           <source>To login, enter your Username/Email and Password above. If you don't trust this app, please close it now. Niantic may ban you for using this app. Use at your own risk.</source>
-          <target state="final">For å logge inn, må du oppgi Brukernavn/E-post og Passord ovenfor. Hvis du ikke stoler på appen, vennligst lukk den nå. Niantic kan utestenge deg om du bruker appen. Bruk på eget ansvar.</target>
+          <target state="final">For å logge inn må du oppgi Brukernavn/E-post og Passord ovenfor. Hvis du ikke stoler på appen, vennligst lukk den nå. Niantic kan utestenge deg om du bruker appen. Bruk på eget ansvar.</target>
         </trans-unit>
         <trans-unit id="NearbyPokemonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>nearby</source>
@@ -419,7 +419,7 @@
         </trans-unit>
         <trans-unit id="StartDateTextBlock.Text" translate="yes" xml:space="preserve">
           <source>START DATE</source>
-          <target state="final">START DATO</target>
+          <target state="final">STARTDATO</target>
         </trans-unit>
         <trans-unit id="IncubatorsTextBlock.Text" translate="yes" xml:space="preserve">
           <source>INCUBATORS</source>
@@ -532,7 +532,7 @@
         </trans-unit>
         <trans-unit id="SettingsLanguageTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Language</source>
-          <target state="final">Sprøk</target>
+          <target state="final">Språk</target>
         </trans-unit>
         <trans-unit id="SettingsCompassEnabledTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Use compass</source>
@@ -858,7 +858,7 @@
         </trans-unit>
         <trans-unit id="SomethingWentWrongText" translate="yes" xml:space="preserve">
           <source>Something went wrong and app may be unstable now. Do you want to logout and try again?</source>
-          <target state="translated">Noe gikk galt og appen kan være ustabil. Vil du å logge ut og prøve på nytt?</target>
+          <target state="translated">Noe gikk galt og appen kan være ustabil. Vil du logge ut og prøve på nytt?</target>
         </trans-unit>
         <trans-unit id="TimeFormat" translate="yes" xml:space="preserve">
           <source>hh:mm tt</source>
@@ -900,7 +900,7 @@ Vil du åpne nettsiden med installasjonsfilene for manuell installasjon?</target
         </trans-unit>
         <trans-unit id="NoTeamText" translate="yes" xml:space="preserve">
           <source>No Team</source>
-          <target state="final">Ingen lag</target>
+          <target state="final">Ingen Lag</target>
         </trans-unit>
         <trans-unit id="ValorTeamText" translate="yes" xml:space="preserve">
           <source>Valor</source>
@@ -1019,7 +1019,7 @@ Vil du åpne nettsiden med installasjonsfilene for manuell installasjon?</target
         </trans-unit>
         <trans-unit id="Combat" translate="yes" xml:space="preserve">
           <source>Combat</source>
-          <target state="translated">Kamp</target>
+          <target state="translated">CP</target>
         </trans-unit>
         <trans-unit id="Date" translate="yes" xml:space="preserve">
           <source>Date</source>
@@ -1031,7 +1031,7 @@ Vil du åpne nettsiden med installasjonsfilene for manuell installasjon?</target
         </trans-unit>
         <trans-unit id="Health" translate="yes" xml:space="preserve">
           <source>Health</source>
-          <target state="translated">Helse</target>
+          <target state="translated">HP</target>
         </trans-unit>
         <trans-unit id="Name" translate="yes" xml:space="preserve">
           <source>Name</source>
@@ -2442,7 +2442,7 @@ Du fikk også {1} Stjernestøv, {2} Candy og {3} XP.</target>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/POKEDEX.RESW" datatype="resx">
         <trans-unit id="Bulbasaur.Description" translate="yes" xml:space="preserve">
           <source>Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun’s rays, the seed grows progressively larger.</source>
-          <target state="translated">Bulbasaur kan ses slappe av i sterkt sollys. Den har et frø på ryggen. Ved å absorbere solstråler kan frøet vokse større.</target>
+          <target state="translated">Bulbasaur kan bli observert slappe av i sterkt sollys. Den har et frø på ryggen. Ved å absorbere solstråler kan frøet vokse større.</target>
         </trans-unit>
         <trans-unit id="Ivysaur.Description" translate="yes" xml:space="preserve">
           <source>There is a bud on this Pokémon’s back. To support its weight, Ivysaur’s legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it’s a sign that the bud will bloom into a large flower soon.</source>
