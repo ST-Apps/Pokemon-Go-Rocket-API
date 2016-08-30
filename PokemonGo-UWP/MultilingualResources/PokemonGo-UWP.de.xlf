@@ -1005,6 +1005,14 @@ Du hast auch {1} Sternenstaub, {2} Bonbon und {3} EP erhalten.</target>
           <source>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 200 points.</source>
           <target state="translated">Hilft bei Wunden. Füllt 200 der KP eines Pokémon wieder auf.</target>
         </trans-unit>
+        <trans-unit id="D_ItemMaxPotion" translate="yes" xml:space="preserve">
+          <source>A spray-type medicine for treating wounds. It will completely restore the max HP of a single Pokémon.</source>
+          <target state="translated">Hilft bei Wunden. Füllt alle KP eines Pokémon wieder auf.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemMaxRevive" translate="yes" xml:space="preserve">
+          <source>A medicine that can revive fainted Pokémon. It also fully restores a fainted Pokémon's maximum HP.</source>
+          <target state="translated">Eine Medizin, die ein kampfunfähiges Pokémon wiederbelebt. Die KP werden vollständig wiederhergestellt.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
