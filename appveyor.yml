@@ -2,12 +2,7 @@ version: 0.1.{build}
 os: Visual Studio 2015
 configuration: Debug
 platform: ARM
-install:
-- cmd: >-
-    node --version
-    npm --version
-    npm install -g cordova
-    npm install
+
 build_script:
 - cmd: >-
     cordova platforms add windows
