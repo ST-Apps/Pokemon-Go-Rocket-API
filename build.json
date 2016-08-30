@@ -1,2 +1,0 @@
-{ "windows": { "release": { "packageCertificateKeyFile": "cert.pfx" } } }
-phonegap build windows --archs="x86 x64 arm" --release --buildConfig build.json
