@@ -249,7 +249,7 @@
         </trans-unit>
         <trans-unit id="PokemonFledText" translate="yes" xml:space="preserve">
           <source>{0} fled</source>
-          <target state="translated">{0} s'enfuit</target>
+          <target state="translated">{0} s'est enfuit</target>
         </trans-unit>
         <trans-unit id="GettingGpsSignalText" translate="yes" xml:space="preserve">
           <source>Getting GPS signal...</source>
@@ -277,7 +277,7 @@
         </trans-unit>
         <trans-unit id="LoginFailedText" translate="yes" xml:space="preserve">
           <source>Login failed, please try again.</source>
-          <target state="translated">La connexion a échouée, réessaye.</target>
+          <target state="translated">La connexion a échoué, réessaye.</target>
         </trans-unit>
         <trans-unit id="NoText" translate="yes" xml:space="preserve">
           <source>NO</source>
@@ -497,7 +497,7 @@ Ouvrir la page avec les fichiers d'installation pour une installation manuelle ?
         <trans-unit id="EggHatchMessage" translate="yes" xml:space="preserve">
           <source>An Egg hatched into a {0}.
 You also got {1} Stardust, {2} Candy and {3} XP.</source>
-          <target state="translated">Un oeuf à éclos en {0}.
+          <target state="translated">Un oeuf a éclos en {0}.
 Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="EvolvePokemonWarningText" translate="yes" xml:space="preserve">
@@ -747,7 +747,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="TimesTextBlock.Text" translate="yes" xml:space="preserve">
           <source>times</source>
-          <target state="translated">Temps</target>
+          <target state="translated">fois</target>
         </trans-unit>
         <trans-unit id="EggDetailButtonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>START INCUBATION</source>
@@ -797,31 +797,31 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/ITEMS.RESW" datatype="resx">
         <trans-unit id="D_ItemGreatBall" translate="yes" xml:space="preserve">
           <source>A good, high-performance Poké Ball that provides a higher catch rate than a standard Poké Ball.</source>
-          <target state="translated">Une bonne Pokéball, avec de haute performance qui offre un taux de capture supérieur à une Pokéball standard.</target>
+          <target state="translated">Une bonne Pokéball, avec de hautes performances qui offre un taux de capture supérieur à une Pokéball standard.</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseCool" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
-          <target state="translated">Encens avec un mystérieux parfum qui attire les Pokémon sauvages à votre emplacement pendant 30 minutes</target>
+          <target state="translated">Encens avec un mystérieux parfum qui attire les Pokémon sauvages à ton emplacement pendant 30 minutes</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseFloral" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
-          <target state="translated">Encens avec un mystérieux parfum qui attire les Pokémon sauvages à votre emplacement pendant 30 minutes</target>
+          <target state="translated">Encens avec un mystérieux parfum qui attire les Pokémon sauvages à ton emplacement pendant 30 minutes</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseOrdinary" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
-          <target state="translated">Encens avec un mystérieux parfum qui attire les Pokémon sauvages à votre emplacement pendant 30 minutes</target>
+          <target state="translated">Encens avec un mystérieux parfum qui attire les Pokémon sauvages à ton emplacement pendant 30 minutes</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseSpicy" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
-          <target state="translated">Encens avec un mystérieux parfum qui attire les Pokémon sauvages à votre emplacement pendant 30 minutes</target>
+          <target state="translated">Encens avec un mystérieux parfum qui attire les Pokémon sauvages à ton emplacement pendant 30 minutes</target>
         </trans-unit>
         <trans-unit id="D_ItemIncubatorBasic" translate="yes" xml:space="preserve">
           <source>A device that incubates an Egg as you walk until it is ready to hatch. Breaks after 3 uses.</source>
-          <target state="translated">Un dispositif qui couve un oeuf pendant que vous marchez jusqu'à ce qu'il soit prêt à éclore. Se casse après 3 utilisations.</target>
+          <target state="translated">Un dispositif qui couve un oeuf pendant que tu marches jusqu'à ce qu'il soit prêt à éclore. Se casse après 3 utilisations.</target>
         </trans-unit>
         <trans-unit id="D_ItemIncubatorBasicUnlimited" translate="yes" xml:space="preserve">
           <source>A device that incubates an Egg as you walk until it is ready to hatch. Unlimited use!</source>
-          <target state="translated">Un dispositif qui couve un oeuf pendant que vous marchez jusqu'à ce qu'il soit prêt à éclore. Utilisation illimité !</target>
+          <target state="translated">Un dispositif qui couve un oeuf pendant que tu marches jusqu'à ce qu'il soit prêt à éclore. Utilisation illimité !</target>
         </trans-unit>
         <trans-unit id="D_ItemMasterBall" translate="yes" xml:space="preserve">
           <source>The best Poké Ball with the ultimate level of performance. With it you will catch any Pokémon without fail.</source>
@@ -841,7 +841,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="D_ItemUltraBall" translate="yes" xml:space="preserve">
           <source>An ultra-high performance Poké Ball that provides a higher success rate for catching Pokémon than a Great.</source>
-          <target state="translated">ne Pokéball ultra-haute performance qui offre un taux de réussite plus élevé que la Super Ball pour attraper les Pokémon.</target>
+          <target state="translated">Une Pokéball ultra-haute performance qui offre un taux de réussite plus élevé que la Super Ball pour attraper les Pokémon.</target>
         </trans-unit>
         <trans-unit id="ItemBlukBerry" translate="yes" xml:space="preserve">
           <source>Bluk Berry</source>
@@ -965,15 +965,15 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="D_ItemLuckyEgg" translate="yes" xml:space="preserve">
           <source>A Lucky Egg that's filled with happiness! Earns double XP for 30 minutes.</source>
-          <target state="translated">Un Oeuf Chance est rempli de joie! Gagne le double d'XP pendant 30 minutes.</target>
+          <target state="translated">Un Oeuf Chance est rempli de joie ! Gagne le double d'XP pendant 30 minutes.</target>
         </trans-unit>
         <trans-unit id="D_ItemRazzBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
-          <target state="translated">Nourri un Pokémon avec, et il sera plus facile à attrapper au prochain lancer.</target>
+          <target state="translated">Nourris un Pokémon avec, et il sera plus facile à attraper au prochain lancer.</target>
         </trans-unit>
         <trans-unit id="D_ItemSpecialCamera" translate="yes" xml:space="preserve">
           <source>When you encounter Pokémon in the wild, you can use your camera to photograph them.</source>
-          <target state="translated">Quand tu rencontres un Pokémon dans la nature, tu peux utiliser ton appreil photo pour les photographier.</target>
+          <target state="translated">Quand tu rencontres des Pokémon dans la nature, tu peux utiliser ton appareil photo pour les photographier.</target>
         </trans-unit>
         <trans-unit id="D_ItemSuperPotion" translate="yes" xml:space="preserve">
           <source>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 50 points.</source>
@@ -981,27 +981,27 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="D_ItemTroyDisk" translate="yes" xml:space="preserve">
           <source>A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</source>
-          <target state="translated">Un module qui attire les Pokémons autour d'un Pokéstop pendant 30min. Cet effet bénéfici à toutes les personnes proches.</target>
+          <target state="translated">Un module qui attire les Pokémons autour d'un Pokéstop pendant 30 min. Cet effet bénéficie à toutes les personnes proches.</target>
         </trans-unit>
         <trans-unit id="D_ItemUnknown" translate="yes" xml:space="preserve">
           <source>This item is unknown and may be added in the future.</source>
-          <target state="translated">Cet objet est inconnu est peut être ajouter dans le futur.</target>
+          <target state="translated">Cet objet est inconnu et sera peut-être ajouté ultérieurement.</target>
         </trans-unit>
         <trans-unit id="D_ItemBlukBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
-          <target state="translated">Nourri un Pokémon avec, et il sera plus facile à attrapper au prochain lancer.</target>
+          <target state="translated">Nourris un Pokémon avec, et il sera plus facile à attraper au prochain lancer.</target>
         </trans-unit>
         <trans-unit id="D_ItemNanabBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
-          <target state="translated">Nourri un Pokémon avec, et il sera plus facile à attrapper au prochain lancer.</target>
+          <target state="translated">Nourris un Pokémon avec, et il sera plus facile à attraper au prochain lancer.</target>
         </trans-unit>
         <trans-unit id="D_ItemPinapBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
-          <target state="translated">Nourri un Pokémon avec, et il sera plus facile à attrapper au prochain lancer.</target>
+          <target state="translated">Nourris un Pokémon avec, et il sera plus facile à attraper au prochain lancer.</target>
         </trans-unit>
         <trans-unit id="D_ItemWeparBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
-          <target state="translated">Nourri un Pokémon avec, et il sera plus facile à attrapper au prochain lancer.</target>
+          <target state="translated"Nourris un Pokémon avec, et il sera plus facile à attraper au prochain lancer.</target>
         </trans-unit>
       </group>
     </body>
