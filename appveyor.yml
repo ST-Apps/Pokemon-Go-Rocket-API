@@ -1,4 +1,4 @@
- +version: 1.0.{build}
++version: 1.0.{build}
  +platform: ARM
  +before_build:
  +- ps: >-
@@ -7,5 +7,3 @@
  +    dotnet restore
  +build:
  +  verbosity: minimal
- artifacts:
-- path: platforms\windows\**\*.appx
