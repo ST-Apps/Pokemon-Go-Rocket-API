@@ -1001,6 +1001,10 @@ Du hast auch {1} Sternenstaub, {2} Bonbon und {3} EP erhalten.</target>
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
           <target state="translated">Wenn du sie einem Pokémon zum Essen gibst, lässt es sich leichter fangen.</target>
         </trans-unit>
+        <trans-unit id="D_ItemHyperPotion" translate="yes" xml:space="preserve">
+          <source>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 200 points.</source>
+          <target state="translated">Eine sprayförmige Medizin um Wunden zu behandeln. Es regeneriert die KP eines Pokémon um 200 Punkte.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
