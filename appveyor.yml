@@ -3,11 +3,5 @@ os: Visual Studio 2015
 configuration: Debug
 platform: ARM
 
-build_script:
-- cmd: >-
-    cordova platforms add windows
-    cordova build windows --arch=arm --debug
-    cordova build windows --arch=x64 --debug
-    cordova build windows --arch=x86 --debug
 artifacts:
 - path: platforms\windows\**\*.appx
