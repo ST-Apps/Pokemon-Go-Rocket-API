@@ -8,4 +8,5 @@ before_build:
 build:
   verbosity: minimal
 artifacts:
-- path: PokemonGo-UWP.Tests\AppPackages\PokemonGo-UWP.Tests_1.0.0.0_ARM_Debug_Test\PokemonGo-UWP.Tests_1.0.0.0_ARM_Debug.appx
+- path: PokemonGo-UWP\AppPackages\PokemonGo-UWP_1.0.24.0_ARM_Debug_Test\PokemonGo-UWP_1.0.24.0_ARM_Debug.appx
+
