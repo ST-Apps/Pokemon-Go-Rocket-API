@@ -1,0 +1,139 @@
+﻿<Page
+    x:Class="PokemonGo_UWP.Views.EnterGymPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PokemonGo_UWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:gif="using:XamlAnimatedGif"
+    xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
+    mc:Ignorable="d">
+
+    <Page.DataContext>
+        <viewModels:EnterGymPageViewModel x:Name="ViewModel" />
+    </Page.DataContext>
+
+    <Page.Resources>
+
+
+    </Page.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#4ab583" Offset="0" />
+                <GradientStop Color="#266378" Offset="0.8" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="75" />
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0"
+                x:Name="ErrorMessageBorder"
+                Visibility="Collapsed"
+                VerticalAlignment="Top">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#cc0000" Offset="0" />
+                    <GradientStop Color="#660000" Offset="0.8" />
+                </LinearGradientBrush>
+            </Border.Background>
+            <StackPanel>
+                <TextBlock x:Name="OutOfRangeTextBlock"
+                           x:Uid="OutOfRangeTextBlock"
+                           Text="You are out of range"
+                           Visibility="Collapsed"
+                           Style="{StaticResource TextError}"
+                           Margin="15,20,15,20" />
+
+                <TextBlock x:Name="NotYetLevelFiveTextBlock"
+                           x:Uid="NotYetLevelFiveTextBlock"
+                           Visibility="Collapsed"
+                           Style="{StaticResource TextError}"
+                           Margin="15,20,15,20" />
+
+            </StackPanel>
+        </Border>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="135" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Style="{StaticResource GridContainer}">
+                <StackPanel Orientation="Horizontal">
+                    <Border Width="100"
+                    Height="100"
+                    BorderBrush="#33000000"
+                    BorderThickness="10"
+                    CornerRadius="50"
+                    HorizontalAlignment="Center">
+                        <Border Background="#fff"
+                        BorderBrush="#fff"
+                        BorderThickness="10"
+                        CornerRadius="50">
+                            <Ellipse x:Name="GymImageEllipse"
+                                 Width="80"
+                                 Height="80"
+                                 Margin="-10">
+                                <Ellipse.Projection>
+                                    <PlaneProjection />
+                                </Ellipse.Projection>
+                                <Ellipse.Fill>
+                                    <ImageBrush ImageSource="{Binding CurrentGymInfo.Urls[0]}"
+                                            Stretch="UniformToFill" />
+                                </Ellipse.Fill>
+                            </Ellipse>
+                        </Border>
+                    </Border>
+                    <TextBlock Text="{Binding CurrentGymInfo.Name}"
+                           Style="{StaticResource TextGymTitle}" />
+                </StackPanel>
+            </Grid>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                <TextBlock Text="{Binding CurrentGym.GymPoints}" VerticalAlignment="Center"
+                            Style="{StaticResource TextGymStrength}" />
+                <TextBlock Text="/8000" Margin="0,0,30,0" VerticalAlignment="Center"
+                            Style="{StaticResource TextGymStrength}"/>
+            </StackPanel>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="4*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <TextBlock x:Uid="CpTextBlock" Text="CP " Style="{StaticResource TextGymGuardCp}" />
+                    <TextBlock Text="{Binding CurrentGym.GuardPokemonCp}" Style="{StaticResource TextGymGuardCp}" />
+                </StackPanel>
+                <Image Grid.Row="1" Grid.Column="0" Source="{Binding CurrentGym.GuardPokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"
+                        VerticalAlignment="Center" HorizontalAlignment="Center"
+                        x:Name="GuardPokemonImage"
+                        Stretch="Uniform"/>
+                <Image Grid.RowSpan="2" Grid.Column="1" Stretch="Uniform"
+                                   Height="300"
+                                   gif:AnimationBehavior.SourceUri="/Assets/UI/avatar.gif"
+                                   x:Name="AvatarImage" />
+
+            </Grid>
+ 
+            <Image Grid.Row="2" Source="{Binding CurrentGym.OwnedByTeam, Converter={StaticResource PlayerTeamToTeamImageConverter}}"
+                   VerticalAlignment="Center" 
+                   x:Name="OwnedByTeamImage"
+                   Stretch="Uniform"/>
+        </Grid>
+
+        <Button Grid.Row="2"
+                Command="{Binding AbandonGym}"
+                Style="{StaticResource ButtonCircle}"
+                Margin="0">
+            <Image Source="../Assets/Buttons/btn_close.png" />
+        </Button>
+    </Grid>
+</Page>
