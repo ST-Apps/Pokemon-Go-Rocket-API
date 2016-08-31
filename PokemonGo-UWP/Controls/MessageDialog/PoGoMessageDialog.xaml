@@ -48,7 +48,7 @@
                 To="0"
                 Duration="0:0:0.15" />
         </Storyboard>
-        
+
         <!--Bottom-->
         <Storyboard x:Name="ShowMDBottomStoryboard">
             <DoubleAnimation
@@ -110,7 +110,8 @@
         <Rectangle x:Name="BackgroundRect" 
                    Fill="{StaticResource PageBackgroundGradient}"
                    Opacity="0"
-                   Visibility="{x:Bind CoverBackground, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                   Visibility="{x:Bind CoverBackground, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}"
+                   Tapped="Background_Tapped" />
         <Grid x:Name="ContentGrid" 
               Style="{StaticResource GridContainer}" 
               HorizontalAlignment="Center" 
@@ -145,14 +146,6 @@
                            TextWrapping="Wrap"
                            FontSize="15"
                            FontFamily="{StaticResource LatoRegularFont}"/>
-                <TextBox Foreground="{StaticResource TitleTextColor}"
-                           Visibility="{x:Bind InputField, Converter={StaticResource StringToVisibilityConverter}}"
-                           Style="{StaticResource TextBox}"
-                           Text="{x:Bind InputField, Mode=TwoWay}"
-                           TextAlignment="Left"
-                           TextWrapping="Wrap"
-                           FontSize="15"
-                           FontFamily="{StaticResource LatoRegularFont}"/>
                 <ContentPresenter FontSize="15" 
                                   TextWrapping="Wrap" 
                                   HorizontalAlignment="Stretch"
@@ -172,7 +165,7 @@
                         Visibility="{x:Bind ShowCancelButton, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}"/>
             </StackPanel>
 
-            
+
         </Grid>
 
     </Grid>

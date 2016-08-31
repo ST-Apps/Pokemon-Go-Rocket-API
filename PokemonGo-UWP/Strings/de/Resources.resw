@@ -191,4 +191,8 @@
   <data name="SettingsLiveTileTextBlock.Text" xml:space="preserve">
     <value>Modus für Kachelaktualisierung</value>
   </data>
+  <data name="AppraiseTextBlock.Text" xml:space="preserve">
+    <value>BEWERTUNG</value>
+    <comment>Capslock</comment>
+  </data>
 </root>

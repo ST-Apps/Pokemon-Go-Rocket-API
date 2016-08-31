@@ -62,7 +62,7 @@ A: Press the Pokeball and hit the "LOGOUT" button in the top right corner.
 
 # Changelog
 
-**From 14/08/2016 changelog will be kept in [Releases](https://github.com/ST-Apps/PoGo-UWP/releases/tag/v1.1.0-rc1) in each release.**
+**From 14/08/2016 changelog will be kept in [Releases](https://github.com/ST-Apps/PoGo-UWP/releases/) in each release.**
 
 ## (01/08/2016) [v 1.0.12.0-beta] - Bug fixes and improvements
 * Fixed crash when tapping on Pokebal menu

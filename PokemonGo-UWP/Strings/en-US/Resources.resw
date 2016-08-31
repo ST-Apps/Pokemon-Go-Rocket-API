@@ -299,4 +299,8 @@
   <data name="FavoriteTextBlock.Text" xml:space="preserve">
     <value>FAVORITE</value>
   </data>
+  <data name="AppraiseTextBlock.Text" xml:space="preserve">
+    <value>APPRAISE</value>
+    <comment>Capslock</comment>
+  </data>
 </root>

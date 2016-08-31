@@ -320,6 +320,20 @@ namespace PokemonGo_UWP.ViewModels
 
         #endregion
 
+        #region Appraise
+
+        private DelegateCommand _appraisePokemonCommand;
+
+        public DelegateCommand AppraisePokemonCommand => _appraisePokemonCommand ?? (
+          _appraisePokemonCommand = new DelegateCommand(() =>
+          {
+              // TODO: Implement appraise
+              var dialog = new MessageDialog("Sorry, check back later ;)", "Not yet implemented");
+              dialog.ShowAsync();
+          }, () => true));
+
+        #endregion
+
         #region Transfer
 
         private DelegateCommand _transferPokemonCommand;
@@ -438,15 +452,22 @@ namespace PokemonGo_UWP.ViewModels
         public DelegateCommand RenamePokemonCommand => _renamePokemonCommand ?? (
           _renamePokemonCommand = new DelegateCommand(() =>
           {
-              var dialog = new PoGoMessageDialog(Resources.CodeResources.GetString("SetNickName"), "")
+              var textbox = new TextboxMessageDialog(CurrentPokemon.Name, 12);
+              var dialog = new PoGoMessageDialog("", Resources.CodeResources.GetString("SetNickName"))
               {
-                  AcceptText = Resources.CodeResources.GetString("YesText"),
-                  CancelText = Resources.CodeResources.GetString("NoText"),
+                  DialogContent = textbox,
+                  AcceptText = Resources.CodeResources.GetString("OkText"),
+                  CancelText = Resources.CodeResources.GetString("CancelText"),
                   CoverBackground = true,
-                  InputField = CurrentPokemon.Name,
+                  BackgroundTapInvokesCancel = true,
                   AnimationType = PoGoMessageDialogAnimation.Bottom
               };
 
+              dialog.AppearCompleted += (sender, e) =>
+              {
+                  textbox.SelectAllOnTextBoxFocus = true;
+                  textbox.FocusTextbox(FocusState.Programmatic);
+              };
               dialog.AcceptInvoked += async (sender, e) =>
               {
 
@@ -454,7 +475,7 @@ namespace PokemonGo_UWP.ViewModels
                   {
                       Busy.SetBusy(true);
                       // Send rename request
-                      var res = await GameClient.SetPokemonNickName((ulong) CurrentPokemon.Id, dialog.InputField);
+                      var res = await GameClient.SetPokemonNickName((ulong) CurrentPokemon.Id, textbox.Text);
                       switch (res.Result)
                       {
                           case NicknamePokemonResponse.Types.Result.Unset:
@@ -462,7 +483,7 @@ namespace PokemonGo_UWP.ViewModels
                           case NicknamePokemonResponse.Types.Result.Success:
                               // Reload updated data
                               var currentPokemonData = CurrentPokemon.WrappedData;
-                              currentPokemonData.Nickname = dialog.InputField;
+                              currentPokemonData.Nickname = textbox.Text;
                               CurrentPokemon = new PokemonDataWrapper(currentPokemonData);
                               await GameClient.UpdateInventory();
                               await GameClient.UpdateProfile();
