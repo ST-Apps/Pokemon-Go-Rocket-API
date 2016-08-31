@@ -76,10 +76,10 @@ namespace PokemonGo_UWP.Views
 
         private static Random random;
         private static void ComputeInfoMessage(LoadingScreen view) {
-            random = new Random(new DateTime().Millisecond);
+            random = new Random();
             // Sets the number of different images and messages.
-            // The second parameter is the number for max count of images and messages.
-            int number = random.Next(1, 1);
+            // The second parameter is the number for max count + 1 of images and messages.
+            int number = random.Next(1, 3);
             view.BackgroundImageBrush.ImageSource =
                 new BitmapImage(new Uri($"ms-appx:///Assets/Warnings/{number}.png"));
             view.InfoMessage = Utils.Resources.CodeResources.GetString($"WarningMessage{number}");
