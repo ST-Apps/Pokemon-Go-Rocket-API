@@ -1,30 +1,29 @@
-# Pokèmon Go Client for Windows 10
-
+# Pokèmon Go Client for Windows 10 UWP
 # Important information
 You can find the installation file for PoGo in [Releases](https://github.com/ST-Apps/PoGo-UWP/releases/).
 **Please read the whole release information before installing.**
 
-# More information
+# More Information
 
 Check [Wiki](https://github.com/ST-Apps/PoGo-UWP/wiki) for information about the project, installing instructions and more in different language.
 
 # Social
 
-## [Reddit](https://www.reddit.com/r/PoGoUWP/)
+[Reddit](https://www.reddit.com/r/PoGoUWP/)
 
 We have an official reddit made to discuss about PoGo. Make sure to follow the subreddit rules and you're good to go.
 
 We decided to have 3 social chat groups to make sure everyone can use their favorite service to disscuss. Feel free to join any of them, or all at once. You're not limited to just one.
 
-## [Skype](https://join.skype.com/hOeCHq2oEyhA)
+[Skype](https://join.skype.com/hOeCHq2oEyhA)
 
 The skype group is used for Text/Voice chat and general disscussion, as well as support.
 
-## [Telegram](https://telegram.me/PoGoUWP)
+[Telegram](https://telegram.me/PoGoUWP)
 
 For telegram users, there is also a Telegram superchat that is also for general disscussion, ideas and support.
 
-## [Discord](https://discord.gg/4GMbEWH)
+[Discord](https://discord.gg/4GMbEWH)
 
 The Discord is used mostly for live voice chat and is about the same subjects above groups are.
 
