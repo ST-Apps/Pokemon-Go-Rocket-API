@@ -1,0 +1,56 @@
+<UserControl x:Class="PokemonGo_UWP.Views.LoadingScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="300"
+             d:DesignWidth="400"
+             mc:Ignorable="d">
+
+    <RelativePanel VerticalAlignment="Stretch"
+          HorizontalAlignment="Stretch">
+
+        <RelativePanel.Background>
+            <ImageBrush x:Name="BackgroundImageBrush"
+                        ImageSource="../../Assets/Warnings/1.png"
+                        Stretch="Fill"/>
+        </RelativePanel.Background>
+
+        <TextBlock Margin="0,0,0,24"
+                   FontSize="20"
+                   RelativePanel.Above="LoadingProgressBar"
+                   RelativePanel.AlignHorizontalCenterWithPanel="True"
+                   TextAlignment="Center"
+                   Foreground="Black"
+                   Text="{x:Bind BusyText, Mode=OneWay, FallbackValue='BusyText'}" />
+        <ProgressBar x:Name="LoadingProgressBar"
+                     RelativePanel.Above="InfoMessageBorder"
+                     RelativePanel.AlignLeftWithPanel="True"
+                     RelativePanel.AlignRightWithPanel="True"
+                     Margin="24,0"
+                     Height="48"
+                     IsIndeterminate="{x:Bind IsBusy, Mode=OneWay}"
+                     Grid.Row="1"
+                     Foreground="Black" />
+
+        <Border x:Name="InfoMessageBorder" 
+                RelativePanel.AlignLeftWithPanel="True"
+                RelativePanel.AlignRightWithPanel="True"
+                RelativePanel.AlignBottomWithPanel="True"
+                Background="#AAFFFFFF"
+                Height="70"
+                CornerRadius="10"
+                Margin="24">
+            <TextBlock x:Name="InfoMessageTextBlock"
+                       FontSize="20"
+                       Margin="6"
+                       Text="{x:Bind InfoMessage, Mode=OneWay, FallbackValue='InfoMessage'}"
+                       TextWrapping="Wrap"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       TextAlignment="Center"
+                       Foreground="Black"/>
+        </Border>
+    </RelativePanel>
+
+</UserControl>
