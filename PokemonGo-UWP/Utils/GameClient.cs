@@ -503,8 +503,9 @@ namespace PokemonGo_UWP.Utils
 		/// <summary>
 		///     Starts the timer to update map objects and the handler to update position
 		/// </summary>
-		public static async Task InitializeDataUpdate()
-		{
+	public static async Task InitializeDataUpdate()
+          {
+             LoadingScreen.SetBusy(true);
 			#region Compass management
 			SettingsService.Instance.PropertyChanged += (object sender, PropertyChangedEventArgs e) =>
 			{
@@ -540,7 +541,7 @@ namespace PokemonGo_UWP.Utils
                 MovementThreshold = 5
             };
 
-            Busy.SetBusy(true, Resources.CodeResources.GetString("GettingGpsSignalText"));
+            LoadingScreen.SetBusy(true, Resources.CodeResources.GetString("GettingGpsSignalText"));
             Geoposition = Geoposition ?? await _geolocator.GetGeopositionAsync();
             GeopositionUpdated?.Invoke(null, Geoposition);
             _geolocator.PositionChanged += GeolocatorOnPositionChanged;
@@ -555,11 +556,11 @@ namespace PokemonGo_UWP.Utils
                 _heartbeat = new Heartbeat();
             await _heartbeat.StartDispatcher();
             // Update before starting timer
-            Busy.SetBusy(true, Resources.CodeResources.GetString("GettingUserDataText"));
+            LoadingScreen.SetBusy(true, Resources.CodeResources.GetString("GettingUserDataText"));
             //await UpdateMapObjects();
             await UpdateInventory();
             await UpdateItemTemplates();
-            Busy.SetBusy(false);
+            LoadingScreen.SetBusy(false);
         }
 
         private static async void GeolocatorOnPositionChanged(Geolocator sender, PositionChangedEventArgs args)
