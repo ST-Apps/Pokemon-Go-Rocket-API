@@ -540,6 +540,10 @@ You also got {1} Stardust, {2} Candy and {3} XP.</source>
           <source>FAVORITE</source>
           <target state="translated">最愛</target>
         </trans-unit>
+        <trans-unit id="AppraiseTextBlock.Text" translate="yes" xml:space="preserve">
+         <source>APPRAISE</source>
+         <target state="translated">評價</target>
+        </trans-unit>
       </group>
     </body>
   </file>
