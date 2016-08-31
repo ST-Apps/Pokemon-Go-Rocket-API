@@ -2,19 +2,21 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Template10.Common;
 using Template10.Controls;
+using Windows.UI.Xaml.Media;
+using Windows.UI;
 
-namespace Universal_Authenticator_v2.Views
+namespace PokemonGo_UWP.Views
 {
-    public sealed partial class Busy : UserControl
+    public sealed partial class InfoMessage : UserControl
     {
         public static readonly DependencyProperty BusyTextProperty =
-            DependencyProperty.Register(nameof(BusyText), typeof(string), typeof(Busy),
+            DependencyProperty.Register(nameof(BusyText), typeof(string), typeof(InfoMessage),
                 new PropertyMetadata("Please wait..."));
 
         public static readonly DependencyProperty IsBusyProperty =
-            DependencyProperty.Register(nameof(IsBusy), typeof(bool), typeof(Busy), new PropertyMetadata(false));
+            DependencyProperty.Register(nameof(IsBusy), typeof(bool), typeof(InfoMessage), new PropertyMetadata(false));
 
-        public Busy()
+        public InfoMessage()
         {
             InitializeComponent();
         }
@@ -38,9 +40,11 @@ namespace Universal_Authenticator_v2.Views
             {
                 var modal = Window.Current.Content as ModalDialog;
                 if (modal == null) return;
-                var view = modal.ModalContent as Busy;
+                var view = modal.ModalContent as InfoMessage;
                 if (view == null)
-                    modal.ModalContent = view = new Busy();
+                    modal.ModalContent = view = new InfoMessage();
+                modal.HorizontalContentAlignment = HorizontalAlignment.Stretch;
+                modal.ModalBackground = new SolidColorBrush(Colors.Transparent);
                 modal.IsModal = view.IsBusy = busy;
                 view.BusyText = text;
             });
