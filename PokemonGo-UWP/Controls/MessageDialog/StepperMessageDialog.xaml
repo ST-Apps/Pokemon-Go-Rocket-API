@@ -1,0 +1,32 @@
+<UserControl
+    x:Class="PokemonGo_UWP.Controls.StepperMessageDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PokemonGo_UWP.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid HorizontalAlignment="Stretch" Margin="0,40,0,20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <RepeatButton Grid.Column="0" 
+                      Content="–" 
+                      HorizontalAlignment="Left" 
+                      Style="{StaticResource ButtonCircleBigSimple}" 
+                      Click="Minus_Click" />
+        <TextBlock x:Name="DeleteAmount" 
+                   Grid.Column="1" 
+                   HorizontalAlignment="Center" 
+                   Text="{x:Bind Value, Mode=OneWay}" 
+                   FontSize="40" 
+                   FontFamily="{StaticResource LatoLightFont}"/>
+        <RepeatButton Grid.Column="2" 
+                      Content="+" 
+                      HorizontalAlignment="Right" 
+                      Style="{StaticResource ButtonCircleBigSimple}" 
+                      Click="Plus_Click" />
+    </Grid>
+</UserControl>
