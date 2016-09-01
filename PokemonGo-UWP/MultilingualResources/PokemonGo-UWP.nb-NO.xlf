@@ -556,6 +556,12 @@
           <source>Experience</source>
           <target state="new">Experience</target>
         </trans-unit>
+        <trans-unit id="LoadingMessage.Text" translate="yes" xml:space="preserve">
+          <source>Remember to be alert at all times.
+Stay aware of your surroundings.</source>
+          <target state="new">Remember to be alert at all times.
+Stay aware of your surroundings.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -1098,43 +1104,9 @@ Du fikk også {1} Stjernestøv, {2} Candy og {3} XP.</target>
           <source>{0} is not in catch range anymore.</source>
           <target state="new">{0} is not in catch range anymore.</target>
         </trans-unit>
-        <trans-unit id="LadingMessage" translate="yes" xml:space="preserve">
+        <trans-unit id="LoadingMessage" translate="yes" xml:space="preserve">
           <source>LOADING...</source>
           <target state="new">LOADING...</target>
-        </trans-unit>
-        <trans-unit id="WarningMessage1" translate="yes" xml:space="preserve">
-          <source>Remember to be alert at all times.
-Stay aware of your surroundings.</source>
-          <target state="new">Remember to be alert at all times.
-Stay aware of your surroundings.</target>
-        </trans-unit>
-        <trans-unit id="WarningMessage2" translate="yes" xml:space="preserve">
-          <source>Please, leave your favorite Pokéstops clean.</source>
-          <target state="new">Please, leave your favorite Pokéstops clean.</target>
-        </trans-unit>
-        <trans-unit id="WarningMessage3" translate="yes" xml:space="preserve">
-          <source>Try to not smoke in crowds.
-Nobody likes to breathe Koffing fumes.</source>
-          <target state="new">Try to not smoke in crowds.
-Nobody likes to breathe Koffing fumes.</target>
-        </trans-unit>
-        <trans-unit id="WarningMessage4" translate="yes" xml:space="preserve">
-          <source>Remember, don't be a Snorlax.
-Don't block the road for other.</source>
-          <target state="new">Remember, don't be a Snorlax.
-Don't block the road for other.</target>
-        </trans-unit>
-        <trans-unit id="WarningMessage5" translate="yes" xml:space="preserve">
-          <source>Remember to be alert at all times.
-Stay aware of your surroundings.</source>
-          <target state="new">Remember to be alert at all times.
-Stay aware of your surroundings.</target>
-        </trans-unit>
-        <trans-unit id="WarningMessage6" translate="yes" xml:space="preserve">
-          <source>Remember to be alert at all times.
-Stay aware of your surroundings.</source>
-          <target state="new">Remember to be alert at all times.
-Stay aware of your surroundings.</target>
         </trans-unit>
       </group>
     </body>
