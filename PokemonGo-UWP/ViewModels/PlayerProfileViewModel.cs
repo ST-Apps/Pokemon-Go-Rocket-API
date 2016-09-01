@@ -37,6 +37,8 @@ namespace PokemonGo_UWP.ViewModels
                 PlayerStats = new PlayerStats();
                 PlayerProfile.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(PlayerProfile)]).CreateCodedInput());
                 PlayerStats.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(PlayerStats)]).CreateCodedInput());
+                RaisePropertyChanged(() => PlayerProfile);
+                RaisePropertyChanged(() => PlayerStats);
             }
             else
             {

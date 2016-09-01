@@ -82,7 +82,7 @@
                               Style="{StaticResource SettingsCheckbox}"
                               Margin="0,8,15,10" />
                 </Grid>
-                <Border Background="#33ffffff" Height="1" Margin="15" />
+				<Border Background="#33ffffff" Height="1" Margin="15" />
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
@@ -127,16 +127,12 @@
                               Style="{StaticResource SettingsCheckbox}"
                               Margin="0,8,15,10" />
                 </Grid>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
+                <Grid VerticalAlignment="Center">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="135" />
                     </Grid.ColumnDefinitions>
-                    <StackPanel Grid.Column="0" Grid.ColumnSpan="2">
+                    <StackPanel VerticalAlignment="Center">
                         <TextBlock x:Uid="SettingsLanguageTextBlock"
                                    Text="Language"
                                    Style="{StaticResource TextSettingsTitle}"
@@ -144,12 +140,12 @@
                         <TextBlock x:Uid="SettingsLanguageRestartTextBlock"
                                    Text="You must restart the App to take effect."
                                    Style="{StaticResource TextSettingsTitle}"
-                                   FontSize="12" Margin="15,0" Foreground="#ddd"/>
+                                   FontSize="12" Margin="15,0,15,15" Foreground="#ddd"/>
                     </StackPanel>
                     <ComboBox x:Name="LanguageComboBox"
-                              Grid.Row="1"
-                              Grid.Column="0"
+                              VerticalAlignment="Center"
                               Grid.ColumnSpan="2"
+                              HorizontalAlignment="Right"
                               ItemsSource="{Binding languageList, Mode=OneWay}" SelectedItem="{Binding UserLanguage, Mode=TwoWay}" 
                               Margin="0,8,15,10" />
                 </Grid>
@@ -211,13 +207,22 @@
                 </ScrollViewer>
                 <Border Background="#33ffffff" Height="1" Margin="15,15,15,0" />
                 <Button Command="{Binding DoPtcLogoutCommand}"
-                        Style="{StaticResource ButtonNoStyle}">
+                        Style="{StaticResource ButtonNoStyle}"
+                        Padding="0,15,0,0">
                     <TextBlock x:Uid="SettingsSignOutTextBlock"
                                 Text="Sign Out"
                                 Style="{StaticResource TextSettingsTitle}"
                                 VerticalAlignment="Center"
-                                HorizontalAlignment="Right" />
+                                HorizontalAlignment="Right" Margin="15,15,15,10"/>
                 </Button>
+                <TextBlock 
+                   Style="{StaticResource TextSettingsTitle}"
+                   Text="{Binding CurrentVersion}"
+                   FontSize="12"
+                   Foreground="#ccc"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Right"
+                   Padding="0" Margin="15,0,15,15"/>
             </StackPanel>
 
         </ScrollViewer>
