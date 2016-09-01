@@ -331,4 +331,10 @@ You also got {1} Stardust, {2} Candy and {3} XP.</value>
     <value>O. K.</value>
     <comment>Space between . and K</comment>
   </data>
+  <data name="PokemonEncounterErrorText" xml:space="preserve">
+    <value>There was an error loading the encounter with {0}, please try again later.</value>
+  </data>
+  <data name="PokemonEncounterNotInRangeText" xml:space="preserve">
+    <value>{0} is not in catch range anymore.</value>
+  </data>
 </root>

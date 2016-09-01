@@ -389,9 +389,9 @@
           <target state="translated">stvari</target>
         </trans-unit>
         <trans-unit id="NumberTextBlock.Text" translate="yes" xml:space="preserve">
-          <source># </source>
-          <target state="new"># </target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Watch out: there is a space after the #</note>
+          <source>+ </source>
+          <target state="new">+ </target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Watch out: there is a space after the +</note>
         </trans-unit>
         <trans-unit id="SlashSpaceCpTextBlock.Text" translate="yes" xml:space="preserve">
           <source>/ CP</source>
@@ -550,6 +550,10 @@
           <source>APPRAISE</source>
           <target state="new">APPRAISE</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
+        </trans-unit>
+        <trans-unit id="AwardedExperienceTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Experience</source>
+          <target state="new">Experience</target>
         </trans-unit>
       </group>
     </body>
@@ -1079,6 +1083,14 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
           <source>O. K.</source>
           <target state="new">O. K.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Space between . and K</note>
+        </trans-unit>
+        <trans-unit id="PokemonEncounterErrorText" translate="yes" xml:space="preserve">
+          <source>There was an error loading the encounter with {0}, please try again later.</source>
+          <target state="new">There was an error loading the encounter with {0}, please try again later.</target>
+        </trans-unit>
+        <trans-unit id="PokemonEncounterNotInRangeText" translate="yes" xml:space="preserve">
+          <source>{0} is not in catch range anymore.</source>
+          <target state="new">{0} is not in catch range anymore.</target>
         </trans-unit>
       </group>
     </body>

@@ -26,20 +26,5 @@ namespace PokemonGo_UWP.Views
         {
             ViewModel.PropertyChanged -= ViewModel_PropertyChanged;
         }
-        private WidthConverter widthCalc = new WidthConverter();
-        private void OnSizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            var newWidth = (int)widthCalc.Convert(1, null, "0,28", null);
-            pokeindex.Width = newWidth;
-        }
-
-        private void GridViewPokedexSizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            if (e.PreviousSize != e.NewSize)
-            {
-                var panel_threads = (WrapGrid)pokeindex.ItemsPanelRoot;
-                panel_threads.ItemWidth = e.NewSize.Width / 3;
-            }
-        }
     }
 }
