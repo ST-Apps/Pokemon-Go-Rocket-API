@@ -357,4 +357,10 @@ Stay aware of your surroundings.</value>
     <value>Remember to be alert at all times.
 Stay aware of your surroundings.</value>
   </data>
+  <data name="PokemonEncounterErrorText" xml:space="preserve">
+    <value>There was an error loading the encounter with {0}, please try again later.</value>
+  </data>
+  <data name="PokemonEncounterNotInRangeText" xml:space="preserve">
+    <value>{0} is not in catch range anymore.</value>
+  </data>
 </root>
