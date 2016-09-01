@@ -161,17 +161,15 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" Margin="15,10,15,10">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="50" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-                <Image Grid.Column="0" Source="../Assets/UI/gem.png" Height="50" />
-                <TextBlock Grid.Column="1" Text="{Binding CurrentSearchResponse.GemsAwarded}"
+                <TextBlock Grid.Column="0" x:Uid="AwardedExperienceTextBlock"
                            Style="{StaticResource TextNormal}" FontWeight="Bold" />
-                <TextBlock Grid.Column="2" Text="{Binding CurrentSearchResponse.ExperienceAwarded}"
+                <TextBlock Grid.Column="1" Text="{Binding CurrentSearchResponse.ExperienceAwarded}"
                            Style="{StaticResource TextNormalSpotlight}" />
-                <TextBlock Grid.Column="3" x:Uid="SpaceXpTextBlock" Style="{StaticResource TextNormalSpotlight}" />
+                <TextBlock Grid.Column="2" x:Uid="SpaceXpTextBlock" Style="{StaticResource TextNormalSpotlight}" />
             </Grid>
             <ListView ItemsSource="{Binding AwardedItems}"
                       SelectionMode="None"

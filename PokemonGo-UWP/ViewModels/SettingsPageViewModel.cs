@@ -62,10 +62,10 @@ namespace PokemonGo_UWP.ViewModels
             set { SettingsService.Instance.IsRememberMapZoomEnabled = value; }
         }
 
-        /// <summary>
-        ///     Whether the player wants vibration (when a Pokémon is nearby)
-        /// </summary>
-        public bool IsVibrationEnabled
+				/// <summary>
+				///     Whether the player wants vibration (when a Pokémon is nearby)
+				/// </summary>
+		public bool IsVibrationEnabled
         {
             get { return SettingsService.Instance.IsVibrationEnabled; }
             set { SettingsService.Instance.IsVibrationEnabled = value; }

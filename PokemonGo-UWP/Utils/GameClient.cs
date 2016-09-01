@@ -293,7 +293,12 @@ namespace PokemonGo_UWP.Utils
         /// <summary>
         ///     Stores upgrade costs (candy, stardust) per each level
         /// </summary>
-        public static Dictionary<int, object[]> PokemonUpgradeCosts { get; private set; } = new Dictionary<int, object[]>();
+        //public static Dictionary<int, object[]> PokemonUpgradeCosts { get; private set; } = new Dictionary<int, object[]>();
+
+        /// <summary>
+        /// Upgrade settings per each level
+        /// </summary>
+        public static PokemonUpgradeSettings PokemonUpgradeSettings { get; private set; }
 
         /// <summary>
         ///     Stores data about Pokemon moves
@@ -805,18 +810,24 @@ namespace PokemonGo_UWP.Utils
                     .Select(item => item.PokemonSettings);
             }, DateTime.Now.AddMonths(1));
 
-            PokemonUpgradeCosts = await DataCache.GetAsync(nameof(PokemonUpgradeCosts), async () =>
+            //PokemonUpgradeCosts = await DataCache.GetAsync(nameof(PokemonUpgradeCosts), async () =>
+            //{
+            //    await Task.CompletedTask;
+            //    // Update Pokemon upgrade templates
+            //    var tmpPokemonUpgradeCosts = itemTemplates.First(item => item.PokemonUpgrades != null).PokemonUpgrades;
+            //    var tmpResult = new Dictionary<int, object[]>();
+            //    for (var i = 0; i < tmpPokemonUpgradeCosts.CandyCost.Count; i++)
+            //    {
+            //        tmpResult.Add(i,
+            //            new object[] { tmpPokemonUpgradeCosts.CandyCost[i], tmpPokemonUpgradeCosts.StardustCost[i] });
+            //    }
+            //    return tmpResult;
+            //}, DateTime.Now.AddMonths(1));
+
+            PokemonUpgradeSettings = await DataCache.GetAsync(nameof(PokemonUpgradeSettings), async () =>
             {
                 await Task.CompletedTask;
-                // Update Pokemon upgrade templates
-                var tmpPokemonUpgradeCosts = itemTemplates.First(item => item.PokemonUpgrades != null).PokemonUpgrades;
-                var tmpResult = new Dictionary<int, object[]>();
-                for (var i = 0; i < tmpPokemonUpgradeCosts.CandyCost.Count; i++)
-                {
-                    tmpResult.Add(i,
-                        new object[] { tmpPokemonUpgradeCosts.CandyCost[i], tmpPokemonUpgradeCosts.StardustCost[i] });
-                }
-                return tmpResult;
+                return itemTemplates.First(item => item.PokemonUpgrades != null).PokemonUpgrades;
             }, DateTime.Now.AddMonths(1));
 
 

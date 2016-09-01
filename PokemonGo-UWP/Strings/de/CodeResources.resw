@@ -43,7 +43,7 @@
     <value>Login fehlgeschlagen. Bitte versuche es erneut.</value>
   </data>
   <data name="NoText" xml:space="preserve">
-    <value>Nein</value>
+    <value>NEIN</value>
     <comment>Capslock</comment>
   </data>
   <data name="NoGpsPermissionsText" xml:space="preserve">
@@ -80,7 +80,7 @@ Seite zu den Dateien für manuelle Installation öffnen?</value>
     <value>Falscher Benutzername, falsches Passwort oder Server offline, bitte erneut versuchen.</value>
   </data>
   <data name="YesText" xml:space="preserve">
-    <value>Ja</value>
+    <value>JA</value>
     <comment>Capslock</comment>
   </data>
   <data name="InstinctTeamText" xml:space="preserve">
@@ -214,5 +214,19 @@ Du hast auch {1} Sternenstaub, {2} Bonbon und {3} EP erhalten.</value>
   </data>
   <data name="TransferPokemonWarningTitle" xml:space="preserve">
     <value>Möchtest du {0} wirklich an den Professor schicken?</value>
+  </data>
+  <data name="CancelText" xml:space="preserve">
+    <value>ABBRECHEN</value>
+    <comment>Capslock</comment>
+  </data>
+  <data name="ItemDiscardWarningText" xml:space="preserve">
+    <value>{0} wegwerfen?</value>
+  </data>
+  <data name="SetNickName" xml:space="preserve">
+    <value>Spitznamen eingeben</value>
+  </data>
+  <data name="OkText" xml:space="preserve">
+    <value>O. K.</value>
+    <comment>Space between . and K</comment>
   </data>
 </root>
