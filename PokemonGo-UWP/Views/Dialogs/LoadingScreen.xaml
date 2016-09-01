@@ -13,7 +13,7 @@
         <RelativePanel.Background>
             <ImageBrush x:Name="BackgroundImageBrush"
                         ImageSource="../../Assets/Warnings/1.png"
-                        Stretch="Fill"/>
+                        Stretch="UniformToFill"/>
         </RelativePanel.Background>
 
         <TextBlock Margin="0,0,0,24"
