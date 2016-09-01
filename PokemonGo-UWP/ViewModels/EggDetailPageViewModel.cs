@@ -35,7 +35,8 @@ namespace PokemonGo_UWP.ViewModels
                 // Recovering the state
                 SelectedEggIncubator = new EggIncubator();
                 CurrentEgg = JsonConvert.DeserializeObject<PokemonDataWrapper>((string)suspensionState[nameof(CurrentEgg)]);
-                SelectedEggIncubator.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(SelectedEggIncubator)]).CreateCodedInput());                
+                SelectedEggIncubator.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(SelectedEggIncubator)]).CreateCodedInput());
+                RaisePropertyChanged(() => SelectedEggIncubator);
             }
             else
             {

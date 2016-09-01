@@ -1,7 +1,7 @@
 Closes issues
 -------------
-- ```Closes #1```
-- ```Closes #2```
+- Closes #1
+- Closes #2
 
 Changes
 -------

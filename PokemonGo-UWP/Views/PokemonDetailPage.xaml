@@ -131,18 +131,9 @@
                 From="0"
                 To="1"
                 Duration="0:0:0.2" />
-            <DoubleAnimation Storyboard.TargetName="ContextMenuTransferTranslateTransform"
+            <DoubleAnimation Storyboard.TargetName="ContextMenuTranslateTransform"
                              Storyboard.TargetProperty="Y"
-                             From="150"
-                             To="0"
-                             Duration="0:0:0.2">
-                <DoubleAnimation.EasingFunction>
-                    <CubicEase EasingMode="EaseOut" />
-                </DoubleAnimation.EasingFunction>
-            </DoubleAnimation>
-            <DoubleAnimation Storyboard.TargetName="ContextMenuFavoriteTranslateTransform"
-                             Storyboard.TargetProperty="Y"
-                             From="150"
+                             From="200"
                              To="0"
                              Duration="0:0:0.2">
                 <DoubleAnimation.EasingFunction>
@@ -172,19 +163,10 @@
                 From="1"
                 To="0"
                 Duration="0:0:0.2" />
-            <DoubleAnimation Storyboard.TargetName="ContextMenuTransferTranslateTransform"
+            <DoubleAnimation Storyboard.TargetName="ContextMenuTranslateTransform"
                              Storyboard.TargetProperty="Y"
                              From="0"
-                             To="100"
-                             Duration="0:0:0.2">
-                <DoubleAnimation.EasingFunction>
-                    <CubicEase EasingMode="EaseIn" />
-                </DoubleAnimation.EasingFunction>
-            </DoubleAnimation>
-            <DoubleAnimation Storyboard.TargetName="ContextMenuFavoriteTranslateTransform"
-                             Storyboard.TargetProperty="Y"
-                             From="0"
-                             To="100"
+                             To="200"
                              Duration="0:0:0.2">
                 <DoubleAnimation.EasingFunction>
                     <CubicEase EasingMode="EaseIn" />
@@ -209,7 +191,38 @@
     </Page.Resources>
 
     <RelativePanel>
-
+        <!--Adaptive Layout-->
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="DefaultLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="360" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="EnhancementsGrid.Margin" Value="40,8,40,0" />
+                        <Setter Target="PowerUpButton.FontSize" Value="15" />
+                        <Setter Target="EvolveButton.FontSize" Value="15" />
+                        <Setter Target="PokemonTypeCol.Width" Value="Auto" />
+                        <Setter Target="PokemonWeightCol.Width" Value="*" />
+                        <Setter Target="PokemonHeightCol.Width" Value="*" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="EnhancementsGrid.Margin" Value="16,8,16,0" />
+                        <Setter Target="PowerUpButton.FontSize" Value="12" />
+                        <Setter Target="EvolveButton.FontSize" Value="12" />
+                        <Setter Target="PokemonTypeCol.Width" Value="*" />
+                        <Setter Target="PokemonWeightCol.Width" Value="Auto" />
+                        <Setter Target="PokemonHeightCol.Width" Value="Auto" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
         <!--Evolve-->
         <RelativePanel x:Name="EvolvePokemonPanel"
                        RelativePanel.AlignTopWithPanel="True"
@@ -358,71 +371,97 @@
 
             <StackPanel Grid.Row="0"
                         VerticalAlignment="Bottom">
-
+                <StackPanel.RenderTransform>
+                    <TranslateTransform Y="200" x:Name="ContextMenuTranslateTransform"/>
+                </StackPanel.RenderTransform>
+                
                 <!--Favorite-->
-                <Grid HorizontalAlignment="Right" 
-                      Margin="0,15,0,0"
-                      Padding="17.5,4">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RenderTransform>
-                        <TranslateTransform Y="150" x:Name="ContextMenuFavoriteTranslateTransform"/>
-                    </Grid.RenderTransform>
-                    <interactivity:Interaction.Behaviors>
-                        <core:EventTriggerBehavior EventName="Tapped">
-                            <media:ControlStoryboardAction Storyboard="{StaticResource HideContextMenuStoryboard}" />
-                            <core:InvokeCommandAction Command="{Binding FavoritePokemonCommand}" />
-                        </core:EventTriggerBehavior>
-                    </interactivity:Interaction.Behaviors>
-                    <TextBlock Grid.Column="0"
-                               Margin="0,0,15,0"
-                               x:Uid="FavoriteTextBlock"
-                               Text="FAVORITE"
-                               Style="{StaticResource TextSortTitle}" />
-                    <Image Grid.Column="1"
-                           Height="25"
-                           Width="25"
-                           Margin="12,5"
-                           Source="../Assets/Icons/ic_fav_light.png" />
-                </Grid>
+                <Button Style="{StaticResource ButtonContextMenu}" 
+                        Height="43" 
+                        Padding="0" >
+                    <Grid HorizontalAlignment="Right">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="82" />
+                        </Grid.ColumnDefinitions>
+                        <interactivity:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="Tapped">
+                                <media:ControlStoryboardAction Storyboard="{StaticResource HideContextMenuStoryboard}" />
+                                <core:InvokeCommandAction Command="{Binding FavoritePokemonCommand}" />
+                            </core:EventTriggerBehavior>
+                        </interactivity:Interaction.Behaviors>
+                        <TextBlock Grid.Column="0"
+                                   x:Uid="FavoriteTextBlock"
+                                   Text="FAVORITE"
+                                   Style="{StaticResource TextSortTitle}"
+                                   Foreground="#e4ffde"/>
+                        <Image Grid.Column="1"
+                               Height="25"
+                               Width="25"
+                               Source="../Assets/Icons/ic_fav_light.png" />
+                    </Grid>
+                </Button>
+                
+                <!--Appraise-->
+                <Button Style="{StaticResource ButtonContextMenu}" 
+                        Height="43" 
+                        Padding="0" >
+                    <Grid HorizontalAlignment="Right">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="82" />
+                        </Grid.ColumnDefinitions>
+                        <interactivity:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="Tapped">
+                                <media:ControlStoryboardAction Storyboard="{StaticResource HideContextMenuStoryboard}" />
+                                <core:InvokeCommandAction Command="{Binding AppraisePokemonCommand}" />
+                            </core:EventTriggerBehavior>
+                        </interactivity:Interaction.Behaviors>
+                        <TextBlock Grid.Column="0"
+                                   x:Uid="AppraiseTextBlock"
+                                   Text="APPRAISE"
+                                   Style="{StaticResource TextSortTitle}"
+                                   Foreground="#e4ffde"/>
+                        <Image Grid.Column="1"
+                               Height="25"
+                               Width="25"
+                               Source="../Assets/Buttons/btn_close.png" />
+                    </Grid>
+                </Button>
 
                 <!--Transfer-->
-                <Grid HorizontalAlignment="Right" 
-                      Margin="0"
-                      Padding="17.5,4">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RenderTransform>
-                        <TranslateTransform Y="150" x:Name="ContextMenuTransferTranslateTransform"/>
-                    </Grid.RenderTransform>
-                    <interactivity:Interaction.Behaviors>
-                        <core:EventTriggerBehavior EventName="Tapped">
-                            <core:InvokeCommandAction Command="{Binding TransferPokemonCommand}" />
-                        </core:EventTriggerBehavior>
-                    </interactivity:Interaction.Behaviors>
-                    <TextBlock Grid.Column="0"
-                               Margin="0,0,15,0"
-                               x:Uid="TransferTextBlock"
-                               Text="TRANSFER"
-                               Style="{StaticResource TextSortTitle}" />
-                    <Image Grid.Column="1"
-                           Height="25"
-                           Width="25"
-                           Margin="12,5"
-                           Source="../Assets/Icons/ic_candy_light.png" />
-                </Grid>
+                <Button Style="{StaticResource ButtonContextMenu}" 
+                        Height="43" 
+                        Padding="0" >
+                    <Grid HorizontalAlignment="Right">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="82" />
+                        </Grid.ColumnDefinitions>
+                        <interactivity:Interaction.Behaviors>
+                            <core:EventTriggerBehavior EventName="Tapped">
+                                <core:InvokeCommandAction Command="{Binding TransferPokemonCommand}" />
+                            </core:EventTriggerBehavior>
+                        </interactivity:Interaction.Behaviors>
+                        <TextBlock Grid.Column="0"
+                                   x:Uid="TransferTextBlock"
+                                   Text="TRANSFER"
+                                   Style="{StaticResource TextSortTitle}"
+                                   Foreground="#e4ffde"/>
+                        <Image Grid.Column="1"
+                               Height="25"
+                               Width="25"
+                               Source="../Assets/Icons/ic_candy_light.png" />
+                    </Grid>
+                </Button>
             </StackPanel>
 
             <!--Close Contextmenu-->
             <Button Style="{StaticResource ButtonCircle}"
                     Grid.Row="1"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Top"
-                    Margin="17.5,12.5">
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,21,21">
                 <interactivity:Interaction.Behaviors>
                     <core:EventTriggerBehavior EventName="Tapped">
                         <media:ControlStoryboardAction Storyboard="{StaticResource HideContextMenuStoryboard}" />
@@ -483,7 +522,7 @@
                           Canvas.ZIndex="5">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
-                            <RowDefinition Height="165" />
+                            <RowDefinition Height="200" />
                             <RowDefinition Height="135" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
@@ -521,39 +560,32 @@
                                    Foreground="White"
                                    FontSize="29"
                                    FontFamily="{StaticResource LatoMediumFont}" />
+                        <Viewbox Grid.Row="1" 
+                                 Grid.ColumnSpan="3"
+                                 Margin="0, 10, 0, 20" >
+                            <controls:ArcProgressBar Radius="170"
+                                                     StrokeThickness="4" 
+                                                     FilledColor="White" 
+                                                     ValueEndCapDiameter="10" 
+                                                     EmptyColor="#55eeeeee"
+                                                     Minimum="1"
+                                                     Maximum="{Binding CurrentPokemon, Converter={StaticResource PokemonDataToMaxLevelBarConverter}}" 
+                                                     Value="{Binding CurrentPokemon, Converter={StaticResource PokemonDataToLevelBarConverter}}" />
+                        </Viewbox>
 
-
-
-                        <controls:SemiCircularProgressBar Grid.Row="1"
-                                                          Grid.RowSpan="2"
-                                                          Grid.ColumnSpan="3"
-                                                          Height="300"
-                                                          Width="300"
-                                                          Diameter="590"
-                                                          x:Name="LevelProgressBar"
-                                                      Maximum="{Binding CurrentPokemon, Converter={StaticResource PokemonDataToMaxLevelBarConverter}}"
-                                                      Value="{Binding CurrentPokemon, Converter={StaticResource PokemonDataToLevelBarConverter}}"
-                                                      SegmentColor="White"
-                                                      InnerSegmentColor="Gray"
-                                                      StrokeThickness="5"
-                                                      HorizontalContentAlignment="Center"
-                                                      RenderTransformOrigin="0.5,0.5"
-                                                          >
-                            <controls:SemiCircularProgressBar.RenderTransform>
-                                <CompositeTransform Rotation="-90" />
-                            </controls:SemiCircularProgressBar.RenderTransform>
-                        </controls:SemiCircularProgressBar>
-
-                        <Image x:Name="PokemonImage"
-                               Grid.ColumnSpan="3"
-                               Grid.Row="1"
+                        <Viewbox Grid.Row="1"
+                                 Grid.ColumnSpan="3"
+                                 Margin="30,30,30,-32"
+                                 MaxWidth="310"
+                                 VerticalAlignment="Bottom"
+                                 HorizontalAlignment="Center"
+                                 StretchDirection="DownOnly">
+                            <Image x:Name="PokemonImage"
                                Height="128"
                                Source="{Binding CurrentPokemon.PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"
-                               VerticalAlignment="Bottom"
-                               HorizontalAlignment="Center"
                                Canvas.ZIndex="5"
-                               Margin="0,0,0,-32"
                                Stretch="Uniform"/>
+                        </Viewbox>
                     </Grid>
 
                     <Border CornerRadius="5"
@@ -584,22 +616,20 @@
                                     Foreground="{StaticResource TitleTextColor}"
                                     FontFamily="{StaticResource LatoMediumFont}"
                                     FontSize="28"/>
-                                    <TextBlock Margin="0" 
-                                               Grid.Column="2"
-                                               Padding="8"
-                                               Foreground="#999999" 
-                                               Text="&#59151;" 
-                                               FontFamily="Segoe MDL2 Assets" 
-                                               VerticalAlignment="Center"
-                                               HorizontalAlignment="Left">
-                                        <interactivity:Interaction.Behaviors>
-                                            <core:EventTriggerBehavior EventName="Tapped">
-                                                <core:InvokeCommandAction Command="{Binding RenamePokemonCommand}" />
-                                            </core:EventTriggerBehavior>
-                                        </interactivity:Interaction.Behaviors>
-                                    </TextBlock>
+                                    <Button Grid.Row="0"
+                                        Grid.Column="2"
+                                        Height="28" 
+                                        Margin="0,3,0,0"
+                                        Padding="5"
+                                        VerticalAlignment="Stretch"
+                                        HorizontalAlignment="Left"
+                                        Style="{StaticResource ButtonSymbolIcon}"
+                                        Command="{Binding RenamePokemonCommand}">
+                                        <Viewbox>
+                                            <SymbolIcon Symbol="Edit" />
+                                        </Viewbox>
+                                    </Button>
                                 </Grid>
-
 
                                 <StackPanel VerticalAlignment="Bottom">
 
@@ -628,15 +658,15 @@
 
                             <!-- Data/PowerUp/Evolve/Moves/Transfer -->
                             <StackPanel>
-
+                                
                                 <!-- Pokemon Data -->
                                 <Grid Margin="16,8"
                                       BorderThickness="0,0,0,0.5"
                                       BorderBrush="#dadada">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto" x:Name="PokemonTypeCol" />
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" x:Name="PokemonWeightCol"/>
+                                        <ColumnDefinition Width="*" x:Name="PokemonHeightCol"/>
                                     </Grid.ColumnDefinitions>
 
                                     <!-- Pokemon Type -->
@@ -649,25 +679,30 @@
                                             <RowDefinition Height="Auto" />
                                         </Grid.RowDefinitions>
 
-                                        <TextBlock HorizontalAlignment="Center"
+                                        <Viewbox Grid.Row="0" 
+                                                 StretchDirection="DownOnly">
+                                            <Grid>
+                                                <TextBlock HorizontalAlignment="Center"
                                                    Margin="0,0,8,0"
-                                                   FontSize="19"
+                                                   FontSize="17"
                                                    FontFamily="{StaticResource LatoRegularFont}"
                                                    Visibility="{Binding PokemonExtraData.Type2, Converter={StaticResource VisibleWhenTypeIsNotNoneConverter}}"
                                                    Foreground="{StaticResource TitleTextColor}">
-                                            <Run Text="{Binding PokemonExtraData.Type, Converter={StaticResource PokemonTypeTranslationConverter}}" />
-                                            <Run Text="/" />
-                                            <Run Text="{Binding PokemonExtraData.Type2, Converter={StaticResource PokemonTypeTranslationConverter}}" />
-                                        </TextBlock>
+                                                    <Run Text="{Binding PokemonExtraData.Type, Converter={StaticResource PokemonTypeTranslationConverter}}" />
+                                                    <Run Text="/" />
+                                                    <Run Text="{Binding PokemonExtraData.Type2, Converter={StaticResource PokemonTypeTranslationConverter}}" />
+                                                </TextBlock>
 
-                                        <TextBlock HorizontalAlignment="Center"
+                                                <TextBlock HorizontalAlignment="Center"
                                                    Margin="32,0"
                                                    FontSize="17"
                                                    FontFamily="{StaticResource LatoRegularFont}"
-                                                   Grid.Row="0"
+                                                   
                                                    Text="{Binding PokemonExtraData.Type, Converter={StaticResource PokemonTypeTranslationConverter}}"
                                                    Visibility="{Binding PokemonExtraData.Type2, Converter={StaticResource InverseVisibleWhenTypeIsNotNoneConverter}}"
                                                    Foreground="{StaticResource TitleTextColor}" />
+                                            </Grid>
+                                        </Viewbox>
 
                                         <TextBlock HorizontalAlignment="Center"
                                                    Grid.Row="1"
@@ -695,6 +730,7 @@
                                         </Grid.RowDefinitions>
 
                                         <TextBlock HorizontalAlignment="Center"
+                                                   Margin="8,0"
                                                    FontFamily="{StaticResource LatoRegularFont}"
                                                    Foreground="{StaticResource TitleTextColor}"
                                                    Grid.Row="0">
@@ -730,7 +766,9 @@
                                         </Grid.RowDefinitions>
 
 
-                                        <TextBlock HorizontalAlignment="Center"
+                                        <TextBlock HorizontalAlignment="Stretch"
+                                                   TextAlignment="Center"
+                                                   Margin="8,0,0,0"
                                                    FontFamily="{StaticResource LatoRegularFont}"
                                                    Foreground="{StaticResource TitleTextColor}">
                                             <Run Text="{Binding CurrentPokemon.HeightM, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:N2\}}"
@@ -751,7 +789,7 @@
                                 </Grid>
 
                                 <!-- Enhancements -->
-                                <Grid Margin="40,8,40,0">
+                                <Grid x:Name="EnhancementsGrid" Margin="40,8,40,0">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto" />
                                         <ColumnDefinition Width="*" x:Name="PokemonEnhancementReqsCol" />
@@ -772,9 +810,9 @@
                                             <Image Height="25"
                                                    HorizontalAlignment="Left"
                                                    Source="ms-appx:///Assets/Icons/stardust_vector.png" />
-                                            <TextBlock Foreground="#626264"
-                                                       FontSize="19"
+                                            <TextBlock FontSize="19"
                                                        FontFamily="{StaticResource LatoRegularFont}"
+                                                       Foreground="{StaticResource TitleTextColor}"
                                                        Text="{Binding StardustAmount}"
                                                        Margin="-4,0,0,0"
                                                        HorizontalAlignment="Left"
@@ -797,9 +835,9 @@
                                                    HorizontalAlignment="Left"
                                                    Height="25"
                                                    Source="{Binding PokemonExtraData.Type, Converter={StaticResource PokemonFamilyToCandyImageConverter}}" />
-                                            <TextBlock Foreground="#626264"
-                                                       FontSize="19"
+                                            <TextBlock FontSize="19"
                                                        FontFamily="{StaticResource LatoRegularFont}"
+                                                       Foreground="{StaticResource TitleTextColor}"
                                                        Text="{Binding CurrentCandy.Candy_}"
                                                        HorizontalAlignment="Left"
                                                        VerticalAlignment="Center" />
@@ -847,9 +885,9 @@
                                                        Height="20"
                                                        Margin="0,0,3,0"
                                                        Source="ms-appx:///Assets/Icons/stardust_vector.png" />
-                                                <TextBlock Foreground="#626264"
-                                                           FontSize="12"
+                                                <TextBlock FontSize="12"
                                                            FontFamily="{StaticResource LatoRegularFont}"
+                                                           Foreground="{StaticResource TitleTextColor}"
                                                            Text="{Binding StardustToPowerUp}"
                                                            HorizontalAlignment="Left"
                                                            Margin="-6,0,0,0"
@@ -871,9 +909,9 @@
                                                        Height="20"
                                                        Margin="0,0,3,0"
                                                        Source="{Binding PokemonExtraData.Type, Converter={StaticResource PokemonFamilyToCandyImageConverter}}" />
-                                                <TextBlock Foreground="#626264"
-                                                           FontSize="12"
+                                                <TextBlock FontSize="12"
                                                            FontFamily="{StaticResource LatoRegularFont}"
+                                                           Foreground="{StaticResource TitleTextColor}"
                                                            Text="{Binding CandiesToPowerUp}"
                                                            HorizontalAlignment="Left"
                                                            VerticalAlignment="Center" >
@@ -888,7 +926,8 @@
                                         </Grid>
                                     </Border>
 
-                                    <Button Grid.Column="0"
+                                    <Button x:Name="PowerUpButton" 
+                                            Grid.Column="0"
                                             Grid.Row="1"
                                             Style="{StaticResource ButtonSubmit}"
                                             CharacterSpacing="40"
@@ -929,9 +968,9 @@
                                                        Height="20"
                                                        Margin="0,0,3,0"
                                                        Source="{Binding PokemonExtraData.Type, Converter={StaticResource PokemonFamilyToCandyImageConverter}}" />
-                                                <TextBlock Foreground="#626264"
-                                                           FontSize="12"
+                                                <TextBlock FontSize="12"
                                                            FontFamily="{StaticResource LatoRegularFont}"
+                                                           Foreground="{StaticResource TitleTextColor}"
                                                            Text="{Binding PokemonExtraData.CandyToEvolve}"
                                                            VerticalAlignment="Center" >
                                                 <interactivity:Interaction.Behaviors>
@@ -947,7 +986,7 @@
                                         </Grid>
                                     </Border>
 
-                                    <Button Grid.Column="0"
+                                    <Button x:Name="EvolveButton" Grid.Column="0"
                                             Grid.Row="2"
                                             Style="{StaticResource ButtonSubmit}"
                                             CharacterSpacing="40"
@@ -994,7 +1033,7 @@
                                     <TextBlock Grid.Column="1"
                                                Grid.Row="0"
                                                Foreground="#414544"
-                                               VerticalAlignment="Center"
+                                               VerticalAlignment="Top"
                                                HorizontalAlignment="Right"
                                                Text="{Binding CurrentPokemon.Move1, Converter={StaticResource PokemonMoveToMovePowerConverter}}"
                                                FontFamily="{StaticResource LatoRegularFont}"/>
@@ -1016,7 +1055,7 @@
                                     <TextBlock Grid.Column="1"
                                                Grid.Row="1"
                                                Foreground="#414544"
-                                               VerticalAlignment="Center"
+                                               VerticalAlignment="Top"
                                                HorizontalAlignment="Right"
                                                Text="{Binding CurrentPokemon.Move2, Converter={StaticResource PokemonMoveToMovePowerConverter}}"
                                                FontFamily="{StaticResource LatoRegularFont}"/>
@@ -1026,7 +1065,7 @@
                                            Margin="5"
                                            Foreground="#626264"
                                            FontSize="10"
-                                           FontFamily="{StaticResource LatoRegularFont}"
+                                           FontFamily="{StaticResource LatoBoldFont}"
                                            Text="{Binding CurrentPokemon.CreationTimeMs, Converter={StaticResource MsToDateFormatConverter}}" />
                             </StackPanel>
                         </StackPanel>
@@ -1040,26 +1079,35 @@
                 RelativePanel.AlignHorizontalCenterWithPanel="True"
                 Style="{StaticResource ButtonCircle}"
                 VerticalAlignment="Bottom"
-                Margin="0,0,0,17.5"
+                Margin="0,0,0,21"
                 Command="{Binding ReturnToPokemonInventoryScreen}">
             <Image Source="../Assets/Buttons/btn_close.png" />
         </Button>
 
         <Button RelativePanel.AlignBottomWithPanel="True"
                 RelativePanel.AlignRightWithPanel="True"
-                Style="{ThemeResource ImageButtonStyle}"
-                Height="{ThemeResource UiButtonSize}"
+                Style="{StaticResource ButtonCircleBig}"
                 Margin="16">
-            
             <interactivity:Interaction.Behaviors>
                 <core:EventTriggerBehavior EventName="Tapped">
                     <media:ControlStoryboardAction Storyboard="{StaticResource ShowContextMenuStoryboard}" />
                 </core:EventTriggerBehavior>
             </interactivity:Interaction.Behaviors>
 
-            <Image Source="../Assets/Buttons/btn_menu.png"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center" />
+            <Path Data="M 2,2 H 19 M 2,8 H 19 M 2,14 H 19" 
+                  HorizontalAlignment="Center" 
+                  StrokeEndLineCap="Round" 
+                  StrokeDashCap="Round" 
+                  StrokeStartLineCap="Round" 
+                  StrokeThickness="3"
+                  Margin="-2">
+                <Path.Stroke>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#b0ffb0" Offset="0"/>
+                        <GradientStop Color="#66eecc" Offset="0.8"/>
+                    </LinearGradientBrush>
+                </Path.Stroke>
+            </Path>
         </Button>
 
     </RelativePanel>

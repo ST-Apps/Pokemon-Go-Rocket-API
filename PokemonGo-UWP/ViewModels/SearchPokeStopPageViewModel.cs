@@ -38,7 +38,9 @@ namespace PokemonGo_UWP.ViewModels
                 CurrentSearchResponse = new FortSearchResponse();
                 CurrentPokestop = JsonConvert.DeserializeObject<FortDataWrapper>((string)suspensionState[nameof(CurrentPokestop)]);
                 CurrentPokestopInfo.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(CurrentPokestop)]).CreateCodedInput());
-                CurrentSearchResponse.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(CurrentSearchResponse)]).CreateCodedInput());                
+                CurrentSearchResponse.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(CurrentSearchResponse)]).CreateCodedInput());
+                RaisePropertyChanged(() => CurrentPokestopInfo);
+                RaisePropertyChanged(() => CurrentSearchResponse);
             }
             else
             {

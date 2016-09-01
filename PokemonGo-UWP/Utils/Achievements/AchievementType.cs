@@ -5,7 +5,7 @@ namespace PokemonGo_UWP.Utils
     public enum AchievementType
     {
         [BadgeType(BadgeType.BadgeTravelKm)] [Bronze(10)] [Silver(100)] [Gold(1000)] Jogger,
-        [BadgeType(BadgeType.BadgePokedexEntries)] [Bronze(5)] [Silver(50)] [Gold(200)] Kanto,
+        [BadgeType(BadgeType.BadgePokedexEntries)] [Bronze(5)] [Silver(50)] [Gold(100)] Kanto,
         [BadgeType(BadgeType.BadgeCaptureTotal)] [Bronze(30)] [Silver(500)] [Gold(2000)] Collector,
         [BadgeType(BadgeType.BadgeEvolvedTotal)] [Bronze(3)] [Silver(20)] [Gold(200)] Scientist,
         [BadgeType(BadgeType.BadgeHatchedTotal)] [Bronze(10)] [Silver(100)] [Gold(1000)] Breeder,

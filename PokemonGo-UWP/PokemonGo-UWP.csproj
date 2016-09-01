@@ -730,14 +730,15 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ArcProgressBar.cs" />
     <Compile Include="Controls\MessageDialog\PoGoMessageDialog.xaml.cs">
       <DependentUpon>PoGoMessageDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\MessageDialog\StepperMessageDialog.xaml.cs">
       <DependentUpon>StepperMessageDialog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\SemiCircularProgressBar.xaml.cs">
-      <DependentUpon>SemiCircularProgressBar.xaml</DependentUpon>
+    <Compile Include="Controls\MessageDialog\TextboxMessageDialog.xaml.cs">
+      <DependentUpon>TextboxMessageDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\CircularProgressBar.xaml.cs">
       <DependentUpon>CircularProgressBar.xaml</DependentUpon>
@@ -892,9 +893,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\SemiCircularProgressBar.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Controls\MessageDialog\TextboxMessageDialog.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\CircularProgressBar.xaml">
       <SubType>Designer</SubType>
