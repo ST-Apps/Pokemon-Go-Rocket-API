@@ -260,7 +260,7 @@ namespace PokemonGo_UWP.Utils
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            return GameClient.PlayerStats.Level + GameClient.PokemonUpgradeSettings.AllowedLevelsAbovePlayer;
+            return GameClient.PlayerStats.Level + 1.5;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
