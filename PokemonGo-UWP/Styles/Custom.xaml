@@ -14,14 +14,6 @@
         <GradientStop Color="#b6ffa7" Offset="0.8" />
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="PokedexPageBackgroundGradient" 
-                         StartPoint="0,0" 
-                         EndPoint="1,1">
-        <GradientStop Color="#f5f5fd" Offset="0" />
-        <GradientStop Color="#e4dcfd" Offset="0.3" />
-        <GradientStop Color="#c8e0ff" Offset="1" />
-    </LinearGradientBrush>
-
     <LinearGradientBrush x:Key="PageBackgroundGradient" 
                          StartPoint="0,0" 
                          EndPoint="1,1">

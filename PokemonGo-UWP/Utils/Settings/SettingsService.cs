@@ -130,16 +130,6 @@ namespace PokemonGo_UWP.Utils
 			get { return Get(false); }
 			set { Set(value); }
 		}
-		public double MapPitch
-		{
-			get { return Get(0D); }
-			set { Set(value); }
-		}
-		public double MapHeading
-		{
-			get { return Get(0D); }
-			set { Set(value); }
-		}
 		public bool IsVibrationEnabled
 		{
 			get { return Get(false); }

@@ -86,8 +86,7 @@ namespace PokemonGo_UWP
             LiveTileUpdater = TileUpdateManager.CreateTileUpdaterForApplication();
 
             // Init the proximity helper to turn the screen off when it's in your pocket
-            _proximityHelper = new ProximityHelper();
-            _proximityHelper.EnableDisplayAutoOff(false);
+            _proximityHelper = new Utils.Helpers.ProximityHelper();
         }
 
         #endregion
@@ -176,10 +175,10 @@ namespace PokemonGo_UWP
         /// <param name="prelaunchActivated"></param>
         /// <returns></returns>
         public override Task OnSuspendingAsync(object s, SuspendingEventArgs e, bool prelaunchActivated)
-        {                        
+        {            
             GameClient.PokemonsInventory.CollectionChanged -= PokemonsInventory_CollectionChanged;
             GameClient.CatchablePokemons.CollectionChanged -= CatchablePokemons_CollectionChanged;
-            NetworkInformation.NetworkStatusChanged -= NetworkInformationOnNetworkStatusChanged;            
+            NetworkInformation.NetworkStatusChanged -= NetworkInformationOnNetworkStatusChanged;
 
             if (SettingsService.Instance.IsBatterySaverEnabled)
                 _proximityHelper.EnableDisplayAutoOff(false);
