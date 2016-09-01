@@ -43,7 +43,7 @@
     <value>Login fehlgeschlagen. Bitte versuche es erneut.</value>
   </data>
   <data name="NoText" xml:space="preserve">
-    <value>Nein</value>
+    <value>NEIN</value>
     <comment>Capslock</comment>
   </data>
   <data name="NoGpsPermissionsText" xml:space="preserve">
@@ -80,7 +80,7 @@ Seite zu den Dateien für manuelle Installation öffnen?</value>
     <value>Falscher Benutzername, falsches Passwort oder Server offline, bitte erneut versuchen.</value>
   </data>
   <data name="YesText" xml:space="preserve">
-    <value>Ja</value>
+    <value>JA</value>
     <comment>Capslock</comment>
   </data>
   <data name="InstinctTeamText" xml:space="preserve">

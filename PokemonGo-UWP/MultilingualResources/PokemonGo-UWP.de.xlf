@@ -512,16 +512,16 @@ Du hast auch {1} Sternenstaub, {2} Bonbon und {3} EP erhalten.</target>
         </trans-unit>
         <trans-unit id="CancelText" translate="yes" xml:space="preserve">
           <source>CANCEL</source>
-          <target state="new">CANCEL</target>
+          <target state="translated">ABBRECHEN</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
         </trans-unit>
         <trans-unit id="ItemDiscardWarningText" translate="yes" xml:space="preserve">
           <source>Discard {0}?</source>
-          <target state="new">Discard {0}?</target>
+          <target state="translated">{0} verwerfen?</target>
         </trans-unit>
         <trans-unit id="SetNickName" translate="yes" xml:space="preserve">
           <source>Set Nickname</source>
-          <target state="new">Set Nickname</target>
+          <target state="translated">Erstelle Nickname</target>
         </trans-unit>
       </group>
     </body>
@@ -744,7 +744,7 @@ Du hast auch {1} Sternenstaub, {2} Bonbon und {3} EP erhalten.</target>
         </trans-unit>
         <trans-unit id="TimesTextBlock.Text" translate="yes" xml:space="preserve">
           <source>times</source>
-          <target state="new">times</target>
+          <target state="translated">Mal</target>
         </trans-unit>
         <trans-unit id="TransferTextBlock.Text" translate="yes" xml:space="preserve">
           <source>TRANSFER</source>
