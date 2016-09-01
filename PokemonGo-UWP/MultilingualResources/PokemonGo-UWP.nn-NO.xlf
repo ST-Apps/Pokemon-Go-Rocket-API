@@ -540,7 +540,7 @@
         </trans-unit>
         <trans-unit id="SettingsLiveTileTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Live Tile Mode</source>
-          <target state="final">Live Flis Modus</target>
+          <target state="final">Live Flis</target>
         </trans-unit>
         <trans-unit id="FavoriteTextBlock.Text" translate="yes" xml:space="preserve">
           <source>FAVORITE</source>
@@ -1017,7 +1017,7 @@ Vil du åpne nettsiden med installasjonsfilene for manuell installasjon?</target
         </trans-unit>
         <trans-unit id="Combat" translate="yes" xml:space="preserve">
           <source>Combat</source>
-          <target state="final">CP</target>
+          <target state="final">Styrke</target>
         </trans-unit>
         <trans-unit id="Date" translate="yes" xml:space="preserve">
           <source>Date</source>
