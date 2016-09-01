@@ -33,10 +33,8 @@ namespace PokemonGo_UWP.Views
 
         public LoadingScreen(SplashScreen splashScreen) {
             InitializeComponent();
-            ComputeInfoMessage(this);
             timer.Start();
             BusyText = Utils.Resources.CodeResources.GetString("LoadingMessage");
-            ComputeInfoMessage(this);
             IsBusy = true;
         }
 
@@ -70,29 +68,9 @@ namespace PokemonGo_UWP.Views
                     modal.ModalContent = view = new LoadingScreen();
                 modal.HorizontalContentAlignment = HorizontalAlignment.Stretch;
                 modal.ModalBackground = new SolidColorBrush(Colors.Transparent);
-                if(busy && !view.IsBusy) {
-                    ComputeInfoMessage(view);
-                }
                 modal.IsModal = view.IsBusy = busy;
                 view.BusyText = text;
             });
-        }
-
-        private static Random random;
-        private static void ComputeInfoMessage(LoadingScreen view) {
-            random = new Random();
-            // Sets the number of different images and messages.
-            // The second parameter is the number for max count + 1 of images and messages.
-            int number = random.Next(1, 7);
-            // little Workaround, because the first image is not correct sized.
-            if (number == 1) {
-                view.BackgroundImageBrush.Stretch = Stretch.Fill;
-            } else {
-                view.BackgroundImageBrush.Stretch = Stretch.UniformToFill;
-            }
-            view.BackgroundImageBrush.ImageSource =
-                new BitmapImage(new Uri($"ms-appx:///Assets/Warnings/{number}.png"));
-            view.InfoMessage = Utils.Resources.CodeResources.GetString($"WarningMessage{number}");
         }
     }
 }

@@ -12,8 +12,8 @@
 
         <RelativePanel.Background>
             <ImageBrush x:Name="BackgroundImageBrush"
-                        ImageSource="../../Assets/Warnings/1.png"
-                        Stretch="UniformToFill"/>
+                        ImageSource="../../Assets/Backgrounds/loading_screen.png"
+                        Stretch="Fill"/>
         </RelativePanel.Background>
 
         <TextBlock Margin="0,0,0,24"
@@ -44,7 +44,8 @@
             <TextBlock x:Name="InfoMessageTextBlock"
                        FontSize="20"
                        Margin="6"
-                       Text="{x:Bind InfoMessage, Mode=OneWay, FallbackValue='InfoMessage'}"
+                       x:Uid="LoadingMessage"
+                       Text="Loading Mesasge"
                        TextWrapping="Wrap"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"

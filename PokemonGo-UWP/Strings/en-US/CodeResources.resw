@@ -330,32 +330,9 @@ You also got {1} Stardust, {2} Candy and {3} XP.</value>
   <data name="LoadingMessage" xml:space="preserve">
     <value>LOADING...</value>
   </data>
-  <data name="WarningMessage1" xml:space="preserve">
-    <value>Remember to be alert at all times.
-Stay aware of your surroundings.</value>
-  </data>
-  <data name="WarningMessage2" xml:space="preserve">
-    <value>Please, leave your favorite Pokéstops clean.</value>
-  </data>
   <data name="OkText" xml:space="preserve">
     <value>O. K.</value>
     <comment>Space between . and K</comment>
-  </data>
-  <data name="WarningMessage3" xml:space="preserve">
-    <value>Try to not smoke in crowds.
-Nobody likes to breathe Koffing fumes.</value>
-  </data>
-  <data name="WarningMessage4" xml:space="preserve">
-    <value>Remember, don't be a Snorlax.
-Don't block the road for other.</value>
-  </data>
-  <data name="WarningMessage5" xml:space="preserve">
-    <value>Remember to be alert at all times.
-Stay aware of your surroundings.</value>
-  </data>
-  <data name="WarningMessage6" xml:space="preserve">
-    <value>Remember to be alert at all times.
-Stay aware of your surroundings.</value>
   </data>
   <data name="PokemonEncounterErrorText" xml:space="preserve">
     <value>There was an error loading the encounter with {0}, please try again later.</value>
