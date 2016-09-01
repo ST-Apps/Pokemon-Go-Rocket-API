@@ -68,6 +68,7 @@ namespace PokemonGo_UWP.ViewModels
                 PlayerProfile = new PlayerData();
                 CurrentPokemon = JsonConvert.DeserializeObject<PokemonDataWrapper>((string)suspensionState[nameof(CurrentPokemon)]);
                 PlayerProfile.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(PlayerProfile)]).CreateCodedInput());
+                RaisePropertyChanged(() => PlayerProfile);                
             }
             else
             {
@@ -290,11 +291,13 @@ namespace PokemonGo_UWP.ViewModels
             PlayerProfile = GameClient.PlayerProfile;
             IsFavorite = Convert.ToBoolean(CurrentPokemon.Favorite);
             StardustAmount = PlayerProfile.Currencies.FirstOrDefault(item => item.Name.Equals("STARDUST")).Amount;
-            var upgradeCosts =
-                GameClient.PokemonUpgradeCosts[
-                    Convert.ToInt32(Math.Round(PokemonInfo.GetLevel(CurrentPokemon.WrappedData)) - 1)];
-            CandiesToPowerUp = Convert.ToInt32(upgradeCosts[0]);
-            StardustToPowerUp = Convert.ToInt32(upgradeCosts[1]);
+            //var upgradeCosts =
+            //    GameClient.PokemonUpgradeSettings.CandyCost[
+            //        Convert.ToInt32(Math.Floor(PokemonInfo.GetLevel(CurrentPokemon.WrappedData)) - 1)];
+            CandiesToPowerUp = Convert.ToInt32(GameClient.PokemonUpgradeSettings.CandyCost[
+                    Convert.ToInt32(Math.Floor(PokemonInfo.GetLevel(CurrentPokemon.WrappedData)) - 1)]);
+            StardustToPowerUp = Convert.ToInt32(GameClient.PokemonUpgradeSettings.StardustCost[
+                    Convert.ToInt32(Math.Floor(PokemonInfo.GetLevel(CurrentPokemon.WrappedData)) - 1)]);
             PokemonExtraData = GameClient.GetExtraDataForPokemon(CurrentPokemon.PokemonId);
             CurrentCandy = GameClient.CandyInventory.FirstOrDefault(item => item.FamilyId == PokemonExtraData.FamilyId);
             RaisePropertyChanged(() => PokemonExtraData);

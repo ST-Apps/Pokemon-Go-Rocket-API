@@ -181,8 +181,8 @@
     <value>items</value>
   </data>
   <data name="NumberTextBlock.Text" xml:space="preserve">
-    <value># </value>
-    <comment>Watch out: there is a space after the #</comment>
+    <value>+ </value>
+    <comment>Watch out: there is a space after the +</comment>
   </data>
   <data name="SlashSpaceCpTextBlock.Text" xml:space="preserve">
     <value>/ CP</value>
@@ -302,5 +302,8 @@
   <data name="AppraiseTextBlock.Text" xml:space="preserve">
     <value>APPRAISE</value>
     <comment>Capslock</comment>
+  </data>
+  <data name="AwardedExperienceTextBlock.Text" xml:space="preserve">
+    <value>Experience</value>
   </data>
 </root>

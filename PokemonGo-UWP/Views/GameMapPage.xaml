@@ -580,6 +580,7 @@
                         RelativePanel.AlignVerticalCenterWithPanel="True">
                 <TextBlock x:Uid="LevelUpTextBlock"
                            FontSize="48"
+                           TextWrapping="WrapWholeWords"
                            Foreground="White" />
                 <TextBlock Text="{Binding PlayerStats.Level}"
                            HorizontalAlignment="Center"
