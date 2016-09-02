@@ -1,4 +1,4 @@
-﻿<Page
+<Page
     x:Class="PokemonGo_UWP.Views.SearchPokestopPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -109,8 +109,10 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" Style="{StaticResource GridContainer}">
-                <TextBlock Text="{Binding CurrentPokestopInfo.Name}"
-                           Style="{StaticResource TextPokestopTitle}" />
+                <Button Content="{Binding CurrentPokestopInfo.Name}"
+                        Background="Transparent"
+                        Click="startSearch"
+                        Tag="{Binding CurrentPokestopInfo.Name}" />
             </Grid>
 
             <Border Grid.Row="1"
