@@ -109,7 +109,11 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" Style="{StaticResource GridContainer}">
-                <Button Content="{Binding CurrentPokestopInfo.Name}"
+                <TextBlock Text="{Binding CurrentPokestopInfo.Name}" 
+                           Style="{StaticResource TextPokestopTitle}"
+                           VerticalAlignment="Center"/>
+                <Button Content=">"
+                        HorizontalAlignment="Right"
                         Background="Transparent"
                         Click="startSearch"
                         Tag="{Binding CurrentPokestopInfo.Name}" />
