@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -80,6 +81,28 @@ namespace PokemonGo_UWP.Views
         {
             SearchPokestopButton.IsEnabled = false;
             SpinPokestopImage.Begin();
+        }
+
+        private async void startSearch(object sender, RoutedEventArgs e)
+        {
+            //Gets data for link
+            var pokestopName = ((Button)sender).Tag;
+
+            // The URI to launch
+            var uriSearch = new Uri(@"http://www.bing.com/search?q=" + pokestopName);
+
+            // Launch the URI
+            var success = await Windows.System.Launcher.LaunchUriAsync(uriSearch);
+
+            if (success)
+            {
+                // URI launched
+            }
+            else
+            {
+                var dialog = new MessageDialog("Failed to open browser");
+                await dialog.ShowAsync();
+            }
         }
 
         #endregion
