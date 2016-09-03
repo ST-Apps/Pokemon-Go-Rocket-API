@@ -89,7 +89,7 @@ namespace PokemonGo_UWP.Views
             var pokestopName = ((Button)sender).Tag;
 
             // The URI to launch
-            var uriSearch = new Uri(@"http://www.bing.com/search?q=" + pokestopName);
+            var uriSearch = new Uri(@"http://www.google.com/search?q=" + pokestopName);
 
             // Launch the URI
             var success = await Windows.System.Launcher.LaunchUriAsync(uriSearch);
