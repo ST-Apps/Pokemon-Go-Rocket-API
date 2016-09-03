@@ -521,6 +521,19 @@ Hai ottenuto anche {1} Polvere di stella, {2} Caramelle e {3} PE.</target>
           <source>Set Nickname</source>
           <target state="new">Imposta soprannome</target>
         </trans-unit>
+        <trans-unit id="OkText" translate="yes" xml:space="preserve">
+          <source>O. K.</source>
+          <target state="new">O. K.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Space between . and K</note>
+        </trans-unit>
+        <trans-unit id="PokemonEncounterErrorText" translate="yes" xml:space="preserve">
+          <source>There was an error loading the encounter with {0}, please try again later.</source>
+          <target state="new">C'è stato un errore nel caricamento dell'incontro con {0}, per favore riprova più tardi.</target>
+        </trans-unit>
+        <trans-unit id="PokemonEncounterNotInRangeText" translate="yes" xml:space="preserve">
+          <source>{0} is not in catch range anymore.</source>
+          <target state="new">{0} non è più nelle vicinanze.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
