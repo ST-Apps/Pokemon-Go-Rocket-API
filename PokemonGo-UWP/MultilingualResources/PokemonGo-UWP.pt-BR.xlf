@@ -995,7 +995,7 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="D_ItemSpecialCamera" translate="yes" xml:space="preserve">
           <source>When you encounter Pokémon in the wild, you can use your camera to photograph them.</source>
-          <target state="new">Quando você encontra um Pokémon, você pode usar a câmera para fotografar ele.</target>
+          <target state="new">Quando você encontra um Pokémon, você pode usar a câmera para fotografa-lo.</target>
         </trans-unit>
         <trans-unit id="D_ItemSuperPotion" translate="yes" xml:space="preserve">
           <source>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 50 points.</source>
