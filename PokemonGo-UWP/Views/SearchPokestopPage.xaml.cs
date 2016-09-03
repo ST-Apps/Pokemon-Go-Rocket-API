@@ -94,11 +94,7 @@ namespace PokemonGo_UWP.Views
             // Launch the URI
             var success = await Windows.System.Launcher.LaunchUriAsync(uriSearch);
 
-            if (success)
-            {
-                // URI launched
-            }
-            else
+            if (!success)
             {
                 var dialog = new MessageDialog("Error!");
                 await dialog.ShowAsync();
