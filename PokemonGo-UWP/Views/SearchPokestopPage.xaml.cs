@@ -100,7 +100,7 @@ namespace PokemonGo_UWP.Views
             }
             else
             {
-                var dialog = new MessageDialog("Failed to open browser");
+                var dialog = new MessageDialog("Error!");
                 await dialog.ShowAsync();
             }
         }
