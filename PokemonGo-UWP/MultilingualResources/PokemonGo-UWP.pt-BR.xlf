@@ -506,7 +506,7 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="PowerUpPokemonWarningText" translate="yes" xml:space="preserve">
           <source>Do you want to use a power up for {0}?</source>
-          <target state="new">Você quer energizar para {0}?</target>
+          <target state="new">Você quer energizar {0}?</target>
         </trans-unit>
         <trans-unit id="TransferPokemonWarningTitle" translate="yes" xml:space="preserve">
           <source>Do you really want to transfer {0} to the Professor?</source>
