@@ -28,7 +28,7 @@
         </trans-unit>
         <trans-unit id="BadgeHatchedTotal" translate="yes" xml:space="preserve">
           <source>Breeder</source>
-          <target state="translated">Reprodutor</target>
+          <target state="translated">Criador</target>
         </trans-unit>
         <trans-unit id="BadgePikachu" translate="yes" xml:space="preserve">
           <source>Pikachu</source>
@@ -64,7 +64,7 @@
         </trans-unit>
         <trans-unit id="Fairy" translate="yes" xml:space="preserve">
           <source>Fairy Tale Girl</source>
-          <target state="translated">Menina de conto de fadas</target>
+          <target state="translated">Menina de Contos de Fadas</target>
         </trans-unit>
         <trans-unit id="Fighting" translate="yes" xml:space="preserve">
           <source>Black Belt</source>
@@ -80,7 +80,7 @@
         </trans-unit>
         <trans-unit id="Ghost" translate="yes" xml:space="preserve">
           <source>Hex Maniac</source>
-          <target state="translated">Maniaco dos Feitiços</target>
+          <target state="translated">Maníaco dos Feitiços</target>
         </trans-unit>
         <trans-unit id="Grass" translate="yes" xml:space="preserve">
           <source>Gardener</source>
@@ -124,7 +124,7 @@
         </trans-unit>
         <trans-unit id="BadgeBattleTrainingWonDescription" translate="yes" xml:space="preserve">
           <source>Won {0} training battles</source>
-          <target state="translated">Ganhou {0} batalhas de treinamento</target>
+          <target state="translated">Ganhou {0} batalhas de treinamento.</target>
         </trans-unit>
         <trans-unit id="BadgeBigMagikarpDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Magikarp</source>
@@ -132,7 +132,7 @@
         </trans-unit>
         <trans-unit id="BadgeCaptureTotalDescription" translate="yes" xml:space="preserve">
           <source>Captured {0} Pokemon</source>
-          <target state="translated">Capturou {0} Pokemon</target>
+          <target state="translated">Capturou {0} Pokémon</target>
         </trans-unit>
         <trans-unit id="BadgeEvolvedTotalDescription" translate="yes" xml:space="preserve">
           <source>Evolved {0} Pokémon</source>
@@ -140,19 +140,19 @@
         </trans-unit>
         <trans-unit id="BadgeHatchedTotalDescription" translate="yes" xml:space="preserve">
           <source>Hatched {0} Pokemon</source>
-          <target state="translated">Chocou {0} Pokemon</target>
+          <target state="translated">Chocou {0} Pokémon</target>
         </trans-unit>
         <trans-unit id="BadgePikachuDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Pikachu</source>
           <target state="translated">Capturou {0} Pikachu</target>
         </trans-unit>
         <trans-unit id="BadgePokedexEntriesDescription" translate="yes" xml:space="preserve">
-          <source>Registered {0} Pokemon in the Pokedex</source>
+          <source>Registered {0} Pokemon in the Pokédex</source>
           <target state="translated">{0} Pokemons registrados na Pokedex</target>
         </trans-unit>
         <trans-unit id="BadgePokestopsVisitedDescription" translate="yes" xml:space="preserve">
           <source>Visited {0} Pokestops</source>
-          <target state="translated">Visitou {0} Pokestops</target>
+          <target state="translated">Visitou {0} Pokéstops</target>
         </trans-unit>
         <trans-unit id="BadgeSmallRattataDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} small Rattata</source>
@@ -278,7 +278,7 @@
         </trans-unit>
         <trans-unit id="LoginFailedText" translate="yes" xml:space="preserve">
           <source>Login failed, please try again.</source>
-          <target state="translated">Falha no login, por favor tente novamente.</target>
+          <target state="translated">Falha no login, por favor, tente novamente.</target>
         </trans-unit>
         <trans-unit id="NoText" translate="yes" xml:space="preserve">
           <source>NO</source>
@@ -297,7 +297,7 @@
         </trans-unit>
         <trans-unit id="PtcDownText" translate="yes" xml:space="preserve">
           <source>PTC login is probably down, please retry later.</source>
-          <target state="translated">Login PTC provavelmente caiu, por favor, tente novamente mais tarde.</target>
+          <target state="translated">Login PTC provavelmente está fora do ar, por favor, tente novamente mais tarde.</target>
         </trans-unit>
         <trans-unit id="SomethingWentWrongText" translate="yes" xml:space="preserve">
           <source>Something went wrong and app may be unstable now. Do you want to logout and try again?</source>
@@ -497,7 +497,7 @@ Abrir a página com os arquivos de instalação para instalação manual?</targe
         <trans-unit id="EggHatchMessage" translate="yes" xml:space="preserve">
           <source>An Egg hatched into a {0}.
 You also got {1} Stardust, {2} Candy and {3} XP.</source>
-          <target state="new">Um ovo chocou numa {0}.
+          <target state="new">Um ovo chocou {0}.
 Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="EvolvePokemonWarningText" translate="yes" xml:space="preserve">
@@ -506,7 +506,7 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="PowerUpPokemonWarningText" translate="yes" xml:space="preserve">
           <source>Do you want to use a power up for {0}?</source>
-          <target state="new">Você quer energizar {0}?</target>
+          <target state="new">Você quer treinar {0}?</target>
         </trans-unit>
         <trans-unit id="TransferPokemonWarningTitle" translate="yes" xml:space="preserve">
           <source>Do you really want to transfer {0} to the Professor?</source>
@@ -523,7 +523,7 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="SetNickName" translate="yes" xml:space="preserve">
           <source>Set Nickname</source>
-          <target state="new">Definir Apelido</target>
+          <target state="new">Escolha seu Apelido</target>
         </trans-unit>
         <trans-unit id="OkText" translate="yes" xml:space="preserve">
           <source>O. K.</source>
@@ -661,7 +661,7 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="SettingsMapAutoRotateTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Auto-Rotate Map</source>
-          <target state="translated">Girar automaticamente o mapa</target>
+          <target state="translated">Girar o mapa automaticamente</target>
         </trans-unit>
         <trans-unit id="StartDateTextBlock.Text" translate="yes" xml:space="preserve">
           <source>START DATE</source>
@@ -794,7 +794,7 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="AppraiseTextBlock.Text" translate="yes" xml:space="preserve">
           <source>APPRAISE</source>
-          <target state="new">APPRAISE</target>
+          <target state="new">AVALIAR</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
         </trans-unit>
         <trans-unit id="AwardedExperienceTextBlock.Text" translate="yes" xml:space="preserve">
@@ -843,7 +843,7 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="D_ItemMasterBall" translate="yes" xml:space="preserve">
           <source>The best Poké Ball with the ultimate level of performance. With it you will catch any Pokémon without fail.</source>
-          <target state="needs-review-translation">A melhor Pokébola com nível máximo de performance. Com ela você pode pegar qualquer Pokémon sem falhas.</target>
+          <target state="needs-review-translation">A melhor Pokébola, com nível máximo de performance. Com ela você pode pegar qualquer Pokémon sem falhas.</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="D_ItemPokeBall" translate="yes" xml:space="preserve">
@@ -865,7 +865,7 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="ItemBlukBerry" translate="yes" xml:space="preserve">
           <source>Bluk Berry</source>
-          <target state="translated">Bluk Berry</target>
+          <target state="translated">Fruta Bluk</target>
         </trans-unit>
         <trans-unit id="ItemGreatBall" translate="yes" xml:space="preserve">
           <source>Great Ball</source>
@@ -931,11 +931,11 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="ItemPokeBall" translate="yes" xml:space="preserve">
           <source>Poke Ball</source>
-          <target state="translated">Pokebola</target>
+          <target state="translated">Pokébola</target>
         </trans-unit>
         <trans-unit id="ItemPokemonStorageUpgrade" translate="yes" xml:space="preserve">
           <source>Pokemon Storage Upgrade</source>
-          <target state="translated">Atualização de armazenamento de Pokemon</target>
+          <target state="translated">Atualização de armazenamento de Pokémon</target>
         </trans-unit>
         <trans-unit id="ItemPotion" translate="yes" xml:space="preserve">
           <source>Potion</source>
@@ -975,27 +975,27 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="ItemXAttack" translate="yes" xml:space="preserve">
           <source>X Attack</source>
-          <target state="translated">X Ataque</target>
+          <target state="translated">Ataque X</target>
         </trans-unit>
         <trans-unit id="ItemXDefense" translate="yes" xml:space="preserve">
           <source>X Defense</source>
-          <target state="translated">X Defesa</target>
+          <target state="translated">Defesa X</target>
         </trans-unit>
         <trans-unit id="ItemXMiracle" translate="yes" xml:space="preserve">
           <source>X Miracle</source>
-          <target state="translated">X Milagre</target>
+          <target state="translated">Milagre X</target>
         </trans-unit>
         <trans-unit id="D_ItemLuckyEgg" translate="yes" xml:space="preserve">
           <source>A Lucky Egg that's filled with happiness! Earns double XP for 30 minutes.</source>
-          <target state="new">Um Ovo da Sorte que está cheio de felicidade! Ganhe o dobro de XP por 30 minutos.</target>
+          <target state="new">Um Ovo da Sorte cheio de felicidade! Ganhe o dobro de XP por 30 minutos.</target>
         </trans-unit>
         <trans-unit id="D_ItemRazzBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
-          <target state="new">Alimente um Pokémon com isso, e vai ser mais fácil capturá-lo no seu próximo arremesso.</target>
+          <target state="new">Alimente um Pokémon com isto, e vai ser mais fácil capturá-lo no seu próximo arremesso.</target>
         </trans-unit>
         <trans-unit id="D_ItemSpecialCamera" translate="yes" xml:space="preserve">
           <source>When you encounter Pokémon in the wild, you can use your camera to photograph them.</source>
-          <target state="new">Quando você encontra um Pokémon, você pode usar a câmera para fotografa-lo.</target>
+          <target state="new">Quando você encontra um Pokémon, você pode usar a câmera para fotografá-lo.</target>
         </trans-unit>
         <trans-unit id="D_ItemSuperPotion" translate="yes" xml:space="preserve">
           <source>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 50 points.</source>
@@ -1011,19 +1011,19 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="D_ItemBlukBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
-          <target state="new">>Alimente um Pokémon com isso, e vai ser mais fácil capturá-lo no seu próximo arremesso.</target>
+          <target state="new">>Alimente um Pokémon com isto, e vai ser mais fácil capturá-lo no seu próximo arremesso.</target>
         </trans-unit>
         <trans-unit id="D_ItemNanabBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
-          <target state="new">>Alimente um Pokémon com isso, e vai ser mais fácil capturá-lo no seu próximo arremesso.</target>
+          <target state="new">>Alimente um Pokémon com isto, e vai ser mais fácil capturá-lo no seu próximo arremesso.</target>
         </trans-unit>
         <trans-unit id="D_ItemPinapBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
-          <target state="new">>Alimente um Pokémon com isso, e vai ser mais fácil capturá-lo no seu próximo arremesso.</target>
+          <target state="new">>Alimente um Pokémon com isto, e vai ser mais fácil capturá-lo no seu próximo arremesso.</target>
         </trans-unit>
         <trans-unit id="D_ItemWeparBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
-          <target state="new">>Alimente um Pokémon com isso, e vai ser mais fácil capturá-lo no seu próximo arremesso.</target>
+          <target state="new">>Alimente um Pokémon com isto, e vai ser mais fácil capturá-lo no seu próximo arremesso.</target>
         </trans-unit>
       </group>
     </body>
@@ -1669,7 +1669,7 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="DoubleSlap" translate="yes" xml:space="preserve">
           <source>Double Slap</source>
-          <target state="translated">Tapa duplo</target>
+          <target state="translated">Tapa Duplo</target>
         </trans-unit>
         <trans-unit id="Ember" translate="yes" xml:space="preserve">
           <source>Ember</source>
@@ -1681,11 +1681,11 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="FlameWheel" translate="yes" xml:space="preserve">
           <source>Flame Wheel</source>
-          <target state="translated">Roda de fogo</target>
+          <target state="translated">Roda de Fogo</target>
         </trans-unit>
         <trans-unit id="HyperBeam" translate="yes" xml:space="preserve">
           <source>Hyper Beam</source>
-          <target state="needs-review-translation">Hyper Beam</target>
+          <target state="needs-review-translation">Hyper Barra</target>
         </trans-unit>
         <trans-unit id="Lick" translate="yes" xml:space="preserve">
           <source>Lick</source>
@@ -1693,7 +1693,7 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="LowKick" translate="yes" xml:space="preserve">
           <source>Low Kick</source>
-          <target state="translated">Chute baixo</target>
+          <target state="translated">Chute Baixo</target>
         </trans-unit>
         <trans-unit id="Megahorn" translate="yes" xml:space="preserve">
           <source>Megahorn</source>
@@ -1701,11 +1701,11 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="MetalClaw" translate="yes" xml:space="preserve">
           <source>Metal Claw</source>
-          <target state="translated">Garra de metal</target>
+          <target state="translated">Garra de Metal</target>
         </trans-unit>
         <trans-unit id="MoveUnset" translate="yes" xml:space="preserve">
           <source>Move Unset</source>
-          <target state="translated">Mover-se desmontado</target>
+          <target state="translated">Mover-se Mesmontado</target>
         </trans-unit>
         <trans-unit id="Pound" translate="yes" xml:space="preserve">
           <source>Pound</source>
@@ -1713,15 +1713,15 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="PsychoCut" translate="yes" xml:space="preserve">
           <source>Psycho Cut</source>
-          <target state="translated">Corte psicopata</target>
+          <target state="translated">Corte Psicopata</target>
         </trans-unit>
         <trans-unit id="QuickAttack" translate="yes" xml:space="preserve">
           <source>Quick Attack</source>
-          <target state="translated">Ataque rápido</target>
+          <target state="translated">Ataque Rápido</target>
         </trans-unit>
         <trans-unit id="RazorLeaf" translate="yes" xml:space="preserve">
           <source>Razor Leaf</source>
-          <target state="translated">Folha navalha</target>
+          <target state="translated">Folha Navalha</target>
         </trans-unit>
         <trans-unit id="Scratch" translate="yes" xml:space="preserve">
           <source>Scratch</source>
@@ -1749,23 +1749,23 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="ThunderShock" translate="yes" xml:space="preserve">
           <source>Thunder Shock</source>
-          <target state="translated">Choque do trovão</target>
+          <target state="translated">Choque do Trovão</target>
         </trans-unit>
         <trans-unit id="ViceGrip" translate="yes" xml:space="preserve">
           <source>Vice Grip</source>
-          <target state="translated">Aperto de vício</target>
+          <target state="translated">Aperto de Vício</target>
         </trans-unit>
         <trans-unit id="VineWhip" translate="yes" xml:space="preserve">
           <source>Vine Whip</source>
-          <target state="translated">Chicote de cipó</target>
+          <target state="translated">Chicote de Cipó</target>
         </trans-unit>
         <trans-unit id="WaterGun" translate="yes" xml:space="preserve">
           <source>Water Gun</source>
-          <target state="translated">Pistola de água</target>
+          <target state="translated">Jato de Água</target>
         </trans-unit>
         <trans-unit id="WingAttack" translate="yes" xml:space="preserve">
           <source>Wing Attack</source>
-          <target state="translated">Ataque de asa</target>
+          <target state="translated">Ataque de Asa</target>
         </trans-unit>
         <trans-unit id="Wrap" translate="yes" xml:space="preserve">
           <source>Wrap</source>
@@ -1781,11 +1781,11 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="AcidFast" translate="yes" xml:space="preserve">
           <source>Acid Fast</source>
-          <target state="translated">Ácido rápido</target>
+          <target state="translated">Ácido Rápido</target>
         </trans-unit>
         <trans-unit id="AerialAce" translate="yes" xml:space="preserve">
           <source>Aerial Ace</source>
-          <target state="translated">Ace aéreo</target>
+          <target state="translated">Pericia Aérea</target>
         </trans-unit>
         <trans-unit id="AirCutter" translate="yes" xml:space="preserve">
           <source>Air Cutter</source>
@@ -1797,7 +1797,7 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="AncientPower" translate="yes" xml:space="preserve">
           <source>Ancient Power</source>
-          <target state="translated">Poder antigo</target>
+          <target state="translated">Poder Antigo</target>
         </trans-unit>
         <trans-unit id="AquaJet" translate="yes" xml:space="preserve">
           <source>Aqua Jet</source>
@@ -1817,15 +1817,15 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="BodySlam" translate="yes" xml:space="preserve">
           <source>Body Slam</source>
-          <target state="translated">Batida corporal</target>
+          <target state="translated">Batida Corporal</target>
         </trans-unit>
         <trans-unit id="BoneClub" translate="yes" xml:space="preserve">
           <source>Bone Club</source>
-          <target state="translated">Clube do osso</target>
+          <target state="translated">Clube do Osso</target>
         </trans-unit>
         <trans-unit id="BrickBreak" translate="yes" xml:space="preserve">
           <source>Brick Break</source>
-          <target state="translated">Quebra tijolos</target>
+          <target state="translated">Quebra Tijolos</target>
         </trans-unit>
         <trans-unit id="Brine" translate="yes" xml:space="preserve">
           <source>Brine</source>
@@ -1833,35 +1833,35 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="BubbleBeam" translate="yes" xml:space="preserve">
           <source>Bubble Beam</source>
-          <target state="translated">Feixe de bolha</target>
+          <target state="translated">Feixe de Bolha</target>
         </trans-unit>
         <trans-unit id="BubbleFast" translate="yes" xml:space="preserve">
           <source>Bubble Fast</source>
-          <target state="translated">Bolha rápida</target>
+          <target state="translated">Bolha Rápida</target>
         </trans-unit>
         <trans-unit id="BugBite" translate="yes" xml:space="preserve">
           <source>Bug Bite</source>
-          <target state="translated">Picada de inseto</target>
+          <target state="translated">Picada de Inseto</target>
         </trans-unit>
         <trans-unit id="BugBiteFast" translate="yes" xml:space="preserve">
           <source>Bug Bite</source>
-          <target state="translated">Picada de inseto</target>
+          <target state="translated">Picada de Inseto</target>
         </trans-unit>
         <trans-unit id="BugBuzz" translate="yes" xml:space="preserve">
           <source>Bug Buzz</source>
-          <target state="translated">Zumbido de inseto</target>
+          <target state="translated">Zumbido de Inseto</target>
         </trans-unit>
         <trans-unit id="Bulldoze" translate="yes" xml:space="preserve">
           <source>Bull doze</source>
-          <target state="translated">Calmante de touro</target>
+          <target state="translated">Calmante de Touro</target>
         </trans-unit>
         <trans-unit id="BulletPunch" translate="yes" xml:space="preserve">
           <source>Bullet Punch</source>
-          <target state="translated">Soco de bala</target>
+          <target state="translated">Soco de Bala</target>
         </trans-unit>
         <trans-unit id="BulletPunchFast" translate="yes" xml:space="preserve">
           <source>Bullet Punch</source>
-          <target state="translated">Soco de bala</target>
+          <target state="translated">Soco de Bala</target>
         </trans-unit>
         <trans-unit id="ConfusionFast" translate="yes" xml:space="preserve">
           <source>Confusion</source>
@@ -1885,7 +1885,7 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="DisarmingVoice" translate="yes" xml:space="preserve">
           <source>Disarming Voice</source>
-          <target state="translated">Voz de desarmamento</target>
+          <target state="translated">Voz de Desarmamento</target>
         </trans-unit>
         <trans-unit id="Discharge" translate="yes" xml:space="preserve">
           <source>Discharge</source>
@@ -1893,31 +1893,31 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="DragonBreath" translate="yes" xml:space="preserve">
           <source>Dragon Breath</source>
-          <target state="translated">Bafo de dragão</target>
+          <target state="translated">Bafo de Dragão</target>
         </trans-unit>
         <trans-unit id="DragonBreathFast" translate="yes" xml:space="preserve">
           <source>Dragon Breath</source>
-          <target state="translated">Bafo de dragão</target>
+          <target state="translated">Bafo de Dragão</target>
         </trans-unit>
         <trans-unit id="DragonClaw" translate="yes" xml:space="preserve">
           <source>Dragon Claw</source>
-          <target state="translated">Garra de dragão</target>
+          <target state="translated">Garra de Dragão</target>
         </trans-unit>
         <trans-unit id="DragonPulse" translate="yes" xml:space="preserve">
           <source>Dragon Pulse</source>
-          <target state="translated">Pulso de dragão</target>
+          <target state="translated">Pulso de Dragão</target>
         </trans-unit>
         <trans-unit id="DrainingKiss" translate="yes" xml:space="preserve">
           <source>Draining Kiss</source>
-          <target state="translated">Beijo de drenagem</target>
+          <target state="translated">Beijo de Drenagem</target>
         </trans-unit>
         <trans-unit id="DrillPeck" translate="yes" xml:space="preserve">
           <source>Drill Peck</source>
-          <target state="translated">Furadeira Peck</target>
+          <target state="translated">Bico Broca</target>
         </trans-unit>
         <trans-unit id="DrillRun" translate="yes" xml:space="preserve">
           <source>Drill Run</source>
-          <target state="translated">Execução de perfuração</target>
+          <target state="translated">Broca Veloz</target>
         </trans-unit>
         <trans-unit id="Earthquake" translate="yes" xml:space="preserve">
           <source>Earthquake</source>
@@ -1929,11 +1929,11 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="FeintAttackFast" translate="yes" xml:space="preserve">
           <source>Feint Attack</source>
-          <target state="translated">Ataque de simulação</target>
+          <target state="translated">Ataque Furtivo</target>
         </trans-unit>
         <trans-unit id="FireBlast" translate="yes" xml:space="preserve">
           <source>Fire Blast</source>
-          <target state="translated">Explosão de fogo</target>
+          <target state="translated">Explosão de Fogo</target>
         </trans-unit>
         <trans-unit id="FireFangFast" translate="yes" xml:space="preserve">
           <source>Fire Fang</source>
@@ -1941,43 +1941,43 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="FirePunch" translate="yes" xml:space="preserve">
           <source>Fire Punch</source>
-          <target state="translated">Soco de fogo</target>
+          <target state="translated">Soco de Fogo</target>
         </trans-unit>
         <trans-unit id="FlameBurst" translate="yes" xml:space="preserve">
           <source>Flame Burst</source>
-          <target state="translated">Rajada de fogo</target>
+          <target state="translated">Rajada de Fogo</target>
         </trans-unit>
         <trans-unit id="FlameCharge" translate="yes" xml:space="preserve">
           <source>Flame Charge</source>
-          <target state="translated">Carga de fogo</target>
+          <target state="translated">Carga de Fogo</target>
         </trans-unit>
         <trans-unit id="FlashCannon" translate="yes" xml:space="preserve">
           <source>Flash Cannon</source>
-          <target state="translated">Canhao de lampejo</target>
+          <target state="translated">Canhao de Luz</target>
         </trans-unit>
         <trans-unit id="FrostBreath" translate="yes" xml:space="preserve">
           <source>Frost Breath</source>
-          <target state="translated">Hálito de gelo</target>
+          <target state="translated">Sopro Congelado</target>
         </trans-unit>
         <trans-unit id="FrostBreathFast" translate="yes" xml:space="preserve">
           <source>Frost Breath</source>
-          <target state="translated">Hálito de gelo</target>
+          <target state="translated">Sopro Congelado</target>
         </trans-unit>
         <trans-unit id="FuryCutter" translate="yes" xml:space="preserve">
           <source>Fury Cutter</source>
-          <target state="translated">Cortador de fúria</target>
+          <target state="translated">Corte Furioso</target>
         </trans-unit>
         <trans-unit id="FuryCutterFast" translate="yes" xml:space="preserve">
           <source>Fury Cutter</source>
-          <target state="translated">Cortador de fúria</target>
+          <target state="translated">Corte Furioso</target>
         </trans-unit>
         <trans-unit id="GigaDrain" translate="yes" xml:space="preserve">
           <source>Giga Drain</source>
-          <target state="translated">Giga dreno</target>
+          <target state="translated">Giga Dreno</target>
         </trans-unit>
         <trans-unit id="GunkShot" translate="yes" xml:space="preserve">
           <source>Gunk Shot</source>
-          <target state="translated">Tiro de lamaçal</target>
+          <target state="translated">Tiro de Lixo</target>
         </trans-unit>
         <trans-unit id="Headbutt" translate="yes" xml:space="preserve">
           <source>Headbutt</source>
@@ -1985,15 +1985,15 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="HeartStamp" translate="yes" xml:space="preserve">
           <source>Heart Stamp</source>
-          <target state="translated">Selo de coração</target>
+          <target state="translated">Selo de Coração</target>
         </trans-unit>
         <trans-unit id="HeatWave" translate="yes" xml:space="preserve">
           <source>Heat Wave</source>
-          <target state="translated">Onda de calor</target>
+          <target state="translated">Onda de Calor</target>
         </trans-unit>
         <trans-unit id="HornAttack" translate="yes" xml:space="preserve">
           <source>Horn Attack</source>
-          <target state="translated">Ataque do chifre</target>
+          <target state="translated">Ataque de Chifre</target>
         </trans-unit>
         <trans-unit id="Hurricane" translate="yes" xml:space="preserve">
           <source>Hurricane</source>
@@ -2001,11 +2001,11 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="HydroPump" translate="yes" xml:space="preserve">
           <source>Hydro Pump</source>
-          <target state="translated">Hidro bomba</target>
+          <target state="translated">Hidro Bomba</target>
         </trans-unit>
         <trans-unit id="HydroPumpBlastoise" translate="yes" xml:space="preserve">
           <source>Hydro Pump</source>
-          <target state="translated">Hidro bomba</target>
+          <target state="translated">Hidro Bomba</target>
         </trans-unit>
         <trans-unit id="HyperFang" translate="yes" xml:space="preserve">
           <source>Hyper Fang</source>
@@ -2013,39 +2013,39 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="IceBeam" translate="yes" xml:space="preserve">
           <source>Ice Beam</source>
-          <target state="translated">Raio de gelo</target>
+          <target state="translated">Raio de Gelo</target>
         </trans-unit>
         <trans-unit id="IcePunch" translate="yes" xml:space="preserve">
           <source>Ice Punch</source>
-          <target state="translated">Soco de gelo</target>
+          <target state="translated">Soco de Gelo</target>
         </trans-unit>
         <trans-unit id="IceShard" translate="yes" xml:space="preserve">
           <source>Ice Shard</source>
-          <target state="translated">Fragmento de gelo</target>
+          <target state="translated">Fragmento de Gelo</target>
         </trans-unit>
         <trans-unit id="IceShardFast" translate="yes" xml:space="preserve">
           <source>Ice Shard</source>
-          <target state="translated">Fragmento de gelo</target>
+          <target state="translated">Fragmento de Gelo</target>
         </trans-unit>
         <trans-unit id="IcyWind" translate="yes" xml:space="preserve">
           <source>Icy Wind</source>
-          <target state="translated">Vento gelado</target>
+          <target state="translated">Vento Gelado</target>
         </trans-unit>
         <trans-unit id="IronHead" translate="yes" xml:space="preserve">
           <source>Iron Head</source>
-          <target state="translated">Cabeça de ferro</target>
+          <target state="translated">Cabeça de Ferro</target>
         </trans-unit>
         <trans-unit id="KarateChop" translate="yes" xml:space="preserve">
           <source>Karate Chop</source>
-          <target state="translated">Golpe de karatê</target>
+          <target state="translated">Golpe de Karatê</target>
         </trans-unit>
         <trans-unit id="KarateChopFast" translate="yes" xml:space="preserve">
           <source>Karate Chop</source>
-          <target state="translated">Golpe de karatê</target>
+          <target state="translated">Golpe de Karatê</target>
         </trans-unit>
         <trans-unit id="LeafBlade" translate="yes" xml:space="preserve">
           <source>Leaf Blade</source>
-          <target state="translated">Lâmina de folha</target>
+          <target state="translated">Lâmina de Folha</target>
         </trans-unit>
         <trans-unit id="LickFast" translate="yes" xml:space="preserve">
           <source>Lick Fast</source>
@@ -2053,7 +2053,7 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="LowKickFast" translate="yes" xml:space="preserve">
           <source>Low Kick</source>
-          <target state="translated">Chute baixo</target>
+          <target state="translated">Chute Baixo</target>
         </trans-unit>
         <trans-unit id="LowSweep" translate="yes" xml:space="preserve">
           <source>Low Sweep</source>
@@ -2341,11 +2341,11 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="WaterGunFast" translate="yes" xml:space="preserve">
           <source>Water Gun</source>
-          <target state="translated">Pistola de água</target>
+          <target state="translated">Jato de água</target>
         </trans-unit>
         <trans-unit id="WaterGunFastBlastoise" translate="yes" xml:space="preserve">
           <source>Water Gun</source>
-          <target state="translated">Pistola de água</target>
+          <target state="translated">Jato de água</target>
         </trans-unit>
         <trans-unit id="WaterPulse" translate="yes" xml:space="preserve">
           <source>Water Pulse</source>
@@ -2353,7 +2353,7 @@ Você também tem {1} Stardust, {2} Doces e {3} XP.</target>
         </trans-unit>
         <trans-unit id="WingAttackFast" translate="yes" xml:space="preserve">
           <source>Wing Attack</source>
-          <target state="translated">Ataque de asa</target>
+          <target state="translated">Ataque de Asa</target>
         </trans-unit>
         <trans-unit id="WrapGreen" translate="yes" xml:space="preserve">
           <source>Wrap Green</source>
