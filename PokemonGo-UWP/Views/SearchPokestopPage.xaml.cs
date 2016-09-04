@@ -85,35 +85,20 @@ namespace PokemonGo_UWP.Views
 
         private async void startSearch(object sender, RoutedEventArgs e)
         {
-            var question = new Windows.UI.Popups.MessageDialog(
-                           "This will open your browser", 
-                           "Opening Browser...");
-            dialog.Commands.Add(new Windows.UI.Popups.UICommand("Ok") { Id = 0 });
-            dialog.Commands.Add(new Windows.UI.Popups.UICommand("No") { Id = 1 });
-            dialog.DefaultCommandIndex = 0;
-            dialog.Cancel.CommandIndex = 1;
-            
-            var result = await dialog.ShowAsync();
-            
-            if (result.Id == 0) {
-                //Gets data for link
-                var pokestopName = ((Button)sender).Tag;
+            //Gets data for link
+            var pokestopName = ((Button)sender).Tag;
 
-                // The URI to launch
-                var uriSearch = new Uri(@"http://www.google.com/search?q=" + pokestopName);
+            // The URI to launch
+            var uriSearch = new Uri(@"http://www.google.com/search?q=" + pokestopName);
 
-                // Launch the URI
-                var success = await Windows.System.Launcher.LaunchUriAsync(uriSearch);
+            // Launch the URI
+            var success = await Windows.System.Launcher.LaunchUriAsync(uriSearch);
 
-                if (!success)
-                {
-                    var dialog = new MessageDialog("Error!");
-                    await dialog.ShowAsync();
-                }
-            } else {
-                //no permission to open browser
+            if (!success)
+            {
+                var dialog = new MessageDialog("Error!");
+                await dialog.ShowAsync();
             }
-            
         }
 
         #endregion
