@@ -111,8 +111,7 @@
             <Grid Grid.Row="0" Style="{StaticResource GridContainer}">
                 <TextBlock Text="{Binding CurrentPokestopInfo.Name}" 
                            Style="{StaticResource TextPokestopTitle}"
-                           VerticalAlignment="Top"
-                           HorizontalAlignment="Left" />
+                           VerticalAlignment="Top" />
                 <Button Content="Learn More..."
                         HorizontalAlignment="Right"
                         VerticalAlignment="Bottom"
