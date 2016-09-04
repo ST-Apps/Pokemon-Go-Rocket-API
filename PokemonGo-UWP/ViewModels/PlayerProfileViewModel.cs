@@ -91,11 +91,6 @@ namespace PokemonGo_UWP.ViewModels
         #region Bindable Game Vars
 
         /// <summary>
-        /// Current version of the App.
-        /// </summary>
-        public string CurrentVersion => GameClient.CurrentVersion;
-
-        /// <summary>
         ///     Player's profile, we use it just for the username
         /// </summary>
         public PlayerData PlayerProfile
