@@ -1,4 +1,4 @@
-﻿using PokemonGo_UWP.Entities;
+using PokemonGo_UWP.Entities;
 using PokemonGo_UWP.Utils;
 using PokemonGo_UWP.Views;
 using System.Collections.Generic;
@@ -69,6 +69,12 @@ namespace PokemonGo_UWP.ViewModels
         {
             get { return SettingsService.Instance.IsVibrationEnabled; }
             set { SettingsService.Instance.IsVibrationEnabled = value; }
+        }
+
+        public bool IsLearnMoreEnabled
+        {
+            get { return SettingsService.Instance.IsLearnMoreEnabled; }
+            set { SettingsService.Instance.IsLearnMoreEnabled = value; }
         }
 
         /// <summary>
