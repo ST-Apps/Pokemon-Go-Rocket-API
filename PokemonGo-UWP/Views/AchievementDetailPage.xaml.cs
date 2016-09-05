@@ -12,15 +12,13 @@ namespace PokemonGo_UWP.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            //var AchievementID = ???
-            /*
+            var AchievementID = Convert.ToString(AchevementID.text);
             if (AchievementID == "jogger")
             {
                 var currentText = AchievementValue.Text
                 int correctText = Math.Round(Int32.Parse(currentText), 2, MidpointRounding.ToEven);
                 AchievementValue.Text = Convert.ToString(correctText);
             }
-            */
         }
     }
 
