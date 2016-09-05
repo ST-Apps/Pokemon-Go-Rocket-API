@@ -21,6 +21,20 @@ namespace PokemonGo_UWP.Views
                 ShowGatheredItemsMenuAnimation.From = GatheredItemsTranslateTransform.Y = ActualHeight;
             };
         }
+        
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+                //PC customization
+                if(ApiInformation.IsTypePresent("Windows.UI.ViewManagement.ApplicationView"))
+                {
+                }
+
+                //Mobile customization
+                if(ApiInformation.IsTypePresent("Windows.UI.ViewManagement.StatusBar"))
+                {
+                }
+        }
 
         #region Overrides of Page
 
