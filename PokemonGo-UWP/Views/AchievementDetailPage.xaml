@@ -65,7 +65,8 @@
                                     RelativePanel.AlignHorizontalCenterWithPanel="True"
                                     Margin="0,24">
                             <TextBlock Style="{ThemeResource ProfilePageMediumText}"
-                                       Text="{Binding Achievement.Value, Converter={StaticResource AchievementValueConverter}}"/>
+                                       Text="{Binding Achievement.Value, Converter={StaticResource AchievementValueConverter}}"
+                                       Name="AchievementValue" />
                             <TextBlock Style="{ThemeResource ProfilePageMediumText}"
                                        Text="/" Margin="5,0"/>
                             <TextBlock Style="{ThemeResource ProfilePageMediumText}"
