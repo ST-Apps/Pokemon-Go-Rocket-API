@@ -91,5 +91,8 @@
                    Stretch="Uniform" HorizontalAlignment="Stretch" />
         </Button>
 
+        <TextBlock Text="{Binding Achievement.Key}"
+                    Visibility="Collapsed"
+                    Name="AchevementID" />
     </RelativePanel>
 </Page>
