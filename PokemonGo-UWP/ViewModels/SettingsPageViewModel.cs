@@ -1,4 +1,4 @@
-using PokemonGo_UWP.Entities;
+﻿using PokemonGo_UWP.Entities;
 using PokemonGo_UWP.Utils;
 using PokemonGo_UWP.Views;
 using System.Collections.Generic;
