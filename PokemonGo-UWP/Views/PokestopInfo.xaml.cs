@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -56,6 +56,7 @@ namespace PokemonGo_UWP.Views
         {
             //NavigationHelper.NavigationState["CurrentPokestop"] = NavigationHelper.NavigationState["PokestopId"];
             BootStrapper.Current.NavigationService.Navigate(typeof(GameMapPage));
+            //BootStrapper.Current.NavigationService.GoBack();
         }
 
         private void GoBack(object sender, RoutedEventArgs e)
