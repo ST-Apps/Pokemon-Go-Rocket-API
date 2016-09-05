@@ -1,245 +1,45 @@
 <Page
-    x:Class="PokemonGo_UWP.Views.SearchPokestopPage"
+    x:Class="PokemonGo_UWP.Views.PokestopInfo"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:media="using:Microsoft.Xaml.Interactions.Media"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:controls="using:Template10.Controls"
+    xmlns:entities="using:PokemonGo_UWP.Entities"
     mc:Ignorable="d">
 
-    <Page.DataContext>
-        <viewModels:SearchPokeStopPageViewModel x:Name="ViewModel" />
-    </Page.DataContext>
-
-    <Page.Resources>
-
-        <Storyboard x:Name="ShowGatheredItemsMenu">
-            <DoubleAnimation
-                Storyboard.TargetName="GatheredItemsTranslateTransform"
-                Storyboard.TargetProperty="Y"
-                To="0"
-                Duration="0:0:0.2"
-                x:Name="ShowGatheredItemsMenuAnimation" />
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)"
-                                           Storyboard.TargetName="GatheredItemsBorder">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Visible</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-        </Storyboard>
-
-        <Storyboard x:Name="SpinPokestopImage"
-                    SpeedRatio="2.5">
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)"
-                Storyboard.TargetName="PokestopImageEllipse">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
-                <EasingDoubleKeyFrame KeyTime="0:0:10" Value="3600">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <CubicEase EasingMode="EaseOut" />
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="ErrorMessageBorder">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <Visibility>Collapsed</Visibility>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-        </Storyboard>
-
-    </Page.Resources>
-
-    <Grid>
-        <Grid.Background>
-            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#4ab583" Offset="0" />
-                <GradientStop Color="#266378" Offset="0.8" />
-            </LinearGradientBrush>
-        </Grid.Background>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="75" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="75" />
-        </Grid.RowDefinitions>
-        <Border Grid.Row="0"
-                x:Name="ErrorMessageBorder"
-                Visibility="Collapsed"
-                VerticalAlignment="Top">
-            <Border.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#cc0000" Offset="0" />
-                    <GradientStop Color="#660000" Offset="0.8" />
-                </LinearGradientBrush>
-            </Border.Background>
-            <StackPanel>
-                <TextBlock x:Name="OutOfRangeTextBlock"
-                           x:Uid="OutOfRangeTextBlock"
-                           Text="You are out of range"
-                           Visibility="Collapsed"
-                           Style="{StaticResource TextError}"
-                           Margin="15,20,15,20" />
-
-                <TextBlock x:Name="CooldownTextBlock"
-                           x:Uid="CooldownTextBlock"
-                           Text="You have to wait some time"
-                           Visibility="Collapsed"
-                           Style="{StaticResource TextError}"
-                           Margin="15,20,15,20" />
-
-                <TextBlock x:Name="InventoryFullTextBlock"
-                           x:Uid="InventoryFullTextBlock"
-                           Visibility="Collapsed"
-                           Style="{StaticResource TextError}"
-                           Margin="15,20,15,20" />
-
-            </StackPanel>
-        </Border>
-        <Grid Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="125" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0" Style="{StaticResource GridContainer}">
-                <TextBlock Text="{Binding CurrentPokestopInfo.Name}" 
-                           Style="{StaticResource TextPokestopTitle}"
-                           VerticalAlignment="Top" />
-                <Button Content="Learn More..."
-                        HorizontalAlignment="Right"
-                        VerticalAlignment="Bottom"
-                        Background="Transparent"
-                        Click="FindInfo"
-                        Tag="{Binding CurrentPokestopInfo.Name}"
-                        Name="LearnMore" />
-            </Grid>
-
-            <Border Grid.Row="1"
-                    Width="250"
-                    Height="250"
-                    BorderBrush="#33000000"
-                    BorderThickness="10"
-                    CornerRadius="125"
-                    HorizontalAlignment="Center">
-                <Border Background="#fff"
-                        BorderBrush="#fff"
-                        BorderThickness="10"
-                        CornerRadius="150">
-                    <Button Style="{ThemeResource ImageButtonStyle}"
-                            Command="{Binding SearchCurrentPokestop}"
-                            x:Name="SearchPokestopButton">
-                        <Ellipse x:Name="PokestopImageEllipse"
-                                 Width="210"
-                                 Height="210">
-                            <Ellipse.Projection>
-                                <PlaneProjection />
-                            </Ellipse.Projection>
-                            <Ellipse.Fill>
-                                <ImageBrush ImageSource="{Binding CurrentPokestopInfo.ImageUrls[0]}"
-                                            Stretch="UniformToFill" />
-                            </Ellipse.Fill>
-                        </Ellipse>
-                    </Button>
-                </Border>
-            </Border>
-        </Grid>
-
-        <Grid Grid.Row="0"
-              Grid.RowSpan="3"
-              x:Name="GatheredItemsBorder"
-              Style="{StaticResource GridContainer}"
-              Visibility="Collapsed"
-              VerticalAlignment="Center">
-            <Grid.RenderTransform>
-                <TranslateTransform x:Name="GatheredItemsTranslateTransform"
-                                    Y="800" />
-            </Grid.RenderTransform>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0" Margin="15,10,15,10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" x:Uid="AwardedExperienceTextBlock"
-                           Style="{StaticResource TextNormal}" FontWeight="Bold" />
-                <TextBlock Grid.Column="1" Text="{Binding CurrentSearchResponse.ExperienceAwarded}"
-                           Style="{StaticResource TextNormalSpotlight}" />
-                <TextBlock Grid.Column="2" x:Uid="SpaceXpTextBlock" Style="{StaticResource TextNormalSpotlight}" />
-            </Grid>
-            <ListView ItemsSource="{Binding AwardedItems}"
-                      SelectionMode="None"
-                      Grid.Row="1">
-                <ListView.ItemContainerStyle>
-                    <Style TargetType="ListViewItem">
-                        <Setter Property="Margin" Value="0" />
-                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-                    </Style>
-                </ListView.ItemContainerStyle>
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid Margin="5,10,5,10">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="50" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto" />
-                            </Grid.ColumnDefinitions>
-                            <Image Grid.Column="0"
-                                   Source="{Binding Converter={StaticResource ItemToItemIconConverter}}"
-                                   Height="50"
-                                   Stretch="Uniform"
-                                   VerticalAlignment="Center"
-                                   HorizontalAlignment="Stretch" />
-                            <TextBlock Grid.Column="1"
-                                       Text="{Binding Converter={StaticResource ItemToItemNameConverter}}"
-                                       Style="{StaticResource TextNormal}" />
-                            <TextBlock Grid.Column="2"
-                                       x:Uid="NumberTextBlock"
-                                       Style="{StaticResource TextNormalSpotlight}" />
-                            <TextBlock Grid.Column="3"
-                                       Text="{Binding ItemCount}"
-                                       Style="{StaticResource TextNormalSpotlight}" />
-                        </Grid>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <Grid Grid.Row="2" Margin="15,10,15,10"
-                  Visibility="{Binding CurrentSearchResponse.PokemonDataEgg, Converter={StaticResource PokemonDataToVisibilityConverter}}">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="50" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Image Grid.Column="0" Source="../Assets/Items/Egg.png" Height="50" />
-                <!--<TextBlock Grid.Column="1" Text="{Binding CurrentSearchResponse.PokemonDataEgg.PokemonId}"
-                           Style="{StaticResource TextNormal}" FontWeight="Bold" HorizontalAlignment="Right" />-->
-            </Grid>
-            <Button Grid.Row="3"
-                    x:Name="loginButton"
-                    Command="{Binding ReturnToGameScreen}"
-                    Style="{StaticResource ButtonSubmit}">
-                <TextBlock Text="OK" />
-            </Button>
-        </Grid>
-        <Button Grid.Row="2"
-                Command="{Binding AbandonPokestop}"
+    <Grid Background="{StaticResource PageBackgroundGradient}">
+        <WebView Name="Display" Height="auto" Width="auto"/>
+        <Button Click="ReturnToLast"
                 Style="{StaticResource ButtonCircle}"
-                Margin="0">
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Margin="0,0,0,17.5">
             <Image Source="../Assets/Buttons/btn_close.png" />
         </Button>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <Button Click="GoBack"
+                    Style="{StaticResource ButtonCircle}"
+                    VerticalAlignment="Top"
+                    Margin="0,0,0,17.5">
+                <Image Source="../Assets/Buttons/btn_back_pokestop_info.png" />
+            </Button>
+            <Button Click="GoHome"
+                    Style="{StaticResource ButtonCircle}"
+                    VerticalAlignment="Top"
+                    Margin="0,0,0,17.5">
+                <Image Source="../Assets/Buttons/btn_home_pokestop_info.png" />
+            </Button>
+            <Button Click="GoForward"
+                    Style="{StaticResource ButtonCircle}"
+                    VerticalAlignment="Top"
+                    Margin="0,0,0,17.5">
+                <Image Source="../Assets/Buttons/btn_forward_pokestop_info.png" />
+            </Button>
+        </StackPanel>
     </Grid>
-
-
 </Page>
