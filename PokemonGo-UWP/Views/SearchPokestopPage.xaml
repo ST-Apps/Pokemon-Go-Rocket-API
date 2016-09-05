@@ -112,7 +112,8 @@
                 <TextBlock Text="{Binding CurrentPokestopInfo.Name}"
                            Style="{StaticResource TextPokestopTitle}"
                            HorizontalAlignment="Center"
-                           VerticalAlignment="Center"/>
+                           VerticalAlignment="Center"
+                           Name="PokestopNameTag" />
             </Grid>
 
             <Border Grid.Row="1"
