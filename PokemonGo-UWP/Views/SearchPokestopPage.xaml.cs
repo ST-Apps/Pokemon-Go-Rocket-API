@@ -28,11 +28,13 @@ namespace PokemonGo_UWP.Views
                 //PC customization
                 if(ApiInformation.IsTypePresent("Windows.UI.ViewManagement.ApplicationView"))
                 {
+                    PokestopNameTag.HorizontalAlignment = "Left";
                 }
 
                 //Mobile customization
                 if(ApiInformation.IsTypePresent("Windows.UI.ViewManagement.StatusBar"))
                 {
+                    PokestopNameTag.HorizontalAlignment = "Center";
                 }
         }
 
