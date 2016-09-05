@@ -2156,6 +2156,10 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         <trans-unit id="SettingsMusicTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Music</source>
           <target state="new">Music</target>
+        <trans-unit id="SettingsLearnMoreTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Pokéstop Learn More Feature</source>
+          <target state="translated">Pokéstop Learn More Feature</target>
+        </trans-unit>
         </trans-unit>
         <trans-unit id="PokemonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>POKÉMON</source>
