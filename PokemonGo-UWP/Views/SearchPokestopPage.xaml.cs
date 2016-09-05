@@ -3,6 +3,10 @@ using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using PokemonGo_UWP.Entities;
+using PokemonGo_UWP.Utils;
+using Template10.Services.NavigationService;
+using Template10.Common;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -99,6 +103,24 @@ namespace PokemonGo_UWP.Views
                 var dialog = new MessageDialog("Error!");
                 await dialog.ShowAsync();
             }
+        }
+
+        private void FindInfo(object sender, RoutedEventArgs e)
+        {
+            var pokestopName = ((Button)sender).Tag;
+            NavigationHelper.NavigationState["PokestopName"] = pokestopName;
+            //NavigationHelper.NavigationState["PokestopId"] = NavigationHelper.NavigationState["CurrentPokestop"];
+            BootStrapper.Current.NavigationService.Navigate(typeof(PokestopInfo));
+        }
+
+        private void HideButton()
+        {
+            LearnMore.Visibility = Visibility.Collapsed;
+        }
+
+        private void ShowButton()
+        {
+            LearnMore.Visibility = Visibility.Visible;
         }
 
         #endregion
