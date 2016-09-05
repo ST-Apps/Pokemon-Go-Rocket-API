@@ -125,16 +125,16 @@ namespace PokemonGo_UWP.Utils
 			get { return Get(false); }
 			set { Set(value); }
 		}
+        public bool IsRememberMapZoomEnabled
+        {
+            get { return Get(false); }
+            set { Set(value); }
+        }
         public bool IsLearnMoreEnabled
         {
             get { return Get(true); }
             set { Set(value); }
         }
-        public bool IsRememberMapZoomEnabled
-		{
-			get { return Get(false); }
-			set { Set(value); }
-		}
 		public double MapPitch
 		{
 			get { return Get(0D); }
