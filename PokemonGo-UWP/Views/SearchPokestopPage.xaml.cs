@@ -17,6 +17,11 @@ namespace PokemonGo_UWP.Views
     /// </summary>
     public sealed partial class SearchPokestopPage : Page
     {
+        public bool IsLearnMoreEnabled
+        {
+            get { return SettingsService.Instance.IsLearnMoreEnabled; }
+            set { SettingsService.Instance.IsLearnMoreEnabled = value; }
+        }
         public SearchPokestopPage()
         {
             InitializeComponent();
@@ -33,6 +38,14 @@ namespace PokemonGo_UWP.Views
         {
             base.OnNavigatedTo(e);
             SubscribeToSearchEvents();
+            if (!IsLearnMoreEnabled)
+            {
+                HideLearnMoreButton();
+            }
+            else
+            {
+                ShowLearnMoreButton();
+            }
         }
 
 
@@ -110,15 +123,17 @@ namespace PokemonGo_UWP.Views
             var pokestopName = ((Button)sender).Tag;
             NavigationHelper.NavigationState["PokestopName"] = pokestopName;
             //NavigationHelper.NavigationState["PokestopId"] = NavigationHelper.NavigationState["CurrentPokestop"];
+            //var CurrentPokestop = NavigationHelper.NavigationState["CurrentPokestop"];
+            //NavigationHelper.NavigationState["CurrentPokestop"] = CurrentPokestop;
             BootStrapper.Current.NavigationService.Navigate(typeof(PokestopInfo));
         }
 
-        private void HideButton()
+        private void HideLearnMoreButton()
         {
             LearnMore.Visibility = Visibility.Collapsed;
         }
 
-        private void ShowButton()
+        private void ShowLearnMoreButton()
         {
             LearnMore.Visibility = Visibility.Visible;
         }
