@@ -31,14 +31,15 @@ namespace PokemonGo_UWP.Views
         public PokestopInfo()
         {
             this.InitializeComponent();
+            NavigationCacheMode = NavigationCacheMode.Enabled;
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            NavigationCacheMode = NavigationCacheMode.Enabled;
             var OriginalSearch = "http://google.com/search?q=" + NavigationHelper.NavigationState["PokestopName"];
-            LoadInfo(ref Display, OriginalSearch);
+            //LoadInfo(ref Display, OriginalSearch);
+            Display.Navigate(new System.Uri(OriginalSearch));
             /*
                 NavigationHelper.NavigationState["PokestopName"] = this;
                 NavigationHelper.NavigationState["LastSelectedID"] = Id;
@@ -55,6 +56,24 @@ namespace PokemonGo_UWP.Views
         {
             //NavigationHelper.NavigationState["CurrentPokestop"] = NavigationHelper.NavigationState["PokestopId"];
             BootStrapper.Current.NavigationService.Navigate(typeof(GameMapPage));
+        }
+
+        private void GoBack(object sender, RoutedEventArgs e)
+        {
+            if (Display.CanGoBack)
+                Display.GoBack();
+        }
+
+        private void GoForward(object sender, RoutedEventArgs e)
+        {
+            if (Display.CanGoForward)
+                Display.GoForward();
+        }
+
+        private void GoHome(object sender, RoutedEventArgs e)
+        {
+            var url = "http://google.com/search?q=" + NavigationHelper.NavigationState["PokestopName"];
+            Display.Navigate(new System.Uri(url));
         }
     }
 }
