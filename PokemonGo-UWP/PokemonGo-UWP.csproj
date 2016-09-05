@@ -169,11 +169,14 @@
     <Content Include="Assets\Backgrounds\ui_settings_bg.png" />
     <Content Include="Assets\Buttons\btn_action_menu.png" />
     <Content Include="Assets\Buttons\btn_back_normal_dark.png" />
+    <Content Include="Assets\Buttons\btn_back_pokestop_info.png" />
     <Content Include="Assets\Buttons\btn_close.png" />
     <Content Include="Assets\Buttons\btn_close_dark.png" />
     <Content Include="Assets\Buttons\btn_close_normal.png" />
     <Content Include="Assets\Buttons\btn_close_normal_dark.png" />
     <Content Include="Assets\Buttons\btn_empty.png" />
+    <Content Include="Assets\Buttons\btn_forward_pokestop_info.png" />
+    <Content Include="Assets\Buttons\btn_home_pokestop_info.png" />
     <Content Include="Assets\Buttons\btn_incubator.png" />
     <Content Include="Assets\Buttons\btn_incubator_dark.png" />
     <Content Include="Assets\Buttons\btn_items.png" />
