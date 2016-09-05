@@ -18,7 +18,7 @@ namespace PokemonGo_UWP.Views
             {
                 var currentText = AchievementValue.Text
                 int correctText = Math.Round(Int32.Parse(currentText), 2, MidpointRounding.ToEven);
-                Achievement.Text = Convert.ToString(correctText);
+                AchievementValue.Text = Convert.ToString(correctText);
             }
             */
         }
