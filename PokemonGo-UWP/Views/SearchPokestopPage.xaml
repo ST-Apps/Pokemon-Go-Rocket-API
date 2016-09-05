@@ -116,8 +116,9 @@
                         HorizontalAlignment="Right"
                         VerticalAlignment="Bottom"
                         Background="Transparent"
-                        Click="startSearch"
-                        Tag="{Binding CurrentPokestopInfo.Name}" />
+                        Click="FindInfo"
+                        Tag="{Binding CurrentPokestopInfo.Name}"
+                        Name="LearnMore" />
             </Grid>
 
             <Border Grid.Row="1"
