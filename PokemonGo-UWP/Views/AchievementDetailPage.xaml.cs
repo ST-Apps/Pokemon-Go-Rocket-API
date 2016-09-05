@@ -8,6 +8,20 @@ namespace PokemonGo_UWP.Views
         {
             this.InitializeComponent();
         }
+        
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            //var AchievementID = ???
+            /*
+            if (AchievementID == JoggerAchievementID)
+            {
+                var currentText = AchievementValue.Text
+                int correctText = Math.Round(Int32.Parse(currentText), 2, MidpointRounding.ToEven);
+                Achievement.Text = Convert.ToString(correctText);
+            }
+            */
+        }
     }
 
 }
