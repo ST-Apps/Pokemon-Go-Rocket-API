@@ -15,7 +15,7 @@ namespace PokemonGo_UWP.Views
             var AchievementID = Convert.ToString(AchevementID.text);
             if (AchievementID == "jogger")
             {
-                int currentText = AchievementValue.Text
+                int currentText = AchievementValue.Text;
                 int correctText = Math.Round(Int32.Parse(currentText), 2, MidpointRounding.ToEven);
                 AchievementValue.Text = Convert.ToString(correctText);
             }
