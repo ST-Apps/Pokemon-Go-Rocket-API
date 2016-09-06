@@ -100,24 +100,6 @@ namespace PokemonGo_UWP.Views
             SpinPokestopImage.Begin();
         }
 
-        private async void startSearch(object sender, RoutedEventArgs e)
-        {
-            //Gets data for link
-            var pokestopName = ((Button)sender).Tag;
-
-            // The URI to launch
-            var uriSearch = new Uri(@"http://www.google.com/search?q=" + pokestopName);
-
-            // Launch the URI
-            var success = await Windows.System.Launcher.LaunchUriAsync(uriSearch);
-
-            if (!success)
-            {
-                var dialog = new MessageDialog("Error!");
-                await dialog.ShowAsync();
-            }
-        }
-
         private void FindInfo(object sender, RoutedEventArgs e)
         {
             var pokestopName = ((Button)sender).Tag;
