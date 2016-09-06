@@ -391,7 +391,6 @@
         <trans-unit id="NumberTextBlock.Text" translate="yes" xml:space="preserve">
           <source>+ </source>
           <target state="needs-review-translation">+ </target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Watch out: there is a space after the +</note>
         </trans-unit>
         <trans-unit id="SlashSpaceCpTextBlock.Text" translate="yes" xml:space="preserve">
@@ -2465,7 +2464,7 @@ Du fikk også {1} Stjernestøv, {2} Candy og {3} XP.</target>
         </trans-unit>
         <trans-unit id="Charmander.Description" translate="yes" xml:space="preserve">
           <source>The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.</source>
-          <target state="needs-review-translation">The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.</target>
+          <target state="translated">Flammen som brenner på tuppen av halen er en indikasjon på Pokémonen sine følelser. Flammen lager bølger når Charmander koser seg. Hvis Pokémonen blir rasende brenner flammen voldsomt.</target>
         </trans-unit>
         <trans-unit id="Charmeleon.Description" translate="yes" xml:space="preserve">
           <source>Charmeleon mercilessly destroys its foes using its sharp claws. If it encounters a strong foe, it turns aggressive. In this excited state, the flame at the tip of its tail flares with a bluish white color.</source>
@@ -2477,7 +2476,7 @@ Du fikk også {1} Stjernestøv, {2} Candy og {3} XP.</target>
         </trans-unit>
         <trans-unit id="Squirtle.Description" translate="yes" xml:space="preserve">
           <source>Squirtle’s shell is not merely used for protection. The shell’s rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds.</source>
-          <target state="needs-review-translation">Squirtle’s shell is not merely used for protection. The shell’s rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds.</target>
+          <target state="translated">Squirtle sitt skall er ikke bare brukt for beskyttelse. Skallet har en avrundet form og riller på overflaten som reduserer motstand i vann, slik at Pokémonen kan svømme i høye hastigheter.</target>
         </trans-unit>
         <trans-unit id="Wartortle.Description" translate="yes" xml:space="preserve">
           <source>Its tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Pokémon’s toughness as a battler.</source>
@@ -2489,11 +2488,11 @@ Du fikk også {1} Stjernestøv, {2} Candy og {3} XP.</target>
         </trans-unit>
         <trans-unit id="Caterpie.Description" translate="yes" xml:space="preserve">
           <source>Caterpie has a voracious appetite. It can devour leaves bigger than its body right before your eyes. From its antenna, this Pokémon releases a terrifically strong odor.</source>
-          <target state="needs-review-translation">Caterpie has a voracious appetite. It can devour leaves bigger than its body right before your eyes. From its antenna, this Pokémon releases a terrifically strong odor.</target>
+          <target state="translated">Caterpie har en glupsk appetitt. Den kan sluke blader større enn kroppen sin rett foran øynene dine. Fra antenene sender den ut en forferdelig sterk lukt. </target>
         </trans-unit>
         <trans-unit id="Metapod.Description" translate="yes" xml:space="preserve">
           <source>The shell covering this Pokémon’s body is as hard as an iron slab. Metapod does not move very much. It stays still because it is preparing its soft innards for evolution inside the hard shell.</source>
-          <target state="needs-review-translation">The shell covering this Pokémon’s body is as hard as an iron slab. Metapod does not move very much. It stays still because it is preparing its soft innards for evolution inside the hard shell.</target>
+          <target state="translated">Skallet som dekker Pokémonen sin kropp er like hard som jern. Metapod flytte ikke mye. Det ligger stille fordi det forbereder utviklingen sin innenfor det harde skallet.</target>
         </trans-unit>
         <trans-unit id="Butterfree.Description" translate="yes" xml:space="preserve">
           <source>Butterfree has a superior ability to search for delicious honey from flowers. It can even search out, extract, and carry honey from flowers that are blooming over six miles from its nest.</source>
@@ -2501,7 +2500,7 @@ Du fikk også {1} Stjernestøv, {2} Candy og {3} XP.</target>
         </trans-unit>
         <trans-unit id="Weedle.Description" translate="yes" xml:space="preserve">
           <source>Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).</source>
-          <target state="needs-review-translation">Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).</target>
+          <target state="translated">Weedle har en ekstremt skarp luktesans. Den er i stand til å skille ut sine favoritt blader fra de den misliker ved sniffing med sin store røde nese.</target>
         </trans-unit>
         <trans-unit id="Kakuna.Description" translate="yes" xml:space="preserve">
           <source>Kakuna remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch.</source>
@@ -2517,7 +2516,7 @@ Du fikk også {1} Stjernestøv, {2} Candy og {3} XP.</target>
         </trans-unit>
         <trans-unit id="Pidgeotto.Description" translate="yes" xml:space="preserve">
           <source>Pidgeotto claims a large area as its own territory. This Pokémon flies around, patrolling its living space. If its territory is violated, it shows no mercy in thoroughly punishing the foe with its sharp claws.</source>
-          <target state="needs-review-translation">Pidgeotto claims a large area as its own territory. This Pokémon flies around, patrolling its living space. If its territory is violated, it shows no mercy in thoroughly punishing the foe with its sharp claws.</target>
+          <target state="translated">Pidgeotto tar store områder og lager det til sitt eget territorium. Den flyr rundt og patruljerer sitt territorium. Hvis territoriumet blir forstyrret, viser den ingen nåde og vil grundig straffe fienden med sine skarpe klør.</target>
         </trans-unit>
         <trans-unit id="Pidgeot.Description" translate="yes" xml:space="preserve">
           <source>This Pokémon has a dazzling plumage of beautifully glossy feathers. Many Trainers are captivated by the striking beauty of the feathers on its head, compelling them to choose Pidgeot as their Pokémon.</source>
@@ -2525,7 +2524,7 @@ Du fikk også {1} Stjernestøv, {2} Candy og {3} XP.</target>
         </trans-unit>
         <trans-unit id="Rattata.Description" translate="yes" xml:space="preserve">
           <source>Rattata is cautious in the extreme. Even while it is asleep, it constantly listens by moving its ears around. It is not picky about where it lives—it will make its nest anywhere.</source>
-          <target state="needs-review-translation">Rattata is cautious in the extreme. Even while it is asleep, it constantly listens by moving its ears around. It is not picky about where it lives—it will make its nest anywhere.</target>
+          <target state="translated">Rattata er svært forsiktig. Selv når den hviler, lytter den stadig etter lyder ved å bevege ørene. Den er ikke kresen om hvor den bor. Den lager reir overalt!</target>
         </trans-unit>
         <trans-unit id="Raticate.Description" translate="yes" xml:space="preserve">
           <source>Raticate’s sturdy fangs grow steadily. To keep them ground down, it gnaws on rocks and logs. It may even chew on the walls of houses.</source>
@@ -2533,7 +2532,7 @@ Du fikk også {1} Stjernestøv, {2} Candy og {3} XP.</target>
         </trans-unit>
         <trans-unit id="Spearow.Description" translate="yes" xml:space="preserve">
           <source>Spearow has a very loud cry that can be heard over half a mile away. If its high, keening cry is heard echoing all around, it is a sign that they are warning each other of danger.</source>
-          <target state="needs-review-translation">Spearow has a very loud cry that can be heard over half a mile away. If its high, keening cry is heard echoing all around, it is a sign that they are warning each other of danger.</target>
+          <target state="translated">Spearow har et svært høyt rop som kan høres over en kilometer unna. Hvis du hører mange av ropene i et ekko, er det et tegn på at de advarer hverandre for potensiell fare.</target>
         </trans-unit>
         <trans-unit id="Fearow.Description" translate="yes" xml:space="preserve">
           <source>Fearow is recognized by its long neck and elongated beak. They are conveniently shaped for catching prey in soil or water. It deftly moves its long and skinny beak to pluck prey.</source>
@@ -2553,7 +2552,7 @@ Du fikk også {1} Stjernestøv, {2} Candy og {3} XP.</target>
         </trans-unit>
         <trans-unit id="Raichu.Description" translate="yes" xml:space="preserve">
           <source>This Pokémon exudes a weak electrical charge from all over its body that makes it take on a slight glow in darkness. Raichu plants its tail in the ground to discharge electricity.</source>
-          <target state="translated">This Pokémon exudes a weak electrical charge from all over its body that makes it take on a slight glow in darkness. Raichu plants its tail in the ground to discharge electricity.</target>
+          <target state="translated">Denne Pokémonen utstråler en svak elektrisk ladning fra kroppen. Dette gjør at den har en svak glød i mørke. Raichu kan sette halen i bakken for å slippe ut elektrisitet.</target>
         </trans-unit>
         <trans-unit id="Sandshrew.Description" translate="yes" xml:space="preserve">
           <source>Sandshrew has a very dry hide that is extremely tough. The Pokémon can roll into a ball that repels any attack. At night, it burrows into the desert sand to sleep.</source>
@@ -2565,7 +2564,7 @@ Du fikk også {1} Stjernestøv, {2} Candy og {3} XP.</target>
         </trans-unit>
         <trans-unit id="NidoranFemale.Description" translate="yes" xml:space="preserve">
           <source>Nidoran♀ has barbs that secrete a powerful poison. They are thought to have developed as protection for this small-bodied Pokémon. When enraged, it releases a horrible toxin from its horn.</source>
-          <target state="needs-review-translation">Nidoran♀ has barbs that secrete a powerful poison. They are thought to have developed as protection for this small-bodied Pokémon. When enraged, it releases a horrible toxin from its horn.</target>
+          <target state="translated">Nidoran♀ har pigger med mothaker som sender ut en kraftig gift. Piggene er antatt å ha utviklet seg som beskyttelse for denne lille Pokémonen. Når den blir rasende sender den ut en fryktelig toksin fra hornene.</target>
         </trans-unit>
         <trans-unit id="Nidorina.Description" translate="yes" xml:space="preserve">
           <source>When Nidorina are with their friends or family, they keep their barbs tucked away to prevent hurting each other. This Pokémon appears to become nervous if separated from the others.</source>
@@ -2577,7 +2576,7 @@ Du fikk også {1} Stjernestøv, {2} Candy og {3} XP.</target>
         </trans-unit>
         <trans-unit id="NidoranMale.Description" translate="yes" xml:space="preserve">
           <source>Nidoran♂ has developed muscles for moving its ears. Thanks to them, the ears can be freely moved in any direction. Even the slightest sound does not escape this Pokémon’s notice.</source>
-          <target state="needs-review-translation">Nidoran♂ has developed muscles for moving its ears. Thanks to them, the ears can be freely moved in any direction. Even the slightest sound does not escape this Pokémon’s notice.</target>
+          <target state="translated">Nidoran♂ har utviklet muskler for å flytte ørene rundt omkring. Takket være dem, kan ørene fritt flyttes i alle retninger. Selv den minste lyd, kan ikke unnslippe å bli hørt av ørene.</target>
         </trans-unit>
         <trans-unit id="Nidorino.Description" translate="yes" xml:space="preserve">
           <source>Nidorino has a horn that is harder than a diamond. If it senses a hostile presence, all the barbs on its back bristle up at once, and it challenges the foe with all its might.</source>
@@ -2597,7 +2596,7 @@ Du fikk også {1} Stjernestøv, {2} Candy og {3} XP.</target>
         </trans-unit>
         <trans-unit id="Vulpix.Description" translate="yes" xml:space="preserve">
           <source>Inside Vulpix’s body burns a flame that never goes out. During the daytime, when the temperatures rise, this Pokémon releases flames from its mouth to prevent its body from growing too hot.</source>
-          <target state="translated">Inside Vulpix’s body burns a flame that never goes out. During the daytime, when the temperatures rise, this Pokémon releases flames from its mouth to prevent its body from growing too hot.</target>
+          <target state="translated">Inne i Vulpixs sin kropp, brenner en flamme som aldri går ut. På dagtid, når temperaturen stiger, sender Pokémonen ut flammer fra munnen for å hindre at kroppen blir for varmt.</target>
         </trans-unit>
         <trans-unit id="Ninetales.Description" translate="yes" xml:space="preserve">
           <source>Legend has it that Ninetales came into being when nine wizards possessing sacred powers merged into one. This Pokémon is highly intelligent—it can understand human speech.</source>
@@ -2613,7 +2612,7 @@ Du fikk også {1} Stjernestøv, {2} Candy og {3} XP.</target>
         </trans-unit>
         <trans-unit id="Zubat.Description" translate="yes" xml:space="preserve">
           <source>Zubat avoids sunlight because exposure causes it to become unhealthy. During the daytime, it stays in caves or under the eaves of old houses, sleeping while hanging upside down.</source>
-          <target state="needs-review-translation">Zubat avoids sunlight because exposure causes it to become unhealthy. During the daytime, it stays in caves or under the eaves of old houses, sleeping while hanging upside down.</target>
+          <target state="translated">Zubat unngår sollys fordi eksponering fører at den blir dårlig. På dagtid oppholder den deg i huler eller under tak i gamle hus. Den sover hengende opp ned.</target>
         </trans-unit>
         <trans-unit id="Golbat.Description" translate="yes" xml:space="preserve">
           <source>Golbat bites down on prey with its four fangs and drinks the victim’s blood. It becomes active on inky dark moonless nights, flying around to attack people and Pokémon.</source>
@@ -2621,7 +2620,7 @@ Du fikk også {1} Stjernestøv, {2} Candy og {3} XP.</target>
         </trans-unit>
         <trans-unit id="Oddish.Description" translate="yes" xml:space="preserve">
           <source>Oddish searches for fertile, nutrient-rich soil, then plants itself. During the daytime, while it is planted, this Pokémon’s feet are thought to change shape and become similar to the roots of trees.</source>
-          <target state="needs-review-translation">Oddish searches for fertile, nutrient-rich soil, then plants itself. During the daytime, while it is planted, this Pokémon’s feet are thought to change shape and become similar to the roots of trees.</target>
+          <target state="translated">Oddish søker etter fruktbar, næringsrik jord, der den kan plante seg selv. På dagtid, mens den er plantet, er Pokémonen sine føtter antatt å endre form til røtter.</target>
         </trans-unit>
         <trans-unit id="Gloom.Description" translate="yes" xml:space="preserve">
           <source>From its mouth Gloom drips honey that smells absolutely horrible. Apparently, it loves the horrid stench. It sniffs the noxious fumes and then drools even more of its honey.</source>
@@ -2665,7 +2664,7 @@ Du fikk også {1} Stjernestøv, {2} Candy og {3} XP.</target>
         </trans-unit>
         <trans-unit id="Psyduck.Description" translate="yes" xml:space="preserve">
           <source>If it uses its mysterious power, Psyduck can’t remember having done so. It apparently can’t form a memory of such an event because it goes into an altered state that is much like deep sleep.</source>
-          <target state="translated">If it uses its mysterious power, Psyduck can’t remember having done so. It apparently can’t form a memory of such an event because it goes into an altered state that is much like deep sleep.</target>
+          <target state="translated">Hvis den bruker sin mystiske kraft, kan ikke Psyduck huske at den har brukt den. Den klarer ikke forme et minne av en slik hendelse fordi den går inn i en meditativ tilstand. Denne tilstanden er ganske lik dyp søvn.</target>
         </trans-unit>
         <trans-unit id="Golduck.Description" translate="yes" xml:space="preserve">
           <source>Golduck is the fastest swimmer among all Pokémon. It swims effortlessly, even in a rough, stormy sea. It sometimes rescues people from wrecked ships floundering in high seas.</source>
@@ -2725,7 +2724,7 @@ Du fikk også {1} Stjernestøv, {2} Candy og {3} XP.</target>
         </trans-unit>
         <trans-unit id="Bellsprout.Description" translate="yes" xml:space="preserve">
           <source>Bellsprout’s thin and flexible body lets it bend and sway to avoid any attack, however strong it may be. From its mouth, this Pokémon spits a corrosive fluid that melts even iron.</source>
-          <target state="needs-review-translation">Bellsprout’s thin and flexible body lets it bend and sway to avoid any attack, however strong it may be. From its mouth, this Pokémon spits a corrosive fluid that melts even iron.</target>
+          <target state="translated">Bellsprout har en tynn og fleksibel kropp som lar den svinge og svaie seg for å unngå alle angrep. Den må ikke bli undervurdert. Fra munnen spytter den en korroderende væske som til og med kan smelte jern.</target>
         </trans-unit>
         <trans-unit id="Weepinbell.Description" translate="yes" xml:space="preserve">
           <source>Weepinbell has a large hook on its rear end. At night, the Pokémon hooks on to a tree branch and goes to sleep. If it moves around in its sleep, it may wake up to find itself on the ground.</source>
@@ -2833,7 +2832,7 @@ Du fikk også {1} Stjernestøv, {2} Candy og {3} XP.</target>
         </trans-unit>
         <trans-unit id="Drowzee.Description" translate="yes" xml:space="preserve">
           <source>If your nose becomes itchy while you are sleeping, it’s a sure sign that one of these Pokémon is standing above your pillow and trying to eat your dream through your nostrils.</source>
-          <target state="needs-review-translation">If your nose becomes itchy while you are sleeping, it’s a sure sign that one of these Pokémon is standing above your pillow and trying to eat your dream through your nostrils.</target>
+          <target state="translated">Hvis nesen din blir kløende mens du sover, er det et sikkert tegn på at en av denne Pokémonen står ovenfor sengen din for å prøve å ta drømmene dine.</target>
         </trans-unit>
         <trans-unit id="Hypno.Description" translate="yes" xml:space="preserve">
           <source>Hypno holds a pendulum in its hand. The arcing movement and glitter of the pendulum lull the foe into a deep state of hypnosis. While this Pokémon searches for prey, it polishes the pendulum.</source>
@@ -3053,7 +3052,7 @@ Du fikk også {1} Stjernestøv, {2} Candy og {3} XP.</target>
         </trans-unit>
         <trans-unit id="Mew.Description" translate="yes" xml:space="preserve">
           <source>Mew is said to possess the genetic composition of all Pokémon. It is capable of making itself invisible at will, so it entirely avoids notice even if it approaches people.</source>
-          <target state="translated">Mew is said to possess the genetic composition of all Pokémon. It is capable of making itself invisible at will, so it entirely avoids notice even if it approaches people.</target>
+          <target state="needs-review-translation">Mew is said to possess the genetic composition of all Pokémon. It is capable of making itself invisible at will, so it entirely avoids notice even if it approaches people.</target>
         </trans-unit>
       </group>
     </body>
