@@ -534,6 +534,10 @@ Hai ottenuto anche {1} Polvere di stella, {2} Caramelle e {3} PE.</target>
           <source>{0} is not in catch range anymore.</source>
           <target state="new">{0} non è più nelle vicinanze.</target>
         </trans-unit>
+        <trans-unit id="CannotTransferFavorite" translate="yes" xml:space="preserve">
+          <source>Cannot transfer a favorite Pokémon!</source>
+          <target state="new">Non puoi trasferire un Pokémon preferito!</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -628,9 +632,9 @@ Hai ottenuto anche {1} Polvere di stella, {2} Caramelle e {3} PE.</target>
           <target state="final">Strumenti</target>
         </trans-unit>
         <trans-unit id="NumberTextBlock.Text" translate="yes" xml:space="preserve">
-          <source># </source>
-          <target state="final"># </target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Watch out: there is a space after the #</note>
+          <source>+ </source>
+          <target state="final">+ </target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Watch out: there is a space after the +</note>
         </trans-unit>
         <trans-unit id="SlashSpaceCpTextBlock.Text" translate="yes" xml:space="preserve">
           <source>/ CP</source>
@@ -785,6 +789,15 @@ Hai ottenuto anche {1} Polvere di stella, {2} Caramelle e {3} PE.</target>
         <trans-unit id="FavoriteTextBlock.Text" translate="yes" xml:space="preserve">
           <source>FAVORITE</source>
           <target state="final">PREFERITI</target>
+        </trans-unit>
+        <trans-unit id="AppraiseTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>APPRAISE</source>
+          <target state="new">VALUTA</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
+        </trans-unit>
+        <trans-unit id="AwardedExperienceTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Experience</source>
+          <target state="new">Esperienza</target>
         </trans-unit>
       </group>
     </body>
