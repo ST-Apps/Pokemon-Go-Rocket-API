@@ -82,7 +82,7 @@
                               Style="{StaticResource SettingsCheckbox}"
                               Margin="0,8,15,10" />
                 </Grid>
-				<Border Background="#33ffffff" Height="1" Margin="15" />
+                <Border Background="#33ffffff" Height="1" Margin="15" />
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
@@ -147,6 +147,21 @@
                               Grid.ColumnSpan="2"
                               HorizontalAlignment="Right"
                               ItemsSource="{Binding languageList, Mode=OneWay}" SelectedItem="{Binding UserLanguage, Mode=TwoWay}" 
+                              Margin="0,8,15,10" />
+                </Grid>
+                <Border Background="#33ffffff" Height="1" Margin="15" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="135" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               x:Uid="SettingsLearnMoreTextBlock"
+                               Text="Pokéstop Learn More Feature"
+                               Style="{StaticResource TextSettingsTitle}" />
+                    <CheckBox Grid.Column="1"
+                              IsChecked="{Binding IsLearnMoreEnabled, Mode=TwoWay}"
+                              Style="{StaticResource SettingsCheckbox}"
                               Margin="0,8,15,10" />
                 </Grid>
                 <Border Background="#33ffffff" Height="1" Margin="15" />

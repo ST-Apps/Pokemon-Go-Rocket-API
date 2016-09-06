@@ -608,6 +608,10 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
           <source>SETTINGS</source>
           <target state="translated">OPÇÕES</target>
         </trans-unit>
+        <trans-unit id="SettingsLearnMoreTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Pokéstop Learn More Feature</source>
+          <target state="translated">Pokéstop Learn More Feature</target>
+        </trans-unit>
         <trans-unit id="ItemsTextBlock.Text" translate="yes" xml:space="preserve">
           <source>ITEMS</source>
           <target state="translated">ITENS</target>

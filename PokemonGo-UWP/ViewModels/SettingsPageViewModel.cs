@@ -71,6 +71,12 @@ namespace PokemonGo_UWP.ViewModels
             set { SettingsService.Instance.IsVibrationEnabled = value; }
         }
 
+        public bool IsLearnMoreEnabled
+        {
+            get { return SettingsService.Instance.IsLearnMoreEnabled; }
+            set { SettingsService.Instance.IsLearnMoreEnabled = value; }
+        }
+
         /// <summary>
         ///     Whether the player wants vibration (when a Pokémon is nearby)
         /// </summary>

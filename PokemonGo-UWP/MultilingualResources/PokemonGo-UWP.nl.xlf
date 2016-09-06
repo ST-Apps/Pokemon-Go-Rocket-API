@@ -601,6 +601,10 @@ Je hebt ook {1} Stardust, {2} Candy en {3} XP gekregen.</target>
           <source>Music</source>
           <target state="translated" state-qualifier="tm-suggestion">Muziek</target>
         </trans-unit>
+        <trans-unit id="SettingsLearnMoreTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Pokéstop Learn More Feature</source>
+          <target state="translated">Pokéstop Learn More Feature</target>
+        </trans-unit>
         <trans-unit id="PokemonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>POKÉMON</source>
           <target state="translated" state-qualifier="mt-suggestion">POKÉMON</target>

@@ -1,7 +1,12 @@
-﻿using System;
+using System;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using PokemonGo_UWP.Entities;
+using PokemonGo_UWP.Utils;
+using Template10.Services.NavigationService;
+using Template10.Common;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -12,6 +17,11 @@ namespace PokemonGo_UWP.Views
     /// </summary>
     public sealed partial class SearchPokestopPage : Page
     {
+        public bool IsLearnMoreEnabled
+        {
+            get { return SettingsService.Instance.IsLearnMoreEnabled; }
+            set { SettingsService.Instance.IsLearnMoreEnabled = value; }
+        }
         public SearchPokestopPage()
         {
             InitializeComponent();
@@ -28,6 +38,14 @@ namespace PokemonGo_UWP.Views
         {
             base.OnNavigatedTo(e);
             SubscribeToSearchEvents();
+            if (!IsLearnMoreEnabled)
+            {
+                HideLearnMoreButton();
+            }
+            else
+            {
+                ShowLearnMoreButton();
+            }
         }
 
 
@@ -80,6 +98,26 @@ namespace PokemonGo_UWP.Views
         {
             SearchPokestopButton.IsEnabled = false;
             SpinPokestopImage.Begin();
+        }
+
+        private void FindInfo(object sender, RoutedEventArgs e)
+        {
+            var pokestopName = ((Button)sender).Tag;
+            NavigationHelper.NavigationState["PokestopName"] = pokestopName;
+            //NavigationHelper.NavigationState["PokestopId"] = NavigationHelper.NavigationState["CurrentPokestop"];
+            //var CurrentPokestop = NavigationHelper.NavigationState["CurrentPokestop"];
+            //NavigationHelper.NavigationState["CurrentPokestop"] = CurrentPokestop;
+            BootStrapper.Current.NavigationService.Navigate(typeof(PokestopInfo));
+        }
+
+        private void HideLearnMoreButton()
+        {
+            LearnMore.Visibility = Visibility.Collapsed;
+        }
+
+        private void ShowLearnMoreButton()
+        {
+            LearnMore.Visibility = Visibility.Visible;
         }
 
         #endregion

@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Windows.Security.Credentials;
 using PokemonGo.RocketAPI.Enums;
 using Template10.Services.SettingsService;
@@ -125,11 +125,16 @@ namespace PokemonGo_UWP.Utils
 			get { return Get(false); }
 			set { Set(value); }
 		}
-		public bool IsRememberMapZoomEnabled
-		{
-			get { return Get(false); }
-			set { Set(value); }
-		}
+        public bool IsRememberMapZoomEnabled
+        {
+            get { return Get(false); }
+            set { Set(value); }
+        }
+        public bool IsLearnMoreEnabled
+        {
+            get { return Get(true); }
+            set { Set(value); }
+        }
 		public double MapPitch
 		{
 			get { return Get(0D); }
