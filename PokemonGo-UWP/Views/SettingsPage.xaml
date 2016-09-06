@@ -160,7 +160,7 @@
                                Text="Live Tile Mode"
                                Style="{StaticResource TextSettingsTitle}" />
                 </Grid>
-                <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Hidden" 
+                <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Enabled" 
                               ScrollViewer.VerticalScrollBarVisibility="Disabled"
                               Margin="15,0,15,15">
                     <StackPanel Orientation="Horizontal" Height="100">
