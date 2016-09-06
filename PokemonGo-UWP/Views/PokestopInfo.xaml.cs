@@ -38,25 +38,12 @@ namespace PokemonGo_UWP.Views
         {
             base.OnNavigatedTo(e);
             var OriginalSearch = "http://google.com/search?q=" + NavigationHelper.NavigationState["PokestopName"];
-            //LoadInfo(ref Display, OriginalSearch);
             Display.Navigate(new System.Uri(OriginalSearch));
-            /*
-                NavigationHelper.NavigationState["PokestopName"] = this;
-                NavigationHelper.NavigationState["LastSelectedID"] = Id;
-                BootStrapper.Current.NavigationService.Navigate(typeof(PokemonDetailPage)); 
-            */
-        }
-
-        private void LoadInfo(ref WebView web, string url)
-        {
-            web.Navigate(new System.Uri(url));
         }
 
         private void ReturnToLast(object sender, RoutedEventArgs e)
         {
-            //NavigationHelper.NavigationState["CurrentPokestop"] = NavigationHelper.NavigationState["PokestopId"];
             BootStrapper.Current.NavigationService.Navigate(typeof(GameMapPage));
-            //BootStrapper.Current.NavigationService.GoBack();
         }
 
         private void GoBack(object sender, RoutedEventArgs e)
