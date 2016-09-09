@@ -168,6 +168,10 @@
     <Content Include="Assets\Backgrounds\ui_bg_purple_02.png" />
     <Content Include="Assets\Backgrounds\ui_settings_bg.png" />
     <Content Include="Assets\Buttons\btn_action_menu.png" />
+    <Content Include="Assets\Buttons\btn_ar_toggle_accurate.png" />
+    <Content Include="Assets\Buttons\btn_ar_toggle_inaccurate.png" />
+    <Content Include="Assets\Buttons\btn_ar_toggle_off.png" />
+    <Content Include="Assets\Buttons\btn_ar_toggle_on.png" />
     <Content Include="Assets\Buttons\btn_back_normal_dark.png" />
     <Content Include="Assets\Buttons\btn_close.png" />
     <Content Include="Assets\Buttons\btn_close_dark.png" />
@@ -310,6 +314,10 @@
     <Content Include="Assets\LiveTiles\Transparent\Square71x71Logo.scale-400.png" />
     <Content Include="Assets\LiveTiles\Transparent\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\LiveTiles\Transparent\Wide310x150Logo.scale-400.png" />
+    <Content Include="Assets\Pokemons\pokestop.png" />
+    <Content Include="Assets\Shaders\PixelShader.ps.hlsl" />
+    <Content Include="Assets\Shaders\VertexShader.vs.hlsl" />
+    <Content Include="Assets\UI\compass.png" />
     <Content Include="Assets\Square44x44Logo.png" />
     <Content Include="Assets\UI\night_sky_texture_by_amdillon.jpg" />
     <Content Include="Assets\Pokemons\1.png" />
@@ -762,6 +770,8 @@
     <Compile Include="Utils\Achievements\GoldAttribute.cs" />
     <Compile Include="Utils\Achievements\AchievementType.cs" />
     <Compile Include="Utils\ApplicationKeys.cs" />
+    <Compile Include="Utils\Helpers\ARManager.cs" />
+    <Compile Include="Utils\Helpers\CompassHelper.cs" />
     <Compile Include="Utils\Game\DataTemplateSelectors.cs" />
     <Compile Include="Utils\Game\FortDataStatus.cs" />
     <Compile Include="Entities\VersionInfo.cs" />

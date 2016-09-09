@@ -36,5 +36,7 @@
     <rescap:Capability Name="packageQuery" />
     <wincap:Capability Name="packageManagement" />
     <DeviceCapability Name="location" />
+    <DeviceCapability Name="microphone" />
+    <DeviceCapability Name="webcam" />
   </Capabilities>
 </Package>
