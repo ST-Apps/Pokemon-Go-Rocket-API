@@ -329,7 +329,7 @@
                 </maps:MapItemsControl.ItemTemplate>
             </maps:MapItemsControl>
 
-                <maps:MapItemsControl ItemsSource="{Binding LuredPokemon}">
+            <maps:MapItemsControl ItemsSource="{Binding LuredPokemon}">
                 <maps:MapItemsControl.ItemTemplate>
                     <DataTemplate x:DataType="entities:LuredPokemon">
                         <Button Style="{ThemeResource ImageButtonStyle}"
@@ -696,9 +696,9 @@
               Canvas.ZIndex="2"
               Height="100">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="35*" />
-                <ColumnDefinition Width="30*" />
-                <ColumnDefinition Width="35*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
             <RelativePanel x:Name="UserDetailsPanel"
@@ -785,7 +785,7 @@
                     VerticalAlignment="Center"
                     Grid.Column="2"
                     Tapped="ToggleNearbyPokemonModal"
-                    Padding="0"
+                    Padding="4"
                     Height="55">
 
                 <Border.Background>
@@ -806,7 +806,7 @@
                         <ItemsPanelTemplate>
                             <WrapGrid Orientation="Horizontal"
                                       VerticalChildrenAlignment="Top"
-                                      MaximumRowsOrColumns="3"
+                                      MaximumRowsOrColumns="10"
                                       ItemHeight="52"
                                       ItemWidth="40"
                                       ScrollViewer.VerticalScrollMode="Disabled"
@@ -824,18 +824,15 @@
                                        HorizontalAlignment="Center"
                                        Stretch="Uniform"                                        
                                        Height="36"
-                                       Width="28"
-                                       Margin="1,0" />
+                                       Width="36" />
 
                                 <BitmapIcon
                                     UriSource="{Binding PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}, ConverterParameter=uri}"
                                     Style="{ThemeResource NearbyPokemonNotInPokedexBitmapIconStyle}"
                                     Visibility="{Binding PokemonId, Converter={StaticResource InverseNearbyPokemonInPokedexToVisibilityConverter}}"
-                                    VerticalAlignment="Center"
                                     HorizontalAlignment="Center"                                    
                                     Height="36"
-                                    Width="28"
-                                    Margin="1,0" />
+                                    Width="36" />
                             </Grid>
                         </DataTemplate>
                     </GridView.ItemTemplate>
