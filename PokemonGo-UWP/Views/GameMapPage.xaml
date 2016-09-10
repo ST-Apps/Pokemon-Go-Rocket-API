@@ -329,7 +329,7 @@
                 </maps:MapItemsControl.ItemTemplate>
             </maps:MapItemsControl>
 
-                <maps:MapItemsControl ItemsSource="{Binding LuredPokemon}">
+            <maps:MapItemsControl ItemsSource="{Binding LuredPokemon}">
                 <maps:MapItemsControl.ItemTemplate>
                     <DataTemplate x:DataType="entities:LuredPokemon">
                         <Button Style="{ThemeResource ImageButtonStyle}"
