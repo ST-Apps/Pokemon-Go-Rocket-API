@@ -250,6 +250,22 @@
             <Image Source="../Assets/UI/logoDark.png" MaxWidth="180" MaxHeight="180" Opacity=".2" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center" />
         </StackPanel>
         <RelativePanel Name="GamePanel" Grid.Row="0">
+
+            <Border RelativePanel.AlignBottomWithPanel="True"
+                    RelativePanel.AlignRightWithPanel="True"
+                    x:Name="GoogleAttributionBorder"
+                    Canvas.ZIndex="10">
+                <Border.Background>
+                    <SolidColorBrush Color="White"
+                                     Opacity="0.6"/>
+                </Border.Background>
+                
+                <TextBlock Margin="2"
+                       Foreground="Black"
+                       Text="Maps data ©2015 Google"
+                           FontSize="12"/>
+            </Border>
+
             <maps:MapControl BusinessLandmarksVisible="False"
                          TargetCameraChanged="GameMapControl_TargetCameraChanged"
                          LandmarksVisible="False"
@@ -696,9 +712,9 @@
               Canvas.ZIndex="2"
               Height="100">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="35*" />
+                <ColumnDefinition Width="30*" />
+                <ColumnDefinition Width="35*" />
             </Grid.ColumnDefinitions>
 
             <RelativePanel x:Name="UserDetailsPanel"
@@ -785,7 +801,7 @@
                     VerticalAlignment="Center"
                     Grid.Column="2"
                     Tapped="ToggleNearbyPokemonModal"
-                    Padding="4"
+                    Padding="0"
                     Height="55">
 
                 <Border.Background>
@@ -824,15 +840,18 @@
                                        HorizontalAlignment="Center"
                                        Stretch="Uniform"                                        
                                        Height="36"
-                                       Width="36" />
+                                       Width="28"
+                                       Margin="1,0" />
 
                                 <BitmapIcon
                                     UriSource="{Binding PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}, ConverterParameter=uri}"
                                     Style="{ThemeResource NearbyPokemonNotInPokedexBitmapIconStyle}"
                                     Visibility="{Binding PokemonId, Converter={StaticResource InverseNearbyPokemonInPokedexToVisibilityConverter}}"
+                                    VerticalAlignment="Center"
                                     HorizontalAlignment="Center"                                    
                                     Height="36"
-                                    Width="36" />
+                                    Width="28"
+                                    Margin="1,0" />
                             </Grid>
                         </DataTemplate>
                     </GridView.ItemTemplate>

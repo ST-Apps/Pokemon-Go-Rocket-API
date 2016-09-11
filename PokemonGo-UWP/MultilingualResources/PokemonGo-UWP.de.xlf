@@ -597,17 +597,9 @@ Du hast auch {1} Sternenstaub, {2} Bonbon und {3} EP erhalten.</target>
           <source>CP</source>
           <target state="translated">WP</target>
         </trans-unit>
-        <trans-unit id="EggsTextBlock.Text" translate="yes" xml:space="preserve">
-          <source>EGGS</source>
-          <target state="translated">EIER</target>
-        </trans-unit>
         <trans-unit id="SettingsMusicTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Music</source>
           <target state="translated">Musik</target>
-        </trans-unit>
-        <trans-unit id="PokemonTextBlock.Text" translate="yes" xml:space="preserve">
-          <source>POKÉMON</source>
-          <target state="translated">POKÉMON</target>
         </trans-unit>
         <trans-unit id="SettingsHeaderTextBlock.Text" translate="yes" xml:space="preserve">
           <source>SETTINGS</source>
@@ -800,6 +792,22 @@ Du hast auch {1} Sternenstaub, {2} Bonbon und {3} EP erhalten.</target>
         <trans-unit id="AwardedExperienceTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Experience</source>
           <target state="new">Experience</target>
+        </trans-unit>
+        <trans-unit id="EggsHeader.Title" translate="yes" xml:space="preserve">
+          <source>EGGS</source>
+          <target state="translated">EIER</target>
+        </trans-unit>
+        <trans-unit id="PokemonHeader.Title" translate="yes" xml:space="preserve">
+          <source>POKÉMON</source>
+          <target state="final">POKÉMON</target>
+        </trans-unit>
+        <trans-unit id="EggsTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>EGGS</source>
+          <target state="new">EGGS</target>
+        </trans-unit>
+        <trans-unit id="PokemonTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>POKÉMON</source>
+          <target state="new">POKÉMON</target>
         </trans-unit>
       </group>
     </body>

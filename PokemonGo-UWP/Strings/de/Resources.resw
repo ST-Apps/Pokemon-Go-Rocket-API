@@ -48,14 +48,8 @@
   <data name="CpTextBlock.Text" xml:space="preserve">
     <value>WP</value>
   </data>
-  <data name="EggsTextBlock.Text" xml:space="preserve">
-    <value>EIER</value>
-  </data>
   <data name="SettingsMusicTextBlock.Text" xml:space="preserve">
     <value>Musik</value>
-  </data>
-  <data name="PokemonTextBlock.Text" xml:space="preserve">
-    <value>POKÉMON</value>
   </data>
   <data name="SettingsHeaderTextBlock.Text" xml:space="preserve">
     <value>EINSTELLUNGEN</value>
@@ -194,5 +188,11 @@
   <data name="AppraiseTextBlock.Text" xml:space="preserve">
     <value>BEWERTUNG</value>
     <comment>Capslock</comment>
+  </data>
+  <data name="EggsHeader.Title" xml:space="preserve">
+    <value>EIER</value>
+  </data>
+  <data name="PokemonHeader.Title" xml:space="preserve">
+    <value>POKÉMON</value>
   </data>
 </root>

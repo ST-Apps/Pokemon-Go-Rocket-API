@@ -71,9 +71,10 @@
             <utils:VisibleWhenTypeIsNotNoneConverter x:Key="VisibleWhenTypeIsNotNoneConverter"/>
             <utils:InverseVisibleWhenTypeIsNotNoneConverter x:Key="InverseVisibleWhenTypeIsNotNoneConverter"/>
             <utils:PokemonDataToCapturedGepositionConverter x:Key="PokemonDataToCapturedGepositionConverter"/>
-            <utils:AchievementDescriptionTranslationConverter x:Key="AchievementDescriptionTranslationConverter"/>
-            <utils:PokemonPivotHeaderToVisibleConverter x:Key="PokemonPivotHeaderToVisibleConverter" />
+            <utils:AchievementDescriptionTranslationConverter x:Key="AchievementDescriptionTranslationConverter" />
             <utils:WidthConverter x:Key="WidthConverter" />
+            <utils:IntToBooleanConverter x:Key="IntToBooleanConverter" />
+            <utils:PokemonLastHoursVisibiltyConverter x:Key="PokemonLastHoursVisibiltyConverter" />
 
             <converters:ValueWhenConverter x:Key="VisibleWhenCanEvolveConverter">
                 <converters:ValueWhenConverter.When>

@@ -26,8 +26,7 @@ namespace PokemonGo_UWP.Views
     ///     An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class GameMapPage : Page
-    {
-        private int _mapBoxIndex = -1;
+    {        
         private Geopoint lastAutoPosition;
         private Button ReactivateMapAutoUpdateButton;
 
@@ -98,31 +97,22 @@ namespace PokemonGo_UWP.Views
 
         private void SetupMap()
         {
-            if ((ApplicationKeys.MapBoxTokens.Length > 0) && SettingsService.Instance.IsNianticMapEnabled)
+            if (SettingsService.Instance.IsNianticMapEnabled)
             {
-                if (_mapBoxIndex == -1)
-                    _mapBoxIndex = new Random().Next(0, ApplicationKeys.MapBoxTokens.Length);
-                Logger.Write($"Using MapBox's keyset {_mapBoxIndex}");
-                var mapBoxTileSource =
+                var googleTileSource =
                     new HttpMapTileDataSource(
-                        "https://api.mapbox.com/styles/v1/" +
-                        (RequestedTheme == ElementTheme.Light
-                            ? ApplicationKeys.MapBoxStylesLight[_mapBoxIndex]
-                            : ApplicationKeys.MapBoxStylesDark[_mapBoxIndex]) +
-                        "/tiles/256/{zoomlevel}/{x}/{y}?access_token=" +
-                        ApplicationKeys.MapBoxTokens[_mapBoxIndex])
-                    {
-                        AllowCaching = true
-                    };
+                        "http://mts0.google.com/vt/lyrs=m@289000001&hl=en&src=app&x={x}&y={y}&z={zoomlevel}&s=Gal&apistyle=" + (RequestedTheme == ElementTheme.Light ? MapStyleHelpers.LightMapStyleString : MapStyleHelpers.DarkMapStyleString));
 
                 GameMapControl.Style = MapStyle.None;
                 GameMapControl.TileSources.Clear();
-                GameMapControl.TileSources.Add(new MapTileSource(mapBoxTileSource)
+                GameMapControl.TileSources.Add(new MapTileSource(googleTileSource)
                 {
                     AllowOverstretch = true,
                     IsFadingEnabled = false,
                     Layer = MapTileLayer.BackgroundReplacement
                 });
+
+                GoogleAttributionBorder.Visibility = Visibility.Visible;
             }
             else
             {
@@ -133,6 +123,8 @@ namespace PokemonGo_UWP.Views
                     : MapColorScheme.Light;
                 GameMapControl.TileSources.Clear();
                 GameMapControl.Style = MapStyle.Terrain;
+
+                GoogleAttributionBorder.Visibility = Visibility.Collapsed;
             }
         }
 

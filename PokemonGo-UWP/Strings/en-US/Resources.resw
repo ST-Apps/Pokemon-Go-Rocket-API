@@ -306,4 +306,10 @@
   <data name="AwardedExperienceTextBlock.Text" xml:space="preserve">
     <value>Experience</value>
   </data>
+  <data name="EggsHeader.Title" xml:space="preserve">
+    <value>EGGS</value>
+  </data>
+  <data name="PokemonHeader.Title" xml:space="preserve">
+    <value>POKÉMON</value>
+  </data>
 </root>

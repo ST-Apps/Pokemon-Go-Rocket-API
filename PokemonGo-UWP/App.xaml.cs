@@ -224,6 +224,9 @@ namespace PokemonGo_UWP
             //_displayRequest.RequestActive();
             WindowWrapper.Current().Window.VisibilityChanged += WindowOnVisibilityChanged;
 
+            // Initialize Map styles
+            await MapStyleHelpers.Initialize();
+
             // Turn the display off when the proximity stuff detects the display is covered (battery saver)
             if (SettingsService.Instance.IsBatterySaverEnabled)
                 _proximityHelper.EnableDisplayAutoOff(true);
@@ -365,18 +368,18 @@ namespace PokemonGo_UWP
                     var mode = SettingsService.Instance.LiveTileMode;
 
                     // Generate the images list for multi-image modes.
-                    if (mode == LiveTileModes.People && mode == LiveTileModes.Photo)
+                    if (mode == LiveTileModes.People || mode == LiveTileModes.Photo)
                     {
                         images.AddRange(pokemonList.Select(c => new PokemonDataWrapper(c).ImageFileName));
                     }
 
                     if (mode != LiveTileModes.Peek)
                     {
-                        App.LiveTileUpdater.EnableNotificationQueue(true);
+                        LiveTileUpdater.EnableNotificationQueue(true);
                     }
                     else
                     {
-                        App.LiveTileUpdater.EnableNotificationQueue(false);
+                        LiveTileUpdater.EnableNotificationQueue(false);
                         LiveTileUpdater.Clear();
                     }
 

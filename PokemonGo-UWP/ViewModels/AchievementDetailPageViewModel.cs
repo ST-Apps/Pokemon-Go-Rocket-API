@@ -20,16 +20,8 @@ namespace PokemonGo_UWP.ViewModels {
         /// <returns></returns>
         public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
         {
-            KeyValuePair<AchievementType, object> achievement;
-            if(suspensionState.Any()) {
-                // Recovering the state                
-                achievement = (KeyValuePair<AchievementType, object>)parameter;
-            } else {
-                // No saved state, get them from the client                
-                achievement = (KeyValuePair<AchievementType, object>)parameter;
-            }
-            Achievement = achievement;
-            RaisePropertyChanged(nameof(Achievement));
+            Achievement = (KeyValuePair<AchievementType, object>)parameter;
+            RaisePropertyChanged(() => Achievement);
             await Task.CompletedTask;
         }
 

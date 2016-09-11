@@ -201,6 +201,47 @@ namespace PokemonGo_UWP.ViewModels
 
         private DelegateCommand _searchCurrentPokestop;
 
+        #region Helper Functions
+        //Method for summing the item count
+        private static IEnumerable<ItemAward> AggregateItems(IEnumerable<ItemAward> items) {
+            //Check if the collection is not null
+            if (items != null)
+            {
+                //If there is no items, just break
+                if (!items.Any())
+                {
+                    yield break;
+                }
+                else
+                {
+                    //Order the list so the repeated items are near each other
+                    var orderedItems = items.OrderBy(i => i.ItemId);
+                    //Set the current as the first item
+                    var currentItem = orderedItems.First().Clone();
+                    //Iterate through the rest
+                    foreach (var item in orderedItems.Skip(1))
+                    {
+                        //If the next item is still the same, sum the counts
+                        if (item.ItemId == currentItem.ItemId)
+                        {
+                            currentItem.ItemCount += item.ItemCount;
+                        }
+                        //Otherwise return the item and set the new current
+                        else
+                        {
+                            yield return currentItem;
+                            currentItem = item.Clone();
+                        }
+                    }
+                    //Return the last grouped item
+                    yield return currentItem;
+                }
+            }
+        }
+
+        #endregion
+
+
         /// <summary>
         ///     Searches the current PokeStop, trying to get items from it
         /// </summary>
@@ -219,17 +260,10 @@ namespace PokemonGo_UWP.ViewModels
                     case FortSearchResponse.Types.Result.Success:
                         // Success, we play the animation and update inventory
                         Logger.Write("Searching Pokestop success");
-                        AwardedItems.Clear();
-                        // TODO: can this be improved?
-                        var tmpAwardedItems = CurrentSearchResponse.ItemsAwarded.GroupBy(item => item.ItemId);
-                        foreach (var tmpAwardedItem in tmpAwardedItems)
-                        {
-                            var tmpItem = tmpAwardedItem.GroupBy(item => item.ItemId);
-                            AwardedItems.Add(new ItemAward
-                            {
-                                ItemId = tmpItem.First().First().ItemId,
-                                ItemCount = tmpItem.First().Count()
-                            });
+                        AwardedItems.Clear();                        
+                        foreach (var tmpAwardedItem in AggregateItems(CurrentSearchResponse.ItemsAwarded))
+                        {                            
+                            AwardedItems.Add(tmpAwardedItem);
                         }
                         CurrentPokestop.UpdateCooldown(CurrentSearchResponse.CooldownCompleteTimestampMs);
                         SearchSuccess?.Invoke(this, null);
@@ -247,17 +281,10 @@ namespace PokemonGo_UWP.ViewModels
                         break;
                     case FortSearchResponse.Types.Result.InventoryFull:
                         // Items can't be gathered because player's inventory is full, there's nothing that we can do
-                        AwardedItems.Clear();
-                        // TODO: can this be improved?
-                        tmpAwardedItems = CurrentSearchResponse.ItemsAwarded.GroupBy(item => item.ItemId);
-                        foreach (var tmpAwardedItem in tmpAwardedItems)
-                        {
-                            var tmpItem = tmpAwardedItem.GroupBy(item => item.ItemId);
-                            AwardedItems.Add(new ItemAward
-                            {
-                                ItemId = tmpItem.First().First().ItemId,
-                                ItemCount = tmpItem.First().Count()
-                            });
+                        AwardedItems.Clear();      
+                        foreach (var tmpAwardedItem in AggregateItems(CurrentSearchResponse.ItemsAwarded))
+                        {                           
+                            AwardedItems.Add(tmpAwardedItem);
                         }
                         CurrentPokestop.UpdateCooldown(CurrentSearchResponse.CooldownCompleteTimestampMs);
                         SearchInventoryFull?.Invoke(this, null);

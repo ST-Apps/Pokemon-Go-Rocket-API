@@ -69,7 +69,7 @@ namespace PokemonGo_UWP.ViewModels
             Achievements.Add(new KeyValuePair<AchievementType, object>(AchievementType.Breeder, PlayerStats.EggsHatched));
             Achievements.Add(new KeyValuePair<AchievementType, object>(AchievementType.Backpacker,
                 PlayerStats.PokeStopVisits));
-            if (PlayerStats.PokemonCaughtByType.Count() > 0)
+            if (PlayerStats.PokemonCaughtByType.Any())
             {
                 Achievements.Add(new KeyValuePair<AchievementType, object>(AchievementType.SchoolKid,
                     PlayerStats.PokemonCaughtByType[(int)PokemonType.Normal]));

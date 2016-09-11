@@ -532,13 +532,12 @@
                         </Grid.ColumnDefinitions>
 
                         <!--Favorite-->
-                        <CheckBox MinWidth="33" 
+                        <CheckBox Width="33" 
+                                  Height="33"
                                   Grid.Column="3"
                                   Style="{StaticResource CheckStar}" 
                                   Margin="0" 
-                                  HorizontalAlignment="Right" 
-                                  BorderBrush="White" 
-                                  BorderThickness="4" 
+                                  HorizontalAlignment="Right"
                                   Command="{Binding FavoritePokemonCommand}" 
                                   IsChecked="{Binding IsFavorite, Mode=OneWay}"/>
 
@@ -576,12 +575,10 @@
                         <Viewbox Grid.Row="1"
                                  Grid.ColumnSpan="3"
                                  Margin="30,30,30,-32"
-                                 MaxWidth="310"
                                  VerticalAlignment="Bottom"
-                                 HorizontalAlignment="Center"
+                                 HorizontalAlignment="Stretch"
                                  StretchDirection="DownOnly">
                             <Image x:Name="PokemonImage"
-                               Height="128"
                                Source="{Binding CurrentPokemon.PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"
                                Canvas.ZIndex="5"
                                Stretch="Uniform"/>

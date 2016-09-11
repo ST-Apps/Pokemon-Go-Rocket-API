@@ -223,6 +223,8 @@
     <Content Include="Assets\Icons\ic_date.png" />
     <Content Include="Assets\Icons\ic_fav.png" />
     <Content Include="Assets\Icons\ic_fav_light.png" />
+    <Content Include="Assets\Icons\ic_fav_new.png" />
+    <Content Include="Assets\Icons\ic_fav_pressed.png" />
     <Content Include="Assets\Icons\ic_health.png" />
     <Content Include="Assets\Icons\ic_name.png" />
     <Content Include="Assets\Icons\ic_number.png" />
@@ -484,6 +486,7 @@
     <Content Include="Assets\Fonts\Lato-Regular.ttf" />
     <Content Include="Assets\Fonts\Lato-Bold.ttf" />
     <None Include="project.json" />
+    <Content Include="Styles\NianticStyleLight.json" />
     <PRIResource Include="Strings\es-MX\Resources.resw" />
     <PRIResource Include="Strings\es-MX\PokemonTypes.resw" />
     <PRIResource Include="Strings\es-MX\PokemonMoves.resw" />
@@ -743,6 +746,9 @@
     <Compile Include="Controls\CircularProgressBar.xaml.cs">
       <DependentUpon>CircularProgressBar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\PoGoPivotHeader.xaml.cs">
+      <DependentUpon>PoGoPivotHeader.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Entities\FortDataWrapper.cs" />
     <Compile Include="Entities\IMapPokemon.cs" />
     <Compile Include="Entities\IUpdatable.cs" />
@@ -777,6 +783,7 @@
     <Compile Include="Utils\Helpers\MapOrientationModes.cs" />
     <Compile Include="Utils\Helpers\LiveTileModes.cs" />
     <Compile Include="Utils\Helpers\LocalCacheHelper.cs" />
+    <Compile Include="Utils\Helpers\MapStyleHelpers.cs" />
     <Compile Include="Utils\Helpers\ProximityHelper.cs" />
     <Compile Include="Utils\Helpers\ProtobufJsonNetConverter.cs" />
     <Compile Include="Utils\Helpers\StorageHelper.cs" />
@@ -906,6 +913,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\CircularProgressBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PoGoPivotHeader.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
