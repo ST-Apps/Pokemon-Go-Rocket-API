@@ -16,14 +16,9 @@ using Google.Protobuf;
 
 namespace PokemonGo_UWP.ViewModels
 {
-    public class PokemonInventoryPageViewModel : ViewModelBase
+    public class PokemonInventoryPageViewModel : PoGoViewModelBase
     {
         #region Game Management Vars
-
-        /// <summary>
-        ///     Player's profile, we use it just for the username
-        /// </summary>
-        private PlayerData _playerProfile;
 
         /// <summary>
         ///     Egg selected for incubation
@@ -122,15 +117,6 @@ namespace PokemonGo_UWP.ViewModels
         #endregion
 
         #region Bindable Game Vars
-
-        /// <summary>
-        ///     Player's profile, we use it just for the username
-        /// </summary>
-        public PlayerData PlayerProfile
-        {
-            get { return _playerProfile; }
-            set { Set(ref _playerProfile, value); }
-        }
 
         /// <summary>
         ///     Sorting mode for current Pokemon view
