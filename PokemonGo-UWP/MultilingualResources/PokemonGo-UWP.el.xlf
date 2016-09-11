@@ -8,123 +8,123 @@
       <group id="POKEMONGO-UWP/STRINGS/EN-US/ACHIEVEMENTS.RESW" datatype="resx">
         <trans-unit id="BadgeBattleAttackWon" translate="yes" xml:space="preserve">
           <source>Battle Girl</source>
-          <target state="new">Battle Girl</target>
+          <target state="final">Battle Girl</target>
         </trans-unit>
         <trans-unit id="BadgeBattleTrainingWon" translate="yes" xml:space="preserve">
           <source>Ace Trainer</source>
-          <target state="new">Ace Trainer</target>
+          <target state="final">Ace Trainer</target>
         </trans-unit>
         <trans-unit id="BadgeBigMagikarp" translate="yes" xml:space="preserve">
           <source>Fisherman</source>
-          <target state="new">Fisherman</target>
+          <target state="final">Fisherman</target>
         </trans-unit>
         <trans-unit id="BadgeCaptureTotal" translate="yes" xml:space="preserve">
           <source>Collector</source>
-          <target state="new">Collector</target>
+          <target state="final">Collector</target>
         </trans-unit>
         <trans-unit id="BadgeEvolvedTotal" translate="yes" xml:space="preserve">
           <source>Scientist</source>
-          <target state="new">Scientist</target>
+          <target state="final">Scientist</target>
         </trans-unit>
         <trans-unit id="BadgeHatchedTotal" translate="yes" xml:space="preserve">
           <source>Breeder</source>
-          <target state="new">Breeder</target>
+          <target state="final">Breeder</target>
         </trans-unit>
         <trans-unit id="BadgePikachu" translate="yes" xml:space="preserve">
           <source>Pikachu</source>
-          <target state="new">Pikachu</target>
+          <target state="final">Pikachu</target>
         </trans-unit>
         <trans-unit id="BadgePokedexEntries" translate="yes" xml:space="preserve">
           <source>Kanto</source>
-          <target state="new">Kanto</target>
+          <target state="final">Kanto</target>
         </trans-unit>
         <trans-unit id="BadgePokestopsVisited" translate="yes" xml:space="preserve">
           <source>Backpacker</source>
-          <target state="new">Backpacker</target>
+          <target state="final">Backpacker</target>
         </trans-unit>
         <trans-unit id="BadgeSmallRattata" translate="yes" xml:space="preserve">
           <source>Youngster</source>
-          <target state="new">Youngster</target>
+          <target state="final">Youngster</target>
         </trans-unit>
         <trans-unit id="BadgeTravelKm" translate="yes" xml:space="preserve">
           <source>Jogger</source>
-          <target state="new">Jogger</target>
+          <target state="final">Jogger</target>
         </trans-unit>
         <trans-unit id="Bug" translate="yes" xml:space="preserve">
           <source>Bug Catcher</source>
-          <target state="new">Bug Catcher</target>
+          <target state="final">Bug Catcher</target>
         </trans-unit>
         <trans-unit id="Dragon" translate="yes" xml:space="preserve">
           <source>Dragon Tamer</source>
-          <target state="new">Dragon Tamer</target>
+          <target state="final">Dragon Tamer</target>
         </trans-unit>
         <trans-unit id="Electric" translate="yes" xml:space="preserve">
           <source>Rocker</source>
-          <target state="new">Rocker</target>
+          <target state="final">Rocker</target>
         </trans-unit>
         <trans-unit id="Fairy" translate="yes" xml:space="preserve">
           <source>Fairy Tale Girl</source>
-          <target state="new">Fairy Tale Girl</target>
+          <target state="final">Fairy Tale Girl</target>
         </trans-unit>
         <trans-unit id="Fighting" translate="yes" xml:space="preserve">
           <source>Black Belt</source>
-          <target state="new">Black Belt</target>
+          <target state="final">Black Belt</target>
         </trans-unit>
         <trans-unit id="Fire" translate="yes" xml:space="preserve">
           <source>Kindler</source>
-          <target state="new">Kindler</target>
+          <target state="final">Kindler</target>
         </trans-unit>
         <trans-unit id="Flying" translate="yes" xml:space="preserve">
           <source>Bird Keeper</source>
-          <target state="new">Bird Keeper</target>
+          <target state="final">Bird Keeper</target>
         </trans-unit>
         <trans-unit id="Ghost" translate="yes" xml:space="preserve">
           <source>Hex Maniac</source>
-          <target state="new">Hex Maniac</target>
+          <target state="final">Hex Maniac</target>
         </trans-unit>
         <trans-unit id="Grass" translate="yes" xml:space="preserve">
           <source>Gardener</source>
-          <target state="new">Gardener</target>
+          <target state="final">Gardener</target>
         </trans-unit>
         <trans-unit id="Ground" translate="yes" xml:space="preserve">
           <source>Ruin Maniac</source>
-          <target state="new">Ruin Maniac</target>
+          <target state="final">Ruin Maniac</target>
         </trans-unit>
         <trans-unit id="Ice" translate="yes" xml:space="preserve">
           <source>Skier</source>
-          <target state="new">Skier</target>
+          <target state="final">Skier</target>
         </trans-unit>
         <trans-unit id="Normal" translate="yes" xml:space="preserve">
           <source>School Kid</source>
-          <target state="new">School Kid</target>
+          <target state="final">School Kid</target>
         </trans-unit>
         <trans-unit id="Poison" translate="yes" xml:space="preserve">
           <source>Punk Girl</source>
-          <target state="new">Punk Girl</target>
+          <target state="final">Punk Girl</target>
         </trans-unit>
         <trans-unit id="Psychic" translate="yes" xml:space="preserve">
           <source>Psychic</source>
-          <target state="final">Ψυχικός</target>
+          <target state="final">Psychic</target>
         </trans-unit>
         <trans-unit id="Rock" translate="yes" xml:space="preserve">
           <source>Hiker</source>
-          <target state="new">Hiker</target>
+          <target state="final">Hiker</target>
         </trans-unit>
         <trans-unit id="Steel" translate="yes" xml:space="preserve">
           <source>Depot Agent</source>
-          <target state="new">Depot Agent</target>
+          <target state="final">Depot Agent</target>
         </trans-unit>
         <trans-unit id="Water" translate="yes" xml:space="preserve">
           <source>Swimmer</source>
-          <target state="new">Swimmer</target>
+          <target state="final">Swimmer</target>
         </trans-unit>
         <trans-unit id="BadgeBattleAttackWonDescription" translate="yes" xml:space="preserve">
           <source>Won {0} gym battles</source>
-          <target state="final">Έχεις Νίκισει {0} μάχες γυμναστηρίου</target>
+          <target state="final">Έχεις Νικήσει {0} μάχες γυμναστηρίου</target>
         </trans-unit>
         <trans-unit id="BadgeBattleTrainingWonDescription" translate="yes" xml:space="preserve">
           <source>Won {0} training battles</source>
-          <target state="final">Έχεις Νίκισει {0} μάχες εκπαίδευσης</target>
+          <target state="final">Έχεις Νικήσει {0} μάχες εκπαίδευσης</target>
         </trans-unit>
         <trans-unit id="BadgeBigMagikarpDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Magikarp</source>
@@ -132,15 +132,15 @@
         </trans-unit>
         <trans-unit id="BadgeCaptureTotalDescription" translate="yes" xml:space="preserve">
           <source>Captured {0} Pokemon</source>
-          <target state="final">Εχμαλότισες {0} Pokémon</target>
+          <target state="final">Αιχμαλώτισες {0} Pokémon</target>
         </trans-unit>
         <trans-unit id="BadgeEvolvedTotalDescription" translate="yes" xml:space="preserve">
           <source>Evolved {0} Pokémon</source>
-          <target state="translated">Εξέλιξες {x} Pokémon</target>
+          <target state="final">Εξέλιξες {0} Pokémon</target>
         </trans-unit>
         <trans-unit id="BadgeHatchedTotalDescription" translate="yes" xml:space="preserve">
           <source>Hatched {0} Pokemon</source>
-          <target state="translated">Εκκόλαψες {0} Pokémon</target>
+          <target state="final">Εκκόλαψες {0} Pokémon</target>
         </trans-unit>
         <trans-unit id="BadgePikachuDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Pikachu</source>
@@ -156,8 +156,7 @@
         </trans-unit>
         <trans-unit id="BadgeSmallRattataDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} small Rattata</source>
-          <target state="needs-review-translation">Παγίδευσες {0} Rattata</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="final">Παγίδευσες {0} μικρά Rattata</target>
         </trans-unit>
         <trans-unit id="BadgeTravelKmDescription" translate="yes" xml:space="preserve">
           <source>Walked {0} km</source>
@@ -242,11 +241,11 @@
       <group id="POKEMONGO-UWP/STRINGS/EN-US/CODERESOURCES.RESW" datatype="resx">
         <trans-unit id="DateFormat" translate="yes" xml:space="preserve">
           <source>dd.MM.yyyy</source>
-          <target state="new">dd.MM.yyyy</target>
+          <target state="final">dd.MM.yyyy</target>
         </trans-unit>
         <trans-unit id="DateTimeFormat" translate="yes" xml:space="preserve">
           <source>dd.MM.yyyy hh:mm tt</source>
-          <target state="new">dd.MM.yyyy hh:mm tt</target>
+          <target state="final">dd.MM.yyyy hh:mm tt</target>
         </trans-unit>
         <trans-unit id="PokemonFledText" translate="yes" xml:space="preserve">
           <source>{0} fled</source>
@@ -270,7 +269,7 @@
         </trans-unit>
         <trans-unit id="LoadingEncounterText" translate="yes" xml:space="preserve">
           <source>Loading encounter with {0}</source>
-          <target state="final">Φόρτοση αντιμετόπισης με {0}</target>
+          <target state="final">Φόρτωση αντιμετόπισης με {0}</target>
         </trans-unit>
         <trans-unit id="LoggingInText" translate="yes" xml:space="preserve">
           <source>Logging in...</source>
@@ -282,8 +281,7 @@
         </trans-unit>
         <trans-unit id="NoText" translate="yes" xml:space="preserve">
           <source>NO</source>
-          <target state="needs-review-translation">Όχι</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="final">OXI</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
         </trans-unit>
         <trans-unit id="NoGpsPermissionsText" translate="yes" xml:space="preserve">
@@ -304,7 +302,7 @@
         </trans-unit>
         <trans-unit id="TimeFormat" translate="yes" xml:space="preserve">
           <source>hh:mm tt</source>
-          <target state="new">hh:mm tt</target>
+          <target state="final">hh:mm tt</target>
         </trans-unit>
         <trans-unit id="UpdateDownloadingText" translate="yes" xml:space="preserve">
           <source>Downloading update {0}</source>
@@ -332,8 +330,7 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="YesText" translate="yes" xml:space="preserve">
           <source>YES</source>
-          <target state="needs-review-translation">Ναί</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="final">ΝΑΙ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
         </trans-unit>
         <trans-unit id="InstinctTeamText" translate="yes" xml:space="preserve">
@@ -358,8 +355,7 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="TransferPokemonWarningText" translate="yes" xml:space="preserve">
           <source>You can't take it back after it's transferred to the Professor.</source>
-          <target state="needs-review-translation">Δέν μπορείς να το πάρεις πίσο μετα την μεταφορά στον Καθηγητή. Θέλεις σίγουρα να μεταφέρεις το {0} στον Καθηγητή;</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="final">Δέν μπορείς να το πάρεις πίσο μετα την μεταφορά στον Καθηγητή.</target>
         </trans-unit>
         <trans-unit id="LoginExpired" translate="yes" xml:space="preserve">
           <source>Previous login expired.</source>
@@ -383,7 +379,7 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="ActivityDefeatFort" translate="yes" xml:space="preserve">
           <source>Defeat Fort</source>
-          <target state="new">Defeat Fort</target>
+          <target state="final">Defeat Fort</target>
         </trans-unit>
         <trans-unit id="ActivityEvolvePokemon" translate="yes" xml:space="preserve">
           <source>Evolve a Pokémon</source>
@@ -403,31 +399,31 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="ActivityCatchFirstThrow" translate="yes" xml:space="preserve">
           <source>First Throw</source>
-          <target state="new">First Throw</target>
+          <target state="translated">First Throw</target>
         </trans-unit>
         <trans-unit id="ActivityCatchNiceThrow" translate="yes" xml:space="preserve">
           <source>Nice Throw</source>
-          <target state="new">Nice Throw</target>
+          <target state="translated">Nice Throw</target>
         </trans-unit>
         <trans-unit id="ActivityCatchGreatThrow" translate="yes" xml:space="preserve">
           <source>Great Throw</source>
-          <target state="new">Great Throw</target>
+          <target state="translated">Great Throw</target>
         </trans-unit>
         <trans-unit id="ActivityCatchExcellentThrow" translate="yes" xml:space="preserve">
           <source>Excellent Throw</source>
-          <target state="new">Excellent Throw</target>
+          <target state="translated">Excellent Throw</target>
         </trans-unit>
         <trans-unit id="ActivityCatchCurveball" translate="yes" xml:space="preserve">
           <source>Curveball</source>
-          <target state="new">Curveball</target>
+          <target state="translated">Curveball</target>
         </trans-unit>
         <trans-unit id="ActivityCatchFirstCatchOfDay" translate="yes" xml:space="preserve">
           <source>First Catch of Day!</source>
-          <target state="new">First Catch of Day!</target>
+          <target state="translated">First Catch of Day!</target>
         </trans-unit>
         <trans-unit id="ActivityCatchMilestone" translate="yes" xml:space="preserve">
           <source>Catch Milestone</source>
-          <target state="new">Catch Milestone</target>
+          <target state="translated">Catch Milestone</target>
         </trans-unit>
         <trans-unit id="ActivityTrainPokemon" translate="yes" xml:space="preserve">
           <source>Train Pokémon</source>
@@ -435,11 +431,11 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="ActivitySearchFort" translate="yes" xml:space="preserve">
           <source>Search Fort</source>
-          <target state="new">Search Fort</target>
+          <target state="final">Search Fort</target>
         </trans-unit>
         <trans-unit id="ActivityReleasePokemon" translate="yes" xml:space="preserve">
           <source>Release Pokémon</source>
-          <target state="final">Ελευθέροσε το Pokémon</target>
+          <target state="final">Ελευθέρωσε το Pokémon</target>
         </trans-unit>
         <trans-unit id="ActivityHatchEggSmallBonus" translate="yes" xml:space="preserve">
           <source>Hatch Egg Small Bonus</source>
@@ -455,19 +451,19 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="ActivityDefeatGymDefender" translate="yes" xml:space="preserve">
           <source>Defeat Gym Defender</source>
-          <target state="final">Νίκισε τόν Υπερασπιστή Γυμναστηρίου</target>
+          <target state="final">Νίκησε τόν Υπερασπιστή Γυμναστηρίου</target>
         </trans-unit>
         <trans-unit id="ActivityDefeatGymLeader" translate="yes" xml:space="preserve">
           <source>Defeat Gym Leader</source>
-          <target state="final">Νίκισε τόν Αρχυγό Γυμναστηρίου</target>
+          <target state="final">Νίκησε τόν Αρχυγό Γυμναστηρίου</target>
         </trans-unit>
         <trans-unit id="Combat" translate="yes" xml:space="preserve">
           <source>Combat</source>
-          <target state="final">Μάχη</target>
+          <target state="final">Μαχητικότητα</target>
         </trans-unit>
         <trans-unit id="Date" translate="yes" xml:space="preserve">
           <source>Date</source>
-          <target state="new">Date</target>
+          <target state="final">Ημερομηνία</target>
         </trans-unit>
         <trans-unit id="Fav" translate="yes" xml:space="preserve">
           <source>Favorite</source>
@@ -483,7 +479,7 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="Number" translate="yes" xml:space="preserve">
           <source>Number</source>
-          <target state="final">Αριθμός</target>
+          <target state="final">Αριθμητικά</target>
         </trans-unit>
         <trans-unit id="PokemonInventoryFullText" translate="yes" xml:space="preserve">
           <source>Your Pokémon inventory is full, transfer some Pokémon before trying to catch {0}.</source>
@@ -491,55 +487,51 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="WaitingForNetworkText" translate="yes" xml:space="preserve">
           <source>Waiting for network to be back...</source>
-          <target state="new">Waiting for network to be back...</target>
+          <target state="final">Αναμονή για το δίκτυο να επιστρέψει...</target>
         </trans-unit>
         <trans-unit id="EggHatchMessage" translate="yes" xml:space="preserve">
           <source>An Egg hatched into a {0}.
 You also got {1} Stardust, {2} Candy and {3} XP.</source>
-          <target state="new">An Egg hatched into a {0}.
-You also got {1} Stardust, {2} Candy and {3} XP.</target>
+          <target state="final">Ένα αυγό εκκολάφθηκε σε {0}. 
+Επίσης πήρες {1} Stardust, {2} Candy και {3} XP.</target>
         </trans-unit>
         <trans-unit id="EvolvePokemonWarningText" translate="yes" xml:space="preserve">
           <source>Do you want to evolve {0}?</source>
-          <target state="new">Do you want to evolve {0}?</target>
+          <target state="final">Θέλετε να εξελίσσεται το {0};</target>
         </trans-unit>
         <trans-unit id="PowerUpPokemonWarningText" translate="yes" xml:space="preserve">
           <source>Do you want to use a power up for {0}?</source>
-          <target state="new">Do you want to use a power up for {0}?</target>
+          <target state="final">Θέλετε να χρησιμοποιήσετε power up για το {0};</target>
         </trans-unit>
         <trans-unit id="TransferPokemonWarningTitle" translate="yes" xml:space="preserve">
           <source>Do you really want to transfer {0} to the Professor?</source>
-          <target state="new">Do you really want to transfer {0} to the Professor?</target>
+          <target state="final">Θέλετε πραγματικά να μεταφέρετε το {0} στο Καθηγητή;</target>
         </trans-unit>
         <trans-unit id="CancelText" translate="yes" xml:space="preserve">
           <source>CANCEL</source>
-          <target state="new">CANCEL</target>
+          <target state="translated">ΆΚΥΡΟ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
         </trans-unit>
         <trans-unit id="ItemDiscardWarningText" translate="yes" xml:space="preserve">
           <source>Discard {0}?</source>
-          <target state="new">Discard {0}?</target>
+          <target state="final">Απόρριψη {0};</target>
         </trans-unit>
         <trans-unit id="SetNickName" translate="yes" xml:space="preserve">
           <source>Set Nickname</source>
-          <target state="new">Set Nickname</target>
+          <target state="final">Ορίστε ψευδώνυμο</target>
         </trans-unit>
         <trans-unit id="OkText" translate="yes" xml:space="preserve">
           <source>O. K.</source>
-          <target state="new">O. K.</target>
+          <target state="final">O. K.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Space between . and K</note>
         </trans-unit>
         <trans-unit id="PokemonEncounterErrorText" translate="yes" xml:space="preserve">
           <source>There was an error loading the encounter with {0}, please try again later.</source>
-          <target state="new">There was an error loading the encounter with {0}, please try again later.</target>
+          <target state="final">Παρουσιάστηκε σφάλμα κατά τη φόρτωση της αντιμετώπισης με το {0}, παρακαλώ προσπαθήστε ξανά αργότερα.</target>
         </trans-unit>
         <trans-unit id="PokemonEncounterNotInRangeText" translate="yes" xml:space="preserve">
           <source>{0} is not in catch range anymore.</source>
-          <target state="new">{0} is not in catch range anymore.</target>
-        </trans-unit>
-        <trans-unit id="CannotTransferFavorite" translate="yes" xml:space="preserve">
-          <source>Cannot transfer a favorite Pokémon!</source>
-          <target state="new">Cannot transfer a favorite Pokémon!</target>
+          <target state="final">{0} δεν βρίσκεται στην περιοχή αλιευμάτων πια.</target>
         </trans-unit>
       </group>
     </body>
@@ -632,12 +624,11 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="LowercaseItemsTextBlock.Text" translate="yes" xml:space="preserve">
           <source>items</source>
-          <target state="final">αντικέιμενα</target>
+          <target state="final">αντικείμενα</target>
         </trans-unit>
         <trans-unit id="NumberTextBlock.Text" translate="yes" xml:space="preserve">
           <source>+ </source>
-          <target state="needs-review-translation"># </target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="final">+ </target>
           <note from="MultilingualBuild" annotates="source" priority="2">Watch out: there is a space after the +</note>
         </trans-unit>
         <trans-unit id="SlashSpaceCpTextBlock.Text" translate="yes" xml:space="preserve">
@@ -711,39 +702,39 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="EvolveButton.Content" translate="yes" xml:space="preserve">
           <source>EVOLVE</source>
-          <target state="final">ΕΞΕΛΙΞΕ</target>
+          <target state="translated">EVOLVE</target>
         </trans-unit>
         <trans-unit id="PowerUpButton.Content" translate="yes" xml:space="preserve">
           <source>POWER UP</source>
-          <target state="final">ΆΥΞΣΗΣΗ ΔΥΝΑΜΗΣ</target>
+          <target state="translated">POWER UP</target>
         </trans-unit>
         <trans-unit id="SettingsRememberMapZoomTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Remember Map Zoom</source>
-          <target state="final">Απομνημόνευση Zoom του Χάρτη</target>
+          <target state="final">Απομνημόνευση Zoom Χάρτη</target>
         </trans-unit>
         <trans-unit id="PokedexCaught.Text" translate="yes" xml:space="preserve">
           <source>Caught:</source>
-          <target state="new">Caught:</target>
+          <target state="final">Έπιασες:</target>
         </trans-unit>
         <trans-unit id="PokedexEvolutions.Text" translate="yes" xml:space="preserve">
           <source>Evolutions</source>
-          <target state="new">Evolutions</target>
+          <target state="final">Εξελίξεις</target>
         </trans-unit>
         <trans-unit id="PokedexPokemonHeight.Text" translate="yes" xml:space="preserve">
           <source>Height:</source>
-          <target state="new">Height:</target>
+          <target state="final">Ύψος:</target>
         </trans-unit>
         <trans-unit id="PokedexPokemonType.Text" translate="yes" xml:space="preserve">
           <source>Type:</source>
-          <target state="new">Type:</target>
+          <target state="final">Τύπος:</target>
         </trans-unit>
         <trans-unit id="PokedexPokemonWeight.Text" translate="yes" xml:space="preserve">
           <source>Weight:</source>
-          <target state="new">Weight:</target>
+          <target state="final">Βάρος:</target>
         </trans-unit>
         <trans-unit id="PokedexSeen.Text" translate="yes" xml:space="preserve">
           <source>Seen:</source>
-          <target state="new">Seen:</target>
+          <target state="final">Είδες:</target>
         </trans-unit>
         <trans-unit id="PokedexText.Text" translate="yes" xml:space="preserve">
           <source>POKÉDEX</source>
@@ -751,15 +742,15 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="PokedexViewCaught.Text" translate="yes" xml:space="preserve">
           <source>Caught</source>
-          <target state="new">Caught</target>
+          <target state="final">Πιάστηκαν</target>
         </trans-unit>
         <trans-unit id="PokedexViewSeen.Text" translate="yes" xml:space="preserve">
           <source>Seen</source>
-          <target state="new">Seen</target>
+          <target state="final">Είδες</target>
         </trans-unit>
         <trans-unit id="TimesTextBlock.Text" translate="yes" xml:space="preserve">
           <source>times</source>
-          <target state="new">times</target>
+          <target state="final">φορές</target>
         </trans-unit>
         <trans-unit id="EggDetailButtonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>START INCUBATION</source>
@@ -771,36 +762,36 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="TransferTextBlock.Text" translate="yes" xml:space="preserve">
           <source>TRANSFER</source>
-          <target state="new">TRANSFER</target>
+          <target state="final">ΜΕΤΑΦΟΡΑ</target>
         </trans-unit>
         <trans-unit id="SettingsLanguageRestartTextBlock.Text" translate="yes" xml:space="preserve">
           <source>You must restart the App to take effect.</source>
-          <target state="new">You must restart the App to take effect.</target>
+          <target state="final">Πρέπει να επανεκκινήσετε την Εφαρμογή για να τεθεί σε ισχύ.</target>
         </trans-unit>
         <trans-unit id="SettingsLanguageTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Language</source>
-          <target state="new">Language</target>
+          <target state="final">Γλώσσα</target>
         </trans-unit>
         <trans-unit id="SettingsCompassEnabledTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Use compass</source>
-          <target state="new">Use compass</target>
+          <target state="final">Χρήση πυξίδας</target>
         </trans-unit>
         <trans-unit id="SettingsLiveTileTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Live Tile Mode</source>
-          <target state="new">Live Tile Mode</target>
+          <target state="final">Λειτουργία Live Tile</target>
         </trans-unit>
         <trans-unit id="FavoriteTextBlock.Text" translate="yes" xml:space="preserve">
           <source>FAVORITE</source>
-          <target state="new">FAVORITE</target>
+          <target state="final">ΑΓΑΠΗΜΕΝΑ</target>
         </trans-unit>
         <trans-unit id="AppraiseTextBlock.Text" translate="yes" xml:space="preserve">
           <source>APPRAISE</source>
-          <target state="new">APPRAISE</target>
+          <target state="final">ΕΚΤΊΜΗΣΗ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
         </trans-unit>
         <trans-unit id="AwardedExperienceTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Experience</source>
-          <target state="new">Experience</target>
+          <target state="final">Εμπειρία</target>
         </trans-unit>
       </group>
     </body>
@@ -813,8 +804,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/ITEMS.RESW" datatype="resx">
         <trans-unit id="D_ItemGreatBall" translate="yes" xml:space="preserve">
           <source>A good, high-performance Poké Ball that provides a higher catch rate than a standard Poké Ball.</source>
-          <target state="needs-review-translation">Μία συσκευή για να πίανεις άγρια πόκεμον. Την πετάς σάν μπάλα σε ένα άγριο πόκεμον και με άνεση πίανει τον στόχο της.</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="final">Μια καλή, υψηλής απόδοσης Poké Ball που παρέχει υψηλότερη απόδοση αιχμαλώτισης απο μία κοινή Poké Ball.</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseCool" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
@@ -834,18 +824,15 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="D_ItemIncubatorBasic" translate="yes" xml:space="preserve">
           <source>A device that incubates an Egg as you walk until it is ready to hatch. Breaks after 3 uses.</source>
-          <target state="needs-review-translation">Μία συσκευή η οποία εκολάπτει ενα αυγό όσο περπατάς μέχρι να ειναι έτοιμο να ανοίξει</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="final">Μία συσκευή η οποία εκολάπτει ενα Αυγό όσο περπατάς μέχρι να ειναι έτοιμο να ανοίξει. Σπάει μετα απο 3 χρήσεις.</target>
         </trans-unit>
         <trans-unit id="D_ItemIncubatorBasicUnlimited" translate="yes" xml:space="preserve">
           <source>A device that incubates an Egg as you walk until it is ready to hatch. Unlimited use!</source>
-          <target state="needs-review-translation">Μία συσκευή η οποία εκολάπτει ενα αυγό όσο περπατάς μέχρι να ειναι έτοιμο να ανοίξει</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="final">Μία συσκευή η οποία εκολάπτει ενα αυγό όσο περπατάς μέχρι να ειναι έτοιμο να ανοίξει. Απεριόριστη χρήση!</target>
         </trans-unit>
         <trans-unit id="D_ItemMasterBall" translate="yes" xml:space="preserve">
           <source>The best Poké Ball with the ultimate level of performance. With it you will catch any Pokémon without fail.</source>
-          <target state="needs-review-translation">Μία συσκευή για να πίανεις άγρια πόκεμον. Την πετάς σάν μπάλα σε ένα άγριο πόκεμον και με άνεση πίανει τον στόχο του.</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="final">Η καλύτερη Poké Ball με το απόλυτο επίπεδο επίδοσης. Με αυτό θα μπορείτε να πιάσετε κάθε Pokémon χωρίς αποτυχία.</target>
         </trans-unit>
         <trans-unit id="D_ItemPokeBall" translate="yes" xml:space="preserve">
           <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
@@ -861,8 +848,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="D_ItemUltraBall" translate="yes" xml:space="preserve">
           <source>An ultra-high performance Poké Ball that provides a higher success rate for catching Pokémon than a Great.</source>
-          <target state="needs-review-translation">Μία συσκευή για να πίανεις άγρια πόκεμον. Την πετάς σάν μπάλα σε ένα άγριο πόκεμον και με άνεση πίανει τον στόχο του.</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="final">Μια εξαιρετικά υψηλών επιδόσεων Poké Ball που παρέχει ένα υψηλότερο ποσοστό επιτυχίας για την αλίευση Pokémon από ό, τι μια Great.</target>
         </trans-unit>
         <trans-unit id="ItemBlukBerry" translate="yes" xml:space="preserve">
           <source>Bluk Berry</source>
@@ -870,7 +856,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="ItemGreatBall" translate="yes" xml:space="preserve">
           <source>Great Ball</source>
-          <target state="final">Γκρέιτ Μπαλλ</target>
+          <target state="final">Great Ball</target>
         </trans-unit>
         <trans-unit id="ItemHyperPotion" translate="yes" xml:space="preserve">
           <source>Hyper Potion</source>
@@ -894,13 +880,11 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="ItemIncubatorBasic" translate="yes" xml:space="preserve">
           <source>Incubator</source>
-          <target state="needs-review-translation">Βασικό Εκολαπτύριο</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="final">Εκολαπτύριο</target>
         </trans-unit>
         <trans-unit id="ItemIncubatorBasicUnlimited" translate="yes" xml:space="preserve">
           <source>∞ Incubator</source>
-          <target state="needs-review-translation">Απεριόριστο Βασικό Εκολαπτύριο</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="final">∞ Εκολαπτύριο</target>
         </trans-unit>
         <trans-unit id="ItemItemStorageUpgrade" translate="yes" xml:space="preserve">
           <source>Item Storage Upgrade</source>
@@ -912,7 +896,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="ItemMasterBall" translate="yes" xml:space="preserve">
           <source>Master Ball</source>
-          <target state="final">Μάστερ Μπαλ</target>
+          <target state="final">Master Ball</target>
         </trans-unit>
         <trans-unit id="ItemMaxPotion" translate="yes" xml:space="preserve">
           <source>Max Potion</source>
@@ -932,7 +916,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="ItemPokeBall" translate="yes" xml:space="preserve">
           <source>Poke Ball</source>
-          <target state="final">Πόκεμπαλ</target>
+          <target state="final">Poke Ball</target>
         </trans-unit>
         <trans-unit id="ItemPokemonStorageUpgrade" translate="yes" xml:space="preserve">
           <source>Pokemon Storage Upgrade</source>
@@ -964,7 +948,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="ItemUltraBall" translate="yes" xml:space="preserve">
           <source>Ultra Ball</source>
-          <target state="final">Ούλτρα Μπαλ</target>
+          <target state="final">Ultra Ball</target>
         </trans-unit>
         <trans-unit id="ItemUnknown" translate="yes" xml:space="preserve">
           <source>Unknown</source>
@@ -988,43 +972,43 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="D_ItemLuckyEgg" translate="yes" xml:space="preserve">
           <source>A Lucky Egg that's filled with happiness! Earns double XP for 30 minutes.</source>
-          <target state="new">A Lucky Egg that's filled with happiness! Earns double XP for 30 minutes.</target>
+          <target state="final">Ένα τυχερό αυγό που είναι γεμάτο με ευτυχία! Κερδίζεις διπλό XP για 30 λεπτά.</target>
         </trans-unit>
         <trans-unit id="D_ItemRazzBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
-          <target state="new">Feed this to a Pokémon, and it will be easier to catch on your next throw.</target>
+          <target state="final">Τάισε αυτό σε ένα Pokémon, και θα είναι ευκολότερο να πιαστεί στην επόμενη ριξιά σας.</target>
         </trans-unit>
         <trans-unit id="D_ItemSpecialCamera" translate="yes" xml:space="preserve">
           <source>When you encounter Pokémon in the wild, you can use your camera to photograph them.</source>
-          <target state="new">When you encounter Pokémon in the wild, you can use your camera to photograph them.</target>
+          <target state="final">Όταν αντιμετωπίζετε Pokémon στην άγρια φύση, μπορείτε να χρησιμοποιήσετε τη φωτογραφική μηχανή σας για να τα φωτογραφίσετε.</target>
         </trans-unit>
         <trans-unit id="D_ItemSuperPotion" translate="yes" xml:space="preserve">
           <source>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 50 points.</source>
-          <target state="new">A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 50 points.</target>
+          <target state="final">Ένα σπρέι τύπου φάρμακο για τη θεραπεία πληγών. Αποκαθιστά το HP ενός Pokémon κατα 50 πόντους.</target>
         </trans-unit>
         <trans-unit id="D_ItemTroyDisk" translate="yes" xml:space="preserve">
           <source>A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</source>
-          <target state="new">A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</target>
+          <target state="final">Μια ενότητα που προσελκύει Pokémon σε ένα Pokéstop για 30 λεπτά. Η επίδραση οφελεί και άλλους ανθρώπους κοντά. </target>
         </trans-unit>
         <trans-unit id="D_ItemUnknown" translate="yes" xml:space="preserve">
           <source>This item is unknown and may be added in the future.</source>
-          <target state="new">This item is unknown and may be added in the future.</target>
+          <target state="final">Αυτό το αντικείμενο είναι άγνωστο και μπορή να προστεθή στο μέλλον.</target>
         </trans-unit>
         <trans-unit id="D_ItemBlukBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
-          <target state="new">Feed this to a Pokémon, and it will be easier to catch on your next throw.</target>
+          <target state="final">Τάισε αυτό σε ένα Pokémon, και θα είναι ευκολότερο να πιαστεί στην επόμενη ριξία σας.</target>
         </trans-unit>
         <trans-unit id="D_ItemNanabBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
-          <target state="new">Feed this to a Pokémon, and it will be easier to catch on your next throw.</target>
+          <target state="final">Τάισε αυτό σε ένα Pokémon, και θα είναι ευκολότερο να πιαστεί στην επόμενη ριξία σας.</target>
         </trans-unit>
         <trans-unit id="D_ItemPinapBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
-          <target state="new">Feed this to a Pokémon, and it will be easier to catch on your next throw.</target>
+          <target state="final">Τάισε αυτό σε ένα Pokémon, και θα είναι ευκολότερο να πιαστεί στην επόμενη ριξία σας.</target>
         </trans-unit>
         <trans-unit id="D_ItemWeparBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
-          <target state="new">Feed this to a Pokémon, and it will be easier to catch on your next throw.</target>
+          <target state="final">Τάισε αυτό σε ένα Pokémon, και θα είναι ευκολότερο να πιαστεί στην επόμενη ριξία σας.</target>
         </trans-unit>
       </group>
     </body>
@@ -1037,611 +1021,611 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/POKEMON.RESW" datatype="resx">
         <trans-unit id="Abra" translate="yes" xml:space="preserve">
           <source>Abra</source>
-          <target state="new">Abra</target>
+          <target state="final">Abra</target>
         </trans-unit>
         <trans-unit id="Aerodactyl" translate="yes" xml:space="preserve">
           <source>Aerodactyl</source>
-          <target state="new">Aerodactyl</target>
+          <target state="final">Aerodactyl</target>
         </trans-unit>
         <trans-unit id="Alakazam" translate="yes" xml:space="preserve">
           <source>Alakazam</source>
-          <target state="new">Alakazam</target>
+          <target state="final">Alakazam</target>
         </trans-unit>
         <trans-unit id="Arbok" translate="yes" xml:space="preserve">
           <source>Arbok</source>
-          <target state="new">Arbok</target>
+          <target state="final">Arbok</target>
         </trans-unit>
         <trans-unit id="Arcanine" translate="yes" xml:space="preserve">
           <source>Arcanine</source>
-          <target state="new">Arcanine</target>
+          <target state="final">Arcanine</target>
         </trans-unit>
         <trans-unit id="Articuno" translate="yes" xml:space="preserve">
           <source>Articuno</source>
-          <target state="new">Articuno</target>
+          <target state="final">Articuno</target>
         </trans-unit>
         <trans-unit id="Beedrill" translate="yes" xml:space="preserve">
           <source>Beedrill</source>
-          <target state="new">Beedrill</target>
+          <target state="final">Beedrill</target>
         </trans-unit>
         <trans-unit id="Bellsprout" translate="yes" xml:space="preserve">
           <source>Bellsprout</source>
-          <target state="new">Bellsprout</target>
+          <target state="final">Bellsprout</target>
         </trans-unit>
         <trans-unit id="Blastoise" translate="yes" xml:space="preserve">
           <source>Blastoise</source>
-          <target state="new">Blastoise</target>
+          <target state="final">Blastoise</target>
         </trans-unit>
         <trans-unit id="Bulbasaur" translate="yes" xml:space="preserve">
           <source>Bulbasaur</source>
-          <target state="new">Bulbasaur</target>
+          <target state="final">Bulbasaur</target>
         </trans-unit>
         <trans-unit id="Butterfree" translate="yes" xml:space="preserve">
           <source>Butterfree</source>
-          <target state="new">Butterfree</target>
+          <target state="final">Butterfree</target>
         </trans-unit>
         <trans-unit id="Caterpie" translate="yes" xml:space="preserve">
           <source>Caterpie</source>
-          <target state="new">Caterpie</target>
+          <target state="final">Caterpie</target>
         </trans-unit>
         <trans-unit id="Chansey" translate="yes" xml:space="preserve">
           <source>Chansey</source>
-          <target state="new">Chansey</target>
+          <target state="final">Chansey</target>
         </trans-unit>
         <trans-unit id="Charizard" translate="yes" xml:space="preserve">
           <source>Charizard</source>
-          <target state="new">Charizard</target>
+          <target state="final">Charizard</target>
         </trans-unit>
         <trans-unit id="Charmander" translate="yes" xml:space="preserve">
           <source>Charmander</source>
-          <target state="new">Charmander</target>
+          <target state="final">Charmander</target>
         </trans-unit>
         <trans-unit id="Charmeleon" translate="yes" xml:space="preserve">
           <source>Charmeleon</source>
-          <target state="new">Charmeleon</target>
+          <target state="final">Charmeleon</target>
         </trans-unit>
         <trans-unit id="Clefable" translate="yes" xml:space="preserve">
           <source>Clefable</source>
-          <target state="new">Clefable</target>
+          <target state="final">Clefable</target>
         </trans-unit>
         <trans-unit id="Clefairy" translate="yes" xml:space="preserve">
           <source>Clefairy</source>
-          <target state="new">Clefairy</target>
+          <target state="final">Clefairy</target>
         </trans-unit>
         <trans-unit id="Cloyster" translate="yes" xml:space="preserve">
           <source>Cloyster</source>
-          <target state="new">Cloyster</target>
+          <target state="final">Cloyster</target>
         </trans-unit>
         <trans-unit id="Cubone" translate="yes" xml:space="preserve">
           <source>Cubone</source>
-          <target state="new">Cubone</target>
+          <target state="final">Cubone</target>
         </trans-unit>
         <trans-unit id="Dewgong" translate="yes" xml:space="preserve">
           <source>Dewgong</source>
-          <target state="new">Dewgong</target>
+          <target state="final">Dewgong</target>
         </trans-unit>
         <trans-unit id="Diglett" translate="yes" xml:space="preserve">
           <source>Diglett</source>
-          <target state="new">Diglett</target>
+          <target state="final">Diglett</target>
         </trans-unit>
         <trans-unit id="Ditto" translate="yes" xml:space="preserve">
           <source>Ditto</source>
-          <target state="new">Ditto</target>
+          <target state="final">Ditto</target>
         </trans-unit>
         <trans-unit id="Dodrio" translate="yes" xml:space="preserve">
           <source>Dodrio</source>
-          <target state="new">Dodrio</target>
+          <target state="final">Dodrio</target>
         </trans-unit>
         <trans-unit id="Doduo" translate="yes" xml:space="preserve">
           <source>Doduo</source>
-          <target state="new">Doduo</target>
+          <target state="final">Doduo</target>
         </trans-unit>
         <trans-unit id="Dragonair" translate="yes" xml:space="preserve">
           <source>Dragonair</source>
-          <target state="new">Dragonair</target>
+          <target state="final">Dragonair</target>
         </trans-unit>
         <trans-unit id="Dragonite" translate="yes" xml:space="preserve">
           <source>Dragonite</source>
-          <target state="new">Dragonite</target>
+          <target state="final">Dragonite</target>
         </trans-unit>
         <trans-unit id="Dratini" translate="yes" xml:space="preserve">
           <source>Dratini</source>
-          <target state="new">Dratini</target>
+          <target state="final">Dratini</target>
         </trans-unit>
         <trans-unit id="Drowzee" translate="yes" xml:space="preserve">
           <source>Drowzee</source>
-          <target state="new">Drowzee</target>
+          <target state="final">Drowzee</target>
         </trans-unit>
         <trans-unit id="Dugtrio" translate="yes" xml:space="preserve">
           <source>Dugtrio</source>
-          <target state="new">Dugtrio</target>
+          <target state="final">Dugtrio</target>
         </trans-unit>
         <trans-unit id="Eevee" translate="yes" xml:space="preserve">
           <source>Eevee</source>
-          <target state="new">Eevee</target>
+          <target state="final">Eevee</target>
         </trans-unit>
         <trans-unit id="Ekans" translate="yes" xml:space="preserve">
           <source>Ekans</source>
-          <target state="new">Ekans</target>
+          <target state="final">Ekans</target>
         </trans-unit>
         <trans-unit id="Electabuzz" translate="yes" xml:space="preserve">
           <source>Electabuzz</source>
-          <target state="new">Electabuzz</target>
+          <target state="final">Electabuzz</target>
         </trans-unit>
         <trans-unit id="Electrode" translate="yes" xml:space="preserve">
           <source>Electrode</source>
-          <target state="new">Electrode</target>
+          <target state="final">Electrode</target>
         </trans-unit>
         <trans-unit id="Exeggcute" translate="yes" xml:space="preserve">
           <source>Exeggcute</source>
-          <target state="new">Exeggcute</target>
+          <target state="final">Exeggcute</target>
         </trans-unit>
         <trans-unit id="Exeggutor" translate="yes" xml:space="preserve">
           <source>Exeggutor</source>
-          <target state="new">Exeggutor</target>
+          <target state="final">Exeggutor</target>
         </trans-unit>
         <trans-unit id="Farfetchd" translate="yes" xml:space="preserve">
           <source>Farfetchd</source>
-          <target state="new">Farfetchd</target>
+          <target state="final">Farfetchd</target>
         </trans-unit>
         <trans-unit id="Fearow" translate="yes" xml:space="preserve">
           <source>Fearow</source>
-          <target state="new">Fearow</target>
+          <target state="final">Fearow</target>
         </trans-unit>
         <trans-unit id="Flareon" translate="yes" xml:space="preserve">
           <source>Flareon</source>
-          <target state="new">Flareon</target>
+          <target state="final">Flareon</target>
         </trans-unit>
         <trans-unit id="Gastly" translate="yes" xml:space="preserve">
           <source>Gastly</source>
-          <target state="new">Gastly</target>
+          <target state="final">Gastly</target>
         </trans-unit>
         <trans-unit id="Gengar" translate="yes" xml:space="preserve">
           <source>Gengar</source>
-          <target state="new">Gengar</target>
+          <target state="final">Gengar</target>
         </trans-unit>
         <trans-unit id="Geodude" translate="yes" xml:space="preserve">
           <source>Geodude</source>
-          <target state="new">Geodude</target>
+          <target state="final">Geodude</target>
         </trans-unit>
         <trans-unit id="Gloom" translate="yes" xml:space="preserve">
           <source>Gloom</source>
-          <target state="new">Gloom</target>
+          <target state="final">Gloom</target>
         </trans-unit>
         <trans-unit id="Golbat" translate="yes" xml:space="preserve">
           <source>Golbat</source>
-          <target state="new">Golbat</target>
+          <target state="final">Golbat</target>
         </trans-unit>
         <trans-unit id="Goldeen" translate="yes" xml:space="preserve">
           <source>Goldeen</source>
-          <target state="new">Goldeen</target>
+          <target state="final">Goldeen</target>
         </trans-unit>
         <trans-unit id="Golduck" translate="yes" xml:space="preserve">
           <source>Golduck</source>
-          <target state="new">Golduck</target>
+          <target state="final">Golduck</target>
         </trans-unit>
         <trans-unit id="Golem" translate="yes" xml:space="preserve">
           <source>Golem</source>
-          <target state="new">Golem</target>
+          <target state="final">Golem</target>
         </trans-unit>
         <trans-unit id="Graveler" translate="yes" xml:space="preserve">
           <source>Graveler</source>
-          <target state="new">Graveler</target>
+          <target state="final">Graveler</target>
         </trans-unit>
         <trans-unit id="Grimer" translate="yes" xml:space="preserve">
           <source>Grimer</source>
-          <target state="new">Grimer</target>
+          <target state="final">Grimer</target>
         </trans-unit>
         <trans-unit id="Growlithe" translate="yes" xml:space="preserve">
           <source>Growlithe</source>
-          <target state="new">Growlithe</target>
+          <target state="final">Growlithe</target>
         </trans-unit>
         <trans-unit id="Gyarados" translate="yes" xml:space="preserve">
           <source>Gyarados</source>
-          <target state="new">Gyarados</target>
+          <target state="final">Gyarados</target>
         </trans-unit>
         <trans-unit id="Haunter" translate="yes" xml:space="preserve">
           <source>Haunter</source>
-          <target state="new">Haunter</target>
+          <target state="final">Haunter</target>
         </trans-unit>
         <trans-unit id="Hitmonchan" translate="yes" xml:space="preserve">
           <source>Hitmonchan</source>
-          <target state="new">Hitmonchan</target>
+          <target state="final">Hitmonchan</target>
         </trans-unit>
         <trans-unit id="Hitmonlee" translate="yes" xml:space="preserve">
           <source>Hitmonlee</source>
-          <target state="new">Hitmonlee</target>
+          <target state="final">Hitmonlee</target>
         </trans-unit>
         <trans-unit id="Horsea" translate="yes" xml:space="preserve">
           <source>Horsea</source>
-          <target state="new">Horsea</target>
+          <target state="final">Horsea</target>
         </trans-unit>
         <trans-unit id="Hypno" translate="yes" xml:space="preserve">
           <source>Hypno</source>
-          <target state="new">Hypno</target>
+          <target state="final">Hypno</target>
         </trans-unit>
         <trans-unit id="Ivysaur" translate="yes" xml:space="preserve">
           <source>Ivysaur</source>
-          <target state="new">Ivysaur</target>
+          <target state="final">Ivysaur</target>
         </trans-unit>
         <trans-unit id="Jigglypuff" translate="yes" xml:space="preserve">
           <source>Jigglypuff</source>
-          <target state="new">Jigglypuff</target>
+          <target state="final">Jigglypuff</target>
         </trans-unit>
         <trans-unit id="Jolteon" translate="yes" xml:space="preserve">
           <source>Jolteon</source>
-          <target state="new">Jolteon</target>
+          <target state="final">Jolteon</target>
         </trans-unit>
         <trans-unit id="Jynx" translate="yes" xml:space="preserve">
           <source>Jynx</source>
-          <target state="new">Jynx</target>
+          <target state="final">Jynx</target>
         </trans-unit>
         <trans-unit id="Kabuto" translate="yes" xml:space="preserve">
           <source>Kabuto</source>
-          <target state="new">Kabuto</target>
+          <target state="final">Kabuto</target>
         </trans-unit>
         <trans-unit id="Kabutops" translate="yes" xml:space="preserve">
           <source>Kabutops</source>
-          <target state="new">Kabutops</target>
+          <target state="final">Kabutops</target>
         </trans-unit>
         <trans-unit id="Kadabra" translate="yes" xml:space="preserve">
           <source>Kadabra</source>
-          <target state="new">Kadabra</target>
+          <target state="final">Kadabra</target>
         </trans-unit>
         <trans-unit id="Kakuna" translate="yes" xml:space="preserve">
           <source>Kakuna</source>
-          <target state="new">Kakuna</target>
+          <target state="final">Kakuna</target>
         </trans-unit>
         <trans-unit id="Kangaskhan" translate="yes" xml:space="preserve">
           <source>Kangaskhan</source>
-          <target state="new">Kangaskhan</target>
+          <target state="final">Kangaskhan</target>
         </trans-unit>
         <trans-unit id="Kingler" translate="yes" xml:space="preserve">
           <source>Kingler</source>
-          <target state="new">Kingler</target>
+          <target state="final">Kingler</target>
         </trans-unit>
         <trans-unit id="Koffing" translate="yes" xml:space="preserve">
           <source>Koffing</source>
-          <target state="new">Koffing</target>
+          <target state="final">Koffing</target>
         </trans-unit>
         <trans-unit id="Krabby" translate="yes" xml:space="preserve">
           <source>Krabby</source>
-          <target state="new">Krabby</target>
+          <target state="final">Krabby</target>
         </trans-unit>
         <trans-unit id="Lapras" translate="yes" xml:space="preserve">
           <source>Lapras</source>
-          <target state="new">Lapras</target>
+          <target state="final">Lapras</target>
         </trans-unit>
         <trans-unit id="Lickitung" translate="yes" xml:space="preserve">
           <source>Lickitung</source>
-          <target state="new">Lickitung</target>
+          <target state="final">Lickitung</target>
         </trans-unit>
         <trans-unit id="Machamp" translate="yes" xml:space="preserve">
           <source>Machamp</source>
-          <target state="new">Machamp</target>
+          <target state="final">Machamp</target>
         </trans-unit>
         <trans-unit id="Machoke" translate="yes" xml:space="preserve">
           <source>Machoke</source>
-          <target state="new">Machoke</target>
+          <target state="final">Machoke</target>
         </trans-unit>
         <trans-unit id="Machop" translate="yes" xml:space="preserve">
           <source>Machop</source>
-          <target state="new">Machop</target>
+          <target state="final">Machop</target>
         </trans-unit>
         <trans-unit id="Magikarp" translate="yes" xml:space="preserve">
           <source>Magikarp</source>
-          <target state="new">Magikarp</target>
+          <target state="final">Magikarp</target>
         </trans-unit>
         <trans-unit id="Magmar" translate="yes" xml:space="preserve">
           <source>Magmar</source>
-          <target state="new">Magmar</target>
+          <target state="final">Magmar</target>
         </trans-unit>
         <trans-unit id="Magnemite" translate="yes" xml:space="preserve">
           <source>Magnemite</source>
-          <target state="new">Magnemite</target>
+          <target state="final">Magnemite</target>
         </trans-unit>
         <trans-unit id="Magneton" translate="yes" xml:space="preserve">
           <source>Magneton</source>
-          <target state="new">Magneton</target>
+          <target state="final">Magneton</target>
         </trans-unit>
         <trans-unit id="Mankey" translate="yes" xml:space="preserve">
           <source>Mankey</source>
-          <target state="new">Mankey</target>
+          <target state="final">Mankey</target>
         </trans-unit>
         <trans-unit id="Marowak" translate="yes" xml:space="preserve">
           <source>Marowak</source>
-          <target state="new">Marowak</target>
+          <target state="final">Marowak</target>
         </trans-unit>
         <trans-unit id="Meowth" translate="yes" xml:space="preserve">
           <source>Meowth</source>
-          <target state="new">Meowth</target>
+          <target state="final">Meowth</target>
         </trans-unit>
         <trans-unit id="Metapod" translate="yes" xml:space="preserve">
           <source>Metapod</source>
-          <target state="new">Metapod</target>
+          <target state="final">Metapod</target>
         </trans-unit>
         <trans-unit id="Mew" translate="yes" xml:space="preserve">
           <source>Mew</source>
-          <target state="new">Mew</target>
+          <target state="final">Mew</target>
         </trans-unit>
         <trans-unit id="Mewtwo" translate="yes" xml:space="preserve">
           <source>Mewtwo</source>
-          <target state="new">Mewtwo</target>
+          <target state="final">Mewtwo</target>
         </trans-unit>
         <trans-unit id="Missingno" translate="yes" xml:space="preserve">
           <source>Missingno</source>
-          <target state="new">Missingno</target>
+          <target state="final">Missingno</target>
         </trans-unit>
         <trans-unit id="Moltres" translate="yes" xml:space="preserve">
           <source>Moltres</source>
-          <target state="new">Moltres</target>
+          <target state="final">Moltres</target>
         </trans-unit>
         <trans-unit id="MrMime" translate="yes" xml:space="preserve">
           <source>MrMime</source>
-          <target state="new">MrMime</target>
+          <target state="final">MrMime</target>
         </trans-unit>
         <trans-unit id="Muk" translate="yes" xml:space="preserve">
           <source>Muk</source>
-          <target state="new">Muk</target>
+          <target state="final">Muk</target>
         </trans-unit>
         <trans-unit id="Nidoking" translate="yes" xml:space="preserve">
           <source>Nidoking</source>
-          <target state="new">Nidoking</target>
+          <target state="final">Nidoking</target>
         </trans-unit>
         <trans-unit id="Nidoqueen" translate="yes" xml:space="preserve">
           <source>Nidoqueen</source>
-          <target state="new">Nidoqueen</target>
+          <target state="final">Nidoqueen</target>
         </trans-unit>
         <trans-unit id="NidoranFemale" translate="yes" xml:space="preserve">
           <source>Nidoran ♀</source>
-          <target state="new">Nidoran ♀</target>
+          <target state="final">Nidoran ♀</target>
         </trans-unit>
         <trans-unit id="NidoranMale" translate="yes" xml:space="preserve">
           <source>Nidoran ♂</source>
-          <target state="new">Nidoran ♂</target>
+          <target state="final">Nidoran ♂</target>
         </trans-unit>
         <trans-unit id="Nidorina" translate="yes" xml:space="preserve">
           <source>Nidorina</source>
-          <target state="new">Nidorina</target>
+          <target state="final">Nidorina</target>
         </trans-unit>
         <trans-unit id="Nidorino" translate="yes" xml:space="preserve">
           <source>Nidorino</source>
-          <target state="new">Nidorino</target>
+          <target state="final">Nidorino</target>
         </trans-unit>
         <trans-unit id="Ninetales" translate="yes" xml:space="preserve">
           <source>Ninetales</source>
-          <target state="new">Ninetales</target>
+          <target state="final">Ninetales</target>
         </trans-unit>
         <trans-unit id="Oddish" translate="yes" xml:space="preserve">
           <source>Oddish</source>
-          <target state="new">Oddish</target>
+          <target state="final">Oddish</target>
         </trans-unit>
         <trans-unit id="Omanyte" translate="yes" xml:space="preserve">
           <source>Omanyte</source>
-          <target state="new">Omanyte</target>
+          <target state="final">Omanyte</target>
         </trans-unit>
         <trans-unit id="Omastar" translate="yes" xml:space="preserve">
           <source>Omastar</source>
-          <target state="new">Omastar</target>
+          <target state="final">Omastar</target>
         </trans-unit>
         <trans-unit id="Onix" translate="yes" xml:space="preserve">
           <source>Onix</source>
-          <target state="new">Onix</target>
+          <target state="final">Onix</target>
         </trans-unit>
         <trans-unit id="Paras" translate="yes" xml:space="preserve">
           <source>Paras</source>
-          <target state="new">Paras</target>
+          <target state="final">Paras</target>
         </trans-unit>
         <trans-unit id="Parasect" translate="yes" xml:space="preserve">
           <source>Parasect</source>
-          <target state="new">Parasect</target>
+          <target state="final">Parasect</target>
         </trans-unit>
         <trans-unit id="Persian" translate="yes" xml:space="preserve">
           <source>Persian</source>
-          <target state="new">Persian</target>
+          <target state="final">Persian</target>
         </trans-unit>
         <trans-unit id="Pidgeot" translate="yes" xml:space="preserve">
           <source>Pidgeot</source>
-          <target state="new">Pidgeot</target>
+          <target state="final">Pidgeot</target>
         </trans-unit>
         <trans-unit id="Pidgeotto" translate="yes" xml:space="preserve">
           <source>Pidgeotto</source>
-          <target state="new">Pidgeotto</target>
+          <target state="final">Pidgeotto</target>
         </trans-unit>
         <trans-unit id="Pidgey" translate="yes" xml:space="preserve">
           <source>Pidgey</source>
-          <target state="new">Pidgey</target>
+          <target state="final">Pidgey</target>
         </trans-unit>
         <trans-unit id="Pikachu" translate="yes" xml:space="preserve">
           <source>Pikachu</source>
-          <target state="new">Pikachu</target>
+          <target state="final">Pikachu</target>
         </trans-unit>
         <trans-unit id="Pinsir" translate="yes" xml:space="preserve">
           <source>Pinsir</source>
-          <target state="new">Pinsir</target>
+          <target state="final">Pinsir</target>
         </trans-unit>
         <trans-unit id="Poliwag" translate="yes" xml:space="preserve">
           <source>Poliwag</source>
-          <target state="new">Poliwag</target>
+          <target state="final">Poliwag</target>
         </trans-unit>
         <trans-unit id="Poliwhirl" translate="yes" xml:space="preserve">
           <source>Poliwhirl</source>
-          <target state="new">Poliwhirl</target>
+          <target state="final">Poliwhirl</target>
         </trans-unit>
         <trans-unit id="Poliwrath" translate="yes" xml:space="preserve">
           <source>Poliwrath</source>
-          <target state="new">Poliwrath</target>
+          <target state="final">Poliwrath</target>
         </trans-unit>
         <trans-unit id="Ponyta" translate="yes" xml:space="preserve">
           <source>Ponyta</source>
-          <target state="new">Ponyta</target>
+          <target state="final">Ponyta</target>
         </trans-unit>
         <trans-unit id="Porygon" translate="yes" xml:space="preserve">
           <source>Porygon</source>
-          <target state="new">Porygon</target>
+          <target state="final">Porygon</target>
         </trans-unit>
         <trans-unit id="Primeape" translate="yes" xml:space="preserve">
           <source>Primeape</source>
-          <target state="new">Primeape</target>
+          <target state="final">Primeape</target>
         </trans-unit>
         <trans-unit id="Psyduck" translate="yes" xml:space="preserve">
           <source>Psyduck</source>
-          <target state="new">Psyduck</target>
+          <target state="final">Psyduck</target>
         </trans-unit>
         <trans-unit id="Raichu" translate="yes" xml:space="preserve">
           <source>Raichu</source>
-          <target state="new">Raichu</target>
+          <target state="final">Raichu</target>
         </trans-unit>
         <trans-unit id="Rapidash" translate="yes" xml:space="preserve">
           <source>Rapidash</source>
-          <target state="new">Rapidash</target>
+          <target state="final">Rapidash</target>
         </trans-unit>
         <trans-unit id="Raticate" translate="yes" xml:space="preserve">
           <source>Raticate</source>
-          <target state="new">Raticate</target>
+          <target state="final">Raticate</target>
         </trans-unit>
         <trans-unit id="Rattata" translate="yes" xml:space="preserve">
           <source>Rattata</source>
-          <target state="new">Rattata</target>
+          <target state="final">Rattata</target>
         </trans-unit>
         <trans-unit id="Rhydon" translate="yes" xml:space="preserve">
           <source>Rhydon</source>
-          <target state="new">Rhydon</target>
+          <target state="final">Rhydon</target>
         </trans-unit>
         <trans-unit id="Rhyhorn" translate="yes" xml:space="preserve">
           <source>Rhyhorn</source>
-          <target state="new">Rhyhorn</target>
+          <target state="final">Rhyhorn</target>
         </trans-unit>
         <trans-unit id="Sandshrew" translate="yes" xml:space="preserve">
           <source>Sandshrew</source>
-          <target state="new">Sandshrew</target>
+          <target state="final">Sandshrew</target>
         </trans-unit>
         <trans-unit id="Sandslash" translate="yes" xml:space="preserve">
           <source>Sandslash</source>
-          <target state="new">Sandslash</target>
+          <target state="final">Sandslash</target>
         </trans-unit>
         <trans-unit id="Scyther" translate="yes" xml:space="preserve">
           <source>Scyther</source>
-          <target state="new">Scyther</target>
+          <target state="final">Scyther</target>
         </trans-unit>
         <trans-unit id="Seadra" translate="yes" xml:space="preserve">
           <source>Seadra</source>
-          <target state="new">Seadra</target>
+          <target state="final">Seadra</target>
         </trans-unit>
         <trans-unit id="Seaking" translate="yes" xml:space="preserve">
           <source>Seaking</source>
-          <target state="new">Seaking</target>
+          <target state="final">Seaking</target>
         </trans-unit>
         <trans-unit id="Seel" translate="yes" xml:space="preserve">
           <source>Seel</source>
-          <target state="new">Seel</target>
+          <target state="final">Seel</target>
         </trans-unit>
         <trans-unit id="Shellder" translate="yes" xml:space="preserve">
           <source>Shellder</source>
-          <target state="new">Shellder</target>
+          <target state="final">Shellder</target>
         </trans-unit>
         <trans-unit id="Slowbro" translate="yes" xml:space="preserve">
           <source>Slowbro</source>
-          <target state="new">Slowbro</target>
+          <target state="final">Slowbro</target>
         </trans-unit>
         <trans-unit id="Slowpoke" translate="yes" xml:space="preserve">
           <source>Slowpoke</source>
-          <target state="new">Slowpoke</target>
+          <target state="final">Slowpoke</target>
         </trans-unit>
         <trans-unit id="Snorlax" translate="yes" xml:space="preserve">
           <source>Snorlax</source>
-          <target state="new">Snorlax</target>
+          <target state="final">Snorlax</target>
         </trans-unit>
         <trans-unit id="Spearow" translate="yes" xml:space="preserve">
           <source>Spearow</source>
-          <target state="new">Spearow</target>
+          <target state="final">Spearow</target>
         </trans-unit>
         <trans-unit id="Squirtle" translate="yes" xml:space="preserve">
           <source>Squirtle</source>
-          <target state="new">Squirtle</target>
+          <target state="final">Squirtle</target>
         </trans-unit>
         <trans-unit id="Starmie" translate="yes" xml:space="preserve">
           <source>Starmie</source>
-          <target state="new">Starmie</target>
+          <target state="final">Starmie</target>
         </trans-unit>
         <trans-unit id="Staryu" translate="yes" xml:space="preserve">
           <source>Staryu</source>
-          <target state="new">Staryu</target>
+          <target state="final">Staryu</target>
         </trans-unit>
         <trans-unit id="Tangela" translate="yes" xml:space="preserve">
           <source>Tangela</source>
-          <target state="new">Tangela</target>
+          <target state="final">Tangela</target>
         </trans-unit>
         <trans-unit id="Tauros" translate="yes" xml:space="preserve">
           <source>Tauros</source>
-          <target state="new">Tauros</target>
+          <target state="final">Tauros</target>
         </trans-unit>
         <trans-unit id="Tentacool" translate="yes" xml:space="preserve">
           <source>Tentacool</source>
-          <target state="new">Tentacool</target>
+          <target state="final">Tentacool</target>
         </trans-unit>
         <trans-unit id="Tentacruel" translate="yes" xml:space="preserve">
           <source>Tentacruel</source>
-          <target state="new">Tentacruel</target>
+          <target state="final">Tentacruel</target>
         </trans-unit>
         <trans-unit id="Vaporeon" translate="yes" xml:space="preserve">
           <source>Vaporeon</source>
-          <target state="new">Vaporeon</target>
+          <target state="final">Vaporeon</target>
         </trans-unit>
         <trans-unit id="Venomoth" translate="yes" xml:space="preserve">
           <source>Venomoth</source>
-          <target state="new">Venomoth</target>
+          <target state="final">Venomoth</target>
         </trans-unit>
         <trans-unit id="Venonat" translate="yes" xml:space="preserve">
           <source>Venonat</source>
-          <target state="new">Venonat</target>
+          <target state="final">Venonat</target>
         </trans-unit>
         <trans-unit id="Venusaur" translate="yes" xml:space="preserve">
           <source>Venusaur</source>
-          <target state="new">Venusaur</target>
+          <target state="final">Venusaur</target>
         </trans-unit>
         <trans-unit id="Victreebel" translate="yes" xml:space="preserve">
           <source>Victreebel</source>
-          <target state="new">Victreebel</target>
+          <target state="final">Victreebel</target>
         </trans-unit>
         <trans-unit id="Vileplume" translate="yes" xml:space="preserve">
           <source>Vileplume</source>
-          <target state="new">Vileplume</target>
+          <target state="final">Vileplume</target>
         </trans-unit>
         <trans-unit id="Voltorb" translate="yes" xml:space="preserve">
           <source>Voltorb</source>
-          <target state="new">Voltorb</target>
+          <target state="final">Voltorb</target>
         </trans-unit>
         <trans-unit id="Vulpix" translate="yes" xml:space="preserve">
           <source>Vulpix</source>
-          <target state="new">Vulpix</target>
+          <target state="final">Vulpix</target>
         </trans-unit>
         <trans-unit id="Wartortle" translate="yes" xml:space="preserve">
           <source>Wartortle</source>
-          <target state="new">Wartortle</target>
+          <target state="final">Wartortle</target>
         </trans-unit>
         <trans-unit id="Weedle" translate="yes" xml:space="preserve">
           <source>Weedle</source>
-          <target state="new">Weedle</target>
+          <target state="final">Weedle</target>
         </trans-unit>
         <trans-unit id="Weepinbell" translate="yes" xml:space="preserve">
           <source>Weepinbell</source>
-          <target state="new">Weepinbell</target>
+          <target state="final">Weepinbell</target>
         </trans-unit>
         <trans-unit id="Weezing" translate="yes" xml:space="preserve">
           <source>Weezing</source>
-          <target state="new">Weezing</target>
+          <target state="final">Weezing</target>
         </trans-unit>
         <trans-unit id="Wigglytuff" translate="yes" xml:space="preserve">
           <source>Wigglytuff</source>
-          <target state="new">Wigglytuff</target>
+          <target state="final">Wigglytuff</target>
         </trans-unit>
         <trans-unit id="Zapdos" translate="yes" xml:space="preserve">
           <source>Zapdos</source>
-          <target state="new">Zapdos</target>
+          <target state="final">Zapdos</target>
         </trans-unit>
         <trans-unit id="Zubat" translate="yes" xml:space="preserve">
           <source>Zubat</source>
-          <target state="new">Zubat</target>
+          <target state="final">Zubat</target>
         </trans-unit>
       </group>
     </body>
@@ -1654,503 +1638,503 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/POKEMONMOVES.RESW" datatype="resx">
         <trans-unit id="Bite" translate="yes" xml:space="preserve">
           <source>Bite</source>
-          <target state="new">Bite</target>
+          <target state="final">Bite</target>
         </trans-unit>
         <trans-unit id="CrossChop" translate="yes" xml:space="preserve">
           <source>Cross Chop</source>
-          <target state="new">Cross Chop</target>
+          <target state="final">Cross Chop</target>
         </trans-unit>
         <trans-unit id="DarkPulse" translate="yes" xml:space="preserve">
           <source>Dark Pulse</source>
-          <target state="new">Dark Pulse</target>
+          <target state="final">Dark Pulse</target>
         </trans-unit>
         <trans-unit id="Dig" translate="yes" xml:space="preserve">
           <source>Dig</source>
-          <target state="new">Dig</target>
+          <target state="final">Dig</target>
         </trans-unit>
         <trans-unit id="DoubleSlap" translate="yes" xml:space="preserve">
           <source>Double Slap</source>
-          <target state="new">Double Slap</target>
+          <target state="final">Double Slap</target>
         </trans-unit>
         <trans-unit id="Ember" translate="yes" xml:space="preserve">
           <source>Ember</source>
-          <target state="new">Ember</target>
+          <target state="final">Ember</target>
         </trans-unit>
         <trans-unit id="Flamethrower" translate="yes" xml:space="preserve">
           <source>Flamethrower</source>
-          <target state="new">Flamethrower</target>
+          <target state="final">Flamethrower</target>
         </trans-unit>
         <trans-unit id="FlameWheel" translate="yes" xml:space="preserve">
           <source>Flame Wheel</source>
-          <target state="new">Flame Wheel</target>
+          <target state="final">Flame Wheel</target>
         </trans-unit>
         <trans-unit id="HyperBeam" translate="yes" xml:space="preserve">
           <source>Hyper Beam</source>
-          <target state="new">Hyper Beam</target>
+          <target state="final">Hyper Beam</target>
         </trans-unit>
         <trans-unit id="Lick" translate="yes" xml:space="preserve">
           <source>Lick</source>
-          <target state="new">Lick</target>
+          <target state="final">Lick</target>
         </trans-unit>
         <trans-unit id="LowKick" translate="yes" xml:space="preserve">
           <source>Low Kick</source>
-          <target state="new">Low Kick</target>
+          <target state="final">Low Kick</target>
         </trans-unit>
         <trans-unit id="Megahorn" translate="yes" xml:space="preserve">
           <source>Megahorn</source>
-          <target state="new">Megahorn</target>
+          <target state="final">Megahorn</target>
         </trans-unit>
         <trans-unit id="MetalClaw" translate="yes" xml:space="preserve">
           <source>Metal Claw</source>
-          <target state="new">Metal Claw</target>
+          <target state="final">Metal Claw</target>
         </trans-unit>
         <trans-unit id="MoveUnset" translate="yes" xml:space="preserve">
           <source>Move Unset</source>
-          <target state="new">Move Unset</target>
+          <target state="final">Move Unset</target>
         </trans-unit>
         <trans-unit id="Pound" translate="yes" xml:space="preserve">
           <source>Pound</source>
-          <target state="new">Pound</target>
+          <target state="final">Pound</target>
         </trans-unit>
         <trans-unit id="PsychoCut" translate="yes" xml:space="preserve">
           <source>Psycho Cut</source>
-          <target state="new">Psycho Cut</target>
+          <target state="final">Psycho Cut</target>
         </trans-unit>
         <trans-unit id="QuickAttack" translate="yes" xml:space="preserve">
           <source>Quick Attack</source>
-          <target state="new">Quick Attack</target>
+          <target state="final">Quick Attack</target>
         </trans-unit>
         <trans-unit id="RazorLeaf" translate="yes" xml:space="preserve">
           <source>Razor Leaf</source>
-          <target state="new">Razor Leaf</target>
+          <target state="final">Razor Leaf</target>
         </trans-unit>
         <trans-unit id="Scratch" translate="yes" xml:space="preserve">
           <source>Scratch</source>
-          <target state="new">Scratch</target>
+          <target state="final">Scratch</target>
         </trans-unit>
         <trans-unit id="Sludge" translate="yes" xml:space="preserve">
           <source>Sludge</source>
-          <target state="new">Sludge</target>
+          <target state="final">Sludge</target>
         </trans-unit>
         <trans-unit id="Smog" translate="yes" xml:space="preserve">
           <source>Smog</source>
-          <target state="new">Smog</target>
+          <target state="final">Smog</target>
         </trans-unit>
         <trans-unit id="SuckerPunch" translate="yes" xml:space="preserve">
           <source>Sucker Punch</source>
-          <target state="new">Sucker Punch</target>
+          <target state="final">Sucker Punch</target>
         </trans-unit>
         <trans-unit id="Tackle" translate="yes" xml:space="preserve">
           <source>Tackle</source>
-          <target state="new">Tackle</target>
+          <target state="final">Tackle</target>
         </trans-unit>
         <trans-unit id="TakeDown" translate="yes" xml:space="preserve">
           <source>Take Down</source>
-          <target state="new">Take Down</target>
+          <target state="final">Take Down</target>
         </trans-unit>
         <trans-unit id="ThunderShock" translate="yes" xml:space="preserve">
           <source>Thunder Shock</source>
-          <target state="new">Thunder Shock</target>
+          <target state="final">Thunder Shock</target>
         </trans-unit>
         <trans-unit id="ViceGrip" translate="yes" xml:space="preserve">
           <source>Vice Grip</source>
-          <target state="new">Vice Grip</target>
+          <target state="final">Vice Grip</target>
         </trans-unit>
         <trans-unit id="VineWhip" translate="yes" xml:space="preserve">
           <source>Vine Whip</source>
-          <target state="new">Vine Whip</target>
+          <target state="final">Vine Whip</target>
         </trans-unit>
         <trans-unit id="WaterGun" translate="yes" xml:space="preserve">
           <source>Water Gun</source>
-          <target state="new">Water Gun</target>
+          <target state="final">Water Gun</target>
         </trans-unit>
         <trans-unit id="WingAttack" translate="yes" xml:space="preserve">
           <source>Wing Attack</source>
-          <target state="new">Wing Attack</target>
+          <target state="final">Wing Attack</target>
         </trans-unit>
         <trans-unit id="Wrap" translate="yes" xml:space="preserve">
           <source>Wrap</source>
-          <target state="new">Wrap</target>
+          <target state="final">Wrap</target>
         </trans-unit>
         <trans-unit id="Absorb" translate="yes" xml:space="preserve">
           <source>Absorb</source>
-          <target state="new">Absorb</target>
+          <target state="final">Absorb</target>
         </trans-unit>
         <trans-unit id="Acid" translate="yes" xml:space="preserve">
           <source>Acid</source>
-          <target state="new">Acid</target>
+          <target state="final">Acid</target>
         </trans-unit>
         <trans-unit id="AcidFast" translate="yes" xml:space="preserve">
           <source>Acid Fast</source>
-          <target state="new">Acid Fast</target>
+          <target state="final">Acid Fast</target>
         </trans-unit>
         <trans-unit id="AerialAce" translate="yes" xml:space="preserve">
           <source>Aerial Ace</source>
-          <target state="new">Aerial Ace</target>
+          <target state="final">Aerial Ace</target>
         </trans-unit>
         <trans-unit id="AirCutter" translate="yes" xml:space="preserve">
           <source>Air Cutter</source>
-          <target state="new">Air Cutter</target>
+          <target state="final">Air Cutter</target>
         </trans-unit>
         <trans-unit id="AirSlash" translate="yes" xml:space="preserve">
           <source>Air Slash</source>
-          <target state="new">Air Slash</target>
+          <target state="final">Air Slash</target>
         </trans-unit>
         <trans-unit id="AncientPower" translate="yes" xml:space="preserve">
           <source>Ancient Power</source>
-          <target state="new">Ancient Power</target>
+          <target state="final">Ancient Power</target>
         </trans-unit>
         <trans-unit id="AquaJet" translate="yes" xml:space="preserve">
           <source>Aqua Jet</source>
-          <target state="new">Aqua Jet</target>
+          <target state="final">Aqua Jet</target>
         </trans-unit>
         <trans-unit id="AquaTail" translate="yes" xml:space="preserve">
           <source>Aqua Tail</source>
-          <target state="new">Aqua Tail</target>
+          <target state="final">Aqua Tail</target>
         </trans-unit>
         <trans-unit id="BiteFast" translate="yes" xml:space="preserve">
           <source>Bite</source>
-          <target state="new">Bite</target>
+          <target state="final">Bite</target>
         </trans-unit>
         <trans-unit id="Blizzard" translate="yes" xml:space="preserve">
           <source>Blizzard</source>
-          <target state="new">Blizzard</target>
+          <target state="final">Blizzard</target>
         </trans-unit>
         <trans-unit id="BodySlam" translate="yes" xml:space="preserve">
           <source>Body Slam</source>
-          <target state="new">Body Slam</target>
+          <target state="final">Body Slam</target>
         </trans-unit>
         <trans-unit id="BoneClub" translate="yes" xml:space="preserve">
           <source>Bone Club</source>
-          <target state="new">Bone Club</target>
+          <target state="final">Bone Club</target>
         </trans-unit>
         <trans-unit id="BrickBreak" translate="yes" xml:space="preserve">
           <source>Brick Break</source>
-          <target state="new">Brick Break</target>
+          <target state="final">Brick Break</target>
         </trans-unit>
         <trans-unit id="Brine" translate="yes" xml:space="preserve">
           <source>Brine</source>
-          <target state="new">Brine</target>
+          <target state="final">Brine</target>
         </trans-unit>
         <trans-unit id="BubbleBeam" translate="yes" xml:space="preserve">
           <source>Bubble Beam</source>
-          <target state="new">Bubble Beam</target>
+          <target state="final">Bubble Beam</target>
         </trans-unit>
         <trans-unit id="BubbleFast" translate="yes" xml:space="preserve">
           <source>Bubble Fast</source>
-          <target state="new">Bubble Fast</target>
+          <target state="final">Bubble Fast</target>
         </trans-unit>
         <trans-unit id="BugBite" translate="yes" xml:space="preserve">
           <source>Bug Bite</source>
-          <target state="new">Bug Bite</target>
+          <target state="final">Bug Bite</target>
         </trans-unit>
         <trans-unit id="BugBiteFast" translate="yes" xml:space="preserve">
           <source>Bug Bite</source>
-          <target state="new">Bug Bite</target>
+          <target state="final">Bug Bite</target>
         </trans-unit>
         <trans-unit id="BugBuzz" translate="yes" xml:space="preserve">
           <source>Bug Buzz</source>
-          <target state="new">Bug Buzz</target>
+          <target state="final">Bug Buzz</target>
         </trans-unit>
         <trans-unit id="Bulldoze" translate="yes" xml:space="preserve">
           <source>Bull doze</source>
-          <target state="new">Bull doze</target>
+          <target state="final">Bull doze</target>
         </trans-unit>
         <trans-unit id="BulletPunch" translate="yes" xml:space="preserve">
           <source>Bullet Punch</source>
-          <target state="new">Bullet Punch</target>
+          <target state="final">Bullet Punch</target>
         </trans-unit>
         <trans-unit id="BulletPunchFast" translate="yes" xml:space="preserve">
           <source>Bullet Punch</source>
-          <target state="new">Bullet Punch</target>
+          <target state="final">Bullet Punch</target>
         </trans-unit>
         <trans-unit id="ConfusionFast" translate="yes" xml:space="preserve">
           <source>Confusion</source>
-          <target state="new">Confusion</target>
+          <target state="final">Confusion</target>
         </trans-unit>
         <trans-unit id="CrossPoison" translate="yes" xml:space="preserve">
           <source>Cross Poison</source>
-          <target state="new">Cross Poison</target>
+          <target state="final">Cross Poison</target>
         </trans-unit>
         <trans-unit id="Cut" translate="yes" xml:space="preserve">
           <source>Cut</source>
-          <target state="new">Cut</target>
+          <target state="final">Cut</target>
         </trans-unit>
         <trans-unit id="CutFast" translate="yes" xml:space="preserve">
           <source>Cut</source>
-          <target state="new">Cut</target>
+          <target state="final">Cut</target>
         </trans-unit>
         <trans-unit id="DazzlingGleam" translate="yes" xml:space="preserve">
           <source>Dazzling Gleam</source>
-          <target state="new">Dazzling Gleam</target>
+          <target state="final">Dazzling Gleam</target>
         </trans-unit>
         <trans-unit id="DisarmingVoice" translate="yes" xml:space="preserve">
           <source>Disarming Voice</source>
-          <target state="new">Disarming Voice</target>
+          <target state="final">Disarming Voice</target>
         </trans-unit>
         <trans-unit id="Discharge" translate="yes" xml:space="preserve">
           <source>Discharge</source>
-          <target state="new">Discharge</target>
+          <target state="final">Discharge</target>
         </trans-unit>
         <trans-unit id="DragonBreath" translate="yes" xml:space="preserve">
           <source>Dragon Breath</source>
-          <target state="new">Dragon Breath</target>
+          <target state="final">Dragon Breath</target>
         </trans-unit>
         <trans-unit id="DragonBreathFast" translate="yes" xml:space="preserve">
           <source>Dragon Breath</source>
-          <target state="new">Dragon Breath</target>
+          <target state="final">Dragon Breath</target>
         </trans-unit>
         <trans-unit id="DragonClaw" translate="yes" xml:space="preserve">
           <source>Dragon Claw</source>
-          <target state="new">Dragon Claw</target>
+          <target state="final">Dragon Claw</target>
         </trans-unit>
         <trans-unit id="DragonPulse" translate="yes" xml:space="preserve">
           <source>Dragon Pulse</source>
-          <target state="new">Dragon Pulse</target>
+          <target state="final">Dragon Pulse</target>
         </trans-unit>
         <trans-unit id="DrainingKiss" translate="yes" xml:space="preserve">
           <source>Draining Kiss</source>
-          <target state="new">Draining Kiss</target>
+          <target state="final">Draining Kiss</target>
         </trans-unit>
         <trans-unit id="DrillPeck" translate="yes" xml:space="preserve">
           <source>Drill Peck</source>
-          <target state="new">Drill Peck</target>
+          <target state="final">Drill Peck</target>
         </trans-unit>
         <trans-unit id="DrillRun" translate="yes" xml:space="preserve">
           <source>Drill Run</source>
-          <target state="new">Drill Run</target>
+          <target state="final">Drill Run</target>
         </trans-unit>
         <trans-unit id="Earthquake" translate="yes" xml:space="preserve">
           <source>Earthquake</source>
-          <target state="new">Earthquake</target>
+          <target state="final">Earthquake</target>
         </trans-unit>
         <trans-unit id="EmberFast" translate="yes" xml:space="preserve">
           <source>Ember Fast</source>
-          <target state="new">Ember Fast</target>
+          <target state="final">Ember Fast</target>
         </trans-unit>
         <trans-unit id="FeintAttackFast" translate="yes" xml:space="preserve">
           <source>Feint Attack</source>
-          <target state="new">Feint Attack</target>
+          <target state="final">Feint Attack</target>
         </trans-unit>
         <trans-unit id="FireBlast" translate="yes" xml:space="preserve">
           <source>Fire Blast</source>
-          <target state="new">Fire Blast</target>
+          <target state="final">Fire Blast</target>
         </trans-unit>
         <trans-unit id="FireFangFast" translate="yes" xml:space="preserve">
           <source>Fire Fang</source>
-          <target state="new">Fire Fang</target>
+          <target state="final">Fire Fang</target>
         </trans-unit>
         <trans-unit id="FirePunch" translate="yes" xml:space="preserve">
           <source>Fire Punch</source>
-          <target state="new">Fire Punch</target>
+          <target state="final">Fire Punch</target>
         </trans-unit>
         <trans-unit id="FlameBurst" translate="yes" xml:space="preserve">
           <source>Flame Burst</source>
-          <target state="new">Flame Burst</target>
+          <target state="final">Flame Burst</target>
         </trans-unit>
         <trans-unit id="FlameCharge" translate="yes" xml:space="preserve">
           <source>Flame Charge</source>
-          <target state="new">Flame Charge</target>
+          <target state="final">Flame Charge</target>
         </trans-unit>
         <trans-unit id="FlashCannon" translate="yes" xml:space="preserve">
           <source>Flash Cannon</source>
-          <target state="new">Flash Cannon</target>
+          <target state="final">Flash Cannon</target>
         </trans-unit>
         <trans-unit id="FrostBreath" translate="yes" xml:space="preserve">
           <source>Frost Breath</source>
-          <target state="new">Frost Breath</target>
+          <target state="final">Frost Breath</target>
         </trans-unit>
         <trans-unit id="FrostBreathFast" translate="yes" xml:space="preserve">
           <source>Frost Breath</source>
-          <target state="new">Frost Breath</target>
+          <target state="final">Frost Breath</target>
         </trans-unit>
         <trans-unit id="FuryCutter" translate="yes" xml:space="preserve">
           <source>Fury Cutter</source>
-          <target state="new">Fury Cutter</target>
+          <target state="final">Fury Cutter</target>
         </trans-unit>
         <trans-unit id="FuryCutterFast" translate="yes" xml:space="preserve">
           <source>Fury Cutter</source>
-          <target state="new">Fury Cutter</target>
+          <target state="final">Fury Cutter</target>
         </trans-unit>
         <trans-unit id="GigaDrain" translate="yes" xml:space="preserve">
           <source>Giga Drain</source>
-          <target state="new">Giga Drain</target>
+          <target state="final">Giga Drain</target>
         </trans-unit>
         <trans-unit id="GunkShot" translate="yes" xml:space="preserve">
           <source>Gunk Shot</source>
-          <target state="new">Gunk Shot</target>
+          <target state="final">Gunk Shot</target>
         </trans-unit>
         <trans-unit id="Headbutt" translate="yes" xml:space="preserve">
           <source>Headbutt</source>
-          <target state="new">Headbutt</target>
+          <target state="final">Headbutt</target>
         </trans-unit>
         <trans-unit id="HeartStamp" translate="yes" xml:space="preserve">
           <source>Heart Stamp</source>
-          <target state="new">Heart Stamp</target>
+          <target state="final">Heart Stamp</target>
         </trans-unit>
         <trans-unit id="HeatWave" translate="yes" xml:space="preserve">
           <source>Heat Wave</source>
-          <target state="new">Heat Wave</target>
+          <target state="final">Heat Wave</target>
         </trans-unit>
         <trans-unit id="HornAttack" translate="yes" xml:space="preserve">
           <source>Horn Attack</source>
-          <target state="new">Horn Attack</target>
+          <target state="final">Horn Attack</target>
         </trans-unit>
         <trans-unit id="Hurricane" translate="yes" xml:space="preserve">
           <source>Hurricane</source>
-          <target state="new">Hurricane</target>
+          <target state="final">Hurricane</target>
         </trans-unit>
         <trans-unit id="HydroPump" translate="yes" xml:space="preserve">
           <source>Hydro Pump</source>
-          <target state="new">Hydro Pump</target>
+          <target state="final">Hydro Pump</target>
         </trans-unit>
         <trans-unit id="HydroPumpBlastoise" translate="yes" xml:space="preserve">
           <source>Hydro Pump</source>
-          <target state="new">Hydro Pump</target>
+          <target state="final">Hydro Pump</target>
         </trans-unit>
         <trans-unit id="HyperFang" translate="yes" xml:space="preserve">
           <source>Hyper Fang</source>
-          <target state="new">Hyper Fang</target>
+          <target state="final">Hyper Fang</target>
         </trans-unit>
         <trans-unit id="IceBeam" translate="yes" xml:space="preserve">
           <source>Ice Beam</source>
-          <target state="new">Ice Beam</target>
+          <target state="final">Ice Beam</target>
         </trans-unit>
         <trans-unit id="IcePunch" translate="yes" xml:space="preserve">
           <source>Ice Punch</source>
-          <target state="new">Ice Punch</target>
+          <target state="final">Ice Punch</target>
         </trans-unit>
         <trans-unit id="IceShard" translate="yes" xml:space="preserve">
           <source>Ice Shard</source>
-          <target state="new">Ice Shard</target>
+          <target state="final">Ice Shard</target>
         </trans-unit>
         <trans-unit id="IceShardFast" translate="yes" xml:space="preserve">
           <source>Ice Shard</source>
-          <target state="new">Ice Shard</target>
+          <target state="final">Ice Shard</target>
         </trans-unit>
         <trans-unit id="IcyWind" translate="yes" xml:space="preserve">
           <source>Icy Wind</source>
-          <target state="new">Icy Wind</target>
+          <target state="final">Icy Wind</target>
         </trans-unit>
         <trans-unit id="IronHead" translate="yes" xml:space="preserve">
           <source>Iron Head</source>
-          <target state="new">Iron Head</target>
+          <target state="final">Iron Head</target>
         </trans-unit>
         <trans-unit id="KarateChop" translate="yes" xml:space="preserve">
           <source>Karate Chop</source>
-          <target state="new">Karate Chop</target>
+          <target state="final">Karate Chop</target>
         </trans-unit>
         <trans-unit id="KarateChopFast" translate="yes" xml:space="preserve">
           <source>Karate Chop</source>
-          <target state="new">Karate Chop</target>
+          <target state="final">Karate Chop</target>
         </trans-unit>
         <trans-unit id="LeafBlade" translate="yes" xml:space="preserve">
           <source>Leaf Blade</source>
-          <target state="new">Leaf Blade</target>
+          <target state="final">Leaf Blade</target>
         </trans-unit>
         <trans-unit id="LickFast" translate="yes" xml:space="preserve">
           <source>Lick Fast</source>
-          <target state="new">Lick Fast</target>
+          <target state="final">Lick Fast</target>
         </trans-unit>
         <trans-unit id="LowKickFast" translate="yes" xml:space="preserve">
           <source>Low Kick</source>
-          <target state="new">Low Kick</target>
+          <target state="final">Low Kick</target>
         </trans-unit>
         <trans-unit id="LowSweep" translate="yes" xml:space="preserve">
           <source>Low Sweep</source>
-          <target state="new">Low Sweep</target>
+          <target state="final">Low Sweep</target>
         </trans-unit>
         <trans-unit id="MagnetBomb" translate="yes" xml:space="preserve">
           <source>Magnet Bomb</source>
-          <target state="new">Magnet Bomb</target>
+          <target state="final">Magnet Bomb</target>
         </trans-unit>
         <trans-unit id="MegaDrain" translate="yes" xml:space="preserve">
           <source>Mega Drain</source>
-          <target state="new">Mega Drain</target>
+          <target state="final">Mega Drain</target>
         </trans-unit>
         <trans-unit id="MetalClawFast" translate="yes" xml:space="preserve">
           <source>Metal Claw</source>
-          <target state="new">Metal Claw</target>
+          <target state="final">Metal Claw</target>
         </trans-unit>
         <trans-unit id="Moonblast" translate="yes" xml:space="preserve">
           <source>Moonblast</source>
-          <target state="new">Moonblast</target>
+          <target state="final">Moonblast</target>
         </trans-unit>
         <trans-unit id="MudBomb" translate="yes" xml:space="preserve">
           <source>Mud Bomb</source>
-          <target state="new">Mud Bomb</target>
+          <target state="final">Mud Bomb</target>
         </trans-unit>
         <trans-unit id="MudShot" translate="yes" xml:space="preserve">
           <source>Mud Shot</source>
-          <target state="new">Mud Shot</target>
+          <target state="final">Mud Shot</target>
         </trans-unit>
         <trans-unit id="MudShotFast" translate="yes" xml:space="preserve">
           <source>Mud Shot</source>
-          <target state="new">Mud Shot</target>
+          <target state="final">Mud Shot</target>
         </trans-unit>
         <trans-unit id="MudSlapFast" translate="yes" xml:space="preserve">
           <source>Mud Slap</source>
-          <target state="new">Mud Slap</target>
+          <target state="final">Mud Slap</target>
         </trans-unit>
         <trans-unit id="NightSlash" translate="yes" xml:space="preserve">
           <source>Night Slash</source>
-          <target state="new">Night Slash</target>
+          <target state="final">Night Slash</target>
         </trans-unit>
         <trans-unit id="OminousWind" translate="yes" xml:space="preserve">
           <source>Ominous Wind</source>
-          <target state="new">Ominous Wind</target>
+          <target state="final">Ominous Wind</target>
         </trans-unit>
         <trans-unit id="ParabolicCharge" translate="yes" xml:space="preserve">
           <source>Parabolic Charge</source>
-          <target state="new">Parabolic Charge</target>
+          <target state="final">Parabolic Charge</target>
         </trans-unit>
         <trans-unit id="Peck" translate="yes" xml:space="preserve">
           <source>Peck</source>
-          <target state="new">Peck</target>
+          <target state="final">Peck</target>
         </trans-unit>
         <trans-unit id="PeckFast" translate="yes" xml:space="preserve">
           <source>Peck</source>
-          <target state="new">Peck</target>
+          <target state="final">Peck</target>
         </trans-unit>
         <trans-unit id="PetalBlizzard" translate="yes" xml:space="preserve">
           <source>Petal Blizzard</source>
-          <target state="new">Petal Blizzard</target>
+          <target state="final">Petal Blizzard</target>
         </trans-unit>
         <trans-unit id="PlayRough" translate="yes" xml:space="preserve">
           <source>Play Rough</source>
-          <target state="new">Play Rough</target>
+          <target state="final">Play Rough</target>
         </trans-unit>
         <trans-unit id="PoisonFang" translate="yes" xml:space="preserve">
           <source>Poison Fang</source>
-          <target state="new">Poison Fang</target>
+          <target state="final">Poison Fang</target>
         </trans-unit>
         <trans-unit id="PoisonJab" translate="yes" xml:space="preserve">
           <source>Poison Jab</source>
-          <target state="new">Poison Jab</target>
+          <target state="final">Poison Jab</target>
         </trans-unit>
         <trans-unit id="PoisonJabFast" translate="yes" xml:space="preserve">
           <source>Poison Jab</source>
-          <target state="new">Poison Jab</target>
+          <target state="final">Poison Jab</target>
         </trans-unit>
         <trans-unit id="PoisonStingFast" translate="yes" xml:space="preserve">
           <source>Poison Sting</source>
-          <target state="new">Poison Sting</target>
+          <target state="final">Poison Sting</target>
         </trans-unit>
         <trans-unit id="PoundFast" translate="yes" xml:space="preserve">
           <source>Pound Fast</source>
-          <target state="new">Pound Fast</target>
+          <target state="final">Pound Fast</target>
         </trans-unit>
         <trans-unit id="PowerGem" translate="yes" xml:space="preserve">
           <source>Power Gem</source>
-          <target state="new">Power Gem</target>
+          <target state="final">Power Gem</target>
         </trans-unit>
         <trans-unit id="PowerWhip" translate="yes" xml:space="preserve">
           <source>Power Whip</source>
-          <target state="new">Power Whip</target>
+          <target state="final">Power Whip</target>
         </trans-unit>
         <trans-unit id="Psybeam" translate="yes" xml:space="preserve">
           <source>Psybeam</source>
-          <target state="new">Psybeam</target>
+          <target state="final">Psybeam</target>
         </trans-unit>
         <trans-unit id="Psychic" translate="yes" xml:space="preserve">
           <source>Psychic</source>
@@ -2158,219 +2142,219 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="PsychoCutFast" translate="yes" xml:space="preserve">
           <source>Psycho Cut</source>
-          <target state="new">Psycho Cut</target>
+          <target state="final">Psycho Cut</target>
         </trans-unit>
         <trans-unit id="Psyshock" translate="yes" xml:space="preserve">
           <source>Psyshock</source>
-          <target state="new">Psyshock</target>
+          <target state="final">Psyshock</target>
         </trans-unit>
         <trans-unit id="Psystrike" translate="yes" xml:space="preserve">
           <source>Psystrike</source>
-          <target state="new">Psystrike</target>
+          <target state="final">Psystrike</target>
         </trans-unit>
         <trans-unit id="QuickAttackFast" translate="yes" xml:space="preserve">
           <source>Quick Attack</source>
-          <target state="new">Quick Attack</target>
+          <target state="final">Quick Attack</target>
         </trans-unit>
         <trans-unit id="RazorLeafFast" translate="yes" xml:space="preserve">
           <source>Razor Leaf</source>
-          <target state="new">Razor Leaf</target>
+          <target state="final">Razor Leaf</target>
         </trans-unit>
         <trans-unit id="Rest" translate="yes" xml:space="preserve">
           <source>Rest</source>
-          <target state="new">Rest</target>
+          <target state="final">Rest</target>
         </trans-unit>
         <trans-unit id="RockSlide" translate="yes" xml:space="preserve">
           <source>Rock Slide</source>
-          <target state="new">Rock Slide</target>
+          <target state="final">Rock Slide</target>
         </trans-unit>
         <trans-unit id="RockSmashFast" translate="yes" xml:space="preserve">
           <source>Rock Smash</source>
-          <target state="new">Rock Smash</target>
+          <target state="final">Rock Smash</target>
         </trans-unit>
         <trans-unit id="RockThrow" translate="yes" xml:space="preserve">
           <source>Rock Throw</source>
-          <target state="new">Rock Throw</target>
+          <target state="final">Rock Throw</target>
         </trans-unit>
         <trans-unit id="RockThrowFast" translate="yes" xml:space="preserve">
           <source>Rock Throw</source>
-          <target state="new">Rock Throw</target>
+          <target state="final">Rock Throw</target>
         </trans-unit>
         <trans-unit id="RockTomb" translate="yes" xml:space="preserve">
           <source>Rock Tomb</source>
-          <target state="new">Rock Tomb</target>
+          <target state="final">Rock Tomb</target>
         </trans-unit>
         <trans-unit id="Scald" translate="yes" xml:space="preserve">
           <source>Scald</source>
-          <target state="new">Scald</target>
+          <target state="final">Scald</target>
         </trans-unit>
         <trans-unit id="ScaldBlastoise" translate="yes" xml:space="preserve">
           <source>Scald</source>
-          <target state="new">Scald</target>
+          <target state="final">Scald</target>
         </trans-unit>
         <trans-unit id="ScratchFast" translate="yes" xml:space="preserve">
           <source>Scratch</source>
-          <target state="new">Scratch</target>
+          <target state="final">Scratch</target>
         </trans-unit>
         <trans-unit id="SeedBomb" translate="yes" xml:space="preserve">
           <source>Seed Bomb</source>
-          <target state="new">Seed Bomb</target>
+          <target state="final">Seed Bomb</target>
         </trans-unit>
         <trans-unit id="ShadowBall" translate="yes" xml:space="preserve">
           <source>Shadow Ball</source>
-          <target state="new">Shadow Ball</target>
+          <target state="final">Shadow Ball</target>
         </trans-unit>
         <trans-unit id="ShadowClaw" translate="yes" xml:space="preserve">
           <source>Shadow Claw</source>
-          <target state="new">Shadow Claw</target>
+          <target state="final">Shadow Claw</target>
         </trans-unit>
         <trans-unit id="ShadowClawFast" translate="yes" xml:space="preserve">
           <source>Shadow Claw</source>
-          <target state="new">Shadow Claw</target>
+          <target state="final">Shadow Claw</target>
         </trans-unit>
         <trans-unit id="ShadowPunch" translate="yes" xml:space="preserve">
           <source>Shadow Punch</source>
-          <target state="new">Shadow Punch</target>
+          <target state="final">Shadow Punch</target>
         </trans-unit>
         <trans-unit id="ShadowSneak" translate="yes" xml:space="preserve">
           <source>Shadow Sneak</source>
-          <target state="new">Shadow Sneak</target>
+          <target state="final">Shadow Sneak</target>
         </trans-unit>
         <trans-unit id="SignalBeam" translate="yes" xml:space="preserve">
           <source>Signal Beam</source>
-          <target state="new">Signal Beam</target>
+          <target state="final">Signal Beam</target>
         </trans-unit>
         <trans-unit id="Slam" translate="yes" xml:space="preserve">
           <source>Slam</source>
-          <target state="new">Slam</target>
+          <target state="final">Slam</target>
         </trans-unit>
         <trans-unit id="Slash" translate="yes" xml:space="preserve">
           <source>Slash</source>
-          <target state="new">Slash</target>
+          <target state="final">Slash</target>
         </trans-unit>
         <trans-unit id="SludgeBomb" translate="yes" xml:space="preserve">
           <source>Sludge Bomb</source>
-          <target state="new">Sludge Bomb</target>
+          <target state="final">Sludge Bomb</target>
         </trans-unit>
         <trans-unit id="SludgeWave" translate="yes" xml:space="preserve">
           <source>Sludge Wave</source>
-          <target state="new">Sludge Wave</target>
+          <target state="final">Sludge Wave</target>
         </trans-unit>
         <trans-unit id="SolarBeam" translate="yes" xml:space="preserve">
           <source>Solar Beam</source>
-          <target state="new">Solar Beam</target>
+          <target state="final">Solar Beam</target>
         </trans-unit>
         <trans-unit id="Spark" translate="yes" xml:space="preserve">
           <source>Spark</source>
-          <target state="new">Spark</target>
+          <target state="final">Spark</target>
         </trans-unit>
         <trans-unit id="SparkFast" translate="yes" xml:space="preserve">
           <source>Spark Fast</source>
-          <target state="new">Spark Fast</target>
+          <target state="final">Spark Fast</target>
         </trans-unit>
         <trans-unit id="Splash" translate="yes" xml:space="preserve">
           <source>Splash</source>
-          <target state="new">Splash</target>
+          <target state="final">Splash</target>
         </trans-unit>
         <trans-unit id="SplashFast" translate="yes" xml:space="preserve">
           <source>Splash</source>
-          <target state="new">Splash</target>
+          <target state="final">Splash</target>
         </trans-unit>
         <trans-unit id="SteelWing" translate="yes" xml:space="preserve">
           <source>Steel Wing</source>
-          <target state="new">Steel Wing</target>
+          <target state="final">Steel Wing</target>
         </trans-unit>
         <trans-unit id="SteelWingFast" translate="yes" xml:space="preserve">
           <source>Steel Wing</source>
-          <target state="new">Steel Wing</target>
+          <target state="final">Steel Wing</target>
         </trans-unit>
         <trans-unit id="Stomp" translate="yes" xml:space="preserve">
           <source>Stomp</source>
-          <target state="new">Stomp</target>
+          <target state="final">Stomp</target>
         </trans-unit>
         <trans-unit id="StoneEdge" translate="yes" xml:space="preserve">
           <source>Stone Edge</source>
-          <target state="new">Stone Edge</target>
+          <target state="final">Stone Edge</target>
         </trans-unit>
         <trans-unit id="Struggle" translate="yes" xml:space="preserve">
           <source>Struggle</source>
-          <target state="new">Struggle</target>
+          <target state="final">Struggle</target>
         </trans-unit>
         <trans-unit id="Submission" translate="yes" xml:space="preserve">
           <source>Submission</source>
-          <target state="new">Submission</target>
+          <target state="final">Submission</target>
         </trans-unit>
         <trans-unit id="SuckerPunchFast" translate="yes" xml:space="preserve">
           <source>Sucker Punch</source>
-          <target state="new">Sucker Punch</target>
+          <target state="final">Sucker Punch</target>
         </trans-unit>
         <trans-unit id="Swift" translate="yes" xml:space="preserve">
           <source>Swift</source>
-          <target state="new">Swift</target>
+          <target state="final">Swift</target>
         </trans-unit>
         <trans-unit id="TackleFast" translate="yes" xml:space="preserve">
           <source>Tackle</source>
-          <target state="new">Tackle</target>
+          <target state="final">Tackle</target>
         </trans-unit>
         <trans-unit id="Thunder" translate="yes" xml:space="preserve">
           <source>Thunder</source>
-          <target state="new">Thunder</target>
+          <target state="final">Thunder</target>
         </trans-unit>
         <trans-unit id="Thunderbolt" translate="yes" xml:space="preserve">
           <source>Thunderbolt</source>
-          <target state="new">Thunderbolt</target>
+          <target state="final">Thunderbolt</target>
         </trans-unit>
         <trans-unit id="ThunderPunch" translate="yes" xml:space="preserve">
           <source>Thunder Punch</source>
-          <target state="new">Thunder Punch</target>
+          <target state="final">Thunder Punch</target>
         </trans-unit>
         <trans-unit id="ThunderShockFast" translate="yes" xml:space="preserve">
           <source>Thunder Shock</source>
-          <target state="new">Thunder Shock</target>
+          <target state="final">Thunder Shock</target>
         </trans-unit>
         <trans-unit id="Twineedle" translate="yes" xml:space="preserve">
           <source>Twineedle</source>
-          <target state="new">Twineedle</target>
+          <target state="final">Twineedle</target>
         </trans-unit>
         <trans-unit id="Twister" translate="yes" xml:space="preserve">
           <source>Twister</source>
-          <target state="new">Twister</target>
+          <target state="final">Twister</target>
         </trans-unit>
         <trans-unit id="VineWhipFast" translate="yes" xml:space="preserve">
           <source>Vine Whip</source>
-          <target state="new">Vine Whip</target>
+          <target state="final">Vine Whip</target>
         </trans-unit>
         <trans-unit id="WaterGunFast" translate="yes" xml:space="preserve">
           <source>Water Gun</source>
-          <target state="new">Water Gun</target>
+          <target state="final">Water Gun</target>
         </trans-unit>
         <trans-unit id="WaterGunFastBlastoise" translate="yes" xml:space="preserve">
           <source>Water Gun</source>
-          <target state="new">Water Gun</target>
+          <target state="final">Water Gun</target>
         </trans-unit>
         <trans-unit id="WaterPulse" translate="yes" xml:space="preserve">
           <source>Water Pulse</source>
-          <target state="new">Water Pulse</target>
+          <target state="final">Water Pulse</target>
         </trans-unit>
         <trans-unit id="WingAttackFast" translate="yes" xml:space="preserve">
           <source>Wing Attack</source>
-          <target state="new">Wing Attack</target>
+          <target state="final">Wing Attack</target>
         </trans-unit>
         <trans-unit id="WrapGreen" translate="yes" xml:space="preserve">
           <source>Wrap Green</source>
-          <target state="new">Wrap Green</target>
+          <target state="final">Wrap Green</target>
         </trans-unit>
         <trans-unit id="WrapPink" translate="yes" xml:space="preserve">
           <source>Wrap Pink</source>
-          <target state="new">Wrap Pink</target>
+          <target state="final">Wrap Pink</target>
         </trans-unit>
         <trans-unit id="XScissor" translate="yes" xml:space="preserve">
           <source>XScissor</source>
-          <target state="new">XScissor</target>
+          <target state="final">XScissor</target>
         </trans-unit>
         <trans-unit id="ZenHeadbuttFast" translate="yes" xml:space="preserve">
           <source>Zen Headbutt</source>
-          <target state="new">Zen Headbutt</target>
+          <target state="final">Zen Headbutt</target>
         </trans-unit>
       </group>
     </body>
