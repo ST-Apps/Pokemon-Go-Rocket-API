@@ -306,4 +306,8 @@
   <data name="AwardedExperienceTextBlock.Text" xml:space="preserve">
     <value>Experience</value>
   </data>
+  <data name="LoadingMessage.Text" xml:space="preserve">
+    <value>Remember to be alert at all times.
+Stay aware of your surroundings.</value>
+  </data>
 </root>

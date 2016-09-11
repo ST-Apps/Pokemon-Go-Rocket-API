@@ -327,6 +327,9 @@ You also got {1} Stardust, {2} Candy and {3} XP.</value>
   <data name="SetNickName" xml:space="preserve">
     <value>Set Nickname</value>
   </data>
+  <data name="LoadingMessage" xml:space="preserve">
+    <value>LOADING...</value>
+  </data>
   <data name="OkText" xml:space="preserve">
     <value>O. K.</value>
     <comment>Space between . and K</comment>

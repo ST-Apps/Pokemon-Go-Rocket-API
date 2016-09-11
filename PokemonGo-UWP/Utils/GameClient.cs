@@ -535,7 +535,7 @@ namespace PokemonGo_UWP.Utils
             //Trick to trigger the PropertyChanged for MapAutomaticOrientationMode ;)
             SettingsService.Instance.MapAutomaticOrientationMode = SettingsService.Instance.MapAutomaticOrientationMode;
 			#endregion
-      Busy.SetBusy(true, Resources.CodeResources.GetString("GettingGpsSignalText"));
+      LoadingScreen.SetBusy(true, Resources.CodeResources.GetString("GettingGpsSignalText"));
 			await LocationServiceHelper.Instance.InitializeAsync();
 			LocationServiceHelper.Instance.PropertyChanged += LocationHelperPropertyChanged;
 			// Before starting we need game settings
@@ -549,12 +549,12 @@ namespace PokemonGo_UWP.Utils
                 _heartbeat = new Heartbeat();
             await _heartbeat.StartDispatcher();
             // Update before starting timer
-            Busy.SetBusy(true, Resources.CodeResources.GetString("GettingUserDataText"));
+            LoadingScreen.SetBusy(true, Resources.CodeResources.GetString("GettingUserDataText"));
             //await UpdateMapObjects();
             await UpdateInventory();
             await UpdateItemTemplates();
             if(PlayerProfile != null && PlayerStats != null)
-                Busy.SetBusy(false);
+                LoadingScreen.SetBusy(false);
         }
 
 		private static async void LocationHelperPropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -753,12 +753,12 @@ namespace PokemonGo_UWP.Utils
                 var levelUpResponse = await GetLevelUpRewards(tmpStats.Level);
                 await UpdateInventory();
                 // Set busy to false because initial loading may have left it going until we had PlayerStats
-                Busy.SetBusy(false);
+                LoadingScreen.SetBusy(false);
                 return levelUpResponse;
             }
             PlayerStats = tmpStats;
             // Set busy to false because initial loading may have left it going until we had PlayerStats
-            Busy.SetBusy(false);
+            LoadingScreen.SetBusy(false);
             return null;
         }
 
