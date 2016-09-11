@@ -805,6 +805,7 @@
     <Compile Include="ViewModels\GameMapPageViewModel.cs" />
     <Compile Include="ViewModels\AchievementDetailPageViewModel.cs" />
     <Compile Include="ViewModels\PlayerProfileViewModel.cs" />
+    <Compile Include="ViewModels\base\PoGoViewModelBase.cs" />
     <Compile Include="ViewModels\PokedexDetailViewModel.cs" />
     <Compile Include="ViewModels\PokedexPageViewModel.cs" />
     <Compile Include="ViewModels\PokemonDetailsPageViewModel.cs" />

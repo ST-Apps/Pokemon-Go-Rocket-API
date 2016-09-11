@@ -26,7 +26,7 @@ using PokemonGo_UWP.Controls;
 
 namespace PokemonGo_UWP.ViewModels
 {
-    public class GameMapPageViewModel : ViewModelBase
+    public class GameMapPageViewModel : PoGoViewModelBase
     {
 
         public GameMapPageViewModel()
@@ -140,16 +140,6 @@ namespace PokemonGo_UWP.ViewModels
         #region Game Management Vars
 
         /// <summary>
-        ///     Player's profile, we use it just for the username
-        /// </summary>
-        private PlayerData _playerProfile;
-
-        /// <summary>
-        ///     Stats for the current player, including current level and experience related stuff
-        /// </summary>
-        private PlayerStats _playerStats;
-
-        /// <summary>
         ///     Response to the level up event
         /// </summary>
         private LevelUpRewardsResponse _levelUpRewards;
@@ -175,23 +165,6 @@ namespace PokemonGo_UWP.ViewModels
         /// </summary>
         public string MapServiceToken => ApplicationKeys.MapServiceToken;
 
-        /// <summary>
-        ///     Player's profile, we use it just for the username
-        /// </summary>
-        public PlayerData PlayerProfile
-        {
-            get { return _playerProfile; }
-            private set { Set(ref _playerProfile, value); }
-        }
-
-        /// <summary>
-        ///     Stats for the current player, including current level and experience related stuff
-        /// </summary>
-        public PlayerStats PlayerStats
-        {
-            get { return _playerStats; }
-            private set { Set(ref _playerStats, value); }
-        }
 
         /// <summary>
         ///     Response to the level up event
