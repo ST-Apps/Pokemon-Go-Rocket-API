@@ -13,7 +13,7 @@ namespace PokemonGo_UWP.ViewModels {
     /// <summary>
     /// This Base View Models handles basic implementations which are used in many other ViewModels.
     /// </summary>
-    public class PoGoViewModelBase : ViewModelBase {
+    public abstract class PoGoViewModelBase : ViewModelBase {
         #region Lifecycle Handlers
 
         /// <summary>
