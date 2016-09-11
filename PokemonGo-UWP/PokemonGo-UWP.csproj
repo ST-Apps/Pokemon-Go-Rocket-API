@@ -753,6 +753,7 @@
     <Compile Include="Entities\ObservableCollectionPlus.cs" />
     <Compile Include="Entities\ItemDataWrapper.cs" />
     <Compile Include="Entities\PokemonDataWrapper.cs" />
+    <Compile Include="Entities\PokemonModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Achievements\AchievementValueAttribute.cs" />
     <Compile Include="Utils\Achievements\BronzeAttribute.cs" />
@@ -772,12 +773,14 @@
     <Compile Include="Utils\Helpers\GeoHelper.cs" />
     <Compile Include="Utils\Helpers\IStorageHelper.cs" />
     <Compile Include="Utils\Helpers\LiveTileHelper.cs" />
+    <Compile Include="Utils\Helpers\LocationServiceHelper.cs" />
     <Compile Include="Utils\Helpers\MapOrientationModes.cs" />
     <Compile Include="Utils\Helpers\LiveTileModes.cs" />
     <Compile Include="Utils\Helpers\LocalCacheHelper.cs" />
     <Compile Include="Utils\Helpers\ProximityHelper.cs" />
     <Compile Include="Utils\Helpers\ProtobufJsonNetConverter.cs" />
     <Compile Include="Utils\Helpers\StorageHelper.cs" />
+    <Compile Include="Utils\Signature\DeviceInfoBase.cs" />
     <Compile Include="Utils\Signature\DeviceInfos.cs" />
     <Compile Include="Utils\Helpers\ExceptionHandler.cs" />
     <Compile Include="Utils\GameClient.cs" />
@@ -802,6 +805,7 @@
     <Compile Include="ViewModels\GameMapPageViewModel.cs" />
     <Compile Include="ViewModels\AchievementDetailPageViewModel.cs" />
     <Compile Include="ViewModels\PlayerProfileViewModel.cs" />
+    <Compile Include="ViewModels\PokedexDetailViewModel.cs" />
     <Compile Include="ViewModels\PokedexPageViewModel.cs" />
     <Compile Include="ViewModels\PokemonDetailsPageViewModel.cs" />
     <Compile Include="ViewModels\ItemsInventoryPageViewModel.cs" />
@@ -823,6 +827,9 @@
     </Compile>
     <Compile Include="Views\PlayerProfilePage.xaml.cs">
       <DependentUpon>PlayerProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PokedexDetailPage.xaml.cs">
+      <DependentUpon>PokedexDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PokedexPage.xaml.cs">
       <DependentUpon>PokedexPage.xaml</DependentUpon>
@@ -929,6 +936,10 @@
     <Page Include="Views\PlayerProfilePage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PokedexDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\PokedexPage.xaml">
       <Generator>MSBuild:Compile</Generator>

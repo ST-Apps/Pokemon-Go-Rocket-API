@@ -12,13 +12,13 @@ namespace PokemonGoAPI.Login
         /// <summary>
         /// 
         /// </summary>
-        [JsonProperty("lt", Required = Required.Always)]
+        [JsonProperty("lt")]
         public string Lt { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [JsonProperty("execution", Required = Required.Always)]
+        [JsonProperty("execution")]
         public string Execution { get; set; }
 
     }

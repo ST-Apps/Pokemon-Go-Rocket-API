@@ -51,6 +51,8 @@ namespace PokemonGo_UWP.Utils
 
     public class PokemonIdToNumericId : IValueConverter
     {
+        #region Implementation of IValueConverter
+
         public object Convert(object value, Type targetType, object parameter, string language)
         {
             if (value is PokemonId)
@@ -62,9 +64,32 @@ namespace PokemonGo_UWP.Utils
         {
             return value;
         }
+
+        #endregion
     }
+
+    public class ItemClickEventArgsToClickedItemConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            ItemClickEventArgs args = (ItemClickEventArgs)value;
+            return args.ClickedItem;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return value;
+        }
+
+        #endregion
+    }
+
     public class PokemonIdToPokedexDescription : IValueConverter
     {
+        #region Implementation of IValueConverter
+
         public object Convert(object value, Type targetType, object parameter, string language)
         {
             var path = $"{value.ToString()}/Description";
@@ -76,7 +101,10 @@ namespace PokemonGo_UWP.Utils
         {
             return value;
         }
+
+        #endregion
     }
+
     public class PokemonIdToPokemonNameConverter : IValueConverter
     {
         #region Implementation of IValueConverter
@@ -411,7 +439,7 @@ namespace PokemonGo_UWP.Utils
             var badgeType =
                 (BadgeTypeAttribute)fieldInfo.GetCustomAttributes(typeof(BadgeTypeAttribute), false).First();
 
-            return badgeType == null ? "" : string.Format(Resources.Achievements.GetString(badgeType.Value.ToString() + "Description"), achievementType.Value);
+            return badgeType == null ? "" : string.Format(Resources.Achievements.GetString(badgeType.Value + "Description"), new AchievementValueConverter().Convert(achievementType.Value, null, null, string.Empty));
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
@@ -541,7 +569,11 @@ namespace PokemonGo_UWP.Utils
             }
             if (value is float)
             {
-                return float.Parse(value.ToString()).ToString("N1");
+                return ((float)value).ToString("N1");
+            }
+            if (value is double)
+            {
+                return ((double)value).ToString("N1");
             }
             return value;
         }

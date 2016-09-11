@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using PokemonGo.RocketAPI;
 using PokemonGo_UWP.Utils;
+using PokemonGo_UWP.ViewModels;
 using POGOProtos.Networking.Responses;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238

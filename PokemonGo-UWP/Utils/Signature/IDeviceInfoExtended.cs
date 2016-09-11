@@ -11,6 +11,5 @@ namespace PokemonGo_UWP.Utils
     {
         void CollectLocationData();
         string Platform { get; }
-        int Version { get; }
     }
 }

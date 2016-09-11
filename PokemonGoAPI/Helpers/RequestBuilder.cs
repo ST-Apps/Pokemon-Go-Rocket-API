@@ -54,12 +54,12 @@ namespace PokemonGo.RocketAPI.Helpers
             {
                 LocationHash1 =
                     Utils.GenerateLocation1(authSeed, requestEnvelope.Latitude, requestEnvelope.Longitude,
-                        requestEnvelope.Accuracy),
+                        requestEnvelope.Accuracy, _deviceInfo.VersionData.HashSeed1),
                 LocationHash2 =
                     Utils.GenerateLocation2(requestEnvelope.Latitude, requestEnvelope.Longitude,
-                        requestEnvelope.Accuracy),
+                        requestEnvelope.Accuracy, _deviceInfo.VersionData.HashSeed1),
                 SessionHash = ByteString.CopyFrom(_sessionHash),
-                Unknown25 = 7363665268261373700L,
+                Unknown25 = _deviceInfo.VersionData.VersionHash,
                 Timestamp = (ulong)DateTime.UtcNow.ToUnixTime(),
                 TimestampSinceStart = (ulong)_deviceInfo.TimeSnapshot,
                 SensorInfo = new Signature.Types.SensorInfo
@@ -149,7 +149,7 @@ namespace PokemonGo.RocketAPI.Helpers
             foreach (var request in requestEnvelope.Requests)
             {
                 sig.RequestHash.Add(
-                    Utils.GenerateRequestHash(authSeed, request.ToByteArray())
+                    Utils.GenerateRequestHash(authSeed, request.ToByteArray(), _deviceInfo.VersionData.HashSeed1)
                     );
             }
 

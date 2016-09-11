@@ -375,7 +375,11 @@ namespace PokemonGo_UWP.ViewModels
             if (itemId == null)
                 return null;
 
-            return ItemsInventory?.FirstOrDefault(item => item.ItemId == itemId);
+            var ball = ItemsInventory?.FirstOrDefault(item => item.ItemId == itemId);
+            if (ball == null || ball.Count <= 0)
+                return null;
+
+            return ball;
         }
 
         private DelegateCommand<bool> _useSelectedCaptureItem;

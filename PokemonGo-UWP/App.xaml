@@ -16,6 +16,7 @@
             <utils:PokemonTypeToBackgroundImageConverter x:Key="PokemonTypeToBackgroundConverter"/>
             <utils:PokemonIdToPokedexDescription x:Key="PokemonIdToPokedexDescription"/>
             <utils:PokemonIdToNumericId x:Key="PokemonIdToNumericId" />
+            <utils:ItemClickEventArgsToClickedItemConverter x:Key="ItemClickEventArgsToClickedItemConverter" />
             <utils:PokemonIdToPokemonSpriteConverter x:Key="PokemonIdToPokemonSpriteConverter" />
             <utils:PokemonTypeTranslationConverter x:Key="PokemonTypeTranslationConverter" />
             <utils:EmptyConverter x:Key="EmptyConverter" />

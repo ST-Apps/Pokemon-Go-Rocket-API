@@ -1,6 +1,22 @@
-Contributing to PoGo-UWP
+Contributing to PoGo
 ========================
 
+*TL;DR:*
+
+Thanks for contributing!
+-----------
+Issues:
+- Search through existing issues before you create a new one
+- Concise & descriptive issue titles
+- Use the template, it's there for a reason. Your post doesn't fit? -> Contact us via social media.
+
+Pull Requests:
+- Ask before creating PRs with new features or major rewrites
+- Use 4 spaces per indentation level! No tab characters.
+- Keep your local master up-to-date, only work in dedicated branches
+- Always use `git rebase PoGo/master` from feature branch instead of merging.
+
+Long story:  
 We welcome and appreciate contributions from the community.
 There are many ways to become involved with PoGo-UWP:
 including filing issues,

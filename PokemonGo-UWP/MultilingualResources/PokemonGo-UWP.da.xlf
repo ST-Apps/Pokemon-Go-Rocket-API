@@ -258,12 +258,6 @@
           <source>Experience</source>
           <target state="new">Experience</target>
         </trans-unit>
-        <trans-unit id="LoadingMessage.Text" translate="yes" xml:space="preserve">
-          <source>Remember to be alert at all times.
-Stay aware of your surroundings.</source>
-          <target state="new">Remember to be alert at all times.
-Stay aware of your surroundings.</target>
-        </trans-unit>
       </group>
     </body>
   </file>
@@ -651,9 +645,9 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
           <source>{0} is not in catch range anymore.</source>
           <target state="new">{0} is not in catch range anymore.</target>
         </trans-unit>
-        <trans-unit id="LoadingMessage" translate="yes" xml:space="preserve">
-          <source>LOADING...</source>
-          <target state="new">LOADING...</target>
+        <trans-unit id="CannotTransferFavorite" translate="yes" xml:space="preserve">
+          <source>Cannot transfer a favorite Pokémon!</source>
+          <target state="new">Cannot transfer a favorite Pokémon!</target>
         </trans-unit>
       </group>
     </body>

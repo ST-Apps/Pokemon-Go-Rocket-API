@@ -344,6 +344,15 @@ namespace PokemonGo_UWP.ViewModels
         public DelegateCommand TransferPokemonCommand => _transferPokemonCommand ?? (
           _transferPokemonCommand = new DelegateCommand(() =>
           {
+              if(IsFavorite) {
+                  var cannotTransferDialog = new PoGoMessageDialog(Resources.CodeResources.GetString("CannotTransferFavorite"), "")
+                  {
+                      CoverBackground = true,
+                      AnimationType = PoGoMessageDialogAnimation.Bottom
+                  };
+                  cannotTransferDialog.Show();
+                  return;
+              }
               // Ask for confirmation before moving the Pokemon
               var name = Resources.Pokemon.GetString(CurrentPokemon.PokemonId.ToString());
               var dialog =

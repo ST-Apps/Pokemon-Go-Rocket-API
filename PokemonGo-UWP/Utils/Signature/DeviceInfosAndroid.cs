@@ -1,10 +1,8 @@
 ﻿using PokemonGo.RocketAPI.Helpers;
+using PokemonGo_UWP.Utils.Helpers;
 using Superbest_random;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Windows.Devices.Sensors;
 
 namespace PokemonGo_UWP.Utils
@@ -12,7 +10,7 @@ namespace PokemonGo_UWP.Utils
     /// <summary>
     /// Device infos used to sign requests
     /// </summary>
-    public class DeviceInfosAndroid : IDeviceInfoExtended
+    public class DeviceInfosAndroid : DeviceInfoBase, IDeviceInfoExtended
     {
 
         public DeviceInfosAndroid()
@@ -47,8 +45,6 @@ namespace PokemonGo_UWP.Utils
         public string FirmwareBrand => "shamu";
 
         public string FirmwareType => "user";
-
-        public long TimeSnapshot => DeviceInfos.RelativeTimeFromStart;
 
         #endregion
 
@@ -90,8 +86,6 @@ namespace PokemonGo_UWP.Utils
 
         public string Platform => "ANDROID";
 
-        public int Version => 3300;
-
         private List<IGpsSattelitesInfo> _gpsSattelitesInfo = new List<IGpsSattelitesInfo>();
         private object _gpsSattelitesInfoLock = new object();
         public IGpsSattelitesInfo[] GpsSattelitesInfo
@@ -103,7 +97,7 @@ namespace PokemonGo_UWP.Utils
                     _gpsSattelitesInfo.Clear();
 
 
-                    if(GameClient.Geoposition?.Coordinate?.SatelliteData != null)
+                    if(LocationServiceHelper.Instance.Geoposition?.Coordinate?.SatelliteData != null)
                     {
                         //cant find API for this in UWP
                         //so mwhere to get that data? emulate? is there some service or algorithm for get GPS sattelites info?
@@ -175,12 +169,12 @@ namespace PokemonGo_UWP.Utils
 
             public static ILocationFix CollectData()
             {
-                if (GameClient.Geoposition.Coordinate == null)
+                if (LocationServiceHelper.Instance.Geoposition.Coordinate == null)
                     return null; //Nothing to collect
 
                 LocationFixAndroid loc = new LocationFixAndroid();
                 //Collect provider
-                switch (GameClient.Geoposition.Coordinate.PositionSource)
+                switch (LocationServiceHelper.Instance.Geoposition.Coordinate.PositionSource)
                 {
                     case Windows.Devices.Geolocation.PositionSource.WiFi:
                     case Windows.Devices.Geolocation.PositionSource.Cellular:
@@ -196,9 +190,9 @@ namespace PokemonGo_UWP.Utils
 
                 //Collect coordinates
 
-                loc.Latitude = (float)GameClient.Geoposition.Coordinate.Point.Position.Latitude;
-                loc.Longitude = (float)GameClient.Geoposition.Coordinate.Point.Position.Longitude;
-                loc.Altitude = (float)GameClient.Geoposition.Coordinate.Point.Position.Altitude;
+                loc.Latitude = (float)LocationServiceHelper.Instance.Geoposition.Coordinate.Point.Position.Latitude;
+                loc.Longitude = (float)LocationServiceHelper.Instance.Geoposition.Coordinate.Point.Position.Longitude;
+                loc.Altitude = (float)LocationServiceHelper.Instance.Geoposition.Coordinate.Point.Position.Altitude;
 
                 // TODO: why 3? need more infos.
                 loc.Floor = 3;
@@ -208,9 +202,11 @@ namespace PokemonGo_UWP.Utils
 
                 loc.TimeSnapshot = DeviceInfos.RelativeTimeFromStart;
 
-                loc.HorizontalAccuracy = (float?)GameClient.Geoposition.Coordinate?.Accuracy ?? (float)Math.Floor((float)_random.NextGaussian(1.0, 1.0)); //better would be exp distribution
+                loc.HorizontalAccuracy = (float?)LocationServiceHelper.Instance.Geoposition.Coordinate?.SatelliteData.HorizontalDilutionOfPrecision ?? (float)Math.Floor((float)_random.NextGaussian(1.0, 1.0)); //better would be exp distribution
+																																																																																																								 // @robertmclaws: VericalAccuracy is not currently transmitted in the payload. 
+																																																																																																								 //loc.VerticalAccuracy = (float?)LocationServiceHelper.Instance.Geoposition.Coordinate?.SatelliteData.VerticalDilutionOfPrecision ?? (float)Math.Floor((float)_random.NextGaussian(1.0, 1.0)); //better would be exp distribution
 
-                return loc;
+				return loc;
             }
 
             public string Provider { get; private set; }

@@ -110,7 +110,7 @@ namespace PokemonGo_UWP.Utils
                     }
                     else if (secondsSinceLast >= minSeconds)
                     {
-                        var metersMoved = GeoHelper.Distance(Geoposition.Coordinate.Point, lastGeoCoordinate.Coordinate.Point);
+                        var metersMoved = GeoHelper.Distance(LocationServiceHelper.Instance.Geoposition.Coordinate.Point, lastGeoCoordinate.Coordinate.Point);
                         if (secondsSinceLast >= maxSeconds)
                         {
                             Logger.Write($"Refreshing MapObjects, reason: 'secondsSinceLast({secondsSinceLast}) >= maxSeconds({maxSeconds})'.");
@@ -480,28 +480,19 @@ namespace PokemonGo_UWP.Utils
             if (!SettingsService.Instance.RememberLoginData)
                 SettingsService.Instance.UserCredentials = null;
             _heartbeat?.StopDispatcher();
-            if(_geolocator != null)
-                _geolocator.PositionChanged -= GeolocatorOnPositionChanged;
-            _geolocator = null;
-            _lastGeopositionMapObjectsRequest = null;
+			LocationServiceHelper.Instance.PropertyChanged -= LocationHelperPropertyChanged;
+			_lastGeopositionMapObjectsRequest = null;
         }
 
         #endregion
 
         #region Data Updating
-        private static Geolocator _geolocator;
         private static Compass _compass;
-
-        public static Geoposition Geoposition { get; private set; }
 
         private static Heartbeat _heartbeat;
 
         public static event EventHandler<GetHatchedEggsResponse> OnEggHatched;
 
-        /// <summary>
-        ///     We fire this event when the current position changes
-        /// </summary>
-        public static event EventHandler<Geoposition> GeopositionUpdated;
         #region Compass Stuff
         /// <summary>
         /// We fire this event when the current compass position changes
@@ -517,7 +508,6 @@ namespace PokemonGo_UWP.Utils
         /// </summary>
         public static async Task InitializeDataUpdate()
         {
-            LoadingScreen.SetBusy(true);
             #region Compass management
             SettingsService.Instance.PropertyChanged += (object sender, PropertyChangedEventArgs e) =>
             {
@@ -544,46 +534,39 @@ namespace PokemonGo_UWP.Utils
             };
             //Trick to trigger the PropertyChanged for MapAutomaticOrientationMode ;)
             SettingsService.Instance.MapAutomaticOrientationMode = SettingsService.Instance.MapAutomaticOrientationMode;
-            #endregion
-            _geolocator = new Geolocator
-            {
-                DesiredAccuracy = PositionAccuracy.High,
-                DesiredAccuracyInMeters = 5,
-                ReportInterval = 1000,
-                MovementThreshold = 5
-            };
-
-            LoadingScreen.SetBusy(true, Resources.CodeResources.GetString("GettingGpsSignalText"));
-            Geoposition = Geoposition ?? await _geolocator.GetGeopositionAsync();
-            GeopositionUpdated?.Invoke(null, Geoposition);
-            _geolocator.PositionChanged += GeolocatorOnPositionChanged;
-            // Before starting we need game settings
-            GameSetting =
+			#endregion
+      Busy.SetBusy(true, Resources.CodeResources.GetString("GettingGpsSignalText"));
+			await LocationServiceHelper.Instance.InitializeAsync();
+			LocationServiceHelper.Instance.PropertyChanged += LocationHelperPropertyChanged;
+			// Before starting we need game settings
+			GameSetting =
                 await
                     DataCache.GetAsync(nameof(GameSetting), async () => (await _client.Download.GetSettings()).Settings,
                         DateTime.Now.AddMonths(1));
             // Update geolocator settings based on server
-            _geolocator.MovementThreshold = GameSetting.MapSettings.GetMapObjectsMinDistanceMeters;
+            LocationServiceHelper.Instance.UpdateMovementThreshold(GameSetting.MapSettings.GetMapObjectsMinDistanceMeters);
             if (_heartbeat == null)
                 _heartbeat = new Heartbeat();
             await _heartbeat.StartDispatcher();
             // Update before starting timer
-            LoadingScreen.SetBusy(true, Resources.CodeResources.GetString("GettingUserDataText"));
+            Busy.SetBusy(true, Resources.CodeResources.GetString("GettingUserDataText"));
             //await UpdateMapObjects();
             await UpdateInventory();
             await UpdateItemTemplates();
-            LoadingScreen.SetBusy(false);
+            if(PlayerProfile != null && PlayerStats != null)
+                Busy.SetBusy(false);
         }
 
-        private static async void GeolocatorOnPositionChanged(Geolocator sender, PositionChangedEventArgs args)
-        {
-            Geoposition = args.Position;
-            // Updating player's position
-            var position = Geoposition.Coordinate.Point.Position;
-            if (_client != null)
-                await _client.Player.UpdatePlayerLocation(position.Latitude, position.Longitude, Geoposition.Coordinate.Accuracy);
-            GeopositionUpdated?.Invoke(null, Geoposition);
-        }
+		private static async void LocationHelperPropertyChanged(object sender, PropertyChangedEventArgs e)
+		{
+			if(e.PropertyName==nameof(LocationServiceHelper.Instance.Geoposition))
+			{
+				// Updating player's position
+				var position = LocationServiceHelper.Instance.Geoposition.Coordinate.Point.Position;
+				if (_client != null)
+					await _client.Player.UpdatePlayerLocation(position.Latitude, position.Longitude, LocationServiceHelper.Instance.Geoposition.Coordinate.Accuracy);
+			}
+		}
 
         /// <summary>
         ///     DateTime for the last map update
@@ -613,7 +596,7 @@ namespace PokemonGo_UWP.Utils
         private static async Task UpdateMapObjects()
         {
             // Get all map objects from server
-            var mapObjects = await GetMapObjects(Geoposition);
+            var mapObjects = await GetMapObjects(LocationServiceHelper.Instance.Geoposition);
             _lastUpdate = DateTime.Now;
 
             // update catchable pokemons
@@ -769,9 +752,13 @@ namespace PokemonGo_UWP.Utils
                 PlayerStats = tmpStats;
                 var levelUpResponse = await GetLevelUpRewards(tmpStats.Level);
                 await UpdateInventory();
+                // Set busy to false because initial loading may have left it going until we had PlayerStats
+                Busy.SetBusy(false);
                 return levelUpResponse;
             }
             PlayerStats = tmpStats;
+            // Set busy to false because initial loading may have left it going until we had PlayerStats
+            Busy.SetBusy(false);
             return null;
         }
 

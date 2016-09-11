@@ -15,6 +15,8 @@ using Newtonsoft.Json.Linq;
 using PokemonGo.RocketAPI;
 using PokemonGo_UWP.Utils;
 using Template10.Common;
+using PokemonGo_UWP.Utils.Helpers;
+using System.ComponentModel;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -178,7 +180,7 @@ namespace PokemonGo_UWP.Views
             // See if we need to update the map
             if ((e.Parameter != null) && (e.NavigationMode != NavigationMode.Back))
             {
-                var mode =
+                GameMapNavigationModes mode =
                     ((JObject) JsonConvert.DeserializeObject((string) e.Parameter)).Last
                         .ToObject<GameMapNavigationModes>();
                 if ((mode == GameMapNavigationModes.AppStart) || (mode == GameMapNavigationModes.SettingsUpdate))
@@ -231,13 +233,12 @@ namespace PokemonGo_UWP.Views
 
         private async void UpdateMap()
         {
-
-			if (GameClient.Geoposition != null)
+			if (LocationServiceHelper.Instance.Geoposition != null)
 			{ 
 				await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
             {
                     // Set player icon's position
-                    MapControl.SetLocation(PlayerImage, GameClient.Geoposition.Coordinate.Point);
+                    MapControl.SetLocation(PlayerImage, LocationServiceHelper.Instance.Geoposition.Coordinate.Point);
 
                     // Update angle and center only if map is not being manipulated
                     if (lastAutoPosition == null)
@@ -246,7 +247,7 @@ namespace PokemonGo_UWP.Views
 									//Save Center
                         lastAutoPosition = GameMapControl.Center;
 									//Reset orientation to default
-                        if (GameMapControl.Heading == GameClient.Geoposition.Coordinate.Heading)
+                        if (GameMapControl.Heading == LocationServiceHelper.Instance.Geoposition.Coordinate.Heading)
                             GameMapControl.Heading = 0;
                     }
 
@@ -255,18 +256,18 @@ namespace PokemonGo_UWP.Views
                         $"{GameMapControl.Center.Position.Latitude: 000.0000} ; {GameMapControl.Center.Position.Longitude: 000.0000}";
                     string previousCoord =
                         $"{lastAutoPosition.Position.Latitude: 000.0000} ; {lastAutoPosition.Position.Longitude: 000.0000}";
-                    if (currentCoord == previousCoord)
+                    if (currentCoord == previousCoord && ReactivateMapAutoUpdateButton != null)
                     {
                         //Previous position was set automatically, continue!
                         ReactivateMapAutoUpdateButton.Visibility = Visibility.Collapsed;
-                        GameMapControl.Center = GameClient.Geoposition.Coordinate.Point;
+                        GameMapControl.Center = LocationServiceHelper.Instance.Geoposition.Coordinate.Point;
 												//await GameMapControl.TrySetViewAsync(GameClient.Geoposition.Coordinate.Point);
 
                         lastAutoPosition = GameMapControl.Center;
 
                         if ((SettingsService.Instance.MapAutomaticOrientationMode == MapAutomaticOrientationModes.GPS) &&
-                            (GameClient.Geoposition.Coordinate.Heading != null))
-                            await GameMapControl.TryRotateToAsync( GameClient.Geoposition.Coordinate.Heading.Value);
+                            (LocationServiceHelper.Instance.Geoposition.Coordinate.Heading != null))
+                            await GameMapControl.TryRotateToAsync(LocationServiceHelper.Instance.Geoposition.Coordinate.Heading.Value);
 
                         if (SettingsService.Instance.IsRememberMapZoomEnabled)
                             GameMapControl.ZoomLevel = SettingsService.Instance.Zoomlevel;
@@ -277,11 +278,10 @@ namespace PokemonGo_UWP.Views
 
         private void SubscribeToCaptureEvents()
         {
-            GameClient.GeopositionUpdated += GeopositionUpdated;
+			LocationServiceHelper.Instance.PropertyChanged += LocationHelperPropertyChanged;
             GameClient.HeadingUpdated += HeadingUpdated;
             ViewModel.LevelUpRewardsAwarded += ViewModelOnLevelUpRewardsAwarded;
         }
-
 
         private TimeSpan tick = new TimeSpan(DateTime.Now.Ticks);
 
@@ -299,15 +299,18 @@ namespace PokemonGo_UWP.Views
 
         private void UnsubscribeToCaptureEvents()
         {
-            GameClient.GeopositionUpdated -= GeopositionUpdated;
+			LocationServiceHelper.Instance.PropertyChanged -= LocationHelperPropertyChanged;
             GameClient.HeadingUpdated -= HeadingUpdated;
             ViewModel.LevelUpRewardsAwarded -= ViewModelOnLevelUpRewardsAwarded;
         }
 
-        private void GeopositionUpdated(object sender, Geoposition e)
-        {
-            UpdateMap();
-        }
+		private void LocationHelperPropertyChanged(object sender, PropertyChangedEventArgs e)
+		{
+			if (e.PropertyName == nameof(LocationServiceHelper.Instance.Geoposition))
+			{
+				UpdateMap();
+			}
+		}
 
         private void ViewModelOnLevelUpRewardsAwarded(object sender, EventArgs eventArgs)
         {

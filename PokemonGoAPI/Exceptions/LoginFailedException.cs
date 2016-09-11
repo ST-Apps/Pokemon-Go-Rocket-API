@@ -4,22 +4,32 @@ using System.Threading.Tasks;
 
 namespace PokemonGo.RocketAPI.Exceptions
 {
+
+    /// <summary>
+    /// 
+    /// </summary>
     public class LoginFailedException : Exception
     {
+
+        #region Properties
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string LoginResponse { get; }
+
+        #endregion
+
+
         public LoginFailedException()
         {
         }
 
-        public LoginFailedException(HttpResponseMessage loginResponse)
+        public LoginFailedException(string loginResponse)
         {
             LoginResponse = loginResponse;
         }
 
-        public HttpResponseMessage LoginResponse { get; }
-
-        public async Task<string> GetLoginResponseContentAsString()
-        {
-            return await LoginResponse.Content.ReadAsStringAsync();
-        }
     }
+
 }

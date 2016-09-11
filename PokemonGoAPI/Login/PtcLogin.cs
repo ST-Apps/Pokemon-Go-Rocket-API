@@ -24,6 +24,8 @@ namespace PokemonGo.RocketAPI.Login
 
         #region Private Members
 
+        private static HttpClient HttpClient;
+
         /// <summary>
         /// The Password for the user currently attempting  to authenticate.
         /// </summary>
@@ -37,6 +39,18 @@ namespace PokemonGo.RocketAPI.Login
         #endregion
 
         #region Constructors
+
+        static PtcLogin()
+        {
+            HttpClient = new HttpClient(
+                new HttpClientHandler
+                {
+                    AutomaticDecompression = DecompressionMethods.GZip,
+                    AllowAutoRedirect = false
+                }
+            );
+            HttpClient.DefaultRequestHeaders.UserAgent.TryParseAdd(Constants.LoginUserAgent);
+        }
 
         /// <summary>
         /// 
@@ -59,43 +73,27 @@ namespace PokemonGo.RocketAPI.Login
         /// <returns></returns>
         public async Task<AccessToken> GetAccessToken()
         {
-            using (var handler = GetHttpClientHandler())
-            {
-                using (var httpClient = new HttpClient(handler))
-                {
-                    // robertmclaws: Should we be setting every UserAgent property like the other requests?
-                    httpClient.DefaultRequestHeaders.UserAgent.TryParseAdd(Constants.LoginUserAgent);
-
-                    var loginData = await GetLoginParameters(httpClient).ConfigureAwait(false);
-                    var authTicket = await GetAuthenticationTicket(httpClient, loginData).ConfigureAwait(false);
-                    var accessToken = await GetOAuthToken(httpClient, authTicket).ConfigureAwait(false);
-                    return accessToken;
-                }
-            }
+                // robertmclaws: Should we be setting every UserAgent property like the other requests?
+                var loginData = await GetLoginParameters().ConfigureAwait(false);
+                var authTicket = await GetAuthenticationTicket(loginData).ConfigureAwait(false);
+                var accessToken = await GetOAuthToken(authTicket).ConfigureAwait(false);
+                return accessToken;
         }
 
         #endregion
 
         #region Private Methods
 
-        private HttpClientHandler GetHttpClientHandler()
-        {
-            return new HttpClientHandler
-            {
-                AutomaticDecompression = DecompressionMethods.GZip,
-                AllowAutoRedirect = false
-            };
-        }
-
         /// <summary>
         /// Responsible for retrieving login parameters for <see cref="GetAuthenticationTicket" />.
         /// </summary>
         /// <param name="httpClient">An initialized <see cref="HttpClient" /></param>
         /// <returns><see cref="PtcLoginParameters" /> for <see cref="GetAuthenticationTicket" />.</returns>
-        private async Task<PtcLoginParameters> GetLoginParameters(HttpClient httpClient)
+        private async Task<PtcLoginParameters> GetLoginParameters()
         {
-            var response = await httpClient.GetAsync(Constants.LoginUrl);
-            var loginData = JsonConvert.DeserializeObject<PtcLoginParameters>(await response.Content.ReadAsStringAsync().ConfigureAwait(false));
+            var response = await HttpClient.GetAsync(Constants.LoginUrl);
+            var responseContent = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+            var loginData = JsonConvert.DeserializeObject<PtcLoginParameters>(responseContent);
             return loginData;
         }
 
@@ -105,7 +103,7 @@ namespace PokemonGo.RocketAPI.Login
         /// <param name="httpClient">The <see cref="HttpClient"/> instance to use for this request.</param>
         /// <param name="loginData">The <see cref="PtcLoginParameters" /> to use from this request. Obtained by calling <see cref="GetLoginParameters(HttpClient)"/>.</param>
         /// <returns></returns>
-        private async Task<string> GetAuthenticationTicket(HttpClient httpClient, PtcLoginParameters loginData)
+        private async Task<string> GetAuthenticationTicket(PtcLoginParameters loginData)
         {
             var requestData = new Dictionary<string, string>
                 {
@@ -116,7 +114,7 @@ namespace PokemonGo.RocketAPI.Login
                     {"password", Password}
                 };
 
-            var responseMessage = await httpClient.PostAsync(Constants.LoginUrl, new FormUrlEncodedContent(requestData)).ConfigureAwait(false);
+            var responseMessage = await HttpClient.PostAsync(Constants.LoginUrl, new FormUrlEncodedContent(requestData)).ConfigureAwait(false);
 
             // robertmclaws: No need to even read the string if we have results from the location query.
             if (responseMessage.Headers.Location != null)
@@ -131,14 +129,31 @@ namespace PokemonGo.RocketAPI.Login
             }
 
             var responseContent = await responseMessage.Content.ReadAsStringAsync().ConfigureAwait(false);
-            var response = JsonConvert.DeserializeObject<PtcAuthenticationTicketResponse>(responseContent);
+            PtcAuthenticationTicketResponse response = null;
+
+            // @robertmclaws: Let's try to catch situations we haven't thought of yet.
+            try
+            {
+                response = JsonConvert.DeserializeObject<PtcAuthenticationTicketResponse>(responseContent);
+            }
+            catch (Exception ex)
+            {
+                Logger.Write(ex.Message);
+                throw new LoginFailedException("We encountered a response from the PTC login servers thet we didn't anticipate. Please take a screenshot and open a ticket."
+                    + Environment.NewLine + responseContent.Replace("/n", ""));
+            }
+
+            if (!string.IsNullOrWhiteSpace(response.ErrorCode) && response.ErrorCode.EndsWith("activation_required"))
+            {
+                throw new LoginFailedException($"Your two-day grace period has expired, and your PTC account must now be activated." + Environment.NewLine + $"Please visit {response.Redirect}.");
+            }
 
             var loginFailedWords = new string[] { "incorrect", "disabled" };
 
             var loginFailed = loginFailedWords.Any(failedWord => response.Errors.Any(error => error.Contains(failedWord)));
             if (loginFailed)
             {
-                throw new LoginFailedException(responseMessage);
+                throw new LoginFailedException(response.Errors[0]);
             }
             throw new Exception($"Pokemon Trainer Club responded with the following error(s): '{string.Join(", ", response.Errors)}'");
         }
@@ -149,7 +164,7 @@ namespace PokemonGo.RocketAPI.Login
         /// <param name="httpClient">The <see cref="HttpClient"/> instance to use for this request.</param>
         /// <param name="authTicket">The Authentication Ticket to use for this request. Obtained by calling <see cref="GetAuthenticationTicket(HttpClient, PtcLoginParameters)"/>.</param>
         /// <returns></returns>
-        private async Task<AccessToken> GetOAuthToken(HttpClient httpClient, string authTicket)
+        private async Task<AccessToken> GetOAuthToken(string authTicket)
         {
             var requestData = new Dictionary<string, string>
                 {
@@ -160,7 +175,7 @@ namespace PokemonGo.RocketAPI.Login
                     {"code", authTicket}
                 };
 
-            var responseMessage = await httpClient.PostAsync(Constants.LoginOauthUrl, new FormUrlEncodedContent(requestData)).ConfigureAwait(false);
+            var responseMessage = await HttpClient.PostAsync(Constants.LoginOauthUrl, new FormUrlEncodedContent(requestData)).ConfigureAwait(false);
             var responseContent = await responseMessage.Content.ReadAsStringAsync().ConfigureAwait(false);
 
             if (string.IsNullOrWhiteSpace(responseContent))
@@ -178,7 +193,8 @@ namespace PokemonGo.RocketAPI.Login
             {
                 Username = this.Username,
                 Token = decoder.GetFirstValueByName("access_token"),
-                ExpiresUtc = DateTime.UtcNow.AddSeconds(int.Parse(decoder.GetFirstValueByName("expires"))),
+                // @robertmclaws: Subtract 1 hour from the token to solve this issue: https://github.com/pogodevorg/pgoapi/issues/86
+                ExpiresUtc = DateTime.UtcNow.AddSeconds(int.Parse(decoder.GetFirstValueByName("expires")) - 3600),
                 AuthType = AuthType.Ptc
             };
         }

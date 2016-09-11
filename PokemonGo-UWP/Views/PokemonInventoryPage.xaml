@@ -389,7 +389,7 @@
                                                 <Run Text="/" />
                                                 <Run FontWeight="Bold"
                                                      Text="{x:Bind EggKmWalkedTarget, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0\}}"
-                                                     x:Phase="0" />
+                                                      />
                                                 <Run FontWeight="Bold"
                                                      Text="km" />
                                         </TextBlock>

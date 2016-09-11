@@ -55,7 +55,13 @@ namespace PokemonGo.RocketAPI.Helpers
         bool Running { get; }
         bool Stationary  { get; }
         bool Tilting  { get; }
-}
+    }
+
+    public interface IVersionData
+    {
+        long VersionHash { get; }
+        ulong HashSeed1 { get; }
+    }
 
     public interface IDeviceInfo
     {
@@ -77,5 +83,6 @@ namespace PokemonGo.RocketAPI.Helpers
         IGpsSattelitesInfo[] GpsSattelitesInfo { get; }
         ISensorInfo Sensors { get; }
         IActivityStatus ActivityStatus { get; }
+        IVersionData VersionData { get; }
     }
 }

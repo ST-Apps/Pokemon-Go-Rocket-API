@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+#pragma warning disable 0649
+
 namespace PokemonGo_UWP.Entities
 {
     class VersionInfo
@@ -35,6 +37,7 @@ namespace PokemonGo_UWP.Entities
 
         public string minimum_version;
         public long unknown25;
+        public ulong seed1;
         public int version_number;
         public VersionRelease latest_release;
     }

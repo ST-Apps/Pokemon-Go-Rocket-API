@@ -53,6 +53,11 @@ namespace PokemonGo.RocketAPI.Rpc
                 {
                     RequestType = RequestType.GetPlayer,
                     RequestMessage = new GetPlayerMessage().ToByteString()
+                },
+                new Request
+                {
+                    RequestType = RequestType.CheckChallenge,
+                    RequestMessage = new CheckChallengeMessage().ToByteString()
                 }
             );
 

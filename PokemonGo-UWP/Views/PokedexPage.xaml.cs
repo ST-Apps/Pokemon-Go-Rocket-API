@@ -1,4 +1,5 @@
 ﻿using PokemonGo_UWP.Utils;
+using PokemonGo_UWP.ViewModels;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -12,19 +13,6 @@ namespace PokemonGo_UWP.Views
         public PokedexPage()
         {
             this.InitializeComponent();
-        }
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            ViewModel.PropertyChanged += ViewModel_PropertyChanged;
-        }
-        private void ViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
-        {
-            if(e.PropertyName.CompareTo(nameof(ViewModel.SelectedPokedexEntry)) == 0)
-                scrollPokedexEntry.ChangeView(0, 0, scrollPokedexEntry.ZoomFactor);
-        }
-        protected override void OnNavigatedFrom(NavigationEventArgs e)
-        {
-            ViewModel.PropertyChanged -= ViewModel_PropertyChanged;
         }
     }
 }
