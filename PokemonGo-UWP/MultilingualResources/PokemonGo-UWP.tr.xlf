@@ -20,7 +20,7 @@
         </trans-unit>
         <trans-unit id="BadgeCaptureTotal" translate="yes" xml:space="preserve">
           <source>Collector</source>
-          <target state="translated">Koleksiyoncu</target>
+          <target state="translated">Siyah Kuşak</target>
         </trans-unit>
         <trans-unit id="BadgeEvolvedTotal" translate="yes" xml:space="preserve">
           <source>Scientist</source>
@@ -152,7 +152,7 @@
         </trans-unit>
         <trans-unit id="BadgePokestopsVisitedDescription" translate="yes" xml:space="preserve">
           <source>Visited {0} Pokestops</source>
-          <target state="translated">{0} Pokéstops ziyaret edildi</target>
+          <target state="translated">{0} Pokéstop ziyaret edildi</target>
         </trans-unit>
         <trans-unit id="BadgeSmallRattataDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} small Rattata</source>
@@ -172,7 +172,7 @@
         </trans-unit>
         <trans-unit id="ElectricDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Electric Pokemon</source>
-          <target state="translated">{0} Electrik Pokémon'u yakalandı</target>
+          <target state="translated">{0} Elektrik Pokémon'u yakalandı</target>
         </trans-unit>
         <trans-unit id="FairyDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Fairy Pokemon</source>
@@ -535,7 +535,7 @@ Aynı zamanda {1} Stardust, {2} Şeker ve {3} XP kazandın.</target>
         </trans-unit>
         <trans-unit id="CannotTransferFavorite" translate="yes" xml:space="preserve">
           <source>Cannot transfer a favorite Pokémon!</source>
-          <target state="new">Cannot transfer a favorite Pokémon!</target>
+          <target state="translated">Favori Pokémon transfer edilemez!</target>
         </trans-unit>
       </group>
     </body>
@@ -632,8 +632,7 @@ Aynı zamanda {1} Stardust, {2} Şeker ve {3} XP kazandın.</target>
         </trans-unit>
         <trans-unit id="NumberTextBlock.Text" translate="yes" xml:space="preserve">
           <source>+ </source>
-          <target state="needs-review-translation"># </target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated">+ </target>
           <note from="MultilingualBuild" annotates="source" priority="2">Watch out: there is a space after the +</note>
         </trans-unit>
         <trans-unit id="SlashSpaceCpTextBlock.Text" translate="yes" xml:space="preserve">
