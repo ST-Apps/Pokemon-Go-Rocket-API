@@ -21,6 +21,22 @@ namespace PokemonGo_UWP.Views
                 ShowGatheredItemsMenuAnimation.From = GatheredItemsTranslateTransform.Y = ActualHeight;
             };
         }
+        
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+                //PC customization
+                if(ApiInformation.IsTypePresent("Windows.UI.ViewManagement.ApplicationView"))
+                {
+                    PokestopNameTag.HorizontalAlignment = "Left";
+                }
+
+                //Mobile customization
+                if(ApiInformation.IsTypePresent("Windows.UI.ViewManagement.StatusBar"))
+                {
+                    PokestopNameTag.HorizontalAlignment = "Center";
+                }
+        }
 
         #region Overrides of Page
 

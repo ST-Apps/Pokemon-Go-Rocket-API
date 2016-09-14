@@ -33,20 +33,26 @@
                          Margin="15,20"
                          InputScope="EmailSmtpAddress"
                          Text="{Binding Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                         PlaceholderText="USERNAME / EMAIL" />
+                         PlaceholderText="USERNAME / EMAIL"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center" />
                 <PasswordBox x:Name="LoginPasswordPasswordBox"
                              x:Uid="LoginPasswordPasswordBox"
                              Style="{StaticResource PasswordBox}"
                              Margin="15,0"
                              KeyDown="passwordBox_KeyDown"
                              Password="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                             PlaceholderText="PASSWORD" />
+                             PlaceholderText="PASSWORD"
+                             HorizontalAlignment="Center"
+                             VerticalAlignment="Center" />
                 <CheckBox x:Name="RememberMeCheckBox"
                           x:Uid="RememberMeCheckBox"
                           IsChecked="{Binding RememberLoginData, Mode=TwoWay}"
-                          Margin="15,20,15,0">
+                          Margin="15,20,15,0"
+                          VerticalAlignment="Center"
+                          HorizontalAlignment="Center">
                     <TextBlock x:Uid="RememberMeTextBlock" 
-                               Text="REMEMBER ME" />
+                               Text="REMEMBER ME"/>
                 </CheckBox>
                 <Button x:Name="PtcLoginButton"
                         Style="{StaticResource ButtonSubmit}"
