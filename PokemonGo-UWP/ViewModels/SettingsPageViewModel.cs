@@ -1,4 +1,4 @@
-﻿using PokemonGo_UWP.Entities;
+using PokemonGo_UWP.Entities;
 using PokemonGo_UWP.Utils;
 using PokemonGo_UWP.Views;
 using System.Collections.Generic;
@@ -35,6 +35,12 @@ namespace PokemonGo_UWP.ViewModels
 		///     Whether the player wants music
 		/// </summary>
 		public bool IsMusicEnabled
+        {
+            get { return SettingsService.Instance.IsMusicEnabled; }
+            set { SettingsService.Instance.IsMusicEnabled = value; }
+        }
+
+        public bool IsLearnMoreEnabled
         {
             get { return SettingsService.Instance.IsMusicEnabled; }
             set { SettingsService.Instance.IsMusicEnabled = value; }
