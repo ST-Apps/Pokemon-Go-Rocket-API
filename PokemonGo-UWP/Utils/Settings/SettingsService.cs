@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Windows.Security.Credentials;
 using PokemonGo.RocketAPI.Enums;
 using Template10.Services.SettingsService;
@@ -120,7 +120,12 @@ namespace PokemonGo_UWP.Utils
                 AudioUtils.ToggleSounds();
 		    }
 		}
-		public bool IsNianticMapEnabled
+        public bool IsLearnMoreEnabled
+        {
+            get { return Get(true); }
+            set { Set(value); }
+        }
+        public bool IsNianticMapEnabled
 		{
 			get { return Get(false); }
 			set { Set(value); }
