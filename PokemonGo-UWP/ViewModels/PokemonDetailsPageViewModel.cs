@@ -68,7 +68,7 @@ namespace PokemonGo_UWP.ViewModels
                 PlayerProfile = new PlayerData();
                 CurrentPokemon = JsonConvert.DeserializeObject<PokemonDataWrapper>((string)suspensionState[nameof(CurrentPokemon)]);
                 PlayerProfile.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(PlayerProfile)]).CreateCodedInput());
-                RaisePropertyChanged(() => PlayerProfile);                
+                RaisePropertyChanged(() => PlayerProfile);
             }
             else
             {
@@ -537,30 +537,39 @@ namespace PokemonGo_UWP.ViewModels
             dialog.AnimationType = PoGoMessageDialogAnimation.Bottom;
             dialog.AcceptInvoked += async (sender, e) =>
             {
-                // Send power up request
-                var res = await GameClient.PowerUpPokemon(CurrentPokemon.WrappedData);
-                switch (res.Result)
+                // User confirmed transfer
+                try
                 {
-                    case UpgradePokemonResponse.Types.Result.Unset:
-                        break;
-                    case UpgradePokemonResponse.Types.Result.Success:
-                        // Reload updated data
-                        CurrentPokemon = new PokemonDataWrapper(res.UpgradedPokemon);
-                        await GameClient.UpdateInventory();
-                        await GameClient.UpdateProfile();
-                        UpdateCurrentData();
-                        break;
+                    Busy.SetBusy(true);
+                    // Send power up request
+                    var res = await GameClient.PowerUpPokemon(CurrentPokemon.WrappedData);
+                    switch (res.Result)
+                    {
+                        case UpgradePokemonResponse.Types.Result.Unset:
+                            break;
+                        case UpgradePokemonResponse.Types.Result.Success:
+                            // Reload updated data
+                            CurrentPokemon = new PokemonDataWrapper(res.UpgradedPokemon);
+                            await GameClient.UpdateInventory();
+                            await GameClient.UpdateProfile();
+                            UpdateCurrentData();
+                            break;
 
-                    case UpgradePokemonResponse.Types.Result.ErrorPokemonNotFound:
-                        break;
-                    case UpgradePokemonResponse.Types.Result.ErrorInsufficientResources:
-                        break;
-                    case UpgradePokemonResponse.Types.Result.ErrorUpgradeNotAvailable:
-                        break;
-                    case UpgradePokemonResponse.Types.Result.ErrorPokemonIsDeployed:
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException();
+                        case UpgradePokemonResponse.Types.Result.ErrorPokemonNotFound:
+                            break;
+                        case UpgradePokemonResponse.Types.Result.ErrorInsufficientResources:
+                            break;
+                        case UpgradePokemonResponse.Types.Result.ErrorUpgradeNotAvailable:
+                            break;
+                        case UpgradePokemonResponse.Types.Result.ErrorPokemonIsDeployed:
+                            break;
+                        default:
+                            throw new ArgumentOutOfRangeException();
+                    }
+                }
+                finally
+                {
+                    Busy.SetBusy(false);
                 }
             };
 
