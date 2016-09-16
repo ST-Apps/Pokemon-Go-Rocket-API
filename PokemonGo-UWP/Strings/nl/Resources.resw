@@ -21,8 +21,14 @@
   <data name="InventoryFullTextBlock.Text" xml:space="preserve">
     <value>Je voorraad is vol!</value>
   </data>
+  <data name="RememberMeTextBlock.Text" xml:space="preserve">
+    <value>Herinner mij</value>
+  </data>
   <data name="PtcLoginTextBlock.Text" xml:space="preserve">
     <value>Login met PTC Account</value>
+  </data>
+  <data name="PtcSignUpHyperlink.Content" xml:space="preserve">
+    <value>Maak PTC account aan.</value>
   </data>
   <data name="LoginDisclaimerTextBox.Text" xml:space="preserve">
     <value>Je moet je gebruikersnaam/e-mail en wachtwoord invoeren om je aan te melden. Als je dit niet vertrouwt, sluit de app dan. Gebruik deze app op eigen risico.</value>
@@ -175,7 +181,19 @@
     <value>keer</value>
   </data>
   <data name="SettingsRememberMapZoomTextBlock.Text" xml:space="preserve">
-    <value>Onthou kaart zoom</value>
+    <value>Onthoud kaart zoom</value>
+  </data>
+  <data name="SettingsMapRotationModeGPSTextBlock.Text" xml:space="preserve">
+    <value>Roteer automatisch gebaseerd op</value>
+  </data>
+  <data name="NoneBoxItem.Content" xml:space="preserve">
+    <value>Geen</value>
+  </data>
+  <data name="GPSBoxItem.Content" xml:space="preserve">
+    <value>GPS</value>
+  </data>
+  <data name="CompassBoxItem.Content" xml:space="preserve">
+    <value>Kompas</value>
   </data>
   <data name="TransferTextBlock.Text" xml:space="preserve">
     <value>OVERBRENGEN</value>
