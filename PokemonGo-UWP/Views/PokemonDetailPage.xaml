@@ -1078,7 +1078,7 @@
                 VerticalAlignment="Bottom"
                 Margin="0,0,0,21"
                 Command="{Binding ReturnToPokemonInventoryScreen}">
-            <Image Source="../Assets/Buttons/btn_close.png" />
+            <Image Source="../Assets/Buttons/btn_ok.png" />
         </Button>
 
         <Button RelativePanel.AlignBottomWithPanel="True"
