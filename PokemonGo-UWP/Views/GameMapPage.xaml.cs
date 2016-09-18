@@ -14,9 +14,11 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using PokemonGo.RocketAPI;
 using PokemonGo_UWP.Utils;
+using PokemonGo_UWP.Utils.Helpers;
 using Template10.Common;
 using PokemonGo_UWP.Utils.Helpers;
 using System.ComponentModel;
+
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -152,8 +154,10 @@ namespace PokemonGo_UWP.Views
 
         private void GameMapControl_TargetCameraChanged(MapControl sender, MapTargetCameraChangedEventArgs args)
         {
-            if ((args.ChangeReason == MapCameraChangeReason.UserInteraction) && (lastAutoPosition != null))
-                ReactivateMapAutoUpdateButton.Visibility = Visibility.Visible;
+            var distance = GeoHelper.Distance(lastAutoPosition, args.Camera.Location);
+ +            if (args.ChangeReason == MapCameraChangeReason.UserInteraction && lastAutoPosition != null && distance > 0) {
+                  ReactivateMapAutoUpdateButton.Visibility = Visibility.Visible;
+              }
         }
 
         private void GameMapControl_OnZoomLevelChanged(MapControl sender, object args)
