@@ -2503,7 +2503,7 @@
         </Setter>
     </Style>
 
-    <Style TargetType="ComboBox">
+    <Style TargetType="ComboBox" x:Key="ComboBoxBaseStyle">
         <Setter Property="Padding" Value="12,5,0,7"/>
         <Setter Property="Height" Value="30" />
         <Setter Property="Foreground">
@@ -2641,6 +2641,9 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style TargetType="ComboBox"
+           BasedOn="{StaticResource ComboBoxBaseStyle}" />
 
     <Style TargetType="ComboBoxItem">
         <Setter Property="Background" Value="Transparent"/>
