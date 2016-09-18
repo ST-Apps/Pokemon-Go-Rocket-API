@@ -564,6 +564,22 @@
           <source>POKÉMON</source>
           <target state="new">POKÉMON</target>
         </trans-unit>
+                <trans-unit id="FortAlreadyHasModifierTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>This pokestop already has a lure module installed</source>
+          <target state="new">Dette Pokéstoppet har allerede en lure module plassert</target>
+        </trans-unit>
+        <trans-unit id="NoItemInInventoryTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>There is no troy disc in your inventory</source>
+          <target state="new">Du har ikke en troy disc i ditt gjenstandslager</target>
+        </trans-unit>
+        <trans-unit id="TooFarAwayTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>This pokestop is too far away</source>
+          <target state="new">Dette pokéstoppet er for langt unna</target>
+        </trans-unit>
+        <trans-unit id="AddModifierSuccessTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Successfully added lure module</source>
+          <target state="new">Suksess! Lure modulen ble lagt til pokéstoppet</target>
+        </trans-unit>
       </group>
     </body>
   </file>
