@@ -539,6 +539,26 @@ Hai ottenuto anche {1} Polvere di stella, {2} Caramelle e {3} PE.</target>
           <source>Cannot transfer a favorite Pokémon!</source>
           <target state="final">Non puoi trasferire un Pokémon preferito!</target>
         </trans-unit>
+        <trans-unit id="CantUseBerryText" translate="yes" xml:space="preserve">
+          <source>You already used a Berry.</source>
+          <target state="new">Hai già usato una Bacca.</target>
+        </trans-unit>
+        <trans-unit id="LureDetailsTextEmpty" translate="yes" xml:space="preserve">
+          <source>Can have a PokéStop Module installed</source>
+          <target state="new">Può avere un Modulo PokéStop installato</target>
+        </trans-unit>
+        <trans-unit id="LureDetailsTextFilled" translate="yes" xml:space="preserve">
+          <source>A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</source>
+          <target state="new">Attira i Pokémon per 30 minuti verso un Pokéstop. Chiunque si trovi nei dintorni ne trarrà lo stesso beneficio.</target>
+        </trans-unit>
+        <trans-unit id="LureTitleTextEmpty" translate="yes" xml:space="preserve">
+          <source>Empty module slot</source>
+          <target state="new">Spazio modulo vuoto</target>
+        </trans-unit>
+        <trans-unit id="LureTitleTextFilled" translate="yes" xml:space="preserve">
+          <source>Lure Module</source>
+          <target state="new">Modulo Esca</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -799,6 +819,30 @@ Hai ottenuto anche {1} Polvere di stella, {2} Caramelle e {3} PE.</target>
         <trans-unit id="AwardedExperienceTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Experience</source>
           <target state="final">Esperienza</target>
+        </trans-unit>
+        <trans-unit id="EggsHeader.Title" translate="yes" xml:space="preserve">
+          <source>EGGS</source>
+          <target state="new">UOVA</target>
+        </trans-unit>
+        <trans-unit id="PokemonHeader.Title" translate="yes" xml:space="preserve">
+          <source>POKÉMON</source>
+          <target state="new">POKÉMON</target>
+        </trans-unit>
+        <trans-unit id="FortAlreadyHasModifierTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>This pokestop already has a lure module installed</source>
+          <target state="new">Questo pokéstop ha già un modulo esca installato</target>
+        </trans-unit>
+        <trans-unit id="NoItemInInventoryTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>There is no troy disc in your inventory</source>
+          <target state="new">Non ci sono moduli esca nel tuo inventario</target>
+        </trans-unit>
+        <trans-unit id="TooFarAwayTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>This pokestop is too far away</source>
+          <target state="new">Questo pokéstop è troppo lontano</target>
+        </trans-unit>
+        <trans-unit id="AddModifierSuccessTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Successfully added lure module</source>
+          <target state="new">Modulo esca aggiunto con successo</target>
         </trans-unit>
       </group>
     </body>
