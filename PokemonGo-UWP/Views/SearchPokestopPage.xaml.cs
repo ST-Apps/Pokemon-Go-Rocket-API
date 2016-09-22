@@ -1,4 +1,6 @@
-﻿using System;
+using PokemonGo_UWP.Utils;
+using System;
+using Template10.Common;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -12,6 +14,11 @@ namespace PokemonGo_UWP.Views
     /// </summary>
     public sealed partial class SearchPokestopPage : Page
     {
+        public bool IsLearnMoreEnabled
+        {
+            get { return SettingsService.Instance.IsMusicEnabled; }
+            set { SettingsService.Instance.IsMusicEnabled = value; }
+        }
         public SearchPokestopPage()
         {
             InitializeComponent();
@@ -20,6 +27,13 @@ namespace PokemonGo_UWP.Views
                 // Of course binding doesn't work so we need to manually setup height for animations
                 ShowGatheredItemsMenuAnimation.From = GatheredItemsTranslateTransform.Y = ActualHeight;
             };
+            if (IsLearnMoreEnabled)
+            {
+                PokestopLearnMore.Visibility = Visibility.Visible;
+            } else
+            {
+                PokestopLearnMore.Visibility = Visibility.Collapsed;
+            }
         }
 
         #region Overrides of Page
@@ -140,6 +154,11 @@ namespace PokemonGo_UWP.Views
             NoItemInInventoryTextBlock.Visibility = DetailsErrorMessageBorder.Visibility = Visibility.Visible;
         }
 
+        private void PokestopLearnMore_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationHelper.NavigationState["PokestopName"] = pokestopName.Text;
+            BootStrapper.Current.NavigationService.Navigate(typeof(PokestopInfoPage));
+        }
         #endregion
     }
 }
