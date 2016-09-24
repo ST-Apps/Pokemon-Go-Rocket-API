@@ -15,6 +15,7 @@ using Template10.Mvvm;
 using Template10.Services.NavigationService;
 using Newtonsoft.Json;
 using Google.Protobuf;
+using POGOProtos.Data.Gym;
 
 namespace PokemonGo_UWP.ViewModels
 {
@@ -36,6 +37,7 @@ namespace PokemonGo_UWP.ViewModels
                 // Recovering the state
                 CurrentGym = JsonConvert.DeserializeObject<FortDataWrapper>((string)suspensionState[nameof(CurrentGym)]);
                 CurrentGymInfo = JsonConvert.DeserializeObject<GetGymDetailsResponse>((string)suspensionState[nameof(CurrentGymInfo)]);
+                CurrentMembers = GetCurrentMembers(CurrentGymInfo);
                 CurrentEnterResponse = JsonConvert.DeserializeObject<GetGymDetailsResponse>((string)suspensionState[nameof(CurrentEnterResponse)]);
             }
             else
@@ -45,8 +47,8 @@ namespace PokemonGo_UWP.ViewModels
                 CurrentGym = (FortDataWrapper)NavigationHelper.NavigationState[nameof(CurrentGym)];
                 NavigationHelper.NavigationState.Remove(nameof(CurrentGym));
                 Logger.Write($"Entering {CurrentGym.Id}");
-                CurrentGymInfo =
-                    await GameClient.GetGymDetails(CurrentGym.Id, CurrentGym.Latitude, CurrentGym.Longitude);
+                CurrentGymInfo = await GameClient.GetGymDetails(CurrentGym.Id, CurrentGym.Latitude, CurrentGym.Longitude);
+                CurrentMembers = GetCurrentMembers(CurrentGymInfo);
                 Busy.SetBusy(false);
             }
         }
@@ -88,10 +90,13 @@ namespace PokemonGo_UWP.ViewModels
         /// </summary>
         private GetGymDetailsResponse _currentGymInfo;
 
+        private ObservableCollection<GymMembershipWrapper> _currentMembers;
+
         /// <summary>
         ///     Results of the current Gym enter
         /// </summary>
         private GetGymDetailsResponse _currentEnterResponse;
+
 
         #endregion
 
@@ -124,6 +129,12 @@ namespace PokemonGo_UWP.ViewModels
             set { Set(ref _currentEnterResponse, value); }
         }
 
+        public ObservableCollection<GymMembershipWrapper> CurrentMembers
+        {
+            get { return _currentMembers; }
+            set { Set(ref _currentMembers, value); }
+        }
+
         #endregion
 
         #region Game Logic
@@ -135,26 +146,24 @@ namespace PokemonGo_UWP.ViewModels
         /// <summary>
         ///     Going back to map page
         /// </summary>
-        public DelegateCommand ReturnToGameScreen => _returnToGameScreen ?? (
-            _returnToGameScreen =
-                new DelegateCommand(
-                    () => { NavigationService.Navigate(typeof(GameMapPage), GameMapNavigationModes.GymUpdate); },
-                    () => true)
-            );
+        public DelegateCommand ReturnToGameScreen =>
+            _returnToGameScreen ?? ( _returnToGameScreen = new DelegateCommand( () =>
+            {
+                NavigationService.Navigate(typeof(GameMapPage), GameMapNavigationModes.GymUpdate);
+            },() => true));
 
         private DelegateCommand _abandonGym;
 
         /// <summary>
         ///     Going back to map page
         /// </summary>
-        public DelegateCommand AbandonGym => _abandonGym ?? (
-            _abandonGym = new DelegateCommand(() =>
+        public DelegateCommand AbandonGym =>
+            _abandonGym ?? (_abandonGym = new DelegateCommand(() =>
             {
                 // Re-enable update timer
                 GameClient.ToggleUpdateTimer();
                 NavigationService.GoBack();
-            }, () => true)
-            );
+            }, () => true));
 
         #endregion
 
@@ -180,18 +189,21 @@ namespace PokemonGo_UWP.ViewModels
 
         #endregion
 
+        private ObservableCollection<GymMembershipWrapper> GetCurrentMembers(GetGymDetailsResponse currentGymInfo) =>
+            new ObservableCollection<GymMembershipWrapper>(
+                currentGymInfo.GymState.Memberships.Select(m => new GymMembershipWrapper(m)));
+
         private DelegateCommand _enterCurrentGym;
 
         /// <summary>
         ///     Enters the current Gym, don't know what to do then
         /// </summary>
-        public DelegateCommand EnterCurrentGym => _enterCurrentGym ?? (
-            _enterCurrentGym = new DelegateCommand(async () =>
+        public DelegateCommand EnterCurrentGym =>
+            _enterCurrentGym ?? ( _enterCurrentGym = new DelegateCommand(async () =>
             {
                 Busy.SetBusy(true, "Entering Gym");
                 Logger.Write($"Entering {CurrentGymInfo.Name} [ID = {CurrentGym.Id}]");
-                CurrentEnterResponse =
-                    await GameClient.GetGymDetails(CurrentGym.Id, CurrentGym.Latitude, CurrentGym.Longitude);
+                CurrentEnterResponse = await GameClient.GetGymDetails(CurrentGym.Id, CurrentGym.Latitude, CurrentGym.Longitude);
                 Busy.SetBusy(false);
                 switch (CurrentEnterResponse.Result)
                 {
