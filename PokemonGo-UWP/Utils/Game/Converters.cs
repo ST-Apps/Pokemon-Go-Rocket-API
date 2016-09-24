@@ -790,9 +790,26 @@ namespace PokemonGo_UWP.Utils
         public object Convert(object value, Type targetType, object parameter, string language)
         {
             var teamColor = (TeamColor)value;
-            return new SolidColorBrush(teamColor == TeamColor.Neutral
-                ? Color.FromArgb(255, 26, 237, 213)
-                : teamColor == TeamColor.Blue ? Color.FromArgb(255, 40, 89, 237) : teamColor == TeamColor.Red ? Color.FromArgb(255, 237, 90, 90) : Color.FromArgb(255, 254, 196, 50));
+            Color color;
+            switch (teamColor)
+            {
+                case TeamColor.Neutral:
+                    color = Color.FromArgb(255, 26, 237, 213);
+                    break;
+                case TeamColor.Blue:
+                    color = Color.FromArgb(255, 40, 89, 237);
+                    break;
+                case TeamColor.Red:
+                    color = Color.FromArgb(255, 237, 90, 90);
+                    break;
+                case TeamColor.Yellow:
+                    color = Color.FromArgb(255, 254, 196, 50);
+                    break;
+                default:
+                    color = Color.FromArgb(255, 0, 0, 0);
+                    break;
+            }
+            return new SolidColorBrush(color);
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
@@ -1949,7 +1966,7 @@ namespace PokemonGo_UWP.Utils
             var res = ((size.Width - externalMargin) / minColumns) - internalMargin;
 
             //https://msdn.microsoft.com/en-us/windows/uwp/layout/design-and-ui-intro#effective-pixels-and-scaling
-            var width = ((int)res / 4) * 4; //round to 4 - win 10 optimized 
+            var width = ((int)res / 4) * 4; //round to 4 - win 10 optimized
             return width;
         }
 
