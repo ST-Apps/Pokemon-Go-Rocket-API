@@ -60,7 +60,7 @@
         </trans-unit>
         <trans-unit id="SettingsMusicTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Music</source>
-          <target state="translated">Musikk</target>
+          <target state="translated">Musik</target>
         </trans-unit>
         <trans-unit id="PokemonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>POKÉMON</source>
@@ -68,15 +68,15 @@
         </trans-unit>
         <trans-unit id="SettingsHeaderTextBlock.Text" translate="yes" xml:space="preserve">
           <source>SETTINGS</source>
-          <target state="translated">INSTILLINGER</target>
+          <target state="translated">INDSTILLINGER</target>
         </trans-unit>
         <trans-unit id="SettingsSignOutTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Sign Out</source>
-          <target state="translated">Logg ud</target>
+          <target state="translated">Log ud</target>
         </trans-unit>
         <trans-unit id="SettingsVibrationTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Vibration</source>
-          <target state="translated">Vibrering</target>
+          <target state="translated">Vibration</target>
         </trans-unit>
         <trans-unit id="ItemsTextBlock.Text" translate="yes" xml:space="preserve">
           <source>ITEMS</source>
@@ -110,7 +110,7 @@
         </trans-unit>
         <trans-unit id="LevelUpTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Level up!</source>
-          <target state="translated">Level opp!</target>
+          <target state="translated">Level op!</target>
         </trans-unit>
         <trans-unit id="LevelTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Level</source>
@@ -118,7 +118,7 @@
         </trans-unit>
         <trans-unit id="SettingsMapAutoRotateTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Auto-Rotate Map</source>
-          <target state="translated">Roter Kartet Automatisk</target>
+          <target state="translated">Auto Roter Kortet</target>
         </trans-unit>
         <trans-unit id="StartDateTextBlock.Text" translate="yes" xml:space="preserve">
           <source>START DATE</source>
@@ -126,7 +126,7 @@
         </trans-unit>
         <trans-unit id="IncubatorsTextBlock.Text" translate="yes" xml:space="preserve">
           <source>INCUBATORS</source>
-          <target state="translated">INKUBATORER</target>
+          <target state="translated">RUGEMASKINE</target>
         </trans-unit>
         <trans-unit id="SettingsUseNianticMapTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Use Niantic Map</source>
@@ -134,12 +134,12 @@
         </trans-unit>
         <trans-unit id="CandyTextBlock.Text" translate="yes" xml:space="preserve">
           <source> CANDY</source>
-          <target state="translated"> CANDY</target>
+          <target state="translated"> SLIK</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Watch out: space before the word!</note>
         </trans-unit>
         <trans-unit id="HeightTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Height</source>
-          <target state="translated">Høyde</target>
+          <target state="translated">Højde</target>
         </trans-unit>
         <trans-unit id="HpTextBlock.Text" translate="yes" xml:space="preserve">
           <source>HP </source>
@@ -163,19 +163,19 @@
         </trans-unit>
         <trans-unit id="WeightTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Weight</source>
-          <target state="translated">Vekt</target>
+          <target state="translated">Vægt</target>
         </trans-unit>
         <trans-unit id="EvolveButton.Content" translate="yes" xml:space="preserve">
           <source>EVOLVE</source>
-          <target state="translated">UTVIKLE</target>
+          <target state="translated">UDVIKLE</target>
         </trans-unit>
         <trans-unit id="PowerUpButton.Content" translate="yes" xml:space="preserve">
           <source>POWER UP</source>
-          <target state="translated">ØK KRAFT</target>
+          <target state="translated">ØG KRAFT</target>
         </trans-unit>
         <trans-unit id="SettingsRememberMapZoomTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Remember Map Zoom</source>
-          <target state="translated">Husk kortes forstørelse</target>
+          <target state="translated">Husk kortets forstørelse</target>
         </trans-unit>
         <trans-unit id="TransferTextBlock.Text" translate="yes" xml:space="preserve">
           <source>TRANSFER</source>
@@ -187,7 +187,7 @@
         </trans-unit>
         <trans-unit id="EggDetailTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Use an incubator to incubate the Egg.</source>
-          <target state="translated">Brug en Rugemaskine til at udruge Æg.</target>
+          <target state="translated">Brug en rugemaskine til at udruge ægget.</target>
         </trans-unit>
         <trans-unit id="PokedexCaught.Text" translate="yes" xml:space="preserve">
           <source>Caught:</source>
@@ -231,7 +231,7 @@
         </trans-unit>
         <trans-unit id="SettingsLanguageRestartTextBlock.Text" translate="yes" xml:space="preserve">
           <source>You must restart the App to take effect.</source>
-          <target state="translated">Du skal genstarte App for det træder i efekt.</target>
+          <target state="translated">Du skal genstarte Appen før det træder i kraft.</target>
         </trans-unit>
         <trans-unit id="SettingsLanguageTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Language</source>
@@ -251,16 +251,16 @@
         </trans-unit>
         <trans-unit id="AppraiseTextBlock.Text" translate="yes" xml:space="preserve">
           <source>APPRAISE</source>
-          <target state="new">APPRAISE</target>
+          <target state="new">VURDERE</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
         </trans-unit>
         <trans-unit id="AwardedExperienceTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Experience</source>
-          <target state="new">Experience</target>
+          <target state="new">Erfaring</target>
         </trans-unit>
         <trans-unit id="EggsHeader.Title" translate="yes" xml:space="preserve">
           <source>EGGS</source>
-          <target state="new">EGGS</target>
+          <target state="new">ÆG</target>
         </trans-unit>
         <trans-unit id="PokemonHeader.Title" translate="yes" xml:space="preserve">
           <source>POKÉMON</source>
@@ -268,19 +268,19 @@
         </trans-unit>
         <trans-unit id="FortAlreadyHasModifierTextBlock.Text" translate="yes" xml:space="preserve">
           <source>This pokestop already has a lure module installed</source>
-          <target state="new">This pokestop already has a lure module installed</target>
+          <target state="new">Dette pokestop har allerede et lokke modul installeret</target>
         </trans-unit>
         <trans-unit id="NoItemInInventoryTextBlock.Text" translate="yes" xml:space="preserve">
           <source>There is no troy disc in your inventory</source>
-          <target state="new">There is no troy disc in your inventory</target>
+          <target state="new">Der er ingen troy disc i dit lager</target>
         </trans-unit>
         <trans-unit id="TooFarAwayTextBlock.Text" translate="yes" xml:space="preserve">
           <source>This pokestop is too far away</source>
-          <target state="new">This pokestop is too far away</target>
+          <target state="new">Dette pokestop er for langt væk</target>
         </trans-unit>
         <trans-unit id="AddModifierSuccessTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Successfully added lure module</source>
-          <target state="new">Successfully added lure module</target>
+          <target state="new">Successfuldt tilføjet lokke modul</target>
         </trans-unit>
       </group>
     </body>
@@ -345,11 +345,11 @@
         </trans-unit>
         <trans-unit id="Poison" translate="yes" xml:space="preserve">
           <source>Poison</source>
-          <target state="translated">Eleksir</target>
+          <target state="translated">Gift</target>
         </trans-unit>
         <trans-unit id="Psychic" translate="yes" xml:space="preserve">
           <source>Psychic</source>
-          <target state="translated">Psykiater</target>
+          <target state="translated">Synsk</target>
         </trans-unit>
         <trans-unit id="Rock" translate="yes" xml:space="preserve">
           <source>Rock</source>
@@ -391,15 +391,15 @@
         </trans-unit>
         <trans-unit id="GettingUserDataText" translate="yes" xml:space="preserve">
           <source>Getting user data...</source>
-          <target state="translated">Henter brukerdata...</target>
+          <target state="translated">Henter bruger data...</target>
         </trans-unit>
         <trans-unit id="GoogleErrorText" translate="yes" xml:space="preserve">
           <source>Google returned error: </source>
-          <target state="translated">Google returnerte fejl: </target>
+          <target state="translated">Google returnerede fejl: </target>
         </trans-unit>
         <trans-unit id="GoogleNotRespondingText" translate="yes" xml:space="preserve">
           <source>Google is not responding, please try again later.</source>
-          <target state="translated">Google svarer ikke, vennligst prøv igjen senere.</target>
+          <target state="translated">Google svarer ikke, vennligst prøv igen senere.</target>
         </trans-unit>
         <trans-unit id="LoginExpired" translate="yes" xml:space="preserve">
           <source>Previous login expired.</source>
@@ -415,7 +415,7 @@
         </trans-unit>
         <trans-unit id="LoginFailedText" translate="yes" xml:space="preserve">
           <source>Login failed, please try again.</source>
-          <target state="translated">Login mislykkes, vennligst prøv på nytt.</target>
+          <target state="translated">Login mislykkedes, prøv venligst igen.</target>
         </trans-unit>
         <trans-unit id="NoText" translate="yes" xml:space="preserve">
           <source>NO</source>
@@ -425,7 +425,7 @@
         </trans-unit>
         <trans-unit id="NoGpsPermissionsText" translate="yes" xml:space="preserve">
           <source>We need GPS permissions to run the game, please enable it and try again.</source>
-          <target state="translated">Vi behøverGPS tillatelse for at starte spillet, vennligst aktiver det og prøv på ny.</target>
+          <target state="translated">Vi behøver GPS tilladelse for at starte spillet, vennligst aktiver det og prøv på ny.</target>
         </trans-unit>
         <trans-unit id="PokemonRanAwayText" translate="yes" xml:space="preserve">
           <source>Pokémon ran away, sorry :(</source>
@@ -433,7 +433,7 @@
         </trans-unit>
         <trans-unit id="PtcDownText" translate="yes" xml:space="preserve">
           <source>PTC login is probably down, please retry later.</source>
-          <target state="translated">PTC Login er sannsynligvis nede, vennligst prøv atter senere.</target>
+          <target state="translated">PTC Login er sandsynligvis nede, prøv venligst senere.</target>
         </trans-unit>
         <trans-unit id="SomethingWentWrongText" translate="yes" xml:space="preserve">
           <source>Something went wrong and app may be unstable now. Do you want to logout and try again?</source>
@@ -450,7 +450,7 @@
         <trans-unit id="UpdatedVersionText" translate="yes" xml:space="preserve">
           <source>An updated version {0} is available. Do you want to update?
 {1}</source>
-          <target state="translated">En oppdatert version {0} er tilgjengelig. Vil du oppdatere?
+          <target state="translated">En oppdatert version {0} er tilgængelig. Vil du oppdatere?
 {1}</target>
         </trans-unit>
         <trans-unit id="UpdateFailedText" translate="yes" xml:space="preserve">
@@ -465,7 +465,7 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="WrongUsernameText" translate="yes" xml:space="preserve">
           <source>Wrong username/password or offline server, please try again.</source>
-          <target state="translated">Forkert brugernavn/adgangskode eller serveren er ikkke tilgængelig, prøv venligst igjen.</target>
+          <target state="translated">Forkert brugernavn/adgangskode eller serveren er ikkke tilgængelig, prøv venligst igen.</target>
         </trans-unit>
         <trans-unit id="YesText" translate="yes" xml:space="preserve">
           <source>YES</source>
@@ -475,39 +475,39 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="InstinctTeamText" translate="yes" xml:space="preserve">
           <source>Instinct</source>
-          <target state="final">Instinct</target>
+          <target state="final">Instinkt</target>
         </trans-unit>
         <trans-unit id="NoTeamText" translate="yes" xml:space="preserve">
           <source>No Team</source>
-          <target state="translated">Ingen hold</target>
+          <target state="translated">Intet hold</target>
         </trans-unit>
         <trans-unit id="ValorTeamText" translate="yes" xml:space="preserve">
           <source>Valor</source>
-          <target state="final">Valor</target>
+          <target state="final">Kriger</target>
         </trans-unit>
         <trans-unit id="MysticTeamText" translate="yes" xml:space="preserve">
           <source>Mystic</source>
-          <target state="final">Mystic</target>
+          <target state="final">Mystiker</target>
         </trans-unit>
         <trans-unit id="TransferPokemonSuccessText" translate="yes" xml:space="preserve">
           <source>Transfer succeeded! Got a {0} Candy from the Professor.</source>
-          <target state="translated">Overførsel fuldført! Du fik  {0} Slik fra Professoren.</target>
+          <target state="translated">Overførsel fuldført! Du fik  {0} slik fra professoren.</target>
         </trans-unit>
         <trans-unit id="TransferPokemonWarningText" translate="yes" xml:space="preserve">
           <source>You can't take it back after it's transferred to the Professor.</source>
-          <target state="new">You can't take it back after it's transferred to the Professor.</target>
+          <target state="new">Du kan ikke få den tilbage efter du har overørt den til proffesoren.</target>
         </trans-unit>
         <trans-unit id="ActivityUnknown" translate="yes" xml:space="preserve">
           <source>Unknown</source>
-          <target state="translated">Ukjent</target>
+          <target state="translated">Ukendt</target>
         </trans-unit>
         <trans-unit id="ActivityCatchPokemon" translate="yes" xml:space="preserve">
           <source>Pokémon Caught</source>
-          <target state="translated">Fanget Pokémon</target>
+          <target state="translated">Pokémon Fanget</target>
         </trans-unit>
         <trans-unit id="ActivityCatchLegendPokemon" translate="yes" xml:space="preserve">
           <source>Catch Legendary Pokémon</source>
-          <target state="translated">Fanget  Legendarisk Pokémon</target>
+          <target state="translated">Fang legendarisk Pokémon</target>
         </trans-unit>
         <trans-unit id="ActivityFleePokemon" translate="yes" xml:space="preserve">
           <source>Pokémon Fled</source>
@@ -515,7 +515,7 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="ActivityDefeatFort" translate="yes" xml:space="preserve">
           <source>Defeat Fort</source>
-          <target state="translated">Besejre Fort</target>
+          <target state="translated">Besejre Fortet</target>
         </trans-unit>
         <trans-unit id="ActivityEvolvePokemon" translate="yes" xml:space="preserve">
           <source>Evolve a Pokémon</source>
@@ -551,7 +551,7 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="ActivityCatchCurveball" translate="yes" xml:space="preserve">
           <source>Curveball</source>
-          <target state="translated">Skrueboldt</target>
+          <target state="translated">Skruebold</target>
         </trans-unit>
         <trans-unit id="ActivityCatchFirstCatchOfDay" translate="yes" xml:space="preserve">
           <source>First Catch of Day!</source>
@@ -587,11 +587,11 @@ Open page with installation files for manual install?</source>
         </trans-unit>
         <trans-unit id="ActivityDefeatGymDefender" translate="yes" xml:space="preserve">
           <source>Defeat Gym Defender</source>
-          <target state="translated">Nedkæmp Fitnes Forsvarer</target>
+          <target state="translated">Nedkæmp Sal Forsvarer</target>
         </trans-unit>
         <trans-unit id="ActivityDefeatGymLeader" translate="yes" xml:space="preserve">
           <source>Defeat Gym Leader</source>
-          <target state="translated">Besejer Fitnes Leder</target>
+          <target state="translated">Besejr Sal Leder</target>
         </trans-unit>
         <trans-unit id="Combat" translate="yes" xml:space="preserve">
           <source>Combat</source>
@@ -628,33 +628,33 @@ Open page with installation files for manual install?</source>
         <trans-unit id="EggHatchMessage" translate="yes" xml:space="preserve">
           <source>An Egg hatched into a {0}.
 You also got {1} Stardust, {2} Candy and {3} XP.</source>
-          <target state="new">An Egg hatched into a {0}.
-You also got {1} Stardust, {2} Candy and {3} XP.</target>
+          <target state="new">Et æg udklækkede til en {0}.
+Du fik ogsp {1} stjernestøf, {2} Slik and {3} XP.</target>
         </trans-unit>
         <trans-unit id="EvolvePokemonWarningText" translate="yes" xml:space="preserve">
           <source>Do you want to evolve {0}?</source>
-          <target state="new">Do you want to evolve {0}?</target>
+          <target state="new">Vil du udvikle {0}?</target>
         </trans-unit>
         <trans-unit id="PowerUpPokemonWarningText" translate="yes" xml:space="preserve">
           <source>Do you want to use a power up for {0}?</source>
-          <target state="new">Do you want to use a power up for {0}?</target>
+          <target state="new">Vil du bruge en kraft forøger for {0}?</target>
         </trans-unit>
         <trans-unit id="TransferPokemonWarningTitle" translate="yes" xml:space="preserve">
           <source>Do you really want to transfer {0} to the Professor?</source>
-          <target state="new">Do you really want to transfer {0} to the Professor?</target>
+          <target state="new">Vil du virkelig overføre {0} til Professoren?</target>
         </trans-unit>
         <trans-unit id="CancelText" translate="yes" xml:space="preserve">
           <source>CANCEL</source>
-          <target state="new">CANCEL</target>
+          <target state="new">AFBRYD</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
         </trans-unit>
         <trans-unit id="ItemDiscardWarningText" translate="yes" xml:space="preserve">
           <source>Discard {0}?</source>
-          <target state="new">Discard {0}?</target>
+          <target state="new">Kassér {0}?</target>
         </trans-unit>
         <trans-unit id="SetNickName" translate="yes" xml:space="preserve">
           <source>Set Nickname</source>
-          <target state="new">Set Nickname</target>
+          <target state="new">Sæt kaldenavn</target>
         </trans-unit>
         <trans-unit id="OkText" translate="yes" xml:space="preserve">
           <source>O. K.</source>
@@ -663,35 +663,35 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="PokemonEncounterErrorText" translate="yes" xml:space="preserve">
           <source>There was an error loading the encounter with {0}, please try again later.</source>
-          <target state="new">There was an error loading the encounter with {0}, please try again later.</target>
+          <target state="new">Der var en fajl med at indlæse mødet med {0}, prøv venligst senere.</target>
         </trans-unit>
         <trans-unit id="PokemonEncounterNotInRangeText" translate="yes" xml:space="preserve">
           <source>{0} is not in catch range anymore.</source>
-          <target state="new">{0} is not in catch range anymore.</target>
+          <target state="new">{0} er ikke indenfor rækkevidde længere.</target>
         </trans-unit>
         <trans-unit id="CannotTransferFavorite" translate="yes" xml:space="preserve">
           <source>Cannot transfer a favorite Pokémon!</source>
-          <target state="new">Cannot transfer a favorite Pokémon!</target>
+          <target state="new">Kan ikke overføre en favorit Pokémon!</target>
         </trans-unit>
         <trans-unit id="CantUseBerryText" translate="yes" xml:space="preserve">
           <source>You already used a Berry.</source>
-          <target state="new">You already used a Berry.</target>
+          <target state="new">Du har allerde brugt et bær.</target>
         </trans-unit>
         <trans-unit id="LureDetailsTextEmpty" translate="yes" xml:space="preserve">
           <source>Can have a PokéStop Module installed</source>
-          <target state="new">Can have a PokéStop Module installed</target>
+          <target state="new">Can have et Pokéstop modul installeret</target>
         </trans-unit>
         <trans-unit id="LureDetailsTextFilled" translate="yes" xml:space="preserve">
           <source>A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</source>
-          <target state="new">A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</target>
+          <target state="new">Et modul det tiltrækker Pokemons til et Pokéstop for 30 min. Effekten gavner andre personer i nærheden</target>
         </trans-unit>
         <trans-unit id="LureTitleTextEmpty" translate="yes" xml:space="preserve">
           <source>Empty module slot</source>
-          <target state="new">Empty module slot</target>
+          <target state="new">Tomt modul plads</target>
         </trans-unit>
         <trans-unit id="LureTitleTextFilled" translate="yes" xml:space="preserve">
           <source>Lure Module</source>
-          <target state="new">Lure Module</target>
+          <target state="new">Lokke modul</target>
         </trans-unit>
       </group>
     </body>
@@ -704,11 +704,11 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/ACHIEVEMENTS.RESW" datatype="resx">
         <trans-unit id="BadgeBattleAttackWon" translate="yes" xml:space="preserve">
           <source>Battle Girl</source>
-          <target state="translated">Utfordrer</target>
+          <target state="translated">Udfordrer</target>
         </trans-unit>
         <trans-unit id="BadgeBattleAttackWonDescription" translate="yes" xml:space="preserve">
           <source>Won {0} gym battles</source>
-          <target state="translated">Vundet {0} fitnescenter kampe</target>
+          <target state="translated">Vundet {0} sal kampe</target>
         </trans-unit>
         <trans-unit id="BadgeBattleTrainingWon" translate="yes" xml:space="preserve">
           <source>Ace Trainer</source>
@@ -716,7 +716,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="BadgeBattleTrainingWonDescription" translate="yes" xml:space="preserve">
           <source>Won {0} training battles</source>
-          <target state="translated">Vundet {0} uddannelses kampe</target>
+          <target state="translated">Vundet {0} trænnings kampe</target>
         </trans-unit>
         <trans-unit id="BadgeBigMagikarp" translate="yes" xml:space="preserve">
           <source>Fisherman</source>
@@ -744,15 +744,15 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="BadgeHatchedTotal" translate="yes" xml:space="preserve">
           <source>Breeder</source>
-          <target state="translated">Oppdretter</target>
+          <target state="translated">Opdrætter</target>
         </trans-unit>
         <trans-unit id="BadgeHatchedTotalDescription" translate="yes" xml:space="preserve">
           <source>Hatched {0} Pokemon</source>
-          <target state="translated">Klækket {0} Pokemon</target>
+          <target state="translated">Udklækket {0} Pokémon</target>
         </trans-unit>
         <trans-unit id="BadgePikachu" translate="yes" xml:space="preserve">
           <source>Pikachu</source>
-          <target state="translated">Pikachu Fan</target>
+          <target state="translated">Pikachu</target>
         </trans-unit>
         <trans-unit id="BadgePikachuDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Pikachu</source>
@@ -760,11 +760,11 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="BadgePokedexEntries" translate="yes" xml:space="preserve">
           <source>Kanto</source>
-          <target state="translated">Oppdager</target>
+          <target state="translated">Opdager</target>
         </trans-unit>
         <trans-unit id="BadgePokedexEntriesDescription" translate="yes" xml:space="preserve">
           <source>Registered {0} Pokemon in the Pokedex</source>
-          <target state="translated">Der er Registret {0} Pokemon i dit Pokedex</target>
+          <target state="translated">Der er registret {0} Pokémon i dit Pokedex</target>
         </trans-unit>
         <trans-unit id="BadgePokestopsVisited" translate="yes" xml:space="preserve">
           <source>Backpacker</source>
@@ -784,7 +784,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="BadgeTravelKm" translate="yes" xml:space="preserve">
           <source>Jogger</source>
-          <target state="translated">kondiløber</target>
+          <target state="translated">Kondiløber</target>
         </trans-unit>
         <trans-unit id="BadgeTravelKmDescription" translate="yes" xml:space="preserve">
           <source>Walked {0} km</source>
@@ -816,7 +816,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="Fairy" translate="yes" xml:space="preserve">
           <source>Fairy Tale Girl</source>
-          <target state="translated">Eventyrtid</target>
+          <target state="translated">Eventyrer</target>
         </trans-unit>
         <trans-unit id="FairyDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Fairy Pokemon</source>
@@ -824,7 +824,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="Fighting" translate="yes" xml:space="preserve">
           <source>Black Belt</source>
-          <target state="translated">Svart Belte</target>
+          <target state="translated">Sort Bælte</target>
         </trans-unit>
         <trans-unit id="FightingDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Fighting Pokemon</source>
@@ -848,7 +848,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="Ghost" translate="yes" xml:space="preserve">
           <source>Hex Maniac</source>
-          <target state="translated">Heksejager</target>
+          <target state="translated">Heksejæger</target>
         </trans-unit>
         <trans-unit id="GhostDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Ghost Pokemon</source>
@@ -876,7 +876,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="IceDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Ice Pokemon</source>
-          <target state="translated">Fanget {0} is Pokemon</target>
+          <target state="translated">Fanget {0} Is Pokemon</target>
         </trans-unit>
         <trans-unit id="Normal" translate="yes" xml:space="preserve">
           <source>School Kid</source>
@@ -924,7 +924,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="WaterDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Water Pokemon</source>
-          <target state="translated">Fanget {0} vand Pokemon</target>
+          <target state="translated">Fanget {0} Vand Pokemon</target>
         </trans-unit>
       </group>
     </body>
@@ -937,23 +937,23 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/ITEMS.RESW" datatype="resx">
         <trans-unit id="D_ItemGreatBall" translate="yes" xml:space="preserve">
           <source>A good, high-performance Poké Ball that provides a higher catch rate than a standard Poké Ball.</source>
-          <target state="new">A good, high-performance Poké Ball that provides a higher catch rate than a standard Poké Ball.</target>
+          <target state="new">En storartet, højt-ydenende Poké bold der giver en højere fangstrate en end standard Poké Ball.</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseCool" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
-          <target state="translated">Røgelse med en mystisk duft, der lokker vilde Pokémon til din placering i 30 minutter</target>
+          <target state="translated">Fed røgelse med en mystisk duft, der lokker vilde Pokémon til din placering i 30 minutter</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseFloral" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
-          <target state="translated">Røkelse med en mystisk duft som lokker ville Pokémon til deg i 30 minutter</target>
+          <target state="translated">Blomster røgelse med en mystisk duft, der lokker vilde Pokémon til din placering i 30 minutter</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseOrdinary" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
-          <target state="translated">Røkelse med en mystisk duft som lokker ville Pokémon til deg i 30 minutter</target>
+          <target state="translated">Røgelse med en mystisk duft, der lokker vilde Pokémon til din placering i 30 minutter</target>
         </trans-unit>
         <trans-unit id="D_ItemIncenseSpicy" translate="yes" xml:space="preserve">
           <source>Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes</source>
-          <target state="translated">Røkelse med en mystisk duft som lokker ville Pokémon til deg i 30 minutter</target>
+          <target state="translated">Krydret røgelse med en mystisk duft, der lokker vilde Pokémon til din placering i 30 minutter</target>
         </trans-unit>
         <trans-unit id="D_ItemIncubatorBasic" translate="yes" xml:space="preserve">
           <source>A device that incubates an Egg as you walk until it is ready to hatch. Breaks after 3 uses.</source>
@@ -965,19 +965,19 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="D_ItemLuckyEgg" translate="yes" xml:space="preserve">
           <source>A Lucky Egg that's filled with happiness! Earns double XP for 30 minutes.</source>
-          <target state="translated">Et Lykke Æg fyldt med Lykke! Giver dobbelt XP i 30 minuter.</target>
+          <target state="translated">Et lykke æg fyldt med Lykke! Giver dobbelt XP i 30 minuter.</target>
         </trans-unit>
         <trans-unit id="D_ItemMasterBall" translate="yes" xml:space="preserve">
           <source>The best Poké Ball with the ultimate level of performance. With it you will catch any Pokémon without fail.</source>
-          <target state="new">The best Poké Ball with the ultimate level of performance. With it you will catch any Pokémon without fail.</target>
+          <target state="new">Den bedste poké bold med den største ydelse. Med den vil du fange Pokémons uden fejltrin.</target>
         </trans-unit>
         <trans-unit id="D_ItemPokeBall" translate="yes" xml:space="preserve">
           <source>A device for capturing wild Pokémon. It's thrown like a ball at a wild Pokémon, comfortably encapsulating its target.</source>
-          <target state="translated">En innretning for å fange ville Pokémon. Den blir kastet likt som en Pokéball og kan komfortabelt innkapsle et bytte.</target>
+          <target state="translated">En enhed til at fange vilde Pokémon. Den blir kastet som en bold mod en vild pokémon som så komfortabelt indfanger sit bytte.</target>
         </trans-unit>
         <trans-unit id="D_ItemPotion" translate="yes" xml:space="preserve">
           <source>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 20 points.</source>
-          <target state="translated">En spray-type medisin for behandling av sår. Det gjenoppretter HP av en Pokémon med 20 poeng.</target>
+          <target state="translated">En spray-type medicin til behandling af sår. Det genoppretter HP for en Pokémon med 20 point.</target>
         </trans-unit>
         <trans-unit id="D_ItemRazzBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
@@ -1001,7 +1001,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="D_ItemRevive" translate="yes" xml:space="preserve">
           <source>A medicine that can revive fainted Pokémon. It also restores half of a fainted Pokémon's maximum HP.</source>
-          <target state="translated">En medisin som kan gjenopplive besvimte Pokémon. Den vil også gjenopprette halvparten av den besvimte Pokémonen sin maksimale HP.</target>
+          <target state="translated">En medicin som kan genoplive besvimede Pokémon. Den vil også genoprette halvdelen af den besvimede Pokémons maksimale HP.</target>
         </trans-unit>
         <trans-unit id="D_ItemSpecialCamera" translate="yes" xml:space="preserve">
           <source>When you encounter Pokémon in the wild, you can use your camera to photograph them.</source>
@@ -1017,7 +1017,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="D_ItemUltraBall" translate="yes" xml:space="preserve">
           <source>An ultra-high performance Poké Ball that provides a higher success rate for catching Pokémon than a Great.</source>
-          <target state="new">An ultra-high performance Poké Ball that provides a higher success rate for catching Pokémon than a Great.</target>
+          <target state="new">En ultra-højtydende Poké bold der giver en større success rate for at fange en Pokémon end en storartet .</target>
         </trans-unit>
         <trans-unit id="D_ItemUnknown" translate="yes" xml:space="preserve">
           <source>This item is unknown and may be added in the future.</source>
@@ -1029,7 +1029,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="ItemGreatBall" translate="yes" xml:space="preserve">
           <source>Great Ball</source>
-          <target state="translated">Storartet Boldt</target>
+          <target state="translated">Storartet Bold</target>
         </trans-unit>
         <trans-unit id="ItemHyperPotion" translate="yes" xml:space="preserve">
           <source>Hyper Potion</source>
@@ -1061,15 +1061,15 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="ItemItemStorageUpgrade" translate="yes" xml:space="preserve">
           <source>Item Storage Upgrade</source>
-          <target state="translated">Gjenstand lager oppgradering</target>
+          <target state="translated">Genstand lager opgradering</target>
         </trans-unit>
         <trans-unit id="ItemLuckyEgg" translate="yes" xml:space="preserve">
           <source>Lucky Egg</source>
-          <target state="translated">Lykke Egg</target>
+          <target state="translated">Lykke Æg</target>
         </trans-unit>
         <trans-unit id="ItemMasterBall" translate="yes" xml:space="preserve">
           <source>Master Ball</source>
-          <target state="translated">Mester Boldt</target>
+          <target state="translated">Mester Bold</target>
         </trans-unit>
         <trans-unit id="ItemMaxPotion" translate="yes" xml:space="preserve">
           <source>Max Potion</source>
@@ -1077,7 +1077,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="ItemMaxRevive" translate="yes" xml:space="preserve">
           <source>Max Revive</source>
-          <target state="translated">Full Genoplivning</target>
+          <target state="translated">Fuld Genoplivning</target>
         </trans-unit>
         <trans-unit id="ItemNanabBerry" translate="yes" xml:space="preserve">
           <source>Nanab Berry</source>
@@ -1089,11 +1089,11 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="ItemPokeBall" translate="yes" xml:space="preserve">
           <source>Poke Ball</source>
-          <target state="translated">Poke Ball</target>
+          <target state="translated">Poké Bold</target>
         </trans-unit>
         <trans-unit id="ItemPokemonStorageUpgrade" translate="yes" xml:space="preserve">
           <source>Pokemon Storage Upgrade</source>
-          <target state="translated"> Pokémon lager oppgradering</target>
+          <target state="translated"> Pokémon lager opgradering</target>
         </trans-unit>
         <trans-unit id="ItemPotion" translate="yes" xml:space="preserve">
           <source>Potion</source>
@@ -1105,11 +1105,11 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="ItemRevive" translate="yes" xml:space="preserve">
           <source>Revive</source>
-          <target state="translated">Gjenopplivning</target>
+          <target state="translated">Genoplivning</target>
         </trans-unit>
         <trans-unit id="ItemSpecialCamera" translate="yes" xml:space="preserve">
           <source>Special Camera</source>
-          <target state="translated">Speciel kamera</target>
+          <target state="translated">Special kamera</target>
         </trans-unit>
         <trans-unit id="ItemSuperPotion" translate="yes" xml:space="preserve">
           <source>Super Potion</source>
@@ -1121,7 +1121,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="ItemUltraBall" translate="yes" xml:space="preserve">
           <source>Ultra Ball</source>
-          <target state="translated">Ultra Boldt</target>
+          <target state="translated">Ultra Bold</target>
         </trans-unit>
         <trans-unit id="ItemUnknown" translate="yes" xml:space="preserve">
           <source>Unknown</source>
@@ -1154,11 +1154,11 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
       <group id="POKEMONGO-UWP/STRINGS/EN-US/POKEDEX.RESW" datatype="resx">
         <trans-unit id="Bulbasaur.Description" translate="yes" xml:space="preserve">
           <source>Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun’s rays, the seed grows progressively larger.</source>
-          <target state="translated">Bulbasaur kan ses tage en lur i det stærkt sollys. Der er en frø på ryggen. Ved at absorbere solens stråler, vokser frøet gradvist større.</target>
+          <target state="translated">Bulbasaur kan ses tage en lur i det stærk sollys. Der er en frø på ryggen. Ved at absorbere solens stråler, vokser frøet gradvist større.</target>
         </trans-unit>
         <trans-unit id="Ivysaur.Description" translate="yes" xml:space="preserve">
           <source>There is a bud on this Pokémon’s back. To support its weight, Ivysaur’s legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it’s a sign that the bud will bloom into a large flower soon.</source>
-          <target state="translated">Der er et kn oppå denne Pokémon's ryg. For at understøtte sin vægt, vokser Ivysaurs ben og torso tyk og stærk. Hvis det begynder at tilbringe mere tid liggende i sollys, er det et tegn på at knoppen vil blomstre til en stor blomst snart.</target>
+          <target state="translated">Der er en knop på denne Pokémon's ryg. For at understøtte sin vægt, vokser Ivysaurs ben og torso tyk og stærk. Hvis det begynder at tilbringe mere tid liggende i sollys, er det et tegn på at knoppen vil blomstre til en stor blomst snart.</target>
         </trans-unit>
         <trans-unit id="Venusaur.Description" translate="yes" xml:space="preserve">
           <source>There is a large flower on Venusaur’s back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower’s aroma soothes the emotions of people.</source>
@@ -1166,595 +1166,595 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="Charmander.Description" translate="yes" xml:space="preserve">
           <source>The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.</source>
-          <target state="translated">Den flamme, der brænder på spidsen af halen er en indikation af dens følelser. Flammen skælver når Charmander nyder sig selv. Hvis Pokémon bliver rasende, brænder flammen voldsomt.</target>
+          <target state="translated">Den flamme, der brænder på spidsen af halen er en indikation af dens følelser. Flammen skælver når Charmander morer sig. Hvis Pokémon bliver rasende, brænder flammen voldsomt.</target>
         </trans-unit>
         <trans-unit id="Charmeleon.Description" translate="yes" xml:space="preserve">
           <source>Charmeleon mercilessly destroys its foes using its sharp claws. If it encounters a strong foe, it turns aggressive. In this excited state, the flame at the tip of its tail flares with a bluish white color.</source>
-          <target state="new">Charmeleon mercilessly destroys its foes using its sharp claws. If it encounters a strong foe, it turns aggressive. In this excited state, the flame at the tip of its tail flares with a bluish white color.</target>
+          <target state="new">Charmeleon ødelægger nådesløst sine fjender med sine skarpe klør. Hvis den møder en stærk fjende bliver den aggressiv. I dens ophissede tilstand, brænder flammen på spidsen af dens hale i en blåhvid farve</target>
         </trans-unit>
         <trans-unit id="Charizard.Description" translate="yes" xml:space="preserve">
           <source>Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.</source>
-          <target state="new">Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.</target>
+          <target state="new">Charizard flyver rundt på himlen i jagten på stærke modstandere. Det ånder ild af så stor varme, at det smelter alting. Men det vender aldrig sin flammende ånde mod en modstander svagere end sig selv .</target>
         </trans-unit>
         <trans-unit id="Squirtle.Description" translate="yes" xml:space="preserve">
           <source>Squirtle’s shell is not merely used for protection. The shell’s rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds.</source>
-          <target state="new">Squirtle’s shell is not merely used for protection. The shell’s rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds.</target>
+          <target state="new">Squirtle’s skal er ikke kun brugt til beskyttelse. Skallens afrundede form og rillerne på overfladen at minimere modstand i vand, så denne Pokémon kan svømme ved høje hastigheder.</target>
         </trans-unit>
         <trans-unit id="Wartortle.Description" translate="yes" xml:space="preserve">
           <source>Its tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Pokémon’s toughness as a battler.</source>
-          <target state="new">Its tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Pokémon’s toughness as a battler.</target>
+          <target state="new">Wartortles hale er stor og dækket med en rig, tyk pels. Halen bliver stadig dybere i farve som Wartortle aldres. Ridserne på sin skal vidner om denne Pokémons sejhed som en kæmper.</target>
         </trans-unit>
         <trans-unit id="Blastoise.Description" translate="yes" xml:space="preserve">
           <source>Blastoise has water spouts that protrude from its shell. The water spouts are very accurate. They can shoot bullets of water with enough accuracy to strike empty cans from a distance of over 160 feet.</source>
-          <target state="new">Blastoise has water spouts that protrude from its shell. The water spouts are very accurate. They can shoot bullets of water with enough accuracy to strike empty cans from a distance of over 160 feet.</target>
+          <target state="new">Blastoise har vand tude der stikker ud fra sin skal. Vand tudene er meget præcise. De kan skyde kugler af vand med tilstrækkelig nøjagtighed til at ramme tomme dåser fra en afstand på over 50 meter.</target>
         </trans-unit>
         <trans-unit id="Caterpie.Description" translate="yes" xml:space="preserve">
           <source>Caterpie has a voracious appetite. It can devour leaves bigger than its body right before your eyes. From its antenna, this Pokémon releases a terrifically strong odor.</source>
-          <target state="new">Caterpie has a voracious appetite. It can devour leaves bigger than its body right before your eyes. From its antenna, this Pokémon releases a terrifically strong odor.</target>
+          <target state="new">Caterpie har en glubende appetit. Det kan fortære blade større end sin krop lige foran dine øjne. Fra sin antenne, frigiver denne Pokémon en forfærdelig stærk lugt.</target>
         </trans-unit>
         <trans-unit id="Metapod.Description" translate="yes" xml:space="preserve">
           <source>The shell covering this Pokémon’s body is as hard as an iron slab. Metapod does not move very much. It stays still because it is preparing its soft innards for evolution inside the hard shell.</source>
-          <target state="new">The shell covering this Pokémon’s body is as hard as an iron slab. Metapod does not move very much. It stays still because it is preparing its soft innards for evolution inside the hard shell.</target>
+          <target state="new">Skallen der dækker denne Pokémons krop er så hård som en jern plade. Metapod bevæger sig ikke meget. Det forbliver rolig, fordi den er ved at forberede sit bløde indhold for evolution inde den hårde skal.</target>
         </trans-unit>
         <trans-unit id="Butterfree.Description" translate="yes" xml:space="preserve">
           <source>Butterfree has a superior ability to search for delicious honey from flowers. It can even search out, extract, and carry honey from flowers that are blooming over six miles from its nest.</source>
-          <target state="new">Butterfree has a superior ability to search for delicious honey from flowers. It can even search out, extract, and carry honey from flowers that are blooming over six miles from its nest.</target>
+          <target state="new">Butterfree har en overlegen evne til at søge efter lækker honning fra blomster. Den kan endda søge ud, udtrække, og bære honning fra blomster, der blomstrer over 10km fra sin rede.</target>
         </trans-unit>
         <trans-unit id="Weedle.Description" translate="yes" xml:space="preserve">
           <source>Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).</source>
-          <target state="new">Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).</target>
+          <target state="new">Weedle har en ekstremt god lugtesans. Den er i stand til at skelne sine foretrukne typer af blade fra dem, den ikke kan lide bare ved at snuse med sin store røde snabel (næse).</target>
         </trans-unit>
         <trans-unit id="Kakuna.Description" translate="yes" xml:space="preserve">
           <source>Kakuna remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch.</source>
-          <target state="new">Kakuna remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch.</target>
+          <target state="new">Kakuna er stort set immobil det den klamrer sig til et træ. Men på indersiden, har den meget travlt, da den forbereder for sin kommende evolution. Dette fremgår tydeligt af hvor varmt skallen bliver at røre ved.</target>
         </trans-unit>
         <trans-unit id="Beedrill.Description" translate="yes" xml:space="preserve">
           <source>Beedrill is extremely territorial. No one should ever approach its nest—this is for their own safety. If angered, they will attack in a furious swarm.</source>
-          <target state="new">Beedrill is extremely territorial. No one should ever approach its nest—this is for their own safety. If angered, they will attack in a furious swarm.</target>
+          <target state="new">Beedrill er ekstremt territoriale. Ingen bør nogensinde mærme sig dens rede. Dette er for deres egen sikkerhed. Hvis vred, vil de angribe i en rasende sværm.</target>
         </trans-unit>
         <trans-unit id="Pidgey.Description" translate="yes" xml:space="preserve">
           <source>Pidgey has an extremely sharp sense of direction. It is capable of unerringly returning home to its nest, however far it may be removed from its familiar surroundings.</source>
-          <target state="new">Pidgey has an extremely sharp sense of direction. It is capable of unerringly returning home to its nest, however far it may be removed from its familiar surroundings.</target>
+          <target state="new">Pidgey har en ekstremt skarp fornemmelse for retning. Den er i stand til usvigeligt at vende hjem til sin rede, ligegyldigt hvor langt den fjernes fra sine vante omgivelser.</target>
         </trans-unit>
         <trans-unit id="Pidgeotto.Description" translate="yes" xml:space="preserve">
           <source>Pidgeotto claims a large area as its own territory. This Pokémon flies around, patrolling its living space. If its territory is violated, it shows no mercy in thoroughly punishing the foe with its sharp claws.</source>
-          <target state="new">Pidgeotto claims a large area as its own territory. This Pokémon flies around, patrolling its living space. If its territory is violated, it shows no mercy in thoroughly punishing the foe with its sharp claws.</target>
+          <target state="new">Pidgeotto hævder et stort område som sit eget territorie. Denne Pokémon flyver rundt og patruljerer sit habitat. Hvis dens territorie overtrædes, viser den ingen nåde i at grundigt straffe fjenden med sine skarpe kløer.</target>
         </trans-unit>
         <trans-unit id="Pidgeot.Description" translate="yes" xml:space="preserve">
           <source>This Pokémon has a dazzling plumage of beautifully glossy feathers. Many Trainers are captivated by the striking beauty of the feathers on its head, compelling them to choose Pidgeot as their Pokémon.</source>
-          <target state="new">This Pokémon has a dazzling plumage of beautifully glossy feathers. Many Trainers are captivated by the striking beauty of the feathers on its head, compelling them to choose Pidgeot as their Pokémon.</target>
+          <target state="new">Denne Pokémon har en blændende fjerdragt af smukt blanke fjer. Mange trænere er betaget af den slående skønhed af fjerne på dens hovede, som appelerer dem til at vælge Pidgeot som deres Pokémon.</target>
         </trans-unit>
         <trans-unit id="Rattata.Description" translate="yes" xml:space="preserve">
           <source>Rattata is cautious in the extreme. Even while it is asleep, it constantly listens by moving its ears around. It is not picky about where it lives—it will make its nest anywhere.</source>
-          <target state="new">Rattata is cautious in the extreme. Even while it is asleep, it constantly listens by moving its ears around. It is not picky about where it lives—it will make its nest anywhere.</target>
+          <target state="new">Rattata er forsigtig ud i det ekstreme. Selv mens den sover, lytter den hele tiden ved at flytte sine ører rundt. Den er ikke kræsen omkring hvor den lever, den vil lave sin rede overalt.</target>
         </trans-unit>
         <trans-unit id="Raticate.Description" translate="yes" xml:space="preserve">
           <source>Raticate’s sturdy fangs grow steadily. To keep them ground down, it gnaws on rocks and logs. It may even chew on the walls of houses.</source>
-          <target state="new">Raticate’s sturdy fangs grow steadily. To keep them ground down, it gnaws on rocks and logs. It may even chew on the walls of houses.</target>
+          <target state="new">Raticate robuste hugtænder vokser støt. For at holde dem slebet ned, gnaver den i klipper og træstammer. Den kan endda tygge på væggene af huse.</target>
         </trans-unit>
         <trans-unit id="Spearow.Description" translate="yes" xml:space="preserve">
           <source>Spearow has a very loud cry that can be heard over half a mile away. If its high, keening cry is heard echoing all around, it is a sign that they are warning each other of danger.</source>
-          <target state="new">Spearow has a very loud cry that can be heard over half a mile away. If its high, keening cry is heard echoing all around, it is a sign that they are warning each other of danger.</target>
+          <target state="new">Spearow har et meget højt skrig, der kan høres næsten en kilometer væk. Hvis dens høje, ivrige skrig høres flyve hele rundt, er det et tegn på, at de advarer hinanden om fare.</target>
         </trans-unit>
         <trans-unit id="Fearow.Description" translate="yes" xml:space="preserve">
           <source>Fearow is recognized by its long neck and elongated beak. They are conveniently shaped for catching prey in soil or water. It deftly moves its long and skinny beak to pluck prey.</source>
-          <target state="new">Fearow is recognized by its long neck and elongated beak. They are conveniently shaped for catching prey in soil or water. It deftly moves its long and skinny beak to pluck prey.</target>
+          <target state="new">Fearow er anerkendt for sin lange hals og aflange næb. De er bekvemt formet til at fange bytte i jord eller vand. Den bevæger sig behændigt sin lange og slanke næb for at plukke bytte.</target>
         </trans-unit>
         <trans-unit id="Ekans.Description" translate="yes" xml:space="preserve">
           <source>Ekans curls itself up in a spiral while it rests. Assuming this position allows it to quickly respond to a threat from any direction with a glare from its upraised head.</source>
-          <target state="new">Ekans curls itself up in a spiral while it rests. Assuming this position allows it to quickly respond to a threat from any direction with a glare from its upraised head.</target>
+          <target state="new">Ekans krøller sig op i en spiral, mens den hviler. Antages denne position gør den det muligt at reagere hurtigt på en trussel fra alle retninger med en opblusning fra dets oprejste hoved.</target>
         </trans-unit>
         <trans-unit id="Arbok.Description" translate="yes" xml:space="preserve">
           <source>This Pokémon is terrifically strong in order to constrict things with its body. It can even flatten steel oil drums. Once Arbok wraps its body around its foe, escaping its crunching embrace is impossible.</source>
-          <target state="new">This Pokémon is terrifically strong in order to constrict things with its body. It can even flatten steel oil drums. Once Arbok wraps its body around its foe, escaping its crunching embrace is impossible.</target>
+          <target state="new">Denne Pokémon er utrolig stærk til at flade ting ud med sin krop. Det kan endda udflade stål olietønder. Når Arbok vikler sin krop omkring sin fjende, er flugt fra dens knasende omfavnelse er umuligt.</target>
         </trans-unit>
         <trans-unit id="Pikachu.Description" translate="yes" xml:space="preserve">
           <source>This Pokémon has electricity-storing pouches on its cheeks. These appear to become electrically charged during the night while Pikachu sleeps. It occasionally discharges electricity when it is dozy after waking up.</source>
-          <target state="new">This Pokémon has electricity-storing pouches on its cheeks. These appear to become electrically charged during the night while Pikachu sleeps. It occasionally discharges electricity when it is dozy after waking up.</target>
+          <target state="new">Denne Pokémon har el-lagrings poser på sine kinder. Disse synes at blive elektrisk ladet i løbet af natten, mens Pikachu sover. Den udleder lejlighedsvis elektricitet, når den er døsig efter at vågne op.</target>
         </trans-unit>
         <trans-unit id="Raichu.Description" translate="yes" xml:space="preserve">
           <source>This Pokémon exudes a weak electrical charge from all over its body that makes it take on a slight glow in darkness. Raichu plants its tail in the ground to discharge electricity.</source>
-          <target state="new">This Pokémon exudes a weak electrical charge from all over its body that makes it take on a slight glow in darkness. Raichu plants its tail in the ground to discharge electricity.</target>
+          <target state="new">Denne Pokémon udstråler en svag elektrisk ladning fra hele sin krop, der gør at den glødder let i mørke. Raichu planter halen i jorden for at aflade elektricitet.</target>
         </trans-unit>
         <trans-unit id="Sandshrew.Description" translate="yes" xml:space="preserve">
           <source>Sandshrew has a very dry hide that is extremely tough. The Pokémon can roll into a ball that repels any attack. At night, it burrows into the desert sand to sleep.</source>
-          <target state="new">Sandshrew has a very dry hide that is extremely tough. The Pokémon can roll into a ball that repels any attack. At night, it burrows into the desert sand to sleep.</target>
+          <target state="new">Sandshrew har en meget tør hud, der er ekstremt hård. Dende Pokémon kan rulle sig sammen til en kugle, der afviser ethvert angreb. Om natten, graver den sig ned i ørkensandet for at sove.</target>
         </trans-unit>
         <trans-unit id="Sandslash.Description" translate="yes" xml:space="preserve">
           <source>Sandslash can roll up its body as if it were a ball covered with large spikes. In battle, this Pokémon will try to make the foe flinch by jabbing it with its spines. It then leaps at the stunned foe to tear wildly with its sharp claws.</source>
-          <target state="new">Sandslash can roll up its body as if it were a ball covered with large spikes. In battle, this Pokémon will try to make the foe flinch by jabbing it with its spines. It then leaps at the stunned foe to tear wildly with its sharp claws.</target>
+          <target state="new">Sandslash kan rulle sin krop sammen, som var om det en kugle dækket med store pigge. I kamp, vil denne Pokémon forsøge at få fjenden til at vige ved jabbe med sine pigge. Den springer så imod den overaskede fjende for så at rive vildt med sine skarpe kløer.</target>
         </trans-unit>
         <trans-unit id="NidoranFemale.Description" translate="yes" xml:space="preserve">
           <source>Nidoran♀ has barbs that secrete a powerful poison. They are thought to have developed as protection for this small-bodied Pokémon. When enraged, it releases a horrible toxin from its horn.</source>
-          <target state="new">Nidoran♀ has barbs that secrete a powerful poison. They are thought to have developed as protection for this small-bodied Pokémon. When enraged, it releases a horrible toxin from its horn.</target>
+          <target state="new">Nidoran♀ har modhager, der udskiller en kraftig gift. De menes at have udviklet som beskyttelse for denne lille Pokémon. Når rasende, rigiver den en forfærdelig toksin fra sit horn.</target>
         </trans-unit>
         <trans-unit id="Nidorina.Description" translate="yes" xml:space="preserve">
           <source>When Nidorina are with their friends or family, they keep their barbs tucked away to prevent hurting each other. This Pokémon appears to become nervous if separated from the others.</source>
-          <target state="new">When Nidorina are with their friends or family, they keep their barbs tucked away to prevent hurting each other. This Pokémon appears to become nervous if separated from the others.</target>
+          <target state="new">Når Nidorina er med den venner eller familie, holder de deres modhager gemt væk for at forhindre at såre hinanden. Denne Pokémon synes at blive nervøs hvis den er adskilt fra de andre.</target>
         </trans-unit>
         <trans-unit id="Nidoqueen.Description" translate="yes" xml:space="preserve">
           <source>Nidoqueen’s body is encased in extremely hard scales. It is adept at sending foes flying with harsh tackles. This Pokémon is at its strongest when it is defending its young.</source>
-          <target state="new">Nidoqueen’s body is encased in extremely hard scales. It is adept at sending foes flying with harsh tackles. This Pokémon is at its strongest when it is defending its young.</target>
+          <target state="new">Nidoqueens krop er indkapslet i ekstremt hårde skaler. Det er dygtige til at sende sine fjender på en flyvetur med sine barske tacklinger. Denne Pokémon er stærkest, når den forsvarer sin unger.</target>
         </trans-unit>
         <trans-unit id="NidoranMale.Description" translate="yes" xml:space="preserve">
           <source>Nidoran♂ has developed muscles for moving its ears. Thanks to them, the ears can be freely moved in any direction. Even the slightest sound does not escape this Pokémon’s notice.</source>
-          <target state="new">Nidoran♂ has developed muscles for moving its ears. Thanks to them, the ears can be freely moved in any direction. Even the slightest sound does not escape this Pokémon’s notice.</target>
+          <target state="new">Nidoran♂ har udviklet muskler til at rykke med sine ører. Takket være dem kan ørerne bevæge sig frit i alle retninger. Selv den mindste lyd kan ikke undslippe denne Pokémon.</target>
         </trans-unit>
         <trans-unit id="Nidorino.Description" translate="yes" xml:space="preserve">
           <source>Nidorino has a horn that is harder than a diamond. If it senses a hostile presence, all the barbs on its back bristle up at once, and it challenges the foe with all its might.</source>
-          <target state="new">Nidorino has a horn that is harder than a diamond. If it senses a hostile presence, all the barbs on its back bristle up at once, and it challenges the foe with all its might.</target>
+          <target state="new">Nidorino har et horn, der er hårdere end en diamant. Hvis det registrerer en fjendtlig tilstedeværelse, stritter alle modhager på ryggen op på én gang, og den udfordrer fjenden med al sin magt.</target>
         </trans-unit>
         <trans-unit id="Nidoking.Description" translate="yes" xml:space="preserve">
           <source>Nidoking’s thick tail packs enormously destructive power. With one swing, it can topple a metal transmission tower. Once this Pokémon goes on a rampage, there is no stopping it.</source>
-          <target state="new">Nidoking’s thick tail packs enormously destructive power. With one swing, it can topple a metal transmission tower. Once this Pokémon goes on a rampage, there is no stopping it.</target>
+          <target state="new">Nidokings tykke hale indeholder enormt ødelæggende kraft. Med et sving, kan den vælte et transmission tårn af metal. Når denne Pokémon går helt amok, er der ingen der kan stoppe det.</target>
         </trans-unit>
         <trans-unit id="Clefairy.Description" translate="yes" xml:space="preserve">
           <source>On every night of a full moon, groups of this Pokémon come out to play. When dawn arrives, the tired Clefairy return to their quiet mountain retreats and go to sleep nestled up against each other.</source>
-          <target state="new">On every night of a full moon, groups of this Pokémon come out to play. When dawn arrives, the tired Clefairy return to their quiet mountain retreats and go to sleep nestled up against each other.</target>
+          <target state="new">På enhver nat med fuldmåne, kommer gruper af denne Pokémon ud for at lege. Når daggry kommer, vender en træt Clefairy tilbage til deres rolige bjerg refugier for at sove puttet op mod hinanden.</target>
         </trans-unit>
         <trans-unit id="Clefable.Description" translate="yes" xml:space="preserve">
           <source>Clefable moves by skipping lightly as if it were flying using its wings. Its bouncy step lets it even walk on water. It is known to take strolls on lakes on quiet, moonlit nights.</source>
-          <target state="new">Clefable moves by skipping lightly as if it were flying using its wings. Its bouncy step lets it even walk on water. It is known to take strolls on lakes on quiet, moonlit nights.</target>
+          <target state="new">Clefable flytter sig ved at springe let, som om den var flyvende ved hjælp af sine vinger. Dens hoppende skridt lader den endda gå på vandet. Det er kendt for at tage gåture på søer på stille måneskinsnætter.</target>
         </trans-unit>
         <trans-unit id="Vulpix.Description" translate="yes" xml:space="preserve">
           <source>Inside Vulpix’s body burns a flame that never goes out. During the daytime, when the temperatures rise, this Pokémon releases flames from its mouth to prevent its body from growing too hot.</source>
-          <target state="new">Inside Vulpix’s body burns a flame that never goes out. During the daytime, when the temperatures rise, this Pokémon releases flames from its mouth to prevent its body from growing too hot.</target>
+          <target state="new">Inde i Vulpix krop brænder en flamme, der aldrig går ud. I dagtimerne, når temperaturen stiger, lukker denne Pokémon flammer ud af munden for at forhindre sin krop i at blive for varm.</target>
         </trans-unit>
         <trans-unit id="Ninetales.Description" translate="yes" xml:space="preserve">
           <source>Legend has it that Ninetales came into being when nine wizards possessing sacred powers merged into one. This Pokémon is highly intelligent—it can understand human speech.</source>
-          <target state="new">Legend has it that Ninetales came into being when nine wizards possessing sacred powers merged into one. This Pokémon is highly intelligent—it can understand human speech.</target>
+          <target state="new">Legenden siger, at Ninetales opstod, da ni troldmænd med hellige kræfter slog sig sammen til én. Denne Pokémon er meget intelligent. Den kan forstå menneskelig tale.</target>
         </trans-unit>
         <trans-unit id="Jigglypuff.Description" translate="yes" xml:space="preserve">
           <source>When this Pokémon sings, it never pauses to breathe. If it is in a battle against an opponent that does not easily fall asleep, Jigglypuff cannot breathe, endangering its life.</source>
-          <target state="new">When this Pokémon sings, it never pauses to breathe. If it is in a battle against an opponent that does not easily fall asleep, Jigglypuff cannot breathe, endangering its life.</target>
+          <target state="new">Når denne Pokémon synger, stopper den aldrig for at trække vejret. Hvis den er i en kamp mod en modstander, der ikke let falder i søvn, kan Jigglypuff ikke ånde, med fare sit liv.</target>
         </trans-unit>
         <trans-unit id="Wigglytuff.Description" translate="yes" xml:space="preserve">
           <source>Wigglytuff’s body is very flexible. By inhaling deeply, this Pokémon can inflate itself seemingly without end. Once inflated, Wigglytuff bounces along lightly like a balloon.</source>
-          <target state="new">Wigglytuff’s body is very flexible. By inhaling deeply, this Pokémon can inflate itself seemingly without end. Once inflated, Wigglytuff bounces along lightly like a balloon.</target>
+          <target state="new">Wigglytuffs krop er meget fleksibel. Ved at indånde dybt, kan denne Pokémon puste sig op tilsyneladende uden ende. Når oppustet, hopper Wigglytuff let afsted som en ballon.</target>
         </trans-unit>
         <trans-unit id="Zubat.Description" translate="yes" xml:space="preserve">
           <source>Zubat avoids sunlight because exposure causes it to become unhealthy. During the daytime, it stays in caves or under the eaves of old houses, sleeping while hanging upside down.</source>
-          <target state="new">Zubat avoids sunlight because exposure causes it to become unhealthy. During the daytime, it stays in caves or under the eaves of old houses, sleeping while hanging upside down.</target>
+          <target state="new">Zubat undgår sollys, fordi eksponering får den til at blive syg. I løbet af dagen, bliver den i huler eller under tagudhænget af gamle huse, mens den sover hængende på hovedet.</target>
         </trans-unit>
         <trans-unit id="Golbat.Description" translate="yes" xml:space="preserve">
           <source>Golbat bites down on prey with its four fangs and drinks the victim’s blood. It becomes active on inky dark moonless nights, flying around to attack people and Pokémon.</source>
-          <target state="new">Golbat bites down on prey with its four fangs and drinks the victim’s blood. It becomes active on inky dark moonless nights, flying around to attack people and Pokémon.</target>
+          <target state="new">Golbat bider i dens bytte med sine fire hugtænder og drikker ofrets blod. Den bliver aktiv på blækmørke måneløse nætter, hvor den flyver rundt for at angribe mennesker og Pokémon.</target>
         </trans-unit>
         <trans-unit id="Oddish.Description" translate="yes" xml:space="preserve">
           <source>Oddish searches for fertile, nutrient-rich soil, then plants itself. During the daytime, while it is planted, this Pokémon’s feet are thought to change shape and become similar to the roots of trees.</source>
-          <target state="new">Oddish searches for fertile, nutrient-rich soil, then plants itself. During the daytime, while it is planted, this Pokémon’s feet are thought to change shape and become similar to the roots of trees.</target>
+          <target state="new">Oddish søgninger efter frugtbar, næringsrig jord, og planter sig derefter. I løbet af dagen, mens den er plantet, menes denne Pokémon fødder at ændre form og blive lignende rødderne af træer.</target>
         </trans-unit>
         <trans-unit id="Gloom.Description" translate="yes" xml:space="preserve">
           <source>From its mouth Gloom drips honey that smells absolutely horrible. Apparently, it loves the horrid stench. It sniffs the noxious fumes and then drools even more of its honey.</source>
-          <target state="new">From its mouth Gloom drips honey that smells absolutely horrible. Apparently, it loves the horrid stench. It sniffs the noxious fumes and then drools even more of its honey.</target>
+          <target state="new">Fra sin mund drypper Gloom honning, der lugter helt forfærdeligt. Tilsyneladende, elsker den selv den fæle stank. Den indånder de skadelige dampe og derefter savler den endnu mere af sin honning.</target>
         </trans-unit>
         <trans-unit id="Vileplume.Description" translate="yes" xml:space="preserve">
           <source>Vileplume has the world’s largest petals. They are used to attract prey that are then doused with toxic spores. Once the prey are immobilized, this Pokémon catches and devours them.</source>
-          <target state="new">Vileplume has the world’s largest petals. They are used to attract prey that are then doused with toxic spores. Once the prey are immobilized, this Pokémon catches and devours them.</target>
+          <target state="new">Vileplume har verdens største kronblade. De anvendes til at tiltrække bytte, som derefter bliver overhældt med giftige sporer. Når byttet er immobiliseret, fanger denne Pokémon dem og fortærer dem.</target>
         </trans-unit>
         <trans-unit id="Paras.Description" translate="yes" xml:space="preserve">
           <source>Paras has parasitic mushrooms growing on its back called tochukaso. They grow large by drawing nutrients from this Bug Pokémon host. They are highly valued as a medicine for extending life.</source>
-          <target state="new">Paras has parasitic mushrooms growing on its back called tochukaso. They grow large by drawing nutrients from this Bug Pokémon host. They are highly valued as a medicine for extending life.</target>
+          <target state="new">Paras har parasitære svampe der vokser på ryggen der kaldes tochukaso. De vokser sig store ved at trække næringsstoffer fra denne Bug Pokémons vært. De er højt værdsat som en medicin til at forlænge livet.</target>
         </trans-unit>
         <trans-unit id="Parasect.Description" translate="yes" xml:space="preserve">
           <source>Parasect is known to infest large trees en masse and drain nutrients from the lower trunk and roots. When an infested tree dies, they move onto another tree all at once.</source>
-          <target state="new">Parasect is known to infest large trees en masse and drain nutrients from the lower trunk and roots. When an infested tree dies, they move onto another tree all at once.</target>
+          <target state="new">Parasect er kendt for i massevis at inficere store træer og dræne næringsstoffer fra den nedre krop og rødder. Når et befængt træ dør, bevæger de sig til et andet træ på én gang.</target>
         </trans-unit>
         <trans-unit id="Venonat.Description" translate="yes" xml:space="preserve">
           <source>Venonat is said to have evolved with a coat of thin, stiff hair that covers its entire body for protection. It possesses large eyes that never fail to spot even minuscule prey.</source>
-          <target state="new">Venonat is said to have evolved with a coat of thin, stiff hair that covers its entire body for protection. It possesses large eyes that never fail to spot even minuscule prey.</target>
+          <target state="new">Venonat siges at have udviklet sig med et lag af tynde, stive hår, der dækker hele sin krop for beskyttelse. Den besidder store øjne, som aldrig undlader den at spotte selv det mindste bytte.</target>
         </trans-unit>
         <trans-unit id="Venomoth.Description" translate="yes" xml:space="preserve">
           <source>Venomoth is nocturnal—it is a Pokémon that only becomes active at night. Its favorite prey are small insects that gather around streetlights, attracted by the light in the darkness.</source>
-          <target state="new">Venomoth is nocturnal—it is a Pokémon that only becomes active at night. Its favorite prey are small insects that gather around streetlights, attracted by the light in the darkness.</target>
+          <target state="new">Venomoth er natlig, det er en Pokémon som kun bliver aktiv om natten. Dens foretrukne byttedyr er små insekter, der samles omkring gadelygter, tiltrukket af lyset i mørket.</target>
         </trans-unit>
         <trans-unit id="Diglett.Description" translate="yes" xml:space="preserve">
           <source>Diglett are raised in most farms. The reason is simple— wherever this Pokémon burrows, the soil is left perfectly tilled for planting crops. This soil is made ideal for growing delicious vegetables.</source>
-          <target state="new">Diglett are raised in most farms. The reason is simple— wherever this Pokémon burrows, the soil is left perfectly tilled for planting crops. This soil is made ideal for growing delicious vegetables.</target>
+          <target state="new">Diglett er opfostret i de fleste gårde. Årsagen er enkel. Uanset hvor denne Pokémon graver, efterlades jorden perfekt bearbejdet til plantning af afgrøder. Denne jord er lavet ideel til dyrkning lækre grøntsager.</target>
         </trans-unit>
         <trans-unit id="Dugtrio.Description" translate="yes" xml:space="preserve">
           <source>Dugtrio are actually triplets that emerged from one body. As a result, each triplet thinks exactly like the other two triplets. They work cooperatively to burrow endlessly.</source>
-          <target state="new">Dugtrio are actually triplets that emerged from one body. As a result, each triplet thinks exactly like the other two triplets. They work cooperatively to burrow endlessly.</target>
+          <target state="new">Dugtrio er faktisk trillinger, der kom fra et legeme. Som et resultat deraf, tænker hver triplet nøjagtigt ligesom de to andre tripletter. De arbejder sammen om at grave sig ned i det uendelige.</target>
         </trans-unit>
         <trans-unit id="Meowth.Description" translate="yes" xml:space="preserve">
           <source>Meowth withdraws its sharp claws into its paws to slinkily sneak about without making any incriminating footsteps. For some reason, this Pokémon loves shiny coins that glitter with light.</source>
-          <target state="new">Meowth withdraws its sharp claws into its paws to slinkily sneak about without making any incriminating footsteps. For some reason, this Pokémon loves shiny coins that glitter with light.</target>
+          <target state="new">Meowth trækker sine skarpe kløer ind i sine poter for at slangende snige sig omkring uden at foretage nogen belastende fodtrin. Af en eller anden grund, elsker denne Pokémon skinnende mønter, der glimter i lyset.</target>
         </trans-unit>
         <trans-unit id="Persian.Description" translate="yes" xml:space="preserve">
           <source>Persian has six bold whiskers that give it a look of toughness. The whiskers sense air movements to determine what is in the Pokémon’s surrounding vicinity. It becomes docile if grabbed by the whiskers.</source>
-          <target state="new">Persian has six bold whiskers that give it a look of toughness. The whiskers sense air movements to determine what is in the Pokémon’s surrounding vicinity. It becomes docile if grabbed by the whiskers.</target>
+          <target state="new">Persian har seks fed knurhår, der giver det et udseende af sejhed. Knurhårene fornemmer luftbevægelser for at afgøre, hvad der er i denne Pokémons nærhed. Den bliver føjelig, hvis den gribes i sine knurhår.</target>
         </trans-unit>
         <trans-unit id="Psyduck.Description" translate="yes" xml:space="preserve">
           <source>If it uses its mysterious power, Psyduck can’t remember having done so. It apparently can’t form a memory of such an event because it goes into an altered state that is much like deep sleep.</source>
-          <target state="new">If it uses its mysterious power, Psyduck can’t remember having done so. It apparently can’t form a memory of such an event because it goes into an altered state that is much like deep sleep.</target>
+          <target state="new">Hvis den bruger sin mystiske magt, kan Psyduck ikke huske at have gjort det. Det kan tilsyneladende ikke danne en hukommelse af en sådan hændelse, fordi den går ind i en alternativ tilstand, der er meget ligesom dyb søvn.</target>
         </trans-unit>
         <trans-unit id="Golduck.Description" translate="yes" xml:space="preserve">
           <source>Golduck is the fastest swimmer among all Pokémon. It swims effortlessly, even in a rough, stormy sea. It sometimes rescues people from wrecked ships floundering in high seas.</source>
-          <target state="new">Golduck is the fastest swimmer among all Pokémon. It swims effortlessly, even in a rough, stormy sea. It sometimes rescues people from wrecked ships floundering in high seas.</target>
+          <target state="new">Golduck er den hurtigste svømmer blandt alle Pokémon. Den svømmer ubesværet, selv i et råt stormfuldt hav. Den redder nogle gange folk fra forliste skibe der flyder rundt på åbent hav.</target>
         </trans-unit>
         <trans-unit id="Mankey.Description" translate="yes" xml:space="preserve">
           <source>When Mankey starts shaking and its nasal breathing turns rough, it’s a sure sign that it is becoming angry. However, because it goes into a towering rage almost instantly, it is impossible for anyone to flee its wrath.</source>
-          <target state="new">When Mankey starts shaking and its nasal breathing turns rough, it’s a sure sign that it is becoming angry. However, because it goes into a towering rage almost instantly, it is impossible for anyone to flee its wrath.</target>
+          <target state="new">Når Mankey begynder at ryste og dens nasale vejrtrækning bliver rå, er det et sikkert tegn på at den bliver vred. Men fordi den går ind i et tårnhøjt raseri næsten øjeblikkeligt, er det umuligt for nogen at flygte fra dens vrede.</target>
         </trans-unit>
         <trans-unit id="Primeape.Description" translate="yes" xml:space="preserve">
           <source>When Primeape becomes furious, its blood circulation is boosted. In turn, its muscles are made even stronger. However, it also becomes much less intelligent at the same time.</source>
-          <target state="new">When Primeape becomes furious, its blood circulation is boosted. In turn, its muscles are made even stronger. However, it also becomes much less intelligent at the same time.</target>
+          <target state="new">Når Primeape bliver rasende, er dens blodcirkulation forøget. Derfor er dens muskler gjort endnu stærkere. Men den bliver også meget mindre intelligente samtidig.</target>
         </trans-unit>
         <trans-unit id="Growlithe.Description" translate="yes" xml:space="preserve">
           <source>Growlithe has a superb sense of smell. Once it smells anything, this Pokémon won’t forget the scent, no matter what. It uses its advanced olfactory sense to determine the emotions of other living things.</source>
-          <target state="new">Growlithe has a superb sense of smell. Once it smells anything, this Pokémon won’t forget the scent, no matter what. It uses its advanced olfactory sense to determine the emotions of other living things.</target>
+          <target state="new">Growlithe har en fantastisk lugtesans. Når den lugter noget, vil denne Pokémon ikke glemme duften, uanset hvad. Det bruger dens avancerede lugtesans til at bestemme følelserene fra andre levende ting.</target>
         </trans-unit>
         <trans-unit id="Arcanine.Description" translate="yes" xml:space="preserve">
           <source>Arcanine is known for its high speed. It is said to be capable of running over 6,200 miles in a single day and night. The fire that blazes wildly within this Pokémon’s body is its source of power.</source>
-          <target state="new">Arcanine is known for its high speed. It is said to be capable of running over 6,200 miles in a single day and night. The fire that blazes wildly within this Pokémon’s body is its source of power.</target>
+          <target state="new">Arcanine er kendt for sin høje hastighed. Den siges at være i stand til at løbe mere end 10.000 km på en enkelt dag og nat. Branden, der blæser vildt inden i denne Pokémons krop er dens energikilde.</target>
         </trans-unit>
         <trans-unit id="Poliwag.Description" translate="yes" xml:space="preserve">
           <source>Poliwag has a very thin skin. It is possible to see the Pokémon’s spiral innards right through the skin. Despite its thinness, however, the skin is also very flexible. Even sharp fangs bounce right off it.</source>
-          <target state="new">Poliwag has a very thin skin. It is possible to see the Pokémon’s spiral innards right through the skin. Despite its thinness, however, the skin is also very flexible. Even sharp fangs bounce right off it.</target>
+          <target state="new">Poliwag har en meget tynd hud. Det er muligt at se denne Pokémons spiralformede indmad igennem huden. På trods af sin tyndhed imidlertid huden er også meget fleksible, selv skarpe hugtænder hopper lige af</target>
         </trans-unit>
         <trans-unit id="Poliwhirl.Description" translate="yes" xml:space="preserve">
           <source>The surface of Poliwhirl’s body is always wet and slick with a slimy fluid. Because of this slippery covering, it can easily slip and slide out of the clutches of any enemy in battle.</source>
-          <target state="new">The surface of Poliwhirl’s body is always wet and slick with a slimy fluid. Because of this slippery covering, it can easily slip and slide out of the clutches of any enemy in battle.</target>
+          <target state="new">Overfladen af Poliwhirl krop er altid våd og glat med en slimet væske. På grund af denne glatte belægning, kan den nemt glide og glide ud af kløerne på enhver fjende i kamp.</target>
         </trans-unit>
         <trans-unit id="Poliwrath.Description" translate="yes" xml:space="preserve">
           <source>Poliwrath’s highly developed, brawny muscles never grow fatigued, however much it exercises. It is so tirelessly strong, this Pokémon can swim back and forth across the ocean without effort.</source>
-          <target state="new">Poliwrath’s highly developed, brawny muscles never grow fatigued, however much it exercises. It is so tirelessly strong, this Pokémon can swim back and forth across the ocean without effort.</target>
+          <target state="new">Poliwrath højt udviklede, store muskler bliver aldrig trætte, ligegyldigt hvor meget ded træner. Den er så utrættelig stærk, at denne Pokémon kan svømme frem og tilbage over oceaner uden anstrengelse.</target>
         </trans-unit>
         <trans-unit id="Abra.Description" translate="yes" xml:space="preserve">
           <source>Abra needs to sleep for eighteen hours a day. If it doesn’t, this Pokémon loses its ability to use telekinetic powers. If it is attacked, Abra escapes using Teleport while it is still sleeping.</source>
-          <target state="new">Abra needs to sleep for eighteen hours a day. If it doesn’t, this Pokémon loses its ability to use telekinetic powers. If it is attacked, Abra escapes using Teleport while it is still sleeping.</target>
+          <target state="new">Abras har behov for at sove i atten timer i døgnet. Hvis den ikke gør, mister denne Pokémon sin evne til at bruge telekinetiske kræfter. Hvis den bliver angrebet, undslipper Abra ved at bruge Teleport, mens den stadig sover.</target>
         </trans-unit>
         <trans-unit id="Kadabra.Description" translate="yes" xml:space="preserve">
           <source>Kadabra holds a silver spoon in its hand. The spoon is used to amplify the alpha waves in its brain. Without the spoon, the Pokémon is said to be limited to half the usual amount of its telekinetic powers.</source>
-          <target state="new">Kadabra holds a silver spoon in its hand. The spoon is used to amplify the alpha waves in its brain. Without the spoon, the Pokémon is said to be limited to half the usual amount of its telekinetic powers.</target>
+          <target state="new">Kadabra har en sølvske i sin hånd. Skeen bruges til at forstærke alfabølger i sin hjerne. Uden skeen siges det at denne Pokémon er begrænset til halvdelen af den sædvanlige mængde af sine telekinetiske kræfter.</target>
         </trans-unit>
         <trans-unit id="Alakazam.Description" translate="yes" xml:space="preserve">
           <source>Alakazam’s brain continually grows, infinitely multiplying brain cells. This amazing brain gives this Pokémon an astoundingly high IQ of 5,000. It has a thorough memory of everything that has occurred in the world.</source>
-          <target state="new">Alakazam’s brain continually grows, infinitely multiplying brain cells. This amazing brain gives this Pokémon an astoundingly high IQ of 5,000. It has a thorough memory of everything that has occurred in the world.</target>
+          <target state="new">Alakazam hjerne vokser hele tiden, uendelig multiplicering af dens hjerneceller. Denne fantastiske hjerne giver denne Pokémon en forbavsende høj IQ på 5.000. Det har en fuldstændig hukommelse af alt der er sket i verden.</target>
         </trans-unit>
         <trans-unit id="Machop.Description" translate="yes" xml:space="preserve">
           <source>Machop exercises by hefting around a Graveler as if it were a barbell. There are some Machop that travel the world in a quest to master all kinds of martial arts.</source>
-          <target state="new">Machop exercises by hefting around a Graveler as if it were a barbell. There are some Machop that travel the world in a quest to master all kinds of martial arts.</target>
+          <target state="new">Machop træner ved at løfte omkring en Graveler som om det var en vægtstang. Der er nogle Machops der rejser ud i verden i en søgen efter at beherske alle former for kampsport.</target>
         </trans-unit>
         <trans-unit id="Machoke.Description" translate="yes" xml:space="preserve">
           <source>Machoke undertakes bodybuilding every day even as it helps people with tough, physically demanding labor. On its days off, this Pokémon heads to the fields and mountains to exercise and train.</source>
-          <target state="new">Machoke undertakes bodybuilding every day even as it helps people with tough, physically demanding labor. On its days off, this Pokémon heads to the fields and mountains to exercise and train.</target>
+          <target state="new">Machoke laver bodybuilding hver dag, selv nå den hjælper folk med hård, fysisk krævende arbejde. På sine fridage, løber denne Pokémon ude til markerne og bjergene for at motionere og træne.</target>
         </trans-unit>
         <trans-unit id="Machamp.Description" translate="yes" xml:space="preserve">
           <source>Machamp is known as the Pokémon that has mastered every kind of martial arts. If it grabs hold of the foe with its four arms, the battle is all but over. The hapless foe is thrown far over the horizon.</source>
-          <target state="new">Machamp is known as the Pokémon that has mastered every kind of martial arts. If it grabs hold of the foe with its four arms, the battle is all but over. The hapless foe is thrown far over the horizon.</target>
+          <target state="new">Machamp er kendt som Pokémon, der mestre alle slags kampsport. Hvis det griber fat i fjenden med sine fire arme, er kampen ovre. Den ulykkelige fjende kastes langt over horisonten.</target>
         </trans-unit>
         <trans-unit id="Bellsprout.Description" translate="yes" xml:space="preserve">
           <source>Bellsprout’s thin and flexible body lets it bend and sway to avoid any attack, however strong it may be. From its mouth, this Pokémon spits a corrosive fluid that melts even iron.</source>
-          <target state="new">Bellsprout’s thin and flexible body lets it bend and sway to avoid any attack, however strong it may be. From its mouth, this Pokémon spits a corrosive fluid that melts even iron.</target>
+          <target state="new">Bellsprout tynde og fleksible krop lader det bøje og svaje for at undgå ethvert angreb, hvorend stærk det kan være. Fra sin mund, spytter denne Pokémon en ætsende væske, der smelter selv jern.</target>
         </trans-unit>
         <trans-unit id="Weepinbell.Description" translate="yes" xml:space="preserve">
           <source>Weepinbell has a large hook on its rear end. At night, the Pokémon hooks on to a tree branch and goes to sleep. If it moves around in its sleep, it may wake up to find itself on the ground.</source>
-          <target state="new">Weepinbell has a large hook on its rear end. At night, the Pokémon hooks on to a tree branch and goes to sleep. If it moves around in its sleep, it may wake up to find itself on the ground.</target>
+          <target state="new">Weepinbell har en stor krog på sin bagende. Om natten hægter denne Pokémon sig på en gren og går til ro. Hvis den bevæger sig rundt i sin søvn, kan den vågne op for at finde sig selv på jorden.</target>
         </trans-unit>
         <trans-unit id="Victreebel.Description" translate="yes" xml:space="preserve">
           <source>Victreebel has a long vine that extends from its head. This vine is waved and flicked about as if it were an animal to attract prey. When an unsuspecting prey draws near, this Pokémon swallows it whole.</source>
-          <target state="new">Victreebel has a long vine that extends from its head. This vine is waved and flicked about as if it were an animal to attract prey. When an unsuspecting prey draws near, this Pokémon swallows it whole.</target>
+          <target state="new">Victreebel har en lang lian, der strækker sig fra hovedet. Denne lian bliver bølget og kastet rundt som om det var et dyr for at tiltrække bytte. Når et intetanende bytte nærmer sig, sluger denne Pokémon det hele.</target>
         </trans-unit>
         <trans-unit id="Tentacool.Description" translate="yes" xml:space="preserve">
           <source>Tentacool absorbs sunlight and refracts it using water inside its body to convert it into beam energy. This Pokémon shoots beams from the small round organ above its eyes.</source>
-          <target state="new">Tentacool absorbs sunlight and refracts it using water inside its body to convert it into beam energy. This Pokémon shoots beams from the small round organ above its eyes.</target>
+          <target state="new">Tentacool absorberer sollys og bryder det ved hjælp af vand inde i sin krop for at omdanne det til stråle energi. Denne Pokémon skyder stråler ud fra den lille runde organ over øjnene.</target>
         </trans-unit>
         <trans-unit id="Tentacruel.Description" translate="yes" xml:space="preserve">
           <source>Tentacruel has tentacles that can be freely elongated and shortened at will. It ensnares prey with its tentacles and weakens the prey by dosing it with a harsh toxin. It can catch up to 80 prey at the same time.</source>
-          <target state="new">Tentacruel has tentacles that can be freely elongated and shortened at will. It ensnares prey with its tentacles and weakens the prey by dosing it with a harsh toxin. It can catch up to 80 prey at the same time.</target>
+          <target state="new">Tentacruel har tentakler, som frit kan forlænges og forkortes efter behag. Den omfavner sit bytte med sine fangarme og svækker byttet ved at dosere det med en barsk toksin. Den kan fange op til 80 byttedyr samtidigt.</target>
         </trans-unit>
         <trans-unit id="Geodude.Description" translate="yes" xml:space="preserve">
           <source>When Geodude sleeps deeply, it buries itself halfway into the ground. It will not awaken even if hikers step on it unwittingly. In the morning, this Pokémon rolls downhill in search of food.</source>
-          <target state="new">When Geodude sleeps deeply, it buries itself halfway into the ground. It will not awaken even if hikers step on it unwittingly. In the morning, this Pokémon rolls downhill in search of food.</target>
+          <target state="new">Når Geodude sover dybt, begraver den sig halvvejs ned i jorden. Den vil ikke vågne selvom vandrere træder på den ubevidst. Om morgenen ruller denne Pokémon ned ad bakke på jagt efter føde. </target>
         </trans-unit>
         <trans-unit id="Graveler.Description" translate="yes" xml:space="preserve">
           <source>Rocks are Graveler’s favorite food. This Pokémon will climb a mountain from the base to the summit, crunchingly feasting on rocks all the while. Upon reaching the peak, it rolls back down to the bottom.</source>
-          <target state="new">Rocks are Graveler’s favorite food. This Pokémon will climb a mountain from the base to the summit, crunchingly feasting on rocks all the while. Upon reaching the peak, it rolls back down to the bottom.</target>
+          <target state="new">Sten er Gravelers livret. Denne Pokémon vil bestige et bjerg fra bunden til toppen, imens den knasende gansker på sten hele vejen. Efter at have nået toppen, ruller den tilbage ned til bunden.</target>
         </trans-unit>
         <trans-unit id="Golem.Description" translate="yes" xml:space="preserve">
           <source>Golem is known for rolling down from mountains. To prevent them from rolling into the homes of people downhill, grooves have been dug into the sides of mountains to serve as guideways for diverting this Pokémon’s course.</source>
-          <target state="new">Golem is known for rolling down from mountains. To prevent them from rolling into the homes of people downhill, grooves have been dug into the sides of mountains to serve as guideways for diverting this Pokémon’s course.</target>
+          <target state="new">Golem er kendt for at rulle ned fra bjergene. For at forhindre dem i at rulle ind i menneskernes hjem nedenfor bjergene, er der blevet gravet riller ind i siderne af bjergene for at tjene som føringsveje for at aflede denne Pokémons kurs.</target>
         </trans-unit>
         <trans-unit id="Ponyta.Description" translate="yes" xml:space="preserve">
           <source>Ponyta is very weak at birth. It can barely stand up. This Pokémon becomes stronger by stumbling and falling to keep up with its parent.</source>
-          <target state="new">Ponyta is very weak at birth. It can barely stand up. This Pokémon becomes stronger by stumbling and falling to keep up with its parent.</target>
+          <target state="new">Ponyta er meget svag ved fødslen. Det kan næsten ikke stå op. Denne Pokémon bliver stærkere ved at snuble og falde for at følge med sin forælder.</target>
         </trans-unit>
         <trans-unit id="Rapidash.Description" translate="yes" xml:space="preserve">
           <source>Rapidash usually can be seen casually cantering in the fields and plains. However, when this Pokémon turns serious, its fiery manes flare and blaze as it gallops its way up to 150 mph.</source>
-          <target state="new">Rapidash usually can be seen casually cantering in the fields and plains. However, when this Pokémon turns serious, its fiery manes flare and blaze as it gallops its way up to 150 mph.</target>
+          <target state="new">Rapidash kan normalt ses i galop på marker og sletter. Men når denne Pokémon bliver alvorlig, brænder og flakker dens fyrige man mens den galoperer med op til 240 km/h.</target>
         </trans-unit>
         <trans-unit id="Slowpoke.Description" translate="yes" xml:space="preserve">
           <source>Slowpoke uses its tail to catch prey by dipping it in water at the side of a river. However, this Pokémon often forgets what it’s doing and often spends entire days just loafing at water’s edge.</source>
-          <target state="new">Slowpoke uses its tail to catch prey by dipping it in water at the side of a river. However, this Pokémon often forgets what it’s doing and often spends entire days just loafing at water’s edge.</target>
+          <target state="new">Slowpoke bruger sin hale til at fange sit bytte ved at dyppe det i vand fra siden af en flod. Men da denne Pokémon ofte glemmer, hvad den gør, og tilbringer ofte hele dagen bare med a dase ved vandkanten.</target>
         </trans-unit>
         <trans-unit id="Slowbro.Description" translate="yes" xml:space="preserve">
           <source>Slowbro’s tail has a Shellder firmly attached with a bite. As a result, the tail can’t be used for fishing anymore. This causes Slowbro to grudgingly swim and catch prey instead.</source>
-          <target state="new">Slowbro’s tail has a Shellder firmly attached with a bite. As a result, the tail can’t be used for fishing anymore. This causes Slowbro to grudgingly swim and catch prey instead.</target>
+          <target state="new">Slowbros hale har en skal solidt fastgjort med et bid. Som følge heraf kan halen ikke anvendes til fiskeri længere. Dette medfører Slowbro til modstræbende svømme og fange byttedyr i stedet.</target>
         </trans-unit>
         <trans-unit id="Magnemite.Description" translate="yes" xml:space="preserve">
           <source>Magnemite floats in the air by emitting electromagnetic waves from the units at its sides. These waves block gravity. This Pokémon becomes incapable of flight if its internal electrical supply is depleted.</source>
-          <target state="new">Magnemite floats in the air by emitting electromagnetic waves from the units at its sides. These waves block gravity. This Pokémon becomes incapable of flight if its internal electrical supply is depleted.</target>
+          <target state="new">Magnemite svæver i luften ved at udsende elektromagnetiske bølger fra enheder på dens sider. Disse bølger blokerer tyngdekraften. Denne Pokémon bliver ude af stand til at flyve hvis dens interne strømforsyning er opbrugt.</target>
         </trans-unit>
         <trans-unit id="Magneton.Description" translate="yes" xml:space="preserve">
           <source>Magneton emits a powerful magnetic force that is fatal to electronics and precision instruments. Because of this, it is said that some towns warn people to keep this Pokémon inside a Poké Ball.</source>
-          <target state="new">Magneton emits a powerful magnetic force that is fatal to electronics and precision instruments. Because of this, it is said that some towns warn people to keep this Pokémon inside a Poké Ball.</target>
+          <target state="new">Magneton udsender et stærkt magnetisk kraft, der er ødelæggende for elektronik og præcisions-instrumenter. På grund af dette, siges det, at nogle byer advare folk om at holde denne Pokémon inde i en Poké Ball.</target>
         </trans-unit>
         <trans-unit id="Farfetchd.Description" translate="yes" xml:space="preserve">
           <source>Farfetch’d is always seen with a stalk from a plant of some sort. Apparently, there are good stalks and bad stalks. This Pokémon has been known to fight with others over stalks.</source>
-          <target state="new">Farfetch’d is always seen with a stalk from a plant of some sort. Apparently, there are good stalks and bad stalks. This Pokémon has been known to fight with others over stalks.</target>
+          <target state="new">Farfetch'd ses altid med en stilk fra en plante af en slags. Tilsyneladende er der gode stilke og dårlige stilke. Denne Pokémon har været kendt for at kæmpe med andre over stilke.</target>
         </trans-unit>
         <trans-unit id="Doduo.Description" translate="yes" xml:space="preserve">
           <source>Doduo’s two heads contain completely identical brains. A scientific study reported that on rare occasions, there will be examples of this Pokémon possessing different sets of brains.</source>
-          <target state="new">Doduo’s two heads contain completely identical brains. A scientific study reported that on rare occasions, there will be examples of this Pokémon possessing different sets of brains.</target>
+          <target state="new">Doduos to hoveder indeholder helt identiske hjerner. En videnskabelig undersøgelse rapporterede, at i sjældne tilfælde, vil der være eksempler på denne Pokémon besidder forskellige sæt af hjerner.</target>
         </trans-unit>
         <trans-unit id="Dodrio.Description" translate="yes" xml:space="preserve">
           <source>Apparently, the heads aren’t the only parts of the body that Dodrio has three of. It has three sets of hearts and lungs as well, so it is capable of running long distances without rest.</source>
-          <target state="new">Apparently, the heads aren’t the only parts of the body that Dodrio has three of. It has three sets of hearts and lungs as well, so it is capable of running long distances without rest.</target>
+          <target state="new">Tilsyneladende er hovederne ikke de eneste dele af kroppen, Dodrio har tre af. Det har tre sæt hjerter og lunger også, så det er i stand til at løbe lange afstande uden hvile.</target>
         </trans-unit>
         <trans-unit id="Seel.Description" translate="yes" xml:space="preserve">
           <source>Seel hunts for prey in the frigid sea underneath sheets of ice. When it needs to breathe, it punches a hole through the ice with the sharply protruding section of its head.</source>
-          <target state="new">Seel hunts for prey in the frigid sea underneath sheets of ice. When it needs to breathe, it punches a hole through the ice with the sharply protruding section of its head.</target>
+          <target state="new">Seel jagter efter bytte i det frysende hav under plader af is. Når den har behov for at ånde, slår det et hul gennem isen med et skarpt fremspringende del af hovedet.</target>
         </trans-unit>
         <trans-unit id="Dewgong.Description" translate="yes" xml:space="preserve">
           <source>Dewgong loves to snooze on bitterly cold ice. The sight of this Pokémon sleeping on a glacier was mistakenly thought to be a mermaid by a mariner long ago.</source>
-          <target state="new">Dewgong loves to snooze on bitterly cold ice. The sight of this Pokémon sleeping on a glacier was mistakenly thought to be a mermaid by a mariner long ago.</target>
+          <target state="new">Dewgong elsker at slumre på meget kold is. Synet af denne Pokémon der sover på en gletsjer blev fejlagtigt anset for at være en havfrue af en sømand for længe siden.</target>
         </trans-unit>
         <trans-unit id="Grimer.Description" translate="yes" xml:space="preserve">
           <source>Grimer emerged from the sludge that settled on a polluted seabed. This Pokémon loves anything filthy. It constantly leaks a horribly germ-infested fluid from all over its body.</source>
-          <target state="new">Grimer emerged from the sludge that settled on a polluted seabed. This Pokémon loves anything filthy. It constantly leaks a horribly germ-infested fluid from all over its body.</target>
+          <target state="new">Grimer kom fram af slam, der aflejredes på en forurenet havbund. Denne Pokémon elsker alting beskidte. Der siver konstant en forfærdelig kim-inficeret væske fra hele den krop.</target>
         </trans-unit>
         <trans-unit id="Muk.Description" translate="yes" xml:space="preserve">
           <source>This Pokémon’s favorite food is anything that is repugnantly filthy. In dirty towns where people think nothing of throwing away litter on the streets, Muk are certain to gather.</source>
-          <target state="new">This Pokémon’s favorite food is anything that is repugnantly filthy. In dirty towns where people think nothing of throwing away litter on the streets, Muk are certain to gather.</target>
+          <target state="new">Denne Pokémons livret er noget, der er virkeligt beskidt. I snavsede byer, hvor folk ikke tænker over at smide affald på gaden, samler Muk helt sikkert.</target>
         </trans-unit>
         <trans-unit id="Shellder.Description" translate="yes" xml:space="preserve">
           <source>At night, this Pokémon uses its broad tongue to burrow a hole in the seafloor sand and then sleep in it. While it is sleeping, Shellder closes its shell, but leaves its tongue hanging out.</source>
-          <target state="new">At night, this Pokémon uses its broad tongue to burrow a hole in the seafloor sand and then sleep in it. While it is sleeping, Shellder closes its shell, but leaves its tongue hanging out.</target>
+          <target state="new">Om natten, bruger denne Pokémon sin brede tunge til at grave sig ned i et hul i havbundens sand og derefter sove i den. Selv om den sover i sin skal, efterlader den sin tunge hængende ud.</target>
         </trans-unit>
         <trans-unit id="Cloyster.Description" translate="yes" xml:space="preserve">
           <source>Cloyster is capable of swimming in the sea. It does so by swallowing water, then jetting it out toward the rear. This Pokémon shoots spikes from its shell using the same system.</source>
-          <target state="new">Cloyster is capable of swimming in the sea. It does so by swallowing water, then jetting it out toward the rear. This Pokémon shoots spikes from its shell using the same system.</target>
+          <target state="new">Cloyster er i stand til at svømme i havet. Det gør den ved at sluge vand, og så skyde det ud af bagenden. Denne Pokémon skyder pigge fra sin skal ved hjælp af samme system.</target>
         </trans-unit>
         <trans-unit id="Gastly.Description" translate="yes" xml:space="preserve">
           <source>Gastly is largely composed of gaseous matter. When exposed to a strong wind, the gaseous body quickly dwindles away. Groups of this Pokémon cluster under the eaves of houses to escape the ravages of wind.</source>
-          <target state="new">Gastly is largely composed of gaseous matter. When exposed to a strong wind, the gaseous body quickly dwindles away. Groups of this Pokémon cluster under the eaves of houses to escape the ravages of wind.</target>
+          <target state="new">Gastly består i vid udstrækning af gasformigt materiale. Når den udsættes for stærk vind, svinder dens gasformige krop hurtigt væk. Grupper af denne Pokémon klynges under tagudhænget af huse for at undslippe vindens hærgen.</target>
         </trans-unit>
         <trans-unit id="Haunter.Description" translate="yes" xml:space="preserve">
           <source>Haunter is a dangerous Pokémon. If one beckons you while floating in darkness, you must never approach it. This Pokémon will try to lick you with its tongue and steal your life away.</source>
-          <target state="new">Haunter is a dangerous Pokémon. If one beckons you while floating in darkness, you must never approach it. This Pokémon will try to lick you with its tongue and steal your life away.</target>
+          <target state="new">Haunter er en farlig Pokémon. Hvis en vinker dig hen mens den flyder i mørke, skal du aldrig nærme dig den. Denne Pokémon vil forsøge at slikke dig med sin tunge og stjæle dit liv.</target>
         </trans-unit>
         <trans-unit id="Gengar.Description" translate="yes" xml:space="preserve">
           <source>Sometimes, on a dark night, your shadow thrown by a streetlight will suddenly and startlingly overtake you. It is actually a Gengar running past you, pretending to be your shadow.</source>
-          <target state="new">Sometimes, on a dark night, your shadow thrown by a streetlight will suddenly and startlingly overtake you. It is actually a Gengar running past you, pretending to be your shadow.</target>
+          <target state="new">Nogle gange, på en mørk nat, vil din skygge kastet af en gadelampe, pludselig og overraskende overtage dig. Det er faktisk en Gengar kører forbi dig, foregiver at være din skygge.</target>
         </trans-unit>
         <trans-unit id="Onix.Description" translate="yes" xml:space="preserve">
           <source>Onix has a magnet in its brain. It acts as a compass so that this Pokémon does not lose direction while it is tunneling. As it grows older, its body becomes increasingly rounder and smoother.</source>
-          <target state="new">Onix has a magnet in its brain. It acts as a compass so that this Pokémon does not lose direction while it is tunneling. As it grows older, its body becomes increasingly rounder and smoother.</target>
+          <target state="new">Onix har en magnet i sin hjerne. Det fungerer som et kompas, så denne Pokémon ikke mister sin retning, mens det er laver tunneler. Som den bliver ældre, bliver dens krop stadig rundere og blødere.</target>
         </trans-unit>
         <trans-unit id="Drowzee.Description" translate="yes" xml:space="preserve">
           <source>If your nose becomes itchy while you are sleeping, it’s a sure sign that one of these Pokémon is standing above your pillow and trying to eat your dream through your nostrils.</source>
-          <target state="new">If your nose becomes itchy while you are sleeping, it’s a sure sign that one of these Pokémon is standing above your pillow and trying to eat your dream through your nostrils.</target>
+          <target state="new">Hvis din næse begynder at klø, mens du sover, så er det et sikkert tegn på, at en af disse Pokémon er over din pude og forsøger at spise din drøm gennem dine næsebor.</target>
         </trans-unit>
         <trans-unit id="Hypno.Description" translate="yes" xml:space="preserve">
           <source>Hypno holds a pendulum in its hand. The arcing movement and glitter of the pendulum lull the foe into a deep state of hypnosis. While this Pokémon searches for prey, it polishes the pendulum.</source>
-          <target state="new">Hypno holds a pendulum in its hand. The arcing movement and glitter of the pendulum lull the foe into a deep state of hypnosis. While this Pokémon searches for prey, it polishes the pendulum.</target>
+          <target state="new">Hypno holder et pendul i sin hånd. Den kurvede bevægelse og glitter fra pendulet luller fjenden i en dyb tilstand af hypnose. Mens denne Pokémon søger efter bytte, polerer den pendulet.</target>
         </trans-unit>
         <trans-unit id="Krabby.Description" translate="yes" xml:space="preserve">
           <source>Krabby live on beaches, burrowed inside holes dug into the sand. On sandy beaches with little in the way of food, these Pokémon can be seen squabbling with each other over territory.</source>
-          <target state="new">Krabby live on beaches, burrowed inside holes dug into the sand. On sandy beaches with little in the way of food, these Pokémon can be seen squabbling with each other over territory.</target>
+          <target state="new">Krabby lever på strande, bored ind i huller gravet ned i sandet. På sandstrande med ingeting i vejen for føde, kan disse Pokémon ses skændes med hinanden over territorium.</target>
         </trans-unit>
         <trans-unit id="Kingler.Description" translate="yes" xml:space="preserve">
           <source>Kingler has an enormous, oversized claw. It waves this huge claw in the air to communicate with others. However, because the claw is so heavy, the Pokémon quickly tires.</source>
-          <target state="new">Kingler has an enormous, oversized claw. It waves this huge claw in the air to communicate with others. However, because the claw is so heavy, the Pokémon quickly tires.</target>
+          <target state="new">Kingler har en enorm, overdimensionerede klo. Den svinger denne enorme klo i luften for at kommunikere med andre. Men fordi kloen er så tung, bliver Pokémonen hurtigt træt.</target>
         </trans-unit>
         <trans-unit id="Voltorb.Description" translate="yes" xml:space="preserve">
           <source>Voltorb is extremely sensitive—it explodes at the slightest of shocks. It is rumored that it was first created when a Poké Ball was exposed to a powerful pulse of energy.</source>
-          <target state="new">Voltorb is extremely sensitive—it explodes at the slightest of shocks. It is rumored that it was first created when a Poké Ball was exposed to a powerful pulse of energy.</target>
+          <target state="new">Voltorb er yderst følsom. Den eksploderer ved det mindste af chok. Der er rygter om, at den først blev til ved, da en Poké bold blev udsat for en kraftig puls af energi.</target>
         </trans-unit>
         <trans-unit id="Electrode.Description" translate="yes" xml:space="preserve">
           <source>One of Electrode’s characteristics is its attraction to electricity. It is a problematical Pokémon that congregates mostly at electrical power plants to feed on electricity that has just been generated.</source>
-          <target state="new">One of Electrode’s characteristics is its attraction to electricity. It is a problematical Pokémon that congregates mostly at electrical power plants to feed on electricity that has just been generated.</target>
+          <target state="new">Et af Electrodes egenskaber er dens tiltrækning til elektricitet. Det er en problematisk Pokémon der samler sigm for det meste på elektriske kraftværker for at snylte på elektricitet, der netop er blevet genereret.</target>
         </trans-unit>
         <trans-unit id="Exeggcute.Description" translate="yes" xml:space="preserve">
           <source>This Pokémon consists of six eggs that form a closely knit cluster. The six eggs attract each other and spin around. When cracks increasingly appear on the eggs, Exeggcute is close to evolution.</source>
-          <target state="new">This Pokémon consists of six eggs that form a closely knit cluster. The six eggs attract each other and spin around. When cracks increasingly appear on the eggs, Exeggcute is close to evolution.</target>
+          <target state="new">Denne Pokémon består af seks æg, der danner en tæt sammentømret klynge. De seks æg tiltrækker hinanden og snurrer rundt. Når revner i stigende grad vises på æggene er Exeggcute er tæt på evolution.</target>
         </trans-unit>
         <trans-unit id="Exeggutor.Description" translate="yes" xml:space="preserve">
           <source>Exeggutor originally came from the tropics. Its heads steadily grow larger from exposure to strong sunlight. It is said that when the heads fall off, they group together to form Exeggcute.</source>
-          <target state="new">Exeggutor originally came from the tropics. Its heads steadily grow larger from exposure to strong sunlight. It is said that when the heads fall off, they group together to form Exeggcute.</target>
+          <target state="new">Exeggutor kom oprindeligt fra troperne. Dens hoveder vokser sig støt større ved udsættelse for stærkt sollys. Det siges, at når hovederne falder af, at de samler sig for tilsammen at udgøre Exeggutor.</target>
         </trans-unit>
         <trans-unit id="Cubone.Description" translate="yes" xml:space="preserve">
           <source>Cubone pines for the mother it will never see again. Seeing a likeness of its mother in the full moon, it cries. The stains on the skull the Pokémon wears are made by the tears it sheds.</source>
-          <target state="new">Cubone pines for the mother it will never see again. Seeing a likeness of its mother in the full moon, it cries. The stains on the skull the Pokémon wears are made by the tears it sheds.</target>
+          <target state="new">Cubone higer efter moderen den vil aldrig se igen. Ser den en lighed af sin mor i fuldmånen, græder den. Pletterne på det kranie Pokémonen bærer er lavet af de tårer den taber</target>
         </trans-unit>
         <trans-unit id="Marowak.Description" translate="yes" xml:space="preserve">
           <source>Marowak is the evolved form of a Cubone that has overcome its sadness at the loss of its mother and grown tough. This Pokémon’s tempered and hardened spirit is not easily broken.</source>
-          <target state="new">Marowak is the evolved form of a Cubone that has overcome its sadness at the loss of its mother and grown tough. This Pokémon’s tempered and hardened spirit is not easily broken.</target>
+          <target state="new">Marowak er den udviklede form af en Cubone der har overvundet sin sorg over tabet af sin mor og er blevet hård. Denne Pokémon er temperamentsfuld og dens hærdede ånd er ikke let brudt.</target>
         </trans-unit>
         <trans-unit id="Hitmonlee.Description" translate="yes" xml:space="preserve">
           <source>Hitmonlee’s legs freely contract and stretch. Using these springlike legs, it bowls over foes with devastating kicks. After battle, it rubs down its legs and loosens the muscles to overcome fatigue.</source>
-          <target state="new">Hitmonlee’s legs freely contract and stretch. Using these springlike legs, it bowls over foes with devastating kicks. After battle, it rubs down its legs and loosens the muscles to overcome fatigue.</target>
+          <target state="new">Hitmonlees ben kan frit trække sig sammen og strække. Ved hjælp af disse fjederagtige ben, sejrer den over fjender med ødelæggende spark. Efter kamp, gnider den sine ben og løsner musklerne for at overvinde træthed.</target>
         </trans-unit>
         <trans-unit id="Hitmonchan.Description" translate="yes" xml:space="preserve">
           <source>Hitmonchan is said to possess the spirit of a boxer who had been working toward a world championship. This Pokémon has an indomitable spirit and will never give up in the face of adversity.</source>
-          <target state="new">Hitmonchan is said to possess the spirit of a boxer who had been working toward a world championship. This Pokémon has an indomitable spirit and will never give up in the face of adversity.</target>
+          <target state="new">Hitmonchan siges at besidde ånden af en bokser, der havde arbejdet hen imod en verdensmesterskabet. Denne Pokémon har en ukuelig ånd og vil aldrig give op i modgang.</target>
         </trans-unit>
         <trans-unit id="Lickitung.Description" translate="yes" xml:space="preserve">
           <source>Whenever Lickitung comes across something new, it will unfailingly give it a lick. It does so because it memorizes things by texture and by taste. It is somewhat put off by sour things.</source>
-          <target state="new">Whenever Lickitung comes across something new, it will unfailingly give it a lick. It does so because it memorizes things by texture and by taste. It is somewhat put off by sour things.</target>
+          <target state="new">Når Lickitung støder på noget nyt, vil den ufejlbarligt give det et slik. Det gør den, fordi den husker tingene ved tekstur og smag. Den er noget afskrækket af sure ting.</target>
         </trans-unit>
         <trans-unit id="Koffing.Description" translate="yes" xml:space="preserve">
           <source>Koffing embodies toxic substances. It mixes the toxins with raw garbage to set off a chemical reaction that results in a terribly powerful poison gas. The higher the temperature, the more gas is concocted by this Pokémon.</source>
-          <target state="new">Koffing embodies toxic substances. It mixes the toxins with raw garbage to set off a chemical reaction that results in a terribly powerful poison gas. The higher the temperature, the more gas is concocted by this Pokémon.</target>
+          <target state="new">Koffing udstøder giftige stoffer. Den blander toksiner med rå skrald for at starte en kemisk reaktion, der resulterer i en frygtelig kraftig giftgas. Jo højere temperaturen er, jo mere gas udledes af denne Pokémon.</target>
         </trans-unit>
         <trans-unit id="Weezing.Description" translate="yes" xml:space="preserve">
           <source>Weezing alternately shrinks and inflates its twin bodies to mix together toxic gases inside. The more the gases are mixed, the more powerful the toxins become. The Pokémon also becomes more putrid.</source>
-          <target state="new">Weezing alternately shrinks and inflates its twin bodies to mix together toxic gases inside. The more the gases are mixed, the more powerful the toxins become. The Pokémon also becomes more putrid.</target>
+          <target state="new">Weezing skiftevis krymper og puster sine tvillinge organer for at blande giftige gasser sammen indeni. Jo mere gasserne blandes, desto mere magtfulde bliver toksinerne. Pokémonen bliver også mere rådden.</target>
         </trans-unit>
         <trans-unit id="Rhyhorn.Description" translate="yes" xml:space="preserve">
           <source>Rhyhorn’s brain is very small. It is so dense, while on a run it forgets why it started running in the first place. It apparently remembers sometimes if it demolishes something.</source>
-          <target state="new">Rhyhorn’s brain is very small. It is so dense, while on a run it forgets why it started running in the first place. It apparently remembers sometimes if it demolishes something.</target>
+          <target state="new">Rhyhorns hjerne er meget lille. Den er så komprimeret, mens den er på løbetur glemmer hvorfor den begyndte at løbe i første omgang. Den husker tilsyneladende nogle gange, hvis det smadrer noget.</target>
         </trans-unit>
         <trans-unit id="Rhydon.Description" translate="yes" xml:space="preserve">
           <source>Rhydon has a horn that serves as a drill. It is used for destroying rocks and boulders. This Pokémon occasionally rams into streams of magma, but the armor-like hide prevents it from feeling the heat.</source>
-          <target state="new">Rhydon has a horn that serves as a drill. It is used for destroying rocks and boulders. This Pokémon occasionally rams into streams of magma, but the armor-like hide prevents it from feeling the heat.</target>
+          <target state="new">Rhydon har et horn, der fungerer som en boremaskine. Det bruges til at ødelægge sten og kampesten. Denne Pokémon smadrer lejlighedsvis ind i strømme af magma, men rustning-lignende hud forhindrer den i at føle varmen.</target>
         </trans-unit>
         <trans-unit id="Chansey.Description" translate="yes" xml:space="preserve">
           <source>Chansey lays nutritionally excellent eggs on an everyday basis. The eggs are so delicious, they are easily and eagerly devoured by even those people who have lost their appetite.</source>
-          <target state="new">Chansey lays nutritionally excellent eggs on an everyday basis. The eggs are so delicious, they are easily and eagerly devoured by even those people who have lost their appetite.</target>
+          <target state="new">Chansey lægger ernæringsmæssigt fremragende æg på en hverdag. Æggene er så lækre, at de er let og ivrigt spist af selv de mennesker, der har mistet deres appetit.</target>
         </trans-unit>
         <trans-unit id="Tangela.Description" translate="yes" xml:space="preserve">
           <source>Tangela’s vines snap off easily if they are grabbed. This happens without pain, allowing it to make a quick getaway. The lost vines are replaced by newly grown vines the very next day.</source>
-          <target state="new">Tangela’s vines snap off easily if they are grabbed. This happens without pain, allowing it to make a quick getaway. The lost vines are replaced by newly grown vines the very next day.</target>
+          <target state="new">Tangelas lianer brækker let, hvis nogen griber fat i dem. Dette sker uden smerte, der gør det muligt for den at foretage en hurtig flugt. De mistede lianer erstattes af nyligt dyrkede lianer allerede næste dag.</target>
         </trans-unit>
         <trans-unit id="Kangaskhan.Description" translate="yes" xml:space="preserve">
           <source>If you come across a young Kangaskhan playing by itself, you must never disturb it or attempt to catch it. The baby Pokémon’s parent is sure to be in the area, and it will become violently enraged at you.</source>
-          <target state="new">If you come across a young Kangaskhan playing by itself, you must never disturb it or attempt to catch it. The baby Pokémon’s parent is sure to be in the area, and it will become violently enraged at you.</target>
+          <target state="new">Hvis du støder på en ung Kangaskhan der leger med sig selv, skal du aldrig forstyrre den eller forsøge at fange den. Denne baby Pokémon moder er helt sikkert i området, og den vil blive voldsomt rasende på dig.</target>
         </trans-unit>
         <trans-unit id="Horsea.Description" translate="yes" xml:space="preserve">
           <source>If Horsea senses danger, it will reflexively spray a dense black ink from its mouth and try to escape. This Pokémon swims by cleverly flapping the fin on its back.</source>
-          <target state="new">If Horsea senses danger, it will reflexively spray a dense black ink from its mouth and try to escape. This Pokémon swims by cleverly flapping the fin on its back.</target>
+          <target state="new">Hvis Horses fornemmer fare, vil det instinktivt sprøjte tyk sort blæk fra munden og forsøge at flygte. Denne Pokémon svømmer behændigt at bevæge finnen på ryggen.</target>
         </trans-unit>
         <trans-unit id="Seadra.Description" translate="yes" xml:space="preserve">
           <source>Seadra generates whirlpools by spinning its body. The whirlpools are strong enough to swallow even fishing boats. This Pokémon weakens prey with these currents, then swallows it whole.</source>
-          <target state="new">Seadra generates whirlpools by spinning its body. The whirlpools are strong enough to swallow even fishing boats. This Pokémon weakens prey with these currents, then swallows it whole.</target>
+          <target state="new">Seadra genererer hvirelstrømme ved snurre dens krop rundt. De hvirelstrømme er stærke nok til at sluge selv fiskerbåde. Denne Pokémon svækker bytte med disse strømninger, og sluger så det hele.</target>
         </trans-unit>
         <trans-unit id="Goldeen.Description" translate="yes" xml:space="preserve">
           <source>Goldeen loves swimming wild and free in rivers and ponds. If one of these Pokémon is placed in an aquarium, it will shatter even the thickest glass with one ram of its horn and make its escape.</source>
-          <target state="new">Goldeen loves swimming wild and free in rivers and ponds. If one of these Pokémon is placed in an aquarium, it will shatter even the thickest glass with one ram of its horn and make its escape.</target>
+          <target state="new">Goldeen elsker at svømme vildt floder og damme. Hvis en af disse Pokémon er placeret i et akvarium, vil det splintre selv det tykkeste glas ved at vædre glsset med dets horn og gøre sin flugt.</target>
         </trans-unit>
         <trans-unit id="Seaking.Description" translate="yes" xml:space="preserve">
           <source>Seaking is very protective of its eggs. The male and female will take turns patrolling around their nest and eggs. The guarding of eggs by these Pokémon goes on for over a month.</source>
-          <target state="new">Seaking is very protective of its eggs. The male and female will take turns patrolling around their nest and eggs. The guarding of eggs by these Pokémon goes on for over a month.</target>
+          <target state="new">Seaking er meget beskyttende overfor sine æg. Hannen og hunnen vil skiftes patruljerer omkring deres rede og æg. Bevogtning af æg fortsætter for disse Pokémon i over en måned.</target>
         </trans-unit>
         <trans-unit id="Staryu.Description" translate="yes" xml:space="preserve">
           <source>Staryu apparently communicates with the stars in the night sky by flashing the red core at the center of its body. If parts of its body are torn, this Pokémon simply regenerates the missing pieces and limbs.</source>
-          <target state="new">Staryu apparently communicates with the stars in the night sky by flashing the red core at the center of its body. If parts of its body are torn, this Pokémon simply regenerates the missing pieces and limbs.</target>
+          <target state="new">Staryu kommunikerer tilsyneladende med stjernerne på nattehimlen ved at blinke med dens røde kerne på midten af sin krop. Hvis dele af dens krop er revet, regenererer denne Pokémon simpelthen de manglende stykker og lemmer.</target>
         </trans-unit>
         <trans-unit id="Starmie.Description" translate="yes" xml:space="preserve">
           <source>Starmie swims through water by spinning its star-shaped body as if it were a propeller on a ship. The core at the center of this Pokémon’s body glows in seven colors.</source>
-          <target state="new">Starmie swims through water by spinning its star-shaped body as if it were a propeller on a ship. The core at the center of this Pokémon’s body glows in seven colors.</target>
+          <target state="new">Starmie svømmer gennem vand ved snurre sit stjerne legeme rundt som var vardet  en propel på et skib. Kernen i midten af denne Pokémon krop gløder i syv farver.</target>
         </trans-unit>
         <trans-unit id="MrMime.Description" translate="yes" xml:space="preserve">
           <source>Mr. Mime is a master of pantomime. Its gestures and motions convince watchers that something unseeable actually exists. Once the watchers are convinced, the unseeable thing exists as if it were real.</source>
-          <target state="new">Mr. Mime is a master of pantomime. Its gestures and motions convince watchers that something unseeable actually exists. Once the watchers are convinced, the unseeable thing exists as if it were real.</target>
+          <target state="new">Mr. Mime er en mester i pantomime. Dens fagter og bevægelser overbeviser tilskuer, at noget usynligt faktisk eksisterer. Når tilskuerne er overbeviste så eksisterer den usynlige ting som om den var ægte.</target>
         </trans-unit>
         <trans-unit id="Scyther.Description" translate="yes" xml:space="preserve">
           <source>Scyther is blindingly fast. Its blazing speed enhances the effectiveness of the twin scythes on its forearms. This Pokémon’s scythes are so effective, they can slice through thick logs in one wicked stroke.</source>
-          <target state="new">Scyther is blindingly fast. Its blazing speed enhances the effectiveness of the twin scythes on its forearms. This Pokémon’s scythes are so effective, they can slice through thick logs in one wicked stroke.</target>
+          <target state="new">Scyther er blændende hurtig. Dens forrygende hastighed øger effektiviteten af de to leer på sine underarme. Denne Pokémons leer er så effektive, at de kan skære gennem tykke træstammer i et ondt slag.</target>
         </trans-unit>
         <trans-unit id="Jynx.Description" translate="yes" xml:space="preserve">
           <source>Jynx walks rhythmically, swaying and shaking its hips as if it were dancing. Its motions are so bouncingly alluring, people seeing it are compelled to shake their hips without giving any thought to what they are doing.</source>
-          <target state="new">Jynx walks rhythmically, swaying and shaking its hips as if it were dancing. Its motions are so bouncingly alluring, people seeing it are compelled to shake their hips without giving any thought to what they are doing.</target>
+          <target state="new">Jynx går rytmisk, svajende og ryster sine hofter, som om den danser. Dens bevægelser er så hoppende dragende, at når folk ser det er føler de sig tvunget til at ryste deres hofter uden at tænke sig om, hvad de gør.</target>
         </trans-unit>
         <trans-unit id="Electabuzz.Description" translate="yes" xml:space="preserve">
           <source>When a storm arrives, gangs of this Pokémon compete with each other to scale heights that are likely to be stricken by lightning bolts. Some towns use Electabuzz in place of lightning rods.</source>
-          <target state="new">When a storm arrives, gangs of this Pokémon compete with each other to scale heights that are likely to be stricken by lightning bolts. Some towns use Electabuzz in place of lightning rods.</target>
+          <target state="new">Når en storm kommer, vil bander af denne Pokémon konkurrerer med hinanden der når højder, der sandsynligvis vil blive ramt af lynnedslag. Nogle byer bruger Electabuzz i stedet for lynafledere.</target>
         </trans-unit>
         <trans-unit id="Magmar.Description" translate="yes" xml:space="preserve">
           <source>In battle, Magmar blows out intensely hot flames from all over its body to intimidate its opponent. This Pokémon’s fiery bursts create heat waves that ignite grass and trees in its surroundings.</source>
-          <target state="new">In battle, Magmar blows out intensely hot flames from all over its body to intimidate its opponent. This Pokémon’s fiery bursts create heat waves that ignite grass and trees in its surroundings.</target>
+          <target state="new">I kamp, blæser Magmar intenst varme flammer ud fra hele sin krop for at skræmme sin modstander. Denne Pokémons fyrige byger skaber hedebølger der antænder græs og træer i dens omgivelser.</target>
         </trans-unit>
         <trans-unit id="Pinsir.Description" translate="yes" xml:space="preserve">
           <source>Pinsir has a pair of massive horns. Protruding from the surface of these horns are thorns. These thorns are driven deeply into the foe’s body when the pincer closes, making it tough for the foe to escape.</source>
-          <target state="new">Pinsir has a pair of massive horns. Protruding from the surface of these horns are thorns. These thorns are driven deeply into the foe’s body when the pincer closes, making it tough for the foe to escape.</target>
+          <target state="new">Pinsir har et par kæmpemæssige horn. Det der rager frem fra overfladen af disse horn er torne. Disse torne drives dybt ind i fjenden krop, når disse lukkes, gør det det svært for fjenden at undslippe.</target>
         </trans-unit>
         <trans-unit id="Tauros.Description" translate="yes" xml:space="preserve">
           <source>This Pokémon is not satisfied unless it is rampaging at all times. If there is no opponent for Tauros to battle, it will charge at thick trees and knock them down to calm itself.</source>
-          <target state="new">This Pokémon is not satisfied unless it is rampaging at all times. If there is no opponent for Tauros to battle, it will charge at thick trees and knock them down to calm itself.</target>
+          <target state="new">Denne Pokémon er ikke tilfreds, medmindre den er hærgende på alle tidspunkter. Hvis der ikke er modstander af Taurus til kamp, vil det angribe tykke træer og banke dem ned for at berolige sig selv.</target>
         </trans-unit>
         <trans-unit id="Magikarp.Description" translate="yes" xml:space="preserve">
           <source>Magikarp is virtually useless in battle as it can only splash around. As a result, it is considered to be weak. However, it is actually a very hardy Pokémon that can survive in any body of water no matter how polluted it is.</source>
-          <target state="new">Magikarp is virtually useless in battle as it can only splash around. As a result, it is considered to be weak. However, it is actually a very hardy Pokémon that can survive in any body of water no matter how polluted it is.</target>
+          <target state="new">Magikarp er næsten ubrugelig i kamp, da den kun kan plaske rundt. Som følge heraf anses den for at være svag. Men det er faktisk en meget hårdfør Pokémon, der kan overleve i ethvert vandområde uanset hvor forurenet det er.</target>
         </trans-unit>
         <trans-unit id="Gyarados.Description" translate="yes" xml:space="preserve">
           <source>Once Gyarados goes on a rampage, its ferociously violent blood doesn’t calm until it has burned everything down. There are records of this Pokémon’s rampages lasting a whole month.</source>
-          <target state="new">Once Gyarados goes on a rampage, its ferociously violent blood doesn’t calm until it has burned everything down. There are records of this Pokémon’s rampages lasting a whole month.</target>
+          <target state="new">Når Gyarados går amok, falder dens voldsomt voldelige blod ikke til ro, før den har brændt alt ned. Der er optegnelser over denne Pokémons amokløb kan vare en hel måned.</target>
         </trans-unit>
         <trans-unit id="Lapras.Description" translate="yes" xml:space="preserve">
           <source>People have driven Lapras almost to the point of extinction. In the evenings, this Pokémon is said to sing plaintively as it seeks what few others of its kind still remain.</source>
-          <target state="new">People have driven Lapras almost to the point of extinction. In the evenings, this Pokémon is said to sing plaintively as it seeks what few others of its kind still remain.</target>
+          <target state="new">Folk har kørt Lapras næsten til randen af udryddelse. Om aftenen, siges denne Pokémon at synge klagende da det søger de få andre af sin slags stadig der stadig er tilbage.</target>
         </trans-unit>
         <trans-unit id="Ditto.Description" translate="yes" xml:space="preserve">
           <source>Ditto rearranges its cell structure to transform itself into other shapes. However, if it tries to transform itself into something by relying on its memory, this Pokémon manages to get details wrong.</source>
-          <target state="new">Ditto rearranges its cell structure to transform itself into other shapes. However, if it tries to transform itself into something by relying on its memory, this Pokémon manages to get details wrong.</target>
+          <target state="new">Ditto omarrangerer sin cellestruktur for omdanne sig til andre former. Men, hvis den forsøger at omdanne sig til noget ved at stole på sin hukommelse, formår denne Pokémon at få detaljer forkert.</target>
         </trans-unit>
         <trans-unit id="Eevee.Description" translate="yes" xml:space="preserve">
           <source>Eevee has an unstable genetic makeup that suddenly mutates due to the environment in which it lives. Radiation from various stones causes this Pokémon to evolve.</source>
-          <target state="new">Eevee has an unstable genetic makeup that suddenly mutates due to the environment in which it lives. Radiation from various stones causes this Pokémon to evolve.</target>
+          <target state="new">Eevee har en ustabil genetiske sammensætning, der pludselig muterer på grund af det miljø, hvori den lever. Stråling fra forskellige sten forårsager denne Pokémon at udvikle sig.</target>
         </trans-unit>
         <trans-unit id="Vaporeon.Description" translate="yes" xml:space="preserve">
           <source>Vaporeon underwent a spontaneous mutation and grew fins and gills that allow it to live underwater. This Pokémon has the ability to freely control water.</source>
-          <target state="new">Vaporeon underwent a spontaneous mutation and grew fins and gills that allow it to live underwater. This Pokémon has the ability to freely control water.</target>
+          <target state="new">Vaporeon gennemgik en spontan mutation og voksede finner og gæller, der gør det muligt for den at leve under vandet. Dette Pokémon har evnen til frit at kontrollere vand.</target>
         </trans-unit>
         <trans-unit id="Jolteon.Description" translate="yes" xml:space="preserve">
           <source>Jolteon’s cells generate a low level of electricity. This power is amplified by the static electricity of its fur, enabling the Pokémon to drop thunderbolts. The bristling fur is made of electrically charged needles.</source>
-          <target state="new">Jolteon’s cells generate a low level of electricity. This power is amplified by the static electricity of its fur, enabling the Pokémon to drop thunderbolts. The bristling fur is made of electrically charged needles.</target>
+          <target state="new">Jolteons celler genererer et lavt niveau af elektricitet. Denne effekt forstærkes af den statiske elektricitet af dens pels, således at denne Pokémon lade tordenkiler falde. Dens strittende pels er lavet af elektrisk ladede nåle.</target>
         </trans-unit>
         <trans-unit id="Flareon.Description" translate="yes" xml:space="preserve">
           <source>Flareon’s fluffy fur has a functional purpose—it releases heat into the air so that its body does not get excessively hot. This Pokémon’s body temperature can rise to a maximum of 1,650 degrees Fahrenheit.</source>
-          <target state="new">Flareon’s fluffy fur has a functional purpose—it releases heat into the air so that its body does not get excessively hot. This Pokémon’s body temperature can rise to a maximum of 1,650 degrees Fahrenheit.</target>
+          <target state="new">Flareons fluffy pels har et funktionelt formål, det frigiver varme til luft, så dens krop ikke får det alt for varmt. Denne Pokémons kropstemperatur kan stige til et maksimum på 3000 grader Celsius.</target>
         </trans-unit>
         <trans-unit id="Porygon.Description" translate="yes" xml:space="preserve">
           <source>Porygon is capable of reverting itself entirely back to program data and entering cyberspace. This Pokémon is copy protected so it cannot be duplicated by copying.</source>
-          <target state="new">Porygon is capable of reverting itself entirely back to program data and entering cyberspace. This Pokémon is copy protected so it cannot be duplicated by copying.</target>
+          <target state="new">Porygon er i stand til at vende sig selv helt tilbage til program data og indtræde i cyberspace. Denne Pokémon er kopibeskyttet, så den ikke kan duplikeres ved kopiering.</target>
         </trans-unit>
         <trans-unit id="Omanyte.Description" translate="yes" xml:space="preserve">
           <source>Omanyte is one of the ancient and long-since-extinct Pokémon that have been regenerated from fossils by people. If attacked by an enemy, it withdraws itself inside its hard shell.</source>
-          <target state="new">Omanyte is one of the ancient and long-since-extinct Pokémon that have been regenerated from fossils by people. If attacked by an enemy, it withdraws itself inside its hard shell.</target>
+          <target state="new">Omanyte er en af de gamle og for lang tid siden uddøde Pokémon, der er blevet regenereret fra fossiler af mennesker. Hvis angrebet af en fjende, trækker den sig inde i sin hårde skal.</target>
         </trans-unit>
         <trans-unit id="Omastar.Description" translate="yes" xml:space="preserve">
           <source>Omastar uses its tentacles to capture its prey. It is believed to have become extinct because its shell grew too large and heavy, causing its movements to become too slow and ponderous.</source>
-          <target state="new">Omastar uses its tentacles to capture its prey. It is believed to have become extinct because its shell grew too large and heavy, causing its movements to become too slow and ponderous.</target>
+          <target state="new">Omastar bruger sine fangarme til at fange sit bytte. Den menes at være blevet udryddet, fordi dens skal voksede sig for stor og tung, der forårsagede dens bevægelser at blive for langsom og tung.</target>
         </trans-unit>
         <trans-unit id="Kabuto.Description" translate="yes" xml:space="preserve">
           <source>Kabuto is a Pokémon that has been regenerated from a fossil. However, in extremely rare cases, living examples have been discovered. The Pokémon has not changed at all for 300 million years.</source>
-          <target state="new">Kabuto is a Pokémon that has been regenerated from a fossil. However, in extremely rare cases, living examples have been discovered. The Pokémon has not changed at all for 300 million years.</target>
+          <target state="new">Kabuto er en Pokémon, der er blevet regenereret fra et fossil. Men i meget sjældne tilfælde, er levende eksempler blevet opdaget. Denne Pokémon har ikke ændret sig i 300 millioner år.</target>
         </trans-unit>
         <trans-unit id="Kabutops.Description" translate="yes" xml:space="preserve">
           <source>Kabutops swam underwater to hunt for its prey in ancient times. The Pokémon was apparently evolving from being a water dweller to living on land as evident from the beginnings of change in its gills and legs.</source>
-          <target state="new">Kabutops swam underwater to hunt for its prey in ancient times. The Pokémon was apparently evolving from being a water dweller to living on land as evident from the beginnings of change in its gills and legs.</target>
+          <target state="new">Kabutops svømmede under vandet til at gå på jagt efter sit bytte i oldtiden. Denne Pokémon har tilsyneladende udviklet sig fra at være en vand nyder til at leve på land fremgår det fra den begyndelsen af forandringen i sine gæller og ben.</target>
         </trans-unit>
         <trans-unit id="Aerodactyl.Description" translate="yes" xml:space="preserve">
           <source>Aerodactyl is a Pokémon from the age of dinosaurs. It was regenerated from genetic material extracted from amber. It is imagined to have been the king of the skies in ancient times.</source>
-          <target state="new">Aerodactyl is a Pokémon from the age of dinosaurs. It was regenerated from genetic material extracted from amber. It is imagined to have been the king of the skies in ancient times.</target>
+          <target state="new">Aerodactyl er en Pokémon fra dinosaurer alderen. Den blev regenereret fra genetisk materiale ekstraheret fra rav. Den har forestiller sig at have været kongen af luftrummet i oldtiden.</target>
         </trans-unit>
         <trans-unit id="Snorlax.Description" translate="yes" xml:space="preserve">
           <source>Snorlax’s typical day consists of nothing more than eating and sleeping. It is such a docile Pokémon that there are children who use its expansive belly as a place to play.</source>
-          <target state="new">Snorlax’s typical day consists of nothing more than eating and sleeping. It is such a docile Pokémon that there are children who use its expansive belly as a place to play.</target>
+          <target state="new">Snorlax typiske dag består af intet andet end at spise og sove. Det er sådan en føjelig Pokémon, at der er børn, der bruger dens ekspansive mave som et sted at lege.</target>
         </trans-unit>
         <trans-unit id="Articuno.Description" translate="yes" xml:space="preserve">
           <source>Articuno is a legendary bird Pokémon that can control ice. The flapping of its wings chills the air. As a result, it is said that when this Pokémon flies, snow will fall.</source>
-          <target state="new">Articuno is a legendary bird Pokémon that can control ice. The flapping of its wings chills the air. As a result, it is said that when this Pokémon flies, snow will fall.</target>
+          <target state="new">Articuno er en legendarisk fugle Pokémon, der kan styre is. Dens flagrende vinger køler luften. Som et resultat, siges det, at når denne Pokémon flyver, vil sneen falde ..</target>
         </trans-unit>
         <trans-unit id="Zapdos.Description" translate="yes" xml:space="preserve">
           <source>Zapdos is a legendary bird Pokémon that has the ability to control electricity. It usually lives in thunderclouds. The Pokémon gains power if it is stricken by lightning bolts.</source>
-          <target state="new">Zapdos is a legendary bird Pokémon that has the ability to control electricity. It usually lives in thunderclouds. The Pokémon gains power if it is stricken by lightning bolts.</target>
+          <target state="new">Zapdos er en legendarisk fugle Pokémon, der har evnen til at styre elektricitet. Den lever normalt i tordenskyer. Den Pokémon får sin kraft, når den bliver ramt af lynnedslag.</target>
         </trans-unit>
         <trans-unit id="Moltres.Description" translate="yes" xml:space="preserve">
           <source>Moltres is a legendary bird Pokémon that has the ability to control fire. If this Pokémon is injured, it is said to dip its body in the molten magma of a volcano to burn and heal itself.</source>
-          <target state="new">Moltres is a legendary bird Pokémon that has the ability to control fire. If this Pokémon is injured, it is said to dip its body in the molten magma of a volcano to burn and heal itself.</target>
+          <target state="new">Moltres er en legendarisk fugle Pokémon, der har evnen til at styre ilden. Hvis denne Pokémon er såret, det siges det at dyppe sin krop i den smeltede magma af en vulkan for at brænde og helbrede sig selv.</target>
         </trans-unit>
         <trans-unit id="Dratini.Description" translate="yes" xml:space="preserve">
           <source>Dratini continually molts and sloughs off its old skin. It does so because the life energy within its body steadily builds to reach uncontrollable levels.</source>
-          <target state="new">Dratini continually molts and sloughs off its old skin. It does so because the life energy within its body steadily builds to reach uncontrollable levels.</target>
+          <target state="new">Dratini smelter løbende og stykker af sin gamle hud. Det gør den, fordi dens livs energi i sin krop støt forsøger at nå ukontrollable niveauer.</target>
         </trans-unit>
         <trans-unit id="Dragonair.Description" translate="yes" xml:space="preserve">
           <source>Dragonair stores an enormous amount of energy inside its body. It is said to alter weather conditions in its vicinity by discharging energy from the crystals on its neck and tail.</source>
-          <target state="new">Dragonair stores an enormous amount of energy inside its body. It is said to alter weather conditions in its vicinity by discharging energy from the crystals on its neck and tail.</target>
+          <target state="new">Dragonair lagrer en enorm mængde energi inde i sin krop. Det siges at den kan ændre vejrforhold i sin nærhed ved at udlede energi fra krystaller på sin hals og hale.</target>
         </trans-unit>
         <trans-unit id="Dragonite.Description" translate="yes" xml:space="preserve">
           <source>Dragonite is capable of circling the globe in just 16 hours. It is a kindhearted Pokémon that leads lost and foundering ships in a storm to the safety of land.</source>
-          <target state="new">Dragonite is capable of circling the globe in just 16 hours. It is a kindhearted Pokémon that leads lost and foundering ships in a storm to the safety of land.</target>
+          <target state="new">Dragonite er i stand til at flyve kloden rundt på bare 16 timer. Det er en slags godhjerter´t Pokémon, der fører tabte og forliste skibe i en storm til sikkerheden ved land.</target>
         </trans-unit>
         <trans-unit id="Mewtwo.Description" translate="yes" xml:space="preserve">
           <source>Mewtwo is a Pokémon that was created by genetic manipulation. However, even though the scientific power of humans created this Pokémon’s body, they failed to endow Mewtwo with a compassionate heart.</source>
-          <target state="new">Mewtwo is a Pokémon that was created by genetic manipulation. However, even though the scientific power of humans created this Pokémon’s body, they failed to endow Mewtwo with a compassionate heart.</target>
+          <target state="new">Mewtwo er en Pokémon, der blev skabt ved genetisk manipulation. Selvom den videnskabelige magt fra mennesket har skabt denne Pokémons krop, undlod de imidlertid at udstyre Mewtwo med et medfølende hjerte.</target>
         </trans-unit>
         <trans-unit id="Mew.Description" translate="yes" xml:space="preserve">
           <source>Mew is said to possess the genetic composition of all Pokémon. It is capable of making itself invisible at will, so it entirely avoids notice even if it approaches people.</source>
-          <target state="new">Mew is said to possess the genetic composition of all Pokémon. It is capable of making itself invisible at will, so it entirely avoids notice even if it approaches people.</target>
+          <target state="new">Mew siges at besidde den genetiske sammensætning af alle Pokémon. Det er i stand til at gøre sig selv usynlig efter behag, så den helt undgår at blive opdaget, selvom den nærmer sig mennesker.</target>
         </trans-unit>
       </group>
     </body>
@@ -1791,7 +1791,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="AncientPower" translate="yes" xml:space="preserve">
           <source>Ancient Power</source>
-          <target state="translated">GammelKraft</target>
+          <target state="translated">Gammel Kraft</target>
         </trans-unit>
         <trans-unit id="AquaJet" translate="yes" xml:space="preserve">
           <source>Aqua Jet</source>
@@ -1807,11 +1807,11 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="BiteFast" translate="yes" xml:space="preserve">
           <source>Bite</source>
-          <target state="translated">Bid</target>
+          <target state="translated">Hurtig Bid</target>
         </trans-unit>
         <trans-unit id="Blizzard" translate="yes" xml:space="preserve">
           <source>Blizzard</source>
-          <target state="translated">Storm</target>
+          <target state="translated">Snestorm</target>
         </trans-unit>
         <trans-unit id="BodySlam" translate="yes" xml:space="preserve">
           <source>Body Slam</source>
@@ -1831,7 +1831,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="BubbleBeam" translate="yes" xml:space="preserve">
           <source>Bubble Beam</source>
-          <target state="translated">Bobel Stråle</target>
+          <target state="translated">Bobbel Stråle</target>
         </trans-unit>
         <trans-unit id="BubbleFast" translate="yes" xml:space="preserve">
           <source>Bubble Fast</source>
@@ -1843,35 +1843,35 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="BugBiteFast" translate="yes" xml:space="preserve">
           <source>Bug Bite</source>
-          <target state="translated">Insekt Bid</target>
+          <target state="translated">Hurtigt Insekt Bid</target>
         </trans-unit>
         <trans-unit id="BugBuzz" translate="yes" xml:space="preserve">
           <source>Bug Buzz</source>
-          <target state="translated">Insekt Brummer</target>
+          <target state="translated">Insekt Summen</target>
         </trans-unit>
         <trans-unit id="Bulldoze" translate="yes" xml:space="preserve">
           <source>Bull doze</source>
-          <target state="translated">Tyre dosis</target>
+          <target state="translated">Bulldoze</target>
         </trans-unit>
         <trans-unit id="BulletPunch" translate="yes" xml:space="preserve">
           <source>Bullet Punch</source>
-          <target state="translated">Kugle Skub</target>
+          <target state="translated">Kugle Slag</target>
         </trans-unit>
         <trans-unit id="BulletPunchFast" translate="yes" xml:space="preserve">
           <source>Bullet Punch</source>
-          <target state="translated">Kugle Skub</target>
+          <target state="translated">Hurtig Kugle Slag</target>
         </trans-unit>
         <trans-unit id="ConfusionFast" translate="yes" xml:space="preserve">
           <source>Confusion</source>
-          <target state="translated">Forvirring</target>
+          <target state="translated">Hurtig Forvirring</target>
         </trans-unit>
         <trans-unit id="CrossChop" translate="yes" xml:space="preserve">
           <source>Cross Chop</source>
-          <target state="translated">Kors Hug</target>
+          <target state="translated">Kryds Hug</target>
         </trans-unit>
         <trans-unit id="CrossPoison" translate="yes" xml:space="preserve">
           <source>Cross Poison</source>
-          <target state="translated">Giftig Kors</target>
+          <target state="translated">Kryds Gift</target>
         </trans-unit>
         <trans-unit id="Cut" translate="yes" xml:space="preserve">
           <source>Cut</source>
@@ -1883,7 +1883,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="DarkPulse" translate="yes" xml:space="preserve">
           <source>Dark Pulse</source>
-          <target state="translated">Sort  Puls</target>
+          <target state="translated">Sort Puls</target>
         </trans-unit>
         <trans-unit id="DazzlingGleam" translate="yes" xml:space="preserve">
           <source>Dazzling Gleam</source>
@@ -1891,7 +1891,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="Dig" translate="yes" xml:space="preserve">
           <source>Dig</source>
-          <target state="needs-review-translation">Grav</target>
+          <target state="needs-review-translation">Grave</target>
         </trans-unit>
         <trans-unit id="DisarmingVoice" translate="yes" xml:space="preserve">
           <source>Disarming Voice</source>
@@ -1899,7 +1899,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="Discharge" translate="yes" xml:space="preserve">
           <source>Discharge</source>
-          <target state="translated">Afsked</target>
+          <target state="translated">Afladning</target>
         </trans-unit>
         <trans-unit id="DoubleSlap" translate="yes" xml:space="preserve">
           <source>Double Slap</source>
@@ -1911,7 +1911,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="DragonBreathFast" translate="yes" xml:space="preserve">
           <source>Dragon Breath</source>
-          <target state="translated">Drage ånde</target>
+          <target state="translated">Hurtig Drage ånde</target>
         </trans-unit>
         <trans-unit id="DragonClaw" translate="yes" xml:space="preserve">
           <source>Dragon Claw</source>
@@ -1931,7 +1931,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="DrillRun" translate="yes" xml:space="preserve">
           <source>Drill Run</source>
-          <target state="translated">Øvelse Løb</target>
+          <target state="translated">Bore Løb</target>
         </trans-unit>
         <trans-unit id="Earthquake" translate="yes" xml:space="preserve">
           <source>Earthquake</source>
@@ -1955,11 +1955,11 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="FireFangFast" translate="yes" xml:space="preserve">
           <source>Fire Fang</source>
-          <target state="translated">Ildfang</target>
+          <target state="translated">Ild hugtand</target>
         </trans-unit>
         <trans-unit id="FirePunch" translate="yes" xml:space="preserve">
           <source>Fire Punch</source>
-          <target state="translated">Ild Skub</target>
+          <target state="translated">Ild Slag</target>
         </trans-unit>
         <trans-unit id="FlameBurst" translate="yes" xml:space="preserve">
           <source>Flame Burst</source>
@@ -1967,7 +1967,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="FlameCharge" translate="yes" xml:space="preserve">
           <source>Flame Charge</source>
-          <target state="translated">Flamme udfald</target>
+          <target state="translated">Flamme angreb</target>
         </trans-unit>
         <trans-unit id="Flamethrower" translate="yes" xml:space="preserve">
           <source>Flamethrower</source>
@@ -1979,7 +1979,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="FlashCannon" translate="yes" xml:space="preserve">
           <source>Flash Cannon</source>
-          <target state="translated">Flash kanon</target>
+          <target state="translated">Blitz kanon</target>
         </trans-unit>
         <trans-unit id="FrostBreath" translate="yes" xml:space="preserve">
           <source>Frost Breath</source>
@@ -1995,7 +1995,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="FuryCutterFast" translate="yes" xml:space="preserve">
           <source>Fury Cutter</source>
-          <target state="translated">Raseri Skærer</target>
+          <target state="translated">Hurtig Raseri Skærer</target>
         </trans-unit>
         <trans-unit id="GigaDrain" translate="yes" xml:space="preserve">
           <source>Giga Drain</source>
@@ -2011,7 +2011,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="HeartStamp" translate="yes" xml:space="preserve">
           <source>Heart Stamp</source>
-          <target state="translated">Hjerte frimærke</target>
+          <target state="translated">Hjerte tramp</target>
         </trans-unit>
         <trans-unit id="HeatWave" translate="yes" xml:space="preserve">
           <source>Heat Wave</source>
@@ -2031,7 +2031,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="HydroPumpBlastoise" translate="yes" xml:space="preserve">
           <source>Hydro Pump</source>
-          <target state="translated">Vand Pumpe</target>
+          <target state="translated">Blastoise Vand Pumpe</target>
         </trans-unit>
         <trans-unit id="HyperBeam" translate="yes" xml:space="preserve">
           <source>Hyper Beam</source>
@@ -2055,7 +2055,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="IceShardFast" translate="yes" xml:space="preserve">
           <source>Ice Shard</source>
-          <target state="translated">Is skår</target>
+          <target state="translated">Hutig Is skår</target>
         </trans-unit>
         <trans-unit id="IcyWind" translate="yes" xml:space="preserve">
           <source>Icy Wind</source>
@@ -2071,7 +2071,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="KarateChopFast" translate="yes" xml:space="preserve">
           <source>Karate Chop</source>
-          <target state="translated">Karate Hug</target>
+          <target state="translated">Hurtig Karate Hug</target>
         </trans-unit>
         <trans-unit id="LeafBlade" translate="yes" xml:space="preserve">
           <source>Leaf Blade</source>
@@ -2091,7 +2091,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="LowKickFast" translate="yes" xml:space="preserve">
           <source>Low Kick</source>
-          <target state="translated">Lavt Spark</target>
+          <target state="translated">Hurtigt Lavt Spark</target>
         </trans-unit>
         <trans-unit id="LowSweep" translate="yes" xml:space="preserve">
           <source>Low Sweep</source>
@@ -2123,7 +2123,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="MoveUnset" translate="yes" xml:space="preserve">
           <source>Move Unset</source>
-          <target state="translated">Træk Frakoblet</target>
+          <target state="translated">Flytte Ikke placeret</target>
         </trans-unit>
         <trans-unit id="MudBomb" translate="yes" xml:space="preserve">
           <source>Mud Bomb</source>
@@ -2135,15 +2135,15 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="MudShotFast" translate="yes" xml:space="preserve">
           <source>Mud Shot</source>
-          <target state="translated">Mudder skud</target>
+          <target state="translated">Hurtigt Mudder skud</target>
         </trans-unit>
         <trans-unit id="MudSlapFast" translate="yes" xml:space="preserve">
           <source>Mud Slap</source>
-          <target state="translated">Mudder slag</target>
+          <target state="translated">Hurtigt Mudder slag</target>
         </trans-unit>
         <trans-unit id="NightSlash" translate="yes" xml:space="preserve">
           <source>Night Slash</source>
-          <target state="translated">Nat slidse</target>
+          <target state="translated">Nat slag</target>
         </trans-unit>
         <trans-unit id="OminousWind" translate="yes" xml:space="preserve">
           <source>Ominous Wind</source>
@@ -2159,7 +2159,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="PeckFast" translate="yes" xml:space="preserve">
           <source>Peck</source>
-          <target state="translated">Hakke</target>
+          <target state="translated">Hakke Hurtigt</target>
         </trans-unit>
         <trans-unit id="PetalBlizzard" translate="yes" xml:space="preserve">
           <source>Petal Blizzard</source>
@@ -2175,11 +2175,11 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="PoisonJab" translate="yes" xml:space="preserve">
           <source>Poison Jab</source>
-          <target state="translated">Giftig Sting</target>
+          <target state="translated">Giftig Jab</target>
         </trans-unit>
         <trans-unit id="PoisonJabFast" translate="yes" xml:space="preserve">
           <source>Poison Jab</source>
-          <target state="translated">Giftig puf</target>
+          <target state="translated">Hurtigt Giftig Jab</target>
         </trans-unit>
         <trans-unit id="PoisonStingFast" translate="yes" xml:space="preserve">
           <source>Poison Sting</source>
@@ -2203,27 +2203,27 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="Psybeam" translate="yes" xml:space="preserve">
           <source>Psybeam</source>
-          <target state="needs-review-translation">Psybeam</target>
+          <target state="translated">Psycho Stråle</target>
         </trans-unit>
         <trans-unit id="Psychic" translate="yes" xml:space="preserve">
           <source>Psychic</source>
-          <target state="needs-review-translation">Psychic</target>
+          <target state="translated">Synsk</target>
         </trans-unit>
         <trans-unit id="PsychoCut" translate="yes" xml:space="preserve">
           <source>Psycho Cut</source>
-          <target state="needs-review-translation">Psycho Cut</target>
+          <target state="translated">Psykisk Snit</target>
         </trans-unit>
         <trans-unit id="PsychoCutFast" translate="yes" xml:space="preserve">
           <source>Psycho Cut</source>
-          <target state="needs-review-translation">Psycho Cut</target>
+          <target state="translated">Hurtigt Psykisk Snit</target>
         </trans-unit>
         <trans-unit id="Psyshock" translate="yes" xml:space="preserve">
           <source>Psyshock</source>
-          <target state="needs-review-translation">Psyshock</target>
+          <target state="translated">Psykisk Chock</target>
         </trans-unit>
         <trans-unit id="Psystrike" translate="yes" xml:space="preserve">
           <source>Psystrike</source>
-          <target state="needs-review-translation">Psystrike</target>
+          <target state="translated">Psykisk angreb</target>
         </trans-unit>
         <trans-unit id="QuickAttack" translate="yes" xml:space="preserve">
           <source>Quick Attack</source>
@@ -2231,15 +2231,15 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="QuickAttackFast" translate="yes" xml:space="preserve">
           <source>Quick Attack</source>
-          <target state="translated">Hurtig angreb</target>
+          <target state="translated">Hurtigt Hurtig angreb</target>
         </trans-unit>
         <trans-unit id="RazorLeaf" translate="yes" xml:space="preserve">
           <source>Razor Leaf</source>
-          <target state="translated">Barbermaskine blad</target>
+          <target state="translated">Barberblads blad</target>
         </trans-unit>
         <trans-unit id="RazorLeafFast" translate="yes" xml:space="preserve">
           <source>Razor Leaf</source>
-          <target state="translated">Barbermaskine blad</target>
+          <target state="translated">Hurtig Barberblads blad</target>
         </trans-unit>
         <trans-unit id="Rest" translate="yes" xml:space="preserve">
           <source>Rest</source>
@@ -2247,7 +2247,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="RockSlide" translate="yes" xml:space="preserve">
           <source>Rock Slide</source>
-          <target state="translated">Sten Skred</target>
+          <target state="translated">Stenskred</target>
         </trans-unit>
         <trans-unit id="RockSmashFast" translate="yes" xml:space="preserve">
           <source>Rock Smash</source>
@@ -2259,7 +2259,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="RockThrowFast" translate="yes" xml:space="preserve">
           <source>Rock Throw</source>
-          <target state="translated">Sten Kast</target>
+          <target state="translated">Hurtig Sten Kast</target>
         </trans-unit>
         <trans-unit id="RockTomb" translate="yes" xml:space="preserve">
           <source>Rock Tomb</source>
@@ -2267,19 +2267,19 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="Scald" translate="yes" xml:space="preserve">
           <source>Scald</source>
-          <target state="translated">Skolde</target>
+          <target state="translated">Skoldning</target>
         </trans-unit>
         <trans-unit id="ScaldBlastoise" translate="yes" xml:space="preserve">
           <source>Scald</source>
-          <target state="translated">Skolde</target>
+          <target state="translated">Blastoise Skoldning</target>
         </trans-unit>
         <trans-unit id="Scratch" translate="yes" xml:space="preserve">
           <source>Scratch</source>
-          <target state="translated">ridse</target>
+          <target state="translated">Ridse</target>
         </trans-unit>
         <trans-unit id="ScratchFast" translate="yes" xml:space="preserve">
           <source>Scratch</source>
-          <target state="translated">Ridse</target>
+          <target state="translated">Hurtig Ridse</target>
         </trans-unit>
         <trans-unit id="SeedBomb" translate="yes" xml:space="preserve">
           <source>Seed Bomb</source>
@@ -2295,7 +2295,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="ShadowClawFast" translate="yes" xml:space="preserve">
           <source>Shadow Claw</source>
-          <target state="translated">Skygge klo</target>
+          <target state="translated">Hurtig Skygge klo</target>
         </trans-unit>
         <trans-unit id="ShadowPunch" translate="yes" xml:space="preserve">
           <source>Shadow Punch</source>
@@ -2335,7 +2335,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="SolarBeam" translate="yes" xml:space="preserve">
           <source>Solar Beam</source>
-          <target state="translated">Sol stråle</target>
+          <target state="translated">Solstråle</target>
         </trans-unit>
         <trans-unit id="Spark" translate="yes" xml:space="preserve">
           <source>Spark</source>
@@ -2347,15 +2347,15 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="Splash" translate="yes" xml:space="preserve">
           <source>Splash</source>
-          <target state="translated">Stænk</target>
+          <target state="translated">Plask</target>
         </trans-unit>
         <trans-unit id="SplashFast" translate="yes" xml:space="preserve">
           <source>Splash</source>
-          <target state="translated">Stænk</target>
+          <target state="translated">Hurtig Plask</target>
         </trans-unit>
         <trans-unit id="SteelWing" translate="yes" xml:space="preserve">
           <source>Steel Wing</source>
-          <target state="translated">Stål fløj</target>
+          <target state="translated">Stål vinger</target>
         </trans-unit>
         <trans-unit id="SteelWingFast" translate="yes" xml:space="preserve">
           <source>Steel Wing</source>
@@ -2379,11 +2379,11 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="SuckerPunch" translate="yes" xml:space="preserve">
           <source>Sucker Punch</source>
-          <target state="needs-review-translation">Sucker Punch</target>
+          <target state="translated">Trick Slag</target>
         </trans-unit>
         <trans-unit id="SuckerPunchFast" translate="yes" xml:space="preserve">
           <source>Sucker Punch</source>
-          <target state="needs-review-translation">Sucker Punch</target>
+          <target state="translated">Hurtigt Trick Slag</target>
         </trans-unit>
         <trans-unit id="Swift" translate="yes" xml:space="preserve">
           <source>Swift</source>
@@ -2391,15 +2391,15 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="Tackle" translate="yes" xml:space="preserve">
           <source>Tackle</source>
-          <target state="translated">Takle</target>
+          <target state="translated">Tackle</target>
         </trans-unit>
         <trans-unit id="TackleFast" translate="yes" xml:space="preserve">
           <source>Tackle</source>
-          <target state="translated">Takle</target>
+          <target state="translated">Hurtig Takling</target>
         </trans-unit>
         <trans-unit id="TakeDown" translate="yes" xml:space="preserve">
           <source>Take Down</source>
-          <target state="translated">Bekæmpe</target>
+          <target state="translated">Nedkæmpe</target>
         </trans-unit>
         <trans-unit id="Thunder" translate="yes" xml:space="preserve">
           <source>Thunder</source>
@@ -2419,11 +2419,11 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="ThunderShockFast" translate="yes" xml:space="preserve">
           <source>Thunder Shock</source>
-          <target state="translated">Torden chok</target>
+          <target state="translated">Hurtig Torden chok</target>
         </trans-unit>
         <trans-unit id="Twineedle" translate="yes" xml:space="preserve">
           <source>Twineedle</source>
-          <target state="needs-review-translation">Twineedle</target>
+          <target state="translated">Dobbeltnål</target>
         </trans-unit>
         <trans-unit id="Twister" translate="yes" xml:space="preserve">
           <source>Twister</source>
@@ -2435,11 +2435,11 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="VineWhip" translate="yes" xml:space="preserve">
           <source>Vine Whip</source>
-          <target state="translated">Vin Pisk</target>
+          <target state="translated">Lian Pisk</target>
         </trans-unit>
         <trans-unit id="VineWhipFast" translate="yes" xml:space="preserve">
           <source>Vine Whip</source>
-          <target state="translated">Vin Pisk</target>
+          <target state="translated">Hurtig Lian Pisk</target>
         </trans-unit>
         <trans-unit id="WaterGun" translate="yes" xml:space="preserve">
           <source>Water Gun</source>
@@ -2447,11 +2447,11 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="WaterGunFast" translate="yes" xml:space="preserve">
           <source>Water Gun</source>
-          <target state="translated">Vandpistol</target>
+          <target state="translated">Hurtig Vandpistol</target>
         </trans-unit>
         <trans-unit id="WaterGunFastBlastoise" translate="yes" xml:space="preserve">
           <source>Water Gun</source>
-          <target state="translated">Vandpistol</target>
+          <target state="translated">Blastoise Vandpistol</target>
         </trans-unit>
         <trans-unit id="WaterPulse" translate="yes" xml:space="preserve">
           <source>Water Pulse</source>
@@ -2459,11 +2459,11 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
         </trans-unit>
         <trans-unit id="WingAttack" translate="yes" xml:space="preserve">
           <source>Wing Attack</source>
-          <target state="translated">Fløj angreb</target>
+          <target state="translated">Vinge angreb</target>
         </trans-unit>
         <trans-unit id="WingAttackFast" translate="yes" xml:space="preserve">
           <source>Wing Attack</source>
-          <target state="translated">Fløj angreb</target>
+          <target state="translated">Hurtigt Winge angreb</target>
         </trans-unit>
         <trans-unit id="Wrap" translate="yes" xml:space="preserve">
           <source>Wrap</source>
