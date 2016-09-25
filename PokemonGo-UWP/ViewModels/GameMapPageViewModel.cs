@@ -129,6 +129,11 @@ namespace PokemonGo_UWP.ViewModels
                     GameClient.ToggleUpdateTimer();
                     await UpdatePlayerData(true);
                     break;
+                case GameMapNavigationModes.GymUpdate:
+                    // As above
+                    GameClient.ToggleUpdateTimer();
+                    await UpdatePlayerData(true);
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }

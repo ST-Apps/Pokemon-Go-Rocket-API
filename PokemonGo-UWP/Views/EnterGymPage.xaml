@@ -154,37 +154,45 @@
             <!--TODO Button Command and Visibility-->
             <Button HorizontalAlignment="Center" VerticalAlignment="Center"
                     Width="80" Height="80" Grid.Column="0"
-                    Style="{ThemeResource ImageButtonStyle}">
+                    Visibility="{Binding CanDeploy, Converter={StaticResource BooleanToVisibilityConverter}}"
+                    Style="{ThemeResource ImageButtonStyle}"
+                    Command="{Binding DeployPokemon}">
                 <Image Source="/Assets/Buttons/btn_claim.png"></Image>
             </Button>
             <Button HorizontalAlignment="Center" VerticalAlignment="Center"
                     Width="60" Height="60" Grid.Column="1"
-                    Command="{Binding AbandonGym}"
-                    Style="{ThemeResource ImageButtonStyle}">
+                    Style="{ThemeResource ImageButtonStyle}"
+                    Command="{Binding ReturnToGameScreen}">
                 <Image Source="/Assets/Buttons/btn_close_normal.png" />
             </Button>
             <Button HorizontalAlignment="Center" VerticalAlignment="Center"
                     Width="80" Height="80" Grid.Column="2"
-                    Style="{ThemeResource ImageButtonStyle}">
+                    Visibility="{Binding AtckType, Converter={StaticResource AttackTypeTrainToVisibilityConverter}}"
+                    Style="{ThemeResource ImageButtonStyle}"
+                    Command="{Binding StartBattle}">
                 <Image Source="/Assets/Buttons/btn_train.png"></Image>
             </Button>
             <Button HorizontalAlignment="Center" VerticalAlignment="Center"
-                    Width="80" Height="80" Grid.Column="2" Visibility="Collapsed"
-                    Style="{ThemeResource ImageButtonStyle}">
-                <Image Source="/Assets/Buttons/btn_train.png"></Image>
+                    Width="80" Height="80" Grid.Column="2"
+                    Visibility="{Binding AtckType, Converter={StaticResource AttackTypeAttackToVisibilityConverter}}"
+                    Style="{ThemeResource ImageButtonStyle}"
+                    Command="{Binding StartBattle}">
+                <Image Source="/Assets/Buttons/btn_attack.png"></Image>
             </Button>
         </Grid>
         <Border x:Name="ErrorMessageBorder"
                 VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,410,0,0"
                 Background="#E780B6" CornerRadius="12" BorderBrush="#44000000" BorderThickness="1"
-                Visibility="Visible">
+                Visibility="{Binding IsEnabled, Converter={StaticResource NegateBooleanToVisibilityConverter}}">
             <StackPanel>
-                <TextBlock x:Name="OutOfRangeTextBlock" Visibility="Visible"
+                <TextBlock x:Name="OutOfRangeTextBlock"
+                           FontSize="12" Foreground="White" Margin="8,4,8,4"
                            Text="This Gym is too far away."
-                           FontSize="12" Foreground="White" Margin="8,4,8,4"></TextBlock>
+                           Visibility="{Binding NotInRange, Converter={StaticResource BooleanToVisibilityConverter}}" />
                 <TextBlock x:Name="NotYetLevelFiveTextBlock"
-                       Text="Not yet level five." Visibility="Collapsed"
-                       FontSize="12" Foreground="White" Margin="8,4,8,4"></TextBlock>
+                       FontSize="12" Foreground="White" Margin="8,4,8,4"
+                       Text="Not yet level five."
+                       Visibility="{Binding NotLvl5Yet, Converter={StaticResource BooleanToVisibilityConverter}}" />
             </StackPanel>
         </Border>
 

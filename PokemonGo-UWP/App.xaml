@@ -95,8 +95,11 @@
             <utils:IntToBooleanConverter x:Key="IntToBooleanConverter" />
             <utils:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
             <utils:PokemonLastHoursVisibiltyConverter x:Key="PokemonLastHoursVisibiltyConverter" />
+            <utils:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+            <utils:NegateBooleanToVisibilityConverter x:Key="NegateBooleanToVisibilityConverter"/>
+            <utils:AttackTypeTrainToVisibilityConverter x:Key="AttackTypeTrainToVisibilityConverter"/>
+            <utils:AttackTypeAttackToVisibilityConverter x:Key="AttackTypeAttackToVisibilityConverter"/>
             <utils:IsIncenseActiveToPlayerIconConverter x:Key="IsIncenseActiveToPlayerIconConverter" />
-
         </ResourceDictionary>
     </Application.Resources>
 

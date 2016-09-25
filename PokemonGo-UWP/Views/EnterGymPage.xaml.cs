@@ -26,39 +26,12 @@ namespace PokemonGo_UWP.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            SubscribeToEnterEvents();
         }
 
 
         protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
         {
             base.OnNavigatingFrom(e);
-            UnsubscribeToEnterEvents();
-        }
-
-        #endregion
-
-        #region Handlers
-
-        private void SubscribeToEnterEvents()
-        {
-            ViewModel.EnterOutOfRange += GameManagerViewModelOnEnterOutOfRange;
-            ViewModel.EnterSuccess += GameManagerViewModelOnEnterSuccess;
-        }
-
-        private void UnsubscribeToEnterEvents()
-        {
-            ViewModel.EnterOutOfRange -= GameManagerViewModelOnEnterOutOfRange;
-            ViewModel.EnterSuccess -= GameManagerViewModelOnEnterSuccess;
-        }
-
-        private void GameManagerViewModelOnEnterOutOfRange(object sender, EventArgs eventArgs)
-        {            
-            OutOfRangeTextBlock.Visibility = ErrorMessageBorder.Visibility = Visibility.Visible;
-        }
-
-        private void GameManagerViewModelOnEnterSuccess(object sender, EventArgs eventArgs)
-        {
         }
 
         #endregion

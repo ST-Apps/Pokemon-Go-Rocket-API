@@ -93,6 +93,10 @@ namespace PokemonGo_UWP.Entities
         {
             _fortData = update;
 
+            Update();
+        }
+        public void Update()
+        {
             OnPropertyChanged(nameof(FortDataStatus));
             OnPropertyChanged(nameof(Id));
             OnPropertyChanged(nameof(Type));

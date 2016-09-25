@@ -16,9 +16,18 @@ using Template10.Services.NavigationService;
 using Newtonsoft.Json;
 using Google.Protobuf;
 using POGOProtos.Data.Gym;
+using Windows.UI.Popups;
+using POGOProtos.Enums;
 
 namespace PokemonGo_UWP.ViewModels
 {
+    public enum AttackType
+    {
+        None,
+        Train,
+        Attack
+    }
+
     public class EnterGymPageViewModel : ViewModelBase
     {
         #region Lifecycle Handlers
@@ -38,18 +47,15 @@ namespace PokemonGo_UWP.ViewModels
                 CurrentGym = JsonConvert.DeserializeObject<FortDataWrapper>((string)suspensionState[nameof(CurrentGym)]);
                 CurrentGymInfo = JsonConvert.DeserializeObject<GetGymDetailsResponse>((string)suspensionState[nameof(CurrentGymInfo)]);
                 CurrentMembers = GetCurrentMembers(CurrentGymInfo);
-                CurrentEnterResponse = JsonConvert.DeserializeObject<GetGymDetailsResponse>((string)suspensionState[nameof(CurrentEnterResponse)]);
+                UpdateBindableData();
             }
             else
             {
-                // Navigating from game page, so we need to actually load the Gym
-                Busy.SetBusy(true, "Loading Gym");
+
                 CurrentGym = (FortDataWrapper)NavigationHelper.NavigationState[nameof(CurrentGym)];
                 NavigationHelper.NavigationState.Remove(nameof(CurrentGym));
-                Logger.Write($"Entering {CurrentGym.Id}");
-                CurrentGymInfo = await GameClient.GetGymDetails(CurrentGym.Id, CurrentGym.Latitude, CurrentGym.Longitude);
-                CurrentMembers = GetCurrentMembers(CurrentGymInfo);
-                Busy.SetBusy(false);
+
+                await CalculateGymData(CurrentGym);
             }
         }
 
@@ -65,7 +71,6 @@ namespace PokemonGo_UWP.ViewModels
             {
                 suspensionState[nameof(CurrentGym)] = JsonConvert.SerializeObject(CurrentGym);
                 suspensionState[nameof(CurrentGymInfo)] = JsonConvert.SerializeObject(CurrentGymInfo);
-                suspensionState[nameof(CurrentEnterResponse)] = JsonConvert.SerializeObject(CurrentEnterResponse);
             }
             await Task.CompletedTask;
         }
@@ -80,22 +85,17 @@ namespace PokemonGo_UWP.ViewModels
 
         #region Game Management Vars
 
-        /// <summary>
-        ///     Gym that the user is visiting
-        /// </summary>
         private FortDataWrapper _currentGym;
 
-        /// <summary>
-        ///     Infos on the current Gym
-        /// </summary>
         private GetGymDetailsResponse _currentGymInfo;
 
         private ObservableCollection<GymMembershipWrapper> _currentMembers;
 
-        /// <summary>
-        ///     Results of the current Gym enter
-        /// </summary>
-        private GetGymDetailsResponse _currentEnterResponse;
+        private AttackType _AtckType = AttackType.None;
+        private bool _notLvl5Yet = true;
+        private bool _canDeploy = false;
+        private bool _notInRange = true;
+        private bool _isEnabled = false;
 
 
         #endregion
@@ -120,114 +120,176 @@ namespace PokemonGo_UWP.ViewModels
             set { Set(ref _currentGymInfo, value); }
         }
 
-        /// <summary>
-        ///     Results of the current Gym enter
-        /// </summary>
-        public GetGymDetailsResponse CurrentEnterResponse
-        {
-            get { return _currentEnterResponse; }
-            set { Set(ref _currentEnterResponse, value); }
-        }
-
         public ObservableCollection<GymMembershipWrapper> CurrentMembers
         {
             get { return _currentMembers; }
             set { Set(ref _currentMembers, value); }
         }
 
+        public AttackType AtckType
+        {
+            get { return _AtckType; }
+            set { Set(ref _AtckType, value); }
+        }
+
+        public bool NotLvl5Yet
+        {
+            get { return _notLvl5Yet; }
+            set { Set(ref _notLvl5Yet, value); }
+        }
+
+        public bool CanDeploy
+        {
+            get { return _canDeploy; }
+            set { Set(ref _canDeploy, value); }
+        }
+
+        public bool NotInRange
+        {
+            get { return _notInRange; }
+            set { Set(ref _notInRange, value); }
+        }
+
+        public bool IsEnabled
+        {
+            get { return _isEnabled; }
+            set { Set(ref _isEnabled, value); }
+        }
+
         #endregion
 
         #region Game Logic
 
-        #region Shared Logic
-
         private DelegateCommand _returnToGameScreen;
 
-        /// <summary>
-        ///     Going back to map page
-        /// </summary>
         public DelegateCommand ReturnToGameScreen =>
             _returnToGameScreen ?? ( _returnToGameScreen = new DelegateCommand( () =>
             {
                 NavigationService.Navigate(typeof(GameMapPage), GameMapNavigationModes.GymUpdate);
             },() => true));
 
-        private DelegateCommand _abandonGym;
-
-        /// <summary>
-        ///     Going back to map page
-        /// </summary>
-        public DelegateCommand AbandonGym =>
-            _abandonGym ?? (_abandonGym = new DelegateCommand(() =>
-            {
-                // Re-enable update timer
-                GameClient.ToggleUpdateTimer();
-                NavigationService.GoBack();
-            }, () => true));
-
-        #endregion
-
-        #region Gym Handling
-
-        #region Gym Events
-
-        /// <summary>
-        ///     Event fired if the user was able to enter the Gym
-        /// </summary>
-        public event EventHandler EnterSuccess;
-
-        /// <summary>
-        ///     Event fired if the user tried to enter a Gym which is out of range
-        /// </summary>
-        public event EventHandler EnterOutOfRange;
-
-        /// <summary>
-        /// <summary>
-        ///     Event fired if the Player's inventory is full and he can't get items from the Pokestop
-        /// </summary>
-        public event EventHandler EnterInventoryFull;
-
-        #endregion
-
         private ObservableCollection<GymMembershipWrapper> GetCurrentMembers(GetGymDetailsResponse currentGymInfo) =>
             new ObservableCollection<GymMembershipWrapper>(
                 currentGymInfo.GymState.Memberships.Select(m => new GymMembershipWrapper(m)));
 
-        private DelegateCommand _enterCurrentGym;
-
-        /// <summary>
-        ///     Enters the current Gym, don't know what to do then
-        /// </summary>
-        public DelegateCommand EnterCurrentGym =>
-            _enterCurrentGym ?? ( _enterCurrentGym = new DelegateCommand(async () =>
+        private async Task CalculateGymData(FortDataWrapper currentGym)
+        {
+            // Navigating from game page, so we need to actually load the Gym
+            Busy.SetBusy(true, "Loading Gym");
+            var response = await GameClient.GetGymDetails(currentGym.Id, currentGym.Latitude, currentGym.Longitude);
+            Logger.Write($"Entering {response.Name} [ID = {CurrentGym.Id}]");
+            Busy.SetBusy(false);
+            switch (response.Result)
             {
-                Busy.SetBusy(true, "Entering Gym");
-                Logger.Write($"Entering {CurrentGymInfo.Name} [ID = {CurrentGym.Id}]");
-                CurrentEnterResponse = await GameClient.GetGymDetails(CurrentGym.Id, CurrentGym.Latitude, CurrentGym.Longitude);
-                Busy.SetBusy(false);
-                switch (CurrentEnterResponse.Result)
-                {
-                    case GetGymDetailsResponse.Types.Result.Unset:
-                        break;
-                    case GetGymDetailsResponse.Types.Result.Success:
-                        // Success, we play the animation and update inventory
-                        Logger.Write("Entering Gym success");
+                case GetGymDetailsResponse.Types.Result.Unset:
+                    Logger.Write("Entering Gym Unset");
+                    var dialog = new MessageDialog("Gym is unset, whatever it means");
+                    await dialog.ShowAsync();
+                    ReturnToGameScreen.Execute();
+                    break;
+                case GetGymDetailsResponse.Types.Result.Success:
+                    // Success, we play the animation and update inventory
+                    Logger.Write("Entering Gym success");
+                    CurrentGym = new FortDataWrapper(response.GymState.FortData);
+                    CurrentGymInfo = response;
+                    await GameClient.UpdateInventory();
+                    CurrentMembers = GetCurrentMembers(CurrentGymInfo);
+                    UpdateBindableData();
+                    break;
+                case GetGymDetailsResponse.Types.Result.ErrorNotInRange:
+                    Logger.Write("Entering Gym out of range");
+                    var dialog2 = new MessageDialog("Gym is completely out of range");
+                    await dialog2.ShowAsync();
+                    ReturnToGameScreen.Execute();
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(response.Result), "GetGymDetails result enum had something undefined");
+            }
+        }
 
-                        // What to do when we are in the Gym?
-                        EnterSuccess?.Invoke(this, null);
-                        await GameClient.UpdateInventory();
+        private void UpdateBindableData()
+        {
+            var AmIPresent = CurrentMembers.Where(cm => cm.PlayerName == GameClient.PlayerProfile.Username).FirstOrDefault() != null;
+            var AmINeutralTeam = GameClient.PlayerProfile.Team == TeamColor.Neutral;
+            var HasSpace = CurrentGym.GymLevel > CurrentMembers.Count;
+            var IsTeamOk = CurrentGym.OwnedByTeam == TeamColor.Neutral ? true : CurrentGym.OwnedByTeam == GameClient.PlayerProfile.Team;
+
+            NotLvl5Yet = GameClient.PlayerStats?.Level < 5;
+            CanDeploy = !AmINeutralTeam && IsTeamOk && HasSpace && !AmIPresent;
+            NotInRange = CurrentGym.FortDataStatus == Utils.Game.FortDataStatus.Closed;
+            IsEnabled = !NotInRange && !NotLvl5Yet;
+
+            if (CurrentGym.OwnedByTeam == TeamColor.Neutral)
+                AtckType = AttackType.None;
+            else if (CurrentGym.OwnedByTeam == GameClient.PlayerProfile.Team)
+                AtckType = AttackType.Train;
+            else
+                AtckType = AttackType.Attack;
+
+            DeployPokemon.RaiseCanExecuteChanged();
+            StartBattle.RaiseCanExecuteChanged();
+        }
+
+        private DelegateCommand _deployPokemon;
+
+        public DelegateCommand DeployPokemon =>
+            _deployPokemon ?? (_deployPokemon = new DelegateCommand( async() =>
+            {
+                //TODO make pokemon selection, now gets highest CP of favorites
+                var pokemon = GameClient.PokemonsInventory.OrderByDescending(p => Convert.ToBoolean(p.Favorite)).ThenByDescending(p => p.Cp).FirstOrDefault();
+
+                if (pokemon == null)
+                {
+                    var dialog = new MessageDialog("No pokemon", "You don't have any pokemon to deploy!");
+                    await dialog.ShowAsync();
+                    ReturnToGameScreen.Execute();
+                }
+
+                var response = await GameClient.FortDeployPokemon(CurrentGym.Id, pokemon.Id);
+                switch (response.Result)
+                {
+                    case FortDeployPokemonResponse.Types.Result.NoResultSet:
+                        Logger.Write("Deploy to Gym NoResultSet");
+                        var d1 = new MessageDialog("Deploy to Gym NoResultSet, whatever it means");
+                        await d1.ShowAsync();
                         break;
-                    case GetGymDetailsResponse.Types.Result.ErrorNotInRange:
-                        // Gym can't be used because it's out of range, there's nothing that we can do
-                        Logger.Write("Entering Gym out of range");
-                        EnterOutOfRange?.Invoke(this, null);
+                    case FortDeployPokemonResponse.Types.Result.Success:
+                        await CalculateGymData(CurrentGym);
+                        CurrentGym.Update();
+                        ReturnToGameScreen.Execute();
+                        break;
+                    case FortDeployPokemonResponse.Types.Result.ErrorAlreadyHasPokemonOnFort:
+                    case FortDeployPokemonResponse.Types.Result.ErrorOpposingTeamOwnsFort:
+                    case FortDeployPokemonResponse.Types.Result.ErrorFortIsFull:
+                    case FortDeployPokemonResponse.Types.Result.ErrorNotInRange:
+                        await CalculateGymData(CurrentGym);
+                        CurrentGym.Update();
+                        break;
+                    case FortDeployPokemonResponse.Types.Result.ErrorPlayerHasNoTeam:
+                    case FortDeployPokemonResponse.Types.Result.ErrorPokemonNotFullHp:
+                    case FortDeployPokemonResponse.Types.Result.ErrorPlayerBelowMinimumLevel:
+                    case FortDeployPokemonResponse.Types.Result.ErrorPokemonIsBuddy:
+                        var d2 = new MessageDialog($"Should have never happened: {response.Result}");
+                        await d2.ShowAsync();
                         break;
                     default:
-                        throw new ArgumentOutOfRangeException();
+                        break;
                 }
-            }, () => true));
+            }, () => IsEnabled));
 
-        #endregion
+
+
+
+
+        private DelegateCommand _startBattle;
+
+        public DelegateCommand StartBattle =>
+            _startBattle ?? (_startBattle = new DelegateCommand(async () =>
+            {
+                //TODO implement Gym battles
+                var dialog = new MessageDialog("Sorry, check back later ;)", "Not yet implemented");
+                await dialog.ShowAsync();
+            }, () => IsEnabled));
 
         #endregion
     }

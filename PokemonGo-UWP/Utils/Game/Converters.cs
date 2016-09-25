@@ -2078,6 +2078,80 @@ namespace PokemonGo_UWP.Utils
         #endregion
     }
 
+
+    public class NegateBooleanToVisibilityConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        private object GetVisibility(object value)
+        {
+            if (!(value is bool))
+                return Visibility.Visible;
+            bool objValue = (bool)value;
+            if (objValue)
+            {
+                return Visibility.Collapsed;
+            }
+            return Visibility.Visible;
+        }
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            return GetVisibility(value);
+        }
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+    }
+
+    public class AttackTypeTrainToVisibilityConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            if (!(value is AttackType))
+                return Visibility.Collapsed;
+
+            AttackType objValue = (AttackType)value;
+            if (objValue == AttackType.Train)
+                return Visibility.Visible;
+            else
+                return Visibility.Collapsed;
+        }
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+    }
+
+    public class AttackTypeAttackToVisibilityConverter : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            if (!(value is AttackType))
+                return Visibility.Collapsed;
+
+            AttackType objValue = (AttackType)value;
+            if (objValue == AttackType.Attack)
+                return Visibility.Visible;
+            else
+                return Visibility.Collapsed;
+        }
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+    }
+
     public class StringToVisibilityConverter : IValueConverter
     {
         #region Implementation of IValueConverter
