@@ -56,6 +56,8 @@ namespace PokemonGo_UWP.ViewModels
                 NavigationHelper.NavigationState.Remove(nameof(CurrentGym));
 
                 await CalculateGymData(CurrentGym);
+
+                await CheckPlayerTeamSelection();
             }
         }
 
@@ -230,8 +232,18 @@ namespace PokemonGo_UWP.ViewModels
             StartBattle.RaiseCanExecuteChanged();
         }
 
-        private DelegateCommand _deployPokemon;
 
+        private void CheckPlayerTeamSelection()
+        {
+            if(GameClient.PlayerStats.Level >= 5 && GameClient.PlayerProfile.Team == TeamColor.Neutral)
+            {
+                // TODO Modal dialog with teams and selection
+                // TODO modal dialog with confirmation
+            }
+        }
+
+
+        private DelegateCommand _deployPokemon;
         public DelegateCommand DeployPokemon =>
             _deployPokemon ?? (_deployPokemon = new DelegateCommand( async() =>
             {
@@ -282,7 +294,6 @@ namespace PokemonGo_UWP.ViewModels
 
 
         private DelegateCommand _startBattle;
-
         public DelegateCommand StartBattle =>
             _startBattle ?? (_startBattle = new DelegateCommand(async () =>
             {
