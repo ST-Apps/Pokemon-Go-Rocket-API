@@ -37,13 +37,25 @@ namespace PokemonGo_UWP.Utils
                 }
                 else
                 {
-                    var dialog = new MessageDialog(Resources.CodeResources.GetString("SomethingWentWrongText")
-#if DEBUG
-                                                   + "\n(" + e?.Message + ")");
-#else
-                    );
-#endif
-                    dialog.Commands.Add(new UICommand(Resources.CodeResources.GetString("YesText")) {Id = 0});
+					bool showDebug = false;
+					try
+					{
+						//get inside try/catch in case exception comes from settings instance (storage access issue, ...)
+						showDebug = SettingsService.Instance.ShowDebugInfoInErrorMessage;
+					}
+					catch { }
+
+					string message = Resources.CodeResources.GetString("SomethingWentWrongText");
+					if (showDebug)
+					{
+						message += $"\nException";
+						message += $"\n Message:[{e?.Message}]";
+						message += $"\n InnerMessage:[{e?.InnerException?.Message}]";
+						message += $"\n StackTrace:[{e?.StackTrace}]";
+					}
+
+					var dialog = new MessageDialog(message);
+					dialog.Commands.Add(new UICommand(Resources.CodeResources.GetString("YesText")) {Id = 0});
                     dialog.Commands.Add(new UICommand(Resources.CodeResources.GetString("NoText")) {Id = 1});
                     dialog.DefaultCommandIndex = 0;
                     dialog.CancelCommandIndex = 1;

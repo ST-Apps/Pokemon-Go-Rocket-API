@@ -151,7 +151,8 @@ namespace PokemonGo_UWP.ViewModels
                 }
                 catch (Exception e)
                 {
-                    HockeyClient.Current.TrackEvent(e.Message);
+								await ExceptionHandler.HandleException(e);
+								HockeyClient.Current.TrackEvent(e.Message);
                 }
                 finally
                 {

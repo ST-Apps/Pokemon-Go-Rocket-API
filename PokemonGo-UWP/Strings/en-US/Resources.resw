@@ -324,4 +324,7 @@
   <data name="AddModifierSuccessTextBlock.Text" xml:space="preserve">
     <value>Successfully added lure module</value>
   </data>
+  <data name="EggDetailIncubatingTextBlock.Text" xml:space="preserve">
+    <value>Walk to hatch this Egg.</value>
+  </data>
 </root>

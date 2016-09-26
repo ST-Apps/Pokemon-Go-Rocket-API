@@ -1,0 +1,488 @@
+﻿<Page x:Class="PokemonGo_UWP.Views.PokemonDetailPage"
+      x:Name="Root"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:PokemonGo_UWP.Views"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
+      xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+      xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+      xmlns:media="using:Microsoft.Xaml.Interactions.Media"
+      xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
+      xmlns:controls="using:PokemonGo_UWP.Controls"
+      mc:Ignorable="d">
+
+    <Page.DataContext>
+        <viewModels:PokemonDetailPageViewModel x:Name="ViewModel" />
+    </Page.DataContext>
+
+    <Page.Resources>
+        <Storyboard x:Name="ShowEvolveMenuStoryboard">
+
+            <DoubleAnimation Storyboard.TargetName="EvolvePokemonPanel"
+                             Storyboard.TargetProperty="Opacity"
+                             From="0"
+                             To="1"
+                             Duration="0:0:0.2" />
+
+            <DoubleAnimation Storyboard.TargetName="MainUi"
+                             Storyboard.TargetProperty="Opacity"
+                             From="1"
+                             To="0"
+                             Duration="0:0:0.2" />
+
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.ZIndex)"
+                                           Storyboard.TargetName="EvolvePokemonPanel">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>0</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>10</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Name="EvolvePokemonStoryboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
+                                           Storyboard.TargetName="EvolvedPokemonImage">
+                <EasingDoubleKeyFrame KeyTime="0"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:4"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:6"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:6.5"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:7"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:8.5"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:9.5"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:10.5"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:11"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:12.5"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:13"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:13.5"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:14"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:14.5"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:15"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:15.2"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:15.4"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:15.6"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:15.8"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:16"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:16.1"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:16.2"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:16.3"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:16.4"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:16.5"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:16.6"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:16.7"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:16.8"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:16.9"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:17"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:17.2"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:20"
+                                      Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)"
+                                           Storyboard.TargetName="CurrentPokemonImage">
+                <EasingDoubleKeyFrame KeyTime="0"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:4"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:6"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:6.5"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:7"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:8.5"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:9.5"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:10.5"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:11"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:12.5"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:13"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:13.5"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:14"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:14.5"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:15"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:15.2"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:15.4"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:15.6"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:15.8"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:16"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:16.1"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:16.2"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:16.3"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:16.4"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:16.5"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:16.6"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:16.7"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:16.8"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:16.9"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:17"
+                                      Value="1" />
+                <EasingDoubleKeyFrame KeyTime="0:0:17.2"
+                                      Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:20"
+                                      Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        
+        <Storyboard x:Name="ShowContextMenuStoryboard">
+            <DoubleAnimation Storyboard.TargetName="ContextMenuPanel"
+                             Storyboard.TargetProperty="Opacity"
+                             From="0"
+                             To="1"
+                             Duration="0:0:0.2" />
+            <DoubleAnimation Storyboard.TargetName="ContextMenuTranslateTransform"
+                             Storyboard.TargetProperty="Y"
+                             From="200"
+                             To="0"
+                             Duration="0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.ZIndex)"
+                                           Storyboard.TargetName="ContextMenuPanel">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>0</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.01">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>10</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Name="HideContextMenuStoryboard">
+            <DoubleAnimation Storyboard.TargetName="ContextMenuPanel"
+                             Storyboard.TargetProperty="Opacity"
+                             From="1"
+                             To="0"
+                             Duration="0:0:0.2" />
+            <DoubleAnimation Storyboard.TargetName="ContextMenuTranslateTransform"
+                             Storyboard.TargetProperty="Y"
+                             From="0"
+                             To="200"
+                             Duration="0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseIn" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.ZIndex)"
+                                           Storyboard.TargetName="ContextMenuPanel">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>10</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>0</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </Page.Resources>
+
+    <RelativePanel>
+
+        <!--Evolve-->
+        <RelativePanel x:Name="EvolvePokemonPanel"
+                       RelativePanel.AlignTopWithPanel="True"
+                       RelativePanel.AlignLeftWithPanel="True"
+                       RelativePanel.AlignBottomWithPanel="True"
+                       RelativePanel.AlignRightWithPanel="True"
+                       Opacity="0"
+                       Canvas.ZIndex="0">
+            <RelativePanel.Background>
+                <ImageBrush Stretch="UniformToFill"
+                            ImageSource="../../Assets/UI/night_sky_texture_by_amdillon.jpg" />
+            </RelativePanel.Background>
+
+            <Image Source="{Binding SelectedPokemon.PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"
+                   x:Name="CurrentPokemonImage"
+                   Opacity="0"
+                   Height="250"
+                   Stretch="Uniform"
+                   RelativePanel.AlignHorizontalCenterWithPanel="True"
+                   RelativePanel.AlignVerticalCenterWithPanel="True" />
+
+            <Image Source="{Binding EvolvedPokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"
+                   x:Name="EvolvedPokemonImage"
+                   Opacity="0"
+                   Height="250"
+                   Stretch="Uniform"
+                   RelativePanel.AlignHorizontalCenterWithPanel="True"
+                   RelativePanel.AlignVerticalCenterWithPanel="True" />
+        </RelativePanel>
+
+        <!--Contextmenu-->
+        <Grid x:Name="ContextMenuPanel"
+              RelativePanel.AlignTopWithPanel="True"
+              RelativePanel.AlignLeftWithPanel="True"
+              RelativePanel.AlignBottomWithPanel="True"
+              RelativePanel.AlignRightWithPanel="True"
+              Opacity="0">
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0.5,0"
+                                     EndPoint="0.5,1">
+                    <GradientStop Color="#00b3ee9a"
+                                  Offset="0.1" />
+                    <GradientStop Color="#EE43bab6"
+                                  Offset="0.8" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="70" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0"
+                        VerticalAlignment="Bottom">
+                <StackPanel.RenderTransform>
+                    <TranslateTransform Y="200"
+                                        x:Name="ContextMenuTranslateTransform" />
+                </StackPanel.RenderTransform>
+
+                <!--Favorite-->
+                <Grid HorizontalAlignment="Right"
+                      Background="Transparent"
+                      Height="43">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="82" />
+                    </Grid.ColumnDefinitions>
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Tapped">
+                            <media:ControlStoryboardAction Storyboard="{StaticResource HideContextMenuStoryboard}" />
+                            <core:InvokeCommandAction Command="{Binding FavoritePokemonCommand}" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                    <TextBlock Grid.Column="0"
+                               x:Uid="FavoriteTextBlock"
+                               Text="FAVORITE"
+                               Style="{StaticResource TextSortTitle}"
+                               Foreground="#e4ffde"
+                               Margin="15,0,0,0" />
+                    <Image Grid.Column="1"
+                           Height="25"
+                           Width="25"
+                           Source="ms-appx:///Assets/Icons/ic_fav.png" />
+                </Grid>
+
+                <!--Appraise-->
+                <Grid HorizontalAlignment="Right"
+                      Background="Transparent"
+                      Height="43"
+                      Visibility="{Binding PlayerTeamIsSet, Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="82" />
+                    </Grid.ColumnDefinitions>
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Tapped">
+                            <media:ControlStoryboardAction Storyboard="{StaticResource HideContextMenuStoryboard}" />
+                            <core:InvokeCommandAction Command="{Binding AppraisePokemonCommand}" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                    <TextBlock Grid.Column="0"
+                               x:Uid="AppraiseTextBlock"
+                               Text="APPRAISE"
+                               Style="{StaticResource TextSortTitle}"
+                               Foreground="#e4ffde"
+                               Margin="15,0,0,0" />
+                    <Image Grid.Column="1"
+                           Height="25"
+                           Width="25"
+                           Source="ms-appx:///Assets/Icons/ic_appraise.png" />
+                </Grid>
+
+                <!--Transfer-->
+                <Grid HorizontalAlignment="Right"
+                      Background="Transparent"
+                      Height="43">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="82" />
+                    </Grid.ColumnDefinitions>
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Tapped">
+                            <core:InvokeCommandAction Command="{Binding TransferPokemonCommand}" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                    <TextBlock Grid.Column="0"
+                               x:Uid="TransferTextBlock"
+                               Text="TRANSFER"
+                               Style="{StaticResource TextSortTitle}"
+                               Foreground="#e4ffde" />
+                    <Image Grid.Column="1"
+                           Height="25"
+                           Width="25"
+                           Source="ms-appx:///Assets/Icons/ic_candy_light.png" />
+                </Grid>
+            </StackPanel>
+
+            <!--Close Contextmenu-->
+            <Button Style="{StaticResource ButtonCircle}"
+                    Grid.Row="1"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,21,21">
+                <interactivity:Interaction.Behaviors>
+                    <core:EventTriggerBehavior EventName="Tapped">
+                        <media:ControlStoryboardAction Storyboard="{StaticResource HideContextMenuStoryboard}" />
+                    </core:EventTriggerBehavior>
+                </interactivity:Interaction.Behaviors>
+                <Image Source="ms-appx:///Assets/Buttons/btn_close.png" />
+            </Button>
+        </Grid>
+
+        <!--Main UI-->
+        <Grid x:Name="MainUi"
+              RelativePanel.AlignTopWithPanel="True"
+              RelativePanel.AlignLeftWithPanel="True"
+              RelativePanel.AlignBottomWithPanel="True"
+              RelativePanel.AlignRightWithPanel="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="4*" />
+            </Grid.RowDefinitions>
+
+            <Rectangle Grid.Row="0">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="{Binding SelectedPokemon, Converter={StaticResource PokemonDataToPokemonTypeBackgroundConverter}}"
+                                Stretch="Fill" />
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <Rectangle Grid.Row="1"
+                       RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <CompositeTransform Rotation="180" />
+                </Rectangle.RenderTransform>
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="{Binding SelectedPokemon, Converter={StaticResource PokemonDataToPokemonTypeBackgroundConverter}}"
+                                Stretch="Fill" />
+                </Rectangle.Fill>
+            </Rectangle>
+        </Grid>
+
+        <FlipView x:Name="PokeDetailFlip"
+                  RelativePanel.AlignTopWithPanel="True"
+                  RelativePanel.AlignLeftWithPanel="True"
+                  RelativePanel.AlignBottomWithPanel="True"
+                  RelativePanel.AlignRightWithPanel="True"
+                  ItemsSource="{Binding PokemonInventory, Mode=OneWay}"
+                  SelectedItem="{Binding SelectedPokemon, Mode=TwoWay}"
+                  Visibility="Collapsed">
+            <FlipView.ItemTemplate>
+                <DataTemplate>
+                    <local:PokemonDetailControl FavoritePokemonCommand="{Binding ElementName=Root, Path=DataContext.FavoritePokemonCommand}"
+                                                RenamePokemonCommand="{Binding ElementName=Root, Path=DataContext.RenamePokemonCommand}"
+                                                PowerUpPokemonCommand="{Binding ElementName=Root, Path=DataContext.PowerUpPokemonCommand}"
+                                                EvolvePokemonCommand="{Binding ElementName=Root, Path=DataContext.EvolvePokemonCommand}"
+                                                StardustAmount="{Binding ElementName=Root, Path=DataContext.StardustAmount}" />
+                </DataTemplate>
+            </FlipView.ItemTemplate>
+        </FlipView>
+
+        <Button RelativePanel.AlignBottomWithPanel="True"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Style="{StaticResource ButtonCircle}"
+                VerticalAlignment="Bottom"
+                Margin="0,0,0,21"
+                Command="{Binding ClosePokemonDetailPage}">
+            <Image Source="{Binding ViewMode, Converter={StaticResource PokemonDetailPageViewModeToCloseButtonImageSourceConverter}}" />
+        </Button>
+        <!--Contextmenu Button-->
+        <Button RelativePanel.AlignBottomWithPanel="True"
+                RelativePanel.AlignRightWithPanel="True"
+                Style="{StaticResource ButtonCircleBig}"
+                Margin="16">
+            <interactivity:Interaction.Behaviors>
+                <core:EventTriggerBehavior EventName="Tapped">
+                    <media:ControlStoryboardAction Storyboard="{StaticResource ShowContextMenuStoryboard}" />
+                </core:EventTriggerBehavior>
+            </interactivity:Interaction.Behaviors>
+
+            <Path Data="{StaticResource MenuIconPathData}"
+                  Style="{StaticResource MenuIconPathStyle}"
+                  Margin="-2" />
+        </Button>
+    </RelativePanel>
+</Page>

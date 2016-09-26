@@ -28,7 +28,7 @@ namespace System.Net
                 {
                     var value = GetPropertyValue<dynamic>(entry, "Value");
 
-                    var internalList = (SortedList<string, CookieCollection>)GetFieldValue(value, "_list");
+                    var internalList = GetFieldValue<SortedList<string, CookieCollection>>(value, "_list");
                     foreach (var li in internalList)
                     {
                         foreach (Cookie cookie in li.Value)

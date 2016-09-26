@@ -4,8 +4,6 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Navigation;
-using Google.Protobuf;
-using Newtonsoft.Json;
 using PokemonGo.RocketAPI;
 using PokemonGo_UWP.Entities;
 using PokemonGo_UWP.Utils;
@@ -13,7 +11,6 @@ using PokemonGo_UWP.Views;
 using POGOProtos.Inventory;
 using POGOProtos.Networking.Responses;
 using Template10.Mvvm;
-using Template10.Services.NavigationService;
 
 namespace PokemonGo_UWP.ViewModels
 {
@@ -21,33 +18,45 @@ namespace PokemonGo_UWP.ViewModels
     {
         #region Lifecycle Handlers
 
-        /// <summary>
-        /// </summary>
-        /// <param name="parameter">MapPokemonWrapper containing the Pokemon that we're trying to capture</param>
-        /// <param name="mode"></param>
-        /// <param name="suspensionState"></param>
-        /// <returns></returns>
-        public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode,
-            IDictionary<string, object> suspensionState)
+        public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
         {
             if (suspensionState.Any())
             {
                 // Recovering the state
-                SelectedEggIncubator = new EggIncubator();
-                CurrentEgg = JsonConvert.DeserializeObject<PokemonDataWrapper>((string)suspensionState[nameof(CurrentEgg)]);
-                SelectedEggIncubator.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(SelectedEggIncubator)]).CreateCodedInput());
-                RaisePropertyChanged(() => SelectedEggIncubator);
+                Load((ulong)suspensionState[nameof(SelectedEgg)]);
             }
             else
             {
-                // Navigating from game page, so we need to actually load the encounter
-                CurrentEgg = (PokemonDataWrapper)NavigationHelper.NavigationState[nameof(CurrentEgg)];
+                // Navigating from inventory page so we need to load the egginventory and the current egg
+                Load(Convert.ToUInt64(parameter));
             }
+
             await Task.CompletedTask;
         }
 
+        public void Load(ulong selectedEggId)
+        {
+            EggInventory.Clear();
+
+            var unincubatedEggs = GameClient.EggsInventory.Where(o => string.IsNullOrEmpty(o.EggIncubatorId))
+                                              .OrderBy(c => c.EggKmWalkedTarget).Select(eggData => new PokemonDataWrapper(eggData));
+            var incubatedEggs = GameClient.EggsInventory.Where(o => !string.IsNullOrEmpty(o.EggIncubatorId))
+                                                          .OrderBy(c => c.EggKmWalkedTarget).Select(eggData => new IncubatedEggDataWrapper(GameClient.GetIncubatorFromEgg(eggData), GameClient.PlayerStats.KmWalked, eggData));
+
+            foreach(PokemonDataWrapper egg in incubatedEggs)
+            {
+                EggInventory.Add(egg);
+            }
+            foreach (PokemonDataWrapper egg in unincubatedEggs)
+            {
+                EggInventory.Add(egg);
+            }
+
+            SelectedEgg = EggInventory.FirstOrDefault(egg => egg.Id == selectedEggId);
+        }
+
         /// <summary>
-        ///     Save state before navigating
+        /// Save state before navigating
         /// </summary>
         /// <param name="suspensionState"></param>
         /// <param name="suspending"></param>
@@ -56,105 +65,57 @@ namespace PokemonGo_UWP.ViewModels
         {
             if (suspending)
             {
-                suspensionState[nameof(CurrentEgg)] = JsonConvert.SerializeObject(CurrentEgg);
-                suspensionState[nameof(SelectedEggIncubator)] = SelectedEggIncubator.ToByteString().ToBase64();                
+                suspensionState[nameof(SelectedEgg)] = SelectedEgg.Id;
             }
             await Task.CompletedTask;
         }
 
-        public override async Task OnNavigatingFromAsync(NavigatingEventArgs args)
-        {
-            args.Cancel = false;
-            await Task.CompletedTask;
-        }
 
         #endregion
 
-        #region Game Management Vars
+        #region Bindable Vars
+
+        public ObservableCollection<PokemonDataWrapper> EggInventory { get; private set; } = new ObservableCollection<PokemonDataWrapper>();
 
         /// <summary>
-        ///     Pokemon that we're trying to capture
+        /// Current displayed Pokemon
         /// </summary>
-        private PokemonDataWrapper _currentEgg;
-
-        /// <summary>
-        ///     Current item for capture page
-        /// </summary>
-        private EggIncubator _selectedEggIncubator;
-
-        #endregion
-
-        #region Bindable Game Vars
-
-        /// <summary>
-        ///     Reference to global inventory
-        /// </summary>
-        public ObservableCollection<EggIncubator> IncubatorsInventory => GameClient.FreeIncubatorsInventory;
-
-        /// <summary>
-        ///     Pokemon that we're trying to capture
-        /// </summary>
-        public PokemonDataWrapper CurrentEgg
+        private PokemonDataWrapper _selectedEgg;
+        public PokemonDataWrapper SelectedEgg
         {
-            get { return _currentEgg; }
-            set { Set(ref _currentEgg, value); }
+            get { return _selectedEgg; }
+            set { Set(ref _selectedEgg, value); }
         }
 
         /// <summary>
-        ///     Current item for capture page
+        /// Going back to inventory page
         /// </summary>
-        public EggIncubator SelectedEggIncubator
-        {
-            get { return _selectedEggIncubator; }
-            set { Set(ref _selectedEggIncubator, value); }
-        }
+        private DelegateCommand _returnToPokemonInventoryScreen;
+        public DelegateCommand ReturnToPokemonInventoryScreen => _returnToPokemonInventoryScreen ?? (
+            _returnToPokemonInventoryScreen = new DelegateCommand(() =>
+            {
+                NavigationService.GoBack();
+            }, () => true));
 
         #endregion
 
         #region Game Logic
 
-        #region Shared Logic
-
-        private DelegateCommand _returnToPokemonInventoryScreen;
-
-        /// <summary>
-        ///     Going back to inventory page
-        /// </summary>
-        public DelegateCommand ReturnToPokemonInventoryScreen => _returnToPokemonInventoryScreen ?? (
-            _returnToPokemonInventoryScreen =
-                new DelegateCommand(() => { NavigationService.Navigate(typeof(PokemonInventoryPage), true); },
-                    () => true)
-            );
-
-        #endregion
-
-        #region Incubator
-
-        #region Incubator Events
-
-        /// <summary>
-        ///     Event fired if using the incubator returned Success
-        /// </summary>
-        public event EventHandler IncubatorSuccess;
-
-        #endregion
+        #region Incubators
 
         private DelegateCommand<EggIncubator> _useIncubatorCommand;
-
         public DelegateCommand<EggIncubator> UseIncubatorCommand => _useIncubatorCommand ?? (
             _useIncubatorCommand = new DelegateCommand<EggIncubator>(async incubator =>
             {
-                var response = await GameClient.UseEggIncubator(incubator, CurrentEgg.WrappedData);
+                var response = await GameClient.UseEggIncubator(incubator, SelectedEgg.WrappedData);
                 switch (response.Result)
                 {
                     case UseItemEggIncubatorResponse.Types.Result.Success:
-                        IncubatorSuccess?.Invoke(this, null);
                         await GameClient.UpdateInventory();
-                        CurrentEgg =
-                            new PokemonDataWrapper(GameClient.EggsInventory.First(item => item.Id == CurrentEgg.Id));
+                        Load(SelectedEgg.Id);
                         break;
                     default:
-                        Logger.Write($"Error using {incubator.Id} on {CurrentEgg.Id}");
+                        Logger.Write($"Error using {incubator.Id} on {SelectedEgg.Id}");
                         break;
                 }
             }, incubator => true));

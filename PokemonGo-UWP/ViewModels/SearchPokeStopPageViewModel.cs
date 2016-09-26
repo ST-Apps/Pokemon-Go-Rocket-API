@@ -199,7 +199,7 @@ namespace PokemonGo_UWP.ViewModels
                 }
                 else
                 {
-                    return Utils.Resources.CodeResources.GetString("LureTitleTextFilled");
+                    return Utils.Resources.Items.GetString("ItemTroyDisk");
 				}
             }
         }
@@ -214,8 +214,8 @@ namespace PokemonGo_UWP.ViewModels
 				}
                 else
                 {
-					return Utils.Resources.CodeResources.GetString("LureDetailsTextFilled");
-				}
+                    return Utils.Resources.Items.GetString("D_ItemTroyDisk");
+                }
 			}
         }
 

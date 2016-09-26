@@ -167,5 +167,24 @@ namespace PokemonGo_UWP.Utils
 		}
 
 		#endregion
+
+		#region Dev Stuff
+		public bool ShowDebugInfoInErrorMessage
+		{
+			get
+			{
+#if DEBUG
+				//Default value set to true if DEBUG :)
+				return Get(true);
+#else
+				return Get(false);
+#endif
+			}
+			set
+			{
+				Set(value);
+			}
+		}
+#endregion
 	}
 }

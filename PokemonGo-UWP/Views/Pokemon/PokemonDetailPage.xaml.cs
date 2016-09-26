@@ -4,41 +4,25 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Maps;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using PokemonGo.RocketAPI;
-using PokemonGo_UWP.Utils;
-using PokemonGo_UWP.ViewModels;
-using POGOProtos.Networking.Responses;
-
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
+using Windows.System.Threading;
+using Windows.UI.Core;
 
 namespace PokemonGo_UWP.Views
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+    public enum PokemonDetailPageViewMode
+    {
+        Normal,
+        ReceivedPokemon
+    }
+
     public sealed partial class PokemonDetailPage : Page
     {
         public PokemonDetailPage()
         {
             this.InitializeComponent();
-            // Setup evolution stats translation
-            Loaded += (s, e) =>
-            {
-                ShowEvolveStatsModalAnimation.From = EvolveStatsTranslateTransform.Y = ActualHeight;
-
-                PokemonTypeCol.MinWidth = PokemonTypeCol.ActualWidth;
-                PokemonTypeCol.Width = new GridLength(1, GridUnitType.Star);
-            };
         }
 
         #region Overrides of Page
@@ -46,6 +30,19 @@ namespace PokemonGo_UWP.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+
+            // Animation to prevent flickering when setting the selected Pokemon
+            // TODO: Find more elegant and better looking solution
+            TimeSpan delay = TimeSpan.FromMilliseconds(100);
+
+            ThreadPoolTimer DelayThread = ThreadPoolTimer.CreateTimer(
+            (source1) =>
+            {
+                Dispatcher.RunAsync(CoreDispatcherPriority.High, () =>
+                {
+                    PokeDetailFlip.Visibility = Visibility.Visible;
+                });
+            }, delay);
             SubscribeToCaptureEvents();
         }
 
@@ -74,9 +71,10 @@ namespace PokemonGo_UWP.Views
             EvolvePokemonStoryboard.Completed += async (s, e) =>
             {
                 await Task.Delay(1000);
-                ShowEvolveStatsModalStoryboard.Begin();
+                ViewModel.EvolveAnimationIsRunning = false;
+                ViewModel.NavigateToEvolvedPokemonCommand.Execute();
             };
-        }        
+        }
 
         private void UnsubscribeToCaptureEvents()
         {
@@ -85,9 +83,11 @@ namespace PokemonGo_UWP.Views
 
         private void ViewModelOnPokemonEvolved(object sender, EventArgs evolvePokemonResponse)
         {
+            ViewModel.EvolveAnimationIsRunning = true;
             ShowEvolveMenuStoryboard.Begin();
         }
 
         #endregion
+
     }
 }

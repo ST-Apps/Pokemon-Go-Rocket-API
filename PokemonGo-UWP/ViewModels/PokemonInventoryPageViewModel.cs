@@ -12,35 +12,13 @@ using POGOProtos.Data;
 using POGOProtos.Inventory;
 using Template10.Mvvm;
 using Template10.Services.NavigationService;
-using Google.Protobuf;
+using PokemonGo_UWP.Utils.Extensions;
+using Windows.UI.Xaml.Media.Animation;
 
 namespace PokemonGo_UWP.ViewModels
 {
     public class PokemonInventoryPageViewModel : ViewModelBase
     {
-        #region Game Management Vars
-
-        /// <summary>
-        ///     Player's profile, we use it just for the username
-        /// </summary>
-        private PlayerData _playerProfile;
-
-        /// <summary>
-        ///     Egg selected for incubation
-        /// </summary>
-        private PokemonData _selectedEgg;
-        private int _lastVisibleIndex;
-
-        public int LastVisibleIndex
-        {
-            get { return Utilities.EnsureRange(_lastVisibleIndex, 0, PokemonInventory.Count-1); }
-            set { _lastVisibleIndex = value; }
-        }
-
-        public Action ResetView;
-
-        #endregion
-
         #region Lifecycle Handlers
 
         /// <summary>
@@ -57,17 +35,16 @@ namespace PokemonGo_UWP.ViewModels
                 // Recovering the state
                 PokemonInventory = JsonConvert.DeserializeObject<ObservableCollection<PokemonDataWrapper>>((string)suspensionState[nameof(PokemonInventory)]);
                 EggsInventory = JsonConvert.DeserializeObject<ObservableCollection<PokemonDataWrapper>>((string)suspensionState[nameof(EggsInventory)]);
-                PlayerProfile = new PlayerData();
-                PlayerProfile.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(PlayerProfile)]).CreateCodedInput());
-                RaisePropertyChanged(() => PlayerProfile);
+                CurrentPokemonSortingMode = (PokemonSortingModes)suspensionState[nameof(CurrentPokemonSortingMode)];
+                PlayerProfile = GameClient.PlayerProfile;
             }
             else
             {
                 // Navigating from game page, so we need to actually load the inventory
                 // The sorting mode is directly bound to the settings
-                PokemonInventory = new ObservableCollection<PokemonDataWrapper>(GetSortedPokemonCollection(
-                    GameClient.PokemonsInventory.Select(pokemonData => new PokemonDataWrapper(pokemonData)),
-                    CurrentPokemonSortingMode));
+                PokemonInventory = new ObservableCollection<PokemonDataWrapper>(GameClient.PokemonsInventory
+                    .Select(pokemonData => new PokemonDataWrapper(pokemonData))
+                    .SortBySortingmode(CurrentPokemonSortingMode));
 
                 RaisePropertyChanged(() => PokemonInventory);
 
@@ -79,8 +56,7 @@ namespace PokemonGo_UWP.ViewModels
                 // advancedrei: I have verified this is the sort order in the game.
                 foreach (var incubatedEgg in incubatedEggs)
                 {
-                    var incubatorData = GameClient.UsedIncubatorsInventory.FirstOrDefault(incubator => incubator.Id == incubatedEgg.EggIncubatorId);
-                    EggsInventory.Add(new IncubatedEggDataWrapper(incubatorData, GameClient.PlayerStats.KmWalked, incubatedEgg));
+                    EggsInventory.Add(new IncubatedEggDataWrapper(GameClient.GetIncubatorFromEgg(incubatedEgg), GameClient.PlayerStats.KmWalked, incubatedEgg));
                 }
 
                 foreach (var pokemonData in unincubatedEggs)
@@ -88,17 +64,28 @@ namespace PokemonGo_UWP.ViewModels
                     EggsInventory.Add(new PokemonDataWrapper(pokemonData));
                 }
 
-                if(mode == NavigationMode.Back)
-                    ResetView?.Invoke();
+                RaisePropertyChanged(() => TotalPokemonCount);
 
                 PlayerProfile = GameClient.PlayerProfile;
+            }
+
+            // try restoring scrolling position 
+            if (NavigationHelper.NavigationState.ContainsKey("LastViewedPokemonDetailID"))
+            {
+                ulong pokemonId = (ulong)NavigationHelper.NavigationState["LastViewedPokemonDetailID"];
+                NavigationHelper.NavigationState.Remove("LastViewedPokemonDetailID");
+                var pokemon = PokemonInventory.Where(p => p.Id == pokemonId).FirstOrDefault();
+                if(pokemon != null)
+                {
+                    ScrollPokemonToVisibleRequired?.Invoke(pokemon);
+                }
             }
 
             await Task.CompletedTask;
         }
 
         /// <summary>
-        ///     Save state before navigating
+        /// Save state before navigating
         /// </summary>
         /// <param name="suspensionState"></param>
         /// <param name="suspending"></param>
@@ -109,6 +96,7 @@ namespace PokemonGo_UWP.ViewModels
             {
                 suspensionState[nameof(PokemonInventory)] = JsonConvert.SerializeObject(PokemonInventory);
                 suspensionState[nameof(EggsInventory)] = JsonConvert.SerializeObject(EggsInventory);
+                suspensionState[nameof(CurrentPokemonSortingMode)] = CurrentPokemonSortingMode;
             }
             await Task.CompletedTask;
         }
@@ -123,9 +111,13 @@ namespace PokemonGo_UWP.ViewModels
 
         #region Bindable Game Vars
 
+        public delegate void ScrollPokemonToVisibleHandler(PokemonDataWrapper p);
+        public event ScrollPokemonToVisibleHandler ScrollPokemonToVisibleRequired;
+
         /// <summary>
-        ///     Player's profile, we use it just for the username
+        /// Player's profile, we use it just for the maximum ammount of pokemon
         /// </summary>
+        private PlayerData _playerProfile;
         public PlayerData PlayerProfile
         {
             get { return _playerProfile; }
@@ -133,7 +125,7 @@ namespace PokemonGo_UWP.ViewModels
         }
 
         /// <summary>
-        ///     Sorting mode for current Pokemon view
+        /// Sorting mode for current Pokemon view
         /// </summary>
         public PokemonSortingModes CurrentPokemonSortingMode
         {
@@ -149,30 +141,28 @@ namespace PokemonGo_UWP.ViewModels
         }
 
         /// <summary>
-        ///     Egg selected for incubation
-        /// </summary>
-        public PokemonData SelectedEgg
-        {
-            get { return _selectedEgg; }
-            set { Set(ref _selectedEgg, value); }
-        }
-
-        /// <summary>
-        ///     Reference to Pokemon inventory
+        /// Reference to Pokemon inventory
         /// </summary>
         public ObservableCollection<PokemonDataWrapper> PokemonInventory { get; private set; } =
             new ObservableCollection<PokemonDataWrapper>();
 
         /// <summary>
-        ///     Reference to Eggs inventory
+        /// Reference to Eggs inventory
         /// </summary>
         public ObservableCollection<PokemonDataWrapper> EggsInventory { get; private set; } =
             new ObservableCollection<PokemonDataWrapper>();
 
         /// <summary>
-        ///     Reference to Incubators inventory
+        /// Reference to Incubators inventory
         /// </summary>
-        public ObservableCollection<EggIncubator> IncubatorsInventory => GameClient.FreeIncubatorsInventory;
+        public ObservableCollection<EggIncubator> IncubatorsInventory => GameClient.IncubatorsInventory;
+
+        /// <summary>
+        /// Total amount of Pokemon in players inventory
+        /// </summary>
+        public int TotalPokemonCount {
+            get { return PokemonInventory.Count + EggsInventory.Count; }
+        }
 
         #endregion
 
@@ -183,60 +173,73 @@ namespace PokemonGo_UWP.ViewModels
         private DelegateCommand _returnToGameScreen;
 
         /// <summary>
-        ///     Going back to map page
+        /// Going back to map page
         /// </summary>
         public DelegateCommand ReturnToGameScreen
             =>
                 _returnToGameScreen ??
                 (_returnToGameScreen =
-                    new DelegateCommand(() => { NavigationService.Navigate(typeof(GameMapPage), GameMapNavigationModes.PokemonUpdate); }, () => true));
+                    new DelegateCommand(() => { NavigationService.GoBack(); }, () => true));
 
         #endregion
 
         #region Pokemon Inventory Handling
 
+        /// <summary>
+        /// Show sorting overlay for pokemon inventory
+        /// </summary>
+        private DelegateCommand _showPokemonSortingMenuCommand;
+        public DelegateCommand ShowPokemonSortingMenuCommand => _showPokemonSortingMenuCommand ?? (_showPokemonSortingMenuCommand = new DelegateCommand(() =>
+        {
 
+        }));
+
+        /// <summary>
+        /// Sort the PokemonInventory with the CurrentPokemonSortingMode 
+        /// </summary>
         private void UpdateSorting()
         {
             PokemonInventory =
-                new ObservableCollection<PokemonDataWrapper>(GetSortedPokemonCollection(PokemonInventory,
-                    CurrentPokemonSortingMode));
+                new ObservableCollection<PokemonDataWrapper>(PokemonInventory.SortBySortingmode(CurrentPokemonSortingMode));
 
             RaisePropertyChanged(() => PokemonInventory);
         }
 
         /// <summary>
-        ///     Returns a new ObservableCollection of the pokemonInventory sorted by the sortingMode
+        /// Show incubator overlay for egg inventory
         /// </summary>
-        /// <param name="pokemonInventory">Original inventory</param>
-        /// <param name="sortingMode">Sorting Mode</param>
-        /// <returns>A new ObservableCollection of the pokemonInventory sorted by the sortingMode</returns>
-        private static IEnumerable<PokemonDataWrapper> GetSortedPokemonCollection(
-            IEnumerable<PokemonDataWrapper> pokemonInventory, PokemonSortingModes sortingMode)
+        private DelegateCommand _showIncubatorOverlayCommand;
+        public DelegateCommand ShowIncubatorOverlayCommand => _showIncubatorOverlayCommand ?? (_showIncubatorOverlayCommand = new DelegateCommand(() =>
         {
-            switch (sortingMode)
+
+        }));
+
+        #endregion
+
+        #region Pokemon Detail
+
+        /// <summary>
+        /// Navigate to the detail page for the selected pokemon
+        /// </summary>
+        private DelegateCommand<PokemonDataWrapper> _gotoPokemonDetailCommand;
+        public DelegateCommand<PokemonDataWrapper> GotoPokemonDetailCommand => _gotoPokemonDetailCommand ?? (_gotoPokemonDetailCommand = new DelegateCommand<PokemonDataWrapper>((selectedPokemon) => 
+        {
+            NavigationService.Navigate(typeof(PokemonDetailPage), new SelectedPokemonNavModel()
             {
-                case PokemonSortingModes.Date:
-                    return pokemonInventory.OrderByDescending(pokemon => pokemon.CreationTimeMs);
-                case PokemonSortingModes.Fav:
-                    return pokemonInventory.OrderByDescending(pokemon => pokemon.Favorite)
-                         .ThenByDescending(pokemon => pokemon.Cp);
-                case PokemonSortingModes.Number:
-                    return pokemonInventory.OrderBy(pokemon => pokemon.PokemonId)
-                         .ThenByDescending(pokemon => pokemon.Cp);
-                case PokemonSortingModes.Health:
-                    return pokemonInventory.OrderByDescending(pokemon => pokemon.Stamina)
-                        .ThenByDescending(pokemon => pokemon.Cp);
-                case PokemonSortingModes.Name:
-                    return pokemonInventory.OrderBy(pokemon =>pokemon.Name)
-                            .ThenByDescending(pokemon => pokemon.Cp);
-                case PokemonSortingModes.Combat:
-                    return pokemonInventory.OrderByDescending(pokemon => pokemon.Cp)
-                        .ThenBy(pokemon => Resources.Pokemon.GetString(pokemon.PokemonId.ToString()));
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(CurrentPokemonSortingMode), sortingMode, null);
-            }
-        }
+                SelectedPokemonId = selectedPokemon.Id.ToString(),
+                SortingMode = CurrentPokemonSortingMode,
+                ViewMode = PokemonDetailPageViewMode.Normal
+            }, new SuppressNavigationTransitionInfo());
+        }));
+
+        /// <summary>
+        /// Navigate to detail page for the selected egg
+        /// </summary>
+        private DelegateCommand<PokemonDataWrapper> _gotoEggDetailCommand;
+        public DelegateCommand<PokemonDataWrapper> GotoEggDetailCommand => _gotoEggDetailCommand ?? (_gotoEggDetailCommand =  new DelegateCommand<PokemonDataWrapper>((selectedEgg) =>
+        {
+            NavigationService.Navigate(typeof(EggDetailPage), selectedEgg.Id.ToString(), new SuppressNavigationTransitionInfo());
+        }));
 
         #endregion
 
