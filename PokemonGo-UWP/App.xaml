@@ -93,7 +93,6 @@
             <utils:AchievementDescriptionTranslationConverter x:Key="AchievementDescriptionTranslationConverter" />
             <utils:WidthConverter x:Key="WidthConverter" />
             <utils:IntToBooleanConverter x:Key="IntToBooleanConverter" />
-            <utils:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
             <utils:PokemonLastHoursVisibiltyConverter x:Key="PokemonLastHoursVisibiltyConverter" />
             <utils:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
             <utils:NegateBooleanToVisibilityConverter x:Key="NegateBooleanToVisibilityConverter"/>

@@ -897,6 +897,15 @@ namespace PokemonGo_UWP.Utils
         }
 
         /// <summary>
+        ///     Gets player's inventoryDelta
+        /// </summary>
+        /// <returns></returns>
+        public static async Task<SetPlayerTeamResponse> SetPlayerTeam(TeamColor color)
+        {
+            return await _client.Player.SetPlayerTeam(color);
+        }
+
+        /// <summary>
         ///     Gets the rewards after leveling up
         /// </summary>
         /// <returns></returns>

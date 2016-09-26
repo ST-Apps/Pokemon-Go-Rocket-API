@@ -18,6 +18,7 @@ using Google.Protobuf;
 using POGOProtos.Data.Gym;
 using Windows.UI.Popups;
 using POGOProtos.Enums;
+using PokemonGo_UWP.Controls;
 
 namespace PokemonGo_UWP.ViewModels
 {
@@ -57,7 +58,7 @@ namespace PokemonGo_UWP.ViewModels
 
                 await CalculateGymData(CurrentGym);
 
-                await CheckPlayerTeamSelection();
+                CheckPlayerTeamSelection();
             }
         }
 
@@ -184,9 +185,7 @@ namespace PokemonGo_UWP.ViewModels
             switch (response.Result)
             {
                 case GetGymDetailsResponse.Types.Result.Unset:
-                    Logger.Write("Entering Gym Unset");
-                    var dialog = new MessageDialog("Gym is unset, whatever it means");
-                    await dialog.ShowAsync();
+                    Logger.Write("Entering Gym Unset", LogLevel.Warning);
                     ReturnToGameScreen.Execute();
                     break;
                 case GetGymDetailsResponse.Types.Result.Success:
@@ -232,14 +231,59 @@ namespace PokemonGo_UWP.ViewModels
             StartBattle.RaiseCanExecuteChanged();
         }
 
-
         private void CheckPlayerTeamSelection()
         {
-            if(GameClient.PlayerStats.Level >= 5 && GameClient.PlayerProfile.Team == TeamColor.Neutral)
+            if (GameClient.PlayerStats.Level >= 5 && GameClient.PlayerProfile.Team == TeamColor.Neutral)
             {
-                // TODO Modal dialog with teams and selection
-                // TODO modal dialog with confirmation
+                var tsdiag = new PoGoTeamSelectionDialog()
+                {
+                    CoverBackground = true,
+                    AnimationType = PoGoMessageDialogAnimation.Fade
+                };
+
+                tsdiag.YellowInvoked += async (sender, e) => { await SelectTeam(TeamColor.Yellow); };
+                tsdiag.BlueInvoked += async (sender, e) => { await SelectTeam(TeamColor.Blue); };
+                tsdiag.RedInvoked += async (sender, e) => { await SelectTeam(TeamColor.Red); };
+
+                tsdiag.Show();
             }
+        }
+
+        private async Task SelectTeam(TeamColor color)
+        {
+            await Task.Delay(500);
+            var confirmDiag = new PoGoMessageDialog("Confirmation", $"Are you sure, you want {color}?")
+            {
+                AcceptText = Utils.Resources.CodeResources.GetString("YesText"),
+                CancelText = Utils.Resources.CodeResources.GetString("NoText"),
+                CoverBackground = true,
+                AnimationType = PoGoMessageDialogAnimation.Fade
+            };
+            confirmDiag.AcceptInvoked += async (sender, e) =>
+            {
+                var response = await GameClient.SetPlayerTeam(color);
+                switch (response.Status)
+                {
+                    case SetPlayerTeamResponse.Types.Status.Unset:
+                        Logger.Write("SetPlayerTeam Unset", LogLevel.Warning);
+                        break;
+                    case SetPlayerTeamResponse.Types.Status.Failure:
+                        Logger.Write("SetPlayerTeam Failure", LogLevel.Error);
+                        break;
+                    case SetPlayerTeamResponse.Types.Status.TeamAlreadySet:
+                        Logger.Write("SetPlayerTeam TeamAlreadySet");
+                        var d2 = new MessageDialog("Your team is already set!");
+                        await d2.ShowAsync();
+                        break;
+                    case SetPlayerTeamResponse.Types.Status.Success:
+                        GameClient.PlayerProfile.Team = response.PlayerData.Team;
+                        break;
+                    default:
+                        break;
+                }
+            };
+
+            confirmDiag.Show();
         }
 
 
@@ -261,9 +305,7 @@ namespace PokemonGo_UWP.ViewModels
                 switch (response.Result)
                 {
                     case FortDeployPokemonResponse.Types.Result.NoResultSet:
-                        Logger.Write("Deploy to Gym NoResultSet");
-                        var d1 = new MessageDialog("Deploy to Gym NoResultSet, whatever it means");
-                        await d1.ShowAsync();
+                        Logger.Write("Deploy to Gym NoResultSet", LogLevel.Warning);
                         break;
                     case FortDeployPokemonResponse.Types.Result.Success:
                         await CalculateGymData(CurrentGym);
@@ -281,8 +323,7 @@ namespace PokemonGo_UWP.ViewModels
                     case FortDeployPokemonResponse.Types.Result.ErrorPokemonNotFullHp:
                     case FortDeployPokemonResponse.Types.Result.ErrorPlayerBelowMinimumLevel:
                     case FortDeployPokemonResponse.Types.Result.ErrorPokemonIsBuddy:
-                        var d2 = new MessageDialog($"Should have never happened: {response.Result}");
-                        await d2.ShowAsync();
+                        Logger.Write($"Deploy to Gym NoResultSet, Should have never happened: {response.Result}", LogLevel.Error);
                         break;
                     default:
                         break;

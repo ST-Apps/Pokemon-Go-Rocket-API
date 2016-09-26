@@ -28,6 +28,7 @@ using Windows.Graphics.Display;
 using Windows.Foundation;
 using Windows.Services.Maps;
 using System.Threading.Tasks;
+using PokemonGo_UWP.ViewModels;
 
 namespace PokemonGo_UWP.Utils
 {
@@ -2052,16 +2053,16 @@ namespace PokemonGo_UWP.Utils
     {
         #region Implementation of IValueConverter
 
-        private object GetVisibility(object value, bool invert)
+        private object GetVisibility(object value)
         {
             if (!(value is bool))
                 return Visibility.Collapsed;
             bool objValue = (bool)value;
-            if (objValue ^ invert)
+            if (!objValue)
             {
-                return Visibility.Visible;
+                return Visibility.Collapsed;
             }
-            return Visibility.Collapsed;
+            return Visibility.Visible;
         }
         public object Convert(object value, Type targetType, object parameter, string language)
         {
