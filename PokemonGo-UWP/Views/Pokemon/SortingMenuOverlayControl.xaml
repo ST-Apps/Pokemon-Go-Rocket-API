@@ -1,0 +1,106 @@
+﻿<UserControl
+    x:Class="PokemonGo_UWP.Views.SortingMenuOverlayControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PokemonGo_UWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <Storyboard x:Name="ShowSortingMenuStoryboard">
+            <DoubleAnimation Storyboard.TargetName="SortingMenuPanel"
+                             Storyboard.TargetProperty="Opacity"
+                             From="0"
+                             To="1"
+                             Duration="0:0:0.2" />
+            <DoubleAnimation Storyboard.TargetName="SortingMenuTranslateTransform"
+                             Storyboard.TargetProperty="Y"
+                             From="800"
+                             To="0"
+                             Duration="0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Storyboard x:Name="HideSortingMenuStoryboard">
+            <DoubleAnimation Storyboard.TargetName="SortingMenuPanel"
+                             Storyboard.TargetProperty="Opacity"
+                             From="1"
+                             To="0"
+                             Duration="0:0:0.2" />
+            <DoubleAnimation Storyboard.TargetName="SortingMenuTranslateTransform"
+                             Storyboard.TargetProperty="Y"
+                             From="0"
+                             To="200"
+                             Duration="0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseIn" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+    </UserControl.Resources>
+
+    <Grid x:Name="SortingMenuPanel"
+          Background="{StaticResource DarkPageBackgroundGradient}"
+          Opacity="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="70" />
+        </Grid.RowDefinitions>
+        <ListView x:Name="SortingModeListView" 
+                  Grid.Row="0"
+                  VerticalAlignment="Bottom"
+                  SelectionMode="None"
+                  IsItemClickEnabled="True"
+                  ItemClick="SortingModeListView_ItemClick">
+            <ListView.RenderTransform>
+                <TranslateTransform Y="700"
+                                    x:Name="SortingMenuTranslateTransform" />
+            </ListView.RenderTransform>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Margin"
+                            Value="0,5" />
+                    <Setter Property="HorizontalContentAlignment"
+                            Value="Stretch" />
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid HorizontalAlignment="Right"
+                          Background="Transparent"
+                          Height="43"
+                          Margin="-8,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="82" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0"
+                                   Text="{Binding Converter={StaticResource PokemonSortingModesTranslationConverter}}"
+                                   Style="{StaticResource TextSortTitle}"
+                                   Foreground="#e4ffde"
+                                   CharacterSpacing="100"/>
+                        <Image Grid.Column="1"
+                               Height="25"
+                               Width="25"
+                               Source="{Binding Converter={StaticResource PokemonSortingModesToIconConverter}}" />
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <!--Close SortingMenu-->
+        <Button Style="{StaticResource ButtonCircle}"
+                Grid.Row="1"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Margin="0,0,21,21"
+                Click="CloseButton_Click">
+            <Image Source="ms-appx:///Assets/Buttons/btn_close.png" />
+        </Button>
+    </Grid>
+</UserControl>

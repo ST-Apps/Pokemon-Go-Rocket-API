@@ -17,73 +17,12 @@
     </Page.DataContext>
 
     <Page.Resources>
-        <utils:ItemUseabilityToOpacityConverter x:Key="ItemUseabilityToOpacityConverter" 
+        <utils:ItemUseabilityToOpacityConverter x:Key="ItemUseabilityToOpacityConverter"
                                                 CurrentViewMode="{Binding ViewMode}" />
-        
-        <Storyboard x:Name="ShowDiscardStoryboard">
-
-            <DoubleAnimation
-                Storyboard.TargetName="DiscardPanel"
-                Storyboard.TargetProperty="Opacity"
-                From="0"
-                To="1"
-                Duration="0:0:0.2" />
-
-            <DoubleAnimation
-                Storyboard.TargetName="MainUIPanel"
-                Storyboard.TargetProperty="Opacity"
-                From="1"
-                To="0"
-                Duration="0:0:0.2" />
-
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.ZIndex)"
-                                           Storyboard.TargetName="DiscardPanel">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <x:Int32>0</x:Int32>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
-                    <DiscreteObjectKeyFrame.Value>
-                        <x:Int32>10</x:Int32>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-        </Storyboard>
-
-        <Storyboard x:Name="HideDiscardStoryboard">
-            <DoubleAnimation
-                Storyboard.TargetName="DiscardPanel"
-                Storyboard.TargetProperty="Opacity"
-                From="1"
-                To="0"
-                Duration="0:0:0.2" />
-
-            <DoubleAnimation
-                Storyboard.TargetName="MainUIPanel"
-                Storyboard.TargetProperty="Opacity"
-                From="0"
-                To="1"
-                Duration="0:0:0.2" />
-
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.ZIndex)"
-                                           Storyboard.TargetName="DiscardPanel">
-                <DiscreteObjectKeyFrame KeyTime="0">
-                    <DiscreteObjectKeyFrame.Value>
-                        <x:Int32>10</x:Int32>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
-                    <DiscreteObjectKeyFrame.Value>
-                        <x:Int32>0</x:Int32>
-                    </DiscreteObjectKeyFrame.Value>
-                </DiscreteObjectKeyFrame>
-            </ObjectAnimationUsingKeyFrames>
-        </Storyboard>
     </Page.Resources>
 
     <Grid Background="{StaticResource PageBackgroundGradient}">
-        <Border Margin="12,0" Background="White" x:Name="MainUIPanel">
+        <Border Margin="8,0" Background="White" x:Name="MainUIPanel">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
@@ -104,14 +43,13 @@
                     </TextBlock>
                 </StackPanel>
 
-                <ListView ItemsSource="{Binding ItemsInventory}" 
-                          IsItemClickEnabled="False"
+                <ListView ItemsSource="{Binding ItemsInventory}"
+                          IsItemClickEnabled="True"
                           SelectionMode="None"
                           ScrollViewer.VerticalScrollBarVisibility="Hidden"
-                          Margin="8,0"
+                          Margin="0"
                           Grid.Row="1"
                           Padding="0,0,0,60">
-
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">
                             <Setter Property="HorizontalContentAlignment" Value="Stretch" />
@@ -207,8 +145,8 @@
                     Style="{StaticResource ButtonCircle}"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Bottom"
-                    Margin="0,0,0,17.5">
-            <Image Source="../Assets/Buttons/btn_close.png" />
+                    Margin="0,0,0,21">
+            <Image Source="ms-appx:///Assets/Buttons/btn_close.png" />
         </Button>
     </Grid>
 </Page>

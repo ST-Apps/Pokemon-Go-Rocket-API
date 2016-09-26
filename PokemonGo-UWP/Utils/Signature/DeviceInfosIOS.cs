@@ -107,43 +107,42 @@ namespace PokemonGo_UWP.Utils
 
         private class ActivityStatusIOS : IActivityStatus
         {
-            public bool Stationary => true;
-            public bool Tilting => LocationServiceHelper.Instance.Geoposition?.Coordinate?.Speed < 3 ? true : false;
-            public bool Walking => LocationServiceHelper.Instance.Geoposition?.Coordinate?.Speed > 3 && LocationServiceHelper.Instance.Geoposition?.Coordinate?.Speed > 7 ? true : false;
-            public bool Automotive => LocationServiceHelper.Instance.Geoposition?.Coordinate?.Speed > 20 ? true : false;
-            public bool Cycling => false;
+            public bool Automotive => false;
+            public bool Cycling => LocationServiceHelper.Instance.Geoposition?.Coordinate?.Speed > 3.33333;
             public bool Running => false;
+            public bool Stationary => LocationServiceHelper.Instance.Geoposition?.Coordinate?.Speed < 0.2;
+            public bool Tilting => Utilities.Rand.NextBoolean();
+            public bool Walking => false;
 
-			//#region Private Members
+            //#region Private Members
 
-			//private const double stationaryMax = 0.2;   // .44 MPH (to account for GPS drift)
-			//private const double tiltingMax = 0.33528;  // 3/4 MPH
-			//private const double walkingMax = 3;  // 6.7 MPH
-			//private const double runningMax = 6;  // 13.4 MPH
-			//private const double cyclingMax = 15;   // 33 MPH, this is the speed when the "driving" dialog pops up.
+            //private const double stationaryMax = 0.2;   // .44 MPH (to account for GPS drift)
+            //private const double tiltingMax = 0.33528;  // 3/4 MPH
+            //private const double walkingMax = 3;  // 6.7 MPH
+            //private const double runningMax = 6;  // 13.4 MPH
+            //private const double cyclingMax = 15;   // 33 MPH, this is the speed when the "driving" dialog pops up.
 
-			//#endregion
+            //#endregion
 
-			//#region Properties
+            //#region Properties
 
-			//public bool Automotive => LocationHelper.Instance.Geoposition?.Coordinate?.Speed > cyclingMax;
+            //public bool Automotive => LocationHelper.Instance.Geoposition?.Coordinate?.Speed > cyclingMax;
 
-			//public bool Cycling => LocationHelper.Instance.Geoposition?.Coordinate?.Speed > runningMax && LocationHelper.Instance.Geoposition.Coordinate?.Speed <= cyclingMax;
+            //public bool Cycling => LocationHelper.Instance.Geoposition?.Coordinate?.Speed > runningMax && LocationHelper.Instance.Geoposition.Coordinate?.Speed <= cyclingMax;
 
-			//public bool Running => LocationHelper.Instance.Geoposition?.Coordinate?.Speed > walkingMax && LocationHelper.Instance.Geoposition.Coordinate?.Speed <= runningMax;
+            //public bool Running => LocationHelper.Instance.Geoposition?.Coordinate?.Speed > walkingMax && LocationHelper.Instance.Geoposition.Coordinate?.Speed <= runningMax;
 
-			//public bool Stationary => LocationHelper.Instance.Geoposition?.Coordinate?.Speed <= stationaryMax;
+            //public bool Stationary => LocationHelper.Instance.Geoposition?.Coordinate?.Speed <= stationaryMax;
 
-			//public bool Tilting => LocationHelper.Instance.Geoposition?.Coordinate?.Speed > stationaryMax && LocationHelper.Instance.Geoposition.Coordinate?.Speed <= tiltingMax;
+            //public bool Tilting => LocationHelper.Instance.Geoposition?.Coordinate?.Speed > stationaryMax && LocationHelper.Instance.Geoposition.Coordinate?.Speed <= tiltingMax;
 
-			//public bool Walking => LocationHelper.Instance.Geoposition?.Coordinate?.Speed > tiltingMax && LocationHelper.Instance.Geoposition.Coordinate?.Speed <= walkingMax;
+            //public bool Walking => LocationHelper.Instance.Geoposition?.Coordinate?.Speed > tiltingMax && LocationHelper.Instance.Geoposition.Coordinate?.Speed <= walkingMax;
 
-			//#endregion
+            //#endregion
+        }
 
-		}
 
-
-		private SensorInfoIOS _sensors = new SensorInfoIOS();
+        private SensorInfoIOS _sensors = new SensorInfoIOS();
         public ISensorInfo Sensors => _sensors;
 
         private class SensorInfoIOS : ISensorInfo

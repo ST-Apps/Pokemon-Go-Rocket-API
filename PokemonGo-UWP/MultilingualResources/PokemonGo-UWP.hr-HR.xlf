@@ -579,6 +579,10 @@
           <source>Successfully added lure module</source>
           <target state="new">Successfully added lure module</target>
         </trans-unit>
+        <trans-unit id="EggDetailIncubatingTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Walk to hatch this Egg.</source>
+          <target state="new">Walk to hatch this Egg.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -1128,17 +1132,14 @@ You also got {1} Stardust, {2} Candy and {3} XP.</target>
           <source>Can have a PokéStop Module installed</source>
           <target state="new">Can have a PokéStop Module installed</target>
         </trans-unit>
-        <trans-unit id="LureDetailsTextFilled" translate="yes" xml:space="preserve">
-          <source>A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</source>
-          <target state="new">A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</target>
-        </trans-unit>
         <trans-unit id="LureTitleTextEmpty" translate="yes" xml:space="preserve">
           <source>Empty module slot</source>
           <target state="new">Empty module slot</target>
         </trans-unit>
-        <trans-unit id="LureTitleTextFilled" translate="yes" xml:space="preserve">
-          <source>Lure Module</source>
-          <target state="new">Lure Module</target>
+        <trans-unit id="IncubatorRemainingUsesText" translate="yes" xml:space="preserve">
+          <source>{0} use(s) left</source>
+          <target state="new">{0} use(s) left</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">If your language uses multiply sign, use × (unicode char) and not x</note>
         </trans-unit>
       </group>
     </body>

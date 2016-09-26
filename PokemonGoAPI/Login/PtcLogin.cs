@@ -34,7 +34,7 @@ namespace PokemonGo.RocketAPI.Login
         private string Password { get; }
 
         /// <summary>
-        /// The Username for teh suer currenrtly attempting to authenticate.
+        /// The Username for the user currenrtly attempting to authenticate.
         /// </summary>
         private string Username { get; }
 

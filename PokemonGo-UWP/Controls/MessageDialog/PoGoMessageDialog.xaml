@@ -10,10 +10,7 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
     <UserControl.Resources>
-
-        <utils:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
-        <utils:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
-
+        
         <!--ANIMATIONS-->
 
         <!--Fade-->
@@ -113,7 +110,8 @@
                    Visibility="{x:Bind CoverBackground, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}"
                    Tapped="Background_Tapped" />
         <Grid x:Name="ContentGrid" 
-              Style="{StaticResource GridContainer}" 
+              Style="{StaticResource GridContainer}"
+              Background="{StaticResource LightPageBackgroundGradient}"
               HorizontalAlignment="Center" 
               VerticalAlignment="Center" 
               MaxWidth="800" 
@@ -121,15 +119,8 @@
               Margin="25" 
               Padding="25,25,25,15">
             <Grid.RenderTransform>
-                <TranslateTransform Y="0" x:Name="DownwardsTranslation"/>
+                <TranslateTransform Y="0" x:Name="DownwardsTranslation" />
             </Grid.RenderTransform>
-            <Grid.Background>
-                <LinearGradientBrush StartPoint="0,0" 
-                                     EndPoint="0.8,1">
-                    <GradientStop Color="#fff" Offset="0" />
-                    <GradientStop Color="#eeffee" Offset="1" />
-                </LinearGradientBrush>
-            </Grid.Background>
             <StackPanel Orientation="Vertical">
                 <TextBlock Foreground="{StaticResource TitleTextColor}" 
                            Margin="0,0,0,15" 

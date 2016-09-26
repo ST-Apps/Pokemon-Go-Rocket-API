@@ -60,14 +60,13 @@
                                x:Uid="SettingsMapRotationModeGPSTextBlock"
                                Text="Auto-Rotate based on"
                                Style="{StaticResource TextSettingsTitle}" />
-                    <ComboBox Grid.Column="1"
-                              SelectedIndex="{Binding MapAutomaticOrientationMode_Index, Mode=TwoWay}"
-                              Margin="0,8,15,10">
-                        <ComboBoxItem Content="None"/>
-                        <ComboBoxItem Content="GPS"/>
-                        <ComboBoxItem x:Name="CompassBoxItem" Content="Compass"/>
-                    </ComboBox>
-                </Grid>
+					<ComboBox Grid.Column="1"
+                              Margin="0,8,15,10"
+															ItemsSource="{Binding MapAutomaticOrientationMode_List, Mode=OneWay}" 
+															SelectedItem="{Binding MapAutomaticOrientationMode, Mode=TwoWay}" >
+					</ComboBox>
+
+				</Grid>
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
@@ -127,29 +126,29 @@
                               Style="{StaticResource SettingsCheckbox}"
                               Margin="0,8,15,10" />
                 </Grid>
-                <Grid VerticalAlignment="Center">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="135" />
-                    </Grid.ColumnDefinitions>
-                    <StackPanel VerticalAlignment="Center">
-                        <TextBlock x:Uid="SettingsLanguageTextBlock"
+				<Grid VerticalAlignment="Center">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="135" />
+					</Grid.ColumnDefinitions>
+					<StackPanel VerticalAlignment="Center">
+						<TextBlock x:Uid="SettingsLanguageTextBlock"
                                    Text="Language"
                                    Style="{StaticResource TextSettingsTitle}"
                                    Margin="15,15,15,5" />
-                        <TextBlock x:Uid="SettingsLanguageRestartTextBlock"
+						<TextBlock x:Uid="SettingsLanguageRestartTextBlock"
                                    Text="You must restart the App to take effect."
                                    Style="{StaticResource TextSettingsTitle}"
                                    FontSize="12" Margin="15,0,15,15" Foreground="#ddd"/>
-                    </StackPanel>
-                    <ComboBox x:Name="LanguageComboBox"
+					</StackPanel>
+					<ComboBox x:Name="LanguageComboBox"
                               VerticalAlignment="Center"
                               Grid.ColumnSpan="2"
                               HorizontalAlignment="Right"
                               ItemsSource="{Binding languageList, Mode=OneWay}" SelectedItem="{Binding UserLanguage, Mode=TwoWay}" 
                               Margin="0,8,15,10" />
-                </Grid>
-                <Border Background="#33ffffff" Height="1" Margin="15" />
+				</Grid>
+				<Border Background="#33ffffff" Height="1" Margin="15" />
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
@@ -206,16 +205,33 @@
                     </StackPanel>
                 </ScrollViewer>
                 <Border Background="#33ffffff" Height="1" Margin="15,15,15,0" />
-                <Button Command="{Binding DoPtcLogoutCommand}"
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="135" />
+					</Grid.ColumnDefinitions>
+					<TextBlock Grid.Column="0"
+                               x:Uid="SettingsShowDebugInfoInErrorMessage"
+                               Text="Show details on error message"
+                               Style="{StaticResource TextSettingsTitle}" />
+
+					<CheckBox Grid.Column="1"
+                              IsChecked="{Binding ShowDebugInfoInErrorMessage, Mode=TwoWay}"
+                              Style="{StaticResource SettingsCheckbox}"
+                              Margin="0,8,15,10" />
+				</Grid>
+			
+				<Border Background="#33ffffff" Height="1" Margin="15,15,15,0" />
+				<Button Command="{Binding DoPtcLogoutCommand}"
                         Style="{StaticResource ButtonNoStyle}"
                         Padding="0,15,0,0">
-                    <TextBlock x:Uid="SettingsSignOutTextBlock"
+					<TextBlock x:Uid="SettingsSignOutTextBlock"
                                 Text="Sign Out"
                                 Style="{StaticResource TextSettingsTitle}"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Right" Margin="15,15,15,10"/>
-                </Button>
-                <TextBlock 
+				</Button>
+				<TextBlock 
                    Style="{StaticResource TextSettingsTitle}"
                    Text="{Binding CurrentVersion}"
                    FontSize="12"

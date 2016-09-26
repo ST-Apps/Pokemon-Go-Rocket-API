@@ -1,0 +1,168 @@
+﻿<UserControl
+    x:Name="Root"
+    x:Class="PokemonGo_UWP.Views.IncubatorSelectionOverlayControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PokemonGo_UWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Template10.Controls"
+    xmlns:entities="using:PokemonGo_UWP.Entities"
+    mc:Ignorable="d"
+    d:DesignHeight="640"
+    d:DesignWidth="360">
+
+    <UserControl.Resources>
+        <Storyboard x:Name="ShowIncubatorSelectionStoryboard">
+            <DoubleAnimation Storyboard.TargetName="BackgroundRect"
+                             Storyboard.TargetProperty="Opacity"
+                             From="0"
+                             To="0.6"
+                             Duration="0:0:0.15" />
+            <DoubleAnimation Storyboard.TargetName="DownwardsTranslation"
+                             Storyboard.TargetProperty="Y"
+                             From="240"
+                             To="0"
+                             Duration="0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Storyboard x:Name="HideIncubatorSelectionStoryboard">
+            <DoubleAnimation Storyboard.TargetName="BackgroundRect"
+                             Storyboard.TargetProperty="Opacity"
+                             From="0.6"
+                             To="0"
+                             Duration="0:0:0.15" />
+            <DoubleAnimation Storyboard.TargetName="DownwardsTranslation"
+                             Storyboard.TargetProperty="Y"
+                             From="0"
+                             To="240"
+                             Duration="0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseIn" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+    </UserControl.Resources>
+
+
+    <Grid x:Name="CoverGrid"
+          VerticalAlignment="Stretch"
+          HorizontalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="240" />
+        </Grid.RowDefinitions>
+        <Rectangle x:Name="BackgroundRect"
+                   Grid.RowSpan="2"
+                   Fill="{StaticResource PageBackgroundGradient}"
+                   Opacity="0" />
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="70" />
+            </Grid.RowDefinitions>
+            <Grid.RenderTransform>
+                <TranslateTransform Y="240"
+                                    x:Name="DownwardsTranslation" />
+            </Grid.RenderTransform>
+            <Rectangle Grid.Row="0">
+                <Rectangle.Fill>
+                    <LinearGradientBrush StartPoint="0,0"
+                                         EndPoint="0,1">
+                        <GradientStop Color="#00555555"
+                                      Offset="0" />
+                        <GradientStop Color="#88555555"
+                                      Offset="1" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle Grid.Row="1"
+                       Grid.RowSpan="3"
+                       Fill="{StaticResource LightPageBackgroundGradient}" />
+            <TextBlock x:Uid="incubatorsText"
+                       Grid.Row="1"
+                       Text="INCUBATORS"
+                       Foreground="{StaticResource TitleTextColor}"
+                       FontFamily="{StaticResource LatoRegularFont}"
+                       FontSize="14"
+                       CharacterSpacing="200"
+                       HorizontalAlignment="Center"
+                       Margin="10" />
+            <GridView Grid.Row="2"
+                      Margin="0,10,0,0"
+                      SelectionMode="None"
+                      ItemsSource="{Binding ElementName=Root, Path=IncubatorsInventory, Mode=OneWay}"
+                      IsItemClickEnabled="True"
+                      ItemClick="IncubatorGrid_ItemClick"
+                      ScrollViewer.HorizontalScrollMode="Enabled"
+                      ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                      ScrollViewer.VerticalScrollMode="Disabled">
+                <GridView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid Orientation="Vertical"
+                                       HorizontalAlignment="Left" />
+                    </ItemsPanelTemplate>
+                </GridView.ItemsPanel>
+                <GridView.ItemContainerStyle>
+                    <Style TargetType="GridViewItem">
+                        <Setter Property="Margin"
+                                Value="15,0" />
+                        <Setter Property="MaxWidth"
+                                Value="80" />
+                        <Setter Property="MaxHeight"
+                                Value="115" />
+                    </Style>
+                </GridView.ItemContainerStyle>
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Height="109">
+                            <Viewbox StretchDirection="DownOnly"
+                                     HorizontalAlignment="Center"
+                                     VerticalAlignment="Top"
+                                     Margin="0"
+                                     Visibility="{Binding Converter={StaticResource IncubatorUnlimitedTypeToVisibilityConverter}, ConverterParameter=True}">
+                                <TextBlock Text="{Binding Converter={StaticResource IncubatorUsagesCountToUsagesTextConverter}}"
+                                           FontFamily="{StaticResource LatoMediumFont}"
+                                           Foreground="{StaticResource TitleTextColor}" />
+                            </Viewbox>
+                            <TextBlock Text="∞"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Top"
+                                       Visibility="{Binding Converter={StaticResource IncubatorUnlimitedTypeToVisibilityConverter}, ConverterParameter=False}"
+                                       FontFamily="{StaticResource LatoMediumFont}"
+                                       Foreground="{StaticResource TitleTextColor}"
+                                       FontSize="25"
+                                       Margin="0,-10,0,-5" />
+                            <Image Source="{Binding ItemId, Converter={StaticResource ItemIdToItemIconConverter}}"
+                                   Opacity="{Binding Converter={StaticResource IncubatorUsageToOpacityConverter}}"
+                                   VerticalAlignment="Bottom"
+                                   Width="80"
+                                   Height="80" />
+                        </Grid>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+            <Button Grid.Row="3"
+                    Style="{StaticResource ButtonCircleBigInverse}"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,16,16"
+                    Click="ShowStoreButton_Click">
+                <Image Margin="-2"
+                       Source="ms-appx:///Assets/Icons/ic_store.png" />
+            </Button>
+            <Button Grid.Row="3"
+                    Style="{StaticResource ButtonCircle}"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,0,21"
+                    Click="CloseButton_Click">
+                <Image Source="ms-appx:///Assets/Buttons/btn_close.png" />
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>

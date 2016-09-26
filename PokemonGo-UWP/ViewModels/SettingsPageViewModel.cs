@@ -17,17 +17,32 @@ namespace PokemonGo_UWP.ViewModels
         public string CurrentVersion => GameClient.CurrentVersion;
 	
 		/// <summary>
-		///     How the player wants the map to rotate following is heading (None, GPS, Compass)
+		///     How the player wants the map to rotate following is heading (None, GPS, Compass, ...)
 		/// </summary>
-		public int MapAutomaticOrientationMode_Index
+		public MapAutomaticOrientationModes MapAutomaticOrientationMode
 		{
-			get { return (int)System.Enum.ToObject(typeof(MapAutomaticOrientationModes), SettingsService.Instance.MapAutomaticOrientationMode); }
+			get
+			{
+				return SettingsService.Instance.MapAutomaticOrientationMode;
+			}
 			set
 			{
-				if (value >= 0 && value <= 2)
-				{
-					SettingsService.Instance.MapAutomaticOrientationMode = (MapAutomaticOrientationModes)System.Enum.ToObject(typeof(MapAutomaticOrientationModes), value);
-				}
+				SettingsService.Instance.MapAutomaticOrientationMode = value;
+			}
+		}
+		/// <summary>
+		///     Map orientation mode list (None, GPS, Compass, ...)
+		/// </summary>
+		public List<MapAutomaticOrientationModes> MapAutomaticOrientationMode_List
+		{
+			get
+			{
+				var list = System.Enum.GetValues(typeof(MapAutomaticOrientationModes)).Cast<MapAutomaticOrientationModes>().ToList();
+
+				if (Windows.Devices.Sensors.Compass.GetDefault() == null)
+					list.Remove(MapAutomaticOrientationModes.Compass);
+
+				return list;
 			}
 		}
 
@@ -134,11 +149,16 @@ namespace PokemonGo_UWP.ViewModels
             }
         }
 
-        #endregion
+		public bool ShowDebugInfoInErrorMessage
+		{
+			get { return SettingsService.Instance.ShowDebugInfoInErrorMessage; }
+			set { SettingsService.Instance.ShowDebugInfoInErrorMessage = value; }
+		}
+				#endregion
 
-        #region Constructor
+		#region Constructor
 
-        public SettingsPageViewModel()
+		public SettingsPageViewModel()
         {
             LiveTileSelectionCommand = new DelegateCommand<string>(param =>
             {

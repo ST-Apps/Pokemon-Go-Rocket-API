@@ -7,17 +7,19 @@
              mc:Ignorable="d"
              d:DesignHeight="300"
              d:DesignWidth="400">
-    
     <StackPanel Orientation="Vertical">
         <TextBlock x:Name="TitleTextBlock"
                    Text="{x:Bind Title, Mode=OneWay}"
-                   Style="{StaticResource TextPageTitleDark}"
+                   TextAlignment="Center"
+                   FontFamily="{StaticResource LatoRegularFont}"
+                   FontSize="18"
+                   CharacterSpacing="50"
                    Margin="10,10,10,3"
-                   Foreground="#FF44696C"
-                   FontSize="18" />
+                   VerticalAlignment="Top" />
         <TextBlock Style="{StaticResource TextSubTitle}"
+                   FontFamily="{StaticResource LatoMediumFont}"
                    HorizontalAlignment="Center"
-                   Foreground="#FF44696C">
+                   Foreground="{StaticResource TitleTextColor}">
             <Run Text="{x:Bind DataCurrent, Mode=OneWay}" />
             <Run Text=" / " />
             <Run Text="{x:Bind DataMaximum, Mode=OneWay}" />

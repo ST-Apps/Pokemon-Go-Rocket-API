@@ -346,13 +346,11 @@ You also got {1} Stardust, {2} Candy and {3} XP.</value>
   <data name="LureDetailsTextEmpty" xml:space="preserve">
     <value>Can have a PokéStop Module installed</value>
   </data>
-  <data name="LureDetailsTextFilled" xml:space="preserve">
-    <value>A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</value>
-  </data>
   <data name="LureTitleTextEmpty" xml:space="preserve">
     <value>Empty module slot</value>
   </data>
-  <data name="LureTitleTextFilled" xml:space="preserve">
-    <value>Lure Module</value>
+  <data name="IncubatorRemainingUsesText" xml:space="preserve">
+    <value>{0} use(s) left</value>
+    <comment>If your language uses multiply sign, use × (unicode char) and not x</comment>
   </data>
 </root>

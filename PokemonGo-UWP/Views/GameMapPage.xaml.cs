@@ -17,6 +17,9 @@ using PokemonGo_UWP.Utils;
 using Template10.Common;
 using PokemonGo_UWP.Utils.Helpers;
 using System.ComponentModel;
+using Windows.UI.Popups;
+using Windows.UI.ViewManagement;
+using System.Threading.Tasks;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -44,7 +47,8 @@ namespace PokemonGo_UWP.Views
 
                 // Add reactivate map update button
                 if (ReactivateMapAutoUpdateButton != null) return;
-                ReactivateMapAutoUpdateButton = new Button
+							#region Reactivate Map AutoUpdate Button
+							ReactivateMapAutoUpdateButton = new Button
                 {
                     Visibility = Visibility.Collapsed,
                     Style = (Style) BootStrapper.Current.Resources["ImageButtonStyle"],
@@ -74,7 +78,36 @@ namespace PokemonGo_UWP.Views
                             VisualTreeHelper.GetChild(VisualTreeHelper.GetChild(GameMapControl, 0), 1), 0), 0);
 
                 tsp.Children.Add(ReactivateMapAutoUpdateButton);
-                DisplayInformation.GetForCurrentView().OrientationChanged += GameMapPage_OrientationChanged;
+							#endregion
+							#region Map Style button ;)
+							if (GameMapControl.Is3DSupported)
+							{
+								var MapStyleButton = new Button
+								{
+									Style = (Style)BootStrapper.Current.Resources["ImageButtonStyle"],
+									Height = 44,
+									HorizontalAlignment = HorizontalAlignment.Center,
+									VerticalAlignment = VerticalAlignment.Center,
+									Margin = new Thickness(0, 0, 0, 34),
+									Content = new Image
+									{
+										Source =
+													new BitmapImage
+													{
+														UriSource =
+																	new Uri($"ms-appx:///Assets/Teams/no-team.png")
+													},
+										Stretch = Stretch.Uniform,
+										Height = 36,
+										HorizontalAlignment = HorizontalAlignment.Stretch
+									}
+								};
+								MapStyleButton.Tapped += MapStyleButton_Tapped;
+
+								tsp.Children.Add(MapStyleButton);
+							}
+							#endregion
+							DisplayInformation.GetForCurrentView().OrientationChanged += GameMapPage_OrientationChanged;
             };
         }
 
@@ -143,10 +176,10 @@ namespace PokemonGo_UWP.Views
 
         private async void ReactivateMapAutoUpdate_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
             {
                     lastAutoPosition = null;
-                    UpdateMap();
+                    await UpdateMap();
 						});
         }
 
@@ -166,6 +199,8 @@ namespace PokemonGo_UWP.Views
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
+			try
+			{ 
             base.OnNavigatedTo(e);
             // Hide PokeMenu panel just in case
             HidePokeMenuStoryboard.Begin();
@@ -179,12 +214,29 @@ namespace PokemonGo_UWP.Views
                     SetupMap();
             }
             // Set first position if we shomehow missed it
-                UpdateMap();
-			await GameMapControl.TryRotateToAsync(SettingsService.Instance.MapHeading);
-			await GameMapControl.TryTiltToAsync(SettingsService.Instance.MapPitch);
-			SubscribeToCaptureEvents();
+                await UpdateMap();
+				//Changed order of calls, this allow to have events registration before trying to move map
+				//appears that for some reason TryRotate and/or TryTilt fails sometimes!
             SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
-        }
+				SubscribeToCaptureEvents();
+
+			}
+			catch (Exception ex)
+			{
+				//because we are in "async void" unhandled exception might not be raised
+				await ExceptionHandler.HandleException(ex);
+			}
+			try
+			{
+				await GameMapControl.TryRotateToAsync(SettingsService.Instance.MapHeading);
+				await GameMapControl.TryTiltToAsync(SettingsService.Instance.MapPitch);
+			}
+			catch
+			{
+				//we don't care :)
+			}
+
+		}
 
         private void OnBackRequested(object sender, BackRequestedEventArgs backRequestedEventArgs)
         {
@@ -223,14 +275,16 @@ namespace PokemonGo_UWP.Views
 
         #region Handlers
 
-        private async void UpdateMap()
+        private async Task UpdateMap()
         {
 			if (LocationServiceHelper.Instance.Geoposition != null)
 			{ 
 				await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
             {
-                    // Set player icon's position
-                    MapControl.SetLocation(PlayerImage, LocationServiceHelper.Instance.Geoposition.Coordinate.Point);
+						try
+						{
+							// Set player icon's position
+							MapControl.SetLocation(PlayerImage, LocationServiceHelper.Instance.Geoposition.Coordinate.Point);
 
                     // Update angle and center only if map is not being manipulated
                     if (lastAutoPosition == null)
@@ -239,8 +293,8 @@ namespace PokemonGo_UWP.Views
 									//Save Center
                         lastAutoPosition = GameMapControl.Center;
 									//Reset orientation to default
-                        if (GameMapControl.Heading == LocationServiceHelper.Instance.Geoposition.Coordinate.Heading)
-                            GameMapControl.Heading = 0;
+                        if (double.IsNaN(GameMapControl.Heading))//DarkAngel: I love non nullable double that can be "!= null and not a number"...
+								await GameMapControl.TryRotateToAsync(0);
                     }
 
                     //Small Trick: I'm not testing lastAutoPosition == GameMapControl.Center because MapControl is not taking exact location when setting center!!
@@ -251,19 +305,25 @@ namespace PokemonGo_UWP.Views
                     if (currentCoord == previousCoord && ReactivateMapAutoUpdateButton != null)
                     {
                         //Previous position was set automatically, continue!
-                        ReactivateMapAutoUpdateButton.Visibility = Visibility.Collapsed;
-                        GameMapControl.Center = LocationServiceHelper.Instance.Geoposition.Coordinate.Point;
-												//await GameMapControl.TrySetViewAsync(GameClient.Geoposition.Coordinate.Point);
+									ReactivateMapAutoUpdateButton.Visibility = Visibility.Collapsed;
+								GameMapControl.Center = LocationServiceHelper.Instance.Geoposition.Coordinate.Point;
 
                         lastAutoPosition = GameMapControl.Center;
 
                         if ((SettingsService.Instance.MapAutomaticOrientationMode == MapAutomaticOrientationModes.GPS) &&
-                            (LocationServiceHelper.Instance.Geoposition.Coordinate.Heading != null))
-                            await GameMapControl.TryRotateToAsync(LocationServiceHelper.Instance.Geoposition.Coordinate.Heading.Value);
-
+																			(
+																			LocationServiceHelper.Instance.Geoposition.Coordinate.Heading.GetValueOrDefault(-1) >= 0
+																			&& LocationServiceHelper.Instance.Geoposition.Coordinate.Heading.GetValueOrDefault(-1) <= 360
+																			))
+								await GameMapControl.TryRotateToAsync(LocationServiceHelper.Instance.Geoposition.Coordinate.Heading.GetValueOrDefault(GameMapControl.Heading));
                         if (SettingsService.Instance.IsRememberMapZoomEnabled)
                             GameMapControl.ZoomLevel = SettingsService.Instance.Zoomlevel;
                     }
+							}
+							catch (Exception ex)
+							{
+								await ExceptionHandler.HandleException(ex);
+							}
 						});
 			}
 		}
@@ -296,11 +356,11 @@ namespace PokemonGo_UWP.Views
             ViewModel.LevelUpRewardsAwarded -= ViewModelOnLevelUpRewardsAwarded;
         }
 
-		private void LocationHelperPropertyChanged(object sender, PropertyChangedEventArgs e)
+		private async void LocationHelperPropertyChanged(object sender, PropertyChangedEventArgs e)
 		{
 			if (e.PropertyName == nameof(LocationServiceHelper.Instance.Geoposition))
 			{
-				UpdateMap();
+				await UpdateMap();
 			}
 		}
 
@@ -311,6 +371,35 @@ namespace PokemonGo_UWP.Views
             ShowLevelUpPanelStoryboard.Begin();
         }
 
-        #endregion
-    }
+		#endregion
+		private async void MapStyleButton_Tapped(object sender, TappedRoutedEventArgs e)
+		{
+			if (GameMapControl.Is3DSupported)
+			{
+				switch (GameMapControl.Style)
+				{
+					case MapStyle.None:
+						GameMapControl.Style = MapStyle.Road;
+						break;
+					case MapStyle.Road:
+						GameMapControl.Style = MapStyle.Aerial3DWithRoads;
+						break;
+					case MapStyle.Aerial:
+					case MapStyle.AerialWithRoads:
+					case MapStyle.Terrain:
+					case MapStyle.Aerial3D:
+					case MapStyle.Aerial3DWithRoads:
+						GameMapControl.Style = MapStyle.Road;
+						break;
+					default:
+						GameMapControl.Style = MapStyle.Road;
+						break;
+				}
+			}
+			else
+			{
+				await new Windows.UI.Popups.MessageDialog("Sorry 3DView is not supported!").ShowAsyncQueue();
+			}
+		}
+	}
 }

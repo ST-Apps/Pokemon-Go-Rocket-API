@@ -1,0 +1,148 @@
+﻿<Page x:Class="PokemonGo_UWP.Views.PokemonInventoryPage"
+      x:Name="Root"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
+      xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+      xmlns:media="using:Microsoft.Xaml.Interactions.Media"
+      xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+      xmlns:controls="using:Template10.Controls"
+      xmlns:entities="using:PokemonGo_UWP.Entities"
+      xmlns:pogo="using:PokemonGo_UWP.Controls"
+      xmlns:local="using:PokemonGo_UWP.Views"
+      mc:Ignorable="d">
+
+    <Page.DataContext>
+        <viewModels:PokemonInventoryPageViewModel x:Name="ViewModel" />
+    </Page.DataContext>
+
+    <Page.Resources>
+        <Storyboard x:Name="ShowSortingMenuStoryboard">
+            <DoubleAnimation Storyboard.TargetName="SortingMenuPanel"
+                             Storyboard.TargetProperty="Opacity"
+                             From="0"
+                             To="1"
+                             Duration="0:0:0.2" />
+            <DoubleAnimation Storyboard.TargetName="SortingMenuTranslateTransform"
+                             Storyboard.TargetProperty="Y"
+                             From="800"
+                             To="0"
+                             Duration="0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.ZIndex)"
+                                           Storyboard.TargetName="SortingMenuPanel">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>0</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.01">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>10</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Name="HideSortingMenuStoryboard">
+            <DoubleAnimation Storyboard.TargetName="SortingMenuPanel"
+                             Storyboard.TargetProperty="Opacity"
+                             From="1"
+                             To="0"
+                             Duration="0:0:0.2" />
+            <DoubleAnimation Storyboard.TargetName="SortingMenuTranslateTransform"
+                             Storyboard.TargetProperty="Y"
+                             From="0"
+                             To="200"
+                             Duration="0:0:0.2">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseIn" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.ZIndex)"
+                                           Storyboard.TargetName="SortingMenuPanel">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>10</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <x:Int32>0</x:Int32>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="ShowIncubatorsModalStoryboard">
+            <DoubleAnimation x:Name="ShowIncubatorsModalAnimation"
+                             Storyboard.TargetName="IncubatorsGridTranslateTransform"
+                             Storyboard.TargetProperty="Y"
+                             From="350"
+                             To="0"
+                             Duration="0:0:0.2" />
+        </Storyboard>
+
+        <Storyboard x:Name="HideIncubatorsModalStoryboard">
+            <DoubleAnimation x:Name="HideIncubatorsModalAnimation"
+                             Storyboard.TargetName="IncubatorsGridTranslateTransform"
+                             Storyboard.TargetProperty="Y"
+                             From="0"
+                             To="350"
+                             Duration="0:0:0.2" />
+        </Storyboard>
+
+    </Page.Resources>
+    
+    <!--Main UI-->
+    <Grid Background="{StaticResource PageBackgroundGradient}">
+        <Border Margin="8,0"
+                Background="{StaticResource LightPageBackgroundGradient}">
+            <!--Content-->
+            <Pivot x:Name="MainUIPanel"
+                   Margin="0,10,0,0"
+                   Style="{StaticResource PokemonInventoryPivotStyle}">
+                <PivotItem x:Name="PokemonsPivot"
+                           Margin="8,0">
+                    <PivotItem.Header>
+                        <pogo:PoGoPivotHeader x:Uid="PokemonHeader"
+                                              Title="POKÉMON"
+                                              DataCurrent="{Binding TotalPokemonCount}"
+                                              DataMaximum="{Binding PlayerProfile.MaxPokemonStorage}" />
+                    </PivotItem.Header>
+                    <local:PokemonInventoryControl x:Name="PokemonInventory"
+                                                   PokemonInventory="{Binding PokemonInventory}"
+                                                   PokemonSelectedCommand="{Binding GotoPokemonDetailCommand}"
+                                                   SortingMode="{Binding CurrentPokemonSortingMode, Mode=TwoWay}" />
+                </PivotItem>
+
+                <PivotItem x:Name="EggsPivot"
+                           Margin="8,0">
+                    <PivotItem.Header>
+                        <pogo:PoGoPivotHeader x:Uid="EggsHeader"
+                                              Title="EGGS"
+                                              DataCurrent="{Binding EggsInventory.Count}"
+                                              DataMaximum="9" />
+                    </PivotItem.Header>
+                    <local:EggInventoryControl EggsInventory="{Binding EggsInventory}"
+                                               EggSelectedCommand="{Binding GotoEggDetailCommand}"
+                                               CanShowIncubatorSelectionOverlay="True" />
+                </PivotItem>
+
+            </Pivot>
+        </Border>
+        <!--Close Button-->
+        <Button Command="{Binding ReturnToGameScreen}"
+                Style="{StaticResource ButtonCircle}"
+                VerticalAlignment="Bottom"
+                Margin="0,0,0,21">
+            <Image Source="ms-appx:///Assets/Buttons/btn_close.png" />
+        </Button>
+    </Grid>
+</Page>

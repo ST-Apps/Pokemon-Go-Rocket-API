@@ -1,3 +1,7 @@
+# Warning!
+
+[Game is not working now, please read here!](https://github.com/ST-Apps/PoGo-UWP/issues/1725)
+
 # Important information
 You can find the installation file for PoGo in [Releases](https://github.com/ST-Apps/PoGo-UWP/releases/). **Please read the whole release information before installing.**
 

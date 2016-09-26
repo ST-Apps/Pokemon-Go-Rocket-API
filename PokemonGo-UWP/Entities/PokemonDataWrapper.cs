@@ -9,14 +9,12 @@ using POGOProtos.Inventory;
 using POGOProtos.Inventory.Item;
 using Template10.Common;
 using Template10.Mvvm;
+using System.ComponentModel;
 
 namespace PokemonGo_UWP.Entities
 {
-    public class PokemonDataWrapper
+    public class PokemonDataWrapper : INotifyPropertyChanged
     {
-        private DelegateCommand _gotoEggDetailsCommand;
-        private DelegateCommand _gotoPokemonDetailsCommand;
-
         [JsonProperty, JsonConverter(typeof(ProtobufJsonNetConverter))]
         private PokemonData _wrappedData;
 
@@ -37,27 +35,6 @@ namespace PokemonGo_UWP.Entities
         /// The file name for this Pokemon, located in /Assets/Pokemons
         /// </summary>
         public string ImageFilePath => $"ms-appx:///Assets/Pokemons/{(int)PokemonId}.png";
-
-        /// <summary>
-        ///     Navigate to detail page for the selected egg
-        /// </summary>
-        public DelegateCommand GotoEggDetailsCommand => _gotoEggDetailsCommand ?? (
-            _gotoEggDetailsCommand = new DelegateCommand(() =>
-            {
-                NavigationHelper.NavigationState["CurrentEgg"] = this;
-                BootStrapper.Current.NavigationService.Navigate(typeof(EggDetailPage));
-            }, () => true));
-
-        /// <summary>
-        ///     Navigate to detail page for the selected Pokemon
-        /// </summary>
-        public DelegateCommand GotoPokemonDetailsCommand => _gotoPokemonDetailsCommand ?? (
-            _gotoPokemonDetailsCommand = new DelegateCommand(() =>
-            {
-                NavigationHelper.NavigationState["CurrentPokemon"] = this;
-                NavigationHelper.NavigationState["LastSelectedID"] = Id;
-                BootStrapper.Current.NavigationService.Navigate(typeof(PokemonDetailPage));
-            }, () => true));
 
         #region Wrapped Properties
 
@@ -118,13 +95,51 @@ namespace PokemonGo_UWP.Entities
 
         public float AdditionalCpMultiplier => WrappedData.AdditionalCpMultiplier;
 
-        public int Favorite => WrappedData.Favorite;
+        // Stubb Var
+        public bool IsBuddy = false;
 
-        public string Nickname => WrappedData.Nickname;
+        public bool IsDeployed { get { return !string.IsNullOrEmpty(DeployedFortId) || IsBuddy; } }
+
+        public int Favorite
+        {
+            get { return WrappedData.Favorite; }
+            set
+            {
+                if (WrappedData.Favorite == value) return;
+                WrappedData.Favorite = value;
+                OnPropertyChanged(nameof(Favorite));
+                OnPropertyChanged(nameof(IsFavorite));
+            }
+        }
+
+        public bool IsFavorite => System.Convert.ToBoolean(Favorite);
+
+        public string Nickname
+        {
+            get { return WrappedData.Nickname; }
+            set
+            {
+                if (WrappedData.Nickname == value) return;
+                WrappedData.Nickname = value;
+                OnPropertyChanged(nameof(Nickname));
+                OnPropertyChanged(nameof(Name));
+            }
+        }
 
         public int FromFort => WrappedData.FromFort;
 
         public string Name { get { return WrappedData.Nickname == "" ? Resources.Pokemon.GetString(WrappedData.PokemonId.ToString()) : WrappedData.Nickname; } }
+
+        #endregion
+
+        #region INotifyPropertyChanged
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         #endregion
     }

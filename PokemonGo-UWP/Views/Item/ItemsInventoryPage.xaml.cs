@@ -2,13 +2,8 @@
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace PokemonGo_UWP.Views
 {
-    /// <summary>
-    ///     An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class ItemsInventoryPage : Page
     {
         public ItemsInventoryPage()
@@ -27,7 +22,6 @@ namespace PokemonGo_UWP.Views
         private void OnBackRequested(object sender, BackRequestedEventArgs backRequestedEventArgs)
         {
             backRequestedEventArgs.Handled = true;
-            HideDiscardStoryboard.Begin();
         }
 
         protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
