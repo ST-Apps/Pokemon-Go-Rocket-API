@@ -7,7 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:gif="using:XamlAnimatedGif"
     xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    x:Name="gymPage">
 
     <Page.DataContext>
         <viewModels:EnterGymPageViewModel x:Name="ViewModel" />
@@ -36,54 +37,57 @@
         </Grid>
 
         <!--Guard-->
-        <!--TODO This part should be wrapped in some kind of items control -->
-        <Grid Width="360">
-            <!--Trainer-->
-            <Grid VerticalAlignment="Center" HorizontalAlignment="Right"
-                  Width="Auto" Height="320" Margin="0,0,0,120">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="80"></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
-                <Image Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,-20"
-                       gif:AnimationBehavior.SourceUri="/Assets/UI/avatar.gif" Height="270"></Image>
-                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
-                           Foreground="{Binding CurrentGym.OwnedByTeam, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}"
-                           FontSize="80" Opacity="0.3" Text="00"></TextBlock>
-                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"
-                           Foreground="{Binding CurrentGym.OwnedByTeam, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}"
-                           FontSize="28" Text="TrainerName"></TextBlock>
-            </Grid>
-            <!--Pokemon-->
-            <Image Width="200" Height="200" Margin="0,60,0,0"
-                   Source="{Binding CurrentGym.GuardPokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"></Image>
-            <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,240" >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
-                <Grid HorizontalAlignment="Left" Width="100">
-                    <!--TODO Crown should appear only if this is ultimate pokemon-->
-                    <Image Source="/Assets/Icons/crown.png" Height="36" Stretch="Uniform"></Image>
-                </Grid>
-                <!--TODO Missing binding vars-->
-                <!--<TextBlock Grid.Row="1" HorizontalAlignment="Left"
-                           Foreground="#DDDDDD" FontSize="26"
-                           Text="{Binding PokemonName}"></TextBlock>-->
-                <TextBlock Grid.Row="1" HorizontalAlignment="Left"
-                           Foreground="#DDDDDD" FontSize="26"
-                           Text="PokemonName"></TextBlock>
-                <Rectangle Grid.Row="2" Fill="#DDDDDD" Width="100" Height="3" HorizontalAlignment="Left" ></Rectangle>
-                <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Left">
-                    <TextBlock VerticalAlignment="Bottom" Foreground="#DDDDDD" FontSize="20"
-                               Text="CP"></TextBlock>
-                    <TextBlock Foreground="#DDDDDD" FontSize="26" Margin="4,0,0,0"
-                               Text="{Binding CurrentGym.GuardPokemonCp}"></TextBlock>
-                </StackPanel>
-            </Grid>
-        </Grid>
+        <FlipView x:Name="GymDefendersFlip"
+                  ItemsSource="{Binding CurrentMembers, Mode=OneWay}"
+                  SelectedItem="{Binding SelectedMember, Mode=TwoWay}">
+            <FlipView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="360">
+                        <!--Trainer-->
+                        <Grid VerticalAlignment="Center" HorizontalAlignment="Right"
+                                  Width="Auto" Height="320" Margin="0,0,0,120">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="80"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Image Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,-20"
+                                       gif:AnimationBehavior.SourceUri="/Assets/UI/avatar.gif" Height="270"></Image>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
+                                           Foreground="{Binding ElementName=gymPage, Path=DataContext.CurrentGym.OwnedByTeam, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}"
+                                           FontSize="80" Opacity="0.3" Text="{Binding PlayerLevel}"></TextBlock>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"
+                                           Foreground="{Binding ElementName=gymPage, Path=DataContext.CurrentGym.OwnedByTeam, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}"
+                                           FontSize="28" Text="{Binding PlayerName}"></TextBlock>
+                        </Grid>
+                        <!--Pokemon-->
+                        <Image Width="200" Height="200" Margin="0,60,0,0"
+                                   Source="{Binding PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"></Image>
+                        <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,240" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid HorizontalAlignment="Left" Width="100">
+                                <!--TODO Crown should appear only if this is ultimate pokemon-->
+                                <Image Source="/Assets/Icons/crown.png" Height="36" Stretch="Uniform"></Image>
+                            </Grid>
+                            <TextBlock Grid.Row="1" HorizontalAlignment="Left"
+                                           Foreground="#DDDDDD" FontSize="26"
+                                           Text="{Binding PokemonName}"></TextBlock>
+                            <Rectangle Grid.Row="2" Fill="#DDDDDD" Width="100" Height="3" HorizontalAlignment="Left" ></Rectangle>
+                            <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Left">
+                                <TextBlock VerticalAlignment="Bottom" Foreground="#DDDDDD" FontSize="20"
+                                               Text="CP"></TextBlock>
+                                <TextBlock Foreground="#DDDDDD" FontSize="26" Margin="4,0,0,0"
+                                               Text="{Binding PokemonCp}"></TextBlock>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </DataTemplate>
+            </FlipView.ItemTemplate>
+        </FlipView>
 
         <!--Label-->
         <Grid VerticalAlignment="Top">
@@ -107,7 +111,27 @@
                         <Run Text="Gym level "></Run>
                         <Run Text="{Binding CurrentGym.GymLevel}"></Run>
                     </TextBlock>
-                    <!--TODO List of Gym's members-->
+                    <!--TODO There should be crown on top of the last dot indicator (highest pokemon in member list)-->
+                    <!--TODO It is currently showing no. of pokemon in gym. It should show number of dots based of level and then from right should be defending pokemons and on left there should be blank position dots-->
+                    <ItemsControl Grid.Row="2" x:Name="FlipIndicators" ItemsSource="{Binding CurrentMembers, Mode=OneWay}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Height="10" Width="10" Margin="3,1">
+                                    <Ellipse Fill="White"/>
+                                    <Ellipse Fill="Black" Visibility="{Binding Selected, Converter={StaticResource BooleanToVisibilityConverter}}" RenderTransformOrigin="0.5,0.5">
+                                        <Ellipse.RenderTransform>
+                                            <CompositeTransform ScaleX="0.75" ScaleY="0.75"/>
+                                        </Ellipse.RenderTransform>
+                                    </Ellipse>
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </Grid>
             </Border>
             <Grid HorizontalAlignment="Left" Width="82" Height="82" Margin="4,0,0,0">

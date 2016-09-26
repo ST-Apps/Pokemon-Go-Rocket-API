@@ -26,6 +26,7 @@ namespace PokemonGo_UWP.Entities
         [JsonProperty, JsonConverter(typeof(ProtobufJsonNetConverter))]
         private GymMembership _gymMembership;
         private PokemonDataWrapper _pokemonData;
+        private bool _selected;
 
         public GymMembershipWrapper(GymMembership gymMembership)
         {
@@ -42,6 +43,17 @@ namespace PokemonGo_UWP.Entities
         public string PlayerName => _gymMembership.TrainerPublicProfile.Name;
         public int PlayerLevel => _gymMembership.TrainerPublicProfile.Level;
         public PlayerAvatar PlayerAvatar => _gymMembership.TrainerPublicProfile.Avatar;
+
+
+        public bool Selected
+        {
+            get { return _selected; }
+            set
+            {
+                _selected = value;
+                OnPropertyChanged(nameof(Selected));
+            }
+        }
 
         #endregion
 

@@ -48,11 +48,11 @@ namespace PokemonGo_UWP.ViewModels
                 CurrentGym = JsonConvert.DeserializeObject<FortDataWrapper>((string)suspensionState[nameof(CurrentGym)]);
                 CurrentGymInfo = JsonConvert.DeserializeObject<GetGymDetailsResponse>((string)suspensionState[nameof(CurrentGymInfo)]);
                 CurrentMembers = GetCurrentMembers(CurrentGymInfo);
+                SelectedMember = CurrentMembers.FirstOrDefault();
                 UpdateBindableData();
             }
             else
             {
-
                 CurrentGym = (FortDataWrapper)NavigationHelper.NavigationState[nameof(CurrentGym)];
                 NavigationHelper.NavigationState.Remove(nameof(CurrentGym));
 
@@ -93,6 +93,7 @@ namespace PokemonGo_UWP.ViewModels
         private GetGymDetailsResponse _currentGymInfo;
 
         private ObservableCollection<GymMembershipWrapper> _currentMembers;
+        private GymMembershipWrapper _selectedMember;
 
         private AttackType _AtckType = AttackType.None;
         private bool _notLvl5Yet = true;
@@ -127,6 +128,20 @@ namespace PokemonGo_UWP.ViewModels
         {
             get { return _currentMembers; }
             set { Set(ref _currentMembers, value); }
+        }
+
+        public GymMembershipWrapper SelectedMember
+        {
+            get { return _selectedMember; }
+            set
+            {
+                Set(ref _selectedMember, value);
+                foreach (var item in CurrentMembers.Where(cm => cm.Selected))
+                    item.Selected = false;
+
+                if (value != null)
+                    value.Selected = true;
+            }
         }
 
         public AttackType AtckType
@@ -195,6 +210,8 @@ namespace PokemonGo_UWP.ViewModels
                     CurrentGymInfo = response;
                     await GameClient.UpdateInventory();
                     CurrentMembers = GetCurrentMembers(CurrentGymInfo);
+                    SelectedMember = CurrentMembers.FirstOrDefault();
+                    Logger.Write(string.Join("\n", CurrentMembers.Select(m => $"player:{m.PlayerName} level:{m.PlayerLevel} pokemon:{m.PokemonId} cp:{m.PokemonCp}")));
                     UpdateBindableData();
                     break;
                 case GetGymDetailsResponse.Types.Result.ErrorNotInRange:
@@ -292,7 +309,11 @@ namespace PokemonGo_UWP.ViewModels
             _deployPokemon ?? (_deployPokemon = new DelegateCommand( async() =>
             {
                 //TODO make pokemon selection, now gets highest CP of favorites
-                var pokemon = GameClient.PokemonsInventory.OrderByDescending(p => Convert.ToBoolean(p.Favorite)).ThenByDescending(p => p.Cp).FirstOrDefault();
+                var pokemon = GameClient.PokemonsInventory
+                    .OrderByDescending(p => Convert.ToBoolean(p.Favorite))
+                    .ThenByDescending(p => p.Cp)
+                    .Where(p=>string.IsNullOrEmpty(p.DeployedFortId) && p.Stamina == p.StaminaMax)
+                    .FirstOrDefault();
 
                 if (pokemon == null)
                 {
@@ -342,6 +363,7 @@ namespace PokemonGo_UWP.ViewModels
                 var dialog = new MessageDialog("Sorry, check back later ;)", "Not yet implemented");
                 await dialog.ShowAsync();
             }, () => IsEnabled));
+
 
         #endregion
     }
