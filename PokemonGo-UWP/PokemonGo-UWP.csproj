@@ -327,6 +327,7 @@
     <Content Include="Assets\Teams\gym_base_empty.png" />
     <Content Include="Assets\Teams\gym_base_red.png" />
     <Content Include="Assets\Teams\gym_base_yellow.png" />
+    <Content Include="Assets\UI\glare.png" />
     <Content Include="Assets\UI\night_sky_texture_by_amdillon.jpg" />
     <Content Include="Assets\Pokemons\1.png" />
     <Content Include="Assets\Pokemons\10.png" />
@@ -747,6 +748,12 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\ArcProgressBar.cs" />
+    <Compile Include="Controls\ChargeAvailableBar.xaml.cs">
+      <DependentUpon>ChargeAvailableBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HealthIndicatorBar.xaml.cs">
+      <DependentUpon>HealthIndicatorBar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MessageDialog\PoGoMessageDialog.xaml.cs">
       <DependentUpon>PoGoMessageDialog.xaml</DependentUpon>
     </Compile>
@@ -824,6 +831,7 @@
     <Compile Include="Utils\Signature\UdidGenerator.cs" />
     <Compile Include="Utils\Game\UpdateManager.cs" />
     <Compile Include="Utils\Signature\Utilities.cs" />
+    <Compile Include="ViewModels\BattlePageViewModel.cs" />
     <Compile Include="ViewModels\CapturePokemonPageViewModel.cs" />
     <Compile Include="ViewModels\EggDetailPageViewModel.cs" />
     <Compile Include="ViewModels\EnterGymPageViewModel.cs" />
@@ -838,6 +846,12 @@
     <Compile Include="ViewModels\SettingsPageViewModel.cs" />
     <Compile Include="ViewModels\LoginPageViewModel.cs" />
     <Compile Include="ViewModels\SearchPokeStopPageViewModel.cs" />
+    <Compile Include="Views\BattleArena.xaml.cs">
+      <DependentUpon>BattleArena.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BattlePage.xaml.cs">
+      <DependentUpon>BattlePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Item\ItemUseOnPokemonPage.xaml.cs">
       <DependentUpon>ItemUseOnPokemonPage.xaml</DependentUpon>
     </Compile>
@@ -938,6 +952,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\ChargeAvailableBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HealthIndicatorBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\MessageDialog\PoGoMessageDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -966,6 +988,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Views\BattleArena.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\BattlePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Item\ItemUseOnPokemonPage.xaml">
       <SubType>Designer</SubType>

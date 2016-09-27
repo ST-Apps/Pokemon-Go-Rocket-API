@@ -27,8 +27,6 @@
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                     <GradientStop Color="#5CC388" Offset="0"/>
                     <GradientStop Color="#25613D" Offset="1"/>
-                    <!--<GradientStop Color="#306680" Offset="0"></GradientStop>
-                    <GradientStop Color="#133339" Offset="1"></GradientStop>-->
                 </LinearGradientBrush>
             </Ellipse.Fill>
         </Ellipse>

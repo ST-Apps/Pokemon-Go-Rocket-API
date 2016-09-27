@@ -1,0 +1,58 @@
+﻿<UserControl
+    x:Class="PokemonGo_UWP.Controls.HealthIndicatorBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PokemonGo_UWP.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Height="8"
+    d:DesignWidth="100">
+    <UserControl.Resources>
+        <Storyboard x:Name="DampStoryboard">
+            <DoubleAnimation Storyboard.TargetName="DampedBar" Storyboard.TargetProperty="(Border.RenderTransform).(ScaleTransform.ScaleX)"
+                             BeginTime="0:0:0.3" Duration="0:0:0.4">
+            </DoubleAnimation>
+        </Storyboard>
+        <Storyboard x:Name="FlashStoryboard">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="FlashBar" Storyboard.TargetProperty="Visibility">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <Grid>
+        <Border Background="Gray" CornerRadius="5" BorderThickness="0" Opacity="0.5">
+        </Border>
+        <Border x:Name="DampedBar" Background="Orange" CornerRadius="5,0,0,5" BorderThickness="0">
+            <Border.RenderTransform>
+                <ScaleTransform></ScaleTransform>
+            </Border.RenderTransform>
+        </Border>
+        <Border x:Name="HealthBar" Background="Lime" CornerRadius="5,0,0,5" BorderThickness="0">
+            <Border.RenderTransform>
+                <ScaleTransform></ScaleTransform>
+            </Border.RenderTransform>
+        </Border>
+        <Border x:Name="FlashBar" Background="Red" CornerRadius="5" BorderThickness="0" Opacity="0.5" Visibility="Collapsed">
+        </Border>
+    </Grid>
+</UserControl>
