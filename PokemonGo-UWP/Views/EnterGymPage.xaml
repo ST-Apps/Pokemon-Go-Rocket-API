@@ -39,7 +39,8 @@
         <!--Guard-->
         <FlipView x:Name="GymDefendersFlip"
                   ItemsSource="{Binding CurrentMembers, Mode=OneWay}"
-                  SelectedItem="{Binding SelectedMember, Mode=TwoWay}">
+                  SelectedItem="{Binding SelectedMember, Mode=TwoWay}"
+                  Loaded="GymDefendersFlip_Loaded">
             <FlipView.ItemTemplate>
                 <DataTemplate>
                     <Grid Width="360">

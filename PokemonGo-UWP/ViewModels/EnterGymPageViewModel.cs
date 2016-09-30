@@ -135,12 +135,12 @@ namespace PokemonGo_UWP.ViewModels
             get { return _selectedMember; }
             set
             {
-                Set(ref _selectedMember, value);
-                foreach (var item in CurrentMembers.Where(cm => cm.Selected))
-                    item.Selected = false;
-
-                if (value != null)
+                //To ensure, that there is always some member selected (right after gym loaded)
+                var isSet = CurrentMembers.FirstOrDefault(i => i.Selected);
+                if (isSet == null)
                     value.Selected = true;
+
+                Set(ref _selectedMember, value);
             }
         }
 
