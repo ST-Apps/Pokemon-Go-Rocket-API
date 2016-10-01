@@ -141,15 +141,7 @@ namespace PokemonGo_UWP.ViewModels
         public GymMembershipWrapper SelectedMember
         {
             get { return _selectedMember; }
-            set
-            {
-                //To ensure, that there is always some member selected (right after gym loaded)
-                var isSet = CurrentMembers.FirstOrDefault(i => i.PokeType.HasFlag(GymPokeType.Selected));
-                if (isSet == null)
-                    value.PokeType |= GymPokeType.Selected; //set
-
-                Set(ref _selectedMember, value);
-            }
+            set { Set(ref _selectedMember, value); }
         }
 
         public AttackType AtckType
@@ -215,7 +207,7 @@ namespace PokemonGo_UWP.ViewModels
                 //Rewrite last as king
                 members[members.Count - 1].PokeType = GymPokeType.King;
                 //Set first member as selected
-                members[0].PokeType |= GymPokeType.Selected; //set
+                members[0].Selected = true; //set
             }
 
             indicators.AddRange(members);

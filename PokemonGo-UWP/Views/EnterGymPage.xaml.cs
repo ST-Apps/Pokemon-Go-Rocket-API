@@ -54,16 +54,13 @@ namespace PokemonGo_UWP.Views
         {
             var index = (int)Math.Round(_scroller.HorizontalOffset - 2);
             var capIndex = Utilities.EnsureRange(index, 0, ViewModel.CurrentMembers.Count - 1);
-            if (capIndex != _lastMemberIndex)
+            if (capIndex != _lastMemberIndex && ViewModel.CurrentMembers[capIndex] != null)
             {
-                foreach (var item in ViewModel.CurrentMembers.Where(cm => cm.PokeType.HasFlag(GymPokeType.Selected)))
-                    item.PokeType &= ~GymPokeType.Selected; //clear
+                foreach (var item in ViewModel.CurrentMembers)
+                    item.Selected = false;
 
-                if (ViewModel.CurrentMembers[capIndex] != null)
-                {
-                    ViewModel.CurrentMembers[capIndex].PokeType |= GymPokeType.Selected; //set
-                    _lastMemberIndex = capIndex;
-                }
+                ViewModel.CurrentMembers[capIndex].Selected = true;
+                _lastMemberIndex = capIndex;
             }
         }
 

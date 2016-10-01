@@ -2245,12 +2245,11 @@ namespace PokemonGo_UWP.Utils
             if (values == null)
                 return Colors.White;
 
-            GymPokeType poketype;
+            bool selected;
             if (values[0] == null)
-                poketype = GymPokeType.Empty;
+                selected = false;
             else
-                poketype = (GymPokeType)values[0];
-
+                selected = (bool)values[0];
 
             TeamColor teamcolor;
             if (values[1] == null)
@@ -2259,7 +2258,7 @@ namespace PokemonGo_UWP.Utils
                 teamcolor = (TeamColor)values[1];
 
             Color color;
-            if (poketype.HasFlag(GymPokeType.Selected))
+            if (selected)
             {
                 switch (teamcolor)
                 {

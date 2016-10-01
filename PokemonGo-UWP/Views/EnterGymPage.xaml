@@ -128,7 +128,7 @@
                         </ItemsControl.ItemsPanel>
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
-                                <Grid Margin="3,1">
+                                <Grid Margin="0,0,0,3">
                                     <BitmapIcon
                                         UriSource="{Binding PokeType, Converter={StaticResource PokeTypeToAsset}}">
 
@@ -137,7 +137,7 @@
                                                     Converter="{StaticResource PokeTypeSelectedToTeamColor}"
                                                     Mode="OneWay"
                                                     PropertyName="Foreground">
-                                                <cimbalinoBehaviors:MultiBindingItem Value="{Binding PokeType}"/>
+                                                <cimbalinoBehaviors:MultiBindingItem Value="{Binding Selected}"/>
                                                 <cimbalinoBehaviors:MultiBindingItem Value="{Binding ElementName=gymPage, Path=DataContext.CurrentGym.OwnedByTeam}" />
                                             </cimbalinoBehaviors:MultiBindingBehavior>
                                         </interactivity:Interaction.Behaviors>

@@ -324,7 +324,7 @@ namespace PokemonGo_UWP
 
             AsyncSynchronizationContext.Register();
             var currentAccessToken = GameClient.LoadAccessToken();
-            if (currentAccessToken == null || forceToMainPage || true)
+            if (currentAccessToken == null || forceToMainPage)
             {
                 await NavigationService.NavigateAsync(typeof(MainPage));
             }
