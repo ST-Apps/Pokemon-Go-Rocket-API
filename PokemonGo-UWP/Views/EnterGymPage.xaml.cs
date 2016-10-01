@@ -1,4 +1,6 @@
-﻿using PokemonGo_UWP.Utils;
+﻿using PokemonGo.RocketAPI;
+using PokemonGo_UWP.Entities;
+using PokemonGo_UWP.Utils;
 using System;
 using System.Linq;
 using Windows.UI.Xaml;
@@ -16,7 +18,7 @@ namespace PokemonGo_UWP.Views
     public sealed partial class EnterGymPage : Page
     {
         private ScrollViewer _scroller;
-        private int _lastMemberIndex = -1;
+        private int _lastMemberIndex = 0;
 
         public EnterGymPage()
         {
@@ -54,12 +56,12 @@ namespace PokemonGo_UWP.Views
             var capIndex = Utilities.EnsureRange(index, 0, ViewModel.CurrentMembers.Count - 1);
             if (capIndex != _lastMemberIndex)
             {
-                foreach (var item in ViewModel.CurrentMembers.Where(cm => cm.Selected))
-                    item.Selected = false;
+                foreach (var item in ViewModel.CurrentMembers.Where(cm => cm.PokeType.HasFlag(GymPokeType.Selected)))
+                    item.PokeType &= ~GymPokeType.Selected; //clear
 
                 if (ViewModel.CurrentMembers[capIndex] != null)
                 {
-                    ViewModel.CurrentMembers[capIndex].Selected = true;
+                    ViewModel.CurrentMembers[capIndex].PokeType |= GymPokeType.Selected; //set
                     _lastMemberIndex = capIndex;
                 }
             }

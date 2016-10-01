@@ -48,6 +48,7 @@ namespace PokemonGo_UWP.ViewModels
                 CurrentGym = JsonConvert.DeserializeObject<FortDataWrapper>((string)suspensionState[nameof(CurrentGym)]);
                 CurrentGymInfo = JsonConvert.DeserializeObject<GetGymDetailsResponse>((string)suspensionState[nameof(CurrentGymInfo)]);
                 CurrentMembers = GetCurrentMembers(CurrentGymInfo);
+                CurrentMembersIndicators = SetCurrentMembersIndicators(CurrentMembers);
                 SelectedMember = CurrentMembers.FirstOrDefault();
                 UpdateBindableData();
             }
@@ -93,6 +94,7 @@ namespace PokemonGo_UWP.ViewModels
         private GetGymDetailsResponse _currentGymInfo;
 
         private ObservableCollection<GymMembershipWrapper> _currentMembers;
+        private ObservableCollection<GymMembershipWrapper> _currentMembersIndicators;
         private GymMembershipWrapper _selectedMember;
 
         private AttackType _AtckType = AttackType.None;
@@ -130,15 +132,21 @@ namespace PokemonGo_UWP.ViewModels
             set { Set(ref _currentMembers, value); }
         }
 
+        public ObservableCollection<GymMembershipWrapper> CurrentMembersIndicators
+        {
+            get { return _currentMembersIndicators; }
+            set { Set(ref _currentMembersIndicators, value); }
+        }
+
         public GymMembershipWrapper SelectedMember
         {
             get { return _selectedMember; }
             set
             {
                 //To ensure, that there is always some member selected (right after gym loaded)
-                var isSet = CurrentMembers.FirstOrDefault(i => i.Selected);
+                var isSet = CurrentMembers.FirstOrDefault(i => i.PokeType.HasFlag(GymPokeType.Selected));
                 if (isSet == null)
-                    value.Selected = true;
+                    value.PokeType |= GymPokeType.Selected; //set
 
                 Set(ref _selectedMember, value);
             }
@@ -190,6 +198,31 @@ namespace PokemonGo_UWP.ViewModels
             new ObservableCollection<GymMembershipWrapper>(
                 currentGymInfo.GymState.Memberships.Select(m => new GymMembershipWrapper(m)));
 
+        private ObservableCollection<GymMembershipWrapper> SetCurrentMembersIndicators(ObservableCollection<GymMembershipWrapper> members)
+        {
+            //Set empty slots
+            var emptyCount = CurrentGym.GymLevel - members.Count;
+            List<GymMembershipWrapper> indicators =
+                Enumerable.Repeat<GymMembershipWrapper>(
+                    new GymMembershipWrapper() { PokeType = GymPokeType.Empty }, emptyCount).ToList();
+
+            //Set members as normal
+            foreach(var member in members)
+                member.PokeType = GymPokeType.Normal;
+
+            if (members.Count > 0)
+            {
+                //Rewrite last as king
+                members[members.Count - 1].PokeType = GymPokeType.King;
+                //Set first member as selected
+                members[0].PokeType |= GymPokeType.Selected; //set
+            }
+
+            indicators.AddRange(members);
+
+            return new ObservableCollection<GymMembershipWrapper>(indicators);
+        }
+
         private async Task CalculateGymData(FortDataWrapper currentGym)
         {
             // Navigating from game page, so we need to actually load the Gym
@@ -210,6 +243,7 @@ namespace PokemonGo_UWP.ViewModels
                     CurrentGymInfo = response;
                     await GameClient.UpdateInventory();
                     CurrentMembers = GetCurrentMembers(CurrentGymInfo);
+                    CurrentMembersIndicators = SetCurrentMembersIndicators(CurrentMembers);
                     SelectedMember = CurrentMembers.FirstOrDefault();
                     Logger.Write(string.Join("\n", CurrentMembers.Select(m => $"player:{m.PlayerName} level:{m.PlayerLevel} pokemon:{m.PokemonId} cp:{m.PokemonCp}")));
                     UpdateBindableData();

@@ -29,6 +29,8 @@ using Windows.Foundation;
 using Windows.Services.Maps;
 using System.Threading.Tasks;
 using PokemonGo_UWP.ViewModels;
+using Cimbalino.Toolkit.Converters;
+using System.Globalization;
 
 namespace PokemonGo_UWP.Utils
 {
@@ -2190,5 +2192,102 @@ namespace PokemonGo_UWP.Utils
         }
 
         #endregion
+    }
+    public class PokeTypeToAsset : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var poketype = (GymPokeType)value;
+
+            if (poketype.HasFlag(GymPokeType.Empty))
+                return new Uri("ms-appx:///Assets/Icons/indicator_empty.png");
+            else if (poketype.HasFlag(GymPokeType.Normal))
+                return new Uri("ms-appx:///Assets/Icons/indicator_normal.png");
+            else if (poketype.HasFlag(GymPokeType.King))
+                return new Uri("ms-appx:///Assets/Icons/indicator_crown.png");
+            else
+                return new Uri("");
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+    }
+
+    public class PokeTypeKingToVisibility : IValueConverter
+    {
+        #region Implementation of IValueConverter
+
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var poketype = (GymPokeType)value;
+            if (poketype.HasFlag(GymPokeType.King))
+                return Visibility.Visible;
+            else
+                return Visibility.Collapsed;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+    }
+
+    public class PokeTypeSelectedToTeamColor : MultiValueConverterBase
+    {
+        public override object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (values == null)
+                return Colors.White;
+
+            GymPokeType poketype;
+            if (values[0] == null)
+                poketype = GymPokeType.Empty;
+            else
+                poketype = (GymPokeType)values[0];
+
+
+            TeamColor teamcolor;
+            if (values[1] == null)
+                teamcolor = TeamColor.Neutral;
+            else
+                teamcolor = (TeamColor)values[1];
+
+            Color color;
+            if (poketype.HasFlag(GymPokeType.Selected))
+            {
+                switch (teamcolor)
+                {
+                    case TeamColor.Neutral:
+                        color = Color.FromArgb(255, 26, 237, 213);
+                        break;
+                    case TeamColor.Blue:
+                        color = Color.FromArgb(255, 40, 89, 237);
+                        break;
+                    case TeamColor.Red:
+                        color = Color.FromArgb(255, 237, 90, 90);
+                        break;
+                    case TeamColor.Yellow:
+                        color = Color.FromArgb(255, 254, 196, 50);
+                        break;
+                    default:
+                        color = Color.FromArgb(255, 0, 0, 0);
+                        break;
+                }
+                return new SolidColorBrush(color);
+            }
+            else
+                return new SolidColorBrush(Colors.White);
+        }
+
+        public override object[] ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

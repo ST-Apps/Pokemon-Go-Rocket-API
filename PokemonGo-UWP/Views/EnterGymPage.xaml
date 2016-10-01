@@ -7,6 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:gif="using:XamlAnimatedGif"
     xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
+    xmlns:cimbalinoBehaviors="using:Cimbalino.Toolkit.Behaviors"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     mc:Ignorable="d"
     x:Name="gymPage">
 
@@ -72,7 +74,11 @@
                             </Grid.RowDefinitions>
                             <Grid HorizontalAlignment="Left" Width="100">
                                 <!--TODO Crown should appear only if this is ultimate pokemon-->
-                                <Image Source="/Assets/Icons/crown.png" Height="36" Stretch="Uniform"></Image>
+                                <Image
+                                    Source="/Assets/Icons/indicator_crown.png"
+                                    Height="36"
+                                    Stretch="Uniform"
+                                    Visibility="{Binding PokeType, Converter={StaticResource PokeTypeKingToVisibility}}"/>
                             </Grid>
                             <TextBlock Grid.Row="1" HorizontalAlignment="Left"
                                            Foreground="#DDDDDD" FontSize="26"
@@ -114,7 +120,7 @@
                     </TextBlock>
                     <!--TODO There should be crown on top of the last dot indicator (highest pokemon in member list)-->
                     <!--TODO It is currently showing no. of pokemon in gym. It should show number of dots based of level and then from right should be defending pokemons and on left there should be blank position dots-->
-                    <ItemsControl Grid.Row="2" x:Name="FlipIndicators" ItemsSource="{Binding CurrentMembers, Mode=OneWay}">
+                    <ItemsControl Grid.Row="2" x:Name="FlipIndicators" ItemsSource="{Binding CurrentMembersIndicators, Mode=OneWay}">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <StackPanel Orientation="Horizontal" />
@@ -122,13 +128,20 @@
                         </ItemsControl.ItemsPanel>
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
-                                <Grid Height="10" Width="10" Margin="3,1">
-                                    <Ellipse Fill="White"/>
-                                    <Ellipse Fill="Black" Visibility="{Binding Selected, Converter={StaticResource BooleanToVisibilityConverter}}" RenderTransformOrigin="0.5,0.5">
-                                        <Ellipse.RenderTransform>
-                                            <CompositeTransform ScaleX="0.75" ScaleY="0.75"/>
-                                        </Ellipse.RenderTransform>
-                                    </Ellipse>
+                                <Grid Margin="3,1">
+                                    <BitmapIcon
+                                        UriSource="{Binding PokeType, Converter={StaticResource PokeTypeToAsset}}">
+
+                                        <interactivity:Interaction.Behaviors>
+                                            <cimbalinoBehaviors:MultiBindingBehavior
+                                                    Converter="{StaticResource PokeTypeSelectedToTeamColor}"
+                                                    Mode="OneWay"
+                                                    PropertyName="Foreground">
+                                                <cimbalinoBehaviors:MultiBindingItem Value="{Binding PokeType}"/>
+                                                <cimbalinoBehaviors:MultiBindingItem Value="{Binding ElementName=gymPage, Path=DataContext.CurrentGym.OwnedByTeam}" />
+                                            </cimbalinoBehaviors:MultiBindingBehavior>
+                                        </interactivity:Interaction.Behaviors>
+                                    </BitmapIcon>
                                 </Grid>
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>

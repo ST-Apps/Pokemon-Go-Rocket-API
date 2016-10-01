@@ -214,7 +214,6 @@
     <Content Include="Assets\Candy\Water.png" />
     <Content Include="Assets\Icons\circle_255_filled_01.png" />
     <Content Include="Assets\Icons\CompassIcon.png" />
-    <Content Include="Assets\Icons\crown.png" />
     <Content Include="Assets\Icons\Footprint_Far.png" />
     <Content Include="Assets\Icons\Footprint_Mid.png" />
     <Content Include="Assets\Icons\Footprint_Near.png" />
@@ -237,6 +236,9 @@
     <Content Include="Assets\Icons\ic_name.png" />
     <Content Include="Assets\Icons\ic_number.png" />
     <Content Include="Assets\Icons\ic_store.png" />
+    <Content Include="Assets\Icons\indicator_crown.png" />
+    <Content Include="Assets\Icons\indicator_empty.png" />
+    <Content Include="Assets\Icons\indicator_normal.png" />
     <Content Include="Assets\Icons\pokestop_far.png" />
     <Content Include="Assets\Icons\pokestop_far_inactive.png" />
     <Content Include="Assets\Icons\pokestop_far_inactive_lured.png" />

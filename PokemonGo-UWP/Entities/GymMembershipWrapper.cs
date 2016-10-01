@@ -21,12 +21,26 @@ using POGOProtos.Data.Player;
 
 namespace PokemonGo_UWP.Entities
 {
+    [Flags]
+    public enum GymPokeType
+    {
+       Empty = 1,
+       Normal = 2,
+       King = 4,
+       Selected = 8
+    }
+
     public class GymMembershipWrapper : INotifyPropertyChanged
     {
         [JsonProperty, JsonConverter(typeof(ProtobufJsonNetConverter))]
         private GymMembership _gymMembership;
+        private GymPokeType _pokeType;
         private PokemonDataWrapper _pokemonData;
-        private bool _selected;
+
+        public GymMembershipWrapper()
+        {
+        }
+
 
         public GymMembershipWrapper(GymMembership gymMembership)
         {
@@ -44,14 +58,13 @@ namespace PokemonGo_UWP.Entities
         public int PlayerLevel => _gymMembership.TrainerPublicProfile.Level;
         public PlayerAvatar PlayerAvatar => _gymMembership.TrainerPublicProfile.Avatar;
 
-
-        public bool Selected
+        public GymPokeType PokeType
         {
-            get { return _selected; }
+            get { return _pokeType; }
             set
             {
-                _selected = value;
-                OnPropertyChanged(nameof(Selected));
+                _pokeType = value;
+                OnPropertyChanged(nameof(PokeType));
             }
         }
 
