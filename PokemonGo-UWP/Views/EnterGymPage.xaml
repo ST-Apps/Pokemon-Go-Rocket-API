@@ -73,7 +73,6 @@
                                 <RowDefinition></RowDefinition>
                             </Grid.RowDefinitions>
                             <Grid HorizontalAlignment="Left" Width="100">
-                                <!--TODO Crown should appear only if this is ultimate pokemon-->
                                 <Image
                                     Source="/Assets/Icons/indicator_crown.png"
                                     Height="36"
@@ -118,8 +117,6 @@
                         <Run Text="Gym level "></Run>
                         <Run Text="{Binding CurrentGym.GymLevel}"></Run>
                     </TextBlock>
-                    <!--TODO There should be crown on top of the last dot indicator (highest pokemon in member list)-->
-                    <!--TODO It is currently showing no. of pokemon in gym. It should show number of dots based of level and then from right should be defending pokemons and on left there should be blank position dots-->
                     <ItemsControl Grid.Row="2" x:Name="FlipIndicators" ItemsSource="{Binding CurrentMembersIndicators, Mode=OneWay}">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
@@ -189,7 +186,6 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <!--TODO Button Command and Visibility-->
             <Button HorizontalAlignment="Center" VerticalAlignment="Center"
                     Width="80" Height="80" Grid.Column="0"
                     Visibility="{Binding CanDeploy, Converter={StaticResource BooleanToVisibilityConverter}}"
