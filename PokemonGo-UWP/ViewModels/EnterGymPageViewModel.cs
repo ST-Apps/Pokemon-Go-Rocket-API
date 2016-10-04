@@ -237,7 +237,6 @@ namespace PokemonGo_UWP.ViewModels
                     CurrentMembers = GetCurrentMembers(CurrentGymInfo);
                     CurrentMembersIndicators = SetCurrentMembersIndicators(CurrentMembers);
                     SelectedMember = CurrentMembers.FirstOrDefault();
-                    Logger.Write(string.Join("\n", CurrentMembers.Select(m => $"player:{m.PlayerName} level:{m.PlayerLevel} pokemon:{m.PokemonId} cp:{m.PokemonCp}")));
                     UpdateBindableData();
                     break;
                 case GetGymDetailsResponse.Types.Result.ErrorNotInRange:

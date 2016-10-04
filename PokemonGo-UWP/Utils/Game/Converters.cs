@@ -1607,7 +1607,7 @@ namespace PokemonGo_UWP.Utils
                 case TeamColor.Blue:
                     return new Uri(resourceUriString + "_blue.png");
                 case TeamColor.Neutral:
-                    return new Uri(resourceUriString + ".png");
+                    return new Uri(resourceUriString + "_neutral.png");
                 default:
                     throw new ArgumentOutOfRangeException();
             }
