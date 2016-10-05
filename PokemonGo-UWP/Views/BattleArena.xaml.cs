@@ -1,4 +1,5 @@
 ﻿using POGOProtos.Enums;
+using PokemonGo_UWP.Utils.Helpers;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -40,23 +41,11 @@ namespace PokemonGo_UWP.Views
         {
             this.InitializeComponent();
 
-            var currentTime = int.Parse(DateTime.Now.ToString("HH"));
-            var dayTime = currentTime > 7 && currentTime < 19;
-            if (!dayTime)
+            if (!UIHelper.IsDaySky(DateTime.Now, TimeZoneInfo.Local, Utils.Helpers.LocationServiceHelper.Instance.Geoposition))
             {
-                ((LinearGradientBrush)Floor.Fill).GradientStops[0].Color = ColorFromString("#FF306680");
-                ((LinearGradientBrush)Floor.Fill).GradientStops[1].Color = ColorFromString("#FF133339");
+                ((LinearGradientBrush)Floor.Fill).GradientStops[0].Color = UIHelper.ColorFromString("#FF306680");
+                ((LinearGradientBrush)Floor.Fill).GradientStops[1].Color = UIHelper.ColorFromString("#FF133339");
             }
-        }
-        private Windows.UI.Color ColorFromString(string hex)
-        {
-            hex = hex.Replace("#", string.Empty);
-            byte a = (byte)(Convert.ToUInt32(hex.Substring(0, 2), 16));
-            byte r = (byte)(Convert.ToUInt32(hex.Substring(2, 2), 16));
-            byte g = (byte)(Convert.ToUInt32(hex.Substring(4, 2), 16));
-            byte b = (byte)(Convert.ToUInt32(hex.Substring(6, 2), 16));
-            Windows.UI.Color color = Windows.UI.Color.FromArgb(a, r, g, b);
-            return color;
         }
 
         private void UpdateColor()
@@ -64,16 +53,16 @@ namespace PokemonGo_UWP.Views
             switch(Team)
             {
                 case TeamColor.Red:
-                    OuterEdgeLight.Fill = new SolidColorBrush(ColorFromString("#FFFF0505"));
-                    OuterEdgeDark.Fill = new SolidColorBrush(ColorFromString("#FFA20202"));
+                    OuterEdgeLight.Fill = new SolidColorBrush(UIHelper.ColorFromString("#FFFF0505"));
+                    OuterEdgeDark.Fill = new SolidColorBrush(UIHelper.ColorFromString("#FFA20202"));
                     break;
                 case TeamColor.Yellow:
-                    OuterEdgeLight.Fill = new SolidColorBrush(ColorFromString("#FFFFEC00"));
-                    OuterEdgeDark.Fill = new SolidColorBrush(ColorFromString("#FFD3AB00"));
+                    OuterEdgeLight.Fill = new SolidColorBrush(UIHelper.ColorFromString("#FFFFEC00"));
+                    OuterEdgeDark.Fill = new SolidColorBrush(UIHelper.ColorFromString("#FFD3AB00"));
                     break;
                 case TeamColor.Blue:
-                    OuterEdgeLight.Fill = new SolidColorBrush(ColorFromString("#FF3090FF"));
-                    OuterEdgeDark.Fill = new SolidColorBrush(ColorFromString("#FF3090FF"));
+                    OuterEdgeLight.Fill = new SolidColorBrush(UIHelper.ColorFromString("#FF3090FF"));
+                    OuterEdgeDark.Fill = new SolidColorBrush(UIHelper.ColorFromString("#FF3090FF"));
                     break;
                 default:
                     OuterEdgeLight.Fill = new SolidColorBrush(Colors.Silver);

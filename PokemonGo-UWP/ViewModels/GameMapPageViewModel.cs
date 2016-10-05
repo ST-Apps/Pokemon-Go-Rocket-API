@@ -163,8 +163,8 @@ namespace PokemonGo_UWP.ViewModels
             get
             {
                 // Set theme
-                var currentTime = int.Parse(DateTime.Now.ToString("HH"));
-                return currentTime > 7 && currentTime < 19 ? ElementTheme.Light : ElementTheme.Dark;
+                return Utils.Helpers.UIHelper.IsDaySky(DateTime.Now, TimeZoneInfo.Local, Utils.Helpers.LocationServiceHelper.Instance.Geoposition) ? 
+                    ElementTheme.Light : ElementTheme.Dark;
             }
         }
 
