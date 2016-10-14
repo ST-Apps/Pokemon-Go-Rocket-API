@@ -335,81 +335,101 @@
     </Page.Resources>
     <Grid x:Name="LayoutRoot">
         <controls:OutdoorBackground />
-        
-        <!--Arena-->
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Grid.RenderTransform>
-                <TranslateTransform X="150"></TranslateTransform>
-            </Grid.RenderTransform>
-            <Grid.Projection>
-                <PlaneProjection RotationX="-65" CenterOfRotationY=".5"  >
-                </PlaneProjection>
-            </Grid.Projection>
-            <local:BattleArena Width="400" Height="400" x:Name="ArenaElement"
+
+        <Viewbox MaxWidth="420" Margin="0,40,0,0">
+            <Grid Width="360">
+                <!--Arena-->
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Grid.RenderTransform>
+                        <TranslateTransform X="150"></TranslateTransform>
+                    </Grid.RenderTransform>
+                    <Grid.Projection>
+                        <PlaneProjection RotationX="-65" CenterOfRotationY=".5"  >
+                        </PlaneProjection>
+                    </Grid.Projection>
+                    <local:BattleArena Width="400" Height="400" x:Name="ArenaElement"
                                HorizontalAlignment="Center" VerticalAlignment="Center"
                                Team="{Binding Team2}">
-                <local:BattleArena.RenderTransform>
-                    <TransformGroup>
-                        <RotateTransform Angle="-45" CenterX="200" CenterY="200"></RotateTransform>
-                        <ScaleTransform ScaleX="3" ScaleY="3" CenterX="200" CenterY="200" ></ScaleTransform>
-                    </TransformGroup>
-                </local:BattleArena.RenderTransform>
-            </local:BattleArena>
-        </Grid>
+                        <local:BattleArena.RenderTransform>
+                            <TransformGroup>
+                                <RotateTransform Angle="-45" CenterX="200" CenterY="200"></RotateTransform>
+                                <ScaleTransform ScaleX="3" ScaleY="3" CenterX="200" CenterY="200" ></ScaleTransform>
+                            </TransformGroup>
+                        </local:BattleArena.RenderTransform>
+                    </local:BattleArena>
+                </Grid>
 
-        <!--Pokemons-->
-        <Grid x:Name="Pokemon2" HorizontalAlignment="Center" Width="100" Height="100" Margin="260,0,0,80">
-            <Grid.RenderTransform>
-                <TransformGroup>
-                    <TranslateTransform Y="0"></TranslateTransform>
-                </TransformGroup>
-            </Grid.RenderTransform>
-            <Image x:Name="Pokemon2Image" 
+                <!--Pokemons-->
+                <Grid x:Name="Pokemon2" HorizontalAlignment="Center" Width="100" Height="100" Margin="260,0,0,80">
+                    <Grid.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform Y="0"></TranslateTransform>
+                        </TransformGroup>
+                    </Grid.RenderTransform>
+                    <Image x:Name="Pokemon2Image" 
                    Source="{Binding Pokemon2Id, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}" ></Image>
-            <BitmapIcon x:Name="Pokemon2DamageLayer"
+                    <BitmapIcon x:Name="Pokemon2DamageLayer"
                         UriSource="{Binding Pokemon2Id, Converter={StaticResource PokemonIdToPokemonSpriteConverter}, ConverterParameter=uri}" 
                         Foreground="Transparent" Visibility="Collapsed">
-            </BitmapIcon>
-            <Image x:Name="Pokemon2Glare" Source="/Assets/UI/glare.png" HorizontalAlignment="Center" VerticalAlignment="Center"
+                    </BitmapIcon>
+                    <Image x:Name="Pokemon2Glare" Source="/Assets/UI/glare.png" HorizontalAlignment="Center" VerticalAlignment="Center"
                    Width="160" Height="160" Opacity="0">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <RotateTransform Angle="0" CenterX="80" CenterY="80"></RotateTransform>
-                        <ScaleTransform ScaleX="1" ScaleY="1" CenterX="80" CenterY="80"></ScaleTransform>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-        </Grid>
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <RotateTransform Angle="0" CenterX="80" CenterY="80"></RotateTransform>
+                                <ScaleTransform ScaleX="1" ScaleY="1" CenterX="80" CenterY="80"></ScaleTransform>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                </Grid>
 
-        <Grid x:Name="Pokemon1" HorizontalAlignment="Center" Width="160" Height="160" Margin="0,120,100,0" >
-            <Grid.RenderTransform>
-                <TransformGroup>
-                    <TranslateTransform Y="0"></TranslateTransform>
-                </TransformGroup>
-            </Grid.RenderTransform>
-            <Image x:Name="Pokemon1Image" 
+                <Grid x:Name="Pokemon1" HorizontalAlignment="Center" Width="160" Height="160" Margin="0,120,100,0" >
+                    <Grid.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform Y="0"></TranslateTransform>
+                        </TransformGroup>
+                    </Grid.RenderTransform>
+                    <Image x:Name="Pokemon1Image" 
                    Source="{Binding Pokemon1Id, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}">
-                <Image.RenderTransform>
-                    <ScaleTransform ScaleX="-1" CenterX="60"></ScaleTransform>
-                </Image.RenderTransform>
-            </Image>
-            <BitmapIcon x:Name="Pokemon1DamageLayer" 
+                        <Image.RenderTransform>
+                            <ScaleTransform ScaleX="-1" CenterX="60"></ScaleTransform>
+                        </Image.RenderTransform>
+                    </Image>
+                    <BitmapIcon x:Name="Pokemon1DamageLayer" 
                         UriSource="{Binding Pokemon1Id, Converter={StaticResource PokemonIdToPokemonSpriteConverter}, ConverterParameter=uri}"
                         Foreground="Transparent" Visibility="Collapsed">
-                <BitmapIcon.RenderTransform>
-                    <ScaleTransform ScaleX="-1" CenterX="60"></ScaleTransform>
-                </BitmapIcon.RenderTransform>
-            </BitmapIcon>
-            <Image x:Name="Pokemon1Glare" Source="/Assets/UI/glare.png" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        <BitmapIcon.RenderTransform>
+                            <ScaleTransform ScaleX="-1" CenterX="60"></ScaleTransform>
+                        </BitmapIcon.RenderTransform>
+                    </BitmapIcon>
+                    <Image x:Name="Pokemon1Glare" Source="/Assets/UI/glare.png" HorizontalAlignment="Center" VerticalAlignment="Center"
                    Width="200" Height="200" Opacity="0">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <RotateTransform Angle="0" CenterX="100" CenterY="100"></RotateTransform>
-                        <ScaleTransform ScaleX="1" ScaleY="1" CenterX="100" CenterY="100"></ScaleTransform>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-        </Grid>
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <RotateTransform Angle="0" CenterX="100" CenterY="100"></RotateTransform>
+                                <ScaleTransform ScaleX="1" ScaleY="1" CenterX="100" CenterY="100"></ScaleTransform>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                </Grid>
+
+                <!--Move Text-->
+                <Border x:Name="TextPokemon1Move" Background="#44000000" 
+                        CornerRadius="10" BorderThickness="0" MaxWidth="180"
+                        HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0"
+                        Margin="0,0,200,150">
+                    <TextBlock Foreground="White" FontSize="18" Margin="10" TextWrapping="Wrap"
+                               Text="Pokemon1 uses Charge Attack"></TextBlock>
+                </Border>
+                <Border x:Name="TextPokemon2Move" Background="#44000000" 
+                        CornerRadius="10" BorderThickness="0" MaxWidth="180" 
+                        HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0"
+                        Margin="160,0,0,300">
+                    <TextBlock Foreground="White" FontSize="18" Margin="10" TextWrapping="Wrap"
+                               Text="Pokemon2 uses Charge Attack"></TextBlock>
+                </Border>
+            </Grid>
+        </Viewbox>
 
         <!--Charge focus-->
         <Rectangle x:Name="UpperFocus" VerticalAlignment="Top" 
@@ -495,7 +515,7 @@
             </Button>
         </Grid>
 
-        <!--Messages -->
+        <!--Battle GO Text -->
         <TextBlock x:Name="TextBattle" Foreground="White" FontSize="70" Style="{StaticResource BattleBeginTextStyle}"
                    HorizontalAlignment="Center" VerticalAlignment="Center"
                    Visibility="Collapsed" RenderTransformOrigin="0.5,0.5">
@@ -513,21 +533,6 @@
                 <ScaleTransform ScaleX="1" ScaleY="1"></ScaleTransform>
             </TextBlock.RenderTransform>
         </TextBlock>
-
-        <Border x:Name="TextPokemon1Move" Background="#44000000" 
-                CornerRadius="10" BorderThickness="0" MaxWidth="180"
-                HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0"
-                Margin="0,0,200,150">
-            <TextBlock Foreground="White" FontSize="18" Margin="10" TextWrapping="Wrap"
-                       Text="Pokemon1 uses Charge Attack"></TextBlock>
-        </Border>
-        <Border x:Name="TextPokemon2Move" Background="#44000000" 
-                CornerRadius="10" BorderThickness="0" MaxWidth="180" 
-                HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0"
-                Margin="160,0,0,300">
-            <TextBlock Foreground="White" FontSize="18" Margin="10" TextWrapping="Wrap"
-                       Text="Pokemon2 uses Charge Attack"></TextBlock>
-        </Border>
 
         <!--Dialogs-->
 
