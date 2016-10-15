@@ -24,7 +24,7 @@ namespace PokemonGo_UWP.Controls
         {
             this.InitializeComponent();
 
-            if (!UIHelper.IsDaySky(DateTime.Now, TimeZoneInfo.Local, Utils.Helpers.LocationServiceHelper.Instance.Geoposition))
+            if (!UIHelper.IsDaySky(DateTime.Now, TimeZoneInfo.Local, Utils.Helpers.LocationServiceHelper.Instance?.Geoposition))
             {
                 BackgroundBrush.GradientStops[0].Color = UIHelper.ColorFromString("#FF01080E");
                 BackgroundBrush.GradientStops[1].Color = UIHelper.ColorFromString("#FF01080E");

@@ -1596,7 +1596,7 @@ namespace PokemonGo_UWP.Utils
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            return Helpers.UIHelper.IsDaySky(DateTime.Now, TimeZoneInfo.Local, Helpers.LocationServiceHelper.Instance.Geoposition) ? 
+            return Helpers.UIHelper.IsDaySky(DateTime.Now, TimeZoneInfo.Local, Helpers.LocationServiceHelper.Instance?.Geoposition) ? 
                 MapColorScheme.Light : MapColorScheme.Dark;
         }
 

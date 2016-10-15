@@ -163,7 +163,7 @@ namespace PokemonGo_UWP.ViewModels
             get
             {
                 // Set theme
-                return Utils.Helpers.UIHelper.IsDaySky(DateTime.Now, TimeZoneInfo.Local, Utils.Helpers.LocationServiceHelper.Instance.Geoposition) ? 
+                return Utils.Helpers.UIHelper.IsDaySky(DateTime.Now, TimeZoneInfo.Local, Utils.Helpers.LocationServiceHelper.Instance?.Geoposition) ? 
                     ElementTheme.Light : ElementTheme.Dark;
             }
         }

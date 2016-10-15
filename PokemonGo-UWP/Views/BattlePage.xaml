@@ -89,6 +89,9 @@
         <Storyboard x:Name="Pokemon1DodgeLeftStoryboard">
             <DoubleAnimation Storyboard.TargetName="ArenaElement" Storyboard.TargetProperty="(BattleArena.RenderTransform).(TransformGroup.Children)[0].(RotateTransform.Angle)"
                              By="-20" BeginTime="0:0:0.1" Duration="0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseIn"></CubicEase>
+                </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Pokemon1" Storyboard.TargetProperty="(Grid.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.Y)">
                 <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
@@ -97,21 +100,44 @@
                         <BackEase EasingMode="EaseInOut"></BackEase>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.2"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="-10" KeyTime="0:0:0.2"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.25"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Pokemon1" Storyboard.TargetProperty="(Grid.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="-20" KeyTime="0:0:0.2"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.3">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"></CubicEase>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Name="Pokemon1DodgeRightStoryboard">
             <DoubleAnimation Storyboard.TargetName="ArenaElement" Storyboard.TargetProperty="(BattleArena.RenderTransform).(TransformGroup.Children)[0].(RotateTransform.Angle)"
                              By="20" BeginTime="0:0:0.1" Duration="0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseIn"></CubicEase>
+                </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Pokemon1" Storyboard.TargetProperty="(Grid.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.Y)">
                 <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame Value="-20" KeyTime="0:0:0.15">
+                <EasingDoubleKeyFrame Value="-10" KeyTime="0:0:0.15">
                     <EasingDoubleKeyFrame.EasingFunction>
                         <BackEase EasingMode="EaseInOut"></BackEase>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.2"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="10" KeyTime="0:0:0.2"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.25"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Pokemon1" Storyboard.TargetProperty="(Grid.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="30" KeyTime="0:0:0.2"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.3">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"></CubicEase>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
 

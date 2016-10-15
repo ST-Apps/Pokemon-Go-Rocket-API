@@ -35,6 +35,7 @@ namespace PokemonGo_UWP.Utils.Helpers
         /// <returns>True for day sky, False for night sky.</returns>
         public static bool IsDaySky(DateTime time, TimeZoneInfo tz, Geoposition location)
         {
+            if (location == null) return true;
             var lat = location.Coordinate.Point.Position.Latitude;
             var lng = location.Coordinate.Point.Position.Longitude;
             var approxLocalNoon = TimeSpan.FromHours(12)
