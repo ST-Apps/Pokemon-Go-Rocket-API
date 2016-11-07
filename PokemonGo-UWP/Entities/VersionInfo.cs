@@ -37,7 +37,7 @@ namespace PokemonGo_UWP.Entities
 
         public string minimum_version;
         public long unknown25;
-        public ulong seed1;
+        public uint seed1;
         public int version_number;
         public VersionRelease latest_release;
     }

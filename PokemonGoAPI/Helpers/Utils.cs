@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.HashFunction;
 using System.Linq;
 
 namespace PokemonGo.RocketAPI.Helpers
@@ -14,36 +13,32 @@ namespace PokemonGo.RocketAPI.Helpers
             return BitConverter.ToUInt64(bytes, 0);
         }
 
-        public static uint GenerateLocation1(byte[] authTicket, double lat, double lng, double alt, ulong hashSeed)
+        public static ulong GenerateLocation1(byte[] authTicket, double lat, double lng, double alt, uint hashSeed)
         {
-            var seed = BitConverter.ToUInt32(new xxHash(32, hashSeed).ComputeHash(authTicket), 0);
-            var xxh32 = new xxHash(32, seed);
+            var first_hash = NiaHash.compute_hash32(authTicket, hashSeed);
 
             var locationBytes = new List<byte>();
             locationBytes.AddRange(BitConverter.GetBytes(lat).Reverse());
             locationBytes.AddRange(BitConverter.GetBytes(lng).Reverse());
             locationBytes.AddRange(BitConverter.GetBytes(alt).Reverse());
 
-            return BitConverter.ToUInt32(xxh32.ComputeHash(locationBytes.ToArray()), 0);
+            return NiaHash.compute_hash32(locationBytes.ToArray(), first_hash);
         }
 
-        public static uint GenerateLocation2(double lat, double lng, double alt, ulong hashSeed)
+        public static ulong GenerateLocation2(double lat, double lng, double alt, uint hashSeed)
         {
-            var xxh32 = new xxHash(32, hashSeed);
-
             var locationBytes = new List<byte>();
             locationBytes.AddRange(BitConverter.GetBytes(lat).Reverse());
             locationBytes.AddRange(BitConverter.GetBytes(lng).Reverse());
             locationBytes.AddRange(BitConverter.GetBytes(alt).Reverse());
 
-            return BitConverter.ToUInt32(xxh32.ComputeHash(locationBytes.ToArray()), 0);
+            return NiaHash.compute_hash32(locationBytes.ToArray(), hashSeed);
         }
 
-        public static ulong GenerateRequestHash(byte[] authTicket, byte[] request, ulong hashSeed)
+        public static ulong GenerateRequestHash(byte[] authTicket, byte[] request, uint hashSeed)
         {
-            var seed = BitConverter.ToUInt64(new xxHash(64, hashSeed).ComputeHash(authTicket), 0);
-            var xxh64 = new xxHash(64, seed);
-            return BitConverter.ToUInt64(xxh64.ComputeHash(request), 0);
+            var first_hash = NiaHash.compute_hash64(authTicket, hashSeed);
+            return NiaHash.compute_hash64(request.ToArray(), first_hash);
         }
     }
 }

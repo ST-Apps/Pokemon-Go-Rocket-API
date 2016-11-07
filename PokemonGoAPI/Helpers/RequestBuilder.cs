@@ -19,6 +19,7 @@ namespace PokemonGo.RocketAPI.Helpers
         private readonly double _latitude;
         private readonly double _longitude;
         private readonly Random _random = new Random();
+        private uint _requestId = 0;
         private static byte[] _sessionHash = null;
 
         public RequestBuilder(string authToken, AuthType authType, double latitude, double longitude, double accuracy,
@@ -158,12 +159,30 @@ namespace PokemonGo.RocketAPI.Helpers
                 RequestType = 6,
                 Unknown2 = new Unknown6.Types.Unknown2
                 {
-                     EncryptedSignature = ByteString.CopyFrom(Crypt.Encrypt(sig.ToByteArray()))
+                     EncryptedSignature = ByteString.CopyFrom(PCrypt.encrypt(sig.ToByteArray(), (uint)_deviceInfo.TimeSnapshot))
                 }
             };
 
             return requestEnvelope;
         }
+
+        private ulong GetNextRequestId()
+        {
+            int rand = 0;
+            if (_requestId == 0)
+            {
+                rand = 0x000041A7; // Initial value for Apple
+                _requestId++;
+            }
+            else
+            {
+                rand = _random.Next(0, Int32.MaxValue);
+            }
+
+            _requestId++;
+            return (((uint)rand | ((_requestId & 0xFFFFFFFF) >> 31)) << 32) | _requestId;
+        }
+
 
         public RequestEnvelope GetRequestEnvelope(params Request[] customRequests)
         {
@@ -171,13 +190,13 @@ namespace PokemonGo.RocketAPI.Helpers
             {
                 StatusCode = 2, //1
 
-                RequestId = 1469378659230941192, //3
+                RequestId = GetNextRequestId(), //3
                 Requests = {customRequests}, //4
 
                 //Unknown6 = , //6
                 Latitude = _latitude, //7
                 Longitude = _longitude, //8
-                Accuracy = _accuracy, //9
+                Accuracy = (int)_accuracy, //9
                 AuthTicket = _authTicket, //11
                 MsSinceLastLocationfix = _random.Next(500, 1000) //12
         });
@@ -189,13 +208,13 @@ namespace PokemonGo.RocketAPI.Helpers
             {
                 StatusCode = 2, //1
 
-                RequestId = 1469378659230941192, //3
+                RequestId = GetNextRequestId(), //3
                 Requests = { customRequests }, //4
 
                 //Unknown6 = , //6
                 Latitude = _latitude, //7
                 Longitude = _longitude, //8
-                Accuracy = _accuracy, //9
+                Accuracy = (int)_accuracy, //9
                 AuthInfo = new AuthInfo
                 {
                     Provider = _authType == AuthType.Google ? "google" : "ptc",

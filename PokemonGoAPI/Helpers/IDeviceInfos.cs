@@ -60,7 +60,7 @@ namespace PokemonGo.RocketAPI.Helpers
     public interface IVersionData
     {
         long VersionHash { get; }
-        ulong HashSeed1 { get; }
+        uint HashSeed1 { get; }
     }
 
     public interface IDeviceInfo

@@ -55,6 +55,10 @@ namespace PokemonGo_UWP.Utils
                 {
                     return new UpdateInfo(UpdateStatus.NoUpdate);
                 }
+#if DEBUG
+                // For debugging purposes we dont check version now
+                return new UpdateInfo(UpdateStatus.NoUpdate);
+#endif
 
 
                 // Check if version is newer
