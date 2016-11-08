@@ -1,0 +1,50 @@
+﻿<UserControl
+    x:Class="PokemonGo_UWP.Views.BattleArena"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PokemonGo_UWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Width="400" Height="400">
+
+    <Grid>
+        <Ellipse x:Name="OuterEdgeLight" Width="370" Height="370" Fill="#3090FF" VerticalAlignment="Center" Margin="15"/>
+        <Ellipse x:Name="OuterEdgeDark" Width="365" Height="365" Fill="#3060FF" VerticalAlignment="Center" Margin="18,18,17,17"/>
+        <Ellipse x:Name="OuterWhite" Width="360" Height="360" Margin="20">
+            <Ellipse.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="Silver" Offset="1"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Width="290" Height="290" Fill="Gray" Margin="55"/>
+        <Ellipse x:Name="InnerEdgeLight" Width="280" Height="280" Fill="#3090FF" Margin="60"/>
+        <Ellipse x:Name="InnerEdgeDark" Width="275" Height="275" Fill="#3060FF" Margin="63,63,62,62"/>
+        <Ellipse x:Name="Floor" Width="270" Height="270" Margin="65" >
+            <Ellipse.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#5CC388" Offset="0"/>
+                    <GradientStop Color="#25613D" Offset="1"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Path Data="M0.012413,77.6017 L47.7449,77.6017 L47.7686,77.9134 C49.1769,91.7804 60.8881,102.602 75.1267,102.602 C89.3653,102.602 101.076,91.7804 102.485,77.9134 L102.508,77.6017 L149.908,77.6017 L149.863,78.7945 C147.854,118.422 115.087,149.935 74.9602,149.935 C34.8332,149.935 2.06647,118.422 0.057739,78.7945 z M144.577,67.6017 L149.606,67.6017 L149.608,67.6179 C149.723,68.8026 149.81,69.9953 149.869,71.1955 L149.92,72.6017 L144.917,72.6017 L144.869,71.3328 C144.812,70.2143 144.729,69.1027 144.621,67.9986 z M0.314308,67.6017 L5.34313,67.6017 L5.29934,67.9986 C5.19074,69.1027 5.10779,70.2143 5.05109,71.3328 L5.00287,72.6017 L0,72.6017 L0.05176,71.1955 C0.110692,69.9953 0.197836,68.8026 0.312543,67.6179 z M77.9602,0 L78.8196,0.03266 C114.21,1.82659 143.128,28.1521 148.908,62.3434 L148.949,62.6017 L143.873,62.6017 L143.666,61.4694 C137.611,30.3951 110.999,6.67033 78.5622,5.02608 L77.9602,5.00321 z M71.9602,0 L71.9602,5.0032 L71.3578,5.02608 C38.9206,6.67033 12.3089,30.3951 6.25395,61.4694 L6.04713,62.6017 L0.972047,62.6017 L1.01257,62.3434 C6.79249,28.1521 35.7105,1.82659 71.1007,0.03266 z" Fill="White" Margin="125.04,125.065,125.04,125" Stretch="Fill" UseLayoutRounding="False" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition"/>
+        <Path Data="M75,0 C90.2499,2E-06 103.047,10.5033 106.551,24.6705 L106.661,25.167 L150,25.167 L150,30.167 L102.548,30.167 L102.525,29.855 C101.116,15.9879 89.4053,5.16667 75.1667,5.16667 C60.9281,5.16667 49.2169,15.9879 47.8087,29.855 L47.7849,30.167 L0,30.167 L0,25.167 L43.3386,25.167 L43.4491,24.6705 C46.9532,10.5033 59.75,2E-06 75,0 z" Fill="White" Height="30.167" Margin="125,167.5,125,0" Stretch="Fill" UseLayoutRounding="False" VerticalAlignment="Top" d:LayoutOverrides="LeftPosition, RightPosition" />
+        <Ellipse Fill="White" Width="40" Height="40" Margin="180"/>
+        <Path Fill="White" Data="M0,0 L0.00238,0.00141 C0.930176,0.565153 1.85065,1.13976 2.7636,1.72507 L5,3.19711 L5,23.1237 L0,23.1237 z" HorizontalAlignment="Right" Height="23.124" Margin="0,84.543,125,0" Stretch="Fill" UseLayoutRounding="False" VerticalAlignment="Top" Width="5" />
+        <Path Fill="White" Data="M5,0 L5,23.1237 L0,23.1237 L0,3.1971 L2.23636,1.7251 C3.14931,1.13979 4.06977,0.565178 4.99758,0.001434 z" HorizontalAlignment="Left" Height="23.124" Margin="125,84.543,0,0" Stretch="Fill" UseLayoutRounding="False" VerticalAlignment="Top" Width="5"/>
+        <Path Fill="White" Data="M0,0 L5,0 L5,22.7903 L4.99759,22.7889 C4.06979,22.2252 3.14932,21.6506 2.23637,21.0652 L0,19.5932 z" HorizontalAlignment="Left" Height="22.79" Margin="125,0,0,84.543" Stretch="Fill" UseLayoutRounding="False" VerticalAlignment="Bottom" Width="5"/>
+        <Path Data="M0,0 L5,0 L5,19.5932 L2.76361,21.0653 C1.85066,21.6506 0.930191,22.2252 0.002396,22.7889 L0,22.7903 z" Fill="White" HorizontalAlignment="Right" Height="22.79" Margin="0,0,125,84.543" Stretch="Fill" UseLayoutRounding="False" VerticalAlignment="Bottom" Width="5"/>
+        <Grid Width="100" Height="205" Margin="150,98,150,97">
+            <Polygon Fill="Yellow" Points="0,0 10,0 5,10" StrokeThickness="0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Polygon Fill="Yellow" Points="0,0 0,10 10,5" StrokeThickness="0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+            <Polygon Fill="Yellow" Points="10,0 10,10 0,5" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+            <Polygon Fill="#DDDD00" Points="0,10 10,10 5,0" StrokeThickness="0" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+            <Polygon Fill="#DDDD00" Points="0,0 0,10 10,5" StrokeThickness="0" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+            <Polygon Fill="#DDDD00" Points="10,0 10,10 0,5" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1596,8 +1596,8 @@ namespace PokemonGo_UWP.Utils
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            var currentTime = int.Parse(DateTime.Now.ToString("HH"));
-            return currentTime > 7 && currentTime < 19 ? MapColorScheme.Light : MapColorScheme.Dark;
+            return Helpers.UIHelper.IsDaySky(DateTime.Now, TimeZoneInfo.Local, Helpers.LocationServiceHelper.Instance?.Geoposition) ? 
+                MapColorScheme.Light : MapColorScheme.Dark;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)

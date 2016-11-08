@@ -1,0 +1,566 @@
+﻿<Page
+    x:Class="PokemonGo_UWP.Views.BattlePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PokemonGo_UWP.Views"
+    xmlns:controls="using:PokemonGo_UWP.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <viewModels:BattlePageViewModel x:Name="ViewModel"></viewModels:BattlePageViewModel>
+    </Page.DataContext>
+    <Page.Resources>
+        <!--Style-->
+        <Style x:Key="BattleBeginTextStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="white"></Setter>
+             <!--How to make stroked text ?-->
+        </Style>
+        <Style x:Key="IndicatorTextStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="white"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+        </Style>
+
+        <!--Storyboard-->
+        <Storyboard x:Name="BattleBeginStoryboard">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TextBattle" Storyboard.TargetProperty="Visibility">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TextGO" Storyboard.TargetProperty="Visibility">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="TextBattle" Storyboard.TargetProperty="(TextBlock.RenderTransform).(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:1.3"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="5" KeyTime="0:0:1.5"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="TextBattle" Storyboard.TargetProperty="(TextBlock.RenderTransform).(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:1.3"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="5" KeyTime="0:0:1.5"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="TextBattle" Storyboard.TargetProperty="Opacity">
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:1.3"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:1.5"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="TextGO" Storyboard.TargetProperty="(TextBlock.RenderTransform).(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:2.8"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="5" KeyTime="0:0:3"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="TextGO" Storyboard.TargetProperty="(TextBlock.RenderTransform).(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:2.8"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="5" KeyTime="0:0:3"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="TextGO" Storyboard.TargetProperty="Opacity">
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:2.8"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:3"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <!--Dodge Storyboard-->
+        <Storyboard x:Name="Pokemon1DodgeLeftStoryboard">
+            <DoubleAnimation Storyboard.TargetName="ArenaElement" Storyboard.TargetProperty="(BattleArena.RenderTransform).(TransformGroup.Children)[0].(RotateTransform.Angle)"
+                             By="-20" BeginTime="0:0:0.1" Duration="0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseIn"></CubicEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Pokemon1" Storyboard.TargetProperty="(Grid.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="-20" KeyTime="0:0:0.15">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut"></BackEase>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="-10" KeyTime="0:0:0.2"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.25"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Pokemon1" Storyboard.TargetProperty="(Grid.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="-20" KeyTime="0:0:0.2"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.3">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"></CubicEase>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="Pokemon1DodgeRightStoryboard">
+            <DoubleAnimation Storyboard.TargetName="ArenaElement" Storyboard.TargetProperty="(BattleArena.RenderTransform).(TransformGroup.Children)[0].(RotateTransform.Angle)"
+                             By="20" BeginTime="0:0:0.1" Duration="0:0:0.1">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseIn"></CubicEase>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Pokemon1" Storyboard.TargetProperty="(Grid.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="-10" KeyTime="0:0:0.15">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut"></BackEase>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="10" KeyTime="0:0:0.2"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.25"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Pokemon1" Storyboard.TargetProperty="(Grid.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="30" KeyTime="0:0:0.2"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.3">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"></CubicEase>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <!--Attack Storyboard-->
+        <Storyboard x:Name="Pokemon1FastAttackStoryboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Pokemon1" Storyboard.TargetProperty="(Grid.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="30" KeyTime="0:0:0.15">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ElasticEase EasingMode="EaseInOut"></ElasticEase>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.2"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="Pokemon1ChargeAttackStoryboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="TextPokemon1Move" Storyboard.TargetProperty="Opacity">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:0.2"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:1.8"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:2"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Pokemon1" Storyboard.TargetProperty="(Grid.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.4"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="-20" KeyTime="0:0:0.8"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="50" KeyTime="0:0:1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ElasticEase EasingMode="EaseOut"></ElasticEase>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="30" KeyTime="0:0:1.2"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:1.4"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Name="Pokemon2FastAttackStoryboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Pokemon2" Storyboard.TargetProperty="(Grid.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="-20" KeyTime="0:0:0.15">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ElasticEase EasingMode="EaseInOut"></ElasticEase>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.2"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="Pokemon2ChargeAttackStoryboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="TextPokemon2Move" Storyboard.TargetProperty="Opacity">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:0.2"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:1.8"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:2"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Pokemon2" Storyboard.TargetProperty="(Grid.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.4"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="10" KeyTime="0:0:0.8"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="-30" KeyTime="0:0:1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ElasticEase EasingMode="EaseOut"></ElasticEase>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="-30" KeyTime="0:0:1.2"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:1.4"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <!--Focus Storyboard-->
+        <Storyboard x:Name="Pokemon1FocusStoryboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="UpperFocus" Storyboard.TargetProperty="(Rectangle.Height)" 
+                                           EnableDependentAnimation="True">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="150" KeyTime="0:0:0.3"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="UpperFocus" Storyboard.TargetProperty="(Rectangle.Fill).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame Value="#00000000" KeyTime="0:0:0"></EasingColorKeyFrame>
+                <EasingColorKeyFrame Value="Black" KeyTime="0:0:0.3"></EasingColorKeyFrame>
+            </ColorAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="LowerFocus" Storyboard.TargetProperty="(Rectangle.Height)" 
+                                           EnableDependentAnimation="True">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="150" KeyTime="0:0:0.3"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="LowerFocus" Storyboard.TargetProperty="(Rectangle.Fill).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame Value="#00000000" KeyTime="0:0:0"></EasingColorKeyFrame>
+                <EasingColorKeyFrame Value="Black" KeyTime="0:0:0.3"></EasingColorKeyFrame>
+            </ColorAnimationUsingKeyFrames>            
+        </Storyboard>
+        <Storyboard x:Name="Pokemon1UnfocusStoryboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="UpperFocus" Storyboard.TargetProperty="(Rectangle.Height)"
+                                           EnableDependentAnimation="True">
+                <EasingDoubleKeyFrame Value="150" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.3"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="UpperFocus" Storyboard.TargetProperty="(Rectangle.Fill).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame Value="Black" KeyTime="0:0:0"></EasingColorKeyFrame>
+                <EasingColorKeyFrame Value="#00000000" KeyTime="0:0:0.3"></EasingColorKeyFrame>
+            </ColorAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="LowerFocus" Storyboard.TargetProperty="(Rectangle.Height)"
+                                           EnableDependentAnimation="True">
+                <EasingDoubleKeyFrame Value="150" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.3"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="LowerFocus" Storyboard.TargetProperty="(Rectangle.Fill).(SolidColorBrush.Color)">
+                <EasingColorKeyFrame Value="Black" KeyTime="0:0:0"></EasingColorKeyFrame>
+                <EasingColorKeyFrame Value="#00000000" KeyTime="0:0:0.3"></EasingColorKeyFrame>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+                
+        <!--Damage Storyboard-->
+        <Storyboard x:Name="Pokemon1DamageStoryboard">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Pokemon1DamageLayer" Storyboard.TargetProperty="Visibility">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="Pokemon1DamageLayer" Storyboard.TargetProperty="(BitmapIcon.Foreground).(SolidColorBrush.Color)">
+                <DiscreteColorKeyFrame Value="#66FF0000" KeyTime="0:0:0"></DiscreteColorKeyFrame>
+                <DiscreteColorKeyFrame Value="White" KeyTime="0:0:0.1"></DiscreteColorKeyFrame>
+                <EasingColorKeyFrame Value="Transparent" KeyTime="0:0:0.2"></EasingColorKeyFrame>
+            </ColorAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Pokemon1" Storyboard.TargetProperty="(Grid.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="-5" KeyTime="0:0:0.15">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ElasticEase EasingMode="EaseInOut"></ElasticEase>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.2"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="Pokemon2DamageStoryboard">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Pokemon2DamageLayer" Storyboard.TargetProperty="Visibility">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Collapsed</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="Pokemon2DamageLayer" Storyboard.TargetProperty="(BitmapIcon.Foreground).(SolidColorBrush.Color)">
+                <DiscreteColorKeyFrame Value="#66FF0000" KeyTime="0:0:0"></DiscreteColorKeyFrame>
+                <DiscreteColorKeyFrame Value="White" KeyTime="0:0:0.1"></DiscreteColorKeyFrame>
+                <EasingColorKeyFrame Value="Transparent" KeyTime="0:0:0.2"></EasingColorKeyFrame>
+            </ColorAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Pokemon2" Storyboard.TargetProperty="(Grid.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="5" KeyTime="0:0:0.15">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ElasticEase EasingMode="EaseInOut"></ElasticEase>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.2"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <!--Appear / Disappear Storyboard-->
+        <Storyboard x:Name="Pokemon1AppearStoryboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Pokemon1Image" Storyboard.TargetProperty="Opacity">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.3"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:0.5"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Pokemon1Glare" Storyboard.TargetProperty="Opacity">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:0.2"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:0.4"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.6"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Storyboard.TargetName="Pokemon1Glare" Storyboard.TargetProperty="(Image.RenderTransform).(TransformGroup.Children)[0].(RotateTransform.Angle)"
+                             From="0" To="180" Duration="0:0:0.5"></DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="Pokemon1Glare" Storyboard.TargetProperty="(Image.RenderTransform).(TransformGroup.Children)[1].(ScaleTransform.ScaleX)"
+                             From="0" To="2" Duration="0:0:0.5"></DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="Pokemon1Glare" Storyboard.TargetProperty="(Image.RenderTransform).(TransformGroup.Children)[1].(ScaleTransform.ScaleY)"
+                             From="0" To="2" Duration="0:0:0.5"></DoubleAnimation>
+        </Storyboard>
+        <Storyboard x:Name="Pokemon1DisappearStoryboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Pokemon1Image" Storyboard.TargetProperty="Opacity">
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.5"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Name="Pokemon2AppearStoryboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Pokemon2Image" Storyboard.TargetProperty="Opacity">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.3"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:0.5"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Pokemon2Glare" Storyboard.TargetProperty="Opacity">
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:0.2"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:0.4"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.6"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation Storyboard.TargetName="Pokemon2Glare" Storyboard.TargetProperty="(Image.RenderTransform).(TransformGroup.Children)[0].(RotateTransform.Angle)"
+                             From="0" To="180" Duration="0:0:0.5"></DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="Pokemon2Glare" Storyboard.TargetProperty="(Image.RenderTransform).(TransformGroup.Children)[1].(ScaleTransform.ScaleX)"
+                             From="0" To="2" Duration="0:0:0.5"></DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetName="Pokemon2Glare" Storyboard.TargetProperty="(Image.RenderTransform).(TransformGroup.Children)[1].(ScaleTransform.ScaleY)"
+                             From="0" To="2" Duration="0:0:0.5"></DoubleAnimation>
+        </Storyboard>
+        <Storyboard x:Name="Pokemon2DisappearStoryboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Pokemon2Image" Storyboard.TargetProperty="Opacity">
+                <EasingDoubleKeyFrame Value="1" KeyTime="0:0:0"></EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame Value="0" KeyTime="0:0:0.5"></EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Page.Resources>
+    <Grid x:Name="LayoutRoot">
+        <controls:OutdoorBackground />
+
+        <Viewbox MaxWidth="420" Margin="0,40,0,0">
+            <Grid Width="360">
+                <!--Arena-->
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Grid.RenderTransform>
+                        <TranslateTransform X="150"></TranslateTransform>
+                    </Grid.RenderTransform>
+                    <Grid.Projection>
+                        <PlaneProjection RotationX="-65" CenterOfRotationY=".5"  >
+                        </PlaneProjection>
+                    </Grid.Projection>
+                    <local:BattleArena Width="400" Height="400" x:Name="ArenaElement"
+                               HorizontalAlignment="Center" VerticalAlignment="Center"
+                               Team="{Binding Team2}">
+                        <local:BattleArena.RenderTransform>
+                            <TransformGroup>
+                                <RotateTransform Angle="-45" CenterX="200" CenterY="200"></RotateTransform>
+                                <ScaleTransform ScaleX="3" ScaleY="3" CenterX="200" CenterY="200" ></ScaleTransform>
+                            </TransformGroup>
+                        </local:BattleArena.RenderTransform>
+                    </local:BattleArena>
+                </Grid>
+
+                <!--Pokemons-->
+                <Grid x:Name="Pokemon2" HorizontalAlignment="Center" Width="100" Height="100" Margin="260,0,0,80">
+                    <Grid.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform Y="0"></TranslateTransform>
+                        </TransformGroup>
+                    </Grid.RenderTransform>
+                    <Image x:Name="Pokemon2Image" 
+                   Source="{Binding Pokemon2Id, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}" ></Image>
+                    <BitmapIcon x:Name="Pokemon2DamageLayer"
+                        UriSource="{Binding Pokemon2Id, Converter={StaticResource PokemonIdToPokemonSpriteConverter}, ConverterParameter=uri}" 
+                        Foreground="Transparent" Visibility="Collapsed">
+                    </BitmapIcon>
+                    <Image x:Name="Pokemon2Glare" Source="/Assets/UI/glare.png" HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Width="160" Height="160" Opacity="0">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <RotateTransform Angle="0" CenterX="80" CenterY="80"></RotateTransform>
+                                <ScaleTransform ScaleX="1" ScaleY="1" CenterX="80" CenterY="80"></ScaleTransform>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                </Grid>
+
+                <Grid x:Name="Pokemon1" HorizontalAlignment="Center" Width="160" Height="160" Margin="0,120,100,0" >
+                    <Grid.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform Y="0"></TranslateTransform>
+                        </TransformGroup>
+                    </Grid.RenderTransform>
+                    <Image x:Name="Pokemon1Image" 
+                   Source="{Binding Pokemon1Id, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}">
+                        <Image.RenderTransform>
+                            <ScaleTransform ScaleX="-1" CenterX="60"></ScaleTransform>
+                        </Image.RenderTransform>
+                    </Image>
+                    <BitmapIcon x:Name="Pokemon1DamageLayer" 
+                        UriSource="{Binding Pokemon1Id, Converter={StaticResource PokemonIdToPokemonSpriteConverter}, ConverterParameter=uri}"
+                        Foreground="Transparent" Visibility="Collapsed">
+                        <BitmapIcon.RenderTransform>
+                            <ScaleTransform ScaleX="-1" CenterX="60"></ScaleTransform>
+                        </BitmapIcon.RenderTransform>
+                    </BitmapIcon>
+                    <Image x:Name="Pokemon1Glare" Source="/Assets/UI/glare.png" HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Width="200" Height="200" Opacity="0">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <RotateTransform Angle="0" CenterX="100" CenterY="100"></RotateTransform>
+                                <ScaleTransform ScaleX="1" ScaleY="1" CenterX="100" CenterY="100"></ScaleTransform>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                </Grid>
+
+                <!--Move Text-->
+                <Border x:Name="TextPokemon1Move" Background="#44000000" 
+                        CornerRadius="10" BorderThickness="0" MaxWidth="180"
+                        HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0"
+                        Margin="0,0,200,150">
+                    <TextBlock Foreground="White" FontSize="18" Margin="10" TextWrapping="Wrap"
+                               Text="Pokemon1 uses Charge Attack"></TextBlock>
+                </Border>
+                <Border x:Name="TextPokemon2Move" Background="#44000000" 
+                        CornerRadius="10" BorderThickness="0" MaxWidth="180" 
+                        HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0"
+                        Margin="160,0,0,300">
+                    <TextBlock Foreground="White" FontSize="18" Margin="10" TextWrapping="Wrap"
+                               Text="Pokemon2 uses Charge Attack"></TextBlock>
+                </Border>
+            </Grid>
+        </Viewbox>
+
+        <!--Charge focus-->
+        <Rectangle x:Name="UpperFocus" VerticalAlignment="Top" 
+                   Height="150" Fill="Transparent"></Rectangle>
+        <Rectangle x:Name="LowerFocus" VerticalAlignment="Bottom" 
+                   Height="150" Fill="Transparent"></Rectangle>
+
+        <!--Indicators-->
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10,30,10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0"  Style="{StaticResource IndicatorTextStyle}"
+                       HorizontalAlignment="Left" 
+                       Text="{Binding Pokemon1Name}"></TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="2"  Style="{StaticResource IndicatorTextStyle}"
+                       HorizontalAlignment="Right" 
+                       Text="{Binding Pokemon2Name}"></TextBlock>
+
+            <controls:HealthIndicatorBar Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" 
+                                         Value="{Binding Pokemon1Health}" MaxValue="100"
+                                         RenderTransformOrigin="0.5,0">
+                <controls:HealthIndicatorBar.RenderTransform>
+                    <ScaleTransform ScaleX="-1"></ScaleTransform>
+                </controls:HealthIndicatorBar.RenderTransform>
+            </controls:HealthIndicatorBar>
+            <controls:HealthIndicatorBar Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch"
+                                         Value="{Binding Pokemon2Health}" MaxValue="100">
+            </controls:HealthIndicatorBar>
+            <TextBlock Grid.Row="0" Grid.RowSpan="3" Grid.Column="1"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Foreground="White" FontSize="28"
+                       Text="{Binding TimerValue}"></TextBlock>
+
+            <TextBlock Grid.Row="2" Grid.Column="0"  Style="{StaticResource IndicatorTextStyle}"
+                       HorizontalAlignment="Left">
+                <Run FontSize="10" Text="CP"></Run>
+                <Run Text="{Binding Pokemon1Cp}"></Run>
+            </TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="2"  Style="{StaticResource IndicatorTextStyle}"
+                       HorizontalAlignment="Right">
+                <Run Text="{Binding Pokemon2Cp}"></Run>
+            </TextBlock>
+
+            <controls:ChargeAvailableBar Grid.Row="2" Grid.Column="0" 
+                                         HorizontalAlignment="Right" VerticalAlignment="Center" 
+                                         Value="{Binding ChargeAvailableValue}"
+                                         MaxValue="{Binding MaxChargeAvailableValue}"/>
+
+            <TextBlock Grid.Row="3" Grid.Column="0"  Style="{StaticResource IndicatorTextStyle}"
+                       HorizontalAlignment="Left" 
+                       Foreground="{Binding Team1, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}"
+                       Text="{Binding Trainer1Name}"></TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="2"  Style="{StaticResource IndicatorTextStyle}"
+                       HorizontalAlignment="Right" 
+                       Foreground="{Binding Team2, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}"
+                       Text="{Binding Trainer2Name}"></TextBlock>
+        </Grid>
+
+        <!--Buttons-->
+        <Grid HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button x:Name="ButtonRunAway" Width="80" Height="80"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Style="{ThemeResource ImageButtonStyle}">
+                <Image Source="/Assets/Buttons/btn_run_away.png"></Image>
+            </Button>
+            <Button x:Name="ButtonSwap" Width="80" Height="80" Grid.Row="1" Margin="10"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Style="{ThemeResource ImageButtonStyle}">
+                <Image Source="/Assets/Buttons/btn_swap.png"></Image>
+            </Button>
+        </Grid>
+
+        <!--Battle GO Text -->
+        <TextBlock x:Name="TextBattle" Foreground="White" FontSize="70" Style="{StaticResource BattleBeginTextStyle}"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Visibility="Collapsed" RenderTransformOrigin="0.5,0.5">
+            <Run Text="Battle"></Run>
+            <Run Text="1"></Run>
+            <TextBlock.RenderTransform>
+                <ScaleTransform ScaleX="1" ScaleY="1"></ScaleTransform>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock x:Name="TextGO" Foreground="White" FontSize="100" Style="{StaticResource BattleBeginTextStyle}"
+                   HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   Visibility="Collapsed" RenderTransformOrigin="0.5,0.5"
+                   Text="GO">
+            <TextBlock.RenderTransform>
+                <ScaleTransform ScaleX="1" ScaleY="1"></ScaleTransform>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+
+        <!--Dialogs-->
+
+    </Grid>
+</Page>
