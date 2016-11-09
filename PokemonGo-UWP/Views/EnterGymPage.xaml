@@ -91,9 +91,7 @@
                                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,350,10,0"
                                            Foreground="#cccccc" FontSize="18" >
                                     <Run Text="BATTLES WON "></Run>
-                                    <!--TODO Missing binding vars-->
-                                    <!--<Run Text="{Binding GymBattleWon}"></Run>-->
-                                    <Run Text="N/A"></Run>
+                                    <Run Text="{Binding PokemonDefendedCount}"></Run>
                                 </TextBlock>
                             </Grid>
                         </DataTemplate>

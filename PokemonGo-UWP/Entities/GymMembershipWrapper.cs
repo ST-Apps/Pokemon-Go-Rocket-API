@@ -52,10 +52,13 @@ namespace PokemonGo_UWP.Entities
         public PokemonId PokemonId => _pokemonData.PokemonId;
         public int PokemonCp => _pokemonData.Cp;
         public string PokemonName => _pokemonData.Name;
+        public int PokemonDefendedCount => _pokemonData.BattlesDefended;
+
 
         public string PlayerName => _gymMembership.TrainerPublicProfile.Name;
         public int PlayerLevel => _gymMembership.TrainerPublicProfile.Level;
         public PlayerAvatar PlayerAvatar => _gymMembership.TrainerPublicProfile.Avatar;
+
 
         public GymPokeType PokeType { get; set; }
 
