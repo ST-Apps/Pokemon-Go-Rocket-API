@@ -56,10 +56,10 @@
                                     <Image Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,-20"
                                            gif:AnimationBehavior.SourceUri="/Assets/UI/avatar.gif" Height="270"></Image>
                                     <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
-                                           Foreground="{Binding ElementName=gymPage, Path=DataContext.CurrentGym.OwnedByTeam, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}"
+                                           Foreground="{Binding ElementName=gymPage, Path=DataContext.CurrentGym.OwnedByTeam, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}, ConverterParameter=light}"
                                            FontSize="80" Opacity="0.3" Text="{Binding PlayerLevel}"></TextBlock>
                                     <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"
-                                           Foreground="{Binding ElementName=gymPage, Path=DataContext.CurrentGym.OwnedByTeam, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}"
+                                           Foreground="{Binding ElementName=gymPage, Path=DataContext.CurrentGym.OwnedByTeam, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}, ConverterParameter=light}"
                                            FontSize="28" Text="{Binding PlayerName}"></TextBlock>
                                 </Grid>
                                 <!--Pokemon-->
@@ -170,7 +170,7 @@
                     HorizontalAlignment="Left" Margin="-5">
                 <Border Background="#88333333" CornerRadius="5" >
                     <TextBlock Margin="16,2,10,2" FontSize="16" Opacity="0.8"
-                               Foreground="{Binding CurrentGym.OwnedByTeam, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}">
+                               Foreground="{Binding CurrentGym.OwnedByTeam, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}, ConverterParameter=light}">
                         <Run Text="{Binding CurrentGym.GymPoints}"></Run>
                         <Run Text=" / "></Run>
                         <Run Text="{Binding CurrentGym.GymMaxPoints}"></Run>

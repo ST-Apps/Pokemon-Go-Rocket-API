@@ -812,6 +812,16 @@ namespace PokemonGo_UWP.Utils
                     color = Color.FromArgb(255, 0, 0, 0);
                     break;
             }
+            if ("light".Equals(parameter))
+            {
+                if (teamColor == TeamColor.Blue)
+                {
+                    color.R = (byte)Math.Min(255, color.R * 2.4);
+                    color.G = (byte)Math.Min(255, color.G * 2);
+                    color.B = (byte)Math.Min(255, color.B * 2.4);
+                }
+                // No problem for other colors
+            }
             return new SolidColorBrush(color);
         }
 
