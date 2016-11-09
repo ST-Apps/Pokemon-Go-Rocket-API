@@ -1,4 +1,4 @@
-﻿using POGOProtos.Enums;
+using POGOProtos.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,7 @@ namespace PokemonGo_UWP.ViewModels
     class BattlePageViewModel : ViewModelBase
     {
         #region "Binding vars"
-        // TODO Binding vars just for demonstration, need to be rewritten
+        
         public TeamColor Team1 { get; set; }
         public string Trainer1Name { get; set; }
         public PokemonId Pokemon1Id { get; set; }
