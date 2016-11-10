@@ -11,6 +11,7 @@ namespace PokemonGo_UWP.ViewModels
     class BattlePageViewModel : ViewModelBase
     {
         #region "Binding vars"
+        // Battle Vars
         // TODO Binding vars just for demonstration, need to be rewritten
         public TeamColor Team1 { get; set; }
         public string Trainer1Name { get; set; }
@@ -49,6 +50,17 @@ namespace PokemonGo_UWP.ViewModels
             set { Set(ref _chargeAvailableValue, value); }
         }
         public double MaxChargeAvailableValue { get; set; }
+
+        // Conclusion Vars
+        public string BattleResult { get; set; }
+        public string LocationName { get; set; }
+        public string LocationUrl { get; set; }
+        public int GymLevel { get; set; }
+        public int PrestigeDecrease { get; set; }
+        public int PrestigeRemain { get; set; }
+        public int PrestigeMax { get; set; }
+        public int XPGain { get; set; }
+        public int PokemonDefeated { get; set; }
         #endregion
 
         private System.Threading.Timer clockTimer;
@@ -85,6 +97,16 @@ namespace PokemonGo_UWP.ViewModels
                     if (newval >= MaxChargeAvailableValue) newval = MaxChargeAvailableValue;
                     ChargeAvailableValue = newval;
                 }, null, 500, 500);
+
+            BattleResult = "YOU WIN!";
+            LocationName = "Place name";
+            LocationUrl = "";
+            GymLevel = 3;
+            PrestigeDecrease = -2000;
+            PrestigeRemain = 2000;
+            PrestigeMax = 4000;
+            XPGain = 300;
+            PokemonDefeated = 2;
         }
 
     }

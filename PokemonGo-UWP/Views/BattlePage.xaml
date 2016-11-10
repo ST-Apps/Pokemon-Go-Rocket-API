@@ -21,6 +21,10 @@
             <Setter Property="Foreground" Value="white"></Setter>
             <Setter Property="FontSize" Value="18"></Setter>
         </Style>
+        <Style x:Key="ConclusionTextStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#666677"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+        </Style>
 
         <!--Storyboard-->
         <Storyboard x:Name="BattleBeginStoryboard">
@@ -560,7 +564,113 @@
             </TextBlock.RenderTransform>
         </TextBlock>
 
-        <!--Dialogs-->
-
+        <!--Swap Pokemon Dialog-->
+        
+        <!--Battle Conclusion Dialog-->
+        <Grid Visibility="Collapsed">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Assets/Backgrounds/ui_bg_gym_resolve.png"></ImageBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="4*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="1" Text="{Binding BattleResult}" 
+                       Style="{StaticResource ConclusionTextStyle}"
+                       HorizontalAlignment="Center" VerticalAlignment="Top"
+                       FontSize="32">
+            </TextBlock>
+            <Grid Grid.Row="2" Grid.RowSpan="3" Width="140" Height="140"
+                  HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Ellipse Fill="White" Stroke="#66000000" StrokeThickness="3">
+                </Ellipse>
+                <Ellipse Margin="8" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="{Binding LocationUrl}"
+                                    Stretch="UniformToFill" />
+                    </Ellipse.Fill>
+                </Ellipse>
+            </Grid>
+            <StackPanel Grid.Row="2" VerticalAlignment="Center">
+                <TextBlock Text="{Binding LocationName}" 
+                           Style="{StaticResource ConclusionTextStyle}"
+                           HorizontalAlignment="Center">
+                </TextBlock>
+                <TextBlock Style="{StaticResource ConclusionTextStyle}"
+                           HorizontalAlignment="Center"
+                           FontWeight="SemiBold">
+                    <Run Text="Gym level"></Run>
+                    <Run Text="{Binding GymLevel}"></Run>
+                </TextBlock>
+            </StackPanel>
+            <Border Grid.Row="3" Background="White" CornerRadius="10"
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="{Binding PrestigeDecrease}" Margin="4,0,4,0"
+                           Style="{StaticResource ConclusionTextStyle}"
+                           FontWeight="SemiBold"></TextBlock>
+            </Border>
+            <StackPanel Grid.Row="4" VerticalAlignment="Center">
+                <TextBlock Text="Gym Prestige"
+                           Style="{StaticResource ConclusionTextStyle}"
+                           HorizontalAlignment="Center"
+                           FontSize="16" FontWeight="Light">
+                </TextBlock>
+                <TextBlock Style="{StaticResource ConclusionTextStyle}"
+                           HorizontalAlignment="Center"
+                           FontWeight="SemiBold">
+                    <Run Text="{Binding PrestigeRemain}"></Run>
+                    <Run Text="/"></Run>
+                    <Run Text="{Binding PrestigeMax}"></Run>
+                </TextBlock>
+            </StackPanel>
+            <Grid Grid.Row="5" Margin="32,8,32,0" MaxWidth="300">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Margin="2"
+                           Text="XP"
+                           Style="{StaticResource ConclusionTextStyle}"
+                           HorizontalAlignment="Left"
+                           FontSize="16" FontWeight="SemiBold">
+                </TextBlock>
+                <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Margin="2"
+                           Text="Pokémon Defeated:" 
+                           Style="{StaticResource ConclusionTextStyle}"
+                           HorizontalAlignment="Left"
+                           FontSize="16" FontWeight="SemiBold">
+                </TextBlock>
+                <TextBlock Grid.Row="0" Grid.Column="1" Margin="2"
+                           Text="{Binding XPGain}"
+                           Style="{StaticResource ConclusionTextStyle}"
+                           HorizontalAlignment="Right" Foreground="#FF6699"
+                           FontSize="16" FontWeight="SemiBold">
+                </TextBlock>
+                <TextBlock Grid.Row="1" Grid.Column="1" Margin="2"
+                           Text="{Binding PokemonDefeated}" 
+                           Style="{StaticResource ConclusionTextStyle}"
+                           HorizontalAlignment="Right" Foreground="#FF6699"
+                           FontSize="16" FontWeight="SemiBold">
+                </TextBlock>
+            </Grid>
+            <Button Grid.Row="5" 
+                    Style="{ThemeResource ImageButtonStyle}"
+                    Height="{ThemeResource UiButtonSize}"
+                    HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                    Margin="0,0,0,24">
+                <Image Source="../Assets/Buttons/btn_ok_normal_dark.png"
+                   Stretch="Uniform" HorizontalAlignment="Stretch" />
+            </Button>
+        </Grid>
     </Grid>
 </Page>
