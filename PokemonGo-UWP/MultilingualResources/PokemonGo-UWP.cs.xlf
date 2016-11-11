@@ -128,19 +128,19 @@
         </trans-unit>
         <trans-unit id="BadgeBigMagikarpDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Magikarp</source>
-          <target state="new">Chycen {0} Magikarp</target>
+          <target state="new">Chyceno {0} Magikarprů</target>
         </trans-unit>
         <trans-unit id="BadgeCaptureTotalDescription" translate="yes" xml:space="preserve">
           <source>Captured {0} Pokemon</source>
-          <target state="new">Zachycen {0} Pokémon</target>
+          <target state="new">Zachyceno {0} Pokémonů</target>
         </trans-unit>
         <trans-unit id="BadgeEvolvedTotalDescription" translate="yes" xml:space="preserve">
           <source>Evolved {0} Pokémon</source>
-          <target state="new">Evoluce {0} Pokémon</target>
+          <target state="new">Evolvováno {0} Pokémonů</target>
         </trans-unit>
         <trans-unit id="BadgeHatchedTotalDescription" translate="yes" xml:space="preserve">
           <source>Hatched {0} Pokemon</source>
-          <target state="new">Vylíhnutí {0} Pokemon</target>
+          <target state="new">Vylíhnutí {0} Pokemonů</target>
         </trans-unit>
         <trans-unit id="BadgePikachuDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Pikachu</source>
@@ -156,7 +156,7 @@
         </trans-unit>
         <trans-unit id="BadgeSmallRattataDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} small Rattata</source>
-          <target state="new">Chycen {0} malý Rattata</target>
+          <target state="new">Chyceno {0} malých Rattata</target>
         </trans-unit>
         <trans-unit id="BadgeTravelKmDescription" translate="yes" xml:space="preserve">
           <source>Walked {0} km</source>
@@ -359,7 +359,7 @@ Chcete otevřít stránku se soubory pro manuální instalaci? </target>
         </trans-unit>
         <trans-unit id="TransferPokemonWarningText" translate="yes" xml:space="preserve">
           <source>You can't take it back after it's transferred to the Professor.</source>
-          <target state="new">Můžete to vzít zpět po jejím převedení na profesora.</target>
+          <target state="new">Nemůžete to vzít zpět po jejím převedení na profesora.</target>
         </trans-unit>
         <trans-unit id="LoginExpired" translate="yes" xml:space="preserve">
           <source>Previous login expired.</source>
@@ -487,17 +487,17 @@ Chcete otevřít stránku se soubory pro manuální instalaci? </target>
         </trans-unit>
         <trans-unit id="PokemonInventoryFullText" translate="yes" xml:space="preserve">
           <source>Your Pokémon inventory is full, transfer some Pokémon before trying to catch {0}.</source>
-          <target state="new">Váš pokemon inventář je plný, prodejte nějákého pokemona {0}.</target>
+          <target state="new">Váš pokemon inventář je plný, prodejte nějákého pokemona, než budete pokračocvat v chytání {0}.</target>
         </trans-unit>
         <trans-unit id="WaitingForNetworkText" translate="yes" xml:space="preserve">
           <source>Waiting for network to be back...</source>
-          <target state="new">Čekání na připojení k síti...</target>
+          <target state="new">Čekání na opětovné připojení k síti...</target>
         </trans-unit>
         <trans-unit id="EggHatchMessage" translate="yes" xml:space="preserve">
           <source>An Egg hatched into a {0}.
 You also got {1} Stardust, {2} Candy and {3} XP.</source>
-          <target state="new">Vejce se vylíhne do {0}.
-Můžete také dostat {1} Stardust, {2} Bombón a {3} XP.</target>
+          <target state="new">Vejce se vylíhlo do {0}.
+Obdrželi jste {1} Stardustu, {2} Bombónů a {3} XP.</target>
         </trans-unit>
         <trans-unit id="EvolvePokemonWarningText" translate="yes" xml:space="preserve">
           <source>Do you want to evolve {0}?</source>
@@ -594,7 +594,7 @@ Můžete také dostat {1} Stardust, {2} Bombón a {3} XP.</target>
         </trans-unit>
         <trans-unit id="NearbyPokemonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>nearby</source>
-          <target state="translated">POBLÍŽ</target>
+          <target state="translated">Poblíž</target>
         </trans-unit>
         <trans-unit id="OutOfRangeTextBlock.Text" translate="yes" xml:space="preserve">
           <source>THIS POKÉSTOP IS TOO FAR AWAY</source>
@@ -835,7 +835,7 @@ Můžete také dostat {1} Stardust, {2} Bombón a {3} XP.</target>
         </trans-unit>
         <trans-unit id="FortAlreadyHasModifierTextBlock.Text" translate="yes" xml:space="preserve">
           <source>This pokestop already has a lure module installed</source>
-          <target state="new">Tento pokéstop má obsazeny modul slot.</target>
+          <target state="new">Tento pokéstop má obsazený modul slot.</target>
         </trans-unit>
         <trans-unit id="NoItemInInventoryTextBlock.Text" translate="yes" xml:space="preserve">
           <source>There is no troy disc in your inventory</source>
@@ -847,7 +847,7 @@ Můžete také dostat {1} Stardust, {2} Bombón a {3} XP.</target>
         </trans-unit>
         <trans-unit id="AddModifierSuccessTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Successfully added lure module</source>
-          <target state="new">Úspěšně přidán lure module</target>
+          <target state="new">Úspěšně přidán Lure module</target>
         </trans-unit>
         <trans-unit id="EggDetailIncubatingTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Walk to hatch this Egg.</source>
