@@ -120,11 +120,11 @@
         </trans-unit>
         <trans-unit id="BadgeBattleAttackWonDescription" translate="yes" xml:space="preserve">
           <source>Won {0} gym battles</source>
-          <target state="new">Výtěztví {0} v tělocvičně</target>
+          <target state="new">{0} vítězství v tělocvičně</target>
         </trans-unit>
         <trans-unit id="BadgeBattleTrainingWonDescription" translate="yes" xml:space="preserve">
           <source>Won {0} training battles</source>
-          <target state="new">Vítěztví {0} v tréninku</target>
+          <target state="new">{0} vítězství v tréninku</target>
         </trans-unit>
         <trans-unit id="BadgeBigMagikarpDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Magikarp</source>
@@ -144,7 +144,7 @@
         </trans-unit>
         <trans-unit id="BadgePikachuDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Pikachu</source>
-          <target state="new">Chycen {0} Pikachu</target>
+          <target state="new">Chyceno {0} Pikachu</target>
         </trans-unit>
         <trans-unit id="BadgePokedexEntriesDescription" translate="yes" xml:space="preserve">
           <source>Registered {0} Pokemon in the Pokedex</source>
@@ -152,7 +152,7 @@
         </trans-unit>
         <trans-unit id="BadgePokestopsVisitedDescription" translate="yes" xml:space="preserve">
           <source>Visited {0} Pokestops</source>
-          <target state="new">Viditelné {0} Pokéstopy</target>
+          <target state="new">Navštíveno {0} Pokéstopů</target>
         </trans-unit>
         <trans-unit id="BadgeSmallRattataDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} small Rattata</source>
@@ -164,71 +164,71 @@
         </trans-unit>
         <trans-unit id="BugDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Bug Pokemon</source>
-          <target state="new">Chycen {0} broučí Pokémon</target>
+          <target state="new">Chyceno {0} broučích Pokémonů</target>
         </trans-unit>
         <trans-unit id="DragonDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Dragon Pokemon</source>
-          <target state="new">Chycen {0} dračí Pokémon</target>
+          <target state="new">Chyceno {0} dračích Pokémonů</target>
         </trans-unit>
         <trans-unit id="ElectricDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Electric Pokemon</source>
-          <target state="new">Chycen {0} elektrický Pokémon</target>
+          <target state="new">Chyceno {0} elektrických Pokémonů</target>
         </trans-unit>
         <trans-unit id="FairyDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Fairy Pokemon</source>
-          <target state="new">Chycen {0} fairy Pokémon</target>
+          <target state="new">Chyceno {0} Fairy Pokémonů</target>
         </trans-unit>
         <trans-unit id="FightingDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Fighting Pokemon</source>
-          <target state="new">Chycen {0} bojový Pokémon</target>
+          <target state="new">Chyceno {0} bojových Pokémonů</target>
         </trans-unit>
         <trans-unit id="FireDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Fire Pokemon</source>
-          <target state="new">Chycen {0} ohnivý Pokémon</target>
+          <target state="new">Chyceno {0} ohnivých Pokémonů</target>
         </trans-unit>
         <trans-unit id="FlyingDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Flying Pokemon</source>
-          <target state="new">Chycen {0} létavý Pokémon</target>
+          <target state="new">Chyceno {0} létavých Pokémonů</target>
         </trans-unit>
         <trans-unit id="GhostDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Ghost Pokemon</source>
-          <target state="new">Chycen {0} duchový Pokémon</target>
+          <target state="new">Chyceno {0} duchových Pokémonů</target>
         </trans-unit>
         <trans-unit id="GrassDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Grass Pokemon</source>
-          <target state="new">Chycen {0} travní Pokémon</target>
+          <target state="new">Chyceno {0} travních Pokémonů</target>
         </trans-unit>
         <trans-unit id="GroundDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Ground Pokemon</source>
-          <target state="new">Chycen {0} zemní Pokémon</target>
+          <target state="new">Chyceno{0} zemních Pokémonů</target>
         </trans-unit>
         <trans-unit id="IceDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Ice Pokemon</source>
-          <target state="new">Chycen {0} ledový Pokémon</target>
+          <target state="new">Chyceno {0} ledových Pokémonů</target>
         </trans-unit>
         <trans-unit id="NormalDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Normal Pokemon</source>
-          <target state="new">Chycen {0} normální Pokémon</target>
+          <target state="new">Chyceno {0} normálních Pokémonů</target>
         </trans-unit>
         <trans-unit id="PoisonDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Poison Pokemon</source>
-          <target state="new">Chycen {0} jedový Pokémon</target>
+          <target state="new">Chyceno {0} jedových Pokémonů</target>
         </trans-unit>
         <trans-unit id="PsychicDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Psychic Pokemon</source>
-          <target state="new">Chycen {0} psychycký Pokémon</target>
+          <target state="new">Chyceno {0} psychyckých Pokémonů</target>
         </trans-unit>
         <trans-unit id="RockDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Rock Pokemon</source>
-          <target state="new">Chycen {0} kamnenný Pokémon</target>
+          <target state="new">Chyceno {0} kamnenných Pokémonů</target>
         </trans-unit>
         <trans-unit id="SteelDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Steel Pokemon</source>
-          <target state="new">Chycen {0} ocelový Pokémon</target>
+          <target state="new">Chyceno {0} ocelových Pokémonů</target>
         </trans-unit>
         <trans-unit id="WaterDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Water Pokemon</source>
-          <target state="new">Chycen {0} vodní Pokémon</target>
+          <target state="new">Chyceno {0} vodních Pokémonů</target>
         </trans-unit>
       </group>
     </body>
@@ -253,11 +253,11 @@
         </trans-unit>
         <trans-unit id="GettingGpsSignalText" translate="yes" xml:space="preserve">
           <source>Getting GPS signal...</source>
-          <target state="translated">Získávání GPS signálu...</target>
+          <target state="translated">Načítání GPS dat...</target>
         </trans-unit>
         <trans-unit id="GettingUserDataText" translate="yes" xml:space="preserve">
           <source>Getting user data...</source>
-          <target state="translated">Získávání dat uživatele...</target>
+          <target state="translated">Načítání uživatelských dat...</target>
         </trans-unit>
         <trans-unit id="GoogleErrorText" translate="yes" xml:space="preserve">
           <source>Google returned error: </source>
@@ -387,7 +387,7 @@ Chcete otevřít stránku se soubory pro manuální instalaci? </target>
         </trans-unit>
         <trans-unit id="ActivityEvolvePokemon" translate="yes" xml:space="preserve">
           <source>Evolve a Pokémon</source>
-          <target state="new">pokémon se evoluje</target>
+          <target state="new">Pokémon se vyvijí.</target>
         </trans-unit>
         <trans-unit id="ActivityHatchEgg" translate="yes" xml:space="preserve">
           <source>Egg Hatched!</source>
@@ -487,7 +487,7 @@ Chcete otevřít stránku se soubory pro manuální instalaci? </target>
         </trans-unit>
         <trans-unit id="PokemonInventoryFullText" translate="yes" xml:space="preserve">
           <source>Your Pokémon inventory is full, transfer some Pokémon before trying to catch {0}.</source>
-          <target state="new">Váš pokemon inventář je plný, prodejte nějákého pokemona, než budete pokračocvat v chytání {0}.</target>
+          <target state="new">Váš pokemon inventář je plný, prodejte nějákého pokemona, než budete moci pokračocvat v chytání {0}.</target>
         </trans-unit>
         <trans-unit id="WaitingForNetworkText" translate="yes" xml:space="preserve">
           <source>Waiting for network to be back...</source>
@@ -543,7 +543,7 @@ Obdrželi jste {1} Stardustu, {2} Bombónů a {3} XP.</target>
         </trans-unit>
         <trans-unit id="CantUseBerryText" translate="yes" xml:space="preserve">
           <source>You already used a Berry.</source>
-          <target state="new">Už jsi použil Berry.</target>
+          <target state="new">Už jsi použil bobule.</target>
         </trans-unit>
         <trans-unit id="IncubatorRemainingUsesText" translate="yes" xml:space="preserve">
           <source>{0} use(s) left</source>
