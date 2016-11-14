@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -247,6 +247,7 @@
     <Content Include="Assets\Icons\pokestop_near_lured.png" />
     <Content Include="Assets\Icons\RecenterMapIconDark.png" />
     <Content Include="Assets\Icons\RecenterMapIconLight.png" />
+    <Content Include="Assets\Icons\spawnpoint.png" />
     <Content Include="Assets\Icons\stardust_painted.png" />
     <Content Include="Assets\Icons\stardust_vector.png" />
     <Content Include="Assets\Items\Egg.png" />
@@ -322,6 +323,7 @@
     <Content Include="Assets\LiveTiles\Transparent\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\LiveTiles\Transparent\Wide310x150Logo.scale-400.png" />
     <Content Include="Assets\Square44x44Logo.png" />
+    <Content Include="Assets\UI\ash_withincense.png" />
     <Content Include="Assets\UI\bush.png" />
     <Content Include="Assets\Teams\gym_base_blue.png" />
     <Content Include="Assets\Teams\gym_base_empty.png" />
@@ -774,8 +776,11 @@
     </Compile>
     <Compile Include="Entities\FortDataWrapper.cs" />
     <Compile Include="Entities\IMapPokemon.cs" />
+    <Compile Include="Entities\AppliedItemWrapper.cs" />
+    <Compile Include="Entities\IncensePokemon.cs" />
     <Compile Include="Entities\IUpdatable.cs" />
     <Compile Include="Entities\Language.cs" />
+    <Compile Include="Entities\SpawnPointWrapper.cs" />
     <Compile Include="Entities\LuredPokemon.cs" />
     <Compile Include="Entities\MapPokemonWrapper.cs" />
     <Compile Include="Entities\NearbyPokemonWrapper.cs" />
@@ -847,6 +852,9 @@
     <Compile Include="ViewModels\SettingsPageViewModel.cs" />
     <Compile Include="ViewModels\LoginPageViewModel.cs" />
     <Compile Include="ViewModels\SearchPokeStopPageViewModel.cs" />
+    <Compile Include="Views\ChallengePage.xaml.cs">
+      <DependentUpon>ChallengePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\BattleArena.xaml.cs">
       <DependentUpon>BattleArena.xaml</DependentUpon>
     </Compile>
@@ -1067,6 +1075,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\CapturePokemonPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ChallengePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
