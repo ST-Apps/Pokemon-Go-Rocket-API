@@ -54,7 +54,7 @@ namespace PokemonGo_UWP.ViewModels
                         ReturnToGameScreen.Execute();
                         break;
                     case EncounterResponse.Types.Status.EncounterSuccess:
-                        break;                    
+                        break;
                     case EncounterResponse.Types.Status.EncounterError:
                     case EncounterResponse.Types.Status.EncounterNotFound:
                     case EncounterResponse.Types.Status.EncounterClosed:
@@ -69,13 +69,13 @@ namespace PokemonGo_UWP.ViewModels
                     case EncounterResponse.Types.Status.EncounterAlreadyHappened:
                         await new MessageDialog(Resources.CodeResources.GetString("PokemonRanAwayText")).ShowAsyncQueue();
                         ReturnToGameScreen.Execute();
-                        GameClient.CatchablePokemons.Remove((MapPokemonWrapper) CurrentPokemon);
+                        GameClient.CatchablePokemons.Remove((MapPokemonWrapper)CurrentPokemon);
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
             }
-            else
+            else if (CurrentPokemon is LuredPokemon)
             {
                 CurrentLureEncounter = await GameClient.EncounterLurePokemon(CurrentPokemon.EncounterId, CurrentPokemon.SpawnpointId);
                 CurrentEncounter = new EncounterResponse()
@@ -111,6 +111,34 @@ namespace PokemonGo_UWP.ViewModels
                         throw new ArgumentOutOfRangeException();
                 }
             }
+            else if (CurrentPokemon is IncensePokemon)
+            {
+                CurrentIncenseEncounter = await GameClient.EncounterIncensePokemon(CurrentPokemon.EncounterId, CurrentPokemon.SpawnpointId);
+                CurrentEncounter = new EncounterResponse()
+                {
+                    Background = EncounterResponse.Types.Background.Park,
+                    WildPokemon = new WildPokemon()
+                    {
+                        PokemonData = CurrentIncenseEncounter.PokemonData
+                    }
+                };
+                switch (CurrentIncenseEncounter.Result)
+                {
+                    case IncenseEncounterResponse.Types.Result.PokemonInventoryFull:
+                        await new MessageDialog(string.Format(Resources.CodeResources.GetString("PokemonInventoryFullText"), Resources.Pokemon.GetString($"{ CurrentPokemon.PokemonId}"))).ShowAsyncQueue();
+                        ReturnToGameScreen.Execute();
+                        break;
+                    case IncenseEncounterResponse.Types.Result.IncenseEncounterSuccess:
+                        break;
+                    case IncenseEncounterResponse.Types.Result.IncenseEncounterUnknown:
+                    case IncenseEncounterResponse.Types.Result.IncenseEncounterNotAvailable:
+                        await new MessageDialog(string.Format(Resources.CodeResources.GetString("PokemonEncounterErrorText"), Resources.Pokemon.GetString($"{CurrentPokemon.PokemonId}"))).ShowAsyncQueue();
+                        ReturnToGameScreen.Execute();
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+            }
             PokemonExtraData = GameClient.GetExtraDataForPokemon(CurrentPokemon.PokemonId);
             SelectedCaptureItem = SelectAvailablePokeBall();
             Busy.SetBusy(false);
@@ -129,22 +157,25 @@ namespace PokemonGo_UWP.ViewModels
                 // Recovering the state
                 CurrentEncounter = new EncounterResponse();
                 CurrentLureEncounter = new DiskEncounterResponse();
+                CurrentIncenseEncounter = new IncenseEncounterResponse();
                 CurrentCaptureAward = new CaptureAward();
                 SelectedCaptureItem = new ItemData();
-                CurrentPokemon = JsonConvert.DeserializeObject<IMapPokemon>((string) suspensionState[nameof(CurrentPokemon)]);
+                CurrentPokemon = JsonConvert.DeserializeObject<IMapPokemon>((string)suspensionState[nameof(CurrentPokemon)]);
                 CurrentEncounter.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(CurrentEncounter)]).CreateCodedInput());
                 CurrentLureEncounter.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(CurrentLureEncounter)]).CreateCodedInput());
+                CurrentIncenseEncounter.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(CurrentIncenseEncounter)]).CreateCodedInput());
                 CurrentCaptureAward.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(CurrentCaptureAward)]).CreateCodedInput());
                 SelectedCaptureItem.MergeFrom(ByteString.FromBase64((string)suspensionState[nameof(SelectedCaptureItem)]).CreateCodedInput());
                 RaisePropertyChanged(() => CurrentEncounter);
                 RaisePropertyChanged(() => CurrentLureEncounter);
+                RaisePropertyChanged(() => CurrentIncenseEncounter);
                 RaisePropertyChanged(() => CurrentCaptureAward);
                 RaisePropertyChanged(() => SelectedCaptureItem);
             }
             else
             {
                 // Navigating from game page, so we need to actually load the encounter
-                CurrentPokemon = (IMapPokemon) NavigationHelper.NavigationState[nameof(CurrentPokemon)];
+                CurrentPokemon = (IMapPokemon)NavigationHelper.NavigationState[nameof(CurrentPokemon)];
                 Busy.SetBusy(true, string.Format(Resources.CodeResources.GetString("LoadingEncounterText"), Resources.Pokemon.GetString(CurrentPokemon.PokemonId.ToString())));
                 NavigationHelper.NavigationState.Remove(nameof(CurrentPokemon));
                 Logger.Write($"Catching {CurrentPokemon.PokemonId}");
@@ -165,6 +196,7 @@ namespace PokemonGo_UWP.ViewModels
                 suspensionState[nameof(CurrentPokemon)] = JsonConvert.SerializeObject(CurrentPokemon);
                 suspensionState[nameof(CurrentEncounter)] = CurrentEncounter.ToByteString().ToBase64();
                 suspensionState[nameof(CurrentLureEncounter)] = CurrentLureEncounter.ToByteString().ToBase64();
+                suspensionState[nameof(CurrentIncenseEncounter)] = CurrentIncenseEncounter.ToByteString().ToBase64();
                 suspensionState[nameof(CurrentCaptureAward)] = CurrentCaptureAward.ToByteString().ToBase64();
                 suspensionState[nameof(SelectedCaptureItem)] = SelectedCaptureItem.ToByteString().ToBase64();
             }
@@ -197,9 +229,14 @@ namespace PokemonGo_UWP.ViewModels
         private EncounterResponse _currentEncounter;
 
         /// <summary>
-        ///     Encounter for the Pokemon that we're trying to capture
+        ///     Encounter for the lured Pokemon that we're trying to capture
         /// </summary>
         private DiskEncounterResponse _currentLureEncounter;
+
+        /// <summary>
+        ///     Encounter for the incense Pokemon that we're trying to capture
+        /// </summary>
+        private IncenseEncounterResponse _currentIncenseEncounter;
 
         /// <summary>
         ///     Current item for capture page
@@ -241,12 +278,21 @@ namespace PokemonGo_UWP.ViewModels
         }
 
         /// <summary>
-        ///     Encounter for the Pokemon that we're trying to capture
+        ///     Encounter for the lured Pokemon that we're trying to capture
         /// </summary>
         public DiskEncounterResponse CurrentLureEncounter
         {
             get { return _currentLureEncounter; }
             set { Set(ref _currentLureEncounter, value); }
+        }
+
+        /// <summary>
+        ///     Encounter for the lured Pokemon that we're trying to capture
+        /// </summary>
+        public IncenseEncounterResponse CurrentIncenseEncounter
+        {
+            get { return _currentIncenseEncounter; }
+            set { Set(ref _currentIncenseEncounter, value); }
         }
 
         /// <summary>
@@ -364,7 +410,7 @@ namespace PokemonGo_UWP.ViewModels
         public ItemData SelectAvailablePokeBall()
         {
             var pokeball = SelectPokeballType(ItemId.ItemPokeBall);
-            if(pokeball != null && pokeball.Count != 0)
+            if (pokeball != null && pokeball.Count != 0)
                 return pokeball;
 
             var greatball = SelectPokeballType(ItemId.ItemGreatBall);
@@ -379,7 +425,7 @@ namespace PokemonGo_UWP.ViewModels
             if (masterball != null && masterball.Count != 0)
                 return masterball;
 
-            var fallback = new ItemData {Count = 0, ItemId = ItemId.ItemPokeBall};
+            var fallback = new ItemData { Count = 0, ItemId = ItemId.ItemPokeBall };
             return fallback;
         }
 
@@ -456,7 +502,7 @@ namespace PokemonGo_UWP.ViewModels
 
             var responseDelay = DateTime.Now - requestTime;
             if (responseDelay.TotalSeconds < 5 && hitPokemon)
-                await Task.Delay(TimeSpan.FromSeconds(5 - (int) responseDelay.TotalSeconds));
+                await Task.Delay(TimeSpan.FromSeconds(5 - (int)responseDelay.TotalSeconds));
             var nearbyPokemon = GameClient.NearbyPokemons.FirstOrDefault(pokemon => pokemon.EncounterId == CurrentPokemon.EncounterId);
 
             switch (caughtPokemonResponse.Status)
@@ -472,9 +518,11 @@ namespace PokemonGo_UWP.ViewModels
                     CatchSuccess?.Invoke(this, null);
                     _capturedPokemonId = caughtPokemonResponse.CapturedPokemonId;
                     if (CurrentPokemon is MapPokemonWrapper)
-                        GameClient.CatchablePokemons.Remove((MapPokemonWrapper) CurrentPokemon);
-                    else
-                        GameClient.LuredPokemons.Remove((LuredPokemon) CurrentPokemon);
+                        GameClient.CatchablePokemons.Remove((MapPokemonWrapper)CurrentPokemon);
+                    else if (CurrentPokemon is LuredPokemon)
+                        GameClient.LuredPokemons.Remove((LuredPokemon)CurrentPokemon);
+                    else if (CurrentPokemon is IncensePokemon)
+                        GameClient.IncensePokemons.Remove((IncensePokemon)CurrentPokemon);
                     GameClient.NearbyPokemons.Remove(nearbyPokemon);
                     return true;
 
@@ -488,9 +536,11 @@ namespace PokemonGo_UWP.ViewModels
                     Logger.Write($"{CurrentPokemon.PokemonId} fled");
                     CatchFlee?.Invoke(this, null);
                     if (CurrentPokemon is MapPokemonWrapper)
-                        GameClient.CatchablePokemons.Remove((MapPokemonWrapper) CurrentPokemon);
-                    else
-                        GameClient.LuredPokemons.Remove((LuredPokemon) CurrentPokemon);
+                        GameClient.CatchablePokemons.Remove((MapPokemonWrapper)CurrentPokemon);
+                    else if (CurrentPokemon is LuredPokemon)
+                        GameClient.LuredPokemons.Remove((LuredPokemon)CurrentPokemon);
+                    else if (CurrentPokemon is IncensePokemon)
+                        GameClient.IncensePokemons.Remove((IncensePokemon)CurrentPokemon);
                     GameClient.NearbyPokemons.Remove(nearbyPokemon);
                     // We just go back because there's nothing else to do
                     GameClient.ToggleUpdateTimer();
@@ -505,7 +555,7 @@ namespace PokemonGo_UWP.ViewModels
             }
 
             return false;
-        }        
+        }
 
         /// <summary>
         ///     Uses the selected berry for the current encounter

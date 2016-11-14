@@ -186,15 +186,6 @@ namespace PokemonGo_UWP.ViewModels
         #region Pokemon Inventory Handling
 
         /// <summary>
-        /// Show sorting overlay for pokemon inventory
-        /// </summary>
-        private DelegateCommand _showPokemonSortingMenuCommand;
-        public DelegateCommand ShowPokemonSortingMenuCommand => _showPokemonSortingMenuCommand ?? (_showPokemonSortingMenuCommand = new DelegateCommand(() =>
-        {
-
-        }));
-
-        /// <summary>
         /// Sort the PokemonInventory with the CurrentPokemonSortingMode 
         /// </summary>
         private void UpdateSorting()
@@ -204,15 +195,6 @@ namespace PokemonGo_UWP.ViewModels
 
             RaisePropertyChanged(() => PokemonInventory);
         }
-
-        /// <summary>
-        /// Show incubator overlay for egg inventory
-        /// </summary>
-        private DelegateCommand _showIncubatorOverlayCommand;
-        public DelegateCommand ShowIncubatorOverlayCommand => _showIncubatorOverlayCommand ?? (_showIncubatorOverlayCommand = new DelegateCommand(() =>
-        {
-
-        }));
 
         #endregion
 

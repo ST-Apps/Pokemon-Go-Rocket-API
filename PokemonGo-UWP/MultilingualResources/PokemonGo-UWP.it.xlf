@@ -558,6 +558,10 @@ Hai ottenuto anche {1} Polvere di stella, {2} Caramelle e {3} PE.</target>
           <target state="new">{0} use(s) left</target>
           <note from="MultilingualBuild" annotates="source" priority="2">If your language uses multiply sign, use × (unicode char) and not x</note>
         </trans-unit>
+        <trans-unit id="ItemUseQuestionText" translate="yes" xml:space="preserve">
+          <source>Use {0} ?</source>
+          <target state="new">Use {0} ?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

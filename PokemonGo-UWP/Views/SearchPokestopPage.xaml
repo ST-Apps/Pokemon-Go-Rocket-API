@@ -268,13 +268,16 @@
                     </Border>
 
                     <Button Grid.Row="1" 
-                            Width="100" Height="40" 
-                            BorderBrush="White" BorderThickness="5"
-                            Style="{ThemeResource ImageButtonStyle}"
-                            Command="{Binding ShowFortModifierDetails}"
-                            x:Name="PokestopModifierDetailsButton"
-                            HorizontalAlignment="Center" Background="White">
-                        <Image Source="{Binding CurrentPokestopInfo.Modifiers[0].ItemId, Converter={StaticResource ItemIdToItemIconConverter}}" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" />
+                    Style="{ThemeResource PokeStopModifierButtonStyle}"
+                    Command="{Binding ShowFortModifierDetails}"
+                    x:Name="PokestopModifierDetailsButton">
+                        <Button.Background>
+                            <SolidColorBrush Opacity="0.7" Color="White"/>
+                        </Button.Background>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="{Binding CurrentPokestopInfo.Modifiers[0].ItemId, Converter={StaticResource ItemIdToItemIconConverter}}" HorizontalAlignment="Center" Margin="5,0,0,0" VerticalAlignment="Top" />
+                            <TextBlock Text="{Binding CurrentPokestopInfo.Modifiers[0].DeployerPlayerCodename}" Style="{StaticResource TextDeployerCodename}"/>
+                        </StackPanel>
                     </Button>
 
                 </Grid>
@@ -421,10 +424,10 @@
                 RelativePanel.AlignRightWithPanel="True"
                 Opacity="1">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="75" />
-                    <RowDefinition Height="2*" />
-                    <RowDefinition Height="3*" />
-                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
                 </Grid.RowDefinitions>
                 <Border Grid.Row="0"
                         x:Name="DetailsSuccessMessageBorder"

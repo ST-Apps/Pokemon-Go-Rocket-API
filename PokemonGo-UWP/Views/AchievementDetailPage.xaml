@@ -56,7 +56,7 @@
                                                       InnerSegmentColor="LightGray"
                                                       RelativePanel.AlignHorizontalCenterWithPanel="True"
                                                       RelativePanel.AlignVerticalCenterWithPanel="true"
-                                                      ImageSourcePath="{Binding Achievement, Converter={StaticResource AchievementValueToMedalImageConverter}}"
+                                                      ImageSourcePath="{Binding Achievement, Converter={StaticResource AchievementValueToMedalIconConverter}}"
                                                       Maximum="{Binding Achievement, Converter={StaticResource AchievementNextValueConverter}}"
                                                       Value="{Binding Achievement.Value, Converter={StaticResource AchievementValueConverter}}"/>
                         

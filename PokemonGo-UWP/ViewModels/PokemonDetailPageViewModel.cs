@@ -330,14 +330,16 @@ namespace PokemonGo_UWP.ViewModels
               {
                   ServerRequestRunning = true;
                   var isFavorite = Convert.ToBoolean(SelectedPokemon.Favorite);
-                  var pokemonFavoriteResponse = await GameClient.SetFavoritePokemon(SelectedPokemon.Id, !isFavorite);
+                  // Use local var to prevent bug when changing selected pokemon during running request
+                  var favoritingPokemon = SelectedPokemon;
+                  var pokemonFavoriteResponse = await GameClient.SetFavoritePokemon(favoritingPokemon.Id, !isFavorite);
                   switch (pokemonFavoriteResponse.Result)
                   {
                       case SetFavoritePokemonResponse.Types.Result.Unset:
                           break;
                       case SetFavoritePokemonResponse.Types.Result.Success:
                           // Inverse favorite state
-                          SelectedPokemon.Favorite = Convert.ToInt32(!isFavorite);
+                          favoritingPokemon.Favorite = Convert.ToInt32(!isFavorite);
                           break;
                       case SetFavoritePokemonResponse.Types.Result.ErrorPokemonNotFound:
                           break;
@@ -384,14 +386,17 @@ namespace PokemonGo_UWP.ViewModels
                   try
                   {
                       ServerRequestRunning = true;
+                      // Use local var to prevent bug when changing selected pokemon during running request
+                      var renamingPokemon = SelectedPokemon;
+                      var nickname = textbox.Text;
                       // Send rename request
-                      var res = await GameClient.SetPokemonNickName((ulong)SelectedPokemon.Id, textbox.Text);
+                      var res = await GameClient.SetPokemonNickName((ulong)renamingPokemon.Id, nickname);
                       switch (res.Result)
                       {
                           case NicknamePokemonResponse.Types.Result.Unset:
                               break;
                           case NicknamePokemonResponse.Types.Result.Success:
-                              SelectedPokemon.Nickname = textbox.Text;
+                              renamingPokemon.Nickname = nickname;
                               break;
                           case NicknamePokemonResponse.Types.Result.ErrorPokemonNotFound:
                               break;
@@ -432,20 +437,27 @@ namespace PokemonGo_UWP.ViewModels
                 try
                 {
                     ServerRequestRunning = true;
+                    // Use local var to prevent bug when changing selected pokemon during running request
+                    var uppingPokemon = SelectedPokemon;
                     // Send power up request
-                    var res = await GameClient.PowerUpPokemon(SelectedPokemon.WrappedData);
+                    var res = await GameClient.PowerUpPokemon(uppingPokemon.WrappedData);
                     switch (res.Result)
                     {
                         case UpgradePokemonResponse.Types.Result.Unset:
                             break;
                         case UpgradePokemonResponse.Types.Result.Success:
                             // Reload updated data
-                            PokemonInventory.Remove(SelectedPokemon);
+                            bool selectedPokemonSameAsUpping = uppingPokemon == SelectedPokemon;
+                            PokemonInventory.Remove(uppingPokemon);
                             var uppedPokemon = new PokemonDataWrapper(res.UpgradedPokemon);
                             PokemonInventory.Add(uppedPokemon);
                             PokemonInventory.SortBySortingmode(SortingMode);
-                            SelectedPokemon = uppedPokemon;
-                            RaisePropertyChanged(nameof(SelectedPokemon));
+                            // If the upping pokemon is still showing (not fliped to other), change selected to upped
+                            if(selectedPokemonSameAsUpping)
+                            {
+                                SelectedPokemon = uppedPokemon;
+                                RaisePropertyChanged(nameof(SelectedPokemon));
+                            }
                             await GameClient.UpdateInventory();
                             await GameClient.UpdateProfile();
                             break;

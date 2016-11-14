@@ -38,14 +38,10 @@ namespace PokemonGo_UWP.Controls
 
         private static void OnImageSourcePathChanged(DependencyObject sender, DependencyPropertyChangedEventArgs args)
         {
+            if (sender == null) return;
             CircularProgressBar circularProgressBar = sender as CircularProgressBar;
-            if (circularProgressBar?.ImageSourcePath != null)
-            {
-                circularProgressBar.InnerPathRoot.Fill = new ImageBrush
-                {
-                    ImageSource = circularProgressBar.ImageSourcePath
-                };
-            }
+            BitmapImage fillImg = (circularProgressBar.ImageSourcePath != null) ?new BitmapImage(circularProgressBar.ImageSourcePath) : new BitmapImage();
+            circularProgressBar.InnerPathRoot.Fill = new ImageBrush { ImageSource = fillImg };
         }
 
         #endregion
@@ -68,7 +64,7 @@ namespace PokemonGo_UWP.Controls
 
         public static readonly DependencyProperty InnerSegmentColorProperty = DependencyProperty.Register("InnerSegmentColor", typeof(Brush), typeof(CircularProgressBar), new PropertyMetadata(Colors.Gray));
 
-        public static readonly DependencyProperty ImageSourcePathProperty = DependencyProperty.Register("ImageSourcePath", typeof(BitmapImage), typeof(CircularProgressBar), new PropertyMetadata("", OnImageSourcePathChanged));
+        public static readonly DependencyProperty ImageSourcePathProperty = DependencyProperty.Register("ImageSourcePath", typeof(Uri), typeof(CircularProgressBar), new PropertyMetadata("", OnImageSourcePathChanged));
 
         #endregion
 
@@ -122,9 +118,9 @@ namespace PokemonGo_UWP.Controls
             set { SetValue(InnerSegmentColorProperty, value); }
         }
 
-        public BitmapImage ImageSourcePath
+        public Uri ImageSourcePath
         {
-            get { return (BitmapImage)GetValue(ImageSourcePathProperty); }
+            get { return (Uri)GetValue(ImageSourcePathProperty); }
             set { SetValue(ImageSourcePathProperty, value); }
         }
         #endregion

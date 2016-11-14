@@ -314,14 +314,18 @@
                                                     <TextBlock Text="{Binding Key, Converter={StaticResource AchievementTranslationConverter}}"
                                                                Foreground="Green" />
                                                 </Viewbox>
-                                                <controls:CircularProgressBar x:Name="AchievementImage" Height="60" Width="60" SegmentColor="DeepSkyBlue"
-                                                                  Diameter="{Binding ActualHeight, ElementName=AchievementImage, Mode=OneWay}" StrokeThickness="2"
-                                                                  RelativePanel.Below="AchievementTypeText"
-                                                                  RelativePanel.AlignHorizontalCenterWithPanel="True"
-                                                                  Maximum="{Binding Converter={StaticResource AchievementNextValueConverter}}"
-                                                                  Value="{Binding Value, Converter={StaticResource AchievementValueConverter}}"
-                                                                  InnerSegmentColor="LightGray"
-                                                                  ImageSourcePath="{Binding Converter={StaticResource AchievementValueToMedalImageConverter}}" />
+                                                <controls:CircularProgressBar x:Name="AchievementImage"
+                                                                              Height="60"
+                                                                              Width="60"
+                                                                              SegmentColor="DeepSkyBlue"
+                                                                              Diameter="{Binding ActualHeight, ElementName=AchievementImage, Mode=OneWay}"
+                                                                              StrokeThickness="2"
+                                                                              RelativePanel.Below="AchievementTypeText"
+                                                                              RelativePanel.AlignHorizontalCenterWithPanel="True"
+                                                                              Maximum="{Binding Converter={StaticResource AchievementNextValueConverter}}"
+                                                                              Value="{Binding Value, Converter={StaticResource AchievementValueConverter}}"
+                                                                              InnerSegmentColor="LightGray"
+                                                                              ImageSourcePath="{Binding Converter={StaticResource AchievementValueToMedalIconConverter}}" />
                                                 <Viewbox Stretch="Uniform" 
                                                          MaxWidth="80"
                                                          Height="20"

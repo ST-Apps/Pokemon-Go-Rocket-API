@@ -54,7 +54,7 @@
                 </VisualState>
                 <VisualState x:Name="DefaultLayout">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="360" />
+                        <AdaptiveTrigger MinWindowWidth="410" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="EggInventoryGridView.ItemContainerStyle">

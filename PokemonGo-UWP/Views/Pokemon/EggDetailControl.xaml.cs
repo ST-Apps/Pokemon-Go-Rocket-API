@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POGOProtos.Inventory;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -26,25 +27,20 @@ namespace PokemonGo_UWP.Views
         private void ShowIncubatorSelection_Click(object sender, RoutedEventArgs e)
         {
             IncubatorSelectionOverlayControl incubatorControl = new IncubatorSelectionOverlayControl();
-            incubatorControl.IncubatorSelected += IncubatorControl_IncubatorSelected;
+            incubatorControl.IncubatorSelected += (incubator) => { IncubateEggCommand?.Execute(incubator); };
             incubatorControl.Show();
-        }
-
-        private void IncubatorControl_IncubatorSelected(POGOProtos.Inventory.EggIncubator incubator)
-        {
-            IncubateEggCommand.Execute(incubator);
         }
 
         #region Dependency Propertys
 
         public static readonly DependencyProperty IncubateEggCommandProperty =
-            DependencyProperty.Register(nameof(IncubateEggCommand), typeof(DelegateCommand), typeof(EggDetailControl),
+            DependencyProperty.Register(nameof(IncubateEggCommand), typeof(DelegateCommand<EggIncubator>), typeof(EggDetailControl),
                 new PropertyMetadata(null));
 
 
-        public DelegateCommand IncubateEggCommand
+        public DelegateCommand<EggIncubator> IncubateEggCommand
         {
-            get { return (DelegateCommand)GetValue(IncubateEggCommandProperty); }
+            get { return (DelegateCommand<EggIncubator>)GetValue(IncubateEggCommandProperty); }
             set { SetValue(IncubateEggCommandProperty, value); }
         }
 

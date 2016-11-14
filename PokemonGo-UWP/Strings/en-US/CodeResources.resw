@@ -353,4 +353,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</value>
     <value>{0} use(s) left</value>
     <comment>If your language uses multiply sign, use × (unicode char) and not x</comment>
   </data>
+  <data name="ItemUseQuestionText" xml:space="preserve">
+    <value>Use {0} ?</value>
+  </data>
 </root>

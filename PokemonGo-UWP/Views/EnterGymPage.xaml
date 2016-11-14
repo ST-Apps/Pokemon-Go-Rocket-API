@@ -17,137 +17,161 @@
 
 
     </Page.Resources>
-
+    
     <Grid>
         <control:OutdoorBackground />
 
-        <!--Base & Back Screen -->
-        <Grid>
-            <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,80,0,50"
+        <Viewbox Stretch="Uniform">
+            <Grid>
+
+                <!--Gym-->
+                <Grid VerticalAlignment="Bottom" Margin="0,0,0,-200">
+                    <Grid.Projection>
+                        <PlaneProjection RotationX="-70">
+                        </PlaneProjection>
+                    </Grid.Projection>
+                    <local:BattleArena Width="400" Height="400" 
+                               HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <local:BattleArena.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="3" ScaleY="3" CenterX="200" CenterY="200" ></ScaleTransform>
+                                <RotateTransform Angle="45" CenterX="200" CenterY="200">
+                                </RotateTransform>
+                            </TransformGroup>
+                        </local:BattleArena.RenderTransform>
+                    </local:BattleArena>
+                </Grid>
+
+                <!--Base & Back Screen -->
+                <Grid>
+                    <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,80,0,50"
                     Background="#88333333" BorderThickness="0,3,0,4"
                     BorderBrush="{Binding CurrentGym.OwnedByTeam, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}">
-                <Border.RenderTransform>
-                    <SkewTransform CenterX="300" AngleY="-10"></SkewTransform>
-                </Border.RenderTransform>
-            </Border>
-            <Image Source="{Binding CurrentGym.OwnedByTeam, Converter={StaticResource PlayerTeamToTeamBaseImageConverter}}" 
+                        <Border.RenderTransform>
+                            <SkewTransform CenterX="300" AngleY="-10"></SkewTransform>
+                        </Border.RenderTransform>
+                    </Border>
+                    <Image Source="{Binding CurrentGym.OwnedByTeam, Converter={StaticResource PlayerTeamToTeamBaseImageConverter}}" 
                    Width="360" Margin="0,250,0,0"></Image>
-            <!--<Image Source="/Assets/Teams/gym_base_empty.png" 
+                    <!--<Image Source="/Assets/Teams/gym_base_empty.png" 
                    Width="360" Margin="0,250,0,0"></Image>-->
-        </Grid>
+                </Grid>
 
-        <!--Guard-->
-        <!--TODO This part should be wrapped in some kind of items control -->
-        <Grid Width="360">
-            <!--Trainer-->
-            <Grid VerticalAlignment="Center" HorizontalAlignment="Right" 
+                <!--Guard-->
+                <!--TODO This part should be wrapped in some kind of items control -->
+                <Grid Width="360">
+                    <!--Trainer-->
+                    <Grid VerticalAlignment="Center" HorizontalAlignment="Right" 
                   Width="Auto" Height="320" Margin="0,0,0,120">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="80"></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
-                <Image Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,-20"
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80"></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,-20"
                        gif:AnimationBehavior.SourceUri="/Assets/UI/avatar.gif" Height="270"></Image>
-                <!--TODO Missing binding vars-->
-                <!--<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
+                        <!--TODO Missing binding vars-->
+                        <!--<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
                            Foreground="{Binding CurrentGym.OwnedByTeam, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}" 
                            FontSize="80" Opacity="0.3" Text="{Binding TrainerLevel}"></TextBlock>
                 <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"
                            Foreground="{Binding CurrentGym.OwnedByTeam, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}" 
                            FontSize="28" Text="{Binding TrainerName}"></TextBlock>-->
-                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
                            Foreground="{Binding CurrentGym.OwnedByTeam, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}"
                            FontSize="80" Opacity="0.3" Text="00"></TextBlock>
-                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"
                            Foreground="{Binding CurrentGym.OwnedByTeam, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}" 
                            FontSize="28" Text="TrainerName"></TextBlock>
-            </Grid>
-            <!--Pokemon-->
-            <Image Width="200" Height="200" Margin="0,60,0,0" 
+                    </Grid>
+                    <!--Pokemon-->
+                    <Image Width="200" Height="200" Margin="0,60,0,0" 
                    Source="{Binding CurrentGym.GuardPokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"></Image>
-            <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,240" >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
-                <Grid HorizontalAlignment="Left" Width="100">
-                    <!--TODO Crown should appear only if this is ultimate pokemon-->
-                    <Image Source="/Assets/Icons/crown.png" Height="36" Stretch="Uniform"></Image>
-                </Grid>
-                <!--TODO Missing binding vars-->
-                <!--<TextBlock Grid.Row="1" HorizontalAlignment="Left"
+                    <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,240" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid HorizontalAlignment="Left" Width="100">
+                            <!--TODO Crown should appear only if this is ultimate pokemon-->
+                            <Image Source="/Assets/Icons/crown.png" Height="36" Stretch="Uniform"></Image>
+                        </Grid>
+                        <!--TODO Missing binding vars-->
+                        <!--<TextBlock Grid.Row="1" HorizontalAlignment="Left"
                            Foreground="#DDDDDD" FontSize="26" 
                            Text="{Binding PokemonName}"></TextBlock>-->
-                <TextBlock Grid.Row="1" HorizontalAlignment="Left"
+                        <TextBlock Grid.Row="1" HorizontalAlignment="Left"
                            Foreground="#DDDDDD" FontSize="26" 
                            Text="PokemonName"></TextBlock>
-                <Rectangle Grid.Row="2" Fill="#DDDDDD" Width="100" Height="3" HorizontalAlignment="Left" ></Rectangle>
-                <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Left">
-                    <TextBlock VerticalAlignment="Bottom" Foreground="#DDDDDD" FontSize="20" 
+                        <Rectangle Grid.Row="2" Fill="#DDDDDD" Width="100" Height="3" HorizontalAlignment="Left" ></Rectangle>
+                        <StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Left">
+                            <TextBlock VerticalAlignment="Bottom" Foreground="#DDDDDD" FontSize="20" 
                                Text="CP"></TextBlock>
-                    <TextBlock Foreground="#DDDDDD" FontSize="26" Margin="4,0,0,0" 
+                            <TextBlock Foreground="#DDDDDD" FontSize="26" Margin="4,0,0,0" 
                                Text="{Binding CurrentGym.GuardPokemonCp}"></TextBlock>
-                </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
             </Grid>
-        </Grid>
+        </Viewbox>
 
         <!--Label-->
-        <Grid VerticalAlignment="Top">
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-            <!--Location-->
-            <Border Background="#88333333" BorderBrush="Gray" BorderThickness="1" 
-                Height="70" Margin="40,10,10,10" CornerRadius="15">
-                <Grid Margin="56,0,0,0">
+                <Grid VerticalAlignment="Top">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="1.5*"></RowDefinition>
-                        <RowDefinition Height="2*"></RowDefinition>
-                        <RowDefinition  Height="1*"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" VerticalAlignment="Bottom" Foreground="#DDDDDD" FontSize="12" 
+                    <!--Location-->
+                    <Border Background="#88333333" BorderBrush="Gray" BorderThickness="1" 
+                Height="70" Margin="40,10,10,10" CornerRadius="15">
+                        <Grid Margin="56,0,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1.5*"></RowDefinition>
+                                <RowDefinition Height="2*"></RowDefinition>
+                                <RowDefinition  Height="1*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" VerticalAlignment="Bottom" Foreground="#DDDDDD" FontSize="12" 
                                Text="{Binding CurrentGymInfo.Name}"></TextBlock>
-                    <TextBlock Grid.Row="1" VerticalAlignment="Center"
+                            <TextBlock Grid.Row="1" VerticalAlignment="Center"
                                Foreground="#DDDDDD" FontSize="16" >
                         <Run Text="Gym level"></Run>
                         <!--TODO Missing binding vars-->
                         <!--<Run Text="{Binding GymLevel}"></Run>-->
                         <Run Text="1"></Run>
-                    </TextBlock>
-                    <!--TODO List of Gym's members-->
-                </Grid>
-            </Border>
-            <Grid HorizontalAlignment="Left" Width="82" Height="82" Margin="4,0,0,0">
-                <Ellipse Fill="White" Stroke="#66000000" StrokeThickness="3">
-                </Ellipse>
-                <Ellipse Width="72" Height="72">
-                    <Ellipse.Fill>
-                        <ImageBrush ImageSource="{Binding CurrentGymInfo.Urls[0]}"
+                            </TextBlock>
+                            <!--TODO List of Gym's members-->
+                        </Grid>
+                    </Border>
+                    <Grid HorizontalAlignment="Left" Width="82" Height="82" Margin="4,0,0,0">
+                        <Ellipse Fill="White" Stroke="#66000000" StrokeThickness="3">
+                        </Ellipse>
+                        <Ellipse Width="72" Height="72">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="{Binding CurrentGymInfo.Urls[0]}"
                                     Stretch="UniformToFill" />
-                    </Ellipse.Fill>
-                </Ellipse>
-            </Grid>
-            <!--TODO In official app, there is a gauge behind gym's picture. Don't know what is it-->
-            <!--Prestige-->
-            <Border Grid.Row="1" 
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Grid>
+                    <!--TODO In official app, there is a gauge behind gym's picture. Don't know what is it-->
+                    <!--Prestige-->
+                    <Border Grid.Row="1" 
                     BorderBrush="{Binding CurrentGym.OwnedByTeam, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}" 
                     BorderThickness="0,0,0,6" CornerRadius="5"
                     HorizontalAlignment="Left" Margin="-5">
-                <Border Background="#88333333" CornerRadius="5" >
-                    <TextBlock Margin="16,2,10,2" FontSize="16" Opacity="0.8"
+                        <Border Background="#88333333" CornerRadius="5" >
+                            <TextBlock Margin="16,2,10,2" FontSize="16" Opacity="0.8"
                                Foreground="{Binding CurrentGym.OwnedByTeam, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}">
                         <Run Text="{Binding CurrentGym.GymPoints}"></Run>
                         <Run Text=" / "></Run>
                         <!--TODO Missing binding vars-->
                         <!--<Run Text="{Binding GymPrestigeFull}"></Run>-->
                         <Run Text="8000"></Run>
-                    </TextBlock>
-                </Border>
-            </Border>
-        </Grid>
+                            </TextBlock>
+                        </Border>
+                    </Border>
+                </Grid>
+
 
         <!--Buttons & Message-->
         <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="100,0,0,0"
@@ -201,6 +225,5 @@
         </Border>
         
         <!--TODO Dialog to choose pokemon and GO-->
-
     </Grid>
 </Page>

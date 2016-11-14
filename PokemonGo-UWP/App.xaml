@@ -70,7 +70,7 @@
             <utils:PlayerTeamToTeamImageConverter x:Key="PlayerTeamToTeamImageConverter" />
             <utils:PlayerTeamToTeamBaseImageConverter x:Key="PlayerTeamToTeamBaseImageConverter" />
             <utils:PlayerTeamToTeamNameConverter x:Key="PlayerTeamToTeamNameConverter" />
-            <utils:AchievementValueToMedalImageConverter x:Key="AchievementValueToMedalImageConverter" />
+            <utils:AchievementValueToMedalIconConverter x:Key="AchievementValueToMedalIconConverter" />
             <utils:PlayerTeamToTeamBackgroundImageConverter x:Key="PlayerTeamToTeamBackgroundImageConverter" />
             <utils:AchievementNextValueConverter x:Key="AchievementNextValueConverter" />
             <utils:AchievementValueConverter x:Key="AchievementValueConverter" />
@@ -95,6 +95,7 @@
             <utils:IntToBooleanConverter x:Key="IntToBooleanConverter" />
             <utils:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
             <utils:PokemonLastHoursVisibiltyConverter x:Key="PokemonLastHoursVisibiltyConverter" />
+            <utils:IsIncenseActiveToPlayerIconConverter x:Key="IsIncenseActiveToPlayerIconConverter" />
 
         </ResourceDictionary>
     </Application.Resources>

@@ -1,4 +1,5 @@
 ﻿<Page
+    x:Name="Root"
     x:Class="PokemonGo_UWP.Views.EggDetailPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -48,7 +49,7 @@
                   SelectedItem="{Binding SelectedEgg, Mode=TwoWay}" >
             <FlipView.ItemTemplate>
                 <DataTemplate>
-                    <local:EggDetailControl IncubateEggCommand="{Binding UseIncubatorCommand}" />
+                    <local:EggDetailControl IncubateEggCommand="{Binding ElementName=Root, Path=DataContext.UseIncubatorCommand}" />
                 </DataTemplate>
             </FlipView.ItemTemplate>
         </FlipView>

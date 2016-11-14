@@ -1,15 +1,15 @@
 ﻿{
   "dependencies": {
-    "HockeySDK.UWP": "4.1.4",
+    "HockeySDK.UWP": "4.1.5",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
     "Newtonsoft.Json": "9.0.1",
     "NotificationsExtensions.Win10": "14332.0.2",
     "Octokit": "0.22.0",
-    "Template10": "1.1.12-preview-160712",
+    "Template10": "1.1.12",
     "UniversalMapControl": "0.3.45",
     "WinRTXamlToolkit.Controls.Gauge.UWP": "2.0.0",
     "Xam.Plugin.DeviceMotion": "1.1.2",
-    "XamlAnimatedGif": "1.1.5"
+    "XamlAnimatedGif": "1.1.6"
   },
   "frameworks": {
     "uap10.0": {}

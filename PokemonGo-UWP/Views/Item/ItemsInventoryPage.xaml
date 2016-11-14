@@ -50,6 +50,12 @@
                           Margin="0"
                           Grid.Row="1"
                           Padding="0,0,0,60">
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="ItemClick">
+                            <core:InvokeCommandAction Command="{Binding UseItemCommand}" InputConverter="{StaticResource ItemClickEventArgsToClickedItemConverter}" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">
                             <Setter Property="HorizontalContentAlignment" Value="Stretch" />

@@ -1147,6 +1147,10 @@ Du fikk også {1} Stjernestøv, {2} Candy og {3} XP.</target>
           <target state="new">{0} use(s) left</target>
           <note from="MultilingualBuild" annotates="source" priority="2">If your language uses multiply sign, use × (unicode char) and not x</note>
         </trans-unit>
+        <trans-unit id="ItemUseQuestionText" translate="yes" xml:space="preserve">
+          <source>Use {0} ?</source>
+          <target state="new">Use {0} ?</target>
+        </trans-unit>
       </group>
     </body>
   </file>

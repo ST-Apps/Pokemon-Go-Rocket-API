@@ -12,6 +12,7 @@
     xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
     xmlns:entities="using:PokemonGo_UWP.Entities"
     xmlns:controls="using:Template10.Controls"
+    xmlns:POGOcontrols="using:PokemonGo_UWP.Controls"
     xmlns:utils="using:PokemonGo_UWP.Utils"
     x:Name="GamePage"
     RequestedTheme="{Binding CurrentTheme, Mode=OneWay}"
@@ -81,6 +82,13 @@
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
+
+            <DoubleAnimation 
+                Storyboard.TargetName="AppliedItemsList"
+                Storyboard.TargetProperty="Opacity"
+                From="1"
+                To="0"
+                Duration="0:0:0.2"/>
         </Storyboard>
 
         <Storyboard x:Name="HidePokeMenuStoryboard">
@@ -141,6 +149,13 @@
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
+
+            <DoubleAnimation 
+                Storyboard.TargetName="AppliedItemsList"
+                Storyboard.TargetProperty="Opacity"
+                From="0"
+                To="1"
+                Duration="0:0:0.2"/>
         </Storyboard>
 
         <Storyboard x:Name="ShowLevelUpPanelStoryboard">
@@ -228,6 +243,14 @@
                              From="350"
                              To="0"
                              Duration="0:0:0.2" />
+
+            <DoubleAnimation 
+                Storyboard.TargetName="AppliedItemsList"
+                Storyboard.TargetProperty="Opacity"
+                From="1"
+                To="0"
+                Duration="0:0:0.2"/>
+
         </Storyboard>
 
         <Storyboard x:Name="HideNearbyModalStoryboard">
@@ -237,6 +260,22 @@
                              From="0"
                              To="350"
                              Duration="0:0:0.2" />
+
+            <DoubleAnimation 
+                Storyboard.TargetName="AppliedItemsList"
+                Storyboard.TargetProperty="Opacity"
+                From="0"
+                To="1"
+                Duration="0:0:0.2"/>
+
+        </Storyboard>
+
+        <Storyboard x:Name="ShowAppliedItemStoryboard">
+            
+        </Storyboard>
+
+        <Storyboard x:Name="HideAppliedItemStoryboard">
+
         </Storyboard>
 
         <utils:NearbyPokemonInPokedexToVisibilityConverter x:Key="NearbyPokemonInPokedexToVisibilityConverter" />
@@ -286,12 +325,12 @@
                          Canvas.ZIndex="1"
                          x:Name="GameMapControl">
 
-            <Image Source="../Assets/UI/ash.png"
-                   maps:MapControl.NormalizedAnchorPoint="0.5,1"
-                   Stretch="Uniform"
-                   Height="48"
-                   Width="48"
-                   x:Name="PlayerImage" />
+                <Image  Source="{Binding IsIncenseActive, Converter={StaticResource IsIncenseActiveToPlayerIconConverter}}" 
+                        maps:MapControl.NormalizedAnchorPoint="0.5,1"
+                        Stretch="Uniform"
+                        Height="48"
+                        Width="48"
+                        x:Name="PlayerImage" />
 
             <maps:MapItemsControl ItemsSource="{Binding NearbyPokestops}">
                 <maps:MapItemsControl.ItemTemplate>
@@ -363,6 +402,23 @@
                 </maps:MapItemsControl.ItemTemplate>
             </maps:MapItemsControl>
 
+            <maps:MapItemsControl ItemsSource="{Binding IncensePokemon}">
+                <maps:MapItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="entities:IncensePokemon">
+                        <Button Style="{ThemeResource ImageButtonStyle}"
+                                Command="{x:Bind TryCatchPokemon}">
+                            <Image
+                                Source="{Binding PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}" 
+                                maps:MapControl.Location="{Binding Geoposition}" 
+                                maps:MapControl.NormalizedAnchorPoint="{Binding Anchor}" 
+                                Stretch="Uniform" 
+                                Canvas.ZIndex="4" 
+                                Height="{Binding ZoomLevel, ElementName=GameMapControl, Converter={StaticResource MapZoomLevelToIconSizeConverter}, ConverterParameter=1}" 
+                                Width="{Binding ZoomLevel, ElementName=GameMapControl, Converter={StaticResource MapZoomLevelToIconSizeConverter}, ConverterParameter=1}" />
+                        </Button>
+                    </DataTemplate>
+                </maps:MapItemsControl.ItemTemplate>
+            </maps:MapItemsControl>
         </maps:MapControl>
 
         <Grid x:Name="NearbyPokemonContainer"
@@ -708,6 +764,55 @@
             </Button>
 
         </RelativePanel>
+
+        <ListView   x:Name="AppliedItemsList"
+                    ItemsSource="{Binding AppliedItems}"
+                    RelativePanel.AlignRightWithPanel="True"
+                    RelativePanel.AlignTopWithPanel="True"
+                    Margin="0,12,0,0"
+                    Canvas.ZIndex="10"
+                    IsItemClickEnabled="False"
+                    SelectionMode="None">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment"
+                            Value="Stretch" />
+                </Style>
+            </ListView.ItemContainerStyle>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="8">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="{Binding Converter={StaticResource ItemToItemNameConverter}}"
+                                       Style="{ThemeResource AppliedItemNameTextBlock}"
+                                       Visibility="Collapsed" />
+
+                            <Viewbox Style="{ThemeResource AppliedItemRemainingSecondsViewbox}">
+                                <POGOcontrols:CircularProgressBar Style="{ThemeResource AppliedItemRemainingSecondsProgressBar}"
+                                                                  ImageSourcePath="{Binding Converter={StaticResource ItemToItemIconConverter}}"
+                                                                  Maximum="{Binding MaxSeconds}"
+                                                                  Value="{Binding RemainingSeconds}" />
+                            </Viewbox>
+
+                            <Border Style="{ThemeResource RemainingTimeBorder}">
+                                <TextBlock Style="{ThemeResource RemainingTimeTextStyle}"
+                                           Text="{Binding RemainingTime}" />
+                            </Border>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
 
         <Grid x:Name="UIBottomPanel"
               RelativePanel.AlignBottomWithPanel="True"
