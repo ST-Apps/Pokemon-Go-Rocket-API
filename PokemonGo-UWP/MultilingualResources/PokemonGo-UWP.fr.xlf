@@ -841,7 +841,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="TooFarAwayTextBlock.Text" translate="yes" xml:space="preserve">
           <source>This pokestop is too far away</source>
-          <target state="translated">Ce PokéStop is trop loin</target>
+          <target state="translated">Ce PokéStop est trop loin</target>
         </trans-unit>
         <trans-unit id="AddModifierSuccessTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Successfully added lure module</source>
