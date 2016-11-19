@@ -146,8 +146,11 @@
                         <TextBlock Grid.Row="2"
                                    HorizontalAlignment="Center"
                                    FontFamily="{StaticResource LatoBoldFont}"
-                                   FontSize="15"
-                                   Foreground="{StaticResource TitleTextColor}"><Run Text="{x:Bind EggKmWalkedStart, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0.0\}}" /><Run Text="/" /><Run Text="{x:Bind EggKmWalkedTarget, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0.0\}}" />
+                                   FontSize="13"
+                                   Foreground="{StaticResource TitleTextColor}">
+                            <Run Text="{Binding EggKmWalkedStart, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0.##\}}" />
+                            <Run Text="/" />
+                            <Run Text="{x:Bind EggKmWalkedTarget, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0.0\}}" />
                             <Run FontFamily="{StaticResource LatoMediumFont}"
                                  FontSize="11"
                                  Foreground="{StaticResource GrayTextColor}"
