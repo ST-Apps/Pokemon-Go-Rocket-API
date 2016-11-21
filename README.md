@@ -1,5 +1,6 @@
-# Warning!
-
+#message
+Pogo has been disabled temporary.
+# Warning
 The Game is Working but with some small issues:
 - Captcha feature is missing, meaning that this version is not 100% safe. The latest update was released just to allow you to play again while we deal with missing features.
 - PTC login may fail and cause the app to crash
