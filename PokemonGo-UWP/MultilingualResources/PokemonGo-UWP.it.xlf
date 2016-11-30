@@ -281,8 +281,7 @@
         </trans-unit>
         <trans-unit id="NoText" translate="yes" xml:space="preserve">
           <source>NO</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">No</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="final" state-qualifier="tm-suggestion">NO</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
         </trans-unit>
         <trans-unit id="NoGpsPermissionsText" translate="yes" xml:space="preserve">
@@ -495,51 +494,70 @@ Vuoi aprire la pagina con il file di installazione per l'installazione manuale?<
         <trans-unit id="EggHatchMessage" translate="yes" xml:space="preserve">
           <source>An Egg hatched into a {0}.
 You also got {1} Stardust, {2} Candy and {3} XP.</source>
-          <target state="needs-review-translation">Da un Uovo si è schiuso un {0}.
+          <target state="final">Da un Uovo si è schiuso un {0}.
 Hai ottenuto anche {1} Polvere di stella, {2} Caramelle e {3} PE.</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="EvolvePokemonWarningText" translate="yes" xml:space="preserve">
           <source>Do you want to evolve {0}?</source>
-          <target state="new">Vuoi far evolvere {0}?</target>
+          <target state="final">Vuoi far evolvere {0}?</target>
         </trans-unit>
         <trans-unit id="PowerUpPokemonWarningText" translate="yes" xml:space="preserve">
           <source>Do you want to use a power up for {0}?</source>
-          <target state="new">Vuoi potenziare {0}?</target>
+          <target state="final">Vuoi potenziare {0}?</target>
         </trans-unit>
         <trans-unit id="TransferPokemonWarningTitle" translate="yes" xml:space="preserve">
           <source>Do you really want to transfer {0} to the Professor?</source>
-          <target state="new">Vuoi davvero trasferire {0} al Professore?</target>
+          <target state="final">Vuoi davvero trasferire {0} al Professore?</target>
         </trans-unit>
         <trans-unit id="CancelText" translate="yes" xml:space="preserve">
           <source>CANCEL</source>
-          <target state="new">CANCEL</target>
+          <target state="final">ANNULLA</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
         </trans-unit>
         <trans-unit id="ItemDiscardWarningText" translate="yes" xml:space="preserve">
           <source>Discard {0}?</source>
-          <target state="new">Discard {0}?</target>
+          <target state="final">Scartare {0}?</target>
         </trans-unit>
         <trans-unit id="SetNickName" translate="yes" xml:space="preserve">
           <source>Set Nickname</source>
-          <target state="new">Set Nickname</target>
+          <target state="final">Imposta soprannome</target>
         </trans-unit>
         <trans-unit id="OkText" translate="yes" xml:space="preserve">
           <source>O. K.</source>
-          <target state="new">O. K.</target>
+          <target state="final">O. K.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Space between . and K</note>
         </trans-unit>
         <trans-unit id="PokemonEncounterErrorText" translate="yes" xml:space="preserve">
           <source>There was an error loading the encounter with {0}, please try again later.</source>
-          <target state="new">There was an error loading the encounter with {0}, please try again later.</target>
+          <target state="final">C'è stato un errore nel caricamente dell'incontro con {0}, per favore riprova più tardi.</target>
         </trans-unit>
         <trans-unit id="PokemonEncounterNotInRangeText" translate="yes" xml:space="preserve">
           <source>{0} is not in catch range anymore.</source>
-          <target state="new">{0} is not in catch range anymore.</target>
+          <target state="final">{0} non è più nelle vicinanze.</target>
         </trans-unit>
         <trans-unit id="CannotTransferFavorite" translate="yes" xml:space="preserve">
           <source>Cannot transfer a favorite Pokémon!</source>
-          <target state="new">Cannot transfer a favorite Pokémon!</target>
+          <target state="final">Non puoi trasferire un Pokémon preferito!</target>
+        </trans-unit>
+        <trans-unit id="CantUseBerryText" translate="yes" xml:space="preserve">
+          <source>You already used a Berry.</source>
+          <target state="new">Hai già usato una Bacca.</target>
+        </trans-unit>
+        <trans-unit id="LureDetailsTextEmpty" translate="yes" xml:space="preserve">
+          <source>Can have a PokéStop Module installed</source>
+          <target state="new">Può avere un Modulo PokéStop installato</target>
+        </trans-unit>
+        <trans-unit id="LureDetailsTextFilled" translate="yes" xml:space="preserve">
+          <source>A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</source>
+          <target state="new">Attira i Pokémon per 30 minuti verso un Pokéstop. Chiunque si trovi nei dintorni ne trarrà lo stesso beneficio.</target>
+        </trans-unit>
+        <trans-unit id="LureTitleTextEmpty" translate="yes" xml:space="preserve">
+          <source>Empty module slot</source>
+          <target state="new">Spazio modulo vuoto</target>
+        </trans-unit>
+        <trans-unit id="LureTitleTextFilled" translate="yes" xml:space="preserve">
+          <source>Lure Module</source>
+          <target state="new">Modulo Esca</target>
         </trans-unit>
         <trans-unit id="CantUseBerryText" translate="yes" xml:space="preserve">
           <source>You already used a Berry.</source>
@@ -657,8 +675,7 @@ Hai ottenuto anche {1} Polvere di stella, {2} Caramelle e {3} PE.</target>
         </trans-unit>
         <trans-unit id="NumberTextBlock.Text" translate="yes" xml:space="preserve">
           <source>+ </source>
-          <target state="needs-review-translation"># </target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="final">+ </target>
           <note from="MultilingualBuild" annotates="source" priority="2">Watch out: there is a space after the +</note>
         </trans-unit>
         <trans-unit id="SlashSpaceCpTextBlock.Text" translate="yes" xml:space="preserve">
@@ -817,12 +834,36 @@ Hai ottenuto anche {1} Polvere di stella, {2} Caramelle e {3} PE.</target>
         </trans-unit>
         <trans-unit id="AppraiseTextBlock.Text" translate="yes" xml:space="preserve">
           <source>APPRAISE</source>
-          <target state="new">APPRAISE</target>
+          <target state="final">VALUTA</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
         </trans-unit>
         <trans-unit id="AwardedExperienceTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Experience</source>
-          <target state="new">Experience</target>
+          <target state="final">Esperienza</target>
+        </trans-unit>
+        <trans-unit id="EggsHeader.Title" translate="yes" xml:space="preserve">
+          <source>EGGS</source>
+          <target state="new">UOVA</target>
+        </trans-unit>
+        <trans-unit id="PokemonHeader.Title" translate="yes" xml:space="preserve">
+          <source>POKÉMON</source>
+          <target state="new">POKÉMON</target>
+        </trans-unit>
+        <trans-unit id="FortAlreadyHasModifierTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>This pokestop already has a lure module installed</source>
+          <target state="new">Questo pokéstop ha già un modulo esca installato</target>
+        </trans-unit>
+        <trans-unit id="NoItemInInventoryTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>There is no troy disc in your inventory</source>
+          <target state="new">Non ci sono moduli esca nel tuo inventario</target>
+        </trans-unit>
+        <trans-unit id="TooFarAwayTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>This pokestop is too far away</source>
+          <target state="new">Questo pokéstop è troppo lontano</target>
+        </trans-unit>
+        <trans-unit id="AddModifierSuccessTextBlock.Text" translate="yes" xml:space="preserve">
+          <source>Successfully added lure module</source>
+          <target state="new">Modulo esca aggiunto con successo</target>
         </trans-unit>
         <trans-unit id="EggsHeader.Title" translate="yes" xml:space="preserve">
           <source>EGGS</source>
@@ -1462,7 +1503,7 @@ Hai ottenuto anche {1} Polvere di stella, {2} Caramelle e {3} PE.</target>
         </trans-unit>
         <trans-unit id="Omanyte" translate="yes" xml:space="preserve">
           <source>Omanyte</source>
-          <target state="final">Omanyteì</target>
+          <target state="final">Omanyte</target>
         </trans-unit>
         <trans-unit id="Omastar" translate="yes" xml:space="preserve">
           <source>Omastar</source>
@@ -1847,7 +1888,7 @@ Hai ottenuto anche {1} Polvere di stella, {2} Caramelle e {3} PE.</target>
         </trans-unit>
         <trans-unit id="AquaJet" translate="yes" xml:space="preserve">
           <source>Aqua Jet</source>
-          <target state="final">Aquagetto</target>
+          <target state="final">Acquagetto</target>
         </trans-unit>
         <trans-unit id="AquaTail" translate="yes" xml:space="preserve">
           <source>Aqua Tail</source>
