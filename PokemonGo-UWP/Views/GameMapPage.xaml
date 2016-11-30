@@ -931,7 +931,7 @@
                         <ItemsPanelTemplate>
                             <WrapGrid Orientation="Horizontal"
                                       VerticalChildrenAlignment="Top"
-                                      MaximumRowsOrColumns="10"
+                                      MaximumRowsOrColumns="3"
                                       ItemHeight="52"
                                       ItemWidth="40"
                                       ScrollViewer.VerticalScrollMode="Disabled"
