@@ -323,6 +323,8 @@
                          TiltInteractionMode="GestureAndControl"                         
                          MapServiceToken="{x:Bind ViewModel.MapServiceToken, Mode=OneTime}"
                          Canvas.ZIndex="1"
+                         PanInteractionMode="Disabled"
+                         ZoomInteractionMode="GestureOnly"
                          x:Name="GameMapControl">
 
                 <Image  Source="{Binding IsIncenseActive, Converter={StaticResource IsIncenseActiveToPlayerIconConverter}}" 
