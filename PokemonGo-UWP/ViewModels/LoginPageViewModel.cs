@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -85,7 +85,13 @@ namespace PokemonGo_UWP.ViewModels
 
         public string Username
         {
-            get { return _username; }
+            get {
+                //get username/email
+                var login = (string) ApplicationData.Current.LocalSettings.Values["username"];
+                return  login;
+                
+                
+                return _username; }
             set
             {
                 Set(ref _username, value);
@@ -136,6 +142,8 @@ namespace PokemonGo_UWP.ViewModels
                     }
                     else
                     {
+                        //save login
+                        ApplicationData.Current.LocalSettings.Values["username"] = _username;
                         // Goto game page
                         await NavigationService.NavigateAsync(typeof(GameMapPage), GameMapNavigationModes.AppStart);
                     }
@@ -182,6 +190,8 @@ namespace PokemonGo_UWP.ViewModels
                     }
                     else
                     {
+                        //save email
+                        ApplicationData.Current.LocalSettings.Values["username"] = _username;
                         // Goto game page
                         await NavigationService.NavigateAsync(typeof(GameMapPage), GameMapNavigationModes.AppStart);
                     }
