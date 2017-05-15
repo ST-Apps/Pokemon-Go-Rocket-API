@@ -1040,7 +1040,7 @@ Du hast auch {1} Sternenstaub, {2} Bonbon und {3} EP erhalten.</target>
         </trans-unit>
         <trans-unit id="D_ItemSuperPotion" translate="yes" xml:space="preserve">
           <source>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 50 points.</source>
-          <target state="translated">Eine sprayförmige Medizin um Wunden zu behandeln. Es regeneriert die KP eines Pokémon um 50 Punkte.</target>
+          <target state="translated">Hilft bei Wunden. Füllt 50 der KP eines Pokémon wieder auf.</target>
         </trans-unit>
         <trans-unit id="D_ItemTroyDisk" translate="yes" xml:space="preserve">
           <source>A module that attracts Pokémon to a Pokéstop for 30 min. The effect benefits other people nearby.</source>
@@ -1065,6 +1065,18 @@ Du hast auch {1} Sternenstaub, {2} Bonbon und {3} EP erhalten.</target>
         <trans-unit id="D_ItemWeparBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
           <target state="translated">Wenn du sie einem Pokémon zum Essen gibst, lässt es sich leichter fangen.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemHyperPotion" translate="yes" xml:space="preserve">
+          <source>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 200 points.</source>
+          <target state="translated">Hilft bei Wunden. Füllt 200 der KP eines Pokémon wieder auf.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemMaxPotion" translate="yes" xml:space="preserve">
+          <source>A spray-type medicine for treating wounds. It will completely restore the max HP of a single Pokémon.</source>
+          <target state="translated">Hilft bei Wunden. Füllt alle KP eines Pokémon wieder auf.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemMaxRevive" translate="yes" xml:space="preserve">
+          <source>A medicine that can revive fainted Pokémon. It also fully restores a fainted Pokémon's maximum HP.</source>
+          <target state="translated">Eine Medizin, die ein kampfunfähiges Pokémon wiederbelebt. Die KP werden vollständig wiederhergestellt.</target>
         </trans-unit>
       </group>
     </body>

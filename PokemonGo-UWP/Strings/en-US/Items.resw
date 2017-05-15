@@ -273,4 +273,13 @@
   <data name="ItemXMiracle" xml:space="preserve">
     <value>X Miracle</value>
   </data>
+  <data name="D_ItemHyperPotion" xml:space="preserve">
+    <value>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 200 points.</value>
+  </data>
+  <data name="D_ItemMaxPotion" xml:space="preserve">
+    <value>A spray-type medicine for treating wounds. It will completely restore the max HP of a single Pokémon.</value>
+  </data>
+  <data name="D_ItemMaxRevive" xml:space="preserve">
+    <value>A medicine that can revive fainted Pokémon. It also fully restores a fainted Pokémon's maximum HP.</value>
+  </data>
 </root>
