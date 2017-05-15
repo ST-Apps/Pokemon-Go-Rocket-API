@@ -1168,7 +1168,11 @@ namespace PokemonGo_UWP.Utils
         /// <returns></returns>
         public static async Task<FortSearchResponse> SearchFort(string pokestopId, double latitude, double longitude)
         {
-            return await _client.Fort.SearchFort(pokestopId, latitude, longitude);
+			// Sends the updated position to the client
+			await
+					_client.Player.UpdatePlayerLocation(Geoposition.Coordinate.Point.Position.Latitude,
+							Geoposition.Coordinate.Point.Position.Longitude, Geoposition.Coordinate.Point.Position.Altitude);
+			return await _client.Fort.SearchFort(pokestopId, latitude, longitude);
         }
 
         public static async Task<AddFortModifierResponse> AddFortModifier(string pokestopId, ItemId modifierType)
