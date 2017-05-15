@@ -93,10 +93,15 @@
             <utils:AchievementDescriptionTranslationConverter x:Key="AchievementDescriptionTranslationConverter" />
             <utils:WidthConverter x:Key="WidthConverter" />
             <utils:IntToBooleanConverter x:Key="IntToBooleanConverter" />
-            <utils:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
             <utils:PokemonLastHoursVisibiltyConverter x:Key="PokemonLastHoursVisibiltyConverter" />
+            <utils:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+            <utils:NegateBooleanToVisibilityConverter x:Key="NegateBooleanToVisibilityConverter"/>
+            <utils:AttackTypeTrainToVisibilityConverter x:Key="AttackTypeTrainToVisibilityConverter"/>
+            <utils:AttackTypeAttackToVisibilityConverter x:Key="AttackTypeAttackToVisibilityConverter"/>
+            <utils:PokeTypeToAsset x:Key="PokeTypeToAsset"/>
+            <utils:PokeTypeKingToVisibility x:Key="PokeTypeKingToVisibility"/>
+            <utils:PokeTypeSelectedToTeamColor x:Key="PokeTypeSelectedToTeamColor"/>
             <utils:IsIncenseActiveToPlayerIconConverter x:Key="IsIncenseActiveToPlayerIconConverter" />
-
         </ResourceDictionary>
     </Application.Resources>
 

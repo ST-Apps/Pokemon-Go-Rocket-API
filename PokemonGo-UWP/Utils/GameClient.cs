@@ -724,7 +724,7 @@ namespace PokemonGo_UWP.Utils
                 .ToArray();
             Logger.Write($"Found {newGyms.Length} nearby Gyms");
             // For now, we do not show the gyms on the map, as they are not complete yet. Code remains, so we can still work on it.
-            //NearbyGyms.UpdateWith(newGyms, x => new FortDataWrapper(x), (x, y) => x.Id == y.Id);
+            NearbyGyms.UpdateWith(newGyms, x => new FortDataWrapper(x), (x, y) => x.Id == y.Id);
 
             // Update LuredPokemon
             var newLuredPokemon = newPokeStops.Where(item => item.LureInfo != null).Select(item => new LuredPokemon(item.LureInfo, item.Latitude, item.Longitude)).ToArray();
@@ -894,6 +894,15 @@ namespace PokemonGo_UWP.Utils
         public static async Task<GetInventoryResponse> GetInventory()
         {
             return await _client.Inventory.GetInventory();
+        }
+
+        /// <summary>
+        ///     Gets player's inventoryDelta
+        /// </summary>
+        /// <returns></returns>
+        public static async Task<SetPlayerTeamResponse> SetPlayerTeam(TeamColor color)
+        {
+            return await _client.Player.SetPlayerTeam(color);
         }
 
         /// <summary>
@@ -1180,7 +1189,7 @@ namespace PokemonGo_UWP.Utils
         #region Gym Handling
 
         /// <summary>
-        ///     Gets the details for the given Gym
+        /// Gets the details for the given Gym
         /// </summary>
         /// <param name="gymid"></param>
         /// <param name="latitude"></param>
@@ -1191,11 +1200,52 @@ namespace PokemonGo_UWP.Utils
             return await _client.Fort.GetGymDetails(gymid, latitude, longitude);
         }
 
-        /// The following _client.Fort methods need implementation:
-        /// FortDeployPokemon
-        /// FortRecallPokemon
-        /// StartGymBattle
-        /// AttackGym
+        /// <summary>
+        /// Deploy Pokemon to stay in the gym for its defending
+        /// </summary>
+        /// <param name="gymid"></param>
+        /// <param name="pokemonId"></param>
+        /// <returns></returns>
+        public static async Task<FortDeployPokemonResponse> FortDeployPokemon(string gymid, ulong pokemonId)
+        {
+            return await _client.Fort.FortDeployPokemon(gymid, pokemonId);
+        }
+
+        /// <summary>
+        /// Recall pokemon from the battle in the gym
+        /// </summary>
+        /// <param name="gymid"></param>
+        /// <param name="pokemonId"></param>
+        /// <returns></returns>
+        public static async Task<FortRecallPokemonResponse> FortRecallPokemon(string gymid, ulong pokemonId)
+        {
+            return await _client.Fort.FortRecallPokemon(gymid, pokemonId);
+        }
+
+        /// <summary>
+        /// Start the Gym Battle
+        /// </summary>
+        /// <param name="gymid"></param>
+        /// <param name="defendingPokemonId"></param>
+        /// <param name="attackingPokemonIds"></param>
+        /// <returns></returns>
+        public static async Task<StartGymBattleResponse> StartGymBattle(string gymid, ulong defendingPokemonId, IEnumerable<ulong> attackingPokemonIds)
+        {
+            return await _client.Fort.StartGymBattle(gymid, defendingPokemonId, attackingPokemonIds);
+        }
+
+        /// <summary>
+        /// Attacks the Gym (sends list of BattleAction to get processed in the fight)
+        /// </summary>
+        /// <param name="gymid"></param>
+        /// <param name="battleId"></param>
+        /// <param name="battleActions"></param>
+        /// <param name="lastRetrievedAction"></param>
+        /// <returns></returns>
+        public static async Task<AttackGymResponse> AttackGym(string gymid, string battleId, List<POGOProtos.Data.Battle.BattleAction> battleActions, POGOProtos.Data.Battle.BattleAction lastRetrievedAction)
+        {
+            return await _client.Fort.AttackGym(gymid, battleId, battleActions, lastRetrievedAction);
+        }
 
         #endregion
 

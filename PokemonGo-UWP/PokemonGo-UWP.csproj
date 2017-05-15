@@ -214,7 +214,6 @@
     <Content Include="Assets\Candy\Water.png" />
     <Content Include="Assets\Icons\circle_255_filled_01.png" />
     <Content Include="Assets\Icons\CompassIcon.png" />
-    <Content Include="Assets\Icons\crown.png" />
     <Content Include="Assets\Icons\Footprint_Far.png" />
     <Content Include="Assets\Icons\Footprint_Mid.png" />
     <Content Include="Assets\Icons\Footprint_Near.png" />
@@ -237,6 +236,9 @@
     <Content Include="Assets\Icons\ic_name.png" />
     <Content Include="Assets\Icons\ic_number.png" />
     <Content Include="Assets\Icons\ic_store.png" />
+    <Content Include="Assets\Icons\indicator_crown.png" />
+    <Content Include="Assets\Icons\indicator_empty.png" />
+    <Content Include="Assets\Icons\indicator_normal.png" />
     <Content Include="Assets\Icons\pokestop_far.png" />
     <Content Include="Assets\Icons\pokestop_far_inactive.png" />
     <Content Include="Assets\Icons\pokestop_far_inactive_lured.png" />
@@ -749,6 +751,9 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\ArcProgressBar.cs" />
+    <Compile Include="Controls\MessageDialog\PoGoTeamSelectDialog.xaml.cs">
+      <DependentUpon>PoGoTeamSelectDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MessageDialog\PoGoMessageDialog.xaml.cs">
       <DependentUpon>PoGoMessageDialog.xaml</DependentUpon>
     </Compile>
@@ -768,6 +773,7 @@
       <DependentUpon>PoGoPivotHeader.xaml</DependentUpon>
     </Compile>
     <Compile Include="Entities\FortDataWrapper.cs" />
+    <Compile Include="Entities\GymMembershipWrapper.cs" />
     <Compile Include="Entities\IMapPokemon.cs" />
     <Compile Include="Entities\AppliedItemWrapper.cs" />
     <Compile Include="Entities\IncensePokemon.cs" />
@@ -946,6 +952,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\MessageDialog\PoGoTeamSelectDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\MessageDialog\PoGoMessageDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

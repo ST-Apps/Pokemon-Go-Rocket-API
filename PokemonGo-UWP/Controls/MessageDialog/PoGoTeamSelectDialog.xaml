@@ -1,0 +1,168 @@
+﻿<UserControl
+    x:Class="PokemonGo_UWP.Controls.PoGoTeamSelectionDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PokemonGo_UWP.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:utils="using:PokemonGo_UWP.Utils"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <UserControl.Resources>
+
+        <!--ANIMATIONS-->
+
+        <!--Fade-->
+        <Storyboard x:Name="ShowMDFadeStoryboard">
+            <DoubleAnimation
+                Storyboard.TargetName="CoverGrid"
+                Storyboard.TargetProperty="Opacity"
+                From="0"
+                To="1"
+                BeginTime="0:0:0.05"
+                Duration="0:0:0.1" />
+            <DoubleAnimation
+                Storyboard.TargetName="BackgroundRect"
+                Storyboard.TargetProperty="Opacity"
+                From="0"
+                To="0.6"
+                Duration="0:0:0.15" />
+        </Storyboard>
+
+        <Storyboard x:Name="HideMDFadeStoryboard">
+            <DoubleAnimation
+                Storyboard.TargetName="CoverGrid"
+                Storyboard.TargetProperty="Opacity"
+                From="1"
+                To="0"
+                BeginTime="0:0:0.05"
+                Duration="0:0:0.1" />
+            <DoubleAnimation
+                Storyboard.TargetName="BackgroundRect"
+                Storyboard.TargetProperty="Opacity"
+                From="0.6"
+                To="0"
+                Duration="0:0:0.15" />
+        </Storyboard>
+
+        <!--Bottom-->
+        <Storyboard x:Name="ShowMDBottomStoryboard">
+            <DoubleAnimation
+                Storyboard.TargetName="CoverGrid"
+                Storyboard.TargetProperty="Opacity"
+                From="0"
+                To="1"
+                Duration="0:0:0.1" />
+            <DoubleAnimation
+                Storyboard.TargetName="BackgroundRect"
+                Storyboard.TargetProperty="Opacity"
+                From="0"
+                To="0.6"
+                Duration="0:0:0.15" />
+            <DoubleAnimation Storyboard.TargetName="DownwardsTranslation"
+                             Storyboard.TargetProperty="Y"
+                             From="{x:Bind DownwardsTranslationRange, Mode=OneWay}"
+                             To="0"
+                             BeginTime="0:0:0.1"
+                             Duration="0:0:0.3">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Storyboard x:Name="HideMDBottomStoryboard">
+            <DoubleAnimation
+                Storyboard.TargetName="CoverGrid"
+                Storyboard.TargetProperty="Opacity"
+                From="1"
+                To="0"
+                Duration="0:0:0.05"
+                BeginTime="0:0:0.25"/>
+            <DoubleAnimation
+                Storyboard.TargetName="BackgroundRect"
+                Storyboard.TargetProperty="Opacity"
+                From="0.6"
+                To="0"
+                Duration="0:0:0.15"
+                BeginTime="0:0:0.15"/>
+            <DoubleAnimation Storyboard.TargetName="DownwardsTranslation"
+                             Storyboard.TargetProperty="Y"
+                             From="0"
+                             To="{x:Bind DownwardsTranslationRange, Mode=OneWay}"
+                             Duration="0:0:0.3">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseIn" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+    </UserControl.Resources>
+
+    <Grid x:Name="CoverGrid"
+          VerticalAlignment="Stretch"
+          HorizontalAlignment="Stretch"
+          Background="Transparent"
+          Opacity="1">
+        <Rectangle x:Name="BackgroundRect"
+                   Fill="{StaticResource PageBackgroundGradient}"
+                   Opacity="0"
+                   Visibility="{x:Bind CoverBackground, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}"
+                   Tapped="Background_Tapped" />
+        <Grid x:Name="ContentGrid"
+              Style="{StaticResource GridContainer}"
+              Background="{StaticResource LightPageBackgroundGradient}"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center"
+              MaxWidth="800"
+              MinWidth="250"
+              Padding="25,25,25,0">
+            <Grid.RenderTransform>
+                <TranslateTransform Y="0" x:Name="DownwardsTranslation" />
+            </Grid.RenderTransform>
+            <StackPanel Orientation="Vertical">
+                <TextBlock Foreground="{StaticResource TitleTextColor}"
+                               Margin="0,0,0,15"
+                               Text="Pokemon Team Selection"
+                               TextAlignment="Center"
+                               TextWrapping="Wrap"
+                               FontSize="17"
+                               FontFamily="{StaticResource LatoBoldFont}"/>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="ms-appx:///Assets/Icons/ic_arena_yellow.png" Width="80" />
+                        <Button x:Name="YellowButton"
+                                Style="{StaticResource ButtonSubmit}"
+                                HorizontalAlignment="Stretch"
+                                Content="Yellow"
+                                MinWidth="80"
+                                Margin="0,25,0,0" />
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="ms-appx:///Assets/Icons/ic_arena_blue.png" Width="80" />
+                        <Button x:Name="BlueButton"
+                                Style="{StaticResource ButtonSubmit}"
+                                HorizontalAlignment="Stretch"
+                                Content="Blue"
+                                MinWidth="80"
+                                Margin="0,25,0,0" />
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="ms-appx:///Assets/Icons/ic_arena_red.png" Width="80" />
+                        <Button x:Name="RedButton"
+                                Style="{StaticResource ButtonSubmit}"
+                                HorizontalAlignment="Stretch"
+                                Content="Red"
+                                MinWidth="80"
+                                Margin="0,25,0,0" />
+                    </StackPanel>
+                </StackPanel>
+                <Button x:Name="CancelButton"
+                        Style="{StaticResource ButtonCancel}"
+                        Content="Cancel"/>
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+</UserControl>

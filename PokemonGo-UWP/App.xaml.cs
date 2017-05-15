@@ -176,10 +176,10 @@ namespace PokemonGo_UWP
         /// <param name="prelaunchActivated"></param>
         /// <returns></returns>
         public override Task OnSuspendingAsync(object s, SuspendingEventArgs e, bool prelaunchActivated)
-        {                        
+        {
             GameClient.PokemonsInventory.CollectionChanged -= PokemonsInventory_CollectionChanged;
             GameClient.CatchablePokemons.CollectionChanged -= CatchablePokemons_CollectionChanged;
-            NetworkInformation.NetworkStatusChanged -= NetworkInformationOnNetworkStatusChanged;            
+            NetworkInformation.NetworkStatusChanged -= NetworkInformationOnNetworkStatusChanged;
 
             if (SettingsService.Instance.IsBatterySaverEnabled)
                 _proximityHelper.EnableDisplayAutoOff(false);
@@ -207,7 +207,7 @@ namespace PokemonGo_UWP
 #if DEBUG
             // Init logger
             Logger.SetLogger(new ConsoleLogger(LogLevel.Info));
-#endif            
+#endif
             // If we have a phone contract, hide the status bar
             if (ApiInformation.IsTypePresent("Windows.UI.ViewManagement.StatusBar"))
             {
@@ -218,7 +218,7 @@ namespace PokemonGo_UWP
             // Enter into full screen mode
             ApplicationView.GetForCurrentView().TryEnterFullScreenMode();
             ApplicationView.GetForCurrentView().SetDesiredBoundsMode(ApplicationViewBoundsMode.UseCoreWindow);
-            ApplicationView.GetForCurrentView().FullScreenSystemOverlayMode = FullScreenSystemOverlayMode.Standard;            
+            ApplicationView.GetForCurrentView().FullScreenSystemOverlayMode = FullScreenSystemOverlayMode.Standard;
 
             // Forces the display to stay on while we play
             //_displayRequest.RequestActive();
@@ -247,10 +247,10 @@ namespace PokemonGo_UWP
 
             // Respond to changes in inventory and Pokemon in the immediate viscinity.
             GameClient.PokemonsInventory.CollectionChanged += PokemonsInventory_CollectionChanged;
-            GameClient.CatchablePokemons.CollectionChanged += CatchablePokemons_CollectionChanged;         
+            GameClient.CatchablePokemons.CollectionChanged += CatchablePokemons_CollectionChanged;
 
             await Task.CompletedTask;
-        }        
+        }
 
         /// <summary>
         ///
@@ -355,7 +355,7 @@ namespace PokemonGo_UWP
         #region Helpers
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="pokemonList"></param>
         /// <remarks>

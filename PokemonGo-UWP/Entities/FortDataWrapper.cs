@@ -18,7 +18,7 @@ using Newtonsoft.Json;
 using POGOProtos.Inventory.Item;
 
 namespace PokemonGo_UWP.Entities
-{    
+{
     public class FortDataWrapper : IUpdatable<FortData>, INotifyPropertyChanged
     {
         [JsonProperty, JsonConverter(typeof(ProtobufJsonNetConverter))]
@@ -93,6 +93,10 @@ namespace PokemonGo_UWP.Entities
         {
             _fortData = update;
 
+            Update();
+        }
+        public void Update()
+        {
             OnPropertyChanged(nameof(FortDataStatus));
             OnPropertyChanged(nameof(Id));
             OnPropertyChanged(nameof(Type));
@@ -133,6 +137,60 @@ namespace PokemonGo_UWP.Entities
         public PokemonId GuardPokemonId => _fortData.GuardPokemonId;
 
         public long GymPoints => _fortData.GymPoints;
+
+        public int GymMaxPoints
+        {
+            get
+            {
+                var gp = GymPoints;
+                if (gp < 2000)
+                    return 2000;
+                else if (gp < 4000)
+                    return 4000;
+                else if (gp < 8000)
+                    return 8000;
+                else if (gp < 12000)
+                    return 12000;
+                else if (gp < 16000)
+                    return 16000;
+                else if (gp < 20000)
+                    return 20000;
+                else if (gp < 30000)
+                    return 30000;
+                else if (gp < 40000)
+                    return 40000;
+                else
+                    return 50000;
+            }
+        }
+
+        public int GymLevel
+        {
+            get
+            {
+                var gp = GymPoints;
+                if (gp < 2000)
+                    return 1;
+                else if (gp < 4000)
+                    return 2;
+                else if (gp < 8000)
+                    return 3;
+                else if (gp < 12000)
+                    return 4;
+                else if (gp < 16000)
+                    return 5;
+                else if (gp < 20000)
+                    return 6;
+                else if (gp < 30000)
+                    return 7;
+                else if (gp < 40000)
+                    return 8;
+                else if (gp < 50000)
+                    return 9;
+                else
+                    return 10;
+            }
+        }
 
         public string Id => _fortData.Id;
 

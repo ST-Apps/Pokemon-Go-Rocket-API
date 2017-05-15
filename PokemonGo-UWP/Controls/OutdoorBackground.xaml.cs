@@ -36,8 +36,8 @@ namespace PokemonGo_UWP.Controls
                 DayPic.Visibility = Visibility.Collapsed;
                 NightPic.Visibility =  Visibility.Visible;
             }
-            
         }
+
         private Windows.UI.Color ColorFromString(string hex)
         {
             hex = hex.Replace("#", string.Empty);
