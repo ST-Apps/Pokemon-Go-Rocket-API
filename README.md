@@ -65,7 +65,7 @@ A: Yes, but the performance may not be perfect.
 Q: Why is the Device portal returning error 0x80073cf6?
 
 A: Change storage settings from SD card to phone storage. More infos [here](github.com/ST-Apps/PoGo-UWP/issues/11)
-If you already had the app installed, probably a reboot is required.
+If you already had the app installed, you will need to reboot your device before attempting to deploy again.
 
 Q: How can I logout?
 
@@ -73,46 +73,7 @@ A: Press the Pokeball and hit the "LOGOUT" button in the top right corner.
 
 # Changelog
 
-**From 14/08/2016 changelog will be kept in [Releases](https://github.com/ST-Apps/PoGo-UWP/releases/) in each release.**
-
-## (01/08/2016) [v 1.0.12.0-beta] - Bug fixes and improvements
-* Fixed crash when tapping on Pokebal menu
-* Fixed crash when loading the map
-* Added back the progress ring to notify that we're still waiting for GPS signal, avoiding people being shown in Central Africa
-* Fixed [#25](https://github.com/ST-Apps/PoGo-UWP/issues/25)
-
-## (01/08/2016) [v 1.0.8.0-beta] - Bug fixes and improvements
-* App renamed to PoGo
-* Fixed a problem that caused you to get Candy and XP when a Pokemon escapes.
-* Background on Catching screen replaced with original.
-* Fixed PokeStop floating over map
-* Added app version on both Login Screen and Game Page
-* Did huge refactoring on view models
-* Trying to fix problem that is causing Pokestops/Pokemon not to show when in fast motion.
-* Working on making maintenance easier(this can cause more issues)
-
-
-## (01/08/2016) [v 1.0.7.0-beta] - Bug fixes and improvements
-* Fixed Pokestop dissappear while moving [#15](https://github.com/ST-Apps/PoGo-UWP/issues/15)
-* Fixed Pokemon dissappear issue [#27](https://github.com/ST-Apps/PoGo-UWP/issues/27)
-
-## (31/07/2016) [v 1.0.6.0-beta] - Bug fixes and improvements
-* Fixed crash on loading [#3](https://github.com/ST-Apps/PoGo-UWP/issues/3)
-
-## (31/07/2016) [v 1.0.5.0-beta] - Bug fixes and improvements
-* Removed perfect shot everytime player throws the ball [#12](https://github.com/ST-Apps/PoGo-UWP/issues/12)
-* Changed Pokestop icons to purple on already used Pokestops [#26](https://github.com/ST-Apps/PoGo-UWP/issues/26)
-
-## (31/07/2016) [v 1.0.4.0-beta] - Bug fixes and improvements
-* Added update notification [#9](https://github.com/ST-Apps/PoGo-UWP/issues/9)
-* Prevented lockscreen while playing [#16](https://github.com/ST-Apps/PoGo-UWP/issues/16)
-* Fixed crash when running on desktop [#7](https://github.com/ST-Apps/PoGo-UWP/issues/7)
-
-## (31/07/2016) [v 1.0.3.0] - First public beta release
-* PTC Login
-* Map browsing
-* Pokemon catching
-* Pokestop visiting
+**The changelog can be found [here](https://github.com/ST-Apps/PoGo-UWP/releases/)**
 
 # Download
 
