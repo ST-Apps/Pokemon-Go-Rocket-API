@@ -782,7 +782,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="TimesTextBlock.Text" translate="yes" xml:space="preserve">
           <source>times</source>
-          <target state="translated">Temps</target>
+          <target state="translated">Fois</target>
         </trans-unit>
         <trans-unit id="EggDetailButtonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>START INCUBATION</source>
@@ -794,7 +794,7 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="TransferTextBlock.Text" translate="yes" xml:space="preserve">
           <source>TRANSFER</source>
-          <target state="translated">TRANSFERER</target>
+          <target state="translated">TRANSFÉRER</target>
         </trans-unit>
         <trans-unit id="SettingsLanguageRestartTextBlock.Text" translate="yes" xml:space="preserve">
           <source>You must restart the App to take effect.</source>
@@ -814,11 +814,11 @@ Tu as aussi reçu {1} Poudre d'étoile, {2} Bonbon et {3} XP.</target>
         </trans-unit>
         <trans-unit id="FavoriteTextBlock.Text" translate="yes" xml:space="preserve">
           <source>FAVORITE</source>
-          <target state="translated">FAVORI</target>
+          <target state="translated">FAVORIS</target>
         </trans-unit>
         <trans-unit id="AppraiseTextBlock.Text" translate="yes" xml:space="preserve">
           <source>APPRAISE</source>
-          <target state="new">APPRAISE</target>
+          <target state="new">ÉVALUER</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
         </trans-unit>
         <trans-unit id="AwardedExperienceTextBlock.Text" translate="yes" xml:space="preserve">
