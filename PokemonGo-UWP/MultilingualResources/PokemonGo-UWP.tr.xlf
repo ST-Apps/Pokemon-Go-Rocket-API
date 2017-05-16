@@ -20,7 +20,7 @@
         </trans-unit>
         <trans-unit id="BadgeCaptureTotal" translate="yes" xml:space="preserve">
           <source>Collector</source>
-          <target state="translated">Koleksiyoncu</target>
+          <target state="translated">Siyah Kuşak</target>
         </trans-unit>
         <trans-unit id="BadgeEvolvedTotal" translate="yes" xml:space="preserve">
           <source>Scientist</source>
@@ -152,7 +152,7 @@
         </trans-unit>
         <trans-unit id="BadgePokestopsVisitedDescription" translate="yes" xml:space="preserve">
           <source>Visited {0} Pokestops</source>
-          <target state="translated">{0} Pokéstops ziyaret edildi</target>
+          <target state="translated">{0} Pokéstop ziyaret edildi</target>
         </trans-unit>
         <trans-unit id="BadgeSmallRattataDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} small Rattata</source>
@@ -172,7 +172,7 @@
         </trans-unit>
         <trans-unit id="ElectricDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Electric Pokemon</source>
-          <target state="translated">{0} Electrik Pokémon'u yakalandı</target>
+          <target state="translated">{0} Elektrik Pokémon'u yakalandı</target>
         </trans-unit>
         <trans-unit id="FairyDescription" translate="yes" xml:space="preserve">
           <source>Caught {0} Fairy Pokemon</source>
@@ -281,8 +281,7 @@
         </trans-unit>
         <trans-unit id="NoText" translate="yes" xml:space="preserve">
           <source>NO</source>
-          <target state="needs-review-translation">Hayır</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated">HAYIR</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
         </trans-unit>
         <trans-unit id="NoGpsPermissionsText" translate="yes" xml:space="preserve">
@@ -331,8 +330,7 @@ Elle yükleme için yükleme dosyaları sayfası açılsın mı?</target>
         </trans-unit>
         <trans-unit id="YesText" translate="yes" xml:space="preserve">
           <source>YES</source>
-          <target state="needs-review-translation">Evet</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated">EVET</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
         </trans-unit>
         <trans-unit id="InstinctTeamText" translate="yes" xml:space="preserve">
@@ -511,33 +509,33 @@ Aynı zamanda {1} Stardust, {2} Şeker ve {3} XP kazandın.</target>
         </trans-unit>
         <trans-unit id="CancelText" translate="yes" xml:space="preserve">
           <source>CANCEL</source>
-          <target state="new">CANCEL</target>
+          <target state="translated">İPTAL</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
         </trans-unit>
         <trans-unit id="ItemDiscardWarningText" translate="yes" xml:space="preserve">
           <source>Discard {0}?</source>
-          <target state="new">Discard {0}?</target>
+          <target state="translated">Çöpe {0} at?</target>
         </trans-unit>
         <trans-unit id="SetNickName" translate="yes" xml:space="preserve">
           <source>Set Nickname</source>
-          <target state="new">Set Nickname</target>
+          <target state="translated">İsim Ver</target>
         </trans-unit>
         <trans-unit id="OkText" translate="yes" xml:space="preserve">
           <source>O. K.</source>
-          <target state="new">O. K.</target>
+          <target state="translated">O. K.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Space between . and K</note>
         </trans-unit>
         <trans-unit id="PokemonEncounterErrorText" translate="yes" xml:space="preserve">
           <source>There was an error loading the encounter with {0}, please try again later.</source>
-          <target state="new">There was an error loading the encounter with {0}, please try again later.</target>
+          <target state="translated">{0} ile mücadeleniz yüklenirken bir sorun çıktı, lütfen daha sonra tekrar deneyin.</target>
         </trans-unit>
         <trans-unit id="PokemonEncounterNotInRangeText" translate="yes" xml:space="preserve">
           <source>{0} is not in catch range anymore.</source>
-          <target state="new">{0} is not in catch range anymore.</target>
+          <target state="translated">{0 artık çok uzakta.</target>
         </trans-unit>
         <trans-unit id="CannotTransferFavorite" translate="yes" xml:space="preserve">
           <source>Cannot transfer a favorite Pokémon!</source>
-          <target state="new">Cannot transfer a favorite Pokémon!</target>
+          <target state="translated">Favori Pokémon transfer edilemez!</target>
         </trans-unit>
         <trans-unit id="CantUseBerryText" translate="yes" xml:space="preserve">
           <source>You already used a Berry.</source>
@@ -655,8 +653,7 @@ Aynı zamanda {1} Stardust, {2} Şeker ve {3} XP kazandın.</target>
         </trans-unit>
         <trans-unit id="NumberTextBlock.Text" translate="yes" xml:space="preserve">
           <source>+ </source>
-          <target state="needs-review-translation"># </target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated">+ </target>
           <note from="MultilingualBuild" annotates="source" priority="2">Watch out: there is a space after the +</note>
         </trans-unit>
         <trans-unit id="SlashSpaceCpTextBlock.Text" translate="yes" xml:space="preserve">
@@ -725,7 +722,7 @@ Aynı zamanda {1} Stardust, {2} Şeker ve {3} XP kazandın.</target>
         </trans-unit>
         <trans-unit id="CandyTextBlock.Text" translate="yes" xml:space="preserve">
           <source> CANDY</source>
-          <target state="translated"> ŞEKER</target>
+          <target state="translated"> ŞEKERİ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Watch out: space before the word!</note>
         </trans-unit>
         <trans-unit id="EvolveButton.Content" translate="yes" xml:space="preserve">
@@ -814,12 +811,12 @@ Aynı zamanda {1} Stardust, {2} Şeker ve {3} XP kazandın.</target>
         </trans-unit>
         <trans-unit id="AppraiseTextBlock.Text" translate="yes" xml:space="preserve">
           <source>APPRAISE</source>
-          <target state="new">APPRAISE</target>
+          <target state="translated">DEĞERLENDİR</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Capslock</note>
         </trans-unit>
         <trans-unit id="AwardedExperienceTextBlock.Text" translate="yes" xml:space="preserve">
           <source>Experience</source>
-          <target state="new">Experience</target>
+          <target state="translated">Tecrübe</target>
         </trans-unit>
         <trans-unit id="EggsHeader.Title" translate="yes" xml:space="preserve">
           <source>EGGS</source>
@@ -1000,7 +997,7 @@ Aynı zamanda {1} Stardust, {2} Şeker ve {3} XP kazandın.</target>
         </trans-unit>
         <trans-unit id="ItemTroyDisk" translate="yes" xml:space="preserve">
           <source>Lure Module</source>
-          <target state="translated">Truva Diski</target>
+          <target state="translated">Yem Modülü</target>
         </trans-unit>
         <trans-unit id="ItemUltraBall" translate="yes" xml:space="preserve">
           <source>Ultra Ball</source>
@@ -2471,7 +2468,7 @@ Aynı zamanda {1} Stardust, {2} Şeker ve {3} XP kazandın.</target>
         </trans-unit>
         <trans-unit id="Weedle.Description" translate="yes" xml:space="preserve">
           <source>Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).</source>
-          <target state="translated">Weedle son derece keskin bir koku alma duyusu vardır. Sevdiği yaprakları sevmediklerinden büyük kırmızı burnu ile koklayarak ayırabilir.</target>
+          <target state="translated">Weedle'ın son derece keskin bir koku alma duyusu vardır. Sevdiği yaprakları sevmediklerinden büyük kırmızı burnu ile koklayarak ayırabilir.</target>
         </trans-unit>
         <trans-unit id="Kakuna.Description" translate="yes" xml:space="preserve">
           <source>Kakuna remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch.</source>
