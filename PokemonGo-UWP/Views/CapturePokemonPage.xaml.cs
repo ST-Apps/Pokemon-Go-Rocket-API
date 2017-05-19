@@ -205,6 +205,7 @@ namespace PokemonGo_UWP.Views
         {
             base.OnNavigatingFrom(e);
             UnsubscribeToCaptureEvents();
+            AudioUtils.PlaySound(AudioUtils.GAMEPLAY);
         }
 
         #endregion
