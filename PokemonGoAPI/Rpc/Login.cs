@@ -66,7 +66,7 @@ namespace PokemonGo.RocketAPI.Rpc
 
             var serverResponse = await PostProto<Request>(Resources.RpcUrl, serverRequest);
 
-            if (serverRequest.StatusCode == (int) StatusCode.AccessDenied)
+            if ((int)serverResponse.StatusCode == (int) StatusCode.OK_RPC_Url_In_Response)
             {
                 throw new AccountLockedException();
             }
@@ -80,9 +80,14 @@ namespace PokemonGo.RocketAPI.Rpc
             Client.AccessToken.AuthTicket = serverResponse.AuthTicket;
 
             /* Temporary inserted here from 2.0 - there is better mechanism */
-            _client.ProcessMessages(serverResponse.Returns, typeof(GetPlayerResponse), typeof(CheckChallengeResponse));
+            //_client.ProcessMessages(serverResponse.Returns, typeof(GetPlayerResponse), typeof(CheckChallengeResponse));
 
-            if (serverResponse.StatusCode == (int)StatusCode.Redirect)
+            if ((int)serverResponse.StatusCode == (int) StatusCode.Redirect || (int)serverResponse.StatusCode == (int) StatusCode.OK_RPC_Url_In_Response)
+            {
+                Client.ApiUrl = serverResponse.ApiUrl;
+            }
+
+            if ((int)serverResponse.StatusCode == 51 && !String.IsNullOrEmpty(serverResponse.ApiUrl) && String.IsNullOrEmpty(Client.ApiUrl))
             {
                 Client.ApiUrl = serverResponse.ApiUrl;
             }

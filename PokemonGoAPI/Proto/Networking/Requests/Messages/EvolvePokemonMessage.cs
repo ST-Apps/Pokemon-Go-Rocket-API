@@ -24,12 +24,15 @@ namespace POGOProtos.Networking.Requests.Messages {
           string.Concat(
             "CkJQT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVxdWVzdHMvTWVzc2FnZXMvRXZv",
             "bHZlUG9rZW1vbk1lc3NhZ2UucHJvdG8SJ1BPR09Qcm90b3MuTmV0d29ya2lu",
-            "Zy5SZXF1ZXN0cy5NZXNzYWdlcyIqChRFdm9sdmVQb2tlbW9uTWVzc2FnZRIS",
-            "Cgpwb2tlbW9uX2lkGAEgASgGYgZwcm90bzM="));
+            "Zy5SZXF1ZXN0cy5NZXNzYWdlcxomUE9HT1Byb3Rvcy9JbnZlbnRvcnkvSXRl",
+            "bS9JdGVtSWQucHJvdG8icQoURXZvbHZlUG9rZW1vbk1lc3NhZ2USEgoKcG9r",
+            "ZW1vbl9pZBgBIAEoBhJFChpldm9sdXRpb25faXRlbV9yZXF1aXJlbWVudBgC",
+            "IAEoDjIhLlBPR09Qcm90b3MuSW52ZW50b3J5Lkl0ZW0uSXRlbUlkYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::POGOProtos.Inventory.Item.ItemIdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Requests.Messages.EvolvePokemonMessage), global::POGOProtos.Networking.Requests.Messages.EvolvePokemonMessage.Parser, new[]{ "PokemonId" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Requests.Messages.EvolvePokemonMessage), global::POGOProtos.Networking.Requests.Messages.EvolvePokemonMessage.Parser, new[]{ "PokemonId", "EvolutionItemRequirement" }, null, null, null)
           }));
     }
     #endregion
@@ -61,6 +64,7 @@ namespace POGOProtos.Networking.Requests.Messages {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public EvolvePokemonMessage(EvolvePokemonMessage other) : this() {
       pokemonId_ = other.pokemonId_;
+      evolutionItemRequirement_ = other.evolutionItemRequirement_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -79,6 +83,17 @@ namespace POGOProtos.Networking.Requests.Messages {
       }
     }
 
+    /// <summary>Field number for the "evolution_item_requirement" field.</summary>
+    public const int EvolutionItemRequirementFieldNumber = 2;
+    private global::POGOProtos.Inventory.Item.ItemId evolutionItemRequirement_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::POGOProtos.Inventory.Item.ItemId EvolutionItemRequirement {
+      get { return evolutionItemRequirement_; }
+      set {
+        evolutionItemRequirement_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as EvolvePokemonMessage);
@@ -93,6 +108,7 @@ namespace POGOProtos.Networking.Requests.Messages {
         return true;
       }
       if (PokemonId != other.PokemonId) return false;
+      if (EvolutionItemRequirement != other.EvolutionItemRequirement) return false;
       return true;
     }
 
@@ -100,6 +116,7 @@ namespace POGOProtos.Networking.Requests.Messages {
     public override int GetHashCode() {
       int hash = 1;
       if (PokemonId != 0UL) hash ^= PokemonId.GetHashCode();
+      if (EvolutionItemRequirement != 0) hash ^= EvolutionItemRequirement.GetHashCode();
       return hash;
     }
 
@@ -114,6 +131,10 @@ namespace POGOProtos.Networking.Requests.Messages {
         output.WriteRawTag(9);
         output.WriteFixed64(PokemonId);
       }
+      if (EvolutionItemRequirement != 0) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) EvolutionItemRequirement);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -121,6 +142,9 @@ namespace POGOProtos.Networking.Requests.Messages {
       int size = 0;
       if (PokemonId != 0UL) {
         size += 1 + 8;
+      }
+      if (EvolutionItemRequirement != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EvolutionItemRequirement);
       }
       return size;
     }
@@ -132,6 +156,9 @@ namespace POGOProtos.Networking.Requests.Messages {
       }
       if (other.PokemonId != 0UL) {
         PokemonId = other.PokemonId;
+      }
+      if (other.EvolutionItemRequirement != 0) {
+        EvolutionItemRequirement = other.EvolutionItemRequirement;
       }
     }
 
@@ -145,6 +172,10 @@ namespace POGOProtos.Networking.Requests.Messages {
             break;
           case 9: {
             PokemonId = input.ReadFixed64();
+            break;
+          }
+          case 16: {
+            evolutionItemRequirement_ = (global::POGOProtos.Inventory.Item.ItemId) input.ReadEnum();
             break;
           }
         }

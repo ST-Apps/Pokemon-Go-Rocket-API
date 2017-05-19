@@ -26,26 +26,27 @@ namespace POGOProtos.Networking.Responses {
             "dGxlUmVzcG9uc2UucHJvdG8SH1BPR09Qcm90b3MuTmV0d29ya2luZy5SZXNw",
             "b25zZXMaJlBPR09Qcm90b3MvRGF0YS9CYXR0bGUvQmF0dGxlTG9nLnByb3Rv",
             "Gi5QT0dPUHJvdG9zL0RhdGEvQmF0dGxlL0JhdHRsZVBhcnRpY2lwYW50LnBy",
-            "b3RvIq8FChZTdGFydEd5bUJhdHRsZVJlc3BvbnNlEk4KBnJlc3VsdBgBIAEo",
+            "b3RvIuwFChZTdGFydEd5bUJhdHRsZVJlc3BvbnNlEk4KBnJlc3VsdBgBIAEo",
             "DjI+LlBPR09Qcm90b3MuTmV0d29ya2luZy5SZXNwb25zZXMuU3RhcnRHeW1C",
             "YXR0bGVSZXNwb25zZS5SZXN1bHQSIQoZYmF0dGxlX3N0YXJ0X3RpbWVzdGFt",
             "cF9tcxgCIAEoAxIfChdiYXR0bGVfZW5kX3RpbWVzdGFtcF9tcxgDIAEoAxIR",
             "CgliYXR0bGVfaWQYBCABKAkSOwoIZGVmZW5kZXIYBSABKAsyKS5QT0dPUHJv",
             "dG9zLkRhdGEuQmF0dGxlLkJhdHRsZVBhcnRpY2lwYW50EjUKCmJhdHRsZV9s",
-            "b2cYBiABKAsyIS5QT0dPUHJvdG9zLkRhdGEuQmF0dGxlLkJhdHRsZUxvZyL5",
-            "AgoGUmVzdWx0EgkKBVVOU0VUEAASCwoHU1VDQ0VTUxABEhcKE0VSUk9SX0dZ",
-            "TV9OT1RfRk9VTkQQAhIVChFFUlJPUl9HWU1fTkVVVFJBTBADEhgKFEVSUk9S",
-            "X0dZTV9XUk9OR19URUFNEAQSEwoPRVJST1JfR1lNX0VNUFRZEAUSGgoWRVJS",
-            "T1JfSU5WQUxJRF9ERUZFTkRFUhAGEikKJUVSUk9SX1RSQUlOSU5HX0lOVkFM",
-            "SURfQVRUQUNLRVJfQ09VTlQQBxIdChlFUlJPUl9BTExfUE9LRU1PTl9GQUlO",
-            "VEVEEAgSGgoWRVJST1JfVE9PX01BTllfQkFUVExFUxAJEhoKFkVSUk9SX1RP",
-            "T19NQU5ZX1BMQVlFUlMQChIcChhFUlJPUl9HWU1fQkFUVExFX0xPQ0tPVVQQ",
-            "CxIkCiBFUlJPUl9QTEFZRVJfQkVMT1dfTUlOSU1VTV9MRVZFTBAMEhYKEkVS",
-            "Uk9SX05PVF9JTl9SQU5HRRANYgZwcm90bzM="));
+            "b2cYBiABKAsyIS5QT0dPUHJvdG9zLkRhdGEuQmF0dGxlLkJhdHRsZUxvZxI7",
+            "CghhdHRhY2tlchgHIAEoCzIpLlBPR09Qcm90b3MuRGF0YS5CYXR0bGUuQmF0",
+            "dGxlUGFydGljaXBhbnQi+QIKBlJlc3VsdBIJCgVVTlNFVBAAEgsKB1NVQ0NF",
+            "U1MQARIXChNFUlJPUl9HWU1fTk9UX0ZPVU5EEAISFQoRRVJST1JfR1lNX05F",
+            "VVRSQUwQAxIYChRFUlJPUl9HWU1fV1JPTkdfVEVBTRAEEhMKD0VSUk9SX0dZ",
+            "TV9FTVBUWRAFEhoKFkVSUk9SX0lOVkFMSURfREVGRU5ERVIQBhIpCiVFUlJP",
+            "Ul9UUkFJTklOR19JTlZBTElEX0FUVEFDS0VSX0NPVU5UEAcSHQoZRVJST1Jf",
+            "QUxMX1BPS0VNT05fRkFJTlRFRBAIEhoKFkVSUk9SX1RPT19NQU5ZX0JBVFRM",
+            "RVMQCRIaChZFUlJPUl9UT09fTUFOWV9QTEFZRVJTEAoSHAoYRVJST1JfR1lN",
+            "X0JBVFRMRV9MT0NLT1VUEAsSJAogRVJST1JfUExBWUVSX0JFTE9XX01JTklN",
+            "VU1fTEVWRUwQDBIWChJFUlJPUl9OT1RfSU5fUkFOR0UQDWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Data.Battle.BattleLogReflection.Descriptor, global::POGOProtos.Data.Battle.BattleParticipantReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Responses.StartGymBattleResponse), global::POGOProtos.Networking.Responses.StartGymBattleResponse.Parser, new[]{ "Result", "BattleStartTimestampMs", "BattleEndTimestampMs", "BattleId", "Defender", "BattleLog" }, null, new[]{ typeof(global::POGOProtos.Networking.Responses.StartGymBattleResponse.Types.Result) }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Responses.StartGymBattleResponse), global::POGOProtos.Networking.Responses.StartGymBattleResponse.Parser, new[]{ "Result", "BattleStartTimestampMs", "BattleEndTimestampMs", "BattleId", "Defender", "BattleLog", "Attacker" }, null, new[]{ typeof(global::POGOProtos.Networking.Responses.StartGymBattleResponse.Types.Result) }, null)
           }));
     }
     #endregion
@@ -82,6 +83,7 @@ namespace POGOProtos.Networking.Responses {
       battleId_ = other.battleId_;
       Defender = other.defender_ != null ? other.Defender.Clone() : null;
       BattleLog = other.battleLog_ != null ? other.BattleLog.Clone() : null;
+      Attacker = other.attacker_ != null ? other.Attacker.Clone() : null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -155,6 +157,17 @@ namespace POGOProtos.Networking.Responses {
       }
     }
 
+    /// <summary>Field number for the "attacker" field.</summary>
+    public const int AttackerFieldNumber = 7;
+    private global::POGOProtos.Data.Battle.BattleParticipant attacker_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::POGOProtos.Data.Battle.BattleParticipant Attacker {
+      get { return attacker_; }
+      set {
+        attacker_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as StartGymBattleResponse);
@@ -174,6 +187,7 @@ namespace POGOProtos.Networking.Responses {
       if (BattleId != other.BattleId) return false;
       if (!object.Equals(Defender, other.Defender)) return false;
       if (!object.Equals(BattleLog, other.BattleLog)) return false;
+      if (!object.Equals(Attacker, other.Attacker)) return false;
       return true;
     }
 
@@ -186,6 +200,7 @@ namespace POGOProtos.Networking.Responses {
       if (BattleId.Length != 0) hash ^= BattleId.GetHashCode();
       if (defender_ != null) hash ^= Defender.GetHashCode();
       if (battleLog_ != null) hash ^= BattleLog.GetHashCode();
+      if (attacker_ != null) hash ^= Attacker.GetHashCode();
       return hash;
     }
 
@@ -220,6 +235,10 @@ namespace POGOProtos.Networking.Responses {
         output.WriteRawTag(50);
         output.WriteMessage(BattleLog);
       }
+      if (attacker_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Attacker);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -242,6 +261,9 @@ namespace POGOProtos.Networking.Responses {
       }
       if (battleLog_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BattleLog);
+      }
+      if (attacker_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Attacker);
       }
       return size;
     }
@@ -274,6 +296,12 @@ namespace POGOProtos.Networking.Responses {
           battleLog_ = new global::POGOProtos.Data.Battle.BattleLog();
         }
         BattleLog.MergeFrom(other.BattleLog);
+      }
+      if (other.attacker_ != null) {
+        if (attacker_ == null) {
+          attacker_ = new global::POGOProtos.Data.Battle.BattleParticipant();
+        }
+        Attacker.MergeFrom(other.Attacker);
       }
     }
 
@@ -313,6 +341,13 @@ namespace POGOProtos.Networking.Responses {
               battleLog_ = new global::POGOProtos.Data.Battle.BattleLog();
             }
             input.ReadMessage(battleLog_);
+            break;
+          }
+          case 58: {
+            if (attacker_ == null) {
+              attacker_ = new global::POGOProtos.Data.Battle.BattleParticipant();
+            }
+            input.ReadMessage(attacker_);
             break;
           }
         }

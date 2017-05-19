@@ -23,17 +23,18 @@ namespace POGOProtos.Settings {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVQT0dPUHJvdG9zL1NldHRpbmdzL01hcFNldHRpbmdzLnByb3RvEhNQT0dP",
-            "UHJvdG9zLlNldHRpbmdzIo8CCgtNYXBTZXR0aW5ncxIdChVwb2tlbW9uX3Zp",
+            "UHJvdG9zLlNldHRpbmdzIrICCgtNYXBTZXR0aW5ncxIdChVwb2tlbW9uX3Zp",
             "c2libGVfcmFuZ2UYASABKAESHQoVcG9rZV9uYXZfcmFuZ2VfbWV0ZXJzGAIg",
             "ASgBEh4KFmVuY291bnRlcl9yYW5nZV9tZXRlcnMYAyABKAESKwojZ2V0X21h",
             "cF9vYmplY3RzX21pbl9yZWZyZXNoX3NlY29uZHMYBCABKAISKwojZ2V0X21h",
             "cF9vYmplY3RzX21heF9yZWZyZXNoX3NlY29uZHMYBSABKAISKwojZ2V0X21h",
             "cF9vYmplY3RzX21pbl9kaXN0YW5jZV9tZXRlcnMYBiABKAISGwoTZ29vZ2xl",
-            "X21hcHNfYXBpX2tleRgHIAEoCWIGcHJvdG8z"));
+            "X21hcHNfYXBpX2tleRgHIAEoCRIhChltaW5fbmVhcmJ5X2hpZGVfc2lnaHRp",
+            "bmdzGAggASgFYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Settings.MapSettings), global::POGOProtos.Settings.MapSettings.Parser, new[]{ "PokemonVisibleRange", "PokeNavRangeMeters", "EncounterRangeMeters", "GetMapObjectsMinRefreshSeconds", "GetMapObjectsMaxRefreshSeconds", "GetMapObjectsMinDistanceMeters", "GoogleMapsApiKey" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Settings.MapSettings), global::POGOProtos.Settings.MapSettings.Parser, new[]{ "PokemonVisibleRange", "PokeNavRangeMeters", "EncounterRangeMeters", "GetMapObjectsMinRefreshSeconds", "GetMapObjectsMaxRefreshSeconds", "GetMapObjectsMinDistanceMeters", "GoogleMapsApiKey", "MinNearbyHideSightings" }, null, null, null)
           }));
     }
     #endregion
@@ -71,6 +72,7 @@ namespace POGOProtos.Settings {
       getMapObjectsMaxRefreshSeconds_ = other.getMapObjectsMaxRefreshSeconds_;
       getMapObjectsMinDistanceMeters_ = other.getMapObjectsMinDistanceMeters_;
       googleMapsApiKey_ = other.googleMapsApiKey_;
+      minNearbyHideSightings_ = other.minNearbyHideSightings_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -155,6 +157,17 @@ namespace POGOProtos.Settings {
       }
     }
 
+    /// <summary>Field number for the "min_nearby_hide_sightings" field.</summary>
+    public const int MinNearbyHideSightingsFieldNumber = 8;
+    private int minNearbyHideSightings_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MinNearbyHideSightings {
+      get { return minNearbyHideSightings_; }
+      set {
+        minNearbyHideSightings_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as MapSettings);
@@ -175,6 +188,7 @@ namespace POGOProtos.Settings {
       if (GetMapObjectsMaxRefreshSeconds != other.GetMapObjectsMaxRefreshSeconds) return false;
       if (GetMapObjectsMinDistanceMeters != other.GetMapObjectsMinDistanceMeters) return false;
       if (GoogleMapsApiKey != other.GoogleMapsApiKey) return false;
+      if (MinNearbyHideSightings != other.MinNearbyHideSightings) return false;
       return true;
     }
 
@@ -188,6 +202,7 @@ namespace POGOProtos.Settings {
       if (GetMapObjectsMaxRefreshSeconds != 0F) hash ^= GetMapObjectsMaxRefreshSeconds.GetHashCode();
       if (GetMapObjectsMinDistanceMeters != 0F) hash ^= GetMapObjectsMinDistanceMeters.GetHashCode();
       if (GoogleMapsApiKey.Length != 0) hash ^= GoogleMapsApiKey.GetHashCode();
+      if (MinNearbyHideSightings != 0) hash ^= MinNearbyHideSightings.GetHashCode();
       return hash;
     }
 
@@ -226,6 +241,10 @@ namespace POGOProtos.Settings {
         output.WriteRawTag(58);
         output.WriteString(GoogleMapsApiKey);
       }
+      if (MinNearbyHideSightings != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(MinNearbyHideSightings);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -251,6 +270,9 @@ namespace POGOProtos.Settings {
       }
       if (GoogleMapsApiKey.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GoogleMapsApiKey);
+      }
+      if (MinNearbyHideSightings != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinNearbyHideSightings);
       }
       return size;
     }
@@ -280,6 +302,9 @@ namespace POGOProtos.Settings {
       }
       if (other.GoogleMapsApiKey.Length != 0) {
         GoogleMapsApiKey = other.GoogleMapsApiKey;
+      }
+      if (other.MinNearbyHideSightings != 0) {
+        MinNearbyHideSightings = other.MinNearbyHideSightings;
       }
     }
 
@@ -317,6 +342,10 @@ namespace POGOProtos.Settings {
           }
           case 58: {
             GoogleMapsApiKey = input.ReadString();
+            break;
+          }
+          case 64: {
+            MinNearbyHideSightings = input.ReadInt32();
             break;
           }
         }

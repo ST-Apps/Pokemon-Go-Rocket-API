@@ -327,6 +327,15 @@ namespace PokemonGo_UWP
 
 
             AsyncSynchronizationContext.Register();
+
+            // See if there is a key for the PokeHash server, ask one from the user if there isn't
+            if (String.IsNullOrEmpty(SettingsService.Instance.PokehashAuthKey))
+            {
+                await NavigationService.NavigateAsync(typeof(PokehashKeyPage), GameMapNavigationModes.AppStart);
+
+                return;
+            }
+
             var currentAccessToken = GameClient.LoadAccessToken();
             if (currentAccessToken == null || forceToMainPage)
             {

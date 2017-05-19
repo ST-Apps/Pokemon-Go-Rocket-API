@@ -193,8 +193,7 @@ Seite zu den Dateien für manuelle Installation öffnen?</value>
     <value>Name</value>
   </data>
   <data name="Number" xml:space="preserve">
-    <value>Nr.
-</value>
+    <value>Nr.</value>
   </data>
   <data name="PokemonInventoryFullText" xml:space="preserve">
     <value>Das Pokémon Inventar ist voll, verschicken Sie zunächst einige Pokémon, bevore Sie versuchen, {0} zu fangen.</value>
@@ -228,5 +227,12 @@ Du hast auch {1} Sternenstaub, {2} Bonbon und {3} EP erhalten.</value>
   <data name="OkText" xml:space="preserve">
     <value>O. K.</value>
     <comment>Space between . and K</comment>
+  </data>
+  <data name="CannotTransferFavorite" xml:space="preserve">
+    <value>Ein als Favorit markiertes Pokémon kann nicht verschickt werden.</value>
+  </data>
+  <data name="IncubatorRemainingUsesText" xml:space="preserve">
+    <value>Noch {0} ×</value>
+    <comment>If your language uses multiply sign, use × (unicode char) and not x</comment>
   </data>
 </root>

@@ -23,7 +23,8 @@ namespace POGOProtos.Enums {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1QT0dPUHJvdG9zL0VudW1zL0dlbmRlci5wcm90bxIQUE9HT1Byb3Rvcy5F",
-            "bnVtcyoeCgZHZW5kZXISCAoETUFMRRAAEgoKBkZFTUFMRRABYgZwcm90bzM="));
+            "bnVtcypACgZHZW5kZXISEAoMR0VOREVSX1VOU0VUEAASCAoETUFMRRABEgoK",
+            "BkZFTUFMRRACEg4KCkdFTkRFUkxFU1MQA2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::POGOProtos.Enums.Gender), }, null));
@@ -33,8 +34,10 @@ namespace POGOProtos.Enums {
   }
   #region Enums
   public enum Gender {
-    [pbr::OriginalName("MALE")] Male = 0,
-    [pbr::OriginalName("FEMALE")] Female = 1,
+    [pbr::OriginalName("GENDER_UNSET")] Unset = 0,
+    [pbr::OriginalName("MALE")] Male = 1,
+    [pbr::OriginalName("FEMALE")] Female = 2,
+    [pbr::OriginalName("GENDERLESS")] Less = 3,
   }
 
   #endregion

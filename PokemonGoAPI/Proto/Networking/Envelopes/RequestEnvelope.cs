@@ -26,24 +26,29 @@ namespace POGOProtos.Networking.Envelopes {
             "bG9wZS5wcm90bxIfUE9HT1Byb3Rvcy5OZXR3b3JraW5nLkVudmVsb3Blcxos",
             "UE9HT1Byb3Rvcy9OZXR3b3JraW5nL1JlcXVlc3RzL1JlcXVlc3QucHJvdG8a",
             "MFBPR09Qcm90b3MvTmV0d29ya2luZy9FbnZlbG9wZXMvQXV0aFRpY2tldC5w",
-            "cm90bxouUE9HT1Byb3Rvcy9OZXR3b3JraW5nL0VudmVsb3Blcy9Vbmtub3du",
-            "Ni5wcm90byK0BAoPUmVxdWVzdEVudmVsb3BlEhMKC3N0YXR1c19jb2RlGAEg",
-            "ASgFEhIKCnJlcXVlc3RfaWQYAyABKAQSOQoIcmVxdWVzdHMYBCADKAsyJy5Q",
-            "T0dPUHJvdG9zLk5ldHdvcmtpbmcuUmVxdWVzdHMuUmVxdWVzdBI7Cgh1bmtu",
-            "b3duNhgGIAEoCzIpLlBPR09Qcm90b3MuTmV0d29ya2luZy5FbnZlbG9wZXMu",
-            "VW5rbm93bjYSEAoIbGF0aXR1ZGUYByABKAESEQoJbG9uZ2l0dWRlGAggASgB",
-            "EhAKCGFjY3VyYWN5GAkgASgBEkwKCWF1dGhfaW5mbxgKIAEoCzI5LlBPR09Q",
-            "cm90b3MuTmV0d29ya2luZy5FbnZlbG9wZXMuUmVxdWVzdEVudmVsb3BlLkF1",
-            "dGhJbmZvEkAKC2F1dGhfdGlja2V0GAsgASgLMisuUE9HT1Byb3Rvcy5OZXR3",
-            "b3JraW5nLkVudmVsb3Blcy5BdXRoVGlja2V0EiEKGW1zX3NpbmNlX2xhc3Rf",
-            "bG9jYXRpb25maXgYDCABKAMalQEKCEF1dGhJbmZvEhAKCHByb3ZpZGVyGAEg",
-            "ASgJEkwKBXRva2VuGAIgASgLMj0uUE9HT1Byb3Rvcy5OZXR3b3JraW5nLkVu",
-            "dmVsb3Blcy5SZXF1ZXN0RW52ZWxvcGUuQXV0aEluZm8uSldUGikKA0pXVBIQ",
-            "Cghjb250ZW50cxgBIAEoCRIQCgh1bmtub3duMhgCIAEoBWIGcHJvdG8z"));
+            "cm90bxo4UE9HT1Byb3Rvcy9OZXR3b3JraW5nL1BsYXRmb3JtL1BsYXRmb3Jt",
+            "UmVxdWVzdFR5cGUucHJvdG8iwwUKD1JlcXVlc3RFbnZlbG9wZRITCgtzdGF0",
+            "dXNfY29kZRgBIAEoBRISCgpyZXF1ZXN0X2lkGAMgASgEEjkKCHJlcXVlc3Rz",
+            "GAQgAygLMicuUE9HT1Byb3Rvcy5OZXR3b3JraW5nLlJlcXVlc3RzLlJlcXVl",
+            "c3QSWwoRcGxhdGZvcm1fcmVxdWVzdHMYBiADKAsyQC5QT0dPUHJvdG9zLk5l",
+            "dHdvcmtpbmcuRW52ZWxvcGVzLlJlcXVlc3RFbnZlbG9wZS5QbGF0Zm9ybVJl",
+            "cXVlc3QSEAoIbGF0aXR1ZGUYByABKAESEQoJbG9uZ2l0dWRlGAggASgBEhAK",
+            "CGFjY3VyYWN5GAkgASgBEkwKCWF1dGhfaW5mbxgKIAEoCzI5LlBPR09Qcm90",
+            "b3MuTmV0d29ya2luZy5FbnZlbG9wZXMuUmVxdWVzdEVudmVsb3BlLkF1dGhJ",
+            "bmZvEkAKC2F1dGhfdGlja2V0GAsgASgLMisuUE9HT1Byb3Rvcy5OZXR3b3Jr",
+            "aW5nLkVudmVsb3Blcy5BdXRoVGlja2V0EiEKGW1zX3NpbmNlX2xhc3RfbG9j",
+            "YXRpb25maXgYDCABKAMalQEKCEF1dGhJbmZvEhAKCHByb3ZpZGVyGAEgASgJ",
+            "EkwKBXRva2VuGAIgASgLMj0uUE9HT1Byb3Rvcy5OZXR3b3JraW5nLkVudmVs",
+            "b3Blcy5SZXF1ZXN0RW52ZWxvcGUuQXV0aEluZm8uSldUGikKA0pXVBIQCghj",
+            "b250ZW50cxgBIAEoCRIQCgh1bmtub3duMhgCIAEoBRptCg9QbGF0Zm9ybVJl",
+            "cXVlc3QSQQoEdHlwZRgBIAEoDjIzLlBPR09Qcm90b3MuTmV0d29ya2luZy5Q",
+            "bGF0Zm9ybS5QbGF0Zm9ybVJlcXVlc3RUeXBlEhcKD3JlcXVlc3RfbWVzc2Fn",
+            "ZRgCIAEoDGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::POGOProtos.Networking.Requests.RequestReflection.Descriptor, global::POGOProtos.Networking.Envelopes.AuthTicketReflection.Descriptor, global::POGOProtos.Networking.Envelopes.Unknown6Reflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::POGOProtos.Networking.Requests.RequestReflection.Descriptor, global::POGOProtos.Networking.Envelopes.AuthTicketReflection.Descriptor, global::POGOProtos.Networking.Platform.PlatformRequestTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.RequestEnvelope), global::POGOProtos.Networking.Envelopes.RequestEnvelope.Parser, new[]{ "StatusCode", "RequestId", "Requests", "Unknown6", "Latitude", "Longitude", "Accuracy", "AuthInfo", "AuthTicket", "MsSinceLastLocationfix" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.RequestEnvelope.Types.AuthInfo), global::POGOProtos.Networking.Envelopes.RequestEnvelope.Types.AuthInfo.Parser, new[]{ "Provider", "Token" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.RequestEnvelope.Types.AuthInfo.Types.JWT), global::POGOProtos.Networking.Envelopes.RequestEnvelope.Types.AuthInfo.Types.JWT.Parser, new[]{ "Contents", "Unknown2" }, null, null, null)})})
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.RequestEnvelope), global::POGOProtos.Networking.Envelopes.RequestEnvelope.Parser, new[]{ "StatusCode", "RequestId", "Requests", "PlatformRequests", "Latitude", "Longitude", "Accuracy", "AuthInfo", "AuthTicket", "MsSinceLastLocationfix" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.RequestEnvelope.Types.AuthInfo), global::POGOProtos.Networking.Envelopes.RequestEnvelope.Types.AuthInfo.Parser, new[]{ "Provider", "Token" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.RequestEnvelope.Types.AuthInfo.Types.JWT), global::POGOProtos.Networking.Envelopes.RequestEnvelope.Types.AuthInfo.Types.JWT.Parser, new[]{ "Contents", "Unknown2" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.RequestEnvelope.Types.PlatformRequest), global::POGOProtos.Networking.Envelopes.RequestEnvelope.Types.PlatformRequest.Parser, new[]{ "Type", "RequestMessage" }, null, null, null)})
           }));
     }
     #endregion
@@ -77,7 +82,7 @@ namespace POGOProtos.Networking.Envelopes {
       statusCode_ = other.statusCode_;
       requestId_ = other.requestId_;
       requests_ = other.requests_.Clone();
-      Unknown6 = other.unknown6_ != null ? other.Unknown6.Clone() : null;
+      platformRequests_ = other.platformRequests_.Clone();
       latitude_ = other.latitude_;
       longitude_ = other.longitude_;
       accuracy_ = other.accuracy_;
@@ -123,19 +128,14 @@ namespace POGOProtos.Networking.Envelopes {
       get { return requests_; }
     }
 
-    /// <summary>Field number for the "unknown6" field.</summary>
-    public const int Unknown6FieldNumber = 6;
-    private global::POGOProtos.Networking.Envelopes.Unknown6 unknown6_;
-    /// <summary>
-    ///  Unknown6 is required to get a response.
-    ///  For an example check https://github.com/keyphact/pgoapi/blob/75eba6b5b630841ee4f7c2ea983f15874fb0862d/pgoapi/rpc_api.py#L192-L212
-    /// </summary>
+    /// <summary>Field number for the "platform_requests" field.</summary>
+    public const int PlatformRequestsFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::POGOProtos.Networking.Envelopes.RequestEnvelope.Types.PlatformRequest> _repeated_platformRequests_codec
+        = pb::FieldCodec.ForMessage(50, global::POGOProtos.Networking.Envelopes.RequestEnvelope.Types.PlatformRequest.Parser);
+    private readonly pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.RequestEnvelope.Types.PlatformRequest> platformRequests_ = new pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.RequestEnvelope.Types.PlatformRequest>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::POGOProtos.Networking.Envelopes.Unknown6 Unknown6 {
-      get { return unknown6_; }
-      set {
-        unknown6_ = value;
-      }
+    public pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.RequestEnvelope.Types.PlatformRequest> PlatformRequests {
+      get { return platformRequests_; }
     }
 
     /// <summary>Field number for the "latitude" field.</summary>
@@ -220,7 +220,7 @@ namespace POGOProtos.Networking.Envelopes {
       if (StatusCode != other.StatusCode) return false;
       if (RequestId != other.RequestId) return false;
       if(!requests_.Equals(other.requests_)) return false;
-      if (!object.Equals(Unknown6, other.Unknown6)) return false;
+      if(!platformRequests_.Equals(other.platformRequests_)) return false;
       if (Latitude != other.Latitude) return false;
       if (Longitude != other.Longitude) return false;
       if (Accuracy != other.Accuracy) return false;
@@ -236,7 +236,7 @@ namespace POGOProtos.Networking.Envelopes {
       if (StatusCode != 0) hash ^= StatusCode.GetHashCode();
       if (RequestId != 0UL) hash ^= RequestId.GetHashCode();
       hash ^= requests_.GetHashCode();
-      if (unknown6_ != null) hash ^= Unknown6.GetHashCode();
+      hash ^= platformRequests_.GetHashCode();
       if (Latitude != 0D) hash ^= Latitude.GetHashCode();
       if (Longitude != 0D) hash ^= Longitude.GetHashCode();
       if (Accuracy != 0D) hash ^= Accuracy.GetHashCode();
@@ -262,10 +262,7 @@ namespace POGOProtos.Networking.Envelopes {
         output.WriteUInt64(RequestId);
       }
       requests_.WriteTo(output, _repeated_requests_codec);
-      if (unknown6_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(Unknown6);
-      }
+      platformRequests_.WriteTo(output, _repeated_platformRequests_codec);
       if (Latitude != 0D) {
         output.WriteRawTag(57);
         output.WriteDouble(Latitude);
@@ -302,9 +299,7 @@ namespace POGOProtos.Networking.Envelopes {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(RequestId);
       }
       size += requests_.CalculateSize(_repeated_requests_codec);
-      if (unknown6_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Unknown6);
-      }
+      size += platformRequests_.CalculateSize(_repeated_platformRequests_codec);
       if (Latitude != 0D) {
         size += 1 + 8;
       }
@@ -338,12 +333,7 @@ namespace POGOProtos.Networking.Envelopes {
         RequestId = other.RequestId;
       }
       requests_.Add(other.requests_);
-      if (other.unknown6_ != null) {
-        if (unknown6_ == null) {
-          unknown6_ = new global::POGOProtos.Networking.Envelopes.Unknown6();
-        }
-        Unknown6.MergeFrom(other.Unknown6);
-      }
+      platformRequests_.Add(other.platformRequests_);
       if (other.Latitude != 0D) {
         Latitude = other.Latitude;
       }
@@ -391,10 +381,7 @@ namespace POGOProtos.Networking.Envelopes {
             break;
           }
           case 50: {
-            if (unknown6_ == null) {
-              unknown6_ = new global::POGOProtos.Networking.Envelopes.Unknown6();
-            }
-            input.ReadMessage(unknown6_);
+            platformRequests_.AddEntriesFrom(input, _repeated_platformRequests_codec);
             break;
           }
           case 57: {
@@ -735,6 +722,151 @@ namespace POGOProtos.Networking.Envelopes {
 
         }
         #endregion
+
+      }
+
+      public sealed partial class PlatformRequest : pb::IMessage<PlatformRequest> {
+        private static readonly pb::MessageParser<PlatformRequest> _parser = new pb::MessageParser<PlatformRequest>(() => new PlatformRequest());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<PlatformRequest> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::POGOProtos.Networking.Envelopes.RequestEnvelope.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public PlatformRequest() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public PlatformRequest(PlatformRequest other) : this() {
+          type_ = other.type_;
+          requestMessage_ = other.requestMessage_;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public PlatformRequest Clone() {
+          return new PlatformRequest(this);
+        }
+
+        /// <summary>Field number for the "type" field.</summary>
+        public const int TypeFieldNumber = 1;
+        private global::POGOProtos.Networking.Platform.PlatformRequestType type_ = 0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::POGOProtos.Networking.Platform.PlatformRequestType Type {
+          get { return type_; }
+          set {
+            type_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "request_message" field.</summary>
+        public const int RequestMessageFieldNumber = 2;
+        private pb::ByteString requestMessage_ = pb::ByteString.Empty;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pb::ByteString RequestMessage {
+          get { return requestMessage_; }
+          set {
+            requestMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as PlatformRequest);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(PlatformRequest other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Type != other.Type) return false;
+          if (RequestMessage != other.RequestMessage) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Type != 0) hash ^= Type.GetHashCode();
+          if (RequestMessage.Length != 0) hash ^= RequestMessage.GetHashCode();
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (Type != 0) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (RequestMessage.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteBytes(RequestMessage);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (Type != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+          }
+          if (RequestMessage.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeBytesSize(RequestMessage);
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(PlatformRequest other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Type != 0) {
+            Type = other.Type;
+          }
+          if (other.RequestMessage.Length != 0) {
+            RequestMessage = other.RequestMessage;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 8: {
+                type_ = (global::POGOProtos.Networking.Platform.PlatformRequestType) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                RequestMessage = input.ReadBytes();
+                break;
+              }
+            }
+          }
+        }
 
       }
 

@@ -24,13 +24,14 @@ namespace POGOProtos.Networking.Responses {
           string.Concat(
             "CjdQT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVzcG9uc2VzL0dldFBsYXllclJl",
             "c3BvbnNlLnByb3RvEh9QT0dPUHJvdG9zLk5ldHdvcmtpbmcuUmVzcG9uc2Vz",
-            "GiBQT0dPUHJvdG9zL0RhdGEvUGxheWVyRGF0YS5wcm90byJWChFHZXRQbGF5",
+            "GiBQT0dPUHJvdG9zL0RhdGEvUGxheWVyRGF0YS5wcm90byJ0ChFHZXRQbGF5",
             "ZXJSZXNwb25zZRIPCgdzdWNjZXNzGAEgASgIEjAKC3BsYXllcl9kYXRhGAIg",
-            "ASgLMhsuUE9HT1Byb3Rvcy5EYXRhLlBsYXllckRhdGFiBnByb3RvMw=="));
+            "ASgLMhsuUE9HT1Byb3Rvcy5EYXRhLlBsYXllckRhdGESDgoGYmFubmVkGAMg",
+            "ASgIEgwKBHdhcm4YBCABKAhiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Data.PlayerDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Responses.GetPlayerResponse), global::POGOProtos.Networking.Responses.GetPlayerResponse.Parser, new[]{ "Success", "PlayerData" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Responses.GetPlayerResponse), global::POGOProtos.Networking.Responses.GetPlayerResponse.Parser, new[]{ "Success", "PlayerData", "Banned", "Warn" }, null, null, null)
           }));
     }
     #endregion
@@ -63,6 +64,8 @@ namespace POGOProtos.Networking.Responses {
     public GetPlayerResponse(GetPlayerResponse other) : this() {
       success_ = other.success_;
       PlayerData = other.playerData_ != null ? other.PlayerData.Clone() : null;
+      banned_ = other.banned_;
+      warn_ = other.warn_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -92,6 +95,28 @@ namespace POGOProtos.Networking.Responses {
       }
     }
 
+    /// <summary>Field number for the "banned" field.</summary>
+    public const int BannedFieldNumber = 3;
+    private bool banned_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Banned {
+      get { return banned_; }
+      set {
+        banned_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "warn" field.</summary>
+    public const int WarnFieldNumber = 4;
+    private bool warn_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Warn {
+      get { return warn_; }
+      set {
+        warn_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetPlayerResponse);
@@ -107,6 +132,8 @@ namespace POGOProtos.Networking.Responses {
       }
       if (Success != other.Success) return false;
       if (!object.Equals(PlayerData, other.PlayerData)) return false;
+      if (Banned != other.Banned) return false;
+      if (Warn != other.Warn) return false;
       return true;
     }
 
@@ -115,6 +142,8 @@ namespace POGOProtos.Networking.Responses {
       int hash = 1;
       if (Success != false) hash ^= Success.GetHashCode();
       if (playerData_ != null) hash ^= PlayerData.GetHashCode();
+      if (Banned != false) hash ^= Banned.GetHashCode();
+      if (Warn != false) hash ^= Warn.GetHashCode();
       return hash;
     }
 
@@ -133,6 +162,14 @@ namespace POGOProtos.Networking.Responses {
         output.WriteRawTag(18);
         output.WriteMessage(PlayerData);
       }
+      if (Banned != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Banned);
+      }
+      if (Warn != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Warn);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -143,6 +180,12 @@ namespace POGOProtos.Networking.Responses {
       }
       if (playerData_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlayerData);
+      }
+      if (Banned != false) {
+        size += 1 + 1;
+      }
+      if (Warn != false) {
+        size += 1 + 1;
       }
       return size;
     }
@@ -160,6 +203,12 @@ namespace POGOProtos.Networking.Responses {
           playerData_ = new global::POGOProtos.Data.PlayerData();
         }
         PlayerData.MergeFrom(other.PlayerData);
+      }
+      if (other.Banned != false) {
+        Banned = other.Banned;
+      }
+      if (other.Warn != false) {
+        Warn = other.Warn;
       }
     }
 
@@ -180,6 +229,14 @@ namespace POGOProtos.Networking.Responses {
               playerData_ = new global::POGOProtos.Data.PlayerData();
             }
             input.ReadMessage(playerData_);
+            break;
+          }
+          case 24: {
+            Banned = input.ReadBool();
+            break;
+          }
+          case 32: {
+            Warn = input.ReadBool();
             break;
           }
         }

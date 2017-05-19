@@ -23,15 +23,15 @@ namespace POGOProtos.Enums {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNQT0dPUHJvdG9zL0VudW1zL0l0ZW1DYXRlZ29yeS5wcm90bxIQUE9HT1By",
-            "b3Rvcy5FbnVtcyrWAgoMSXRlbUNhdGVnb3J5EhYKEklURU1fQ0FURUdPUllf",
+            "b3Rvcy5FbnVtcyr/AgoMSXRlbUNhdGVnb3J5EhYKEklURU1fQ0FURUdPUllf",
             "Tk9ORRAAEhoKFklURU1fQ0FURUdPUllfUE9LRUJBTEwQARIWChJJVEVNX0NB",
             "VEVHT1JZX0ZPT0QQAhIaChZJVEVNX0NBVEVHT1JZX01FRElDSU5FEAMSFwoT",
             "SVRFTV9DQVRFR09SWV9CT09TVBAEEhoKFklURU1fQ0FURUdPUllfVVRJTElU",
             "RVMQBRIYChRJVEVNX0NBVEVHT1JZX0NBTUVSQRAGEhYKEklURU1fQ0FURUdP",
             "UllfRElTSxAHEhsKF0lURU1fQ0FURUdPUllfSU5DVUJBVE9SEAgSGQoVSVRF",
             "TV9DQVRFR09SWV9JTkNFTlNFEAkSGgoWSVRFTV9DQVRFR09SWV9YUF9CT09T",
-            "VBAKEiMKH0lURU1fQ0FURUdPUllfSU5WRU5UT1JZX1VQR1JBREUQC2IGcHJv",
-            "dG8z"));
+            "VBAKEiMKH0lURU1fQ0FURUdPUllfSU5WRU5UT1JZX1VQR1JBREUQCxInCiNJ",
+            "VEVNX0NBVEVHT1JZX0VWT0xVVElPTl9SRVFVSVJFTUVOVBAMYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::POGOProtos.Enums.ItemCategory), }, null));
@@ -53,6 +53,7 @@ namespace POGOProtos.Enums {
     [pbr::OriginalName("ITEM_CATEGORY_INCENSE")] Incense = 9,
     [pbr::OriginalName("ITEM_CATEGORY_XP_BOOST")] XpBoost = 10,
     [pbr::OriginalName("ITEM_CATEGORY_INVENTORY_UPGRADE")] InventoryUpgrade = 11,
+    [pbr::OriginalName("ITEM_CATEGORY_EVOLUTION_REQUIREMENT")] EvolutionRequirement = 12,
   }
 
   #endregion

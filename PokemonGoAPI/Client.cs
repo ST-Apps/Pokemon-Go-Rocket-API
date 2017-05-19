@@ -14,6 +14,7 @@ using PokemonGo.RocketAPI.Exceptions;
 using System.Diagnostics;
 using System;
 using Google.Protobuf.Collections;
+using POGOLib.Official.Util.Hash;
 
 namespace PokemonGo.RocketAPI
 {
@@ -48,6 +49,10 @@ namespace PokemonGo.RocketAPI
         internal AuthTicket AuthTicket => AccessToken?.AuthTicket;
         public AccessToken AccessToken { get; set; }
 
+        public static IHasher Hasher = new PokeHashHasher(string.Empty);
+
+
+
         #region Constructors
 
         /// <summary>
@@ -69,8 +74,10 @@ namespace PokemonGo.RocketAPI
         /// <param name="apiFailureStrategy"></param>
         /// <param name="deviceInfo"></param>
         /// <param name="accessToken"></param>
-        public Client(ISettings settings, IApiFailureStrategy apiFailureStrategy, IDeviceInfo deviceInfo, AccessToken accessToken = null) : this()
+        public Client(string PokehashAuthKey, ISettings settings, IApiFailureStrategy apiFailureStrategy, IDeviceInfo deviceInfo, AccessToken accessToken = null) : this()
         {
+            Hasher = new PokeHashHasher(PokehashAuthKey);
+
             Settings = settings;
             ApiFailure = apiFailureStrategy;
             AccessToken = accessToken;

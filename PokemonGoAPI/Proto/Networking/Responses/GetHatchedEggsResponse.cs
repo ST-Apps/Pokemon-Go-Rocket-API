@@ -24,14 +24,17 @@ namespace POGOProtos.Networking.Responses {
           string.Concat(
             "CjxQT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVzcG9uc2VzL0dldEhhdGNoZWRF",
             "Z2dzUmVzcG9uc2UucHJvdG8SH1BPR09Qcm90b3MuTmV0d29ya2luZy5SZXNw",
-            "b25zZXMijgEKFkdldEhhdGNoZWRFZ2dzUmVzcG9uc2USDwoHc3VjY2VzcxgB",
-            "IAEoCBIWCgpwb2tlbW9uX2lkGAIgAygGQgIQARIaChJleHBlcmllbmNlX2F3",
-            "YXJkZWQYAyADKAUSFQoNY2FuZHlfYXdhcmRlZBgEIAMoBRIYChBzdGFyZHVz",
-            "dF9hd2FyZGVkGAUgAygFYgZwcm90bzM="));
+            "b25zZXMaIVBPR09Qcm90b3MvRGF0YS9Qb2tlbW9uRGF0YS5wcm90byLcAQoW",
+            "R2V0SGF0Y2hlZEVnZ3NSZXNwb25zZRIPCgdzdWNjZXNzGAEgASgIEhYKCnBv",
+            "a2Vtb25faWQYAiADKAZCAhABEhoKEmV4cGVyaWVuY2VfYXdhcmRlZBgDIAMo",
+            "BRIVCg1jYW5keV9hd2FyZGVkGAQgAygFEhgKEHN0YXJkdXN0X2F3YXJkZWQY",
+            "BSADKAUSFQoNZWdnX2ttX3dhbGtlZBgGIAMoAhI1Cg9oYXRjaGVkX3Bva2Vt",
+            "b24YByADKAsyHC5QT0dPUHJvdG9zLkRhdGEuUG9rZW1vbkRhdGFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::POGOProtos.Data.PokemonDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Responses.GetHatchedEggsResponse), global::POGOProtos.Networking.Responses.GetHatchedEggsResponse.Parser, new[]{ "Success", "PokemonId", "ExperienceAwarded", "CandyAwarded", "StardustAwarded" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Responses.GetHatchedEggsResponse), global::POGOProtos.Networking.Responses.GetHatchedEggsResponse.Parser, new[]{ "Success", "PokemonId", "ExperienceAwarded", "CandyAwarded", "StardustAwarded", "EggKmWalked", "HatchedPokemon" }, null, null, null)
           }));
     }
     #endregion
@@ -67,6 +70,8 @@ namespace POGOProtos.Networking.Responses {
       experienceAwarded_ = other.experienceAwarded_.Clone();
       candyAwarded_ = other.candyAwarded_.Clone();
       stardustAwarded_ = other.stardustAwarded_.Clone();
+      eggKmWalked_ = other.eggKmWalked_.Clone();
+      hatchedPokemon_ = other.hatchedPokemon_.Clone();
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -125,6 +130,26 @@ namespace POGOProtos.Networking.Responses {
       get { return stardustAwarded_; }
     }
 
+    /// <summary>Field number for the "egg_km_walked" field.</summary>
+    public const int EggKmWalkedFieldNumber = 6;
+    private static readonly pb::FieldCodec<float> _repeated_eggKmWalked_codec
+        = pb::FieldCodec.ForFloat(50);
+    private readonly pbc::RepeatedField<float> eggKmWalked_ = new pbc::RepeatedField<float>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<float> EggKmWalked {
+      get { return eggKmWalked_; }
+    }
+
+    /// <summary>Field number for the "hatched_pokemon" field.</summary>
+    public const int HatchedPokemonFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::POGOProtos.Data.PokemonData> _repeated_hatchedPokemon_codec
+        = pb::FieldCodec.ForMessage(58, global::POGOProtos.Data.PokemonData.Parser);
+    private readonly pbc::RepeatedField<global::POGOProtos.Data.PokemonData> hatchedPokemon_ = new pbc::RepeatedField<global::POGOProtos.Data.PokemonData>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::POGOProtos.Data.PokemonData> HatchedPokemon {
+      get { return hatchedPokemon_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetHatchedEggsResponse);
@@ -143,6 +168,8 @@ namespace POGOProtos.Networking.Responses {
       if(!experienceAwarded_.Equals(other.experienceAwarded_)) return false;
       if(!candyAwarded_.Equals(other.candyAwarded_)) return false;
       if(!stardustAwarded_.Equals(other.stardustAwarded_)) return false;
+      if(!eggKmWalked_.Equals(other.eggKmWalked_)) return false;
+      if(!hatchedPokemon_.Equals(other.hatchedPokemon_)) return false;
       return true;
     }
 
@@ -154,6 +181,8 @@ namespace POGOProtos.Networking.Responses {
       hash ^= experienceAwarded_.GetHashCode();
       hash ^= candyAwarded_.GetHashCode();
       hash ^= stardustAwarded_.GetHashCode();
+      hash ^= eggKmWalked_.GetHashCode();
+      hash ^= hatchedPokemon_.GetHashCode();
       return hash;
     }
 
@@ -172,6 +201,8 @@ namespace POGOProtos.Networking.Responses {
       experienceAwarded_.WriteTo(output, _repeated_experienceAwarded_codec);
       candyAwarded_.WriteTo(output, _repeated_candyAwarded_codec);
       stardustAwarded_.WriteTo(output, _repeated_stardustAwarded_codec);
+      eggKmWalked_.WriteTo(output, _repeated_eggKmWalked_codec);
+      hatchedPokemon_.WriteTo(output, _repeated_hatchedPokemon_codec);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -184,6 +215,8 @@ namespace POGOProtos.Networking.Responses {
       size += experienceAwarded_.CalculateSize(_repeated_experienceAwarded_codec);
       size += candyAwarded_.CalculateSize(_repeated_candyAwarded_codec);
       size += stardustAwarded_.CalculateSize(_repeated_stardustAwarded_codec);
+      size += eggKmWalked_.CalculateSize(_repeated_eggKmWalked_codec);
+      size += hatchedPokemon_.CalculateSize(_repeated_hatchedPokemon_codec);
       return size;
     }
 
@@ -199,6 +232,8 @@ namespace POGOProtos.Networking.Responses {
       experienceAwarded_.Add(other.experienceAwarded_);
       candyAwarded_.Add(other.candyAwarded_);
       stardustAwarded_.Add(other.stardustAwarded_);
+      eggKmWalked_.Add(other.eggKmWalked_);
+      hatchedPokemon_.Add(other.hatchedPokemon_);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -231,6 +266,15 @@ namespace POGOProtos.Networking.Responses {
           case 42:
           case 40: {
             stardustAwarded_.AddEntriesFrom(input, _repeated_stardustAwarded_codec);
+            break;
+          }
+          case 50:
+          case 53: {
+            eggKmWalked_.AddEntriesFrom(input, _repeated_eggKmWalked_codec);
+            break;
+          }
+          case 58: {
+            hatchedPokemon_.AddEntriesFrom(input, _repeated_hatchedPokemon_codec);
             break;
           }
         }

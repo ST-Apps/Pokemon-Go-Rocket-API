@@ -523,8 +523,8 @@ Aynı zamanda {1} Stardust, {2} Şeker ve {3} XP kazandın.</target>
           <target state="new">Set Nickname</target>
         </trans-unit>
         <trans-unit id="OkText" translate="yes" xml:space="preserve">
-          <source>O. K.</source>
-          <target state="new">O. K.</target>
+          <source>OK</source>
+          <target state="new">OK</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Space between . and K</note>
         </trans-unit>
         <trans-unit id="PokemonEncounterErrorText" translate="yes" xml:space="preserve">
@@ -560,6 +560,18 @@ Aynı zamanda {1} Stardust, {2} Şeker ve {3} XP kazandın.</target>
           <source>Use {0} ?</source>
           <target state="new">Use {0} ?</target>
         </trans-unit>
+        <trans-unit id="ActivityCatchFirstCatchStreakBonus" translate="yes" xml:space="preserve">
+          <source>Streak Bonus</source>
+          <target state="new">Streak Bonus</target>
+        </trans-unit>
+        <trans-unit id="ActivitySearchFortFirstOfTheDay" translate="yes" xml:space="preserve">
+          <source>First Pokéstop of the day</source>
+          <target state="new">First Pokéstop of the day</target>
+        </trans-unit>
+        <trans-unit id="ActivitySearchFortStreakBonus" translate="yes" xml:space="preserve">
+          <source>Streak Bonus</source>
+          <target state="new">Streak Bonus</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -586,8 +598,9 @@ Aynı zamanda {1} Stardust, {2} Şeker ve {3} XP kazandın.</target>
           <target state="translated">PTC Hesabı ile GİRİŞ yap</target>
         </trans-unit>
         <trans-unit id="LoginDisclaimerTextBox.Text" translate="yes" xml:space="preserve">
-          <source>To login, enter your Username/Email and Password above. If you don't trust this app, please close it now. Niantic may ban you for using this app. Use at your own risk.</source>
-          <target state="translated">Giriş yapmak için yukarıya Kullanıcı Adı/Email ve Şifre girin. Eğer bu uygulamaya güvenmiyorsanız, lütfen kapatın. Niantic bu uygulamayı kullandığınız için sizi banlayabilir. Sorumluluk sizindir.</target>
+          <source>WARNING: Niantic may ban you for using this app. Use at your own risk. If you don't trust this app, please close it now.</source>
+          <target state="needs-review-translation">Giriş yapmak için yukarıya Kullanıcı Adı/Email ve Şifre girin. Eğer bu uygulamaya güvenmiyorsanız, lütfen kapatın. Niantic bu uygulamayı kullandığınız için sizi banlayabilir. Sorumluluk sizindir.</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="NearbyPokemonTextBlock.Text" translate="yes" xml:space="preserve">
           <source>nearby</source>
@@ -1065,6 +1078,10 @@ Aynı zamanda {1} Stardust, {2} Şeker ve {3} XP kazandın.</target>
         <trans-unit id="D_ItemWeparBerry" translate="yes" xml:space="preserve">
           <source>Feed this to a Pokémon, and it will be easier to catch on your next throw.</source>
           <target state="translated">Bunu Pokémon'a yedirin ve bir sonraki atışınızda onu yakalaması daha kolay olacak.</target>
+        </trans-unit>
+        <trans-unit id="D_ItemHyperPotion" translate="yes" xml:space="preserve">
+          <source>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 200 points.</source>
+          <target state="new">A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 200 points.</target>
         </trans-unit>
       </group>
     </body>
@@ -1682,6 +1699,406 @@ Aynı zamanda {1} Stardust, {2} Şeker ve {3} XP kazandın.</target>
         <trans-unit id="Zubat" translate="yes" xml:space="preserve">
           <source>Zubat</source>
           <target state="translated">Zubat</target>
+        </trans-unit>
+        <trans-unit id="Aipom" translate="yes" xml:space="preserve">
+          <source>Aipom</source>
+          <target state="new">Aipom</target>
+        </trans-unit>
+        <trans-unit id="Ampharos" translate="yes" xml:space="preserve">
+          <source>Ampharos</source>
+          <target state="new">Ampharos</target>
+        </trans-unit>
+        <trans-unit id="Ariados" translate="yes" xml:space="preserve">
+          <source>Ariados</source>
+          <target state="new">Ariados</target>
+        </trans-unit>
+        <trans-unit id="Azumarill" translate="yes" xml:space="preserve">
+          <source>Azumarill</source>
+          <target state="new">Azumarill</target>
+        </trans-unit>
+        <trans-unit id="Bayleef" translate="yes" xml:space="preserve">
+          <source>Bayleef</source>
+          <target state="new">Bayleef</target>
+        </trans-unit>
+        <trans-unit id="Bellossom" translate="yes" xml:space="preserve">
+          <source>Bellossom</source>
+          <target state="new">Bellossom</target>
+        </trans-unit>
+        <trans-unit id="Blissey" translate="yes" xml:space="preserve">
+          <source>Blissey</source>
+          <target state="new">Blissey</target>
+        </trans-unit>
+        <trans-unit id="Celebi" translate="yes" xml:space="preserve">
+          <source>Celebi</source>
+          <target state="new">Celebi</target>
+        </trans-unit>
+        <trans-unit id="Chikorita" translate="yes" xml:space="preserve">
+          <source>Chikorita</source>
+          <target state="new">Chikorita</target>
+        </trans-unit>
+        <trans-unit id="Chinchou" translate="yes" xml:space="preserve">
+          <source>Chinchou</source>
+          <target state="new">Chinchou</target>
+        </trans-unit>
+        <trans-unit id="Cleffa" translate="yes" xml:space="preserve">
+          <source>Cleffa</source>
+          <target state="new">Cleffa</target>
+        </trans-unit>
+        <trans-unit id="Corsola" translate="yes" xml:space="preserve">
+          <source>Corsola</source>
+          <target state="new">Corsola</target>
+        </trans-unit>
+        <trans-unit id="Crobat" translate="yes" xml:space="preserve">
+          <source>Crobat</source>
+          <target state="new">Crobat</target>
+        </trans-unit>
+        <trans-unit id="Croconaw" translate="yes" xml:space="preserve">
+          <source>Croconaw</source>
+          <target state="new">Croconaw</target>
+        </trans-unit>
+        <trans-unit id="Cyndaquil" translate="yes" xml:space="preserve">
+          <source>Cyndaquil</source>
+          <target state="new">Cyndaquil</target>
+        </trans-unit>
+        <trans-unit id="Delibird" translate="yes" xml:space="preserve">
+          <source>Delibird</source>
+          <target state="new">Delibird</target>
+        </trans-unit>
+        <trans-unit id="Donphan" translate="yes" xml:space="preserve">
+          <source>Donphan</source>
+          <target state="new">Donphan</target>
+        </trans-unit>
+        <trans-unit id="Dunsparce" translate="yes" xml:space="preserve">
+          <source>Dunsparce</source>
+          <target state="new">Dunsparce</target>
+        </trans-unit>
+        <trans-unit id="Elekid" translate="yes" xml:space="preserve">
+          <source>Elekid</source>
+          <target state="new">Elekid</target>
+        </trans-unit>
+        <trans-unit id="Entei" translate="yes" xml:space="preserve">
+          <source>Entei</source>
+          <target state="new">Entei</target>
+        </trans-unit>
+        <trans-unit id="Espeon" translate="yes" xml:space="preserve">
+          <source>Espeon</source>
+          <target state="new">Espeon</target>
+        </trans-unit>
+        <trans-unit id="Feraligatr" translate="yes" xml:space="preserve">
+          <source>Feraligatr</source>
+          <target state="new">Feraligatr</target>
+        </trans-unit>
+        <trans-unit id="Flaaffy" translate="yes" xml:space="preserve">
+          <source>Flaaffy</source>
+          <target state="new">Flaaffy</target>
+        </trans-unit>
+        <trans-unit id="Forretress" translate="yes" xml:space="preserve">
+          <source>Forretress</source>
+          <target state="new">Forretress</target>
+        </trans-unit>
+        <trans-unit id="Furret" translate="yes" xml:space="preserve">
+          <source>Furret</source>
+          <target state="new">Furret</target>
+        </trans-unit>
+        <trans-unit id="Girafarig" translate="yes" xml:space="preserve">
+          <source>Girafarig</source>
+          <target state="new">Girafarig</target>
+        </trans-unit>
+        <trans-unit id="Gligar" translate="yes" xml:space="preserve">
+          <source>Gligar</source>
+          <target state="new">Gligar</target>
+        </trans-unit>
+        <trans-unit id="Granbull" translate="yes" xml:space="preserve">
+          <source>Granbull</source>
+          <target state="new">Granbull</target>
+        </trans-unit>
+        <trans-unit id="Heracross" translate="yes" xml:space="preserve">
+          <source>Heracross</source>
+          <target state="new">Heracross</target>
+        </trans-unit>
+        <trans-unit id="Hitmontop" translate="yes" xml:space="preserve">
+          <source>Hitmontop</source>
+          <target state="new">Hitmontop</target>
+        </trans-unit>
+        <trans-unit id="HoOh" translate="yes" xml:space="preserve">
+          <source>Ho-oh</source>
+          <target state="new">Ho-oh</target>
+        </trans-unit>
+        <trans-unit id="Hoothoot" translate="yes" xml:space="preserve">
+          <source>Hoothoot</source>
+          <target state="new">Hoothoot</target>
+        </trans-unit>
+        <trans-unit id="Hoppip" translate="yes" xml:space="preserve">
+          <source>Hoppip</source>
+          <target state="new">Hoppip</target>
+        </trans-unit>
+        <trans-unit id="Houndoom" translate="yes" xml:space="preserve">
+          <source>Houndoom</source>
+          <target state="new">Houndoom</target>
+        </trans-unit>
+        <trans-unit id="Houndour" translate="yes" xml:space="preserve">
+          <source>Houndour</source>
+          <target state="new">Houndour</target>
+        </trans-unit>
+        <trans-unit id="Igglybuff" translate="yes" xml:space="preserve">
+          <source>Igglybuff</source>
+          <target state="new">Igglybuff</target>
+        </trans-unit>
+        <trans-unit id="Jumpluff" translate="yes" xml:space="preserve">
+          <source>Jumpluff</source>
+          <target state="new">Jumpluff</target>
+        </trans-unit>
+        <trans-unit id="Kingdra" translate="yes" xml:space="preserve">
+          <source>Kingdra</source>
+          <target state="new">Kingdra</target>
+        </trans-unit>
+        <trans-unit id="Lanturn" translate="yes" xml:space="preserve">
+          <source>Lanturn</source>
+          <target state="new">Lanturn</target>
+        </trans-unit>
+        <trans-unit id="Larvitar" translate="yes" xml:space="preserve">
+          <source>Larvitar</source>
+          <target state="new">Larvitar</target>
+        </trans-unit>
+        <trans-unit id="Ledian" translate="yes" xml:space="preserve">
+          <source>Ledian</source>
+          <target state="new">Ledian</target>
+        </trans-unit>
+        <trans-unit id="Ledyba" translate="yes" xml:space="preserve">
+          <source>Ledyba</source>
+          <target state="new">Ledyba</target>
+        </trans-unit>
+        <trans-unit id="Lugia" translate="yes" xml:space="preserve">
+          <source>Lugia</source>
+          <target state="new">Lugia</target>
+        </trans-unit>
+        <trans-unit id="Magby" translate="yes" xml:space="preserve">
+          <source>Magby</source>
+          <target state="new">Magby</target>
+        </trans-unit>
+        <trans-unit id="Magcargo" translate="yes" xml:space="preserve">
+          <source>Magcargo</source>
+          <target state="new">Magcargo</target>
+        </trans-unit>
+        <trans-unit id="Mantine" translate="yes" xml:space="preserve">
+          <source>Mantine</source>
+          <target state="new">Mantine</target>
+        </trans-unit>
+        <trans-unit id="Mareep" translate="yes" xml:space="preserve">
+          <source>Mareep</source>
+          <target state="new">Mareep</target>
+        </trans-unit>
+        <trans-unit id="Marill" translate="yes" xml:space="preserve">
+          <source>Marill</source>
+          <target state="new">Marill</target>
+        </trans-unit>
+        <trans-unit id="Meganium" translate="yes" xml:space="preserve">
+          <source>Meganium</source>
+          <target state="new">Meganium</target>
+        </trans-unit>
+        <trans-unit id="Miltank" translate="yes" xml:space="preserve">
+          <source>Miltank</source>
+          <target state="new">Miltank</target>
+        </trans-unit>
+        <trans-unit id="Misdreavus" translate="yes" xml:space="preserve">
+          <source>Misdreavus</source>
+          <target state="new">Misdreavus</target>
+        </trans-unit>
+        <trans-unit id="Murkrow" translate="yes" xml:space="preserve">
+          <source>Murkrow</source>
+          <target state="new">Murkrow</target>
+        </trans-unit>
+        <trans-unit id="Natu" translate="yes" xml:space="preserve">
+          <source>Natu</source>
+          <target state="new">Natu</target>
+        </trans-unit>
+        <trans-unit id="Noctowl" translate="yes" xml:space="preserve">
+          <source>Noctowl</source>
+          <target state="new">Noctowl</target>
+        </trans-unit>
+        <trans-unit id="Octillery" translate="yes" xml:space="preserve">
+          <source>Octillery</source>
+          <target state="new">Octillery</target>
+        </trans-unit>
+        <trans-unit id="Phanpy" translate="yes" xml:space="preserve">
+          <source>Phanpy</source>
+          <target state="new">Phanpy</target>
+        </trans-unit>
+        <trans-unit id="Pichu" translate="yes" xml:space="preserve">
+          <source>Pichu</source>
+          <target state="new">Pichu</target>
+        </trans-unit>
+        <trans-unit id="Piloswine" translate="yes" xml:space="preserve">
+          <source>Piloswine</source>
+          <target state="new">Piloswine</target>
+        </trans-unit>
+        <trans-unit id="Pineco" translate="yes" xml:space="preserve">
+          <source>Pineco</source>
+          <target state="new">Pineco</target>
+        </trans-unit>
+        <trans-unit id="Politoed" translate="yes" xml:space="preserve">
+          <source>Politoed</source>
+          <target state="new">Politoed</target>
+        </trans-unit>
+        <trans-unit id="Porygon2" translate="yes" xml:space="preserve">
+          <source>Porygon2</source>
+          <target state="new">Porygon2</target>
+        </trans-unit>
+        <trans-unit id="Pupitar" translate="yes" xml:space="preserve">
+          <source>Pupitar</source>
+          <target state="new">Pupitar</target>
+        </trans-unit>
+        <trans-unit id="Quagsire" translate="yes" xml:space="preserve">
+          <source>Quagsire</source>
+          <target state="new">Quagsire</target>
+        </trans-unit>
+        <trans-unit id="Quilava" translate="yes" xml:space="preserve">
+          <source>Quilava</source>
+          <target state="new">Quilava</target>
+        </trans-unit>
+        <trans-unit id="Qwilfish" translate="yes" xml:space="preserve">
+          <source>Qwilfish</source>
+          <target state="new">Qwilfish</target>
+        </trans-unit>
+        <trans-unit id="Raikou" translate="yes" xml:space="preserve">
+          <source>Raikou</source>
+          <target state="new">Raikou</target>
+        </trans-unit>
+        <trans-unit id="Remoraid" translate="yes" xml:space="preserve">
+          <source>Remoraid</source>
+          <target state="new">Remoraid</target>
+        </trans-unit>
+        <trans-unit id="Scizor" translate="yes" xml:space="preserve">
+          <source>Scizor</source>
+          <target state="new">Scizor</target>
+        </trans-unit>
+        <trans-unit id="Sentret" translate="yes" xml:space="preserve">
+          <source>Sentret</source>
+          <target state="new">Sentret</target>
+        </trans-unit>
+        <trans-unit id="Shuckle" translate="yes" xml:space="preserve">
+          <source>Shuckle</source>
+          <target state="new">Shuckle</target>
+        </trans-unit>
+        <trans-unit id="Skarmory" translate="yes" xml:space="preserve">
+          <source>Skarmory</source>
+          <target state="new">Skarmory</target>
+        </trans-unit>
+        <trans-unit id="Skiploom" translate="yes" xml:space="preserve">
+          <source>Skiploom</source>
+          <target state="new">Skiploom</target>
+        </trans-unit>
+        <trans-unit id="Slowking" translate="yes" xml:space="preserve">
+          <source>Slowking</source>
+          <target state="new">Slowking</target>
+        </trans-unit>
+        <trans-unit id="Slugma" translate="yes" xml:space="preserve">
+          <source>Slugma</source>
+          <target state="new">Slugma</target>
+        </trans-unit>
+        <trans-unit id="Smeargle" translate="yes" xml:space="preserve">
+          <source>Smeargle</source>
+          <target state="new">Smeargle</target>
+        </trans-unit>
+        <trans-unit id="Smoochum" translate="yes" xml:space="preserve">
+          <source>Smoochum</source>
+          <target state="new">Smoochum</target>
+        </trans-unit>
+        <trans-unit id="Sneasel" translate="yes" xml:space="preserve">
+          <source>Sneasel</source>
+          <target state="new">Sneasel</target>
+        </trans-unit>
+        <trans-unit id="Snubbull" translate="yes" xml:space="preserve">
+          <source>Snubbull</source>
+          <target state="new">Snubbull</target>
+        </trans-unit>
+        <trans-unit id="Spinarak" translate="yes" xml:space="preserve">
+          <source>Spinarak</source>
+          <target state="new">Spinarak</target>
+        </trans-unit>
+        <trans-unit id="Stantler" translate="yes" xml:space="preserve">
+          <source>Stantler</source>
+          <target state="new">Stantler</target>
+        </trans-unit>
+        <trans-unit id="Steelix" translate="yes" xml:space="preserve">
+          <source>Steelix</source>
+          <target state="new">Steelix</target>
+        </trans-unit>
+        <trans-unit id="Sudowoodo" translate="yes" xml:space="preserve">
+          <source>Sudowoodo</source>
+          <target state="new">Sudowoodo</target>
+        </trans-unit>
+        <trans-unit id="Suicune" translate="yes" xml:space="preserve">
+          <source>Suicune</source>
+          <target state="new">Suicune</target>
+        </trans-unit>
+        <trans-unit id="Sunflora" translate="yes" xml:space="preserve">
+          <source>Sunflora</source>
+          <target state="new">Sunflora</target>
+        </trans-unit>
+        <trans-unit id="Sunkern" translate="yes" xml:space="preserve">
+          <source>Sunkern</source>
+          <target state="new">Sunkern</target>
+        </trans-unit>
+        <trans-unit id="Swinub" translate="yes" xml:space="preserve">
+          <source>Swinub</source>
+          <target state="new">Swinub</target>
+        </trans-unit>
+        <trans-unit id="Teddiursa" translate="yes" xml:space="preserve">
+          <source>Teddiursa</source>
+          <target state="new">Teddiursa</target>
+        </trans-unit>
+        <trans-unit id="Togepi" translate="yes" xml:space="preserve">
+          <source>Togepi</source>
+          <target state="new">Togepi</target>
+        </trans-unit>
+        <trans-unit id="Togetic" translate="yes" xml:space="preserve">
+          <source>Togetic</source>
+          <target state="new">Togetic</target>
+        </trans-unit>
+        <trans-unit id="Totodile" translate="yes" xml:space="preserve">
+          <source>Totodile</source>
+          <target state="new">Totodile</target>
+        </trans-unit>
+        <trans-unit id="Typhlosion" translate="yes" xml:space="preserve">
+          <source>Typhlosion</source>
+          <target state="new">Typhlosion</target>
+        </trans-unit>
+        <trans-unit id="Tyranitar" translate="yes" xml:space="preserve">
+          <source>Tyranitar</source>
+          <target state="new">Tyranitar</target>
+        </trans-unit>
+        <trans-unit id="Tyrogue" translate="yes" xml:space="preserve">
+          <source>Tyrogue</source>
+          <target state="new">Tyrogue</target>
+        </trans-unit>
+        <trans-unit id="Umbreon" translate="yes" xml:space="preserve">
+          <source>Umbreon</source>
+          <target state="new">Umbreon</target>
+        </trans-unit>
+        <trans-unit id="Unown" translate="yes" xml:space="preserve">
+          <source>Unown</source>
+          <target state="new">Unown</target>
+        </trans-unit>
+        <trans-unit id="Ursaring" translate="yes" xml:space="preserve">
+          <source>Ursaring</source>
+          <target state="new">Ursaring</target>
+        </trans-unit>
+        <trans-unit id="Wobbuffet" translate="yes" xml:space="preserve">
+          <source>Wobbuffet</source>
+          <target state="new">Wobbuffet</target>
+        </trans-unit>
+        <trans-unit id="Wooper" translate="yes" xml:space="preserve">
+          <source>Wooper</source>
+          <target state="new">Wooper</target>
+        </trans-unit>
+        <trans-unit id="Xatu" translate="yes" xml:space="preserve">
+          <source>Xatu</source>
+          <target state="new">Xatu</target>
+        </trans-unit>
+        <trans-unit id="Yanma" translate="yes" xml:space="preserve">
+          <source>Yanma</source>
+          <target state="new">Yanma</target>
         </trans-unit>
       </group>
     </body>
@@ -2412,6 +2829,10 @@ Aynı zamanda {1} Stardust, {2} Şeker ve {3} XP kazandın.</target>
           <source>Zen Headbutt</source>
           <target state="translated">Zen Kafa Darbesi</target>
         </trans-unit>
+        <trans-unit id="TransformFast" translate="yes" xml:space="preserve">
+          <source>Transform</source>
+          <target state="new">Transform</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -3024,6 +3445,406 @@ Aynı zamanda {1} Stardust, {2} Şeker ve {3} XP kazandın.</target>
         <trans-unit id="Mew.Description" translate="yes" xml:space="preserve">
           <source>Mew is said to possess the genetic composition of all Pokémon. It is capable of making itself invisible at will, so it entirely avoids notice even if it approaches people.</source>
           <target state="translated">Mew'un, bütün Pokémon'ların genetik özelliklerini barındırdığı söylenir. İstediği anda kendisini görünmez yapma yeteneğine sahiptir, bu sebeple insanlara yaklaşsa bile dikkat çekmez.</target>
+        </trans-unit>
+        <trans-unit id="Aipom.Description" translate="yes" xml:space="preserve">
+          <source>Aipom’s tail ends in a hand-like appendage that can be cleverly manipulated. However, because the Pokémon uses its tail so much, its real hands have become rather clumsy.</source>
+          <target state="new">Aipom’s tail ends in a hand-like appendage that can be cleverly manipulated. However, because the Pokémon uses its tail so much, its real hands have become rather clumsy.</target>
+        </trans-unit>
+        <trans-unit id="Ampharos.Description" translate="yes" xml:space="preserve">
+          <source>Ampharos gives off so much light that it can be seen even from space. People in the old days used the light of this Pokémon to send signals back and forth with others far away.</source>
+          <target state="new">Ampharos gives off so much light that it can be seen even from space. People in the old days used the light of this Pokémon to send signals back and forth with others far away.</target>
+        </trans-unit>
+        <trans-unit id="Ariados.Description" translate="yes" xml:space="preserve">
+          <source>Ariados’s feet are tipped with tiny hooked claws that enable it to scuttle on ceilings and vertical walls. This Pokémon constricts the foe with thin and strong silk webbing.</source>
+          <target state="new">Ariados’s feet are tipped with tiny hooked claws that enable it to scuttle on ceilings and vertical walls. This Pokémon constricts the foe with thin and strong silk webbing.</target>
+        </trans-unit>
+        <trans-unit id="Azumarill.Description" translate="yes" xml:space="preserve">
+          <source>Azumarill’s long ears are indispensable sensors. By focusing its hearing, this Pokémon can identify what kinds of prey are around, even in rough and fast-running rivers.</source>
+          <target state="new">Azumarill’s long ears are indispensable sensors. By focusing its hearing, this Pokémon can identify what kinds of prey are around, even in rough and fast-running rivers.</target>
+        </trans-unit>
+        <trans-unit id="Bayleef.Description" translate="yes" xml:space="preserve">
+          <source>Bayleef’s neck is ringed by curled-up leaves. Inside each tubular leaf is a small shoot of a tree. The fragrance of this shoot makes people peppy.</source>
+          <target state="new">Bayleef’s neck is ringed by curled-up leaves. Inside each tubular leaf is a small shoot of a tree. The fragrance of this shoot makes people peppy.</target>
+        </trans-unit>
+        <trans-unit id="Bellossom.Description" translate="yes" xml:space="preserve">
+          <source>When Bellossom gets exposed to plenty of sunlight, the leaves ringing its body begin to spin around. This Pokémon’s dancing is renowned in the southern lands.</source>
+          <target state="new">When Bellossom gets exposed to plenty of sunlight, the leaves ringing its body begin to spin around. This Pokémon’s dancing is renowned in the southern lands.</target>
+        </trans-unit>
+        <trans-unit id="Chikorita.Description" translate="yes" xml:space="preserve">
+          <source>In battle, Chikorita waves its leaf around to keep the foe at bay. However, a sweet fragrance also wafts from the leaf, becalming the battling Pokémon and creating a cozy, friendly atmosphere all around.</source>
+          <target state="new">In battle, Chikorita waves its leaf around to keep the foe at bay. However, a sweet fragrance also wafts from the leaf, becalming the battling Pokémon and creating a cozy, friendly atmosphere all around.</target>
+        </trans-unit>
+        <trans-unit id="Chinchou.Description" translate="yes" xml:space="preserve">
+          <source>Chinchou lets loose positive and negative electrical charges from its two antennas to make its prey faint. This Pokémon flashes its electric lights to exchange signals with others.</source>
+          <target state="new">Chinchou lets loose positive and negative electrical charges from its two antennas to make its prey faint. This Pokémon flashes its electric lights to exchange signals with others.</target>
+        </trans-unit>
+        <trans-unit id="Cleffa.Description" translate="yes" xml:space="preserve">
+          <source>On nights with many shooting stars, Cleffa can be seen dancing in a ring. They dance through the night and stop only at the break of day, when these Pokémon quench their thirst with the morning dew.</source>
+          <target state="new">On nights with many shooting stars, Cleffa can be seen dancing in a ring. They dance through the night and stop only at the break of day, when these Pokémon quench their thirst with the morning dew.</target>
+        </trans-unit>
+        <trans-unit id="Crobat.Description" translate="yes" xml:space="preserve">
+          <source>If this Pokémon is flying by fluttering only a pair of wings on either the forelegs or hind legs, it’s proof that Crobat has been flying a long distance. It switches the wings it uses if it is tired.</source>
+          <target state="new">If this Pokémon is flying by fluttering only a pair of wings on either the forelegs or hind legs, it’s proof that Crobat has been flying a long distance. It switches the wings it uses if it is tired.</target>
+        </trans-unit>
+        <trans-unit id="Croconaw.Description" translate="yes" xml:space="preserve">
+          <source>Once Croconaw has clamped its jaws on its foe, it will absolutely not let go. Because the tips of its fangs are forked back like barbed fishhooks, they become impossible to remove when they have sunk in.</source>
+          <target state="new">Once Croconaw has clamped its jaws on its foe, it will absolutely not let go. Because the tips of its fangs are forked back like barbed fishhooks, they become impossible to remove when they have sunk in.</target>
+        </trans-unit>
+        <trans-unit id="Cyndaquil.Description" translate="yes" xml:space="preserve">
+          <source>Cyndaquil protects itself by flaring up the flames on its back. The flames are vigorous if the Pokémon is angry. However, if it is tired, the flames splutter fitfully with incomplete combustion.</source>
+          <target state="new">Cyndaquil protects itself by flaring up the flames on its back. The flames are vigorous if the Pokémon is angry. However, if it is tired, the flames splutter fitfully with incomplete combustion.</target>
+        </trans-unit>
+        <trans-unit id="Espeon.Description" translate="yes" xml:space="preserve">
+          <source>Espeon is extremely loyal to any Trainer it considers to be worthy. It is said that this Pokémon developed its precognitive powers to protect its Trainer from harm.</source>
+          <target state="new">Espeon is extremely loyal to any Trainer it considers to be worthy. It is said that this Pokémon developed its precognitive powers to protect its Trainer from harm.</target>
+        </trans-unit>
+        <trans-unit id="Feraligatr.Description" translate="yes" xml:space="preserve">
+          <source>Feraligatr intimidates its foes by opening its huge mouth. In battle, it will kick the ground hard with its thick and powerful hind legs to charge at the foe at an incredible speed.</source>
+          <target state="new">Feraligatr intimidates its foes by opening its huge mouth. In battle, it will kick the ground hard with its thick and powerful hind legs to charge at the foe at an incredible speed.</target>
+        </trans-unit>
+        <trans-unit id="Flaaffy.Description" translate="yes" xml:space="preserve">
+          <source>Flaaffy’s wool quality changes so that it can generate a high amount of static electricity with a small amount of wool. The bare and slick parts of its hide are shielded against electricity.</source>
+          <target state="new">Flaaffy’s wool quality changes so that it can generate a high amount of static electricity with a small amount of wool. The bare and slick parts of its hide are shielded against electricity.</target>
+        </trans-unit>
+        <trans-unit id="Furret.Description" translate="yes" xml:space="preserve">
+          <source>Furret has a very slim build. When under attack, it can slickly squirm through narrow spaces and get away. In spite of its short limbs, this Pokémon is very nimble and fleet.</source>
+          <target state="new">Furret has a very slim build. When under attack, it can slickly squirm through narrow spaces and get away. In spite of its short limbs, this Pokémon is very nimble and fleet.</target>
+        </trans-unit>
+        <trans-unit id="Hoothoot.Description" translate="yes" xml:space="preserve">
+          <source>Hoothoot has an internal organ that senses and tracks the earth’s rotation. Using this special organ, this Pokémon begins hooting at precisely the same time every day.</source>
+          <target state="new">Hoothoot has an internal organ that senses and tracks the earth’s rotation. Using this special organ, this Pokémon begins hooting at precisely the same time every day.</target>
+        </trans-unit>
+        <trans-unit id="Hoppip.Description" translate="yes" xml:space="preserve">
+          <source>This Pokémon drifts and floats with the wind. If it senses the approach of strong winds, Hoppip links its leaves with other Hoppip to prepare against being blown away.</source>
+          <target state="new">This Pokémon drifts and floats with the wind. If it senses the approach of strong winds, Hoppip links its leaves with other Hoppip to prepare against being blown away.</target>
+        </trans-unit>
+        <trans-unit id="Igglybuff.Description" translate="yes" xml:space="preserve">
+          <source>Igglybuff’s vocal cords are not sufficiently developed. It would hurt its throat if it were to sing too much. This Pokémon gargles with freshwater from a clean stream.</source>
+          <target state="new">Igglybuff’s vocal cords are not sufficiently developed. It would hurt its throat if it were to sing too much. This Pokémon gargles with freshwater from a clean stream.</target>
+        </trans-unit>
+        <trans-unit id="Jumpluff.Description" translate="yes" xml:space="preserve">
+          <source>Jumpluff rides warm southern winds to cross the sea and fly to foreign lands. The Pokémon descends to the ground when it encounters cold air while it is floating.</source>
+          <target state="new">Jumpluff rides warm southern winds to cross the sea and fly to foreign lands. The Pokémon descends to the ground when it encounters cold air while it is floating.</target>
+        </trans-unit>
+        <trans-unit id="Lanturn.Description" translate="yes" xml:space="preserve">
+          <source>Lanturn is nicknamed “the deep-sea star” for its illuminated antenna. This Pokémon produces light by causing a chemical reaction between bacteria and its bodily fluids inside the antenna.</source>
+          <target state="new">Lanturn is nicknamed “the deep-sea star” for its illuminated antenna. This Pokémon produces light by causing a chemical reaction between bacteria and its bodily fluids inside the antenna.</target>
+        </trans-unit>
+        <trans-unit id="Ledian.Description" translate="yes" xml:space="preserve">
+          <source>It is said that in lands with clean air, where the stars fill the sky, there live Ledian in countless numbers. There is a good reason for this—the Pokémon uses the light of the stars as its energy.</source>
+          <target state="new">It is said that in lands with clean air, where the stars fill the sky, there live Ledian in countless numbers. There is a good reason for this—the Pokémon uses the light of the stars as its energy.</target>
+        </trans-unit>
+        <trans-unit id="Ledyba.Description" translate="yes" xml:space="preserve">
+          <source>Ledyba secretes an aromatic fluid from where its legs join its body. This fluid is used for communicating with others. This Pokémon conveys its feelings to others by altering the fluid’s scent.</source>
+          <target state="new">Ledyba secretes an aromatic fluid from where its legs join its body. This fluid is used for communicating with others. This Pokémon conveys its feelings to others by altering the fluid’s scent.</target>
+        </trans-unit>
+        <trans-unit id="Mareep.Description" translate="yes" xml:space="preserve">
+          <source>Mareep’s fluffy coat of wool rubs together and builds a static charge. The more static electricity is charged, the more brightly the lightbulb at the tip of its tail glows.</source>
+          <target state="new">Mareep’s fluffy coat of wool rubs together and builds a static charge. The more static electricity is charged, the more brightly the lightbulb at the tip of its tail glows.</target>
+        </trans-unit>
+        <trans-unit id="Marill.Description" translate="yes" xml:space="preserve">
+          <source>Marill’s oil-filled tail acts much like a life preserver. If you see just its tail bobbing on the water’s surface, it’s a sure indication that this Pokémon is diving beneath the water to feed on aquatic plants.</source>
+          <target state="new">Marill’s oil-filled tail acts much like a life preserver. If you see just its tail bobbing on the water’s surface, it’s a sure indication that this Pokémon is diving beneath the water to feed on aquatic plants.</target>
+        </trans-unit>
+        <trans-unit id="Meganium.Description" translate="yes" xml:space="preserve">
+          <source>The fragrance of Meganium’s flower soothes and calms emotions. In battle, this Pokémon gives off more of its becalming scent to blunt the foe’s fighting spirit.</source>
+          <target state="new">The fragrance of Meganium’s flower soothes and calms emotions. In battle, this Pokémon gives off more of its becalming scent to blunt the foe’s fighting spirit.</target>
+        </trans-unit>
+        <trans-unit id="Misdreavus.Description" translate="yes" xml:space="preserve">
+          <source>Misdreavus frightens people with a creepy, sobbing cry. The Pokémon apparently uses its red spheres to absorb the fearful feelings of foes and turn them into nutrition.</source>
+          <target state="new">Misdreavus frightens people with a creepy, sobbing cry. The Pokémon apparently uses its red spheres to absorb the fearful feelings of foes and turn them into nutrition.</target>
+        </trans-unit>
+        <trans-unit id="Murkrow.Description" translate="yes" xml:space="preserve">
+          <source>Murkrow was feared and loathed as the alleged bearer of ill fortune. This Pokémon shows strong interest in anything that sparkles or glitters. It will even try to steal rings from women.</source>
+          <target state="new">Murkrow was feared and loathed as the alleged bearer of ill fortune. This Pokémon shows strong interest in anything that sparkles or glitters. It will even try to steal rings from women.</target>
+        </trans-unit>
+        <trans-unit id="Natu.Description" translate="yes" xml:space="preserve">
+          <source>Natu cannot fly because its wings are not yet fully grown. If your eyes meet with this Pokémon’s eyes, it will stare back intently at you. But if you move even slightly, it will hop away to safety.</source>
+          <target state="new">Natu cannot fly because its wings are not yet fully grown. If your eyes meet with this Pokémon’s eyes, it will stare back intently at you. But if you move even slightly, it will hop away to safety.</target>
+        </trans-unit>
+        <trans-unit id="Noctowl.Description" translate="yes" xml:space="preserve">
+          <source>Noctowl never fails at catching prey in darkness. This Pokémon owes its success to its superior vision that allows it to see in minimal light, and to its soft, supple wings that make no sound in flight.</source>
+          <target state="new">Noctowl never fails at catching prey in darkness. This Pokémon owes its success to its superior vision that allows it to see in minimal light, and to its soft, supple wings that make no sound in flight.</target>
+        </trans-unit>
+        <trans-unit id="Pichu.Description" translate="yes" xml:space="preserve">
+          <source>Pichu charges itself with electricity more easily on days with thunderclouds or when the air is very dry. You can hear the crackling of static electricity coming off this Pokémon.</source>
+          <target state="new">Pichu charges itself with electricity more easily on days with thunderclouds or when the air is very dry. You can hear the crackling of static electricity coming off this Pokémon.</target>
+        </trans-unit>
+        <trans-unit id="Politoed.Description" translate="yes" xml:space="preserve">
+          <source>The curled hair on Politoed’s head is proof of its status as a king. It is said that the longer and more curled the hair, the more respect this Pokémon earns from its peers.</source>
+          <target state="new">The curled hair on Politoed’s head is proof of its status as a king. It is said that the longer and more curled the hair, the more respect this Pokémon earns from its peers.</target>
+        </trans-unit>
+        <trans-unit id="Quagsire.Description" translate="yes" xml:space="preserve">
+          <source>Quagsire hunts for food by leaving its mouth wide open in water and waiting for its prey to blunder in unaware. Because the Pokémon does not move, it does not get very hungry.</source>
+          <target state="new">Quagsire hunts for food by leaving its mouth wide open in water and waiting for its prey to blunder in unaware. Because the Pokémon does not move, it does not get very hungry.</target>
+        </trans-unit>
+        <trans-unit id="Quilava.Description" translate="yes" xml:space="preserve">
+          <source>Quilava keeps its foes at bay with the intensity of its flames and gusts of superheated air. This Pokémon applies its outstanding nimbleness to dodge attacks even while scorching the foe with flames.</source>
+          <target state="new">Quilava keeps its foes at bay with the intensity of its flames and gusts of superheated air. This Pokémon applies its outstanding nimbleness to dodge attacks even while scorching the foe with flames.</target>
+        </trans-unit>
+        <trans-unit id="Sentret.Description" translate="yes" xml:space="preserve">
+          <source>When Sentret sleeps, it does so while another stands guard. The sentry wakes the others at the first sign of danger. When this Pokémon becomes separated from its pack, it becomes incapable of sleep due to fear.</source>
+          <target state="new">When Sentret sleeps, it does so while another stands guard. The sentry wakes the others at the first sign of danger. When this Pokémon becomes separated from its pack, it becomes incapable of sleep due to fear.</target>
+        </trans-unit>
+        <trans-unit id="Skiploom.Description" translate="yes" xml:space="preserve">
+          <source>Skiploom’s flower blossoms when the temperature rises above 64 degrees Fahrenheit. How much the flower opens depends on the temperature. For that reason, this Pokémon is sometimes used as a thermometer.</source>
+          <target state="new">Skiploom’s flower blossoms when the temperature rises above 64 degrees Fahrenheit. How much the flower opens depends on the temperature. For that reason, this Pokémon is sometimes used as a thermometer.</target>
+        </trans-unit>
+        <trans-unit id="Slowking.Description" translate="yes" xml:space="preserve">
+          <source>Slowking undertakes research every day in an effort to solve the mysteries of the world. However, this Pokémon apparently forgets everything it has learned if the Shellder on its head comes off.</source>
+          <target state="new">Slowking undertakes research every day in an effort to solve the mysteries of the world. However, this Pokémon apparently forgets everything it has learned if the Shellder on its head comes off.</target>
+        </trans-unit>
+        <trans-unit id="Spinarak.Description" translate="yes" xml:space="preserve">
+          <source>The web spun by Spinarak can be considered its second nervous system. It is said that this Pokémon can determine what kind of prey is touching its web just by the tiny vibrations it feels through the web’s strands.</source>
+          <target state="new">The web spun by Spinarak can be considered its second nervous system. It is said that this Pokémon can determine what kind of prey is touching its web just by the tiny vibrations it feels through the web’s strands.</target>
+        </trans-unit>
+        <trans-unit id="Sudowoodo.Description" translate="yes" xml:space="preserve">
+          <source>Sudowoodo camouflages itself as a tree to avoid being attacked by enemies. However, because its hands remain green throughout the year, the Pokémon is easily identified as a fake during the winter.</source>
+          <target state="new">Sudowoodo camouflages itself as a tree to avoid being attacked by enemies. However, because its hands remain green throughout the year, the Pokémon is easily identified as a fake during the winter.</target>
+        </trans-unit>
+        <trans-unit id="Sunflora.Description" translate="yes" xml:space="preserve">
+          <source>Sunflora converts solar energy into nutrition. It moves around actively in the daytime when it is warm. It stops moving as soon as the sun goes down for the night.</source>
+          <target state="new">Sunflora converts solar energy into nutrition. It moves around actively in the daytime when it is warm. It stops moving as soon as the sun goes down for the night.</target>
+        </trans-unit>
+        <trans-unit id="Sunkern.Description" translate="yes" xml:space="preserve">
+          <source>Sunkern tries to move as little as it possibly can. It does so because it tries to conserve all the nutrients it has stored in its body for its evolution. It will not eat a thing, subsisting only on morning dew.</source>
+          <target state="new">Sunkern tries to move as little as it possibly can. It does so because it tries to conserve all the nutrients it has stored in its body for its evolution. It will not eat a thing, subsisting only on morning dew.</target>
+        </trans-unit>
+        <trans-unit id="Togepi.Description" translate="yes" xml:space="preserve">
+          <source>As its energy, Togepi uses the positive emotions of compassion and pleasure exuded by people and Pokémon. This Pokémon stores up feelings of happiness inside its shell, then shares them with others.</source>
+          <target state="new">As its energy, Togepi uses the positive emotions of compassion and pleasure exuded by people and Pokémon. This Pokémon stores up feelings of happiness inside its shell, then shares them with others.</target>
+        </trans-unit>
+        <trans-unit id="Togetic.Description" translate="yes" xml:space="preserve">
+          <source>Togetic is said to be a Pokémon that brings good fortune. When the Pokémon spots someone who is pure of heart, it is said to appear and share its happiness with that person.</source>
+          <target state="new">Togetic is said to be a Pokémon that brings good fortune. When the Pokémon spots someone who is pure of heart, it is said to appear and share its happiness with that person.</target>
+        </trans-unit>
+        <trans-unit id="Totodile.Description" translate="yes" xml:space="preserve">
+          <source>Despite the smallness of its body, Totodile’s jaws are very powerful. While the Pokémon may think it is just playfully nipping, its bite has enough power to cause serious injury.</source>
+          <target state="new">Despite the smallness of its body, Totodile’s jaws are very powerful. While the Pokémon may think it is just playfully nipping, its bite has enough power to cause serious injury.</target>
+        </trans-unit>
+        <trans-unit id="Typhlosion.Description" translate="yes" xml:space="preserve">
+          <source>Typhlosion obscures itself behind a shimmering heat haze that it creates using its intensely hot flames. This Pokémon creates blazing explosive blasts that burn everything to cinders.</source>
+          <target state="new">Typhlosion obscures itself behind a shimmering heat haze that it creates using its intensely hot flames. This Pokémon creates blazing explosive blasts that burn everything to cinders.</target>
+        </trans-unit>
+        <trans-unit id="Umbreon.Description" translate="yes" xml:space="preserve">
+          <source>Umbreon evolved as a result of exposure to the moon’s waves. It hides silently in darkness and waits for its foes to make a move. The rings on its body glow when it leaps to attack.</source>
+          <target state="new">Umbreon evolved as a result of exposure to the moon’s waves. It hides silently in darkness and waits for its foes to make a move. The rings on its body glow when it leaps to attack.</target>
+        </trans-unit>
+        <trans-unit id="Wooper.Description" translate="yes" xml:space="preserve">
+          <source>Wooper usually lives in water. However, it occasionally comes out onto land in search of food. On land, it coats its body with a gooey, toxic film.</source>
+          <target state="new">Wooper usually lives in water. However, it occasionally comes out onto land in search of food. On land, it coats its body with a gooey, toxic film.</target>
+        </trans-unit>
+        <trans-unit id="Xatu.Description" translate="yes" xml:space="preserve">
+          <source>Xatu stands rooted and still in one spot all day long. People believe that this Pokémon does so out of fear of the terrible things it has foreseen in the future.</source>
+          <target state="new">Xatu stands rooted and still in one spot all day long. People believe that this Pokémon does so out of fear of the terrible things it has foreseen in the future.</target>
+        </trans-unit>
+        <trans-unit id="Yanma.Description" translate="yes" xml:space="preserve">
+          <source>Yanma is capable of seeing 360 degrees without having to move its eyes. It is a great flier that is adept at making sudden stops and turning midair. This Pokémon uses its flying ability to quickly chase down targeted prey.</source>
+          <target state="new">Yanma is capable of seeing 360 degrees without having to move its eyes. It is a great flier that is adept at making sudden stops and turning midair. This Pokémon uses its flying ability to quickly chase down targeted prey.</target>
+        </trans-unit>
+        <trans-unit id="Unown.Description" translate="yes" xml:space="preserve">
+          <source>This Pokémon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known.</source>
+          <target state="new">This Pokémon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known.</target>
+        </trans-unit>
+        <trans-unit id="Wobbuffet.Description" translate="yes" xml:space="preserve">
+          <source>If two or more Wobbuffet meet, they will turn competitive and try to outdo each other’s endurance. However, they may try to see which one can endure the longest without food. Trainers need to beware of this habit.</source>
+          <target state="new">If two or more Wobbuffet meet, they will turn competitive and try to outdo each other’s endurance. However, they may try to see which one can endure the longest without food. Trainers need to beware of this habit.</target>
+        </trans-unit>
+        <trans-unit id="Blissey.Description" translate="yes" xml:space="preserve">
+          <source>Blissey senses sadness with its fluffy coat of fur. If it does so, this Pokémon will rush over to a sad person, no matter how far away, to share a Lucky Egg that brings a smile to any face.</source>
+          <target state="new">Blissey senses sadness with its fluffy coat of fur. If it does so, this Pokémon will rush over to a sad person, no matter how far away, to share a Lucky Egg that brings a smile to any face.</target>
+        </trans-unit>
+        <trans-unit id="Celebi.Description" translate="yes" xml:space="preserve">
+          <source>This Pokémon came from the future by crossing over time. It is thought that so long as Celebi appears, a bright and shining future awaits us.</source>
+          <target state="new">This Pokémon came from the future by crossing over time. It is thought that so long as Celebi appears, a bright and shining future awaits us.</target>
+        </trans-unit>
+        <trans-unit id="Corsola.Description" translate="yes" xml:space="preserve">
+          <source>Corsola’s branches glitter very beautifully in seven colors when they catch sunlight. If any branch breaks off, this Pokémon grows it back in just one night.</source>
+          <target state="new">Corsola’s branches glitter very beautifully in seven colors when they catch sunlight. If any branch breaks off, this Pokémon grows it back in just one night.</target>
+        </trans-unit>
+        <trans-unit id="Delibird.Description" translate="yes" xml:space="preserve">
+          <source>Delibird carries its food bundled up in its tail. There once was a famous explorer who managed to reach the peak of the world’s highest mountain, thanks to one of these Pokémon sharing its food.</source>
+          <target state="new">Delibird carries its food bundled up in its tail. There once was a famous explorer who managed to reach the peak of the world’s highest mountain, thanks to one of these Pokémon sharing its food.</target>
+        </trans-unit>
+        <trans-unit id="Donphan.Description" translate="yes" xml:space="preserve">
+          <source>Donphan’s favorite attack is curling its body into a ball, then charging at its foe while rolling at high speed. Once it starts rolling, this Pokémon can’t stop very easily.</source>
+          <target state="new">Donphan’s favorite attack is curling its body into a ball, then charging at its foe while rolling at high speed. Once it starts rolling, this Pokémon can’t stop very easily.</target>
+        </trans-unit>
+        <trans-unit id="Dunsparce.Description" translate="yes" xml:space="preserve">
+          <source>Dunsparce has a drill for its tail. It uses this tail to burrow into the ground backward. This Pokémon is known to make its nest in complex shapes deep under the ground.</source>
+          <target state="new">Dunsparce has a drill for its tail. It uses this tail to burrow into the ground backward. This Pokémon is known to make its nest in complex shapes deep under the ground.</target>
+        </trans-unit>
+        <trans-unit id="Elekid.Description" translate="yes" xml:space="preserve">
+          <source>Elekid stores electricity in its body. If it touches metal and accidentally discharges all its built-up electricity, this Pokémon begins swinging its arms in circles to recharge itself.</source>
+          <target state="new">Elekid stores electricity in its body. If it touches metal and accidentally discharges all its built-up electricity, this Pokémon begins swinging its arms in circles to recharge itself.</target>
+        </trans-unit>
+        <trans-unit id="Entei.Description" translate="yes" xml:space="preserve">
+          <source>Entei embodies the passion of magma. This Pokémon is thought to have been born in the eruption of a volcano. It sends up massive bursts of fire that utterly consume all that they touch.</source>
+          <target state="new">Entei embodies the passion of magma. This Pokémon is thought to have been born in the eruption of a volcano. It sends up massive bursts of fire that utterly consume all that they touch.</target>
+        </trans-unit>
+        <trans-unit id="Forretress.Description" translate="yes" xml:space="preserve">
+          <source>Forretress conceals itself inside its hardened steel shell. The shell is opened when the Pokémon is catching prey, but it does so at such a quick pace that the shell’s inside cannot be seen.</source>
+          <target state="new">Forretress conceals itself inside its hardened steel shell. The shell is opened when the Pokémon is catching prey, but it does so at such a quick pace that the shell’s inside cannot be seen.</target>
+        </trans-unit>
+        <trans-unit id="Girafarig.Description" translate="yes" xml:space="preserve">
+          <source>Girafarig’s rear head also has a brain, but it is small. The rear head attacks in response to smells and sounds. Approaching this Pokémon from behind can cause the rear head to suddenly lash out and bite.</source>
+          <target state="new">Girafarig’s rear head also has a brain, but it is small. The rear head attacks in response to smells and sounds. Approaching this Pokémon from behind can cause the rear head to suddenly lash out and bite.</target>
+        </trans-unit>
+        <trans-unit id="Gligar.Description" translate="yes" xml:space="preserve">
+          <source>Gligar glides through the air without a sound as if it were sliding. This Pokémon hangs on to the face of its foe using its clawed hind legs and the large pincers on its forelegs, then injects the prey with its poison barb.</source>
+          <target state="new">Gligar glides through the air without a sound as if it were sliding. This Pokémon hangs on to the face of its foe using its clawed hind legs and the large pincers on its forelegs, then injects the prey with its poison barb.</target>
+        </trans-unit>
+        <trans-unit id="Granbull.Description" translate="yes" xml:space="preserve">
+          <source>Granbull has a particularly well-developed lower jaw. The enormous fangs are heavy, causing the Pokémon to tip its head back for balance. Unless it is startled, it will not try to bite indiscriminately.</source>
+          <target state="new">Granbull has a particularly well-developed lower jaw. The enormous fangs are heavy, causing the Pokémon to tip its head back for balance. Unless it is startled, it will not try to bite indiscriminately.</target>
+        </trans-unit>
+        <trans-unit id="Heracross.Description" translate="yes" xml:space="preserve">
+          <source>Heracross charges in a straight line at its foe, slips beneath the foe’s grasp, and then scoops up and hurls the opponent with its mighty horn. This Pokémon even has enough power to topple a massive tree.</source>
+          <target state="new">Heracross charges in a straight line at its foe, slips beneath the foe’s grasp, and then scoops up and hurls the opponent with its mighty horn. This Pokémon even has enough power to topple a massive tree.</target>
+        </trans-unit>
+        <trans-unit id="Hitmontop.Description" translate="yes" xml:space="preserve">
+          <source>Hitmontop spins on its head at high speed, all the while delivering kicks. This technique is a remarkable mix of both offense and defense at the same time. The Pokémon travels faster spinning than it does walking.</source>
+          <target state="new">Hitmontop spins on its head at high speed, all the while delivering kicks. This technique is a remarkable mix of both offense and defense at the same time. The Pokémon travels faster spinning than it does walking.</target>
+        </trans-unit>
+        <trans-unit id="HoOh.Description" translate="yes" xml:space="preserve">
+          <source>Ho-Oh’s feathers glow in seven colors depending on the angle at which they are struck by light. These feathers are said to bring happiness to the bearers. This Pokémon is said to live at the foot of a rainbow.</source>
+          <target state="new">Ho-Oh’s feathers glow in seven colors depending on the angle at which they are struck by light. These feathers are said to bring happiness to the bearers. This Pokémon is said to live at the foot of a rainbow.</target>
+        </trans-unit>
+        <trans-unit id="Houndoom.Description" translate="yes" xml:space="preserve">
+          <source>In a Houndoom pack, the one with its horns raked sharply toward the back serves a leadership role. These Pokémon choose their leader by fighting among themselves.</source>
+          <target state="new">In a Houndoom pack, the one with its horns raked sharply toward the back serves a leadership role. These Pokémon choose their leader by fighting among themselves.</target>
+        </trans-unit>
+        <trans-unit id="Houndour.Description" translate="yes" xml:space="preserve">
+          <source>Houndour hunt as a coordinated pack. They communicate with each other using a variety of cries to corner their prey. This Pokémon’s remarkable teamwork is unparalleled.</source>
+          <target state="new">Houndour hunt as a coordinated pack. They communicate with each other using a variety of cries to corner their prey. This Pokémon’s remarkable teamwork is unparalleled.</target>
+        </trans-unit>
+        <trans-unit id="Kingdra.Description" translate="yes" xml:space="preserve">
+          <source>Kingdra lives at extreme ocean depths that are otherwise uninhabited. It has long been believed that the yawning of this Pokémon creates spiraling ocean currents.</source>
+          <target state="new">Kingdra lives at extreme ocean depths that are otherwise uninhabited. It has long been believed that the yawning of this Pokémon creates spiraling ocean currents.</target>
+        </trans-unit>
+        <trans-unit id="Larvitar.Description" translate="yes" xml:space="preserve">
+          <source>Larvitar is born deep under the ground. To come up to the surface, this Pokémon must eat its way through the soil above. Until it does so, Larvitar cannot see its parents.</source>
+          <target state="new">Larvitar is born deep under the ground. To come up to the surface, this Pokémon must eat its way through the soil above. Until it does so, Larvitar cannot see its parents.</target>
+        </trans-unit>
+        <trans-unit id="Lugia.Description" translate="yes" xml:space="preserve">
+          <source>Lugia’s wings pack devastating power—a light fluttering of its wings can blow apart regular houses. As a result, this Pokémon chooses to live out of sight deep under the sea.</source>
+          <target state="new">Lugia’s wings pack devastating power—a light fluttering of its wings can blow apart regular houses. As a result, this Pokémon chooses to live out of sight deep under the sea.</target>
+        </trans-unit>
+        <trans-unit id="Magby.Description" translate="yes" xml:space="preserve">
+          <source>Magby’s state of health is determined by observing the fire it breathes. If the Pokémon is spouting yellow flames from its mouth, it is in good health. When it is fatigued, black smoke will be mixed in with the flames.</source>
+          <target state="new">Magby’s state of health is determined by observing the fire it breathes. If the Pokémon is spouting yellow flames from its mouth, it is in good health. When it is fatigued, black smoke will be mixed in with the flames.</target>
+        </trans-unit>
+        <trans-unit id="Magcargo.Description" translate="yes" xml:space="preserve">
+          <source>Magcargo’s shell is actually its skin that hardened as a result of cooling. Its shell is very brittle and fragile—just touching it causes it to crumble apart. This Pokémon returns to its original size by dipping itself in magma.</source>
+          <target state="new">Magcargo’s shell is actually its skin that hardened as a result of cooling. Its shell is very brittle and fragile—just touching it causes it to crumble apart. This Pokémon returns to its original size by dipping itself in magma.</target>
+        </trans-unit>
+        <trans-unit id="Mantine.Description" translate="yes" xml:space="preserve">
+          <source>On sunny days, schools of Mantine can be seen elegantly leaping over the sea’s waves. This Pokémon is not bothered by the Remoraid that hitches rides.</source>
+          <target state="new">On sunny days, schools of Mantine can be seen elegantly leaping over the sea’s waves. This Pokémon is not bothered by the Remoraid that hitches rides.</target>
+        </trans-unit>
+        <trans-unit id="Miltank.Description" translate="yes" xml:space="preserve">
+          <source>Miltank gives over five gallons of milk on a daily basis. Its sweet milk is enjoyed by children and grown-ups alike. People who can’t drink milk turn it into yogurt and eat it instead.</source>
+          <target state="new">Miltank gives over five gallons of milk on a daily basis. Its sweet milk is enjoyed by children and grown-ups alike. People who can’t drink milk turn it into yogurt and eat it instead.</target>
+        </trans-unit>
+        <trans-unit id="Octillery.Description" translate="yes" xml:space="preserve">
+          <source>Octillery grabs onto its foe using its tentacles. This Pokémon tries to immobilize it before delivering the finishing blow. If the foe turns out to be too strong, Octillery spews ink to escape.</source>
+          <target state="new">Octillery grabs onto its foe using its tentacles. This Pokémon tries to immobilize it before delivering the finishing blow. If the foe turns out to be too strong, Octillery spews ink to escape.</target>
+        </trans-unit>
+        <trans-unit id="Phanpy.Description" translate="yes" xml:space="preserve">
+          <source>For its nest, Phanpy digs a vertical pit in the ground at the edge of a river. It marks the area around its nest with its trunk to let the others know that the area has been claimed.</source>
+          <target state="new">For its nest, Phanpy digs a vertical pit in the ground at the edge of a river. It marks the area around its nest with its trunk to let the others know that the area has been claimed.</target>
+        </trans-unit>
+        <trans-unit id="Piloswine.Description" translate="yes" xml:space="preserve">
+          <source>Piloswine is covered by a thick coat of long hair that enables it to endure the freezing cold. This Pokémon uses its tusks to dig up food that has been buried under ice.</source>
+          <target state="new">Piloswine is covered by a thick coat of long hair that enables it to endure the freezing cold. This Pokémon uses its tusks to dig up food that has been buried under ice.</target>
+        </trans-unit>
+        <trans-unit id="Pineco.Description" translate="yes" xml:space="preserve">
+          <source>Pineco hangs from a tree branch and patiently waits for prey to come along. If the Pokémon is disturbed while eating by someone shaking its tree, it drops down to the ground and explodes with no warning.</source>
+          <target state="new">Pineco hangs from a tree branch and patiently waits for prey to come along. If the Pokémon is disturbed while eating by someone shaking its tree, it drops down to the ground and explodes with no warning.</target>
+        </trans-unit>
+        <trans-unit id="Porygon2.Description" translate="yes" xml:space="preserve">
+          <source>Porygon2 was created by humans using the power of science. The man-made Pokémon has been endowed with artificial intelligence that enables it to learn new gestures and emotions on its own.</source>
+          <target state="new">Porygon2 was created by humans using the power of science. The man-made Pokémon has been endowed with artificial intelligence that enables it to learn new gestures and emotions on its own.</target>
+        </trans-unit>
+        <trans-unit id="Pupitar.Description" translate="yes" xml:space="preserve">
+          <source>Pupitar creates a gas inside its body that it compresses and forcefully ejects to propel itself like a jet. The body is very durable—it avoids damage even if it hits solid steel.</source>
+          <target state="new">Pupitar creates a gas inside its body that it compresses and forcefully ejects to propel itself like a jet. The body is very durable—it avoids damage even if it hits solid steel.</target>
+        </trans-unit>
+        <trans-unit id="Qwilfish.Description" translate="yes" xml:space="preserve">
+          <source>Qwilfish sucks in water, inflating itself. This Pokémon uses the pressure of the water it swallowed to shoot toxic quills all at once from all over its body. It finds swimming somewhat challenging.</source>
+          <target state="new">Qwilfish sucks in water, inflating itself. This Pokémon uses the pressure of the water it swallowed to shoot toxic quills all at once from all over its body. It finds swimming somewhat challenging.</target>
+        </trans-unit>
+        <trans-unit id="Raikou.Description" translate="yes" xml:space="preserve">
+          <source>Raikou embodies the speed of lightning. The roars of this Pokémon send shock waves shuddering through the air and shake the ground as if lightning bolts had come crashing down.</source>
+          <target state="new">Raikou embodies the speed of lightning. The roars of this Pokémon send shock waves shuddering through the air and shake the ground as if lightning bolts had come crashing down.</target>
+        </trans-unit>
+        <trans-unit id="Remoraid.Description" translate="yes" xml:space="preserve">
+          <source>Remoraid sucks in water, then expels it at high velocity using its abdominal muscles to shoot down flying prey. When evolution draws near, this Pokémon travels downstream from rivers.</source>
+          <target state="new">Remoraid sucks in water, then expels it at high velocity using its abdominal muscles to shoot down flying prey. When evolution draws near, this Pokémon travels downstream from rivers.</target>
+        </trans-unit>
+        <trans-unit id="Scizor.Description" translate="yes" xml:space="preserve">
+          <source>Scizor has a body with the hardness of steel. It is not easily fazed by ordinary sorts of attacks. This Pokémon flaps its wings to regulate its body temperature.</source>
+          <target state="new">Scizor has a body with the hardness of steel. It is not easily fazed by ordinary sorts of attacks. This Pokémon flaps its wings to regulate its body temperature.</target>
+        </trans-unit>
+        <trans-unit id="Shuckle.Description" translate="yes" xml:space="preserve">
+          <source>Shuckle quietly hides itself under rocks, keeping its body concealed inside its hard shell while eating berries it has stored away. The berries mix with its body fluids to become a juice.</source>
+          <target state="new">Shuckle quietly hides itself under rocks, keeping its body concealed inside its hard shell while eating berries it has stored away. The berries mix with its body fluids to become a juice.</target>
+        </trans-unit>
+        <trans-unit id="Skarmory.Description" translate="yes" xml:space="preserve">
+          <source>Skarmory is entirely encased in hard, protective armor. This Pokémon flies at close to 190 mph. It slashes foes with its wings that possess swordlike cutting edges.</source>
+          <target state="new">Skarmory is entirely encased in hard, protective armor. This Pokémon flies at close to 190 mph. It slashes foes with its wings that possess swordlike cutting edges.</target>
+        </trans-unit>
+        <trans-unit id="Slugma.Description" translate="yes" xml:space="preserve">
+          <source>Molten magma courses throughout Slugma’s circulatory system. If this Pokémon is chilled, the magma cools and hardens. Its body turns brittle and chunks fall off, reducing its size.</source>
+          <target state="new">Molten magma courses throughout Slugma’s circulatory system. If this Pokémon is chilled, the magma cools and hardens. Its body turns brittle and chunks fall off, reducing its size.</target>
+        </trans-unit>
+        <trans-unit id="Smeargle.Description" translate="yes" xml:space="preserve">
+          <source>Smeargle marks the boundaries of its territory using a body fluid that leaks out from the tip of its tail. Over 5,000 different marks left by this Pokémon have been found.</source>
+          <target state="new">Smeargle marks the boundaries of its territory using a body fluid that leaks out from the tip of its tail. Over 5,000 different marks left by this Pokémon have been found.</target>
+        </trans-unit>
+        <trans-unit id="Smoochum.Description" translate="yes" xml:space="preserve">
+          <source>Smoochum actively runs about, but also falls quite often. Whenever the chance arrives, it will look for its reflection to make sure its face hasn’t become dirty.</source>
+          <target state="new">Smoochum actively runs about, but also falls quite often. Whenever the chance arrives, it will look for its reflection to make sure its face hasn’t become dirty.</target>
+        </trans-unit>
+        <trans-unit id="Sneasel.Description" translate="yes" xml:space="preserve">
+          <source>Sneasel scales trees by punching its hooked claws into the bark. This Pokémon seeks out unguarded nests and steals eggs for food while the parents are away.</source>
+          <target state="new">Sneasel scales trees by punching its hooked claws into the bark. This Pokémon seeks out unguarded nests and steals eggs for food while the parents are away.</target>
+        </trans-unit>
+        <trans-unit id="Snubbull.Description" translate="yes" xml:space="preserve">
+          <source>By baring its fangs and making a scary face, Snubbull sends smaller Pokémon scurrying away in terror. However, this Pokémon seems a little sad at making its foes flee.</source>
+          <target state="new">By baring its fangs and making a scary face, Snubbull sends smaller Pokémon scurrying away in terror. However, this Pokémon seems a little sad at making its foes flee.</target>
+        </trans-unit>
+        <trans-unit id="Stantler.Description" translate="yes" xml:space="preserve">
+          <source>Stantler’s magnificent antlers were traded at high prices as works of art. As a result, this Pokémon was hunted close to extinction by those who were after the priceless antlers.</source>
+          <target state="new">Stantler’s magnificent antlers were traded at high prices as works of art. As a result, this Pokémon was hunted close to extinction by those who were after the priceless antlers.</target>
+        </trans-unit>
+        <trans-unit id="Steelix.Description" translate="yes" xml:space="preserve">
+          <source>Steelix lives even further underground than Onix. This Pokémon is known to dig toward the earth’s core. There are records of this Pokémon reaching a depth of over six-tenths of a mile underground.</source>
+          <target state="new">Steelix lives even further underground than Onix. This Pokémon is known to dig toward the earth’s core. There are records of this Pokémon reaching a depth of over six-tenths of a mile underground.</target>
+        </trans-unit>
+        <trans-unit id="Suicune.Description" translate="yes" xml:space="preserve">
+          <source>Suicune embodies the compassion of a pure spring of water. It runs across the land with gracefulness. This Pokémon has the power to purify dirty water.</source>
+          <target state="new">Suicune embodies the compassion of a pure spring of water. It runs across the land with gracefulness. This Pokémon has the power to purify dirty water.</target>
+        </trans-unit>
+        <trans-unit id="Swinub.Description" translate="yes" xml:space="preserve">
+          <source>Swinub roots for food by rubbing its snout against the ground. Its favorite food is a mushroom that grows under the cover of dead grass. This Pokémon occasionally roots out hot springs.</source>
+          <target state="new">Swinub roots for food by rubbing its snout against the ground. Its favorite food is a mushroom that grows under the cover of dead grass. This Pokémon occasionally roots out hot springs.</target>
+        </trans-unit>
+        <trans-unit id="Teddiursa.Description" translate="yes" xml:space="preserve">
+          <source>This Pokémon likes to lick its palms that are sweetened by being soaked in honey. Teddiursa concocts its own honey by blending fruits and pollen collected by Beedrill.</source>
+          <target state="new">This Pokémon likes to lick its palms that are sweetened by being soaked in honey. Teddiursa concocts its own honey by blending fruits and pollen collected by Beedrill.</target>
+        </trans-unit>
+        <trans-unit id="Tyranitar.Description" translate="yes" xml:space="preserve">
+          <source>Tyranitar is so overwhelmingly powerful, it can bring down a whole mountain to make its nest. This Pokémon wanders about in mountains seeking new opponents to fight.</source>
+          <target state="new">Tyranitar is so overwhelmingly powerful, it can bring down a whole mountain to make its nest. This Pokémon wanders about in mountains seeking new opponents to fight.</target>
+        </trans-unit>
+        <trans-unit id="Tyrogue.Description" translate="yes" xml:space="preserve">
+          <source>Tyrogue becomes stressed out if it does not get to train every day. When raising this Pokémon, the Trainer must establish and uphold various training methods.</source>
+          <target state="new">Tyrogue becomes stressed out if it does not get to train every day. When raising this Pokémon, the Trainer must establish and uphold various training methods.</target>
+        </trans-unit>
+        <trans-unit id="Ursaring.Description" translate="yes" xml:space="preserve">
+          <source>In the forests inhabited by Ursaring, it is said that there are many streams and towering trees where they gather food. This Pokémon walks through its forest gathering food every day.</source>
+          <target state="new">In the forests inhabited by Ursaring, it is said that there are many streams and towering trees where they gather food. This Pokémon walks through its forest gathering food every day.</target>
         </trans-unit>
       </group>
     </body>

@@ -111,7 +111,8 @@ namespace PokemonGo_UWP.Utils
             public bool Cycling => LocationServiceHelper.Instance.Geoposition?.Coordinate?.Speed > 3.33333;
             public bool Running => false;
             public bool Stationary => LocationServiceHelper.Instance.Geoposition?.Coordinate?.Speed < 0.2;
-            public bool Tilting => Utilities.Rand.NextBoolean();
+            //public bool Tilting => Utilities.Rand.NextBoolean();
+            public bool Tilting => false;
             public bool Walking => false;
 
             //#region Private Members

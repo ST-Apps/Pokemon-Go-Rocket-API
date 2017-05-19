@@ -25,14 +25,17 @@ namespace POGOProtos.Networking.Responses {
             "CjtQT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVzcG9uc2VzL0dldE1hcE9iamVj",
             "dHNSZXNwb25zZS5wcm90bxIfUE9HT1Byb3Rvcy5OZXR3b3JraW5nLlJlc3Bv",
             "bnNlcxocUE9HT1Byb3Rvcy9NYXAvTWFwQ2VsbC5wcm90bxolUE9HT1Byb3Rv",
-            "cy9NYXAvTWFwT2JqZWN0c1N0YXR1cy5wcm90byJ1ChVHZXRNYXBPYmplY3Rz",
-            "UmVzcG9uc2USKgoJbWFwX2NlbGxzGAEgAygLMhcuUE9HT1Byb3Rvcy5NYXAu",
-            "TWFwQ2VsbBIwCgZzdGF0dXMYAiABKA4yIC5QT0dPUHJvdG9zLk1hcC5NYXBP",
-            "YmplY3RzU3RhdHVzYgZwcm90bzM="));
+            "cy9NYXAvTWFwT2JqZWN0c1N0YXR1cy5wcm90byL3AQoVR2V0TWFwT2JqZWN0",
+            "c1Jlc3BvbnNlEioKCW1hcF9jZWxscxgBIAMoCzIXLlBPR09Qcm90b3MuTWFw",
+            "Lk1hcENlbGwSMAoGc3RhdHVzGAIgASgOMiAuUE9HT1Byb3Rvcy5NYXAuTWFw",
+            "T2JqZWN0c1N0YXR1cxJVCgt0aW1lX29mX2RheRgDIAEoDjJALlBPR09Qcm90",
+            "b3MuTmV0d29ya2luZy5SZXNwb25zZXMuR2V0TWFwT2JqZWN0c1Jlc3BvbnNl",
+            "LlRpbWVPZkRheSIpCglUaW1lT2ZEYXkSCAoETk9ORRAAEgcKA0RBWRABEgkK",
+            "BU5JR0hUEAJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Map.MapCellReflection.Descriptor, global::POGOProtos.Map.MapObjectsStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Responses.GetMapObjectsResponse), global::POGOProtos.Networking.Responses.GetMapObjectsResponse.Parser, new[]{ "MapCells", "Status" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Responses.GetMapObjectsResponse), global::POGOProtos.Networking.Responses.GetMapObjectsResponse.Parser, new[]{ "MapCells", "Status", "TimeOfDay" }, null, new[]{ typeof(global::POGOProtos.Networking.Responses.GetMapObjectsResponse.Types.TimeOfDay) }, null)
           }));
     }
     #endregion
@@ -65,6 +68,7 @@ namespace POGOProtos.Networking.Responses {
     public GetMapObjectsResponse(GetMapObjectsResponse other) : this() {
       mapCells_ = other.mapCells_.Clone();
       status_ = other.status_;
+      timeOfDay_ = other.timeOfDay_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -93,6 +97,17 @@ namespace POGOProtos.Networking.Responses {
       }
     }
 
+    /// <summary>Field number for the "time_of_day" field.</summary>
+    public const int TimeOfDayFieldNumber = 3;
+    private global::POGOProtos.Networking.Responses.GetMapObjectsResponse.Types.TimeOfDay timeOfDay_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::POGOProtos.Networking.Responses.GetMapObjectsResponse.Types.TimeOfDay TimeOfDay {
+      get { return timeOfDay_; }
+      set {
+        timeOfDay_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetMapObjectsResponse);
@@ -108,6 +123,7 @@ namespace POGOProtos.Networking.Responses {
       }
       if(!mapCells_.Equals(other.mapCells_)) return false;
       if (Status != other.Status) return false;
+      if (TimeOfDay != other.TimeOfDay) return false;
       return true;
     }
 
@@ -116,6 +132,7 @@ namespace POGOProtos.Networking.Responses {
       int hash = 1;
       hash ^= mapCells_.GetHashCode();
       if (Status != 0) hash ^= Status.GetHashCode();
+      if (TimeOfDay != 0) hash ^= TimeOfDay.GetHashCode();
       return hash;
     }
 
@@ -131,6 +148,10 @@ namespace POGOProtos.Networking.Responses {
         output.WriteRawTag(16);
         output.WriteEnum((int) Status);
       }
+      if (TimeOfDay != 0) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) TimeOfDay);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -139,6 +160,9 @@ namespace POGOProtos.Networking.Responses {
       size += mapCells_.CalculateSize(_repeated_mapCells_codec);
       if (Status != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      if (TimeOfDay != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TimeOfDay);
       }
       return size;
     }
@@ -151,6 +175,9 @@ namespace POGOProtos.Networking.Responses {
       mapCells_.Add(other.mapCells_);
       if (other.Status != 0) {
         Status = other.Status;
+      }
+      if (other.TimeOfDay != 0) {
+        TimeOfDay = other.TimeOfDay;
       }
     }
 
@@ -170,9 +197,26 @@ namespace POGOProtos.Networking.Responses {
             status_ = (global::POGOProtos.Map.MapObjectsStatus) input.ReadEnum();
             break;
           }
+          case 24: {
+            timeOfDay_ = (global::POGOProtos.Networking.Responses.GetMapObjectsResponse.Types.TimeOfDay) input.ReadEnum();
+            break;
+          }
         }
       }
     }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the GetMapObjectsResponse message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum TimeOfDay {
+        [pbr::OriginalName("NONE")] None = 0,
+        [pbr::OriginalName("DAY")] Day = 1,
+        [pbr::OriginalName("NIGHT")] Night = 2,
+      }
+
+    }
+    #endregion
 
   }
 

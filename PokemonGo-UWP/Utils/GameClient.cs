@@ -39,6 +39,7 @@ using System.Collections.Specialized;
 using Windows.UI.Popups;
 using System.ComponentModel;
 using PokemonGo_UWP.Views;
+using POGOLib.Official.Util.Hash;
 
 namespace PokemonGo_UWP.Utils
 {
@@ -361,6 +362,23 @@ namespace PokemonGo_UWP.Utils
             // TODO: Investigate whether or not this needs to be unsubscribed when the app closes.
         }
 
+        public static void SetCredentialsFromSettings()
+        {
+            var credentials = SettingsService.Instance.UserCredentials;
+            if (credentials != null)
+            {
+                credentials.RetrievePassword();
+                _clientSettings = new Settings()
+                {
+                    AuthType = SettingsService.Instance.LastLoginService,
+                    PtcUsername = SettingsService.Instance.LastLoginService == AuthType.Ptc ? credentials.UserName : null,
+                    PtcPassword = SettingsService.Instance.LastLoginService == AuthType.Ptc ? credentials.Password : null,
+                    GoogleUsername = SettingsService.Instance.LastLoginService == AuthType.Google ? credentials.UserName : null,
+                    GooglePassword = SettingsService.Instance.LastLoginService == AuthType.Google ? credentials.Password : null,
+                };
+            }
+        }
+
         /// <summary>
         /// When new items are added to the Pokedex, reset the Nearby Pokemon so their state can be re-run.
         /// </summary>
@@ -391,6 +409,7 @@ namespace PokemonGo_UWP.Utils
                 OnAppliedItemExpired?.Invoke(null, (AppliedItemWrapper)e.OldItems[0]);
             }
         }
+
 
         #endregion
 
@@ -428,7 +447,7 @@ namespace PokemonGo_UWP.Utils
                 _client.CheckChallengeReceived -= _client_CheckChallengeReceived;
             }
 
-            _client = new Client(_clientSettings, null, DeviceInfos.Current);
+            _client = new Client(SettingsService.Instance.PokehashAuthKey, _clientSettings, null, DeviceInfos.Current);
 
             //Register EventHandlers
             _client.CheckChallengeReceived += _client_CheckChallengeReceived;
@@ -612,7 +631,6 @@ namespace PokemonGo_UWP.Utils
             #endregion
             Busy.SetBusy(true, Resources.CodeResources.GetString("GettingGpsSignalText"));
             await LocationServiceHelper.Instance.InitializeAsync();
-            LocationServiceHelper.Instance.PropertyChanged += LocationHelperPropertyChanged;
             // Before starting we need game settings
             GameSetting =
                 await
@@ -620,6 +638,7 @@ namespace PokemonGo_UWP.Utils
                         DateTime.Now.AddMonths(1));
             // Update geolocator settings based on server
             LocationServiceHelper.Instance.UpdateMovementThreshold(GameSetting.MapSettings.GetMapObjectsMinDistanceMeters);
+            LocationServiceHelper.Instance.PropertyChanged += LocationHelperPropertyChanged;
             if (_heartbeat == null)
                 _heartbeat = new Heartbeat();
             await _heartbeat.StartDispatcher();
@@ -655,16 +674,25 @@ namespace PokemonGo_UWP.Utils
             }
 
         }
+
         private static async void LocationHelperPropertyChanged(object sender, PropertyChangedEventArgs e)
 		{
 			if(e.PropertyName==nameof(LocationServiceHelper.Instance.Geoposition))
 			{
-				// Updating player's position
-				var position = LocationServiceHelper.Instance.Geoposition.Coordinate.Point.Position;
-				if (_client != null)
-					await _client.Player.UpdatePlayerLocation(position.Latitude, position.Longitude, LocationServiceHelper.Instance.Geoposition.Coordinate.Accuracy);
+                if (_lastPlayerLocationUpdate == null || _lastPlayerLocationUpdate.AddSeconds((int)GameClient.GameSetting.MapSettings.GetMapObjectsMinRefreshSeconds) < DateTime.Now)
+                {
+                    // Updating player's position
+                    var position = LocationServiceHelper.Instance.Geoposition.Coordinate.Point.Position;
+                    if (_client != null)
+                    {
+                        _lastPlayerLocationUpdate = DateTime.Now;
+                        await _client.Player.UpdatePlayerLocation(position.Latitude, position.Longitude, LocationServiceHelper.Instance.Geoposition.Coordinate.Accuracy);
+                    }
+                }
 			}
 		}
+
+        private static DateTime _lastPlayerLocationUpdate;
 
         /// <summary>
         ///     DateTime for the last map update
@@ -745,7 +773,21 @@ namespace PokemonGo_UWP.Utils
                 }
             }
             Logger.Write("Finished updating map objects");
-            
+
+            // Update BuddyPokemon Stats
+            //if (GameClient.PlayerProfile.BuddyPokemon.Id != 0)
+            //if (true)
+            //{
+                var buddyWalkedResponse = await GetBuddyWalked();
+                if (buddyWalkedResponse.Success)
+                {
+                    Logger.Write($"BuddyWalked CandyID: {buddyWalkedResponse.FamilyCandyId}, CandyCount: {buddyWalkedResponse.CandyEarnedCount}");
+                };
+            //}
+
+            // Update TimeOfDay
+            //var ToD = mapObjects.Item1.Types.TimeOfDay.
+
             // Update Hatched Eggs
             var hatchedEggResponse = mapObjects.Item3;
             if (hatchedEggResponse.Success)
@@ -1005,6 +1047,11 @@ namespace PokemonGo_UWP.Utils
 
         }
 
+        public static async Task<GetBuddyWalkedResponse> GetBuddyWalked()
+        {
+            return await _client.Player.GetBuddyWalked();
+        }
+
         #endregion
 
         #region Pokemon Handling
@@ -1134,6 +1181,11 @@ namespace PokemonGo_UWP.Utils
             // Cast ulong to long... because Niantic is a bunch of retarded idiots...
             long pokeId = (long)pokemonId;
             return await _client.Inventory.SetFavoritePokemon(pokeId, isFavorite);
+        }
+
+        public static async Task<SetBuddyPokemonResponse> SetBuddyPokemon(ulong id)
+        {
+            return await _client.Player.SetBuddyPokemon(id);
         }
 
         public static async Task<NicknamePokemonResponse> SetPokemonNickName(ulong pokemonId, string nickName)

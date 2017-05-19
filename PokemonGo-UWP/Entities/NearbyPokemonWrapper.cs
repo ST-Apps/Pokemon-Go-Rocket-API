@@ -36,15 +36,17 @@ namespace PokemonGo_UWP.Entities
             OnPropertyChanged(nameof(PokemonId));
             OnPropertyChanged(nameof(DistanceInMeters));
             OnPropertyChanged(nameof(EncounterId));
+            OnPropertyChanged(nameof(FortId));
+            OnPropertyChanged(nameof(FortImageUrl));
         }
 
         #region Wrapped Properties
 
         public PokemonId PokemonId => _nearbyPokemon.PokemonId;
-
         public float DistanceInMeters => _nearbyPokemon.DistanceInMeters;
-
         public ulong EncounterId => _nearbyPokemon.EncounterId;
+        public string FortId => _nearbyPokemon.FortId;
+        public string FortImageUrl => _nearbyPokemon.FortImageUrl;
 
         #endregion
 

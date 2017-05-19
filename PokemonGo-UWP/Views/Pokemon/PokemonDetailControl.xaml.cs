@@ -55,6 +55,10 @@ namespace PokemonGo_UWP.Views
             DependencyProperty.Register(nameof(EvolvePokemonCommand), typeof(DelegateCommand), typeof(PokemonDetailControl),
                 new PropertyMetadata(null));
 
+        public static readonly DependencyProperty BuddyPokemonCommandProperty =
+            DependencyProperty.Register(nameof(BuddyPokemonCommand), typeof(DelegateCommand), typeof(PokemonDetailControl),
+                new PropertyMetadata(null));
+
         public static readonly DependencyProperty StardustAmountProperty =
             DependencyProperty.Register(nameof(StardustAmount), typeof(int), typeof(PokemonDetailControl),
                 new PropertyMetadata(0));
@@ -85,6 +89,12 @@ namespace PokemonGo_UWP.Views
         {
             get { return (DelegateCommand)GetValue(EvolvePokemonCommandProperty); }
             set { SetValue(EvolvePokemonCommandProperty, value); }
+        }
+
+        public DelegateCommand BuddyPokemonCommand
+        {
+            get { return (DelegateCommand)GetValue(BuddyPokemonCommandProperty); }
+            set { SetValue(BuddyPokemonCommandProperty, value); }
         }
 
         public int StardustAmount

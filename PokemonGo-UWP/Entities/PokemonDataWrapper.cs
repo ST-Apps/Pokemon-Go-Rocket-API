@@ -95,9 +95,15 @@ namespace PokemonGo_UWP.Entities
 
         public float AdditionalCpMultiplier => WrappedData.AdditionalCpMultiplier;
 
-        // Stubb Var
-        public bool IsBuddy = false;
+        public int BuddyCandyAwarded => WrappedData.BuddyCandyAwarded;
 
+        public float BuddyTotalKmWalked => WrappedData.BuddyTotalKmWalked;
+
+        // Stubb Var
+        public bool IsBuddy
+        {
+            get { return (GameClient.PlayerProfile.BuddyPokemon.Id == WrappedData.Id); }
+        }
         public bool IsDeployed { get { return !string.IsNullOrEmpty(DeployedFortId) || IsBuddy; } }
 
         public int Favorite

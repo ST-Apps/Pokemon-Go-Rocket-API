@@ -130,29 +130,40 @@
             <!--Template-->
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="entities:PokemonDataWrapper">
-                    <Grid Height="115">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
+                <Grid Height="115">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
 
-                        <Image Grid.Row="0"
+                    <Image Grid.Row="0"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Bottom"
                                Source="{x:Bind Converter={StaticResource EggDataToEggIconConverter}}"
                                x:Phase="2" />
-                        <!--Formatting must be on one line to prevent blanks-->
-                        <TextBlock Grid.Row="2"
+                    <!--Formatting must be on one line to prevent blanks-->
+                    <TextBlock Grid.Row="2"
                                    HorizontalAlignment="Center"
                                    FontFamily="{StaticResource LatoBoldFont}"
-                                   FontSize="15"
-                                   Foreground="{StaticResource TitleTextColor}"><Run Text="{x:Bind EggKmWalkedStart, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0.0\}}" /><Run Text="/" /><Run Text="{x:Bind EggKmWalkedTarget, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0.0\}}" />
-                            <Run FontFamily="{StaticResource LatoMediumFont}"
-                                 FontSize="11"
-                                 Foreground="{StaticResource GrayTextColor}"
-                                 Text="km" />
-                        </TextBlock>
+                                   FontSize="14"
+                                   Foreground="{StaticResource TitleTextColor}">
+                                   <Run Text="{x:Bind Converter={StaticResource EggDataToEggKmWalkedConverter}}" />
+                                   <Run Text="/" />
+                                   <Run Text="{x:Bind EggKmWalkedTarget, Converter={StaticResource StringFormatConverter}, ConverterParameter=\{0:0.0\}}" />
+                                   <Run FontFamily="{StaticResource LatoMediumFont}"
+                                        FontSize="10"
+                                        Foreground="{StaticResource GrayTextColor}"
+                                        Text="km" />
+                    </TextBlock>
+                        <TextBlock Grid.Row="3"
+                               Margin="0,4" 
+                               HorizontalAlignment="Center"
+                               FontFamily="{StaticResource LatoMediumFont}"
+                               FontSize="10"
+                               Foreground="{StaticResource TitleTextColor}"
+                               Text="{Binding CreationTimeMs, Converter={StaticResource MsToDateFormatConverter}}" />
                         <ProgressBar Grid.Row="1"
                                      Value="{x:Bind Converter={StaticResource EggDataToEggProgressConverter}}"
                                      Margin="15,4"
@@ -162,7 +173,7 @@
                                      IsIndeterminate="False"
                                      HorizontalAlignment="Stretch"
                                      x:Phase="1" />
-                    </Grid>
+                </Grid>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>

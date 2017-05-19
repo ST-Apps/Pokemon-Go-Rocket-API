@@ -344,6 +344,31 @@
                            Width="25"
                            Source="ms-appx:///Assets/Icons/ic_fav.png" />
                 </Grid>
+                <!--Buddy-->
+                <Grid HorizontalAlignment="Right"
+                      Background="Transparent"
+                      Height="43">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="82" />
+                    </Grid.ColumnDefinitions>
+                    <interactivity:Interaction.Behaviors>
+                        <core:EventTriggerBehavior EventName="Tapped">
+                            <media:ControlStoryboardAction Storyboard="{StaticResource HideContextMenuStoryboard}" />
+                            <core:InvokeCommandAction Command="{Binding BuddyPokemonCommand}" />
+                        </core:EventTriggerBehavior>
+                    </interactivity:Interaction.Behaviors>
+                    <TextBlock Grid.Column="0"
+                               x:Uid="BuddyTextBlock"
+                               Text="BUDDY"
+                               Style="{StaticResource TextSortTitle}"
+                               Foreground="#e4ffde"
+                               Margin="15,0,0,0" />
+                    <Image Grid.Column="1"
+                           Height="25"
+                           Width="25"
+                           Source="ms-appx:///Assets/Icons/ic_buddy_light.png" />
+                </Grid>
 
                 <!--Appraise-->
                 <Grid HorizontalAlignment="Right"
@@ -456,6 +481,7 @@
                                                 RenamePokemonCommand="{Binding ElementName=Root, Path=DataContext.RenamePokemonCommand}"
                                                 PowerUpPokemonCommand="{Binding ElementName=Root, Path=DataContext.PowerUpPokemonCommand}"
                                                 EvolvePokemonCommand="{Binding ElementName=Root, Path=DataContext.EvolvePokemonCommand}"
+                                                BuddyPokemonCommand="{Binding ElementName=Root, Path=DataContext.BuddyPokemonCommand}"
                                                 StardustAmount="{Binding ElementName=Root, Path=DataContext.StardustAmount}" />
                 </DataTemplate>
             </FlipView.ItemTemplate>

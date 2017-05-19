@@ -40,6 +40,7 @@ namespace PokemonGo_UWP.Controls
         {
             if (sender == null) return;
             CircularProgressBar circularProgressBar = sender as CircularProgressBar;
+            if (circularProgressBar == null || circularProgressBar.ImageSourcePath == null) return;
             BitmapImage fillImg = (circularProgressBar.ImageSourcePath != null) ?new BitmapImage(circularProgressBar.ImageSourcePath) : new BitmapImage();
             circularProgressBar.InnerPathRoot.Fill = new ImageBrush { ImageSource = fillImg };
         }

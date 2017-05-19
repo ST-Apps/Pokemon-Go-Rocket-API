@@ -23,7 +23,7 @@ namespace POGOProtos.Inventory.Item {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZQT0dPUHJvdG9zL0ludmVudG9yeS9JdGVtL0l0ZW1JZC5wcm90bxIZUE9H",
-            "T1Byb3Rvcy5JbnZlbnRvcnkuSXRlbSrHBQoGSXRlbUlkEhAKDElURU1fVU5L",
+            "T1Byb3Rvcy5JbnZlbnRvcnkuSXRlbSq0BgoGSXRlbUlkEhAKDElURU1fVU5L",
             "Tk9XThAAEhIKDklURU1fUE9LRV9CQUxMEAESEwoPSVRFTV9HUkVBVF9CQUxM",
             "EAISEwoPSVRFTV9VTFRSQV9CQUxMEAMSFAoQSVRFTV9NQVNURVJfQkFMTBAE",
             "Eg8KC0lURU1fUE9USU9OEGUSFQoRSVRFTV9TVVBFUl9QT1RJT04QZhIVChFJ",
@@ -39,7 +39,9 @@ namespace POGOProtos.Inventory.Item {
             "RU1fU1BFQ0lBTF9DQU1FUkEQoQYSIwoeSVRFTV9JTkNVQkFUT1JfQkFTSUNf",
             "VU5MSU1JVEVEEIUHEhkKFElURU1fSU5DVUJBVE9SX0JBU0lDEIYHEiEKHElU",
             "RU1fUE9LRU1PTl9TVE9SQUdFX1VQR1JBREUQ6QcSHgoZSVRFTV9JVEVNX1NU",
-            "T1JBR0VfVVBHUkFERRDqB2IGcHJvdG8z"));
+            "T1JBR0VfVVBHUkFERRDqBxITCg5JVEVNX1NVTl9TVE9ORRDNCBIUCg9JVEVN",
+            "X0tJTkdTX1JPQ0sQzggSFAoPSVRFTV9NRVRBTF9DT0FUEM8IEhYKEUlURU1f",
+            "RFJBR09OX1NDQUxFENAIEhIKDUlURU1fVVBfR1JBREUQ0QhiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::POGOProtos.Inventory.Item.ItemId), }, null));
@@ -79,6 +81,11 @@ namespace POGOProtos.Inventory.Item {
     [pbr::OriginalName("ITEM_INCUBATOR_BASIC")] ItemIncubatorBasic = 902,
     [pbr::OriginalName("ITEM_POKEMON_STORAGE_UPGRADE")] ItemPokemonStorageUpgrade = 1001,
     [pbr::OriginalName("ITEM_ITEM_STORAGE_UPGRADE")] ItemItemStorageUpgrade = 1002,
+    [pbr::OriginalName("ITEM_SUN_STONE")] ItemSunStone = 1101,
+    [pbr::OriginalName("ITEM_KINGS_ROCK")] ItemKingsRock = 1102,
+    [pbr::OriginalName("ITEM_METAL_COAT")] ItemMetalCoat = 1103,
+    [pbr::OriginalName("ITEM_DRAGON_SCALE")] ItemDragonScale = 1104,
+    [pbr::OriginalName("ITEM_UP_GRADE")] ItemUpGrade = 1105,
   }
 
   #endregion

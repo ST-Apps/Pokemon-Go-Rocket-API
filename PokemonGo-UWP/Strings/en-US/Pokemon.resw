@@ -123,8 +123,14 @@
   <data name="Aerodactyl" xml:space="preserve">
     <value>Aerodactyl</value>
   </data>
+  <data name="Aipom" xml:space="preserve">
+    <value>Aipom</value>
+  </data>
   <data name="Alakazam" xml:space="preserve">
     <value>Alakazam</value>
+  </data>
+  <data name="Ampharos" xml:space="preserve">
+    <value>Ampharos</value>
   </data>
   <data name="Arbok" xml:space="preserve">
     <value>Arbok</value>
@@ -132,17 +138,32 @@
   <data name="Arcanine" xml:space="preserve">
     <value>Arcanine</value>
   </data>
+  <data name="Ariados" xml:space="preserve">
+    <value>Ariados</value>
+  </data>
   <data name="Articuno" xml:space="preserve">
     <value>Articuno</value>
   </data>
+  <data name="Azumarill" xml:space="preserve">
+    <value>Azumarill</value>
+  </data>
+  <data name="Bayleef" xml:space="preserve">
+    <value>Bayleef</value>
+  </data>
   <data name="Beedrill" xml:space="preserve">
     <value>Beedrill</value>
+  </data>
+  <data name="Bellossom" xml:space="preserve">
+    <value>Bellossom</value>
   </data>
   <data name="Bellsprout" xml:space="preserve">
     <value>Bellsprout</value>
   </data>
   <data name="Blastoise" xml:space="preserve">
     <value>Blastoise</value>
+  </data>
+  <data name="Blissey" xml:space="preserve">
+    <value>Blissey</value>
   </data>
   <data name="Bulbasaur" xml:space="preserve">
     <value>Bulbasaur</value>
@@ -152,6 +173,9 @@
   </data>
   <data name="Caterpie" xml:space="preserve">
     <value>Caterpie</value>
+  </data>
+  <data name="Celebi" xml:space="preserve">
+    <value>Celebi</value>
   </data>
   <data name="Chansey" xml:space="preserve">
     <value>Chansey</value>
@@ -165,17 +189,41 @@
   <data name="Charmeleon" xml:space="preserve">
     <value>Charmeleon</value>
   </data>
+  <data name="Chikorita" xml:space="preserve">
+    <value>Chikorita</value>
+  </data>
+  <data name="Chinchou" xml:space="preserve">
+    <value>Chinchou</value>
+  </data>
   <data name="Clefable" xml:space="preserve">
     <value>Clefable</value>
   </data>
   <data name="Clefairy" xml:space="preserve">
     <value>Clefairy</value>
   </data>
+  <data name="Cleffa" xml:space="preserve">
+    <value>Cleffa</value>
+  </data>
   <data name="Cloyster" xml:space="preserve">
     <value>Cloyster</value>
   </data>
+  <data name="Corsola" xml:space="preserve">
+    <value>Corsola</value>
+  </data>
+  <data name="Crobat" xml:space="preserve">
+    <value>Crobat</value>
+  </data>
+  <data name="Croconaw" xml:space="preserve">
+    <value>Croconaw</value>
+  </data>
   <data name="Cubone" xml:space="preserve">
     <value>Cubone</value>
+  </data>
+  <data name="Cyndaquil" xml:space="preserve">
+    <value>Cyndaquil</value>
+  </data>
+  <data name="Delibird" xml:space="preserve">
+    <value>Delibird</value>
   </data>
   <data name="Dewgong" xml:space="preserve">
     <value>Dewgong</value>
@@ -192,6 +240,9 @@
   <data name="Doduo" xml:space="preserve">
     <value>Doduo</value>
   </data>
+  <data name="Donphan" xml:space="preserve">
+    <value>Donphan</value>
+  </data>
   <data name="Dragonair" xml:space="preserve">
     <value>Dragonair</value>
   </data>
@@ -207,6 +258,9 @@
   <data name="Dugtrio" xml:space="preserve">
     <value>Dugtrio</value>
   </data>
+  <data name="Dunsparce" xml:space="preserve">
+    <value>Dunsparce</value>
+  </data>
   <data name="Eevee" xml:space="preserve">
     <value>Eevee</value>
   </data>
@@ -218,6 +272,15 @@
   </data>
   <data name="Electrode" xml:space="preserve">
     <value>Electrode</value>
+  </data>
+  <data name="Elekid" xml:space="preserve">
+    <value>Elekid</value>
+  </data>
+  <data name="Entei" xml:space="preserve">
+    <value>Entei</value>
+  </data>
+  <data name="Espeon" xml:space="preserve">
+    <value>Espeon</value>
   </data>
   <data name="Exeggcute" xml:space="preserve">
     <value>Exeggcute</value>
@@ -231,8 +294,20 @@
   <data name="Fearow" xml:space="preserve">
     <value>Fearow</value>
   </data>
+  <data name="Feraligatr" xml:space="preserve">
+    <value>Feraligatr</value>
+  </data>
+  <data name="Flaaffy" xml:space="preserve">
+    <value>Flaaffy</value>
+  </data>
   <data name="Flareon" xml:space="preserve">
     <value>Flareon</value>
+  </data>
+  <data name="Forretress" xml:space="preserve">
+    <value>Forretress</value>
+  </data>
+  <data name="Furret" xml:space="preserve">
+    <value>Furret</value>
   </data>
   <data name="Gastly" xml:space="preserve">
     <value>Gastly</value>
@@ -242,6 +317,12 @@
   </data>
   <data name="Geodude" xml:space="preserve">
     <value>Geodude</value>
+  </data>
+  <data name="Girafarig" xml:space="preserve">
+    <value>Girafarig</value>
+  </data>
+  <data name="Gligar" xml:space="preserve">
+    <value>Gligar</value>
   </data>
   <data name="Gloom" xml:space="preserve">
     <value>Gloom</value>
@@ -258,6 +339,9 @@
   <data name="Golem" xml:space="preserve">
     <value>Golem</value>
   </data>
+  <data name="Granbull" xml:space="preserve">
+    <value>Granbull</value>
+  </data>
   <data name="Graveler" xml:space="preserve">
     <value>Graveler</value>
   </data>
@@ -273,17 +357,41 @@
   <data name="Haunter" xml:space="preserve">
     <value>Haunter</value>
   </data>
+  <data name="Heracross" xml:space="preserve">
+    <value>Heracross</value>
+  </data>
   <data name="Hitmonchan" xml:space="preserve">
     <value>Hitmonchan</value>
   </data>
   <data name="Hitmonlee" xml:space="preserve">
     <value>Hitmonlee</value>
   </data>
+  <data name="Hitmontop" xml:space="preserve">
+    <value>Hitmontop</value>
+  </data>
+  <data name="HoOh" xml:space="preserve">
+    <value>Ho-oh</value>
+  </data>
+  <data name="Hoothoot" xml:space="preserve">
+    <value>Hoothoot</value>
+  </data>
+  <data name="Hoppip" xml:space="preserve">
+    <value>Hoppip</value>
+  </data>
   <data name="Horsea" xml:space="preserve">
     <value>Horsea</value>
   </data>
+  <data name="Houndoom" xml:space="preserve">
+    <value>Houndoom</value>
+  </data>
+  <data name="Houndour" xml:space="preserve">
+    <value>Houndour</value>
+  </data>
   <data name="Hypno" xml:space="preserve">
     <value>Hypno</value>
+  </data>
+  <data name="Igglybuff" xml:space="preserve">
+    <value>Igglybuff</value>
   </data>
   <data name="Ivysaur" xml:space="preserve">
     <value>Ivysaur</value>
@@ -293,6 +401,9 @@
   </data>
   <data name="Jolteon" xml:space="preserve">
     <value>Jolteon</value>
+  </data>
+  <data name="Jumpluff" xml:space="preserve">
+    <value>Jumpluff</value>
   </data>
   <data name="Jynx" xml:space="preserve">
     <value>Jynx</value>
@@ -312,6 +423,9 @@
   <data name="Kangaskhan" xml:space="preserve">
     <value>Kangaskhan</value>
   </data>
+  <data name="Kingdra" xml:space="preserve">
+    <value>Kingdra</value>
+  </data>
   <data name="Kingler" xml:space="preserve">
     <value>Kingler</value>
   </data>
@@ -321,11 +435,26 @@
   <data name="Krabby" xml:space="preserve">
     <value>Krabby</value>
   </data>
+  <data name="Lanturn" xml:space="preserve">
+    <value>Lanturn</value>
+  </data>
   <data name="Lapras" xml:space="preserve">
     <value>Lapras</value>
   </data>
+  <data name="Larvitar" xml:space="preserve">
+    <value>Larvitar</value>
+  </data>
+  <data name="Ledian" xml:space="preserve">
+    <value>Ledian</value>
+  </data>
+  <data name="Ledyba" xml:space="preserve">
+    <value>Ledyba</value>
+  </data>
   <data name="Lickitung" xml:space="preserve">
     <value>Lickitung</value>
+  </data>
+  <data name="Lugia" xml:space="preserve">
+    <value>Lugia</value>
   </data>
   <data name="Machamp" xml:space="preserve">
     <value>Machamp</value>
@@ -335,6 +464,12 @@
   </data>
   <data name="Machop" xml:space="preserve">
     <value>Machop</value>
+  </data>
+  <data name="Magby" xml:space="preserve">
+    <value>Magby</value>
+  </data>
+  <data name="Magcargo" xml:space="preserve">
+    <value>Magcargo</value>
   </data>
   <data name="Magikarp" xml:space="preserve">
     <value>Magikarp</value>
@@ -351,8 +486,20 @@
   <data name="Mankey" xml:space="preserve">
     <value>Mankey</value>
   </data>
+  <data name="Mantine" xml:space="preserve">
+    <value>Mantine</value>
+  </data>
+  <data name="Mareep" xml:space="preserve">
+    <value>Mareep</value>
+  </data>
+  <data name="Marill" xml:space="preserve">
+    <value>Marill</value>
+  </data>
   <data name="Marowak" xml:space="preserve">
     <value>Marowak</value>
+  </data>
+  <data name="Meganium" xml:space="preserve">
+    <value>Meganium</value>
   </data>
   <data name="Meowth" xml:space="preserve">
     <value>Meowth</value>
@@ -366,6 +513,12 @@
   <data name="Mewtwo" xml:space="preserve">
     <value>Mewtwo</value>
   </data>
+  <data name="Miltank" xml:space="preserve">
+    <value>Miltank</value>
+  </data>
+  <data name="Misdreavus" xml:space="preserve">
+    <value>Misdreavus</value>
+  </data>
   <data name="Missingno" xml:space="preserve">
     <value>Missingno</value>
   </data>
@@ -377,6 +530,12 @@
   </data>
   <data name="Muk" xml:space="preserve">
     <value>Muk</value>
+  </data>
+  <data name="Murkrow" xml:space="preserve">
+    <value>Murkrow</value>
+  </data>
+  <data name="Natu" xml:space="preserve">
+    <value>Natu</value>
   </data>
   <data name="Nidoking" xml:space="preserve">
     <value>Nidoking</value>
@@ -399,6 +558,12 @@
   <data name="Ninetales" xml:space="preserve">
     <value>Ninetales</value>
   </data>
+  <data name="Noctowl" xml:space="preserve">
+    <value>Noctowl</value>
+  </data>
+  <data name="Octillery" xml:space="preserve">
+    <value>Octillery</value>
+  </data>
   <data name="Oddish" xml:space="preserve">
     <value>Oddish</value>
   </data>
@@ -420,6 +585,12 @@
   <data name="Persian" xml:space="preserve">
     <value>Persian</value>
   </data>
+  <data name="Phanpy" xml:space="preserve">
+    <value>Phanpy</value>
+  </data>
+  <data name="Pichu" xml:space="preserve">
+    <value>Pichu</value>
+  </data>
   <data name="Pidgeot" xml:space="preserve">
     <value>Pidgeot</value>
   </data>
@@ -432,8 +603,17 @@
   <data name="Pikachu" xml:space="preserve">
     <value>Pikachu</value>
   </data>
+  <data name="Piloswine" xml:space="preserve">
+    <value>Piloswine</value>
+  </data>
+  <data name="Pineco" xml:space="preserve">
+    <value>Pineco</value>
+  </data>
   <data name="Pinsir" xml:space="preserve">
     <value>Pinsir</value>
+  </data>
+  <data name="Politoed" xml:space="preserve">
+    <value>Politoed</value>
   </data>
   <data name="Poliwag" xml:space="preserve">
     <value>Poliwag</value>
@@ -450,14 +630,32 @@
   <data name="Porygon" xml:space="preserve">
     <value>Porygon</value>
   </data>
+  <data name="Porygon2" xml:space="preserve">
+    <value>Porygon2</value>
+  </data>
   <data name="Primeape" xml:space="preserve">
     <value>Primeape</value>
   </data>
   <data name="Psyduck" xml:space="preserve">
     <value>Psyduck</value>
   </data>
+  <data name="Pupitar" xml:space="preserve">
+    <value>Pupitar</value>
+  </data>
+  <data name="Quagsire" xml:space="preserve">
+    <value>Quagsire</value>
+  </data>
+  <data name="Quilava" xml:space="preserve">
+    <value>Quilava</value>
+  </data>
+  <data name="Qwilfish" xml:space="preserve">
+    <value>Qwilfish</value>
+  </data>
   <data name="Raichu" xml:space="preserve">
     <value>Raichu</value>
+  </data>
+  <data name="Raikou" xml:space="preserve">
+    <value>Raikou</value>
   </data>
   <data name="Rapidash" xml:space="preserve">
     <value>Rapidash</value>
@@ -467,6 +665,9 @@
   </data>
   <data name="Rattata" xml:space="preserve">
     <value>Rattata</value>
+  </data>
+  <data name="Remoraid" xml:space="preserve">
+    <value>Remoraid</value>
   </data>
   <data name="Rhydon" xml:space="preserve">
     <value>Rhydon</value>
@@ -480,6 +681,9 @@
   <data name="Sandslash" xml:space="preserve">
     <value>Sandslash</value>
   </data>
+  <data name="Scizor" xml:space="preserve">
+    <value>Scizor</value>
+  </data>
   <data name="Scyther" xml:space="preserve">
     <value>Scyther</value>
   </data>
@@ -492,23 +696,59 @@
   <data name="Seel" xml:space="preserve">
     <value>Seel</value>
   </data>
+  <data name="Sentret" xml:space="preserve">
+    <value>Sentret</value>
+  </data>
   <data name="Shellder" xml:space="preserve">
     <value>Shellder</value>
+  </data>
+  <data name="Shuckle" xml:space="preserve">
+    <value>Shuckle</value>
+  </data>
+  <data name="Skarmory" xml:space="preserve">
+    <value>Skarmory</value>
+  </data>
+  <data name="Skiploom" xml:space="preserve">
+    <value>Skiploom</value>
   </data>
   <data name="Slowbro" xml:space="preserve">
     <value>Slowbro</value>
   </data>
+  <data name="Slowking" xml:space="preserve">
+    <value>Slowking</value>
+  </data>
   <data name="Slowpoke" xml:space="preserve">
     <value>Slowpoke</value>
+  </data>
+  <data name="Slugma" xml:space="preserve">
+    <value>Slugma</value>
+  </data>
+  <data name="Smeargle" xml:space="preserve">
+    <value>Smeargle</value>
+  </data>
+  <data name="Smoochum" xml:space="preserve">
+    <value>Smoochum</value>
+  </data>
+  <data name="Sneasel" xml:space="preserve">
+    <value>Sneasel</value>
   </data>
   <data name="Snorlax" xml:space="preserve">
     <value>Snorlax</value>
   </data>
+  <data name="Snubbull" xml:space="preserve">
+    <value>Snubbull</value>
+  </data>
   <data name="Spearow" xml:space="preserve">
     <value>Spearow</value>
   </data>
+  <data name="Spinarak" xml:space="preserve">
+    <value>Spinarak</value>
+  </data>
   <data name="Squirtle" xml:space="preserve">
     <value>Squirtle</value>
+  </data>
+  <data name="Stantler" xml:space="preserve">
+    <value>Stantler</value>
   </data>
   <data name="Starmie" xml:space="preserve">
     <value>Starmie</value>
@@ -516,17 +756,65 @@
   <data name="Staryu" xml:space="preserve">
     <value>Staryu</value>
   </data>
+  <data name="Steelix" xml:space="preserve">
+    <value>Steelix</value>
+  </data>
+  <data name="Sudowoodo" xml:space="preserve">
+    <value>Sudowoodo</value>
+  </data>
+  <data name="Suicune" xml:space="preserve">
+    <value>Suicune</value>
+  </data>
+  <data name="Sunflora" xml:space="preserve">
+    <value>Sunflora</value>
+  </data>
+  <data name="Sunkern" xml:space="preserve">
+    <value>Sunkern</value>
+  </data>
+  <data name="Swinub" xml:space="preserve">
+    <value>Swinub</value>
+  </data>
   <data name="Tangela" xml:space="preserve">
     <value>Tangela</value>
   </data>
   <data name="Tauros" xml:space="preserve">
     <value>Tauros</value>
   </data>
+  <data name="Teddiursa" xml:space="preserve">
+    <value>Teddiursa</value>
+  </data>
   <data name="Tentacool" xml:space="preserve">
     <value>Tentacool</value>
   </data>
   <data name="Tentacruel" xml:space="preserve">
     <value>Tentacruel</value>
+  </data>
+  <data name="Togepi" xml:space="preserve">
+    <value>Togepi</value>
+  </data>
+  <data name="Togetic" xml:space="preserve">
+    <value>Togetic</value>
+  </data>
+  <data name="Totodile" xml:space="preserve">
+    <value>Totodile</value>
+  </data>
+  <data name="Typhlosion" xml:space="preserve">
+    <value>Typhlosion</value>
+  </data>
+  <data name="Tyranitar" xml:space="preserve">
+    <value>Tyranitar</value>
+  </data>
+  <data name="Tyrogue" xml:space="preserve">
+    <value>Tyrogue</value>
+  </data>
+  <data name="Umbreon" xml:space="preserve">
+    <value>Umbreon</value>
+  </data>
+  <data name="Unown" xml:space="preserve">
+    <value>Unown</value>
+  </data>
+  <data name="Ursaring" xml:space="preserve">
+    <value>Ursaring</value>
   </data>
   <data name="Vaporeon" xml:space="preserve">
     <value>Vaporeon</value>
@@ -566,6 +854,18 @@
   </data>
   <data name="Wigglytuff" xml:space="preserve">
     <value>Wigglytuff</value>
+  </data>
+  <data name="Wobbuffet" xml:space="preserve">
+    <value>Wobbuffet</value>
+  </data>
+  <data name="Wooper" xml:space="preserve">
+    <value>Wooper</value>
+  </data>
+  <data name="Xatu" xml:space="preserve">
+    <value>Xatu</value>
+  </data>
+  <data name="Yanma" xml:space="preserve">
+    <value>Yanma</value>
   </data>
   <data name="Zapdos" xml:space="preserve">
     <value>Zapdos</value>

@@ -24,15 +24,15 @@ namespace POGOProtos.Networking.Requests.Messages {
           string.Concat(
             "Cj5QT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVxdWVzdHMvTWVzc2FnZXMvR2V0",
             "UGxheWVyTWVzc2FnZS5wcm90bxInUE9HT1Byb3Rvcy5OZXR3b3JraW5nLlJl",
-            "cXVlc3RzLk1lc3NhZ2VzIqQBChBHZXRQbGF5ZXJNZXNzYWdlEl0KDXBsYXll",
+            "cXVlc3RzLk1lc3NhZ2VzIrYBChBHZXRQbGF5ZXJNZXNzYWdlEl0KDXBsYXll",
             "cl9sb2NhbGUYASABKAsyRi5QT0dPUHJvdG9zLk5ldHdvcmtpbmcuUmVxdWVz",
-            "dHMuTWVzc2FnZXMuR2V0UGxheWVyTWVzc2FnZS5QbGF5ZXJMb2NhbGUaMQoM",
+            "dHMuTWVzc2FnZXMuR2V0UGxheWVyTWVzc2FnZS5QbGF5ZXJMb2NhbGUaQwoM",
             "UGxheWVyTG9jYWxlEg8KB2NvdW50cnkYASABKAkSEAoIbGFuZ3VhZ2UYAiAB",
-            "KAliBnByb3RvMw=="));
+            "KAkSEAoIdGltZXpvbmUYAyABKAliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Requests.Messages.GetPlayerMessage), global::POGOProtos.Networking.Requests.Messages.GetPlayerMessage.Parser, new[]{ "PlayerLocale" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Requests.Messages.GetPlayerMessage.Types.PlayerLocale), global::POGOProtos.Networking.Requests.Messages.GetPlayerMessage.Types.PlayerLocale.Parser, new[]{ "Country", "Language" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Requests.Messages.GetPlayerMessage), global::POGOProtos.Networking.Requests.Messages.GetPlayerMessage.Parser, new[]{ "PlayerLocale" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Requests.Messages.GetPlayerMessage.Types.PlayerLocale), global::POGOProtos.Networking.Requests.Messages.GetPlayerMessage.Types.PlayerLocale.Parser, new[]{ "Country", "Language", "Timezone" }, null, null, null)})
           }));
     }
     #endregion
@@ -190,6 +190,7 @@ namespace POGOProtos.Networking.Requests.Messages {
         public PlayerLocale(PlayerLocale other) : this() {
           country_ = other.country_;
           language_ = other.language_;
+          timezone_ = other.timezone_;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -219,6 +220,17 @@ namespace POGOProtos.Networking.Requests.Messages {
           }
         }
 
+        /// <summary>Field number for the "timezone" field.</summary>
+        public const int TimezoneFieldNumber = 3;
+        private string timezone_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Timezone {
+          get { return timezone_; }
+          set {
+            timezone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as PlayerLocale);
@@ -234,6 +246,7 @@ namespace POGOProtos.Networking.Requests.Messages {
           }
           if (Country != other.Country) return false;
           if (Language != other.Language) return false;
+          if (Timezone != other.Timezone) return false;
           return true;
         }
 
@@ -242,6 +255,7 @@ namespace POGOProtos.Networking.Requests.Messages {
           int hash = 1;
           if (Country.Length != 0) hash ^= Country.GetHashCode();
           if (Language.Length != 0) hash ^= Language.GetHashCode();
+          if (Timezone.Length != 0) hash ^= Timezone.GetHashCode();
           return hash;
         }
 
@@ -260,6 +274,10 @@ namespace POGOProtos.Networking.Requests.Messages {
             output.WriteRawTag(18);
             output.WriteString(Language);
           }
+          if (Timezone.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Timezone);
+          }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -270,6 +288,9 @@ namespace POGOProtos.Networking.Requests.Messages {
           }
           if (Language.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Language);
+          }
+          if (Timezone.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Timezone);
           }
           return size;
         }
@@ -284,6 +305,9 @@ namespace POGOProtos.Networking.Requests.Messages {
           }
           if (other.Language.Length != 0) {
             Language = other.Language;
+          }
+          if (other.Timezone.Length != 0) {
+            Timezone = other.Timezone;
           }
         }
 
@@ -301,6 +325,10 @@ namespace POGOProtos.Networking.Requests.Messages {
               }
               case 18: {
                 Language = input.ReadString();
+                break;
+              }
+              case 26: {
+                Timezone = input.ReadString();
                 break;
               }
             }

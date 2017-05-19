@@ -31,36 +31,40 @@ namespace POGOProtos.Settings.Master {
             "b3Rvcy9TZXR0aW5ncy9NYXN0ZXIvUG9rZW1vbi9TdGF0c0F0dHJpYnV0ZXMu",
             "cHJvdG8aOVBPR09Qcm90b3MvU2V0dGluZ3MvTWFzdGVyL1Bva2Vtb24vQ2Ft",
             "ZXJhQXR0cmlidXRlcy5wcm90bxo8UE9HT1Byb3Rvcy9TZXR0aW5ncy9NYXN0",
-            "ZXIvUG9rZW1vbi9FbmNvdW50ZXJBdHRyaWJ1dGVzLnByb3RvIs4ICg9Qb2tl",
-            "bW9uU2V0dGluZ3MSLwoKcG9rZW1vbl9pZBgBIAEoDjIbLlBPR09Qcm90b3Mu",
-            "RW51bXMuUG9rZW1vbklkEhMKC21vZGVsX3NjYWxlGAMgASgCEisKBHR5cGUY",
-            "BCABKA4yHS5QT0dPUHJvdG9zLkVudW1zLlBva2Vtb25UeXBlEi0KBnR5cGVf",
-            "MhgFIAEoDjIdLlBPR09Qcm90b3MuRW51bXMuUG9rZW1vblR5cGUSRAoGY2Ft",
-            "ZXJhGAYgASgLMjQuUE9HT1Byb3Rvcy5TZXR0aW5ncy5NYXN0ZXIuUG9rZW1v",
-            "bi5DYW1lcmFBdHRyaWJ1dGVzEkoKCWVuY291bnRlchgHIAEoCzI3LlBPR09Q",
-            "cm90b3MuU2V0dGluZ3MuTWFzdGVyLlBva2Vtb24uRW5jb3VudGVyQXR0cmli",
-            "dXRlcxJCCgVzdGF0cxgIIAEoCzIzLlBPR09Qcm90b3MuU2V0dGluZ3MuTWFz",
-            "dGVyLlBva2Vtb24uU3RhdHNBdHRyaWJ1dGVzEjIKC3F1aWNrX21vdmVzGAkg",
-            "AygOMh0uUE9HT1Byb3Rvcy5FbnVtcy5Qb2tlbW9uTW92ZRI2Cg9jaW5lbWF0",
-            "aWNfbW92ZXMYCiADKA4yHS5QT0dPUHJvdG9zLkVudW1zLlBva2Vtb25Nb3Zl",
-            "EhYKDmFuaW1hdGlvbl90aW1lGAsgAygCEjIKDWV2b2x1dGlvbl9pZHMYDCAD",
-            "KA4yGy5QT0dPUHJvdG9zLkVudW1zLlBva2Vtb25JZBIWCg5ldm9sdXRpb25f",
-            "cGlwcxgNIAEoBRIvCgZyYXJpdHkYDiABKA4yHy5QT0dPUHJvdG9zLkVudW1z",
-            "LlBva2Vtb25SYXJpdHkSGAoQcG9rZWRleF9oZWlnaHRfbRgPIAEoAhIZChFw",
-            "b2tlZGV4X3dlaWdodF9rZxgQIAEoAhI2ChFwYXJlbnRfcG9rZW1vbl9pZBgR",
-            "IAEoDjIbLlBPR09Qcm90b3MuRW51bXMuUG9rZW1vbklkEhYKDmhlaWdodF9z",
-            "dGRfZGV2GBIgASgCEhYKDndlaWdodF9zdGRfZGV2GBMgASgCEhwKFGttX2Rp",
-            "c3RhbmNlX3RvX2hhdGNoGBQgASgCEjQKCWZhbWlseV9pZBgVIAEoDjIhLlBP",
-            "R09Qcm90b3MuRW51bXMuUG9rZW1vbkZhbWlseUlkEhcKD2NhbmR5X3RvX2V2",
-            "b2x2ZRgWIAEoBRIZChFrbV9idWRkeV9kaXN0YW5jZRgXIAEoAhJJCgpidWRk",
-            "eV9zaXplGBggASgOMjUuUE9HT1Byb3Rvcy5TZXR0aW5ncy5NYXN0ZXIuUG9r",
-            "ZW1vblNldHRpbmdzLkJ1ZGR5U2l6ZSJSCglCdWRkeVNpemUSEAoMQlVERFlf",
-            "TUVESVVNEAASEgoOQlVERFlfU0hPVUxERVIQARINCglCVUREWV9CSUcQAhIQ",
-            "CgxCVUREWV9GTFlJTkcQA2IGcHJvdG8z"));
+            "ZXIvUG9rZW1vbi9FbmNvdW50ZXJBdHRyaWJ1dGVzLnByb3RvGjhQT0dPUHJv",
+            "dG9zL1NldHRpbmdzL01hc3Rlci9Qb2tlbW9uL0V2b2x1dGlvbkJyYW5jaC5w",
+            "cm90byLDCQoPUG9rZW1vblNldHRpbmdzEi8KCnBva2Vtb25faWQYASABKA4y",
+            "Gy5QT0dPUHJvdG9zLkVudW1zLlBva2Vtb25JZBITCgttb2RlbF9zY2FsZRgD",
+            "IAEoAhIrCgR0eXBlGAQgASgOMh0uUE9HT1Byb3Rvcy5FbnVtcy5Qb2tlbW9u",
+            "VHlwZRItCgZ0eXBlXzIYBSABKA4yHS5QT0dPUHJvdG9zLkVudW1zLlBva2Vt",
+            "b25UeXBlEkQKBmNhbWVyYRgGIAEoCzI0LlBPR09Qcm90b3MuU2V0dGluZ3Mu",
+            "TWFzdGVyLlBva2Vtb24uQ2FtZXJhQXR0cmlidXRlcxJKCgllbmNvdW50ZXIY",
+            "ByABKAsyNy5QT0dPUHJvdG9zLlNldHRpbmdzLk1hc3Rlci5Qb2tlbW9uLkVu",
+            "Y291bnRlckF0dHJpYnV0ZXMSQgoFc3RhdHMYCCABKAsyMy5QT0dPUHJvdG9z",
+            "LlNldHRpbmdzLk1hc3Rlci5Qb2tlbW9uLlN0YXRzQXR0cmlidXRlcxIyCgtx",
+            "dWlja19tb3ZlcxgJIAMoDjIdLlBPR09Qcm90b3MuRW51bXMuUG9rZW1vbk1v",
+            "dmUSNgoPY2luZW1hdGljX21vdmVzGAogAygOMh0uUE9HT1Byb3Rvcy5FbnVt",
+            "cy5Qb2tlbW9uTW92ZRIWCg5hbmltYXRpb25fdGltZRgLIAMoAhIyCg1ldm9s",
+            "dXRpb25faWRzGAwgAygOMhsuUE9HT1Byb3Rvcy5FbnVtcy5Qb2tlbW9uSWQS",
+            "FgoOZXZvbHV0aW9uX3BpcHMYDSABKAUSLwoGcmFyaXR5GA4gASgOMh8uUE9H",
+            "T1Byb3Rvcy5FbnVtcy5Qb2tlbW9uUmFyaXR5EhgKEHBva2VkZXhfaGVpZ2h0",
+            "X20YDyABKAISGQoRcG9rZWRleF93ZWlnaHRfa2cYECABKAISNgoRcGFyZW50",
+            "X3Bva2Vtb25faWQYESABKA4yGy5QT0dPUHJvdG9zLkVudW1zLlBva2Vtb25J",
+            "ZBIWCg5oZWlnaHRfc3RkX2RldhgSIAEoAhIWCg53ZWlnaHRfc3RkX2RldhgT",
+            "IAEoAhIcChRrbV9kaXN0YW5jZV90b19oYXRjaBgUIAEoAhI0CglmYW1pbHlf",
+            "aWQYFSABKA4yIS5QT0dPUHJvdG9zLkVudW1zLlBva2Vtb25GYW1pbHlJZBIX",
+            "Cg9jYW5keV90b19ldm9sdmUYFiABKAUSGQoRa21fYnVkZHlfZGlzdGFuY2UY",
+            "FyABKAISSQoKYnVkZHlfc2l6ZRgYIAEoDjI1LlBPR09Qcm90b3MuU2V0dGlu",
+            "Z3MuTWFzdGVyLlBva2Vtb25TZXR0aW5ncy5CdWRkeVNpemUSFAoMbW9kZWxf",
+            "aGVpZ2h0GBkgASgCEk0KEGV2b2x1dGlvbl9icmFuY2gYGiADKAsyMy5QT0dP",
+            "UHJvdG9zLlNldHRpbmdzLk1hc3Rlci5Qb2tlbW9uLkV2b2x1dGlvbkJyYW5j",
+            "aCJiCglCdWRkeVNpemUSEAoMQlVERFlfTUVESVVNEAASEgoOQlVERFlfU0hP",
+            "VUxERVIQARINCglCVUREWV9CSUcQAhIQCgxCVUREWV9GTFlJTkcQAxIOCgpC",
+            "VUREWV9CQUJZEARiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::POGOProtos.Enums.PokemonIdReflection.Descriptor, global::POGOProtos.Enums.PokemonRarityReflection.Descriptor, global::POGOProtos.Enums.PokemonTypeReflection.Descriptor, global::POGOProtos.Enums.PokemonMoveReflection.Descriptor, global::POGOProtos.Enums.PokemonFamilyIdReflection.Descriptor, global::POGOProtos.Settings.Master.Pokemon.StatsAttributesReflection.Descriptor, global::POGOProtos.Settings.Master.Pokemon.CameraAttributesReflection.Descriptor, global::POGOProtos.Settings.Master.Pokemon.EncounterAttributesReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::POGOProtos.Enums.PokemonIdReflection.Descriptor, global::POGOProtos.Enums.PokemonRarityReflection.Descriptor, global::POGOProtos.Enums.PokemonTypeReflection.Descriptor, global::POGOProtos.Enums.PokemonMoveReflection.Descriptor, global::POGOProtos.Enums.PokemonFamilyIdReflection.Descriptor, global::POGOProtos.Settings.Master.Pokemon.StatsAttributesReflection.Descriptor, global::POGOProtos.Settings.Master.Pokemon.CameraAttributesReflection.Descriptor, global::POGOProtos.Settings.Master.Pokemon.EncounterAttributesReflection.Descriptor, global::POGOProtos.Settings.Master.Pokemon.EvolutionBranchReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Settings.Master.PokemonSettings), global::POGOProtos.Settings.Master.PokemonSettings.Parser, new[]{ "PokemonId", "ModelScale", "Type", "Type2", "Camera", "Encounter", "Stats", "QuickMoves", "CinematicMoves", "AnimationTime", "EvolutionIds", "EvolutionPips", "Rarity", "PokedexHeightM", "PokedexWeightKg", "ParentPokemonId", "HeightStdDev", "WeightStdDev", "KmDistanceToHatch", "FamilyId", "CandyToEvolve", "KmBuddyDistance", "BuddySize" }, null, new[]{ typeof(global::POGOProtos.Settings.Master.PokemonSettings.Types.BuddySize) }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Settings.Master.PokemonSettings), global::POGOProtos.Settings.Master.PokemonSettings.Parser, new[]{ "PokemonId", "ModelScale", "Type", "Type2", "Camera", "Encounter", "Stats", "QuickMoves", "CinematicMoves", "AnimationTime", "EvolutionIds", "EvolutionPips", "Rarity", "PokedexHeightM", "PokedexWeightKg", "ParentPokemonId", "HeightStdDev", "WeightStdDev", "KmDistanceToHatch", "FamilyId", "CandyToEvolve", "KmBuddyDistance", "BuddySize", "ModelHeight", "EvolutionBranch" }, null, new[]{ typeof(global::POGOProtos.Settings.Master.PokemonSettings.Types.BuddySize) }, null)
           }));
     }
     #endregion
@@ -114,6 +118,8 @@ namespace POGOProtos.Settings.Master {
       candyToEvolve_ = other.candyToEvolve_;
       kmBuddyDistance_ = other.kmBuddyDistance_;
       buddySize_ = other.buddySize_;
+      modelHeight_ = other.modelHeight_;
+      evolutionBranch_ = other.evolutionBranch_.Clone();
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -370,6 +376,27 @@ namespace POGOProtos.Settings.Master {
       }
     }
 
+    /// <summary>Field number for the "model_height" field.</summary>
+    public const int ModelHeightFieldNumber = 25;
+    private float modelHeight_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float ModelHeight {
+      get { return modelHeight_; }
+      set {
+        modelHeight_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "evolution_branch" field.</summary>
+    public const int EvolutionBranchFieldNumber = 26;
+    private static readonly pb::FieldCodec<global::POGOProtos.Settings.Master.Pokemon.EvolutionBranch> _repeated_evolutionBranch_codec
+        = pb::FieldCodec.ForMessage(210, global::POGOProtos.Settings.Master.Pokemon.EvolutionBranch.Parser);
+    private readonly pbc::RepeatedField<global::POGOProtos.Settings.Master.Pokemon.EvolutionBranch> evolutionBranch_ = new pbc::RepeatedField<global::POGOProtos.Settings.Master.Pokemon.EvolutionBranch>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::POGOProtos.Settings.Master.Pokemon.EvolutionBranch> EvolutionBranch {
+      get { return evolutionBranch_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PokemonSettings);
@@ -406,6 +433,8 @@ namespace POGOProtos.Settings.Master {
       if (CandyToEvolve != other.CandyToEvolve) return false;
       if (KmBuddyDistance != other.KmBuddyDistance) return false;
       if (BuddySize != other.BuddySize) return false;
+      if (ModelHeight != other.ModelHeight) return false;
+      if(!evolutionBranch_.Equals(other.evolutionBranch_)) return false;
       return true;
     }
 
@@ -435,6 +464,8 @@ namespace POGOProtos.Settings.Master {
       if (CandyToEvolve != 0) hash ^= CandyToEvolve.GetHashCode();
       if (KmBuddyDistance != 0F) hash ^= KmBuddyDistance.GetHashCode();
       if (BuddySize != 0) hash ^= BuddySize.GetHashCode();
+      if (ModelHeight != 0F) hash ^= ModelHeight.GetHashCode();
+      hash ^= evolutionBranch_.GetHashCode();
       return hash;
     }
 
@@ -525,6 +556,11 @@ namespace POGOProtos.Settings.Master {
         output.WriteRawTag(192, 1);
         output.WriteEnum((int) BuddySize);
       }
+      if (ModelHeight != 0F) {
+        output.WriteRawTag(205, 1);
+        output.WriteFloat(ModelHeight);
+      }
+      evolutionBranch_.WriteTo(output, _repeated_evolutionBranch_codec);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -591,6 +627,10 @@ namespace POGOProtos.Settings.Master {
       if (BuddySize != 0) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) BuddySize);
       }
+      if (ModelHeight != 0F) {
+        size += 2 + 4;
+      }
+      size += evolutionBranch_.CalculateSize(_repeated_evolutionBranch_codec);
       return size;
     }
 
@@ -669,6 +709,10 @@ namespace POGOProtos.Settings.Master {
       if (other.BuddySize != 0) {
         BuddySize = other.BuddySize;
       }
+      if (other.ModelHeight != 0F) {
+        ModelHeight = other.ModelHeight;
+      }
+      evolutionBranch_.Add(other.evolutionBranch_);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -784,6 +828,14 @@ namespace POGOProtos.Settings.Master {
             buddySize_ = (global::POGOProtos.Settings.Master.PokemonSettings.Types.BuddySize) input.ReadEnum();
             break;
           }
+          case 205: {
+            ModelHeight = input.ReadFloat();
+            break;
+          }
+          case 210: {
+            evolutionBranch_.AddEntriesFrom(input, _repeated_evolutionBranch_codec);
+            break;
+          }
         }
       }
     }
@@ -797,6 +849,7 @@ namespace POGOProtos.Settings.Master {
         [pbr::OriginalName("BUDDY_SHOULDER")] BuddyShoulder = 1,
         [pbr::OriginalName("BUDDY_BIG")] BuddyBig = 2,
         [pbr::OriginalName("BUDDY_FLYING")] BuddyFlying = 3,
+        [pbr::OriginalName("BUDDY_BABY")] BuddyBaby = 4,
       }
 
     }

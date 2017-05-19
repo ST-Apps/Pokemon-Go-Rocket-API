@@ -23,7 +23,7 @@ namespace POGOProtos.Data.Player {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CihQT0dPUHJvdG9zL0RhdGEvUGxheWVyL1BsYXllclN0YXRzLnByb3RvEhZQ",
-            "T0dPUHJvdG9zLkRhdGEuUGxheWVyIu0ECgtQbGF5ZXJTdGF0cxINCgVsZXZl",
+            "T0dPUHJvdG9zLkRhdGEuUGxheWVyIp4FCgtQbGF5ZXJTdGF0cxINCgVsZXZl",
             "bBgBIAEoBRISCgpleHBlcmllbmNlGAIgASgDEhUKDXByZXZfbGV2ZWxfeHAY",
             "AyABKAMSFQoNbmV4dF9sZXZlbF94cBgEIAEoAxIRCglrbV93YWxrZWQYBSAB",
             "KAISHAoUcG9rZW1vbnNfZW5jb3VudGVyZWQYBiABKAUSHgoWdW5pcXVlX3Bv",
@@ -37,11 +37,12 @@ namespace POGOProtos.Data.Player {
             "HQoVcHJlc3RpZ2VfcmFpc2VkX3RvdGFsGBMgASgFEh4KFnByZXN0aWdlX2Ry",
             "b3BwZWRfdG90YWwYFCABKAUSGAoQcG9rZW1vbl9kZXBsb3llZBgVIAEoBRIe",
             "ChZwb2tlbW9uX2NhdWdodF9ieV90eXBlGBYgAygFEhwKFHNtYWxsX3JhdHRh",
-            "dGFfY2F1Z2h0GBcgASgFYgZwcm90bzM="));
+            "dGFfY2F1Z2h0GBcgASgFEhQKDHVzZWRfa21fcG9vbBgYIAEoARIZChFsYXN0",
+            "X2ttX3JlZmlsbF9tcxgZIAEoA2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Data.Player.PlayerStats), global::POGOProtos.Data.Player.PlayerStats.Parser, new[]{ "Level", "Experience", "PrevLevelXp", "NextLevelXp", "KmWalked", "PokemonsEncountered", "UniquePokedexEntries", "PokemonsCaptured", "Evolutions", "PokeStopVisits", "PokeballsThrown", "EggsHatched", "BigMagikarpCaught", "BattleAttackWon", "BattleAttackTotal", "BattleDefendedWon", "BattleTrainingWon", "BattleTrainingTotal", "PrestigeRaisedTotal", "PrestigeDroppedTotal", "PokemonDeployed", "PokemonCaughtByType", "SmallRattataCaught" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Data.Player.PlayerStats), global::POGOProtos.Data.Player.PlayerStats.Parser, new[]{ "Level", "Experience", "PrevLevelXp", "NextLevelXp", "KmWalked", "PokemonsEncountered", "UniquePokedexEntries", "PokemonsCaptured", "Evolutions", "PokeStopVisits", "PokeballsThrown", "EggsHatched", "BigMagikarpCaught", "BattleAttackWon", "BattleAttackTotal", "BattleDefendedWon", "BattleTrainingWon", "BattleTrainingTotal", "PrestigeRaisedTotal", "PrestigeDroppedTotal", "PokemonDeployed", "PokemonCaughtByType", "SmallRattataCaught", "UsedKmPool", "LastKmRefillMs" }, null, null, null)
           }));
     }
     #endregion
@@ -95,6 +96,8 @@ namespace POGOProtos.Data.Player {
       pokemonDeployed_ = other.pokemonDeployed_;
       pokemonCaughtByType_ = other.pokemonCaughtByType_.Clone();
       smallRattataCaught_ = other.smallRattataCaught_;
+      usedKmPool_ = other.usedKmPool_;
+      lastKmRefillMs_ = other.lastKmRefillMs_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -354,6 +357,28 @@ namespace POGOProtos.Data.Player {
       }
     }
 
+    /// <summary>Field number for the "used_km_pool" field.</summary>
+    public const int UsedKmPoolFieldNumber = 24;
+    private double usedKmPool_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double UsedKmPool {
+      get { return usedKmPool_; }
+      set {
+        usedKmPool_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "last_km_refill_ms" field.</summary>
+    public const int LastKmRefillMsFieldNumber = 25;
+    private long lastKmRefillMs_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long LastKmRefillMs {
+      get { return lastKmRefillMs_; }
+      set {
+        lastKmRefillMs_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PlayerStats);
@@ -390,6 +415,8 @@ namespace POGOProtos.Data.Player {
       if (PokemonDeployed != other.PokemonDeployed) return false;
       if(!pokemonCaughtByType_.Equals(other.pokemonCaughtByType_)) return false;
       if (SmallRattataCaught != other.SmallRattataCaught) return false;
+      if (UsedKmPool != other.UsedKmPool) return false;
+      if (LastKmRefillMs != other.LastKmRefillMs) return false;
       return true;
     }
 
@@ -419,6 +446,8 @@ namespace POGOProtos.Data.Player {
       if (PokemonDeployed != 0) hash ^= PokemonDeployed.GetHashCode();
       hash ^= pokemonCaughtByType_.GetHashCode();
       if (SmallRattataCaught != 0) hash ^= SmallRattataCaught.GetHashCode();
+      if (UsedKmPool != 0D) hash ^= UsedKmPool.GetHashCode();
+      if (LastKmRefillMs != 0L) hash ^= LastKmRefillMs.GetHashCode();
       return hash;
     }
 
@@ -518,6 +547,14 @@ namespace POGOProtos.Data.Player {
         output.WriteRawTag(184, 1);
         output.WriteInt32(SmallRattataCaught);
       }
+      if (UsedKmPool != 0D) {
+        output.WriteRawTag(193, 1);
+        output.WriteDouble(UsedKmPool);
+      }
+      if (LastKmRefillMs != 0L) {
+        output.WriteRawTag(200, 1);
+        output.WriteInt64(LastKmRefillMs);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -589,6 +626,12 @@ namespace POGOProtos.Data.Player {
       size += pokemonCaughtByType_.CalculateSize(_repeated_pokemonCaughtByType_codec);
       if (SmallRattataCaught != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(SmallRattataCaught);
+      }
+      if (UsedKmPool != 0D) {
+        size += 2 + 8;
+      }
+      if (LastKmRefillMs != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(LastKmRefillMs);
       }
       return size;
     }
@@ -664,6 +707,12 @@ namespace POGOProtos.Data.Player {
       pokemonCaughtByType_.Add(other.pokemonCaughtByType_);
       if (other.SmallRattataCaught != 0) {
         SmallRattataCaught = other.SmallRattataCaught;
+      }
+      if (other.UsedKmPool != 0D) {
+        UsedKmPool = other.UsedKmPool;
+      }
+      if (other.LastKmRefillMs != 0L) {
+        LastKmRefillMs = other.LastKmRefillMs;
       }
     }
 
@@ -766,6 +815,14 @@ namespace POGOProtos.Data.Player {
           }
           case 184: {
             SmallRattataCaught = input.ReadInt32();
+            break;
+          }
+          case 193: {
+            UsedKmPool = input.ReadDouble();
+            break;
+          }
+          case 200: {
+            LastKmRefillMs = input.ReadInt64();
             break;
           }
         }

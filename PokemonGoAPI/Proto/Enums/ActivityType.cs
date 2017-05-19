@@ -23,7 +23,7 @@ namespace POGOProtos.Enums {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNQT0dPUHJvdG9zL0VudW1zL0FjdGl2aXR5VHlwZS5wcm90bxIQUE9HT1By",
-            "b3Rvcy5FbnVtcyrsBQoMQWN0aXZpdHlUeXBlEhQKEEFDVElWSVRZX1VOS05P",
+            "b3Rvcy5FbnVtcyrrBgoMQWN0aXZpdHlUeXBlEhQKEEFDVElWSVRZX1VOS05P",
             "V04QABIaChZBQ1RJVklUWV9DQVRDSF9QT0tFTU9OEAESIQodQUNUSVZJVFlf",
             "Q0FUQ0hfTEVHRU5EX1BPS0VNT04QAhIZChVBQ1RJVklUWV9GTEVFX1BPS0VN",
             "T04QAxIYChRBQ1RJVklUWV9ERUZFQVRfRk9SVBAEEhsKF0FDVElWSVRZX0VW",
@@ -39,8 +39,10 @@ namespace POGOProtos.Enums {
             "EhIiCh5BQ1RJVklUWV9IQVRDSF9FR0dfU01BTExfQk9OVVMQExIjCh9BQ1RJ",
             "VklUWV9IQVRDSF9FR0dfTUVESVVNX0JPTlVTEBQSIgoeQUNUSVZJVFlfSEFU",
             "Q0hfRUdHX0xBUkdFX0JPTlVTEBUSIAocQUNUSVZJVFlfREVGRUFUX0dZTV9E",
-            "RUZFTkRFUhAWEh4KGkFDVElWSVRZX0RFRkVBVF9HWU1fTEVBREVSEBdiBnBy",
-            "b3RvMw=="));
+            "RUZFTkRFUhAWEh4KGkFDVElWSVRZX0RFRkVBVF9HWU1fTEVBREVSEBcSKwon",
+            "QUNUSVZJVFlfQ0FUQ0hfRklSU1RfQ0FUQ0hfU1RSRUFLX0JPTlVTEBgSKQol",
+            "QUNUSVZJVFlfU0VBUkNIX0ZPUlRfRklSU1RfT0ZfVEhFX0RBWRAZEiUKIUFD",
+            "VElWSVRZX1NFQVJDSF9GT1JUX1NUUkVBS19CT05VUxAaYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::POGOProtos.Enums.ActivityType), }, null));
@@ -74,6 +76,9 @@ namespace POGOProtos.Enums {
     [pbr::OriginalName("ACTIVITY_HATCH_EGG_LARGE_BONUS")] ActivityHatchEggLargeBonus = 21,
     [pbr::OriginalName("ACTIVITY_DEFEAT_GYM_DEFENDER")] ActivityDefeatGymDefender = 22,
     [pbr::OriginalName("ACTIVITY_DEFEAT_GYM_LEADER")] ActivityDefeatGymLeader = 23,
+    [pbr::OriginalName("ACTIVITY_CATCH_FIRST_CATCH_STREAK_BONUS")] ActivityCatchFirstCatchStreakBonus = 24,
+    [pbr::OriginalName("ACTIVITY_SEARCH_FORT_FIRST_OF_THE_DAY")] ActivitySearchFortFirstOfTheDay = 25,
+    [pbr::OriginalName("ACTIVITY_SEARCH_FORT_STREAK_BONUS")] ActivitySearchFortStreakBonus = 26,
   }
 
   #endregion

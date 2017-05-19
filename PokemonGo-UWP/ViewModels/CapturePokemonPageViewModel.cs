@@ -351,6 +351,7 @@ namespace PokemonGo_UWP.ViewModels
                                                              var currentPokemon =
                                                                  GameClient.PokemonsInventory
                                                                  .FirstOrDefault(item => item.Id == _capturedPokemonId);
+                                                             GameClient.ToggleUpdateTimer();
                                                              if (currentPokemon != null)
                                                              {
                                                                  NavigationService.Navigate(typeof(PokemonDetailPage), new SelectedPokemonNavModel()
@@ -517,6 +518,7 @@ namespace PokemonGo_UWP.ViewModels
                     CurrentCaptureAward = caughtPokemonResponse.CaptureAward;
                     CatchSuccess?.Invoke(this, null);
                     _capturedPokemonId = caughtPokemonResponse.CapturedPokemonId;
+                    await GameClient.UpdatePlayerStats();
                     if (CurrentPokemon is MapPokemonWrapper)
                         GameClient.CatchablePokemons.Remove((MapPokemonWrapper)CurrentPokemon);
                     else if (CurrentPokemon is LuredPokemon)

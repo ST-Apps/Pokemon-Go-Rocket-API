@@ -23,10 +23,11 @@ namespace POGOProtos.Enums {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZQT0dPUHJvdG9zL0VudW1zL0lhcEl0ZW1DYXRlZ29yeS5wcm90bxIQUE9H",
-            "T1Byb3Rvcy5FbnVtcyqUAQoTSG9sb0lhcEl0ZW1DYXRlZ29yeRIVChFJQVBf",
+            "T1Byb3Rvcy5FbnVtcyqtAQoTSG9sb0lhcEl0ZW1DYXRlZ29yeRIVChFJQVBf",
             "Q0FURUdPUllfTk9ORRAAEhcKE0lBUF9DQVRFR09SWV9CVU5ETEUQARIWChJJ",
             "QVBfQ0FURUdPUllfSVRFTVMQAhIZChVJQVBfQ0FURUdPUllfVVBHUkFERVMQ",
-            "AxIaChZJQVBfQ0FURUdPUllfUE9LRUNPSU5TEARiBnByb3RvMw=="));
+            "AxIaChZJQVBfQ0FURUdPUllfUE9LRUNPSU5TEAQSFwoTSUFQX0NBVEVHT1JZ",
+            "X0FWQVRBUhAFYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::POGOProtos.Enums.HoloIapItemCategory), }, null));
@@ -41,6 +42,7 @@ namespace POGOProtos.Enums {
     [pbr::OriginalName("IAP_CATEGORY_ITEMS")] IapCategoryItems = 2,
     [pbr::OriginalName("IAP_CATEGORY_UPGRADES")] IapCategoryUpgrades = 3,
     [pbr::OriginalName("IAP_CATEGORY_POKECOINS")] IapCategoryPokecoins = 4,
+    [pbr::OriginalName("IAP_CATEGORY_AVATAR")] IapCategoryAvatar = 5,
   }
 
   #endregion

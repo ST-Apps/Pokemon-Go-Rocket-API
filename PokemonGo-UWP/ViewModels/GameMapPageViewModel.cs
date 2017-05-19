@@ -85,10 +85,11 @@ namespace PokemonGo_UWP.ViewModels
 
             // Prevent from going back to other pages
             NavigationService.ClearHistory();
-            if (parameter == null || mode == NavigationMode.Back) return;
-            var gameMapNavigationMode = (GameMapNavigationModes)parameter;
 
             AudioUtils.PlaySound(AudioUtils.GAMEPLAY);
+
+            if (parameter == null || mode == NavigationMode.Back) return;
+            var gameMapNavigationMode = (GameMapNavigationModes)parameter;
 
             // We just resumed from suspension so we restart update service and we get data from suspension state
             if (suspensionState.Any())

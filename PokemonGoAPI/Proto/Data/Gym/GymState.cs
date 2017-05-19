@@ -25,13 +25,14 @@ namespace POGOProtos.Data.Gym {
             "CiJQT0dPUHJvdG9zL0RhdGEvR3ltL0d5bVN0YXRlLnByb3RvEhNQT0dPUHJv",
             "dG9zLkRhdGEuR3ltGiJQT0dPUHJvdG9zL01hcC9Gb3J0L0ZvcnREYXRhLnBy",
             "b3RvGidQT0dPUHJvdG9zL0RhdGEvR3ltL0d5bU1lbWJlcnNoaXAucHJvdG8i",
-            "dQoIR3ltU3RhdGUSMAoJZm9ydF9kYXRhGAEgASgLMh0uUE9HT1Byb3Rvcy5N",
-            "YXAuRm9ydC5Gb3J0RGF0YRI3CgttZW1iZXJzaGlwcxgCIAMoCzIiLlBPR09Q",
-            "cm90b3MuRGF0YS5HeW0uR3ltTWVtYmVyc2hpcGIGcHJvdG8z"));
+            "jQEKCEd5bVN0YXRlEjAKCWZvcnRfZGF0YRgBIAEoCzIdLlBPR09Qcm90b3Mu",
+            "TWFwLkZvcnQuRm9ydERhdGESNwoLbWVtYmVyc2hpcHMYAiADKAsyIi5QT0dP",
+            "UHJvdG9zLkRhdGEuR3ltLkd5bU1lbWJlcnNoaXASFgoOZGVwbG95X2xvY2tv",
+            "dXQYAyABKAhiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Map.Fort.FortDataReflection.Descriptor, global::POGOProtos.Data.Gym.GymMembershipReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Data.Gym.GymState), global::POGOProtos.Data.Gym.GymState.Parser, new[]{ "FortData", "Memberships" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Data.Gym.GymState), global::POGOProtos.Data.Gym.GymState.Parser, new[]{ "FortData", "Memberships", "DeployLockout" }, null, null, null)
           }));
     }
     #endregion
@@ -64,6 +65,7 @@ namespace POGOProtos.Data.Gym {
     public GymState(GymState other) : this() {
       FortData = other.fortData_ != null ? other.FortData.Clone() : null;
       memberships_ = other.memberships_.Clone();
+      deployLockout_ = other.deployLockout_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -92,6 +94,17 @@ namespace POGOProtos.Data.Gym {
       get { return memberships_; }
     }
 
+    /// <summary>Field number for the "deploy_lockout" field.</summary>
+    public const int DeployLockoutFieldNumber = 3;
+    private bool deployLockout_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool DeployLockout {
+      get { return deployLockout_; }
+      set {
+        deployLockout_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GymState);
@@ -107,6 +120,7 @@ namespace POGOProtos.Data.Gym {
       }
       if (!object.Equals(FortData, other.FortData)) return false;
       if(!memberships_.Equals(other.memberships_)) return false;
+      if (DeployLockout != other.DeployLockout) return false;
       return true;
     }
 
@@ -115,6 +129,7 @@ namespace POGOProtos.Data.Gym {
       int hash = 1;
       if (fortData_ != null) hash ^= FortData.GetHashCode();
       hash ^= memberships_.GetHashCode();
+      if (DeployLockout != false) hash ^= DeployLockout.GetHashCode();
       return hash;
     }
 
@@ -130,6 +145,10 @@ namespace POGOProtos.Data.Gym {
         output.WriteMessage(FortData);
       }
       memberships_.WriteTo(output, _repeated_memberships_codec);
+      if (DeployLockout != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(DeployLockout);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -139,6 +158,9 @@ namespace POGOProtos.Data.Gym {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FortData);
       }
       size += memberships_.CalculateSize(_repeated_memberships_codec);
+      if (DeployLockout != false) {
+        size += 1 + 1;
+      }
       return size;
     }
 
@@ -154,6 +176,9 @@ namespace POGOProtos.Data.Gym {
         FortData.MergeFrom(other.FortData);
       }
       memberships_.Add(other.memberships_);
+      if (other.DeployLockout != false) {
+        DeployLockout = other.DeployLockout;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -173,6 +198,10 @@ namespace POGOProtos.Data.Gym {
           }
           case 18: {
             memberships_.AddEntriesFrom(input, _repeated_memberships_codec);
+            break;
+          }
+          case 24: {
+            DeployLockout = input.ReadBool();
             break;
           }
         }

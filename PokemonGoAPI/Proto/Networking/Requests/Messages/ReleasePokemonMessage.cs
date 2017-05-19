@@ -24,12 +24,13 @@ namespace POGOProtos.Networking.Requests.Messages {
           string.Concat(
             "CkNQT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVxdWVzdHMvTWVzc2FnZXMvUmVs",
             "ZWFzZVBva2Vtb25NZXNzYWdlLnByb3RvEidQT0dPUHJvdG9zLk5ldHdvcmtp",
-            "bmcuUmVxdWVzdHMuTWVzc2FnZXMiKwoVUmVsZWFzZVBva2Vtb25NZXNzYWdl",
-            "EhIKCnBva2Vtb25faWQYASABKAZiBnByb3RvMw=="));
+            "bmcuUmVxdWVzdHMuTWVzc2FnZXMiQAoVUmVsZWFzZVBva2Vtb25NZXNzYWdl",
+            "EhIKCnBva2Vtb25faWQYASABKAYSEwoLcG9rZW1vbl9pZHMYAiADKAZiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Requests.Messages.ReleasePokemonMessage), global::POGOProtos.Networking.Requests.Messages.ReleasePokemonMessage.Parser, new[]{ "PokemonId" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Requests.Messages.ReleasePokemonMessage), global::POGOProtos.Networking.Requests.Messages.ReleasePokemonMessage.Parser, new[]{ "PokemonId", "PokemonIds" }, null, null, null)
           }));
     }
     #endregion
@@ -61,6 +62,7 @@ namespace POGOProtos.Networking.Requests.Messages {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ReleasePokemonMessage(ReleasePokemonMessage other) : this() {
       pokemonId_ = other.pokemonId_;
+      pokemonIds_ = other.pokemonIds_.Clone();
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -79,6 +81,16 @@ namespace POGOProtos.Networking.Requests.Messages {
       }
     }
 
+    /// <summary>Field number for the "pokemon_ids" field.</summary>
+    public const int PokemonIdsFieldNumber = 2;
+    private static readonly pb::FieldCodec<ulong> _repeated_pokemonIds_codec
+        = pb::FieldCodec.ForFixed64(18);
+    private readonly pbc::RepeatedField<ulong> pokemonIds_ = new pbc::RepeatedField<ulong>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<ulong> PokemonIds {
+      get { return pokemonIds_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ReleasePokemonMessage);
@@ -93,6 +105,7 @@ namespace POGOProtos.Networking.Requests.Messages {
         return true;
       }
       if (PokemonId != other.PokemonId) return false;
+      if(!pokemonIds_.Equals(other.pokemonIds_)) return false;
       return true;
     }
 
@@ -100,6 +113,7 @@ namespace POGOProtos.Networking.Requests.Messages {
     public override int GetHashCode() {
       int hash = 1;
       if (PokemonId != 0UL) hash ^= PokemonId.GetHashCode();
+      hash ^= pokemonIds_.GetHashCode();
       return hash;
     }
 
@@ -114,6 +128,7 @@ namespace POGOProtos.Networking.Requests.Messages {
         output.WriteRawTag(9);
         output.WriteFixed64(PokemonId);
       }
+      pokemonIds_.WriteTo(output, _repeated_pokemonIds_codec);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,6 +137,7 @@ namespace POGOProtos.Networking.Requests.Messages {
       if (PokemonId != 0UL) {
         size += 1 + 8;
       }
+      size += pokemonIds_.CalculateSize(_repeated_pokemonIds_codec);
       return size;
     }
 
@@ -133,6 +149,7 @@ namespace POGOProtos.Networking.Requests.Messages {
       if (other.PokemonId != 0UL) {
         PokemonId = other.PokemonId;
       }
+      pokemonIds_.Add(other.pokemonIds_);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -145,6 +162,11 @@ namespace POGOProtos.Networking.Requests.Messages {
             break;
           case 9: {
             PokemonId = input.ReadFixed64();
+            break;
+          }
+          case 18:
+          case 17: {
+            pokemonIds_.AddEntriesFrom(input, _repeated_pokemonIds_codec);
             break;
           }
         }

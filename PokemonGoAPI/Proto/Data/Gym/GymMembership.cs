@@ -25,14 +25,15 @@ namespace POGOProtos.Data.Gym {
             "CidQT0dPUHJvdG9zL0RhdGEvR3ltL0d5bU1lbWJlcnNoaXAucHJvdG8SE1BP",
             "R09Qcm90b3MuRGF0YS5HeW0aIVBPR09Qcm90b3MvRGF0YS9Qb2tlbW9uRGF0",
             "YS5wcm90bxowUE9HT1Byb3Rvcy9EYXRhL1BsYXllci9QbGF5ZXJQdWJsaWNQ",
-            "cm9maWxlLnByb3RvIpABCg1HeW1NZW1iZXJzaGlwEjIKDHBva2Vtb25fZGF0",
+            "cm9maWxlLnByb3RvIsgBCg1HeW1NZW1iZXJzaGlwEjIKDHBva2Vtb25fZGF0",
             "YRgBIAEoCzIcLlBPR09Qcm90b3MuRGF0YS5Qb2tlbW9uRGF0YRJLChZ0cmFp",
             "bmVyX3B1YmxpY19wcm9maWxlGAIgASgLMisuUE9HT1Byb3Rvcy5EYXRhLlBs",
-            "YXllci5QbGF5ZXJQdWJsaWNQcm9maWxlYgZwcm90bzM="));
+            "YXllci5QbGF5ZXJQdWJsaWNQcm9maWxlEjYKEHRyYWluaW5nX3Bva2Vtb24Y",
+            "AyABKAsyHC5QT0dPUHJvdG9zLkRhdGEuUG9rZW1vbkRhdGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Data.PokemonDataReflection.Descriptor, global::POGOProtos.Data.Player.PlayerPublicProfileReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Data.Gym.GymMembership), global::POGOProtos.Data.Gym.GymMembership.Parser, new[]{ "PokemonData", "TrainerPublicProfile" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Data.Gym.GymMembership), global::POGOProtos.Data.Gym.GymMembership.Parser, new[]{ "PokemonData", "TrainerPublicProfile", "TrainingPokemon" }, null, null, null)
           }));
     }
     #endregion
@@ -65,6 +66,7 @@ namespace POGOProtos.Data.Gym {
     public GymMembership(GymMembership other) : this() {
       PokemonData = other.pokemonData_ != null ? other.PokemonData.Clone() : null;
       TrainerPublicProfile = other.trainerPublicProfile_ != null ? other.TrainerPublicProfile.Clone() : null;
+      TrainingPokemon = other.trainingPokemon_ != null ? other.TrainingPokemon.Clone() : null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -94,6 +96,17 @@ namespace POGOProtos.Data.Gym {
       }
     }
 
+    /// <summary>Field number for the "training_pokemon" field.</summary>
+    public const int TrainingPokemonFieldNumber = 3;
+    private global::POGOProtos.Data.PokemonData trainingPokemon_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::POGOProtos.Data.PokemonData TrainingPokemon {
+      get { return trainingPokemon_; }
+      set {
+        trainingPokemon_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GymMembership);
@@ -109,6 +122,7 @@ namespace POGOProtos.Data.Gym {
       }
       if (!object.Equals(PokemonData, other.PokemonData)) return false;
       if (!object.Equals(TrainerPublicProfile, other.TrainerPublicProfile)) return false;
+      if (!object.Equals(TrainingPokemon, other.TrainingPokemon)) return false;
       return true;
     }
 
@@ -117,6 +131,7 @@ namespace POGOProtos.Data.Gym {
       int hash = 1;
       if (pokemonData_ != null) hash ^= PokemonData.GetHashCode();
       if (trainerPublicProfile_ != null) hash ^= TrainerPublicProfile.GetHashCode();
+      if (trainingPokemon_ != null) hash ^= TrainingPokemon.GetHashCode();
       return hash;
     }
 
@@ -135,6 +150,10 @@ namespace POGOProtos.Data.Gym {
         output.WriteRawTag(18);
         output.WriteMessage(TrainerPublicProfile);
       }
+      if (trainingPokemon_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(TrainingPokemon);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -145,6 +164,9 @@ namespace POGOProtos.Data.Gym {
       }
       if (trainerPublicProfile_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TrainerPublicProfile);
+      }
+      if (trainingPokemon_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TrainingPokemon);
       }
       return size;
     }
@@ -165,6 +187,12 @@ namespace POGOProtos.Data.Gym {
           trainerPublicProfile_ = new global::POGOProtos.Data.Player.PlayerPublicProfile();
         }
         TrainerPublicProfile.MergeFrom(other.TrainerPublicProfile);
+      }
+      if (other.trainingPokemon_ != null) {
+        if (trainingPokemon_ == null) {
+          trainingPokemon_ = new global::POGOProtos.Data.PokemonData();
+        }
+        TrainingPokemon.MergeFrom(other.TrainingPokemon);
       }
     }
 
@@ -188,6 +216,13 @@ namespace POGOProtos.Data.Gym {
               trainerPublicProfile_ = new global::POGOProtos.Data.Player.PlayerPublicProfile();
             }
             input.ReadMessage(trainerPublicProfile_);
+            break;
+          }
+          case 26: {
+            if (trainingPokemon_ == null) {
+              trainingPokemon_ = new global::POGOProtos.Data.PokemonData();
+            }
+            input.ReadMessage(trainingPokemon_);
             break;
           }
         }

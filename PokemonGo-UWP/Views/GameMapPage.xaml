@@ -328,7 +328,7 @@
                 <Image  Source="{Binding IsIncenseActive, Converter={StaticResource IsIncenseActiveToPlayerIconConverter}}" 
                         maps:MapControl.NormalizedAnchorPoint="0.5,1"
                         Stretch="Uniform"
-                        Height="48"
+                        Height="96"
                         Width="48"
                         x:Name="PlayerImage" />
 
@@ -473,37 +473,47 @@
                                             <WrapGrid Orientation="Horizontal"
                                                       VerticalChildrenAlignment="Top"
                                                       HorizontalAlignment="Center"
-                                                      MaximumRowsOrColumns="4" />
+                                                      MaximumRowsOrColumns="3" />
                                         </ItemsPanelTemplate>
                                     </GridView.ItemsPanel>
 
                                     <GridView.ItemTemplate>
                                         <DataTemplate>
                                             <Grid>
-                                                    <Image VerticalAlignment="Top" HorizontalAlignment="Left"
-                                                       Source="../Assets/UI/bush.png" Stretch="Uniform" 
-                                                       Height="60">
-                                                    </Image>
-                                                    <Image Canvas.ZIndex="100"
+                                                    <Ellipse
+                                                             Width="80"
+                                                             Height="80"
+                                                             Stroke="LightCyan"
+                                                             StrokeThickness="4">
+                                                             <Ellipse.Projection>
+                                                                 <PlaneProjection />
+                                                             </Ellipse.Projection>
+                                                             <Ellipse.Fill>
+                                                                 <ImageBrush ImageSource="{Binding Converter={StaticResource PokemonIdToNearbyPokestopConverter}}"
+                                                                        Stretch="UniformToFill" />
+                                                             </Ellipse.Fill>
+                                                    </Ellipse>
+                                                    <Image
+                                                       Canvas.ZIndex="100"
                                                        Source="{Binding PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}}"
                                                        Visibility="{Binding PokemonId, Converter={StaticResource NearbyPokemonInPokedexToVisibilityConverter}}"
                                                        Height="60"
                                                        Width="60"
-                                                       VerticalAlignment="Center"
-                                                       HorizontalAlignment="Center"
+                                                       VerticalAlignment="Bottom"
+                                                       HorizontalAlignment="Right"
                                                        Stretch="Uniform"
                                                        Margin="6,0" />
 
-                                                <BitmapIcon
-                                                    UriSource="{Binding PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}, ConverterParameter=uri}"
-                                                    Style="{ThemeResource NearbyPokemonNotInPokedexBitmapIconStyle}"
-                                                    Visibility="{Binding PokemonId, Converter={StaticResource InverseNearbyPokemonInPokedexToVisibilityConverter}}"
-                                                    Height="60"
-                                                    Width="60"
-                                                    VerticalAlignment="Center"
-                                                    HorizontalAlignment="Center"
-                                                    Margin="6,0" />
-                                            </Grid>
+                                                    <BitmapIcon
+                                                        UriSource="{Binding PokemonId, Converter={StaticResource PokemonIdToPokemonSpriteConverter}, ConverterParameter=uri}"
+                                                        Style="{ThemeResource NearbyPokemonNotInPokedexBitmapIconStyle}"
+                                                        Visibility="{Binding PokemonId, Converter={StaticResource InverseNearbyPokemonInPokedexToVisibilityConverter}}"
+                                                        Height="60"
+                                                        Width="60"
+                                                        VerticalAlignment="Bottom"
+                                                        HorizontalAlignment="Right"
+                                                        Margin="6,0" />
+                                                </Grid>
                                         </DataTemplate>
                                     </GridView.ItemTemplate>
                                 </GridView>
@@ -835,7 +845,12 @@
                         RelativePanel.AlignTopWithPanel="true"
                         Command="{Binding GotoPlayerProfilePageCommand}">
                     <Grid>
-                        <Ellipse Width="64"
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Ellipse Grid.Column="0" Width="64"
                              Height="64"
                              Stroke="{Binding PlayerProfile.Team, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}"
                              StrokeThickness="2"
@@ -844,14 +859,36 @@
                                 <SolidColorBrush Opacity="0.4" Color="Black" />
                             </Ellipse.Fill>
                         </Ellipse>
-                        <Ellipse Width="64"
+                        <Ellipse Grid.Column="0" Width="64"
                              Height="64"
                              x:Name="AvatarImageEllipse">
                             <Ellipse.Fill>
                                 <ImageBrush ImageSource="../Assets/UI/avatar.png" />
                             </Ellipse.Fill>
                         </Ellipse>
-                    </Grid>
+                            <Ellipse Grid.Column="1"
+                             VerticalAlignment="Top"
+                             Width="48"
+                             Height="48"
+                             Visibility="{Binding PlayerProfile.BuddyPokemon, Converter={StaticResource BuddyIsDeployedVisibilityConverter}}"
+                             Stroke="{Binding PlayerProfile.Team, Converter={StaticResource PlayerTeamToTeamColorBrushConverter}}"
+                             StrokeThickness="2"
+                             x:Name="BuddyEllipse">
+                                <Ellipse.Fill>
+                                    <SolidColorBrush Opacity="0.4" Color="Black" />
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <Ellipse Grid.Column="1"
+                             VerticalAlignment="Top"
+                             Width="48"
+                             Height="48"
+                             Visibility="{Binding PlayerProfile.BuddyPokemon, Converter={StaticResource BuddyIsDeployedVisibilityConverter}}"
+                             x:Name="BuddyImageEllipse">
+                                <Ellipse.Fill>
+                                    <ImageBrush Stretch="Uniform" ImageSource="{Binding PlayerProfile.BuddyPokemon, Converter={StaticResource BuddyPokemonToPokemonIconConverter}}" />
+                                </Ellipse.Fill>
+                            </Ellipse>
+                        </Grid>
                 </Button>
 
                 <ProgressBar x:Name="ExperienceProgressBar" 

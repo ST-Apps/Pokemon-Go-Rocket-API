@@ -153,16 +153,16 @@
   <data name="D_ItemRazzBerry" xml:space="preserve">
     <value>Feed this to a Pokémon, and it will be easier to catch on your next throw.</value>
   </data>
-    <data name="D_ItemBlukBerry" xml:space="preserve">
+  <data name="D_ItemBlukBerry" xml:space="preserve">
     <value>Feed this to a Pokémon, and it will be easier to catch on your next throw.</value>
   </data>
-    <data name="D_ItemNanabBerry" xml:space="preserve">
+  <data name="D_ItemNanabBerry" xml:space="preserve">
     <value>Feed this to a Pokémon, and it will be easier to catch on your next throw.</value>
   </data>
-    <data name="D_ItemPinapBerry" xml:space="preserve">
+  <data name="D_ItemPinapBerry" xml:space="preserve">
     <value>Feed this to a Pokémon, and it will be easier to catch on your next throw.</value>
   </data>
-    <data name="D_ItemWeparBerry" xml:space="preserve">
+  <data name="D_ItemWeparBerry" xml:space="preserve">
     <value>Feed this to a Pokémon, and it will be easier to catch on your next throw.</value>
   </data>
   <data name="D_ItemRevive" xml:space="preserve">
@@ -272,5 +272,8 @@
   </data>
   <data name="ItemXMiracle" xml:space="preserve">
     <value>X Miracle</value>
+  </data>
+  <data name="D_ItemHyperPotion" xml:space="preserve">
+    <value>A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 200 points.</value>
   </data>
 </root>

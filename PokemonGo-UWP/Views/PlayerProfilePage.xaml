@@ -95,6 +95,36 @@
                             <TextBlock Text="Placeholder" VerticalAlignment="Center" Style="{StaticResource TextSettingsTitle}" />
                             <Image Source="ms-appx:///Assets/Buttons/btn_empty.png" Height="25" />
                         </StackPanel>
+<!--                        <StackPanel Orientation="Horizontal">
+                            <Button>
+                                <TextBlock Text="JOURNAL" VerticalAlignment="Center" Style="{StaticResource TextSettingsTitle}" />
+                                <interactivity:Interaction.Behaviors>
+                                    <core:EventTriggerBehavior EventName="Click">
+                                    </core:EventTriggerBehavior>
+                                </interactivity:Interaction.Behaviors>
+                            </Button>
+                        </StackPanel>
+-->
+<!--                        <StackPanel Orientation="Horizontal">
+                            <Button>
+                                <TextBlock Text="BUDDY" VerticalAlignment="Center" Style="{StaticResource TextSettingsTitle}" />
+                                <interactivity:Interaction.Behaviors>
+                                    <core:EventTriggerBehavior EventName="Click">
+                                    </core:EventTriggerBehavior>
+                                </interactivity:Interaction.Behaviors>
+                            </Button>
+                        </StackPanel>
+-->
+<!--                        <StackPanel Orientation="Horizontal">
+                            <Button>
+                                <TextBlock Text="CUSTOMIZE" VerticalAlignment="Center" Style="{StaticResource TextSettingsTitle}" />
+                                <interactivity:Interaction.Behaviors>
+                                    <core:EventTriggerBehavior EventName="Click">
+                                    </core:EventTriggerBehavior>
+                                </interactivity:Interaction.Behaviors>
+                            </Button>
+                        </StackPanel>
+-->
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Placeholder" VerticalAlignment="Center" Style="{StaticResource TextSettingsTitle}" />
                             <Image Source="ms-appx:///Assets/Buttons/btn_empty.png" Height="25" />
@@ -172,10 +202,29 @@
                                     
 
                                     <StackPanel Grid.Row="1">
-                                        <Image Stretch="Uniform"
-                                           Height="300"
-                                           gif:AnimationBehavior.SourceUri="/Assets/UI/avatar.gif"
-                                           x:Name="AvatarImage" />
+                                        <Grid>
+                                            <Image Stretch="Uniform"
+                                               Height="{Binding PlayerProfile.BuddyPokemon, Converter={StaticResource BuddyPokemonToBuddyPlacementConverter}, ConverterParameter = height}"
+                                               Width="{Binding PlayerProfile.BuddyPokemon, Converter={StaticResource BuddyPokemonToBuddyPlacementConverter}, ConverterParameter = width}"
+                                               Margin="{Binding PlayerProfile.BuddyPokemon, Converter={StaticResource BuddyPokemonToBuddyPlacementConverter}, ConverterParameter = margin}"
+                                               HorizontalAlignment="Left"
+                                               VerticalAlignment="{Binding PlayerProfile.BuddyPokemon, Converter={StaticResource BuddyPokemonToBuddyPlacementConverter}, ConverterParameter = valign}"
+                                               Source="{Binding PlayerProfile.BuddyPokemon, Converter={StaticResource BuddyPokemonToPokemonIconConverter}}"
+                                               x:Name="BuddyImage" />
+
+<!--                                            <Image Stretch="Uniform"
+                                               Height="100"
+                                               Margin="40,30"
+                                               HorizontalAlignment="Left"
+                                               VerticalAlignment="Bottom"
+                                               Source="{Binding PlayerProfile.BuddyPokemon, Converter={StaticResource BuddyPokemonToPokemonIconConverter}}"
+                                               x:Name="BuddyImage" />
+-->
+                                            <Image Stretch="Uniform"
+                                               Height="300"
+                                               gif:AnimationBehavior.SourceUri="/Assets/UI/avatar.gif"
+                                               x:Name="AvatarImage" />
+                                        </Grid>
                                     </StackPanel>
 
                                     <StackPanel Grid.Row="2"
@@ -226,6 +275,18 @@
                                                        Margin="5,0,0,0"
                                                        Style="{ThemeResource ProfilePageMediumText}"
                                                        FontWeight="SemiBold" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal"
+                                                    HorizontalAlignment="Center"
+                                                    Margin="0,8,0,0">
+
+                                            <TextBlock Text="{Binding PlayerStats.Experience}"
+                                                       Style="{ThemeResource TextSubTitle}"
+                                                       FontWeight="SemiLight" />
+                                            <TextBlock Text="XP"
+                                                       Margin="5,0,0,0"
+                                                       Style="{ThemeResource TextSubTitle}"
+                                                       FontWeight="SemiLight" />
                                         </StackPanel>
 
                                         <Rectangle Fill="LightGray" Margin="0,20" Height="2"/>

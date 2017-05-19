@@ -84,13 +84,13 @@ namespace PokemonGoAPI.Session
 
             switch (status)
             {
-                case StatusCode.Success:
+                case StatusCode.OK:
                     // Success!?
                     break;
-                case StatusCode.AccessDenied:
+                case StatusCode.Bad_Request:
                     // Ban?
                     throw new AccountLockedException();
-                case StatusCode.ServerOverloaded:
+                case StatusCode.Invalid_Request:
                     // Slow servers?
                     Logger.Write("Server may be slow, let's wait a little bit");
                     await Task.Delay(11000);

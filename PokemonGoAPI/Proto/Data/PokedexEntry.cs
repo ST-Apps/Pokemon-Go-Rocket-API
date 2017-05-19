@@ -23,15 +23,21 @@ namespace POGOProtos.Data {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJQT0dPUHJvdG9zL0RhdGEvUG9rZWRleEVudHJ5LnByb3RvEg9QT0dPUHJv",
-            "dG9zLkRhdGEaIFBPR09Qcm90b3MvRW51bXMvUG9rZW1vbklkLnByb3RvIqwB",
-            "CgxQb2tlZGV4RW50cnkSLwoKcG9rZW1vbl9pZBgBIAEoDjIbLlBPR09Qcm90",
-            "b3MuRW51bXMuUG9rZW1vbklkEhkKEXRpbWVzX2VuY291bnRlcmVkGAIgASgF",
-            "EhYKDnRpbWVzX2NhcHR1cmVkGAMgASgFEh4KFmV2b2x1dGlvbl9zdG9uZV9w",
-            "aWVjZXMYBCABKAUSGAoQZXZvbHV0aW9uX3N0b25lcxgFIAEoBWIGcHJvdG8z"));
+            "dG9zLkRhdGEaHlBPR09Qcm90b3MvRW51bXMvQ29zdHVtZS5wcm90bxobUE9H",
+            "T1Byb3Rvcy9FbnVtcy9Gb3JtLnByb3RvGh1QT0dPUHJvdG9zL0VudW1zL0dl",
+            "bmRlci5wcm90bxogUE9HT1Byb3Rvcy9FbnVtcy9Qb2tlbW9uSWQucHJvdG8i",
+            "3gIKDFBva2VkZXhFbnRyeRIvCgpwb2tlbW9uX2lkGAEgASgOMhsuUE9HT1By",
+            "b3Rvcy5FbnVtcy5Qb2tlbW9uSWQSGQoRdGltZXNfZW5jb3VudGVyZWQYAiAB",
+            "KAUSFgoOdGltZXNfY2FwdHVyZWQYAyABKAUSHgoWZXZvbHV0aW9uX3N0b25l",
+            "X3BpZWNlcxgEIAEoBRIYChBldm9sdXRpb25fc3RvbmVzGAUgASgFEjQKEWNh",
+            "cHR1cmVkX2Nvc3R1bWVzGAYgAygOMhkuUE9HT1Byb3Rvcy5FbnVtcy5Db3N0",
+            "dW1lEi4KDmNhcHR1cmVkX2Zvcm1zGAcgAygOMhYuUE9HT1Byb3Rvcy5FbnVt",
+            "cy5Gb3JtEjIKEGNhcHR1cmVkX2dlbmRlcnMYCCADKA4yGC5QT0dPUHJvdG9z",
+            "LkVudW1zLkdlbmRlchIWCg5jYXB0dXJlZF9zaGlueRgJIAEoCGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::POGOProtos.Enums.PokemonIdReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::POGOProtos.Enums.CostumeReflection.Descriptor, global::POGOProtos.Enums.FormReflection.Descriptor, global::POGOProtos.Enums.GenderReflection.Descriptor, global::POGOProtos.Enums.PokemonIdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Data.PokedexEntry), global::POGOProtos.Data.PokedexEntry.Parser, new[]{ "PokemonId", "TimesEncountered", "TimesCaptured", "EvolutionStonePieces", "EvolutionStones" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Data.PokedexEntry), global::POGOProtos.Data.PokedexEntry.Parser, new[]{ "PokemonId", "TimesEncountered", "TimesCaptured", "EvolutionStonePieces", "EvolutionStones", "CapturedCostumes", "CapturedForms", "CapturedGenders", "CapturedShiny" }, null, null, null)
           }));
     }
     #endregion
@@ -67,6 +73,10 @@ namespace POGOProtos.Data {
       timesCaptured_ = other.timesCaptured_;
       evolutionStonePieces_ = other.evolutionStonePieces_;
       evolutionStones_ = other.evolutionStones_;
+      capturedCostumes_ = other.capturedCostumes_.Clone();
+      capturedForms_ = other.capturedForms_.Clone();
+      capturedGenders_ = other.capturedGenders_.Clone();
+      capturedShiny_ = other.capturedShiny_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -129,6 +139,47 @@ namespace POGOProtos.Data {
       }
     }
 
+    /// <summary>Field number for the "captured_costumes" field.</summary>
+    public const int CapturedCostumesFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::POGOProtos.Enums.Costume> _repeated_capturedCostumes_codec
+        = pb::FieldCodec.ForEnum(50, x => (int) x, x => (global::POGOProtos.Enums.Costume) x);
+    private readonly pbc::RepeatedField<global::POGOProtos.Enums.Costume> capturedCostumes_ = new pbc::RepeatedField<global::POGOProtos.Enums.Costume>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::POGOProtos.Enums.Costume> CapturedCostumes {
+      get { return capturedCostumes_; }
+    }
+
+    /// <summary>Field number for the "captured_forms" field.</summary>
+    public const int CapturedFormsFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::POGOProtos.Enums.Form> _repeated_capturedForms_codec
+        = pb::FieldCodec.ForEnum(58, x => (int) x, x => (global::POGOProtos.Enums.Form) x);
+    private readonly pbc::RepeatedField<global::POGOProtos.Enums.Form> capturedForms_ = new pbc::RepeatedField<global::POGOProtos.Enums.Form>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::POGOProtos.Enums.Form> CapturedForms {
+      get { return capturedForms_; }
+    }
+
+    /// <summary>Field number for the "captured_genders" field.</summary>
+    public const int CapturedGendersFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::POGOProtos.Enums.Gender> _repeated_capturedGenders_codec
+        = pb::FieldCodec.ForEnum(66, x => (int) x, x => (global::POGOProtos.Enums.Gender) x);
+    private readonly pbc::RepeatedField<global::POGOProtos.Enums.Gender> capturedGenders_ = new pbc::RepeatedField<global::POGOProtos.Enums.Gender>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::POGOProtos.Enums.Gender> CapturedGenders {
+      get { return capturedGenders_; }
+    }
+
+    /// <summary>Field number for the "captured_shiny" field.</summary>
+    public const int CapturedShinyFieldNumber = 9;
+    private bool capturedShiny_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool CapturedShiny {
+      get { return capturedShiny_; }
+      set {
+        capturedShiny_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PokedexEntry);
@@ -147,6 +198,10 @@ namespace POGOProtos.Data {
       if (TimesCaptured != other.TimesCaptured) return false;
       if (EvolutionStonePieces != other.EvolutionStonePieces) return false;
       if (EvolutionStones != other.EvolutionStones) return false;
+      if(!capturedCostumes_.Equals(other.capturedCostumes_)) return false;
+      if(!capturedForms_.Equals(other.capturedForms_)) return false;
+      if(!capturedGenders_.Equals(other.capturedGenders_)) return false;
+      if (CapturedShiny != other.CapturedShiny) return false;
       return true;
     }
 
@@ -158,6 +213,10 @@ namespace POGOProtos.Data {
       if (TimesCaptured != 0) hash ^= TimesCaptured.GetHashCode();
       if (EvolutionStonePieces != 0) hash ^= EvolutionStonePieces.GetHashCode();
       if (EvolutionStones != 0) hash ^= EvolutionStones.GetHashCode();
+      hash ^= capturedCostumes_.GetHashCode();
+      hash ^= capturedForms_.GetHashCode();
+      hash ^= capturedGenders_.GetHashCode();
+      if (CapturedShiny != false) hash ^= CapturedShiny.GetHashCode();
       return hash;
     }
 
@@ -188,6 +247,13 @@ namespace POGOProtos.Data {
         output.WriteRawTag(40);
         output.WriteInt32(EvolutionStones);
       }
+      capturedCostumes_.WriteTo(output, _repeated_capturedCostumes_codec);
+      capturedForms_.WriteTo(output, _repeated_capturedForms_codec);
+      capturedGenders_.WriteTo(output, _repeated_capturedGenders_codec);
+      if (CapturedShiny != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(CapturedShiny);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -207,6 +273,12 @@ namespace POGOProtos.Data {
       }
       if (EvolutionStones != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(EvolutionStones);
+      }
+      size += capturedCostumes_.CalculateSize(_repeated_capturedCostumes_codec);
+      size += capturedForms_.CalculateSize(_repeated_capturedForms_codec);
+      size += capturedGenders_.CalculateSize(_repeated_capturedGenders_codec);
+      if (CapturedShiny != false) {
+        size += 1 + 1;
       }
       return size;
     }
@@ -230,6 +302,12 @@ namespace POGOProtos.Data {
       }
       if (other.EvolutionStones != 0) {
         EvolutionStones = other.EvolutionStones;
+      }
+      capturedCostumes_.Add(other.capturedCostumes_);
+      capturedForms_.Add(other.capturedForms_);
+      capturedGenders_.Add(other.capturedGenders_);
+      if (other.CapturedShiny != false) {
+        CapturedShiny = other.CapturedShiny;
       }
     }
 
@@ -259,6 +337,25 @@ namespace POGOProtos.Data {
           }
           case 40: {
             EvolutionStones = input.ReadInt32();
+            break;
+          }
+          case 50:
+          case 48: {
+            capturedCostumes_.AddEntriesFrom(input, _repeated_capturedCostumes_codec);
+            break;
+          }
+          case 58:
+          case 56: {
+            capturedForms_.AddEntriesFrom(input, _repeated_capturedForms_codec);
+            break;
+          }
+          case 66:
+          case 64: {
+            capturedGenders_.AddEntriesFrom(input, _repeated_capturedGenders_codec);
+            break;
+          }
+          case 72: {
+            CapturedShiny = input.ReadBool();
             break;
           }
         }

@@ -28,8 +28,8 @@
             <Grid Margin="8,4,8,4" 
                   MinWidth="64" 
                   MinHeight="64" 
-                  MaxWidth="92" 
-                  MaxHeight="92" 
+                  MaxWidth="72" 
+                  MaxHeight="72" 
                   Tapped="EvolutionTapped">
                 <Grid.Width>
                     <Binding Converter="{StaticResource WidthConverter}" 
@@ -82,8 +82,8 @@
             <Grid Margin="8,4,8,4" 
                   MinWidth="64" 
                   MinHeight="64" 
-                  MaxWidth="92" 
-                  MaxHeight="92">
+                  MaxWidth="72" 
+                  MaxHeight="72">
                 <Grid.Width>
                     <Binding Converter="{StaticResource WidthConverter}" 
                              Source="{StaticResource MinItemsForRow}" 

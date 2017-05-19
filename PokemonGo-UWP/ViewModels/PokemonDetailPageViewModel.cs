@@ -139,6 +139,7 @@ namespace PokemonGo_UWP.ViewModels
                 FavoritePokemonCommand.RaiseCanExecuteChanged();
                 PowerUpPokemonCommand.RaiseCanExecuteChanged();
                 EvolvePokemonCommand.RaiseCanExecuteChanged();
+                BuddyPokemonCommand.RaiseCanExecuteChanged();
                 TransferPokemonCommand.RaiseCanExecuteChanged();
             }
         }
@@ -165,6 +166,7 @@ namespace PokemonGo_UWP.ViewModels
                 Set(ref _selectedPokemon, value);
                 PowerUpPokemonCommand.RaiseCanExecuteChanged();
                 EvolvePokemonCommand.RaiseCanExecuteChanged();
+                BuddyPokemonCommand.RaiseCanExecuteChanged();
             }
         }
 
@@ -356,6 +358,74 @@ namespace PokemonGo_UWP.ViewModels
           }, () => !ServerRequestRunning));
 
         #endregion
+
+        #region Buddy
+
+        private DelegateCommand _BuddyPokemonCommand;
+
+        public DelegateCommand BuddyPokemonCommand => _BuddyPokemonCommand ?? (
+          _BuddyPokemonCommand = new DelegateCommand(() =>
+          {
+              //var textbox = new TextboxMessageDialog(SelectedPokemon.Name, 12);
+              //var dialog = new PoGoMessageDialog("", Resources.CodeResources.GetString("SetNickName"))
+              var dialog = new PoGoMessageDialog("", "Do you want to set this pokemon as your new Buddy?")
+              {
+                  AcceptText = Resources.CodeResources.GetString("OkText"),
+                  CancelText = Resources.CodeResources.GetString("CancelText"),
+                  CoverBackground = true,
+                  BackgroundTapInvokesCancel = true,
+                  AnimationType = PoGoMessageDialogAnimation.Bottom
+              };
+
+//              dialog.AppearCompleted += (sender, e) =>
+//              {
+//                  textbox.SelectAllOnTextBoxFocus = true;
+//                  textbox.FocusTextbox(FocusState.Programmatic);
+//              };
+              dialog.AcceptInvoked += async (sender, e) =>
+              {
+
+                  try
+                  {
+                      ServerRequestRunning = true;
+                      var isBuddy = Convert.ToBoolean(SelectedPokemon.IsBuddy);
+                      // Use local var to prevent bug when changing selected pokemon during running request
+                      var buddyPokemon = SelectedPokemon;
+                      var pokemonBuddyResponse = await GameClient.SetBuddyPokemon(buddyPokemon.Id);
+                      switch (pokemonBuddyResponse.Result)
+                      {
+                          case SetBuddyPokemonResponse.Types.Result.Success:
+                              // clear previous buddy
+                              //var id = (PokemonDataWrapper)GameClient.PokemonsInventory.FirstOrDefault(item => item.is
+                              // Set new buddy
+                              //buddyPokemon.IsBuddy = true;
+                              var dlg = new MessageDialog("New Buddy set successfully", "Set Buddy");
+                              await dlg.ShowAsync();
+                              await GameClient.UpdateProfile();
+                              await GameClient.UpdatePlayerStats(false);
+                              //GameClient.UpdateInventory;
+                              break;
+                          case SetBuddyPokemonResponse.Types.Result.Unest:
+                          case SetBuddyPokemonResponse.Types.Result.ErrorPokemonDeployed:
+                          case SetBuddyPokemonResponse.Types.Result.ErrorPokemonIsEgg:
+                          case SetBuddyPokemonResponse.Types.Result.ErrorPokemonNotOwned:
+                          default:
+                              throw new ArgumentOutOfRangeException();
+                      }
+                  }
+                  finally
+                  {
+                      ServerRequestRunning = false;
+                  }
+              };
+
+              dialog.Show();
+
+      }, () => true));
+
+        #endregion
+
+
 
         #region Rename
 

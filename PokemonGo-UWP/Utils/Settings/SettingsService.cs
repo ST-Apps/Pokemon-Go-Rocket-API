@@ -103,10 +103,15 @@ namespace PokemonGo_UWP.Utils
 			}
 		}
 
-		#endregion
+        public string PokehashAuthKey
+        {
+            get { return Get(string.Empty); }
+            set { Set(value); }
+        }
+        #endregion
 
-		#region Game
-		public MapAutomaticOrientationModes MapAutomaticOrientationMode
+        #region Game
+        public MapAutomaticOrientationModes MapAutomaticOrientationMode
 		{
 			get { return Get(MapAutomaticOrientationModes.None); }
 			set { Set(value); }

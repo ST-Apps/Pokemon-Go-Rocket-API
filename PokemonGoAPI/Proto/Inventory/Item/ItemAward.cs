@@ -24,13 +24,13 @@ namespace POGOProtos.Inventory.Item {
           string.Concat(
             "CilQT0dPUHJvdG9zL0ludmVudG9yeS9JdGVtL0l0ZW1Bd2FyZC5wcm90bxIZ",
             "UE9HT1Byb3Rvcy5JbnZlbnRvcnkuSXRlbRomUE9HT1Byb3Rvcy9JbnZlbnRv",
-            "cnkvSXRlbS9JdGVtSWQucHJvdG8iUwoJSXRlbUF3YXJkEjIKB2l0ZW1faWQY",
+            "cnkvSXRlbS9JdGVtSWQucHJvdG8iaAoJSXRlbUF3YXJkEjIKB2l0ZW1faWQY",
             "ASABKA4yIS5QT0dPUHJvdG9zLkludmVudG9yeS5JdGVtLkl0ZW1JZBISCgpp",
-            "dGVtX2NvdW50GAIgASgFYgZwcm90bzM="));
+            "dGVtX2NvdW50GAIgASgFEhMKC2JvbnVzX2NvdW50GAMgASgFYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Inventory.Item.ItemIdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Inventory.Item.ItemAward), global::POGOProtos.Inventory.Item.ItemAward.Parser, new[]{ "ItemId", "ItemCount" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Inventory.Item.ItemAward), global::POGOProtos.Inventory.Item.ItemAward.Parser, new[]{ "ItemId", "ItemCount", "BonusCount" }, null, null, null)
           }));
     }
     #endregion
@@ -63,6 +63,7 @@ namespace POGOProtos.Inventory.Item {
     public ItemAward(ItemAward other) : this() {
       itemId_ = other.itemId_;
       itemCount_ = other.itemCount_;
+      bonusCount_ = other.bonusCount_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -92,6 +93,17 @@ namespace POGOProtos.Inventory.Item {
       }
     }
 
+    /// <summary>Field number for the "bonus_count" field.</summary>
+    public const int BonusCountFieldNumber = 3;
+    private int bonusCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int BonusCount {
+      get { return bonusCount_; }
+      set {
+        bonusCount_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ItemAward);
@@ -107,6 +119,7 @@ namespace POGOProtos.Inventory.Item {
       }
       if (ItemId != other.ItemId) return false;
       if (ItemCount != other.ItemCount) return false;
+      if (BonusCount != other.BonusCount) return false;
       return true;
     }
 
@@ -115,6 +128,7 @@ namespace POGOProtos.Inventory.Item {
       int hash = 1;
       if (ItemId != 0) hash ^= ItemId.GetHashCode();
       if (ItemCount != 0) hash ^= ItemCount.GetHashCode();
+      if (BonusCount != 0) hash ^= BonusCount.GetHashCode();
       return hash;
     }
 
@@ -133,6 +147,10 @@ namespace POGOProtos.Inventory.Item {
         output.WriteRawTag(16);
         output.WriteInt32(ItemCount);
       }
+      if (BonusCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(BonusCount);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -143,6 +161,9 @@ namespace POGOProtos.Inventory.Item {
       }
       if (ItemCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ItemCount);
+      }
+      if (BonusCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(BonusCount);
       }
       return size;
     }
@@ -157,6 +178,9 @@ namespace POGOProtos.Inventory.Item {
       }
       if (other.ItemCount != 0) {
         ItemCount = other.ItemCount;
+      }
+      if (other.BonusCount != 0) {
+        BonusCount = other.BonusCount;
       }
     }
 
@@ -174,6 +198,10 @@ namespace POGOProtos.Inventory.Item {
           }
           case 16: {
             ItemCount = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            BonusCount = input.ReadInt32();
             break;
           }
         }

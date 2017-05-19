@@ -135,12 +135,25 @@
     <Compile Include="Helpers\Crypt\Shuffle2.cs" />
     <Compile Include="Helpers\Crypt\Unshuffle.cs" />
     <Compile Include="Helpers\Crypt\Unshuffle2.cs" />
+    <Compile Include="Helpers\Hash\HashData.cs" />
+    <Compile Include="Helpers\Hash\HashVersionMismatchException.cs" />
+    <Compile Include="Helpers\Hash\IHasher.cs" />
+    <Compile Include="Helpers\Hash\Legacy\LegacyHasher.cs" />
+    <Compile Include="Helpers\Hash\Legacy\NiaHashLegacy.cs" />
+    <Compile Include="Helpers\Hash\Legacy\PCryptLegacy.cs" />
+    <Compile Include="Helpers\Hash\Legacy\ShufflesLegacy.cs" />
+    <Compile Include="Helpers\Hash\PCryptPokeHash.cs" />
+    <Compile Include="Helpers\Hash\PokeHashHasher.cs" />
+    <Compile Include="Helpers\Hash\PokeHash\PokeHashAuthKey.cs" />
+    <Compile Include="Helpers\Hash\PokeHash\PokeHashRequest.cs" />
+    <Compile Include="Helpers\Hash\PokeHash\PokeHashResponse.cs" />
     <Compile Include="Helpers\IDeviceInfos.cs" />
     <Compile Include="Helpers\JsonHelper.cs" />
     <Compile Include="Helpers\RandomHelper.cs" />
     <Compile Include="Helpers\RequestBuilder.cs" />
     <Compile Include="Helpers\RetryHandler.cs" />
     <Compile Include="Helpers\S2Helper.cs" />
+    <Compile Include="Helpers\TimeUtil.cs" />
     <Compile Include="Helpers\UInt128.cs" />
     <Compile Include="Helpers\Utils.cs" />
     <Compile Include="Helpers\Vector.cs" />
@@ -156,9 +169,28 @@
     <Compile Include="Login\PtcLogin.cs" />
     <Compile Include="Login\PtcLoginParameters.cs" />
     <Compile Include="PokemonGoApiClient.Events.Generated.cs" />
+    <Compile Include="Proto\Data\Avatar\AvatarCustomization.cs" />
+    <Compile Include="Proto\Data\Avatar\AvatarItem.cs" />
+    <Compile Include="Proto\Data\BackgroundToken.cs" />
+    <Compile Include="Proto\Data\Badge\BadgeCaptureReward.cs" />
     <Compile Include="Proto\Data\BuddyPokemon.cs" />
+    <Compile Include="Proto\Data\ClientVersion.cs" />
     <Compile Include="Proto\Data\Logs\BuddyPokemonLogEntry.cs" />
-    <Compile Include="Proto\Networking\Envelopes\Signature.cs" />
+    <Compile Include="Proto\Data\Player\PlayerAvatarType.cs" />
+    <Compile Include="Proto\Data\PokemonDisplay.cs" />
+    <Compile Include="Proto\Data\Quests\DailyQuest.cs" />
+    <Compile Include="Proto\Data\Quests\Quest.cs" />
+    <Compile Include="Proto\Enums\ActivityType.cs" />
+    <Compile Include="Proto\Enums\Costume.cs" />
+    <Compile Include="Proto\Enums\EncounterType.cs" />
+    <Compile Include="Proto\Enums\Filter.cs" />
+    <Compile Include="Proto\Enums\Form.cs" />
+    <Compile Include="Proto\Enums\PokemonFamilyId.cs" />
+    <Compile Include="Proto\Enums\PokemonId.cs" />
+    <Compile Include="Proto\Enums\PokemonMove.cs" />
+    <Compile Include="Proto\Enums\QuestType.cs" />
+    <Compile Include="Proto\Enums\Slot.cs" />
+    <Compile Include="Proto\Inventory\InventoryKey.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proto\Data\AssetDigestEntry.cs" />
     <Compile Include="Proto\Data\Battle\BattleAction.cs" />
@@ -190,7 +222,6 @@
     <Compile Include="Proto\Data\Player\PlayerStats.cs" />
     <Compile Include="Proto\Data\PokedexEntry.cs" />
     <Compile Include="Proto\Data\PokemonData.cs" />
-    <Compile Include="Proto\Enums\ActivityType.cs" />
     <Compile Include="Proto\Enums\BadgeType.cs" />
     <Compile Include="Proto\Enums\CameraInterpolation.cs" />
     <Compile Include="Proto\Enums\CameraTarget.cs" />
@@ -199,9 +230,6 @@
     <Compile Include="Proto\Enums\ItemCategory.cs" />
     <Compile Include="Proto\Enums\ItemEffect.cs" />
     <Compile Include="Proto\Enums\Platform.cs" />
-    <Compile Include="Proto\Enums\PokemonFamilyId.cs" />
-    <Compile Include="Proto\Enums\PokemonId.cs" />
-    <Compile Include="Proto\Enums\PokemonMove.cs" />
     <Compile Include="Proto\Enums\PokemonMovementType.cs" />
     <Compile Include="Proto\Enums\PokemonRarity.cs" />
     <Compile Include="Proto\Enums\PokemonType.cs" />
@@ -239,13 +267,22 @@
     <Compile Include="Proto\Networking\Envelopes\AuthTicket.cs" />
     <Compile Include="Proto\Networking\Envelopes\RequestEnvelope.cs" />
     <Compile Include="Proto\Networking\Envelopes\ResponseEnvelope.cs" />
+    <Compile Include="Proto\Networking\Envelopes\Signature.cs" />
     <Compile Include="Proto\Networking\Envelopes\Unknown6.cs" />
     <Compile Include="Proto\Networking\Envelopes\Unknown6Response.cs" />
+    <Compile Include="Proto\Networking\Platform\PlatformRequestType.cs" />
+    <Compile Include="Proto\Networking\Platform\Requests\BuyItemAndroidRequest.cs" />
+    <Compile Include="Proto\Networking\Platform\Requests\BuyItemPokeCoinsRequest.cs" />
+    <Compile Include="Proto\Networking\Platform\Requests\SendEncryptedSignatureRequest.cs" />
+    <Compile Include="Proto\Networking\Platform\Responses\BuyItemAndroidResponse.cs" />
+    <Compile Include="Proto\Networking\Platform\Responses\BuyItemPokeCoinsResponse.cs" />
+    <Compile Include="Proto\Networking\Platform\Responses\GetStoreItemsResponse.cs" />
+    <Compile Include="Proto\Networking\Platform\Responses\SendEncryptedSignatureResponse.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\AddFortModifierMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\AttackGymMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\CatchPokemonMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\CheckAwardedBadgesMessage.cs" />
-    <Compile Include="Proto\Networking\Requests\Messages\CheckChallenge.cs" />
+    <Compile Include="Proto\Networking\Requests\Messages\CheckChallengeMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\CheckCodenameAvailableMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\ClaimCodenameMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\CollectDailyBonusMessage.cs" />
@@ -264,7 +301,7 @@
     <Compile Include="Proto\Networking\Requests\Messages\FortRecallPokemonMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\FortSearchMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\GetAssetDigestMessage.cs" />
-    <Compile Include="Proto\Networking\Requests\Messages\GetBuddyWalked.cs" />
+    <Compile Include="Proto\Networking\Requests\Messages\GetBuddyWalkedMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\GetDownloadUrlsMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\GetGymDetailsMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\GetHatchedEggsMessage.cs" />
@@ -276,13 +313,17 @@
     <Compile Include="Proto\Networking\Requests\Messages\GetSuggestedCodenamesMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\IncenseEncounterMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\LevelUpRewardsMessage.cs" />
+    <Compile Include="Proto\Networking\Requests\Messages\ListAvatarCustomizationsMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\MarkTutorialCompleteMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\NicknamePokemonMessage.cs" />
+    <Compile Include="Proto\Networking\Requests\Messages\PlayerLocaleMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\PlayerUpdateMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\RecycleInventoryItemMessage.cs" />
+    <Compile Include="Proto\Networking\Requests\Messages\RegisterBackgroundDeviceMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\ReleasePokemonMessage.cs" />
+    <Compile Include="Proto\Networking\Requests\Messages\SetAvatarItemAsViewedMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\SetAvatarMessage.cs" />
-    <Compile Include="Proto\Networking\Requests\Messages\SetBuddyPokemon.cs" />
+    <Compile Include="Proto\Networking\Requests\Messages\SetBuddyPokemonMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\SetContactSettingsMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\SetFavoritePokemonMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\SetPlayerTeamMessage.cs" />
@@ -296,7 +337,7 @@
     <Compile Include="Proto\Networking\Requests\Messages\UseItemPotionMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\UseItemReviveMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Messages\UseItemXpBoostMessage.cs" />
-    <Compile Include="Proto\Networking\Requests\Messages\VerifyChallenge.cs" />
+    <Compile Include="Proto\Networking\Requests\Messages\VerifyChallengeMessage.cs" />
     <Compile Include="Proto\Networking\Requests\Request.cs" />
     <Compile Include="Proto\Networking\Requests\RequestType.cs" />
     <Compile Include="Proto\Networking\Responses\AddFortModifierResponse.cs" />
@@ -334,11 +375,14 @@
     <Compile Include="Proto\Networking\Responses\GetSuggestedCodenamesResponse.cs" />
     <Compile Include="Proto\Networking\Responses\IncenseEncounterResponse.cs" />
     <Compile Include="Proto\Networking\Responses\LevelUpRewardsResponse.cs" />
+    <Compile Include="Proto\Networking\Responses\ListAvatarCustomizationsResponse.cs" />
     <Compile Include="Proto\Networking\Responses\MarkTutorialCompleteResponse.cs" />
     <Compile Include="Proto\Networking\Responses\NicknamePokemonResponse.cs" />
     <Compile Include="Proto\Networking\Responses\PlayerUpdateResponse.cs" />
     <Compile Include="Proto\Networking\Responses\RecycleInventoryItemResponse.cs" />
+    <Compile Include="Proto\Networking\Responses\RegisterBackgroundDeviceResponse.cs" />
     <Compile Include="Proto\Networking\Responses\ReleasePokemonResponse.cs" />
+    <Compile Include="Proto\Networking\Responses\SetAvatarItemAsViewedResponse.cs" />
     <Compile Include="Proto\Networking\Responses\SetAvatarResponse.cs" />
     <Compile Include="Proto\Networking\Responses\SetBuddyPokemonResponse.cs" />
     <Compile Include="Proto\Networking\Responses\SetContactSettingsResponse.cs" />
@@ -356,16 +400,20 @@
     <Compile Include="Proto\Networking\Responses\UseItemXpBoostResponse.cs" />
     <Compile Include="Proto\Networking\Responses\VerifyChallengeResponse.cs" />
     <Compile Include="Proto\Settings\DownloadSettingsAction.cs" />
+    <Compile Include="Proto\Settings\EventSettings.cs" />
+    <Compile Include="Proto\Settings\FestivalSettings.cs" />
     <Compile Include="Proto\Settings\FortSettings.cs" />
     <Compile Include="Proto\Settings\GlobalSettings.cs" />
     <Compile Include="Proto\Settings\GpsSettings.cs" />
     <Compile Include="Proto\Settings\InventorySettings.cs" />
     <Compile Include="Proto\Settings\LevelSettings.cs" />
     <Compile Include="Proto\Settings\MapSettings.cs" />
+    <Compile Include="Proto\Settings\Master\AvatarCustomizationSettings.cs" />
     <Compile Include="Proto\Settings\Master\BadgeSettings.cs" />
     <Compile Include="Proto\Settings\Master\CameraSettings.cs" />
     <Compile Include="Proto\Settings\Master\EncounterSettings.cs" />
     <Compile Include="Proto\Settings\Master\EquippedBadgeSettings.cs" />
+    <Compile Include="Proto\Settings\Master\FormSettings.cs" />
     <Compile Include="Proto\Settings\Master\GymBattleSettings.cs" />
     <Compile Include="Proto\Settings\Master\GymLevelSettings.cs" />
     <Compile Include="Proto\Settings\Master\IapItemDisplay.cs" />
@@ -388,8 +436,13 @@
     <Compile Include="Proto\Settings\Master\PokemonUpgradeSettings.cs" />
     <Compile Include="Proto\Settings\Master\Pokemon\CameraAttributes.cs" />
     <Compile Include="Proto\Settings\Master\Pokemon\EncounterAttributes.cs" />
+    <Compile Include="Proto\Settings\Master\Pokemon\EvolutionBranch.cs" />
     <Compile Include="Proto\Settings\Master\Pokemon\StatsAttributes.cs" />
+    <Compile Include="Proto\Settings\Master\QuestSettings.cs" />
+    <Compile Include="Proto\Settings\Master\Quest\DailyQuestSettings.cs" />
     <Compile Include="Proto\Settings\Master\TypeEffectiveSettings.cs" />
+    <Compile Include="Proto\Settings\NewsSettings.cs" />
+    <Compile Include="Proto\Settings\SfidaSettings.cs" />
     <Compile Include="Resources.cs" />
     <Compile Include="Rpc\BaseRpc.cs" />
     <Compile Include="Rpc\Download.cs" />
@@ -410,6 +463,7 @@
       <Name>Google.Protobuf</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

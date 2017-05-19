@@ -328,7 +328,7 @@ You also got {1} Stardust, {2} Candy and {3} XP.</value>
     <value>Set Nickname</value>
   </data>
   <data name="OkText" xml:space="preserve">
-    <value>O. K.</value>
+    <value>OK</value>
     <comment>Space between . and K</comment>
   </data>
   <data name="PokemonEncounterErrorText" xml:space="preserve">
@@ -355,5 +355,14 @@ You also got {1} Stardust, {2} Candy and {3} XP.</value>
   </data>
   <data name="ItemUseQuestionText" xml:space="preserve">
     <value>Use {0} ?</value>
+  </data>
+  <data name="ActivityCatchFirstCatchStreakBonus" xml:space="preserve">
+    <value>Streak Bonus</value>
+  </data>
+  <data name="ActivitySearchFortFirstOfTheDay" xml:space="preserve">
+    <value>First Pokéstop of the day</value>
+  </data>
+  <data name="ActivitySearchFortStreakBonus" xml:space="preserve">
+    <value>Streak Bonus</value>
   </data>
 </root>

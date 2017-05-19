@@ -24,21 +24,19 @@ namespace POGOProtos.Networking.Requests.Messages {
           string.Concat(
             "CkpQT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVxdWVzdHMvTWVzc2FnZXMvRG93",
             "bmxvYWRJdGVtVGVtcGxhdGVzTWVzc2FnZS5wcm90bxInUE9HT1Byb3Rvcy5O",
-            "ZXR3b3JraW5nLlJlcXVlc3RzLk1lc3NhZ2VzIh4KHERvd25sb2FkSXRlbVRl",
-            "bXBsYXRlc01lc3NhZ2ViBnByb3RvMw=="));
+            "ZXR3b3JraW5nLlJlcXVlc3RzLk1lc3NhZ2VzIl0KHERvd25sb2FkSXRlbVRl",
+            "bXBsYXRlc01lc3NhZ2USEAoIcGFnaW5hdGUYASABKAgSEwoLcGFnZV9vZmZz",
+            "ZXQYAiABKAUSFgoOcGFnZV90aW1lc3RhbXAYAyABKARiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Requests.Messages.DownloadItemTemplatesMessage), global::POGOProtos.Networking.Requests.Messages.DownloadItemTemplatesMessage.Parser, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Requests.Messages.DownloadItemTemplatesMessage), global::POGOProtos.Networking.Requests.Messages.DownloadItemTemplatesMessage.Parser, new[]{ "Paginate", "PageOffset", "PageTimestamp" }, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  /// <summary>
-  ///  No message needed.
-  /// </summary>
   public sealed partial class DownloadItemTemplatesMessage : pb::IMessage<DownloadItemTemplatesMessage> {
     private static readonly pb::MessageParser<DownloadItemTemplatesMessage> _parser = new pb::MessageParser<DownloadItemTemplatesMessage>(() => new DownloadItemTemplatesMessage());
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -63,11 +61,47 @@ namespace POGOProtos.Networking.Requests.Messages {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DownloadItemTemplatesMessage(DownloadItemTemplatesMessage other) : this() {
+      paginate_ = other.paginate_;
+      pageOffset_ = other.pageOffset_;
+      pageTimestamp_ = other.pageTimestamp_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DownloadItemTemplatesMessage Clone() {
       return new DownloadItemTemplatesMessage(this);
+    }
+
+    /// <summary>Field number for the "paginate" field.</summary>
+    public const int PaginateFieldNumber = 1;
+    private bool paginate_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Paginate {
+      get { return paginate_; }
+      set {
+        paginate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_offset" field.</summary>
+    public const int PageOffsetFieldNumber = 2;
+    private int pageOffset_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PageOffset {
+      get { return pageOffset_; }
+      set {
+        pageOffset_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_timestamp" field.</summary>
+    public const int PageTimestampFieldNumber = 3;
+    private ulong pageTimestamp_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ulong PageTimestamp {
+      get { return pageTimestamp_; }
+      set {
+        pageTimestamp_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -83,12 +117,18 @@ namespace POGOProtos.Networking.Requests.Messages {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Paginate != other.Paginate) return false;
+      if (PageOffset != other.PageOffset) return false;
+      if (PageTimestamp != other.PageTimestamp) return false;
       return true;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (Paginate != false) hash ^= Paginate.GetHashCode();
+      if (PageOffset != 0) hash ^= PageOffset.GetHashCode();
+      if (PageTimestamp != 0UL) hash ^= PageTimestamp.GetHashCode();
       return hash;
     }
 
@@ -99,11 +139,32 @@ namespace POGOProtos.Networking.Requests.Messages {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+      if (Paginate != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Paginate);
+      }
+      if (PageOffset != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageOffset);
+      }
+      if (PageTimestamp != 0UL) {
+        output.WriteRawTag(24);
+        output.WriteUInt64(PageTimestamp);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (Paginate != false) {
+        size += 1 + 1;
+      }
+      if (PageOffset != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageOffset);
+      }
+      if (PageTimestamp != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(PageTimestamp);
+      }
       return size;
     }
 
@@ -111,6 +172,15 @@ namespace POGOProtos.Networking.Requests.Messages {
     public void MergeFrom(DownloadItemTemplatesMessage other) {
       if (other == null) {
         return;
+      }
+      if (other.Paginate != false) {
+        Paginate = other.Paginate;
+      }
+      if (other.PageOffset != 0) {
+        PageOffset = other.PageOffset;
+      }
+      if (other.PageTimestamp != 0UL) {
+        PageTimestamp = other.PageTimestamp;
       }
     }
 
@@ -122,6 +192,18 @@ namespace POGOProtos.Networking.Requests.Messages {
           default:
             input.SkipLastField();
             break;
+          case 8: {
+            Paginate = input.ReadBool();
+            break;
+          }
+          case 16: {
+            PageOffset = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            PageTimestamp = input.ReadUInt64();
+            break;
+          }
         }
       }
     }

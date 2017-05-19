@@ -286,6 +286,10 @@ namespace PokemonGo_UWP.Views
                 {
                     // Set player icon's position
                     MapControl.SetLocation(PlayerImage, LocationServiceHelper.Instance.Geoposition.Coordinate.Point);
+                    // Update Day/Night theme
+                    GameMapControl.ColorScheme = ViewModel.CurrentTheme == ElementTheme.Dark
+                        ? MapColorScheme.Dark
+                        : MapColorScheme.Light;
 
                     // Update angle and center only if map is not being manipulated
                     if (lastAutoPosition == null)

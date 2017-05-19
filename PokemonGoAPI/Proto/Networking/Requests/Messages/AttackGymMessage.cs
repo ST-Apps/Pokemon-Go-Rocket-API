@@ -25,16 +25,16 @@ namespace POGOProtos.Networking.Requests.Messages {
             "Cj5QT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVxdWVzdHMvTWVzc2FnZXMvQXR0",
             "YWNrR3ltTWVzc2FnZS5wcm90bxInUE9HT1Byb3Rvcy5OZXR3b3JraW5nLlJl",
             "cXVlc3RzLk1lc3NhZ2VzGilQT0dPUHJvdG9zL0RhdGEvQmF0dGxlL0JhdHRs",
-            "ZUFjdGlvbi5wcm90byLsAQoQQXR0YWNrR3ltTWVzc2FnZRIOCgZneW1faWQY",
+            "ZUFjdGlvbi5wcm90byLrAQoQQXR0YWNrR3ltTWVzc2FnZRIOCgZneW1faWQY",
             "ASABKAkSEQoJYmF0dGxlX2lkGAIgASgJEjwKDmF0dGFja19hY3Rpb25zGAMg",
-            "AygLMiQuUE9HT1Byb3Rvcy5EYXRhLkJhdHRsZS5CYXR0bGVBY3Rpb24SRAoW",
-            "bGFzdF9yZXRyaWV2ZWRfYWN0aW9ucxgEIAEoCzIkLlBPR09Qcm90b3MuRGF0",
-            "YS5CYXR0bGUuQmF0dGxlQWN0aW9uEhcKD3BsYXllcl9sYXRpdHVkZRgFIAEo",
-            "ARIYChBwbGF5ZXJfbG9uZ2l0dWRlGAYgASgBYgZwcm90bzM="));
+            "AygLMiQuUE9HT1Byb3Rvcy5EYXRhLkJhdHRsZS5CYXR0bGVBY3Rpb24SQwoV",
+            "bGFzdF9yZXRyaWV2ZWRfYWN0aW9uGAQgASgLMiQuUE9HT1Byb3Rvcy5EYXRh",
+            "LkJhdHRsZS5CYXR0bGVBY3Rpb24SFwoPcGxheWVyX2xhdGl0dWRlGAUgASgB",
+            "EhgKEHBsYXllcl9sb25naXR1ZGUYBiABKAFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Data.Battle.BattleActionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Requests.Messages.AttackGymMessage), global::POGOProtos.Networking.Requests.Messages.AttackGymMessage.Parser, new[]{ "GymId", "BattleId", "AttackActions", "LastRetrievedActions", "PlayerLatitude", "PlayerLongitude" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Requests.Messages.AttackGymMessage), global::POGOProtos.Networking.Requests.Messages.AttackGymMessage.Parser, new[]{ "GymId", "BattleId", "AttackActions", "LastRetrievedAction", "PlayerLatitude", "PlayerLongitude" }, null, null, null)
           }));
     }
     #endregion
@@ -68,7 +68,7 @@ namespace POGOProtos.Networking.Requests.Messages {
       gymId_ = other.gymId_;
       battleId_ = other.battleId_;
       attackActions_ = other.attackActions_.Clone();
-      LastRetrievedActions = other.lastRetrievedActions_ != null ? other.LastRetrievedActions.Clone() : null;
+      LastRetrievedAction = other.lastRetrievedAction_ != null ? other.LastRetrievedAction.Clone() : null;
       playerLatitude_ = other.playerLatitude_;
       playerLongitude_ = other.playerLongitude_;
     }
@@ -110,14 +110,14 @@ namespace POGOProtos.Networking.Requests.Messages {
       get { return attackActions_; }
     }
 
-    /// <summary>Field number for the "last_retrieved_actions" field.</summary>
-    public const int LastRetrievedActionsFieldNumber = 4;
-    private global::POGOProtos.Data.Battle.BattleAction lastRetrievedActions_;
+    /// <summary>Field number for the "last_retrieved_action" field.</summary>
+    public const int LastRetrievedActionFieldNumber = 4;
+    private global::POGOProtos.Data.Battle.BattleAction lastRetrievedAction_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::POGOProtos.Data.Battle.BattleAction LastRetrievedActions {
-      get { return lastRetrievedActions_; }
+    public global::POGOProtos.Data.Battle.BattleAction LastRetrievedAction {
+      get { return lastRetrievedAction_; }
       set {
-        lastRetrievedActions_ = value;
+        lastRetrievedAction_ = value;
       }
     }
 
@@ -159,7 +159,7 @@ namespace POGOProtos.Networking.Requests.Messages {
       if (GymId != other.GymId) return false;
       if (BattleId != other.BattleId) return false;
       if(!attackActions_.Equals(other.attackActions_)) return false;
-      if (!object.Equals(LastRetrievedActions, other.LastRetrievedActions)) return false;
+      if (!object.Equals(LastRetrievedAction, other.LastRetrievedAction)) return false;
       if (PlayerLatitude != other.PlayerLatitude) return false;
       if (PlayerLongitude != other.PlayerLongitude) return false;
       return true;
@@ -171,7 +171,7 @@ namespace POGOProtos.Networking.Requests.Messages {
       if (GymId.Length != 0) hash ^= GymId.GetHashCode();
       if (BattleId.Length != 0) hash ^= BattleId.GetHashCode();
       hash ^= attackActions_.GetHashCode();
-      if (lastRetrievedActions_ != null) hash ^= LastRetrievedActions.GetHashCode();
+      if (lastRetrievedAction_ != null) hash ^= LastRetrievedAction.GetHashCode();
       if (PlayerLatitude != 0D) hash ^= PlayerLatitude.GetHashCode();
       if (PlayerLongitude != 0D) hash ^= PlayerLongitude.GetHashCode();
       return hash;
@@ -193,9 +193,9 @@ namespace POGOProtos.Networking.Requests.Messages {
         output.WriteString(BattleId);
       }
       attackActions_.WriteTo(output, _repeated_attackActions_codec);
-      if (lastRetrievedActions_ != null) {
+      if (lastRetrievedAction_ != null) {
         output.WriteRawTag(34);
-        output.WriteMessage(LastRetrievedActions);
+        output.WriteMessage(LastRetrievedAction);
       }
       if (PlayerLatitude != 0D) {
         output.WriteRawTag(41);
@@ -217,8 +217,8 @@ namespace POGOProtos.Networking.Requests.Messages {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(BattleId);
       }
       size += attackActions_.CalculateSize(_repeated_attackActions_codec);
-      if (lastRetrievedActions_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastRetrievedActions);
+      if (lastRetrievedAction_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastRetrievedAction);
       }
       if (PlayerLatitude != 0D) {
         size += 1 + 8;
@@ -241,11 +241,11 @@ namespace POGOProtos.Networking.Requests.Messages {
         BattleId = other.BattleId;
       }
       attackActions_.Add(other.attackActions_);
-      if (other.lastRetrievedActions_ != null) {
-        if (lastRetrievedActions_ == null) {
-          lastRetrievedActions_ = new global::POGOProtos.Data.Battle.BattleAction();
+      if (other.lastRetrievedAction_ != null) {
+        if (lastRetrievedAction_ == null) {
+          lastRetrievedAction_ = new global::POGOProtos.Data.Battle.BattleAction();
         }
-        LastRetrievedActions.MergeFrom(other.LastRetrievedActions);
+        LastRetrievedAction.MergeFrom(other.LastRetrievedAction);
       }
       if (other.PlayerLatitude != 0D) {
         PlayerLatitude = other.PlayerLatitude;
@@ -276,10 +276,10 @@ namespace POGOProtos.Networking.Requests.Messages {
             break;
           }
           case 34: {
-            if (lastRetrievedActions_ == null) {
-              lastRetrievedActions_ = new global::POGOProtos.Data.Battle.BattleAction();
+            if (lastRetrievedAction_ == null) {
+              lastRetrievedAction_ = new global::POGOProtos.Data.Battle.BattleAction();
             }
-            input.ReadMessage(lastRetrievedActions_);
+            input.ReadMessage(lastRetrievedAction_);
             break;
           }
           case 41: {

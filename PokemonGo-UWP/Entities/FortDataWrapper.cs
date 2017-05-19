@@ -33,8 +33,14 @@ namespace PokemonGo_UWP.Entities
         public FortDataStatus FortDataStatus {
             get
             {
-                var distance = GeoHelper.Distance(Geoposition, LocationServiceHelper.Instance.Geoposition.Coordinate.Point);
+                //var distance = GeoHelper.Distance(Geoposition, LocationServiceHelper.Instance.Geoposition.Coordinate.Point);
                 FortDataStatus retVal = FortDataStatus.Opened;
+
+                if (LocationServiceHelper.Instance.Geoposition == null)
+                {
+                    return FortDataStatus.Closed;
+                }
+                var distance = GeoHelper.Distance(Geoposition, LocationServiceHelper.Instance.Geoposition.Coordinate.Point);
 
                 if (distance > GameClient.GameSetting.FortSettings.InteractionRangeMeters)
                     retVal =  FortDataStatus.Closed;

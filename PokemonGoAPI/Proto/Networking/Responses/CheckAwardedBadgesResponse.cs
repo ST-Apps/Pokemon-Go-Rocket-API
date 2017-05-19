@@ -24,15 +24,15 @@ namespace POGOProtos.Networking.Responses {
           string.Concat(
             "CkBQT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVzcG9uc2VzL0NoZWNrQXdhcmRl",
             "ZEJhZGdlc1Jlc3BvbnNlLnByb3RvEh9QT0dPUHJvdG9zLk5ldHdvcmtpbmcu",
-            "UmVzcG9uc2VzGiBQT0dPUHJvdG9zL0VudW1zL0JhZGdlVHlwZS5wcm90byKA",
+            "UmVzcG9uc2VzGiBQT0dPUHJvdG9zL0VudW1zL0JhZGdlVHlwZS5wcm90byKd",
             "AQoaQ2hlY2tBd2FyZGVkQmFkZ2VzUmVzcG9uc2USDwoHc3VjY2VzcxgBIAEo",
             "CBIzCg5hd2FyZGVkX2JhZGdlcxgCIAMoDjIbLlBPR09Qcm90b3MuRW51bXMu",
-            "QmFkZ2VUeXBlEhwKFGF3YXJkZWRfYmFkZ2VfbGV2ZWxzGAMgAygFYgZwcm90",
-            "bzM="));
+            "QmFkZ2VUeXBlEhwKFGF3YXJkZWRfYmFkZ2VfbGV2ZWxzGAMgAygFEhsKE2F2",
+            "YXRhcl90ZW1wbGF0ZV9pZHMYBCADKAliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Enums.BadgeTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Responses.CheckAwardedBadgesResponse), global::POGOProtos.Networking.Responses.CheckAwardedBadgesResponse.Parser, new[]{ "Success", "AwardedBadges", "AwardedBadgeLevels" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Responses.CheckAwardedBadgesResponse), global::POGOProtos.Networking.Responses.CheckAwardedBadgesResponse.Parser, new[]{ "Success", "AwardedBadges", "AwardedBadgeLevels", "AvatarTemplateIds" }, null, null, null)
           }));
     }
     #endregion
@@ -66,6 +66,7 @@ namespace POGOProtos.Networking.Responses {
       success_ = other.success_;
       awardedBadges_ = other.awardedBadges_.Clone();
       awardedBadgeLevels_ = other.awardedBadgeLevels_.Clone();
+      avatarTemplateIds_ = other.avatarTemplateIds_.Clone();
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -104,6 +105,16 @@ namespace POGOProtos.Networking.Responses {
       get { return awardedBadgeLevels_; }
     }
 
+    /// <summary>Field number for the "avatar_template_ids" field.</summary>
+    public const int AvatarTemplateIdsFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_avatarTemplateIds_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> avatarTemplateIds_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> AvatarTemplateIds {
+      get { return avatarTemplateIds_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CheckAwardedBadgesResponse);
@@ -120,6 +131,7 @@ namespace POGOProtos.Networking.Responses {
       if (Success != other.Success) return false;
       if(!awardedBadges_.Equals(other.awardedBadges_)) return false;
       if(!awardedBadgeLevels_.Equals(other.awardedBadgeLevels_)) return false;
+      if(!avatarTemplateIds_.Equals(other.avatarTemplateIds_)) return false;
       return true;
     }
 
@@ -129,6 +141,7 @@ namespace POGOProtos.Networking.Responses {
       if (Success != false) hash ^= Success.GetHashCode();
       hash ^= awardedBadges_.GetHashCode();
       hash ^= awardedBadgeLevels_.GetHashCode();
+      hash ^= avatarTemplateIds_.GetHashCode();
       return hash;
     }
 
@@ -145,6 +158,7 @@ namespace POGOProtos.Networking.Responses {
       }
       awardedBadges_.WriteTo(output, _repeated_awardedBadges_codec);
       awardedBadgeLevels_.WriteTo(output, _repeated_awardedBadgeLevels_codec);
+      avatarTemplateIds_.WriteTo(output, _repeated_avatarTemplateIds_codec);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -155,6 +169,7 @@ namespace POGOProtos.Networking.Responses {
       }
       size += awardedBadges_.CalculateSize(_repeated_awardedBadges_codec);
       size += awardedBadgeLevels_.CalculateSize(_repeated_awardedBadgeLevels_codec);
+      size += avatarTemplateIds_.CalculateSize(_repeated_avatarTemplateIds_codec);
       return size;
     }
 
@@ -168,6 +183,7 @@ namespace POGOProtos.Networking.Responses {
       }
       awardedBadges_.Add(other.awardedBadges_);
       awardedBadgeLevels_.Add(other.awardedBadgeLevels_);
+      avatarTemplateIds_.Add(other.avatarTemplateIds_);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -190,6 +206,10 @@ namespace POGOProtos.Networking.Responses {
           case 26:
           case 24: {
             awardedBadgeLevels_.AddEntriesFrom(input, _repeated_awardedBadgeLevels_codec);
+            break;
+          }
+          case 34: {
+            avatarTemplateIds_.AddEntriesFrom(input, _repeated_avatarTemplateIds_codec);
             break;
           }
         }

@@ -128,5 +128,19 @@ namespace PokemonGo.RocketAPI.Rpc
                         Team = teamColor
                     });
         }
+
+        public async Task<SetBuddyPokemonResponse> SetBuddyPokemon(ulong id)
+        {
+            return await PostProtoPayload<Request, SetBuddyPokemonResponse>(RequestType.SetBuddyPokemon, new SetBuddyPokemonMessage
+            {
+                PokemonId = id
+            });
+        }
+
+        public async Task<GetBuddyWalkedResponse> GetBuddyWalked()
+        {
+            return await PostProtoPayload<Request, GetBuddyWalkedResponse>(RequestType.GetBuddyWalked, new GetBuddyWalkedMessage
+            { });
+        }
     }
 }

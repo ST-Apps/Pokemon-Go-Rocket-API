@@ -23,14 +23,15 @@ namespace POGOProtos.Inventory.Item {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CihQT0dPUHJvdG9zL0ludmVudG9yeS9JdGVtL0l0ZW1UeXBlLnByb3RvEhlQ",
-            "T0dPUHJvdG9zLkludmVudG9yeS5JdGVtKrICCghJdGVtVHlwZRISCg5JVEVN",
+            "T0dPUHJvdG9zLkludmVudG9yeS5JdGVtKtcCCghJdGVtVHlwZRISCg5JVEVN",
             "X1RZUEVfTk9ORRAAEhYKEklURU1fVFlQRV9QT0tFQkFMTBABEhQKEElURU1f",
             "VFlQRV9QT1RJT04QAhIUChBJVEVNX1RZUEVfUkVWSVZFEAMSEQoNSVRFTV9U",
             "WVBFX01BUBAEEhQKEElURU1fVFlQRV9CQVRUTEUQBRISCg5JVEVNX1RZUEVf",
             "Rk9PRBAGEhQKEElURU1fVFlQRV9DQU1FUkEQBxISCg5JVEVNX1RZUEVfRElT",
             "SxAIEhcKE0lURU1fVFlQRV9JTkNVQkFUT1IQCRIVChFJVEVNX1RZUEVfSU5D",
             "RU5TRRAKEhYKEklURU1fVFlQRV9YUF9CT09TVBALEh8KG0lURU1fVFlQRV9J",
-            "TlZFTlRPUllfVVBHUkFERRAMYgZwcm90bzM="));
+            "TlZFTlRPUllfVVBHUkFERRAMEiMKH0lURU1fVFlQRV9FVk9MVVRJT05fUkVR",
+            "VUlSRU1FTlQQDWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::POGOProtos.Inventory.Item.ItemType), }, null));
@@ -53,6 +54,7 @@ namespace POGOProtos.Inventory.Item {
     [pbr::OriginalName("ITEM_TYPE_INCENSE")] Incense = 10,
     [pbr::OriginalName("ITEM_TYPE_XP_BOOST")] XpBoost = 11,
     [pbr::OriginalName("ITEM_TYPE_INVENTORY_UPGRADE")] InventoryUpgrade = 12,
+    [pbr::OriginalName("ITEM_TYPE_EVOLUTION_REQUIREMENT")] EvolutionRequirement = 13,
   }
 
   #endregion

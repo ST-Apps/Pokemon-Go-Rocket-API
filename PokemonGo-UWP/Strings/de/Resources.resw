@@ -195,4 +195,13 @@
   <data name="PokemonHeader.Title" xml:space="preserve">
     <value>POKÉMON</value>
   </data>
+  <data name="EggsTextBlock.Text" xml:space="preserve">
+    <value>EIER</value>
+  </data>
+  <data name="PokemonTextBlock.Text" xml:space="preserve">
+    <value>POKÉMON</value>
+  </data>
+  <data name="EggDetailIncubatingTextBlock.Text" xml:space="preserve">
+    <value>Gehe zu Fuß, um dieses Ei auszubrüten.</value>
+  </data>
 </root>

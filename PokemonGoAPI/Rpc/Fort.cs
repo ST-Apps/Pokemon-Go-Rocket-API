@@ -60,7 +60,7 @@ namespace PokemonGo.RocketAPI.Rpc
             {
                 BattleId = battleId,
                 GymId = fortId,
-                LastRetrievedActions = lastRetrievedAction,
+                LastRetrievedAction = lastRetrievedAction,
                 PlayerLatitude = Client.CurrentLatitude,
                 PlayerLongitude = Client.CurrentLongitude,
                 AttackActions = {battleActions}

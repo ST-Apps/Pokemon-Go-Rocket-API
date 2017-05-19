@@ -24,12 +24,14 @@ namespace POGOProtos.Networking.Responses {
           string.Concat(
             "CjdQT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVzcG9uc2VzL1NldEF2YXRhclJl",
             "c3BvbnNlLnByb3RvEh9QT0dPUHJvdG9zLk5ldHdvcmtpbmcuUmVzcG9uc2Vz",
-            "GiBQT0dPUHJvdG9zL0RhdGEvUGxheWVyRGF0YS5wcm90byLXAQoRU2V0QXZh",
+            "GiBQT0dPUHJvdG9zL0RhdGEvUGxheWVyRGF0YS5wcm90byKbAgoRU2V0QXZh",
             "dGFyUmVzcG9uc2USSQoGc3RhdHVzGAEgASgOMjkuUE9HT1Byb3Rvcy5OZXR3",
             "b3JraW5nLlJlc3BvbnNlcy5TZXRBdmF0YXJSZXNwb25zZS5TdGF0dXMSMAoL",
             "cGxheWVyX2RhdGEYAiABKAsyGy5QT0dPUHJvdG9zLkRhdGEuUGxheWVyRGF0",
-            "YSJFCgZTdGF0dXMSCQoFVU5TRVQQABILCgdTVUNDRVNTEAESFgoSQVZBVEFS",
-            "X0FMUkVBRFlfU0VUEAISCwoHRkFJTFVSRRADYgZwcm90bzM="));
+            "YSKIAQoGU3RhdHVzEgkKBVVOU0VUEAASCwoHU1VDQ0VTUxABEhYKEkFWQVRB",
+            "Ul9BTFJFQURZX1NFVBACEgsKB0ZBSUxVUkUQAxIUChBTTE9UX05PVF9BTExP",
+            "V0VEEAQSEgoOSVRFTV9OT1RfT1dORUQQBRIXChNJTlZBTElEX0FWQVRBUl9U",
+            "WVBFEAZiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Data.PlayerDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -198,6 +200,9 @@ namespace POGOProtos.Networking.Responses {
         [pbr::OriginalName("SUCCESS")] Success = 1,
         [pbr::OriginalName("AVATAR_ALREADY_SET")] AvatarAlreadySet = 2,
         [pbr::OriginalName("FAILURE")] Failure = 3,
+        [pbr::OriginalName("SLOT_NOT_ALLOWED")] SlotNotAllowed = 4,
+        [pbr::OriginalName("ITEM_NOT_OWNED")] ItemNotOwned = 5,
+        [pbr::OriginalName("INVALID_AVATAR_TYPE")] InvalidAvatarType = 6,
       }
 
     }

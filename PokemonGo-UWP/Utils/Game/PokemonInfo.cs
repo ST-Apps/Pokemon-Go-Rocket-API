@@ -96,17 +96,23 @@ namespace PokemonGo_UWP.Utils
             switch ((int) id)
             {
                 case 1:
-                    return new BaseStats(90, 126, 126);
+                    //return new BaseStats(90, 126, 126);
+                    return new BaseStats(90, 118, 118);
                 case 2:
-                    return new BaseStats(120, 156, 158);
+                    //return new BaseStats(120, 156, 158);
+                    return new BaseStats(120, 151, 151);
                 case 3:
-                    return new BaseStats(160, 198, 200);
+                    //return new BaseStats(160, 198, 200);
+                    return new BaseStats(160, 198, 198);
                 case 4:
-                    return new BaseStats(78, 128, 108);
+                    //return new BaseStats(78, 128, 108);
+                    return new BaseStats(78, 116, 96);
                 case 5:
-                    return new BaseStats(116, 160, 140);
+                    //return new BaseStats(116, 160, 140);
+                    return new BaseStats(116, 158, 129);
                 case 6:
-                    return new BaseStats(156, 212, 182);
+                    //return new BaseStats(156, 212, 182);
+                    return new BaseStats(156, 223, 176);
                 case 7:
                     return new BaseStats(88, 112, 142);
                 case 8:

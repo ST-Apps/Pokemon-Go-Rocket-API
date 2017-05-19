@@ -15,9 +15,19 @@
 
             <utils:PokemonTypeToBackgroundImageConverter x:Key="PokemonTypeToBackgroundConverter"/>
             <utils:PokemonIdToPokedexDescription x:Key="PokemonIdToPokedexDescription"/>
+            <utils:PokemonIdToNearbyPokestopConverter x:Key="PokemonIdToNearbyPokestopConverter"/>
             <utils:PokemonIdToNumericId x:Key="PokemonIdToNumericId" />
             <utils:ItemClickEventArgsToClickedItemConverter x:Key="ItemClickEventArgsToClickedItemConverter" />
             <utils:PokemonIdToPokemonSpriteConverter x:Key="PokemonIdToPokemonSpriteConverter" />
+            <utils:BuddyIsDeployedVisibilityConverter x:Key="BuddyIsDeployedVisibilityConverter" />
+            <utils:PokemonIsBuddyVisibilityConverter x:Key="PokemonIsBuddyVisibilityConverter" />
+            <utils:BuddyPokemonProgressConverter x:Key="BuddyPokemonProgressConverter" />
+            <utils:BuddyPokemonDistanceWalkedConverter x:Key="BuddyPokemonDistanceWalkedConverter" />
+            <utils:BuddyPokemonTotalKmWalkedConverter x:Key="BuddyPokemonTotalKmWalkedConverter" />
+            <utils:PokemonIdToPokemonIVConverter x:Key="PokemonIdToPokemonIVConverter" />
+            <utils:PokemonToPokemonDisplayConverter x:Key="PokemonToPokemonDisplayConverter" />
+            <utils:BuddyPokemonToPokemonIconConverter x:Key="BuddyPokemonToPokemonIconConverter" />
+            <utils:BuddyPokemonToBuddyPlacementConverter x:Key="BuddyPokemonToBuddyPlacementConverter" />
             <utils:PokemonTypeTranslationConverter x:Key="PokemonTypeTranslationConverter" />
             <utils:PokemonDetailPageViewModeToCloseButtonImageSourceConverter x:Key="PokemonDetailPageViewModeToCloseButtonImageSourceConverter" />
             <utils:PokemonToCurrentCandiesConverter x:Key="PokemonToCurrentCandiesConverter" />
@@ -57,6 +67,7 @@
             <utils:PokemonIdToPokemonNameConverter x:Key="PokemonIdToPokemonNameConverter" />
             <utils:PokemonSortingModesToIconConverter x:Key="PokemonSortingModesToIconConverter" />
             <utils:PokemonSortingModesTranslationConverter x:Key="PokemonSortingModesTranslationConverter" />
+            <utils:EggDataToEggKmWalkedConverter x:Key="EggDataToEggKmWalkedConverter" />
             <utils:EggDataToEggProgressConverter x:Key="EggDataToEggProgressConverter" />
             <utils:ItemToItemDescriptionConverter x:Key="ItemToItemDescriptionConverter" />
             <utils:IncubatorUsagesCountToUsagesTextConverter x:Key="IncubatorUsagesCountToUsagesTextConverter" />

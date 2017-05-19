@@ -24,16 +24,17 @@ namespace POGOProtos.Networking.Responses {
           string.Concat(
             "CjtQT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVzcG9uc2VzL0V2b2x2ZVBva2Vt",
             "b25SZXNwb25zZS5wcm90bxIfUE9HT1Byb3Rvcy5OZXR3b3JraW5nLlJlc3Bv",
-            "bnNlcxohUE9HT1Byb3Rvcy9EYXRhL1Bva2Vtb25EYXRhLnByb3RvIvkCChVF",
+            "bnNlcxohUE9HT1Byb3Rvcy9EYXRhL1Bva2Vtb25EYXRhLnByb3RvIp4DChVF",
             "dm9sdmVQb2tlbW9uUmVzcG9uc2USTQoGcmVzdWx0GAEgASgOMj0uUE9HT1By",
             "b3Rvcy5OZXR3b3JraW5nLlJlc3BvbnNlcy5Fdm9sdmVQb2tlbW9uUmVzcG9u",
             "c2UuUmVzdWx0EjoKFGV2b2x2ZWRfcG9rZW1vbl9kYXRhGAIgASgLMhwuUE9H",
             "T1Byb3Rvcy5EYXRhLlBva2Vtb25EYXRhEhoKEmV4cGVyaWVuY2VfYXdhcmRl",
-            "ZBgDIAEoBRIVCg1jYW5keV9hd2FyZGVkGAQgASgFIqEBCgZSZXN1bHQSCQoF",
+            "ZBgDIAEoBRIVCg1jYW5keV9hd2FyZGVkGAQgASgFIsYBCgZSZXN1bHQSCQoF",
             "VU5TRVQQABILCgdTVUNDRVNTEAESGgoWRkFJTEVEX1BPS0VNT05fTUlTU0lO",
             "RxACEiEKHUZBSUxFRF9JTlNVRkZJQ0lFTlRfUkVTT1VSQ0VTEAMSIAocRkFJ",
             "TEVEX1BPS0VNT05fQ0FOTk9UX0VWT0xWRRAEEh4KGkZBSUxFRF9QT0tFTU9O",
-            "X0lTX0RFUExPWUVEEAViBnByb3RvMw=="));
+            "X0lTX0RFUExPWUVEEAUSIwofRkFJTEVEX0lOVkFMSURfSVRFTV9SRVFVSVJF",
+            "TUVOVBAGYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Data.PokemonDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -260,6 +261,7 @@ namespace POGOProtos.Networking.Responses {
         [pbr::OriginalName("FAILED_INSUFFICIENT_RESOURCES")] FailedInsufficientResources = 3,
         [pbr::OriginalName("FAILED_POKEMON_CANNOT_EVOLVE")] FailedPokemonCannotEvolve = 4,
         [pbr::OriginalName("FAILED_POKEMON_IS_DEPLOYED")] FailedPokemonIsDeployed = 5,
+        [pbr::OriginalName("FAILED_INVALID_ITEM_REQUIREMENT")] FailedInvalidItemRequirement = 6,
       }
 
     }

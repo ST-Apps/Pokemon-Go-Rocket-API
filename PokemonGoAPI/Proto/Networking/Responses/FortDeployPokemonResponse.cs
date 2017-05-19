@@ -27,20 +27,21 @@ namespace POGOProtos.Networking.Responses {
             "ZXNwb25zZXMaIVBPR09Qcm90b3MvRGF0YS9Qb2tlbW9uRGF0YS5wcm90bxoi",
             "UE9HT1Byb3Rvcy9EYXRhL0d5bS9HeW1TdGF0ZS5wcm90bxo5UE9HT1Byb3Rv",
             "cy9OZXR3b3JraW5nL1Jlc3BvbnNlcy9Gb3J0RGV0YWlsc1Jlc3BvbnNlLnBy",
-            "b3RvIsQEChlGb3J0RGVwbG95UG9rZW1vblJlc3BvbnNlElEKBnJlc3VsdBgB",
+            "b3RvIoUFChlGb3J0RGVwbG95UG9rZW1vblJlc3BvbnNlElEKBnJlc3VsdBgB",
             "IAEoDjJBLlBPR09Qcm90b3MuTmV0d29ya2luZy5SZXNwb25zZXMuRm9ydERl",
             "cGxveVBva2Vtb25SZXNwb25zZS5SZXN1bHQSSgoMZm9ydF9kZXRhaWxzGAIg",
             "ASgLMjQuUE9HT1Byb3Rvcy5OZXR3b3JraW5nLlJlc3BvbnNlcy5Gb3J0RGV0",
             "YWlsc1Jlc3BvbnNlEjIKDHBva2Vtb25fZGF0YRgDIAEoCzIcLlBPR09Qcm90",
             "b3MuRGF0YS5Qb2tlbW9uRGF0YRIwCglneW1fc3RhdGUYBCABKAsyHS5QT0dP",
-            "UHJvdG9zLkRhdGEuR3ltLkd5bVN0YXRlIqECCgZSZXN1bHQSEQoNTk9fUkVT",
+            "UHJvdG9zLkRhdGEuR3ltLkd5bVN0YXRlIuICCgZSZXN1bHQSEQoNTk9fUkVT",
             "VUxUX1NFVBAAEgsKB1NVQ0NFU1MQARIlCiFFUlJPUl9BTFJFQURZX0hBU19Q",
             "T0tFTU9OX09OX0ZPUlQQAhIhCh1FUlJPUl9PUFBPU0lOR19URUFNX09XTlNf",
             "Rk9SVBADEhYKEkVSUk9SX0ZPUlRfSVNfRlVMTBAEEhYKEkVSUk9SX05PVF9J",
             "Tl9SQU5HRRAFEhwKGEVSUk9SX1BMQVlFUl9IQVNfTk9fVEVBTRAGEh0KGUVS",
             "Uk9SX1BPS0VNT05fTk9UX0ZVTExfSFAQBxIkCiBFUlJPUl9QTEFZRVJfQkVM",
             "T1dfTUlOSU1VTV9MRVZFTBAIEhoKFkVSUk9SX1BPS0VNT05fSVNfQlVERFkQ",
-            "CWIGcHJvdG8z"));
+            "CRIdChlFUlJPUl9GT1JUX0RFUExPWV9MT0NLT1VUEAoSIAocRVJST1JfUExB",
+            "WUVSX0hBU19OT19OSUNLTkFNRRALYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Data.PokemonDataReflection.Descriptor, global::POGOProtos.Data.Gym.GymStateReflection.Descriptor, global::POGOProtos.Networking.Responses.FortDetailsResponseReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -283,6 +284,8 @@ namespace POGOProtos.Networking.Responses {
         [pbr::OriginalName("ERROR_POKEMON_NOT_FULL_HP")] ErrorPokemonNotFullHp = 7,
         [pbr::OriginalName("ERROR_PLAYER_BELOW_MINIMUM_LEVEL")] ErrorPlayerBelowMinimumLevel = 8,
         [pbr::OriginalName("ERROR_POKEMON_IS_BUDDY")] ErrorPokemonIsBuddy = 9,
+        [pbr::OriginalName("ERROR_FORT_DEPLOY_LOCKOUT")] ErrorFortDeployLockout = 10,
+        [pbr::OriginalName("ERROR_PLAYER_HAS_NO_NICKNAME")] ErrorPlayerHasNoNickname = 11,
       }
 
     }

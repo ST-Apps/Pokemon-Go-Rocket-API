@@ -23,16 +23,18 @@ namespace POGOProtos.Map.Pokemon {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CidQT0dPUHJvdG9zL01hcC9Qb2tlbW9uL01hcFBva2Vtb24ucHJvdG8SFlBP",
-            "R09Qcm90b3MuTWFwLlBva2Vtb24aIFBPR09Qcm90b3MvRW51bXMvUG9rZW1v",
-            "bklkLnByb3RvIrEBCgpNYXBQb2tlbW9uEhYKDnNwYXduX3BvaW50X2lkGAEg",
-            "ASgJEhQKDGVuY291bnRlcl9pZBgCIAEoBhIvCgpwb2tlbW9uX2lkGAMgASgO",
-            "MhsuUE9HT1Byb3Rvcy5FbnVtcy5Qb2tlbW9uSWQSHwoXZXhwaXJhdGlvbl90",
-            "aW1lc3RhbXBfbXMYBCABKAMSEAoIbGF0aXR1ZGUYBSABKAESEQoJbG9uZ2l0",
-            "dWRlGAYgASgBYgZwcm90bzM="));
+            "R09Qcm90b3MuTWFwLlBva2Vtb24aJFBPR09Qcm90b3MvRGF0YS9Qb2tlbW9u",
+            "RGlzcGxheS5wcm90bxogUE9HT1Byb3Rvcy9FbnVtcy9Qb2tlbW9uSWQucHJv",
+            "dG8i6wEKCk1hcFBva2Vtb24SFgoOc3Bhd25fcG9pbnRfaWQYASABKAkSFAoM",
+            "ZW5jb3VudGVyX2lkGAIgASgGEi8KCnBva2Vtb25faWQYAyABKA4yGy5QT0dP",
+            "UHJvdG9zLkVudW1zLlBva2Vtb25JZBIfChdleHBpcmF0aW9uX3RpbWVzdGFt",
+            "cF9tcxgEIAEoAxIQCghsYXRpdHVkZRgFIAEoARIRCglsb25naXR1ZGUYBiAB",
+            "KAESOAoPcG9rZW1vbl9kaXNwbGF5GAcgASgLMh8uUE9HT1Byb3Rvcy5EYXRh",
+            "LlBva2Vtb25EaXNwbGF5YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::POGOProtos.Enums.PokemonIdReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::POGOProtos.Data.PokemonDisplayReflection.Descriptor, global::POGOProtos.Enums.PokemonIdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Map.Pokemon.MapPokemon), global::POGOProtos.Map.Pokemon.MapPokemon.Parser, new[]{ "SpawnPointId", "EncounterId", "PokemonId", "ExpirationTimestampMs", "Latitude", "Longitude" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Map.Pokemon.MapPokemon), global::POGOProtos.Map.Pokemon.MapPokemon.Parser, new[]{ "SpawnPointId", "EncounterId", "PokemonId", "ExpirationTimestampMs", "Latitude", "Longitude", "PokemonDisplay" }, null, null, null)
           }));
     }
     #endregion
@@ -69,6 +71,7 @@ namespace POGOProtos.Map.Pokemon {
       expirationTimestampMs_ = other.expirationTimestampMs_;
       latitude_ = other.latitude_;
       longitude_ = other.longitude_;
+      PokemonDisplay = other.pokemonDisplay_ != null ? other.PokemonDisplay.Clone() : null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -145,6 +148,17 @@ namespace POGOProtos.Map.Pokemon {
       }
     }
 
+    /// <summary>Field number for the "pokemon_display" field.</summary>
+    public const int PokemonDisplayFieldNumber = 7;
+    private global::POGOProtos.Data.PokemonDisplay pokemonDisplay_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::POGOProtos.Data.PokemonDisplay PokemonDisplay {
+      get { return pokemonDisplay_; }
+      set {
+        pokemonDisplay_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as MapPokemon);
@@ -164,6 +178,7 @@ namespace POGOProtos.Map.Pokemon {
       if (ExpirationTimestampMs != other.ExpirationTimestampMs) return false;
       if (Latitude != other.Latitude) return false;
       if (Longitude != other.Longitude) return false;
+      if (!object.Equals(PokemonDisplay, other.PokemonDisplay)) return false;
       return true;
     }
 
@@ -176,6 +191,7 @@ namespace POGOProtos.Map.Pokemon {
       if (ExpirationTimestampMs != 0L) hash ^= ExpirationTimestampMs.GetHashCode();
       if (Latitude != 0D) hash ^= Latitude.GetHashCode();
       if (Longitude != 0D) hash ^= Longitude.GetHashCode();
+      if (pokemonDisplay_ != null) hash ^= PokemonDisplay.GetHashCode();
       return hash;
     }
 
@@ -210,6 +226,10 @@ namespace POGOProtos.Map.Pokemon {
         output.WriteRawTag(49);
         output.WriteDouble(Longitude);
       }
+      if (pokemonDisplay_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(PokemonDisplay);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -232,6 +252,9 @@ namespace POGOProtos.Map.Pokemon {
       }
       if (Longitude != 0D) {
         size += 1 + 8;
+      }
+      if (pokemonDisplay_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PokemonDisplay);
       }
       return size;
     }
@@ -258,6 +281,12 @@ namespace POGOProtos.Map.Pokemon {
       }
       if (other.Longitude != 0D) {
         Longitude = other.Longitude;
+      }
+      if (other.pokemonDisplay_ != null) {
+        if (pokemonDisplay_ == null) {
+          pokemonDisplay_ = new global::POGOProtos.Data.PokemonDisplay();
+        }
+        PokemonDisplay.MergeFrom(other.PokemonDisplay);
       }
     }
 
@@ -291,6 +320,13 @@ namespace POGOProtos.Map.Pokemon {
           }
           case 49: {
             Longitude = input.ReadDouble();
+            break;
+          }
+          case 58: {
+            if (pokemonDisplay_ == null) {
+              pokemonDisplay_ = new global::POGOProtos.Data.PokemonDisplay();
+            }
+            input.ReadMessage(pokemonDisplay_);
             break;
           }
         }

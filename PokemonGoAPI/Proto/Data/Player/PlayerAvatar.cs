@@ -23,16 +23,20 @@ namespace POGOProtos.Data.Player {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CilQT0dPUHJvdG9zL0RhdGEvUGxheWVyL1BsYXllckF2YXRhci5wcm90bxIW",
-            "UE9HT1Byb3Rvcy5EYXRhLlBsYXllchodUE9HT1Byb3Rvcy9FbnVtcy9HZW5k",
-            "ZXIucHJvdG8irgEKDFBsYXllckF2YXRhchIMCgRza2luGAIgASgFEgwKBGhh",
-            "aXIYAyABKAUSDQoFc2hpcnQYBCABKAUSDQoFcGFudHMYBSABKAUSCwoDaGF0",
-            "GAYgASgFEg0KBXNob2VzGAcgASgFEigKBmdlbmRlchgIIAEoDjIYLlBPR09Q",
-            "cm90b3MuRW51bXMuR2VuZGVyEgwKBGV5ZXMYCSABKAUSEAoIYmFja3BhY2sY",
-            "CiABKAViBnByb3RvMw=="));
+            "UE9HT1Byb3Rvcy5EYXRhLlBsYXllciKgAwoMUGxheWVyQXZhdGFyEgwKBHNr",
+            "aW4YAiABKAUSDAoEaGFpchgDIAEoBRINCgVzaGlydBgEIAEoBRINCgVwYW50",
+            "cxgFIAEoBRILCgNoYXQYBiABKAUSDQoFc2hvZXMYByABKAUSDgoGYXZhdGFy",
+            "GAggASgFEgwKBGV5ZXMYCSABKAUSEAoIYmFja3BhY2sYCiABKAUSEwoLYXZh",
+            "dGFyX2hhaXIYCyABKAkSFAoMYXZhdGFyX3NoaXJ0GAwgASgJEhQKDGF2YXRh",
+            "cl9wYW50cxgNIAEoCRISCgphdmF0YXJfaGF0GA4gASgJEhQKDGF2YXRhcl9z",
+            "aG9lcxgPIAEoCRITCgthdmF0YXJfZXllcxgQIAEoCRIXCg9hdmF0YXJfYmFj",
+            "a3BhY2sYESABKAkSFQoNYXZhdGFyX2dsb3ZlcxgSIAEoCRIUCgxhdmF0YXJf",
+            "c29ja3MYEyABKAkSEwoLYXZhdGFyX2JlbHQYFCABKAkSFgoOYXZhdGFyX2ds",
+            "YXNzZXMYFSABKAkSFwoPYXZhdGFyX25lY2tsYWNlGBYgASgJYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::POGOProtos.Enums.GenderReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Data.Player.PlayerAvatar), global::POGOProtos.Data.Player.PlayerAvatar.Parser, new[]{ "Skin", "Hair", "Shirt", "Pants", "Hat", "Shoes", "Gender", "Eyes", "Backpack" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Data.Player.PlayerAvatar), global::POGOProtos.Data.Player.PlayerAvatar.Parser, new[]{ "Skin", "Hair", "Shirt", "Pants", "Hat", "Shoes", "Avatar", "Eyes", "Backpack", "AvatarHair", "AvatarShirt", "AvatarPants", "AvatarHat", "AvatarShoes", "AvatarEyes", "AvatarBackpack", "AvatarGloves", "AvatarSocks", "AvatarBelt", "AvatarGlasses", "AvatarNecklace" }, null, null, null)
           }));
     }
     #endregion
@@ -69,9 +73,21 @@ namespace POGOProtos.Data.Player {
       pants_ = other.pants_;
       hat_ = other.hat_;
       shoes_ = other.shoes_;
-      gender_ = other.gender_;
+      avatar_ = other.avatar_;
       eyes_ = other.eyes_;
       backpack_ = other.backpack_;
+      avatarHair_ = other.avatarHair_;
+      avatarShirt_ = other.avatarShirt_;
+      avatarPants_ = other.avatarPants_;
+      avatarHat_ = other.avatarHat_;
+      avatarShoes_ = other.avatarShoes_;
+      avatarEyes_ = other.avatarEyes_;
+      avatarBackpack_ = other.avatarBackpack_;
+      avatarGloves_ = other.avatarGloves_;
+      avatarSocks_ = other.avatarSocks_;
+      avatarBelt_ = other.avatarBelt_;
+      avatarGlasses_ = other.avatarGlasses_;
+      avatarNecklace_ = other.avatarNecklace_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -145,14 +161,14 @@ namespace POGOProtos.Data.Player {
       }
     }
 
-    /// <summary>Field number for the "gender" field.</summary>
-    public const int GenderFieldNumber = 8;
-    private global::POGOProtos.Enums.Gender gender_ = 0;
+    /// <summary>Field number for the "avatar" field.</summary>
+    public const int AvatarFieldNumber = 8;
+    private int avatar_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::POGOProtos.Enums.Gender Gender {
-      get { return gender_; }
+    public int Avatar {
+      get { return avatar_; }
       set {
-        gender_ = value;
+        avatar_ = value;
       }
     }
 
@@ -178,6 +194,138 @@ namespace POGOProtos.Data.Player {
       }
     }
 
+    /// <summary>Field number for the "avatar_hair" field.</summary>
+    public const int AvatarHairFieldNumber = 11;
+    private string avatarHair_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AvatarHair {
+      get { return avatarHair_; }
+      set {
+        avatarHair_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "avatar_shirt" field.</summary>
+    public const int AvatarShirtFieldNumber = 12;
+    private string avatarShirt_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AvatarShirt {
+      get { return avatarShirt_; }
+      set {
+        avatarShirt_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "avatar_pants" field.</summary>
+    public const int AvatarPantsFieldNumber = 13;
+    private string avatarPants_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AvatarPants {
+      get { return avatarPants_; }
+      set {
+        avatarPants_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "avatar_hat" field.</summary>
+    public const int AvatarHatFieldNumber = 14;
+    private string avatarHat_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AvatarHat {
+      get { return avatarHat_; }
+      set {
+        avatarHat_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "avatar_shoes" field.</summary>
+    public const int AvatarShoesFieldNumber = 15;
+    private string avatarShoes_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AvatarShoes {
+      get { return avatarShoes_; }
+      set {
+        avatarShoes_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "avatar_eyes" field.</summary>
+    public const int AvatarEyesFieldNumber = 16;
+    private string avatarEyes_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AvatarEyes {
+      get { return avatarEyes_; }
+      set {
+        avatarEyes_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "avatar_backpack" field.</summary>
+    public const int AvatarBackpackFieldNumber = 17;
+    private string avatarBackpack_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AvatarBackpack {
+      get { return avatarBackpack_; }
+      set {
+        avatarBackpack_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "avatar_gloves" field.</summary>
+    public const int AvatarGlovesFieldNumber = 18;
+    private string avatarGloves_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AvatarGloves {
+      get { return avatarGloves_; }
+      set {
+        avatarGloves_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "avatar_socks" field.</summary>
+    public const int AvatarSocksFieldNumber = 19;
+    private string avatarSocks_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AvatarSocks {
+      get { return avatarSocks_; }
+      set {
+        avatarSocks_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "avatar_belt" field.</summary>
+    public const int AvatarBeltFieldNumber = 20;
+    private string avatarBelt_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AvatarBelt {
+      get { return avatarBelt_; }
+      set {
+        avatarBelt_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "avatar_glasses" field.</summary>
+    public const int AvatarGlassesFieldNumber = 21;
+    private string avatarGlasses_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AvatarGlasses {
+      get { return avatarGlasses_; }
+      set {
+        avatarGlasses_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "avatar_necklace" field.</summary>
+    public const int AvatarNecklaceFieldNumber = 22;
+    private string avatarNecklace_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AvatarNecklace {
+      get { return avatarNecklace_; }
+      set {
+        avatarNecklace_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PlayerAvatar);
@@ -197,9 +345,21 @@ namespace POGOProtos.Data.Player {
       if (Pants != other.Pants) return false;
       if (Hat != other.Hat) return false;
       if (Shoes != other.Shoes) return false;
-      if (Gender != other.Gender) return false;
+      if (Avatar != other.Avatar) return false;
       if (Eyes != other.Eyes) return false;
       if (Backpack != other.Backpack) return false;
+      if (AvatarHair != other.AvatarHair) return false;
+      if (AvatarShirt != other.AvatarShirt) return false;
+      if (AvatarPants != other.AvatarPants) return false;
+      if (AvatarHat != other.AvatarHat) return false;
+      if (AvatarShoes != other.AvatarShoes) return false;
+      if (AvatarEyes != other.AvatarEyes) return false;
+      if (AvatarBackpack != other.AvatarBackpack) return false;
+      if (AvatarGloves != other.AvatarGloves) return false;
+      if (AvatarSocks != other.AvatarSocks) return false;
+      if (AvatarBelt != other.AvatarBelt) return false;
+      if (AvatarGlasses != other.AvatarGlasses) return false;
+      if (AvatarNecklace != other.AvatarNecklace) return false;
       return true;
     }
 
@@ -212,9 +372,21 @@ namespace POGOProtos.Data.Player {
       if (Pants != 0) hash ^= Pants.GetHashCode();
       if (Hat != 0) hash ^= Hat.GetHashCode();
       if (Shoes != 0) hash ^= Shoes.GetHashCode();
-      if (Gender != 0) hash ^= Gender.GetHashCode();
+      if (Avatar != 0) hash ^= Avatar.GetHashCode();
       if (Eyes != 0) hash ^= Eyes.GetHashCode();
       if (Backpack != 0) hash ^= Backpack.GetHashCode();
+      if (AvatarHair.Length != 0) hash ^= AvatarHair.GetHashCode();
+      if (AvatarShirt.Length != 0) hash ^= AvatarShirt.GetHashCode();
+      if (AvatarPants.Length != 0) hash ^= AvatarPants.GetHashCode();
+      if (AvatarHat.Length != 0) hash ^= AvatarHat.GetHashCode();
+      if (AvatarShoes.Length != 0) hash ^= AvatarShoes.GetHashCode();
+      if (AvatarEyes.Length != 0) hash ^= AvatarEyes.GetHashCode();
+      if (AvatarBackpack.Length != 0) hash ^= AvatarBackpack.GetHashCode();
+      if (AvatarGloves.Length != 0) hash ^= AvatarGloves.GetHashCode();
+      if (AvatarSocks.Length != 0) hash ^= AvatarSocks.GetHashCode();
+      if (AvatarBelt.Length != 0) hash ^= AvatarBelt.GetHashCode();
+      if (AvatarGlasses.Length != 0) hash ^= AvatarGlasses.GetHashCode();
+      if (AvatarNecklace.Length != 0) hash ^= AvatarNecklace.GetHashCode();
       return hash;
     }
 
@@ -249,9 +421,9 @@ namespace POGOProtos.Data.Player {
         output.WriteRawTag(56);
         output.WriteInt32(Shoes);
       }
-      if (Gender != 0) {
+      if (Avatar != 0) {
         output.WriteRawTag(64);
-        output.WriteEnum((int) Gender);
+        output.WriteInt32(Avatar);
       }
       if (Eyes != 0) {
         output.WriteRawTag(72);
@@ -260,6 +432,54 @@ namespace POGOProtos.Data.Player {
       if (Backpack != 0) {
         output.WriteRawTag(80);
         output.WriteInt32(Backpack);
+      }
+      if (AvatarHair.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(AvatarHair);
+      }
+      if (AvatarShirt.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(AvatarShirt);
+      }
+      if (AvatarPants.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(AvatarPants);
+      }
+      if (AvatarHat.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(AvatarHat);
+      }
+      if (AvatarShoes.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(AvatarShoes);
+      }
+      if (AvatarEyes.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(AvatarEyes);
+      }
+      if (AvatarBackpack.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(AvatarBackpack);
+      }
+      if (AvatarGloves.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(AvatarGloves);
+      }
+      if (AvatarSocks.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(AvatarSocks);
+      }
+      if (AvatarBelt.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(AvatarBelt);
+      }
+      if (AvatarGlasses.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(AvatarGlasses);
+      }
+      if (AvatarNecklace.Length != 0) {
+        output.WriteRawTag(178, 1);
+        output.WriteString(AvatarNecklace);
       }
     }
 
@@ -284,14 +504,50 @@ namespace POGOProtos.Data.Player {
       if (Shoes != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Shoes);
       }
-      if (Gender != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Gender);
+      if (Avatar != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Avatar);
       }
       if (Eyes != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Eyes);
       }
       if (Backpack != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Backpack);
+      }
+      if (AvatarHair.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AvatarHair);
+      }
+      if (AvatarShirt.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AvatarShirt);
+      }
+      if (AvatarPants.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AvatarPants);
+      }
+      if (AvatarHat.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AvatarHat);
+      }
+      if (AvatarShoes.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AvatarShoes);
+      }
+      if (AvatarEyes.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(AvatarEyes);
+      }
+      if (AvatarBackpack.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(AvatarBackpack);
+      }
+      if (AvatarGloves.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(AvatarGloves);
+      }
+      if (AvatarSocks.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(AvatarSocks);
+      }
+      if (AvatarBelt.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(AvatarBelt);
+      }
+      if (AvatarGlasses.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(AvatarGlasses);
+      }
+      if (AvatarNecklace.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(AvatarNecklace);
       }
       return size;
     }
@@ -319,14 +575,50 @@ namespace POGOProtos.Data.Player {
       if (other.Shoes != 0) {
         Shoes = other.Shoes;
       }
-      if (other.Gender != 0) {
-        Gender = other.Gender;
+      if (other.Avatar != 0) {
+        Avatar = other.Avatar;
       }
       if (other.Eyes != 0) {
         Eyes = other.Eyes;
       }
       if (other.Backpack != 0) {
         Backpack = other.Backpack;
+      }
+      if (other.AvatarHair.Length != 0) {
+        AvatarHair = other.AvatarHair;
+      }
+      if (other.AvatarShirt.Length != 0) {
+        AvatarShirt = other.AvatarShirt;
+      }
+      if (other.AvatarPants.Length != 0) {
+        AvatarPants = other.AvatarPants;
+      }
+      if (other.AvatarHat.Length != 0) {
+        AvatarHat = other.AvatarHat;
+      }
+      if (other.AvatarShoes.Length != 0) {
+        AvatarShoes = other.AvatarShoes;
+      }
+      if (other.AvatarEyes.Length != 0) {
+        AvatarEyes = other.AvatarEyes;
+      }
+      if (other.AvatarBackpack.Length != 0) {
+        AvatarBackpack = other.AvatarBackpack;
+      }
+      if (other.AvatarGloves.Length != 0) {
+        AvatarGloves = other.AvatarGloves;
+      }
+      if (other.AvatarSocks.Length != 0) {
+        AvatarSocks = other.AvatarSocks;
+      }
+      if (other.AvatarBelt.Length != 0) {
+        AvatarBelt = other.AvatarBelt;
+      }
+      if (other.AvatarGlasses.Length != 0) {
+        AvatarGlasses = other.AvatarGlasses;
+      }
+      if (other.AvatarNecklace.Length != 0) {
+        AvatarNecklace = other.AvatarNecklace;
       }
     }
 
@@ -363,7 +655,7 @@ namespace POGOProtos.Data.Player {
             break;
           }
           case 64: {
-            gender_ = (global::POGOProtos.Enums.Gender) input.ReadEnum();
+            Avatar = input.ReadInt32();
             break;
           }
           case 72: {
@@ -372,6 +664,54 @@ namespace POGOProtos.Data.Player {
           }
           case 80: {
             Backpack = input.ReadInt32();
+            break;
+          }
+          case 90: {
+            AvatarHair = input.ReadString();
+            break;
+          }
+          case 98: {
+            AvatarShirt = input.ReadString();
+            break;
+          }
+          case 106: {
+            AvatarPants = input.ReadString();
+            break;
+          }
+          case 114: {
+            AvatarHat = input.ReadString();
+            break;
+          }
+          case 122: {
+            AvatarShoes = input.ReadString();
+            break;
+          }
+          case 130: {
+            AvatarEyes = input.ReadString();
+            break;
+          }
+          case 138: {
+            AvatarBackpack = input.ReadString();
+            break;
+          }
+          case 146: {
+            AvatarGloves = input.ReadString();
+            break;
+          }
+          case 154: {
+            AvatarSocks = input.ReadString();
+            break;
+          }
+          case 162: {
+            AvatarBelt = input.ReadString();
+            break;
+          }
+          case 170: {
+            AvatarGlasses = input.ReadString();
+            break;
+          }
+          case 178: {
+            AvatarNecklace = input.ReadString();
             break;
           }
         }

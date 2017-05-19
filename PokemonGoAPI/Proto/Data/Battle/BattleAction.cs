@@ -26,23 +26,23 @@ namespace POGOProtos.Data.Battle {
             "UE9HT1Byb3Rvcy5EYXRhLkJhdHRsZRoqUE9HT1Byb3Rvcy9EYXRhL0JhdHRs",
             "ZS9CYXR0bGVSZXN1bHRzLnByb3RvGi1QT0dPUHJvdG9zL0RhdGEvQmF0dGxl",
             "L0JhdHRsZUFjdGlvblR5cGUucHJvdG8aLlBPR09Qcm90b3MvRGF0YS9CYXR0",
-            "bGUvQmF0dGxlUGFydGljaXBhbnQucHJvdG8ihQQKDEJhdHRsZUFjdGlvbhI2",
-            "CgRUeXBlGAEgASgOMiguUE9HT1Byb3Rvcy5EYXRhLkJhdHRsZS5CYXR0bGVB",
+            "bGUvQmF0dGxlUGFydGljaXBhbnQucHJvdG8igwQKDEJhdHRsZUFjdGlvbhI2",
+            "CgR0eXBlGAEgASgOMiguUE9HT1Byb3Rvcy5EYXRhLkJhdHRsZS5CYXR0bGVB",
             "Y3Rpb25UeXBlEhcKD2FjdGlvbl9zdGFydF9tcxgCIAEoAxITCgtkdXJhdGlv",
             "bl9tcxgDIAEoBRIUCgxlbmVyZ3lfZGVsdGEYBSABKAUSFgoOYXR0YWNrZXJf",
             "aW5kZXgYBiABKAUSFAoMdGFyZ2V0X2luZGV4GAcgASgFEhkKEWFjdGl2ZV9w",
             "b2tlbW9uX2lkGAggASgGEkAKDXBsYXllcl9qb2luZWQYCSABKAsyKS5QT0dP",
             "UHJvdG9zLkRhdGEuQmF0dGxlLkJhdHRsZVBhcnRpY2lwYW50Ej0KDmJhdHRs",
             "ZV9yZXN1bHRzGAogASgLMiUuUE9HT1Byb3Rvcy5EYXRhLkJhdHRsZS5CYXR0",
-            "bGVSZXN1bHRzEioKImRhbWFnZV93aW5kb3dzX3N0YXJ0X3RpbWVzdGFtcF9t",
-            "c3MYCyABKAMSKAogZGFtYWdlX3dpbmRvd3NfZW5kX3RpbWVzdGFtcF9tc3MY",
-            "DCABKAMSPgoLcGxheWVyX2xlZnQYDSABKAsyKS5QT0dPUHJvdG9zLkRhdGEu",
-            "QmF0dGxlLkJhdHRsZVBhcnRpY2lwYW50EhkKEXRhcmdldF9wb2tlbW9uX2lk",
-            "GA4gASgGYgZwcm90bzM="));
+            "bGVSZXN1bHRzEikKIWRhbWFnZV93aW5kb3dzX3N0YXJ0X3RpbWVzdGFtcF9t",
+            "cxgLIAEoAxInCh9kYW1hZ2Vfd2luZG93c19lbmRfdGltZXN0YW1wX21zGAwg",
+            "ASgDEj4KC3BsYXllcl9sZWZ0GA0gASgLMikuUE9HT1Byb3Rvcy5EYXRhLkJh",
+            "dHRsZS5CYXR0bGVQYXJ0aWNpcGFudBIZChF0YXJnZXRfcG9rZW1vbl9pZBgO",
+            "IAEoBmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Data.Battle.BattleResultsReflection.Descriptor, global::POGOProtos.Data.Battle.BattleActionTypeReflection.Descriptor, global::POGOProtos.Data.Battle.BattleParticipantReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Data.Battle.BattleAction), global::POGOProtos.Data.Battle.BattleAction.Parser, new[]{ "Type", "ActionStartMs", "DurationMs", "EnergyDelta", "AttackerIndex", "TargetIndex", "ActivePokemonId", "PlayerJoined", "BattleResults", "DamageWindowsStartTimestampMss", "DamageWindowsEndTimestampMss", "PlayerLeft", "TargetPokemonId" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Data.Battle.BattleAction), global::POGOProtos.Data.Battle.BattleAction.Parser, new[]{ "Type", "ActionStartMs", "DurationMs", "EnergyDelta", "AttackerIndex", "TargetIndex", "ActivePokemonId", "PlayerJoined", "BattleResults", "DamageWindowsStartTimestampMs", "DamageWindowsEndTimestampMs", "PlayerLeft", "TargetPokemonId" }, null, null, null)
           }));
     }
     #endregion
@@ -82,8 +82,8 @@ namespace POGOProtos.Data.Battle {
       activePokemonId_ = other.activePokemonId_;
       PlayerJoined = other.playerJoined_ != null ? other.PlayerJoined.Clone() : null;
       BattleResults = other.battleResults_ != null ? other.BattleResults.Clone() : null;
-      damageWindowsStartTimestampMss_ = other.damageWindowsStartTimestampMss_;
-      damageWindowsEndTimestampMss_ = other.damageWindowsEndTimestampMss_;
+      damageWindowsStartTimestampMs_ = other.damageWindowsStartTimestampMs_;
+      damageWindowsEndTimestampMs_ = other.damageWindowsEndTimestampMs_;
       PlayerLeft = other.playerLeft_ != null ? other.PlayerLeft.Clone() : null;
       targetPokemonId_ = other.targetPokemonId_;
     }
@@ -93,7 +93,7 @@ namespace POGOProtos.Data.Battle {
       return new BattleAction(this);
     }
 
-    /// <summary>Field number for the "Type" field.</summary>
+    /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
     private global::POGOProtos.Data.Battle.BattleActionType type_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -192,25 +192,25 @@ namespace POGOProtos.Data.Battle {
       }
     }
 
-    /// <summary>Field number for the "damage_windows_start_timestamp_mss" field.</summary>
-    public const int DamageWindowsStartTimestampMssFieldNumber = 11;
-    private long damageWindowsStartTimestampMss_;
+    /// <summary>Field number for the "damage_windows_start_timestamp_ms" field.</summary>
+    public const int DamageWindowsStartTimestampMsFieldNumber = 11;
+    private long damageWindowsStartTimestampMs_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long DamageWindowsStartTimestampMss {
-      get { return damageWindowsStartTimestampMss_; }
+    public long DamageWindowsStartTimestampMs {
+      get { return damageWindowsStartTimestampMs_; }
       set {
-        damageWindowsStartTimestampMss_ = value;
+        damageWindowsStartTimestampMs_ = value;
       }
     }
 
-    /// <summary>Field number for the "damage_windows_end_timestamp_mss" field.</summary>
-    public const int DamageWindowsEndTimestampMssFieldNumber = 12;
-    private long damageWindowsEndTimestampMss_;
+    /// <summary>Field number for the "damage_windows_end_timestamp_ms" field.</summary>
+    public const int DamageWindowsEndTimestampMsFieldNumber = 12;
+    private long damageWindowsEndTimestampMs_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long DamageWindowsEndTimestampMss {
-      get { return damageWindowsEndTimestampMss_; }
+    public long DamageWindowsEndTimestampMs {
+      get { return damageWindowsEndTimestampMs_; }
       set {
-        damageWindowsEndTimestampMss_ = value;
+        damageWindowsEndTimestampMs_ = value;
       }
     }
 
@@ -258,8 +258,8 @@ namespace POGOProtos.Data.Battle {
       if (ActivePokemonId != other.ActivePokemonId) return false;
       if (!object.Equals(PlayerJoined, other.PlayerJoined)) return false;
       if (!object.Equals(BattleResults, other.BattleResults)) return false;
-      if (DamageWindowsStartTimestampMss != other.DamageWindowsStartTimestampMss) return false;
-      if (DamageWindowsEndTimestampMss != other.DamageWindowsEndTimestampMss) return false;
+      if (DamageWindowsStartTimestampMs != other.DamageWindowsStartTimestampMs) return false;
+      if (DamageWindowsEndTimestampMs != other.DamageWindowsEndTimestampMs) return false;
       if (!object.Equals(PlayerLeft, other.PlayerLeft)) return false;
       if (TargetPokemonId != other.TargetPokemonId) return false;
       return true;
@@ -277,8 +277,8 @@ namespace POGOProtos.Data.Battle {
       if (ActivePokemonId != 0UL) hash ^= ActivePokemonId.GetHashCode();
       if (playerJoined_ != null) hash ^= PlayerJoined.GetHashCode();
       if (battleResults_ != null) hash ^= BattleResults.GetHashCode();
-      if (DamageWindowsStartTimestampMss != 0L) hash ^= DamageWindowsStartTimestampMss.GetHashCode();
-      if (DamageWindowsEndTimestampMss != 0L) hash ^= DamageWindowsEndTimestampMss.GetHashCode();
+      if (DamageWindowsStartTimestampMs != 0L) hash ^= DamageWindowsStartTimestampMs.GetHashCode();
+      if (DamageWindowsEndTimestampMs != 0L) hash ^= DamageWindowsEndTimestampMs.GetHashCode();
       if (playerLeft_ != null) hash ^= PlayerLeft.GetHashCode();
       if (TargetPokemonId != 0UL) hash ^= TargetPokemonId.GetHashCode();
       return hash;
@@ -327,13 +327,13 @@ namespace POGOProtos.Data.Battle {
         output.WriteRawTag(82);
         output.WriteMessage(BattleResults);
       }
-      if (DamageWindowsStartTimestampMss != 0L) {
+      if (DamageWindowsStartTimestampMs != 0L) {
         output.WriteRawTag(88);
-        output.WriteInt64(DamageWindowsStartTimestampMss);
+        output.WriteInt64(DamageWindowsStartTimestampMs);
       }
-      if (DamageWindowsEndTimestampMss != 0L) {
+      if (DamageWindowsEndTimestampMs != 0L) {
         output.WriteRawTag(96);
-        output.WriteInt64(DamageWindowsEndTimestampMss);
+        output.WriteInt64(DamageWindowsEndTimestampMs);
       }
       if (playerLeft_ != null) {
         output.WriteRawTag(106);
@@ -375,11 +375,11 @@ namespace POGOProtos.Data.Battle {
       if (battleResults_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BattleResults);
       }
-      if (DamageWindowsStartTimestampMss != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(DamageWindowsStartTimestampMss);
+      if (DamageWindowsStartTimestampMs != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(DamageWindowsStartTimestampMs);
       }
-      if (DamageWindowsEndTimestampMss != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(DamageWindowsEndTimestampMss);
+      if (DamageWindowsEndTimestampMs != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(DamageWindowsEndTimestampMs);
       }
       if (playerLeft_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlayerLeft);
@@ -428,11 +428,11 @@ namespace POGOProtos.Data.Battle {
         }
         BattleResults.MergeFrom(other.BattleResults);
       }
-      if (other.DamageWindowsStartTimestampMss != 0L) {
-        DamageWindowsStartTimestampMss = other.DamageWindowsStartTimestampMss;
+      if (other.DamageWindowsStartTimestampMs != 0L) {
+        DamageWindowsStartTimestampMs = other.DamageWindowsStartTimestampMs;
       }
-      if (other.DamageWindowsEndTimestampMss != 0L) {
-        DamageWindowsEndTimestampMss = other.DamageWindowsEndTimestampMss;
+      if (other.DamageWindowsEndTimestampMs != 0L) {
+        DamageWindowsEndTimestampMs = other.DamageWindowsEndTimestampMs;
       }
       if (other.playerLeft_ != null) {
         if (playerLeft_ == null) {
@@ -496,11 +496,11 @@ namespace POGOProtos.Data.Battle {
             break;
           }
           case 88: {
-            DamageWindowsStartTimestampMss = input.ReadInt64();
+            DamageWindowsStartTimestampMs = input.ReadInt64();
             break;
           }
           case 96: {
-            DamageWindowsEndTimestampMss = input.ReadInt64();
+            DamageWindowsEndTimestampMs = input.ReadInt64();
             break;
           }
           case 106: {

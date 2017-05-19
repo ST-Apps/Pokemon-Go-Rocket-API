@@ -24,20 +24,22 @@ namespace POGOProtos.Networking.Responses {
           string.Concat(
             "Cj9QT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVzcG9uc2VzL0dldEluY2Vuc2VQ",
             "b2tlbW9uUmVzcG9uc2UucHJvdG8SH1BPR09Qcm90b3MuTmV0d29ya2luZy5S",
-            "ZXNwb25zZXMaIFBPR09Qcm90b3MvRW51bXMvUG9rZW1vbklkLnByb3RvIoUD",
-            "ChlHZXRJbmNlbnNlUG9rZW1vblJlc3BvbnNlElEKBnJlc3VsdBgBIAEoDjJB",
-            "LlBPR09Qcm90b3MuTmV0d29ya2luZy5SZXNwb25zZXMuR2V0SW5jZW5zZVBv",
-            "a2Vtb25SZXNwb25zZS5SZXN1bHQSLwoKcG9rZW1vbl9pZBgCIAEoDjIbLlBP",
-            "R09Qcm90b3MuRW51bXMuUG9rZW1vbklkEhAKCGxhdGl0dWRlGAMgASgBEhEK",
-            "CWxvbmdpdHVkZRgEIAEoARIaChJlbmNvdW50ZXJfbG9jYXRpb24YBSABKAkS",
-            "FAoMZW5jb3VudGVyX2lkGAYgASgGEh4KFmRpc2FwcGVhcl90aW1lc3RhbXBf",
-            "bXMYByABKAMibQoGUmVzdWx0Eh0KGUlOQ0VOU0VfRU5DT1VOVEVSX1VOS05P",
-            "V04QABIfChtJTkNFTlNFX0VOQ09VTlRFUl9BVkFJTEFCTEUQARIjCh9JTkNF",
-            "TlNFX0VOQ09VTlRFUl9OT1RfQVZBSUxBQkxFEAJiBnByb3RvMw=="));
+            "ZXNwb25zZXMaIFBPR09Qcm90b3MvRW51bXMvUG9rZW1vbklkLnByb3RvGiRQ",
+            "T0dPUHJvdG9zL0RhdGEvUG9rZW1vbkRpc3BsYXkucHJvdG8ivwMKGUdldElu",
+            "Y2Vuc2VQb2tlbW9uUmVzcG9uc2USUQoGcmVzdWx0GAEgASgOMkEuUE9HT1By",
+            "b3Rvcy5OZXR3b3JraW5nLlJlc3BvbnNlcy5HZXRJbmNlbnNlUG9rZW1vblJl",
+            "c3BvbnNlLlJlc3VsdBIvCgpwb2tlbW9uX2lkGAIgASgOMhsuUE9HT1Byb3Rv",
+            "cy5FbnVtcy5Qb2tlbW9uSWQSEAoIbGF0aXR1ZGUYAyABKAESEQoJbG9uZ2l0",
+            "dWRlGAQgASgBEhoKEmVuY291bnRlcl9sb2NhdGlvbhgFIAEoCRIUCgxlbmNv",
+            "dW50ZXJfaWQYBiABKAYSHgoWZGlzYXBwZWFyX3RpbWVzdGFtcF9tcxgHIAEo",
+            "AxI4Cg9wb2tlbW9uX2Rpc3BsYXkYCCABKAsyHy5QT0dPUHJvdG9zLkRhdGEu",
+            "UG9rZW1vbkRpc3BsYXkibQoGUmVzdWx0Eh0KGUlOQ0VOU0VfRU5DT1VOVEVS",
+            "X1VOS05PV04QABIfChtJTkNFTlNFX0VOQ09VTlRFUl9BVkFJTEFCTEUQARIj",
+            "Ch9JTkNFTlNFX0VOQ09VTlRFUl9OT1RfQVZBSUxBQkxFEAJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::POGOProtos.Enums.PokemonIdReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::POGOProtos.Enums.PokemonIdReflection.Descriptor, global::POGOProtos.Data.PokemonDisplayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Responses.GetIncensePokemonResponse), global::POGOProtos.Networking.Responses.GetIncensePokemonResponse.Parser, new[]{ "Result", "PokemonId", "Latitude", "Longitude", "EncounterLocation", "EncounterId", "DisappearTimestampMs" }, null, new[]{ typeof(global::POGOProtos.Networking.Responses.GetIncensePokemonResponse.Types.Result) }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Responses.GetIncensePokemonResponse), global::POGOProtos.Networking.Responses.GetIncensePokemonResponse.Parser, new[]{ "Result", "PokemonId", "Latitude", "Longitude", "EncounterLocation", "EncounterId", "DisappearTimestampMs", "PokemonDisplay" }, null, new[]{ typeof(global::POGOProtos.Networking.Responses.GetIncensePokemonResponse.Types.Result) }, null)
           }));
     }
     #endregion
@@ -75,6 +77,7 @@ namespace POGOProtos.Networking.Responses {
       encounterLocation_ = other.encounterLocation_;
       encounterId_ = other.encounterId_;
       disappearTimestampMs_ = other.disappearTimestampMs_;
+      PokemonDisplay = other.pokemonDisplay_ != null ? other.PokemonDisplay.Clone() : null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -159,6 +162,17 @@ namespace POGOProtos.Networking.Responses {
       }
     }
 
+    /// <summary>Field number for the "pokemon_display" field.</summary>
+    public const int PokemonDisplayFieldNumber = 8;
+    private global::POGOProtos.Data.PokemonDisplay pokemonDisplay_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::POGOProtos.Data.PokemonDisplay PokemonDisplay {
+      get { return pokemonDisplay_; }
+      set {
+        pokemonDisplay_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetIncensePokemonResponse);
@@ -179,6 +193,7 @@ namespace POGOProtos.Networking.Responses {
       if (EncounterLocation != other.EncounterLocation) return false;
       if (EncounterId != other.EncounterId) return false;
       if (DisappearTimestampMs != other.DisappearTimestampMs) return false;
+      if (!object.Equals(PokemonDisplay, other.PokemonDisplay)) return false;
       return true;
     }
 
@@ -192,6 +207,7 @@ namespace POGOProtos.Networking.Responses {
       if (EncounterLocation.Length != 0) hash ^= EncounterLocation.GetHashCode();
       if (EncounterId != 0UL) hash ^= EncounterId.GetHashCode();
       if (DisappearTimestampMs != 0L) hash ^= DisappearTimestampMs.GetHashCode();
+      if (pokemonDisplay_ != null) hash ^= PokemonDisplay.GetHashCode();
       return hash;
     }
 
@@ -230,6 +246,10 @@ namespace POGOProtos.Networking.Responses {
         output.WriteRawTag(56);
         output.WriteInt64(DisappearTimestampMs);
       }
+      if (pokemonDisplay_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(PokemonDisplay);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -255,6 +275,9 @@ namespace POGOProtos.Networking.Responses {
       }
       if (DisappearTimestampMs != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(DisappearTimestampMs);
+      }
+      if (pokemonDisplay_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PokemonDisplay);
       }
       return size;
     }
@@ -284,6 +307,12 @@ namespace POGOProtos.Networking.Responses {
       }
       if (other.DisappearTimestampMs != 0L) {
         DisappearTimestampMs = other.DisappearTimestampMs;
+      }
+      if (other.pokemonDisplay_ != null) {
+        if (pokemonDisplay_ == null) {
+          pokemonDisplay_ = new global::POGOProtos.Data.PokemonDisplay();
+        }
+        PokemonDisplay.MergeFrom(other.PokemonDisplay);
       }
     }
 
@@ -321,6 +350,13 @@ namespace POGOProtos.Networking.Responses {
           }
           case 56: {
             DisappearTimestampMs = input.ReadInt64();
+            break;
+          }
+          case 66: {
+            if (pokemonDisplay_ == null) {
+              pokemonDisplay_ = new global::POGOProtos.Data.PokemonDisplay();
+            }
+            input.ReadMessage(pokemonDisplay_);
             break;
           }
         }

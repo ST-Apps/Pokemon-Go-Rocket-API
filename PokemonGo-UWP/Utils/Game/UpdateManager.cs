@@ -21,7 +21,7 @@ namespace PokemonGo_UWP.Utils
     /// </summary>
     public static class UpdateManager
     {
-        private const string VersionFileUrl = @"https://raw.githubusercontent.com/PoGo-Devs/PoGo/master/version.json";
+        private const string VersionFileUrl = @"https://raw.githubusercontent.com/mtaheij/PoGo-UWP/master/version.json";
 
         /// <summary>
         ///     Checks if we have an updated version and returns update info
@@ -59,7 +59,6 @@ namespace PokemonGo_UWP.Utils
                 // For debugging purposes we dont check version now
                 return new UpdateInfo(UpdateStatus.NoUpdate);
 #endif
-
 
                 // Check if version is newer
                 var currentVersion = Package.Current.Id.Version;

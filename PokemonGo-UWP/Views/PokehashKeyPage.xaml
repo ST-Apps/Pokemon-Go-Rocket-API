@@ -1,0 +1,67 @@
+﻿<Page
+    x:Class="PokemonGo_UWP.Views.PokehashKeyPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PokemonGo_UWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:PokemonGo_UWP.ViewModels"
+    mc:Ignorable="d">
+
+    <Page.DataContext>
+        <viewModels:PokehashKeyPageViewModel x:Name="ViewModel" />
+    </Page.DataContext>
+
+    <Grid x:Name="MainGrid">
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#a8e090" Offset="0" />
+                <GradientStop Color="#35908f" Offset="0.8" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0"
+               Margin="15,20"
+               MaxWidth="300"
+               Source="../Assets/Ui/logoLight.png" />
+        <Grid Grid.Row="1"
+              Style="{StaticResource GridContainer}">
+            <StackPanel>
+                <TextBlock x:Uid="PokehashExplanationTextBox"
+                           Style="{StaticResource TextNormal}"
+                           Margin="15,20,15,10"
+                           TextAlignment="Center"
+                           Text="For this application to run, we need a Pokehash authentication key from the Buddy Auth website."/>
+                <TextBox x:Name="PokehashAuthKey"
+                         x:Uid="PokehashAuthKey"
+                         Style="{StaticResource TextBox}"
+                         Margin="15,20"
+                         Text="{Binding PokehashKey, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                         PlaceholderText="ENTER POKEHASH AUTH KEY" />
+                <Button x:Name="ButtonOk"
+                        Style="{StaticResource ButtonSubmitRed}"
+                        Margin="15,0,15,15"
+                        Command="{Binding DoStoreCommand}">
+                    <TextBlock x:Uid="ButtonOkTextBlock"
+                               Margin="10,0,0,0"
+                               Text="STORE AND CONTINUE" />
+                </Button>
+                <TextBlock x:Uid="PokehashExplanationTextBox2"
+                           Style="{StaticResource TextNormal}"
+                           Margin="15,0,15,20"
+                           TextAlignment="Center"
+                           Text="Need a key? Click the link below and you will be sent to the Pokefarmer.com website where you can purchase one. The cheapest plan is sufficient for this app."/>
+                <HyperlinkButton x:Uid="PokehashWebsite"
+                                 HorizontalAlignment="Center"
+                                 Margin="15,0,15,20"
+                                 NavigateUri="https://www.pokefarmer.com/#plans"
+                                 Content="Get me a key!"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+</Page>
